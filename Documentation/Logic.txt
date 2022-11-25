@@ -1,0 +1,125 @@
+
+This project is only for 1 company and 1 Chairman and Multiple- warehouse() and 1-Office
+
+
+Modules:
+
+1- Users Managemnet:  
+2- Product Managemnet: 
+3- Notification Managemnet:
+4- Report Managemnet:
+6- Route Management:
+5- order Management:
+7- Warehouse Management:
+8- Expenditure Management:
+
+
+9- Instruction Managemnet:
+10-Communication Managment;
+
+
+
+1- Users Managemnet: 
+	5-actors(Accounts):
+		1- chairman
+		2-employee
+		3-rider
+		4-WAREHOUSE MANAGER
+		5-SHOPKEEPER
+
+	1- Chairman functions(2nd UC): 
+ 		1-Login
+		2-Add employee
+		3-Add rider 
+		4-Add WareHouse and (compulsory) assign Manager
+		5-Add product 
+		6-CRUD(of every user and Product) 
+		7-Communication of Reports(	
+						1- Rider and Employee(private for shopkeeper) 
+						2-Employee AND Chairman(private ) 	
+						3- SHOPKEEPER AND employee(private to rider) 	
+						4- WM and employee(private to roder and shopkeeper) 	
+					  )
+		8-Reports of Product (csv (profits(must) )
+	
+	
+	2- Employee(3rd UC):
+ 		1-Login
+		3-Add rider 
+		4-Add WareHouse Manager
+		5-Add product 
+		6-CRU(of some user and Product)
+		7-Communication of Reports(	
+						1- Rider and Employee(private for shopkeeper) 
+						2- Employee AND Chairman(private ) 	
+						3- SHOPKEEPER AND employee(private to rider) 	
+						4- WM and employee(private to roder and shopkeeper) 	
+					  ) 
+		8-Order record (area detail and product detail ) 
+		9-Shopkeeper RECORD(rating , )
+	
+	3- Warehouse Manager(4rth UC):
+ 		1-Login
+		2-Add product(attribute check name with type bool) 
+		3-RU(of some user and Product)
+		4-Communication of Reports(	
+
+						1- WM and employee(private to roder and shopkeeper) 	
+					  )
+		5-report of products
+
+	4-Rider(5th UC):
+		1-Login
+		2-order detail
+		3-Ratings 
+		4- communication with employee and shopkeeper and WM 
+	
+	5-SHopkeeper(6th UC )
+		1-Login
+		2-order detail 
+		3-order place
+		3-Ratings 
+		4- communication with employee and rider
+		5-R(retrive of products)
+ 
+2- Product Managemnet: 
+	-CRUD(EMPLOYEE(execpt D) AND CHAIRMAN others only R execpt rider) 
+
+
+
+3- Notification ( Email)  Managemnet:
+	-
+		picture
+
+
+
+4- Report Managemnet:
+	
+	1- Products detail
+	2- order detail
+	3- rATINGS DEATILS
+	4-Communication details (csv of chairman) 
+
+5- order Management:
+	1-  Oder by shopekeeper ( recived by office )
+	2-  Gnerate invoice to shopekeeper and copy of invoice to warehouse
+	3-  Detail of order handover to rider 
+
+
+6- Route Management:
+	1- Shortest paths Algorithums 
+7- Warehouse Management:
+	1- Products
+	2- Available space (for new products or shippments)
+	3- Availability of products for rider and shopekeeper  ( required order)  
+	
+8- Expenditure Management:
+	1- Delivery charges
+	2- Salaries details
+9- Instruction Managemnet:
+	- Guided paragarpgh
+10-Communication Managment 
+	1- Rider and Employee(private for shopkeeper) 
+	2-Employee AND Chairman(private ) 	
+	3- SHOPKEEPER AND employee(private to rider) 	
+	4- WM and employee(private to roder and shopkeeper) 	
