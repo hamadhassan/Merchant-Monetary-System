@@ -20,3 +20,36 @@
 \contentsline {section}{\numberline {5.15} Use Case 15(Edit Warehouse) }{26}{}%
 \contentsline {section}{\numberline {5.16}Use Case 16(Order Status) }{27}{}%
 \contentsline {section}{\numberline {5.17} Use Case 17(Route Finder)}{28}{}%
+\contentsline {section}{\numberline {5.18} Use Case 18(Add Shopkeeper)}{29}{}%
+\contentsline {section}{\numberline {5.19}Use Case 19(Add Payment) }{30}{}%
+\contentsline {section}{\numberline {5.20}Use Case 20(Withdraw Expenses) }{32}{}%
+\contentsline {section}{\numberline {5.21} Use Case 21(Create Account)}{34}{}%
+\contentsline {chapter}{\numberline {6}Use Interfaces}{35}{}%
+\contentsline {section}{\numberline {6.1}Intro}{35}{}%
+\contentsline {section}{\numberline {6.2}Login}{36}{}%
+\contentsline {section}{\numberline {6.3}Forgot Password }{37}{}%
+\contentsline {section}{\numberline {6.4}Create Account }{38}{}%
+\contentsline {section}{\numberline {6.5} Update Information}{39}{}%
+\contentsline {section}{\numberline {6.6}Account Detail }{40}{}%
+\contentsline {section}{\numberline {6.7}CEO Dashboard }{41}{}%
+\contentsline {section}{\numberline {6.8}Add Product }{42}{}%
+\contentsline {section}{\numberline {6.9}Update Product }{43}{}%
+\contentsline {section}{\numberline {6.10}Product Detail }{44}{}%
+\contentsline {section}{\numberline {6.11}Order Product}{45}{}%
+\contentsline {section}{\numberline {6.12}Order Summary}{46}{}%
+\contentsline {section}{\numberline {6.13}Send Email }{47}{}%
+\contentsline {section}{\numberline {6.14}New Warehouse}{48}{}%
+\contentsline {section}{\numberline {6.15}Update Warehouse }{49}{}%
+\contentsline {section}{\numberline {6.16}Warehouse Detail }{50}{}%
+\contentsline {section}{\numberline {6.17}Warehouse Manager Dashboard }{51}{}%
+\contentsline {section}{\numberline {6.18}Employee Dashboard }{51}{}%
+\contentsline {section}{\numberline {6.19}Rider Dashboard }{52}{}%
+\contentsline {section}{\numberline {6.20}Add Rider }{53}{}%
+\contentsline {section}{\numberline {6.21}Update Rider }{54}{}%
+\contentsline {section}{\numberline {6.22}Order Status }{55}{}%
+\contentsline {section}{\numberline {6.23}Order Status }{56}{}%
+\contentsline {section}{\numberline {6.24}Shopkeeper Record }{57}{}%
+\contentsline {section}{\numberline {6.25}Add Payment }{58}{}%
+\contentsline {section}{\numberline {6.26}Withdraw Expenses }{59}{}%
+\contentsline {chapter}{\numberline {7}User Interface Details}{60}{}%
+\contentsline {chapter}{\numberline {8}Classes}{63}{}%
