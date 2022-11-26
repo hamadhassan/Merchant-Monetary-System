@@ -176,6 +176,700 @@ Post-Condition & Password will successfully changed  \\ \hline
 
 \end{tabular}
 %------------------------------------------
+\section{Use Case 2(Forgot Password)}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID & U02  \\\hline
+
+Name  	    & Forgot Password  \\ \hline
+
+Actor     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
+
+Description & Already registered user can change his/her password. Provide Role, username and your new password. Also confirm your password then after completion your password will be changed. \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-003 Forgot password@1x.png}\end{center}  \\ \hline
+
+Pre-Condition & User Must be registered in the system.   \\ \hline
+
+\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Click on Forgot password Button on Log In Screen. i.e., U02
+\item Select Your Role from combo box then.
+\item Provide your username you chose while signing up.
+\item Then enter password for your account
+\item Again type for confirmation
+\item Then Click on Update Button
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item If user provides his previous password
+	\begin{enumerate}
+		\item	He/she will get an error message
+		\item  System return to same page
+	\end{enumerate}
+\item If user don’t provide all required information
+	\begin{enumerate}
+	   	\item 	Alert Message will be displayed.
+		\item 	System remain to same page
+	\end{enumerate}
+\item If password is not of length equal to or greater than 8
+	\begin{enumerate}
+		\item 	1.	Password will not be changed
+	\end{enumerate}
+\item If password text and confirm password text not matched
+	\begin{enumerate}
+		\item 	Again error message will be displayed
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &  Password will successfully changed  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{ Use Case 3(CEO Dashboard)}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID & U03  \\\hline
+
+Name  	    & CEO Dashboard  \\ \hline
+
+Actor     	& CEO \\ \hline
+
+Description & After Successful Logging in to this system by CEO, CEO dashboard will be shown. CEO is the main handler of our system. This interface provides CEO to perform multiple CRUD operations. He has all the authority to add, search, update and delete any information related to all actors and other entities. He is able to view and generate reports. He can send emails as well. \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-007 CEO Dashboard@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &  CEO must have an account and logged in to this system \\ \hline
+
+Flow & Main Scenario:
+After Successful logging by a role of CEO, CEO Dashboard will appear
+He can now has all the authorities and can do multiple operations
+\\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Use Case 4(Account Details) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID & U04  \\\hline
+
+Name  	    & Accounts Detail  \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description & Respective Actors can view all the details of each user who have registered themselves on this system. They can filter out users with certain designation, certain attribute and can apply multiple filters to search out specific users. This provides ability to edit and delete (only CEO) selected users.  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-006 ViewsAndDelete Account@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &  Select Account Details from Option Menu Strip on Top Left
+All users detail will automatically be displayed
+ \\ \hline
+
+\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Select Your desired Row for required operations
+\item  Click Delete Button at the bottom of the screen if you want to delete selected row respectively. 
+\item  Clicking Edit Button will open a new interface I05 with selected row data.
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item If text filters are selected and word text area is empty
+	\begin{enumerate}
+		\item 	An Alert message of Empty input is entered
+	\end{enumerate}
+\item  	If delete button is pressed without selecting any row data
+	\begin{enumerate}
+		\item 	Exception will be handled and an exception error will be displayed to the user
+		\item 	User will remain on the same page 
+	\end{enumerate}
+\item 	If Close Button is Clicked
+	\begin{enumerate}
+		\item 	CEO or Employee Dashboard will again open
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &  Data from selected row will be deleted or updated  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{Use Case 5(Update Account) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U05 \\\hline
+
+Name  	    &  Accounts Detail \\ \hline
+
+Actor     	&  CEO, Employee\\ \hline
+
+Description &  Respective Actors can view all the details of each user who have registered themselves on this system in Account Details Screen. You can edit your desired row data by providing modified information related to that user.\\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-005 Update Account@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &  Desired Row Must be selected 
+Click Edit Button
+ \\ \hline
+
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Designation is already selected and non-editable
+\item  Already Available Data will be shown in their respective areas
+\item  Modify data entity of your choice
+\item  Click Update Account Button
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item	If user don’t provide all required information
+	\begin{enumerate}
+		\item Alert Message will be displayed.
+		\item System remain to same page
+	\end{enumerate}
+\item If password is not of length equal to or greater than 8
+	\begin{enumerate}
+	   	 \item	Password will not be changed
+	\end{enumerate}
+\item If password text and confirm password text not matched
+	\begin{enumerate}
+		\item Again error message will be displayed
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &   Selected Data will get modified \\ \hline
+
+\end{tabular}
+%------------------------------------------
+
+\section{Use Case 6(Add Products) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U06 \\\hline
+
+Name  	    &  Add Products \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  These two concerned actors will add products in for their warehouses. They have to provide all details of the bought products and all the products will get entered in the system records.\\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-008 Add Product@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &  Click on Add product Button on CEO or Employee Dashboard \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Add Product Form will be displayed
+\item It will ask the users for all details of products
+\item Click on Add Button to add product details
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item If Reset is Clicked
+	\begin{enumerate}
+		\item All text and input areas will get clear
+		\item Control will remain on the same page
+
+	\end{enumerate}
+\item 	If Close is Clicked
+	\begin{enumerate}
+	   	 \item	Form will be closed
+	   	 \item	CEO and Employee Dashboard will again get displayed
+	\end{enumerate}
+\item If not necessary conditions are provided
+	\begin{enumerate}
+		\item Error Message will be displayed with a message
+	\end{enumerate} 
+\end{itemize}
+\\ \hline
+Post-Condition &    Product will be added to system and will be sent to the selected Warehouse\\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{Use Case 7(Products Details) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U07 \\\hline
+
+Name  	    &  Products Details \\ \hline
+
+Actor     	&  CEO, Employee\\ \hline
+
+Description & This form allows the respective users to view products and perform certain operations on data. Certain operations include search with filters and edit and delete options (only for CEO) as well.  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-010 ViewAndDelete Products@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &  Click on Option on Top Left Corner
+Select products details
+ \\ \hline
+
+\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   On Clicking product details, product forms will be displayed
+\item  Select Row from the data and click delete to delete and edit to edit selected item
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item If text filters are selected and word text area is empty
+	\begin{enumerate}
+		\item An Alert message of Empty input is entered
+	\end{enumerate}
+\item If delete button is pressed without selecting any row data
+	\begin{enumerate}
+	   	 \item	Exception will be handled and an exception error will be displayed to the user
+	   	 \item User will remain on the same page 
+	\end{enumerate}
+\item If Close Button is Clicked
+	\begin{enumerate}
+		\item CEO or Employee Dashboard will again open
+	\end{enumerate}
+\item If Clear Button is Clicked
+	\begin{enumerate}
+		\item All filters will get cleared
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &  Selected Row Data will get updated or deleted  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{Use Case 8(Update Products) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U08 \\\hline
+
+Name  	    &  Update Products \\ \hline
+
+Actor     	&  CEO, Employee\\ \hline
+
+Description &  This form allows the respective users to edit products. Select the product from the data. Click Update in the I09. This form will get open. All previous product details will also be there in its respective fields. Modify Details according to your need.\\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-009 Update Product@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &  Click on Update Button in U09 \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Clicking on Update Button will open this screen
+\item  Modify Details and Fill all areas
+\item  Click Update Button
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item If user don’t provide all required information
+	\begin{enumerate}
+		\item Alert Message will be displayed.
+		\item System remain to same page
+
+	\end{enumerate}
+\item Clicking Reset
+	\begin{enumerate}
+	   	 \item	Clear the fields
+	\end{enumerate}
+\item Clicking Close Button
+	\begin{enumerate}
+		\item Close the Form
+		\item Return to Products Details UI
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &  Selected Data (Product) will get modified  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{ Use Case 9(Add Rider)}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U09 \\\hline
+
+Name  	    &  Add Rider \\ \hline
+
+Actor     	&  CEO, Employee\\ \hline
+
+Description & Irrespective of self-signup by rider himself, CEO and Employee can add rider details into their system. They have to provide his personal information and the information related to his vehicle. Rider himself will tell his details to Employee or his details will be provided to the CEO. \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-020 AddRider@1x.png}\end{center}  \\ \hline
+
+Pre-Condition & Click on Add Rider from CEO or Employee Dashboard  \\ \hline
+
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Designation will be selected automatically
+\item  Provide All Necessary personal information
+\item  Also Add Information Related to vehicle
+\item  Click on Add Button
+
+
+\end{enumerate}
+
+\\ \hline
+Post-Condition &  Rider Information will be Added to your system  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{ Use Case 10(Update Rider)}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U10 \\\hline
+
+Name  	    &  Update Rider \\ \hline
+
+Actor     	& CEO, Employee, Rider \\ \hline
+
+Description & Selecting Riders Details and then Clicking Update button after selecting row, will allow you to modify selected Riders Details. Change your required fields and Save the information \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-021 UpdateRider@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &  Click on Update in Rider Details after selecting rider \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Designation will be selected automatically
+\item  Provide All Necessary personal information
+\item  Also Add Information Related to vehicle
+\item  Click on Add Button
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item Clicking Close Button
+	\begin{enumerate}
+		\item Return to Riders Details
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &  Rider Information will be modified and will get save to your system  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{Use Case 11(Order Product) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &   U11\\\hline
+
+Name  	    & Order Product  \\ \hline
+
+Actor     	& Rider \\ \hline
+
+Description & Rider will approach the shopkeepers, take orders from them, recommend them some products and handed over the order to Employee in the company. Shopkeeper can be shown the summary of products he asked to buy \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center}
+ \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-011 Order Product@1x.png} 
+\includegraphics[scale=0.3]{./UIs for Latex Reports/UI-012 Order Summery@1x.png}\end{center}
+
+ \\ \hline
+
+Pre-Condition &  Click on Order Product in the Rider Dashboard \\ \hline
+
+\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   At first all available products will be shown in the grid list
+\item  Rider will ask shopkeeper for the order
+\item  Rider will add the products by searching them and providing quantity
+\item  Select the product and click Add to Cart
+\item  After adding all the required products to cart, click Buy Now.
+\item  Order Summary Screen will open
+\item  Provide Necessary Details and Click Buy 
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item 	Clicking Close Button
+	\begin{enumerate}
+		\item 	Return to Riders Dashboard
+	\end{enumerate}
+\item Clicking the Reset will reset the Cart
+	
+\end{itemize}
+\\ \hline
+Post-Condition &  Employee will get notified and order will be added to the system  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{Use Case 12(Send Email) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U12 \\\hline
+
+Name  	    &  Send Email \\ \hline
+
+Actor     	&  Rider, CEO, Warehouse Manager, Employee \\ \hline
+
+Description & To communicate with each other and notify about each activity, each user can contact with one another through email. \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-013 SendEmail@1x.png}\end{center}  \\ \hline
+
+Pre-Condition & You must be a user of this system before  \\ \hline
+
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Click on Send Email from your dashboard
+\item   Type To
+\item   Type From
+\item   Subject
+\item   Email Body
+\item   Click Send
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item 	Clicking Close Button
+	\begin{enumerate}
+		\item 	Return to Respective Dashboard
+	\end{enumerate}
+\item Clicking the Reset will reset the Email
+\end{itemize}
+\\ \hline
+Post-Condition & Email will be send to the person specified in To Section   \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{Use Case 13(New Warehouse) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U13 \\\hline
+
+Name  	    &  New Warehouse \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  CEO and Employee Dashboard have an option to add a new warehouse for a company. Provide Necessary details like warehouse volume, capacity, etc and manager name as well. \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-014 AddWarehouse@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &   Click on Add Warehouse in Employee and CEO Dashboard\\ \hline
+
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   New Warehouse UI screen will be displayed
+\item  Provide details of a new warehouse
+\item  Assign a New manager
+\item  Click on Add
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item 	Clicking Close Button
+	\begin{enumerate}
+		\item 	Return to Respective Dashboard
+	\end{enumerate}
+\item Clicking the Clear will reset the fields
+\end{itemize}
+\\ \hline
+Post-Condition &  A new Warehouse will be added to the office   \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{ Use Case 14(View/Delete Warehouse)}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U14 \\\hline
+
+Name  	    &  View/Delete Warehouse \\ \hline
+
+Actor     	&  CEO, Employee\\ \hline
+
+Description &  This form allows you to view all the warehouse with their details. Only CEO has the authority to delete warehouses. The concerned user can also filter out the warehouse details. \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-016 ViewAndDelete Warehouse@1x.png}\end{center}  \\ \hline
+
+Pre-Condition & Click on Option in CEO or Employee Dashboard Click Warehouse details  \\ \hline
+
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Warehouse Details UI will appear
+\item  View Details
+\item  For deletion, select data row and click delete from below.
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item Clicking Edit Button
+	\begin{enumerate}
+		\item Will open a Edit Warehouse Form
+	\end{enumerate}
+\item Clicking Clear Button
+	\begin{enumerate}
+	   	 \item	Will reset the filters
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &  Detailed Warehouse data will be displayed or deletion occurs if any   \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{ Use Case 15(Edit Warehouse) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U15 \\\hline
+
+Name  	    &  Edit Warehouse \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Selecting Warehouse Details and then Clicking Update button after selecting row, will allow you to modify selected Warehouse Details. Change your required fields and Save the information \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-015 EditWarehouse@1x.png}\end{center}  \\ \hline
+
+Pre-Condition & Click on Update in Warehouse details after selecting data  \\ \hline
+
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   Update Warehouse UI will show
+\item   Modify already filled fields with your requirements
+\item   Click Update
+
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item Clicking Clear Button
+	\begin{enumerate}
+		\item Clear All fields
+	\end{enumerate}
+\item  Clicking Back Button
+	\begin{enumerate}
+	   	 \item	Back to Previous Warehouse Details
+	\end{enumerate}
+\end{itemize}
+\\ \hline
+Post-Condition &   Selected Warehouse details will be modified  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+\section{Use Case 16(Order Status) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U16 \\\hline
+
+Name  	    &  Order Status \\ \hline
+
+Actor     	&  CEO, Employee, Shopkeeper, Warehouse Manager \\ \hline
+
+Description & From the Order Details, you are able to view the status of the order whether it is pending, in progress or completed/delivered. This will allow the concerned user to track progress details about specific order.   \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-023 OrderStatus@1x.png}\end{center}  \\ \hline
+
+Pre-Condition &   \\ \hline
+
+\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item   
+
+\end{enumerate}
+
+Alternate Flow:
+
+\begin{itemize}
+\item
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\item 
+	\begin{enumerate}
+	   	 \item	
+		\item 
+	\end{enumerate}
+\item 
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\item 
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\item 
+\end{itemize}
+\\ \hline
+Post-Condition &    \\ \hline
+
+\end{tabular}
+%------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
