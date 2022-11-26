@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {6.2}Login}{36}{}%
 \contentsline {section}{\numberline {6.3}Forgot Password }{37}{}%
 \contentsline {section}{\numberline {6.4}Create Account }{38}{}%
-\contentsline {section}{\numberline {6.5} Update Information}{39}{}%
+\contentsline {section}{\numberline {6.5}Update Information}{39}{}%
 \contentsline {section}{\numberline {6.6}Account Detail }{40}{}%
 \contentsline {section}{\numberline {6.7}CEO Dashboard }{41}{}%
 \contentsline {section}{\numberline {6.8}Add Product }{42}{}%

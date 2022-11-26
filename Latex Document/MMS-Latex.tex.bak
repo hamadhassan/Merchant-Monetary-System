@@ -231,7 +231,7 @@ Post-Condition &  Password will successfully changed  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 3(CEO Dashboard)}
+\section{Use Case 3(CEO Dashboard)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -511,7 +511,7 @@ Post-Condition &  Selected Data (Product) will get modified  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 9(Add Rider)}
+\section{Use Case 9(Add Rider)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -544,7 +544,7 @@ Post-Condition &  Rider Information will be Added to your system  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 10(Update Rider)}
+\section{Use Case 10(Update Rider)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -720,7 +720,7 @@ Post-Condition &  A new Warehouse will be added to the office   \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 14(View/Delete Warehouse)}
+\section{Use Case 14(View/Delete Warehouse)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -764,7 +764,7 @@ Post-Condition &  Detailed Warehouse data will be displayed or deletion occurs i
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 15(Edit Warehouse) }
+\section{Use Case 15(Edit Warehouse) }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -836,7 +836,7 @@ Post-Condition &  You can now track the progress of your order   \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 17(Route Finder)}
+\section{Use Case 17(Route Finder)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -867,7 +867,7 @@ Post-Condition &  You will be shown all the possible routes from source to desti
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 18(Add Shopkeeper)}
+\section{Use Case 18(Add Shopkeeper)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -1018,7 +1018,7 @@ Post-Condition &    \\ \hline
 \end{tabular}
 %------------------------------------------
 
-\section{ Use Case 21(Create Account)}
+\section{Use Case 21(Create Account)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -1136,7 +1136,7 @@ Validators &
 \end{tabular} 
 %------------------------------------------
 
-\section{ Update Information}
+\section{Update Information}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -1671,7 +1671,7 @@ Validators &
 \begin{tabular}{ |c|c|c|c|c|c|c| } 
  \hline
 
- Interface Id & AutoComplete & Radio Button & Check Box & Menu & Text Area &ProgressBar \\  \hline
+\textbf{ Interface Id} &\textbf{ AutoComplete} &\textbf{ Radio Button} & \textbf{Check} \textbf{Box} & \textbf{Menu} & \textbf{Text Area} &\textbf{ProgressBar \\  \hline
 101 & 0 & 0 & 0 & 0 & 0	& 1  \\ \hline
 102 & 0 & 0 & 0 & 0	& 0 & 0  \\ \hline
 103 & 0 & 0 & 0 & 0 & 0 & 0  \\ \hline
@@ -1707,7 +1707,7 @@ Validators &
 \begin{tabular}{ |c|c|c|} 
  \hline
 
- Class Name & Software/ Domain & Is Abstract (Yes/No)\\ \hline
+\textbf {Class Name} & \textbf{ Software/ Domain }&\textbf {Is Abstract (Yes/No)}\\ \hline
  CEO 		&Domain			&No\\ \hline
 Company		&Domain			&No\\ \hline
 Office		&Domain			&No\\ \hline
@@ -1733,7 +1733,7 @@ Binary Search Tree&Software	&No\\ \hline
 \begin{tabular}{ |c|c|c|} 
  \hline
 
- Class Name & Software/ Domain & Is Abstract (Yes/No)\\ \hline
+\textbf{ Class Name} &\textbf{ Software/ Domain} &\textbf {Is Abstract (Yes/No)}\\ \hline
  CEO 		&Yes	&Yes \\\hline
 Company		&Yes	&Yes \\\hline
 Office		&Yes	&Yes \\\hline
@@ -1895,8 +1895,31 @@ Columns data names are
 \newpage
 \chapter {Email Sending}
 At first
+\begin{enumerate}
+\item Rider will email the employee about the order of shopkeeper
+\item Employee email warehouse manager to ready the shipment for rider
+\item Rider will email the Employee and Shopkeeper that he has picked the order and cc to CEO.
+\end{enumerate}
+
+\newpage
+\chapter {Project Plan}
+\begin{tabular}{ | m{2cm} | m{3cm}| | m{4cm}|| m{3cm}|} \hline
+\textbf{ Use Case Id }& \textbf{Use Case Name} &\textbf{ Member Name}&\textbf{Estimated Completion Date} \\ \hline
+
+\end{tabular}
 
 
+\newpage
+\chapter {Analytical Reports}
+In our project, we can use the analytical reports
+\begin{enumerate}
+\item Salary Report  
+\item Rider Capture Order Report 
+\item Profit Report 
+\item Sold Products
+
+
+\end{enumerate}
 
 
 \end{document}

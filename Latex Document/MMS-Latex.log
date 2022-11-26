@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  26 NOV 2022 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  26 NOV 2022 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,14 +1037,14 @@ Overfull \hbox (61.9913pt too wide) in paragraph at lines 1612--1634
 [58] [59]
 Chapter 7.
 
-Overfull \hbox (51.49922pt too wide) in paragraph at lines 1637--1667
+Overfull \hbox (109.30011pt too wide) in paragraph at lines 1637--1667
  [] 
  []
 
 [60
 
 ] [61]
-Overfull \hbox (99.89592pt too wide) in paragraph at lines 1671--1702
+Overfull \hbox (175.62091pt too wide) in paragraph at lines 1671--1702
  [] 
  []
 
@@ -1150,7 +1150,17 @@ Chapter 14.
 Chapter 15.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1907--1907
-[]|\OT1/cmr/m/n/12 Use Case
+[]|\OT1/cmr/bx/n/12 Use Case
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1907--1907
+[]|\OT1/cmr/bx/n/12 Estimated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1907--1907
+\OT1/cmr/bx/n/12 Com-ple-tion
  []
 
 
@@ -1168,7 +1178,7 @@ Chapter 16.
 Here is how much of TeX's memory you used:
  1660 strings out of 475284
  35419 string characters out of 2770292
- 383866 words of memory out of 3000000
+ 384866 words of memory out of 3000000
  23139 multiletter control sequences out of 15000+600000
  474158 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1179,7 +1189,7 @@ r/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hammad Hassan/AppData/Local/Programs
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ha
 mmad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.
 pfb>
-Output written on MMS-Latex.pdf (79 pages, 610903 bytes).
+Output written on MMS-Latex.pdf (79 pages, 611311 bytes).
 PDF statistics:
  333 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
