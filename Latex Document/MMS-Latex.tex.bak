@@ -976,7 +976,7 @@ Name  	    &  Withdraw Expenses \\ \hline
 
 Actor     	&  CEO \\ \hline
 
-Description &  \\ \hline
+Description & --- \\ \hline
 
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-027 Add Withdraw Expenses@1x.png}\end{center}  \\ \hline
 
@@ -986,31 +986,30 @@ Pre-Condition &   \\ \hline
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   
+\item   Payment Form will open
+\item Select Payment Type
+\item Type Withdraw Amount and Retype it in the next box
+\item Click Add
+
 
 \end{enumerate}
 
 Alternate Flow:
 
 \begin{itemize}
-\item
+\item Clicking Clear Button
 	\begin{enumerate}
-		\item 
+		\item Will clear all the fields you have filled
 	\end{enumerate}
-\item 
+\item Clicking Close Button
 	\begin{enumerate}
-	   	 \item	
-		\item 
+	   	 \item	Will happen to return to the respective/corresponding dashboard
 	\end{enumerate}
-\item 
+\item If Withdraw amount and Retype Withdraw Amount are not same
 	\begin{enumerate}
-		\item 
+		\item Error Message will occur
+		\item System will return to the same page after clicking on OK button
 	\end{enumerate}
-\item 
-	\begin{enumerate}
-		\item 
-	\end{enumerate}
-\item 
 \end{itemize}
 \\ \hline
 Post-Condition &    \\ \hline
@@ -1632,11 +1631,11 @@ Validators &
 \end{tabular} 
 %------------------------------------------
 \newpage
-\chapter {User Interface Details}
+\chapter {User Interface Details }
 \begin{center}
-\begin{tabular}{ |c|c|c|c|c|c|c| } 
+\begin{tabular}{ | m{1.5cm} | m{1.5cm}| | m{1.5cm}|| m{1.5cm}| | m{1cm} | m{1.5cm}| | m{1.5cm}|} 
  \hline
- Interface Id & TextBox & DropDown & Password Box & Table &Date Field &Buttons \\  \hline
+\textbf{ Interface Id} & \textbf{Text Box} & \textbf{Drop Down} & \textbf{Password Box} & \textbf{Table} & \textbf{Date Field} &\textbf{Buttons} \\  \hline
   101 &0 & 0 & 0 & 0 & 0 & 0 \\ \hline
   102 &1 & 1 & 1 & 0 & 0 & 3 \\ \hline
   103 &1 & 1 & 2 & 0 & 0 & 3 \\ \hline
@@ -1668,10 +1667,10 @@ Validators &
 %---------------------------------------
 \newpage
 \begin{center}
-\begin{tabular}{ |c|c|c|c|c|c|c| } 
+\begin{tabular}{ | m{1.5cm} | m{1.5cm}| | m{1.5cm}|| m{1.5cm}| | m{1cm} | m{1.5cm}| | m{1.5cm}|}  
  \hline
 
-\textbf{ Interface Id} &\textbf{ AutoComplete} &\textbf{ Radio Button} & \textbf{Check} \textbf{Box} & \textbf{Menu} & \textbf{Text Area} &\textbf{ProgressBar \\  \hline
+\textbf{ Interface Id} &\textbf{ AutoComplete} &\textbf{ Radio Button} & \textbf{Check} \textbf{Box} & \textbf{Menu} & \textbf{Text Area} &\textbf{Progress Bar} \\  \hline
 101 & 0 & 0 & 0 & 0 & 0	& 1  \\ \hline
 102 & 0 & 0 & 0 & 0	& 0 & 0  \\ \hline
 103 & 0 & 0 & 0 & 0 & 0 & 0  \\ \hline
@@ -1688,9 +1687,9 @@ Validators &
 114 & 1 & 0 &0 & 0 & 0 & 0  \\ \hline
 115 & 1 &0 & 0 & 0 & 0 & 0  \\ \hline
 116 & 0 & 0 & 0 &0 & 0 & 0  \\ \hline
-117 & 0 & 0& 0 & 1 0 & 0 & 0  \\ \hline
-118 & 0& 0 & 0 & 1 4 & 0 & 0  \\ \hline
-119 & 0 & 0& 0 & 1 1 & 0 & 0  \\ \hline
+117 & 0 & 0& 0 & 10 & 0 & 0  \\ \hline
+118 & 0& 0 & 0 & 14 & 0 & 0  \\ \hline
+119 & 0 & 0& 0 & 11 & 0 & 0  \\ \hline
 120 & 0 & 2 &0 & 0 & 0 & 0  \\ \hline
 121 & 1& 2 & 0 & 0 & 0 & 0   \\ \hline
 122 & 0 & 2& 0 & 0 & 0 & 0  \\ \hline
@@ -1703,8 +1702,9 @@ Validators &
 %------------------------------------
 \newpage
 \chapter {Classes}
+The classes which are used in the project are as under with there specific properties. 
 \begin{center}
-\begin{tabular}{ |c|c|c|} 
+\begin{tabular}{ | m{4cm}|m{4cm}|m{4cm}|} 
  \hline
 
 \textbf {Class Name} & \textbf{ Software/ Domain }&\textbf {Is Abstract (Yes/No)}\\ \hline
@@ -1730,10 +1730,10 @@ Binary Search Tree&Software	&No\\ \hline
 \end{center}
 %----------------------------
 \begin{center}
-\begin{tabular}{ |c|c|c|} 
+\begin{tabular}{ | m{4cm}|m{4cm}|m{4cm}|} 
  \hline
 
-\textbf{ Class Name} &\textbf{ Software/ Domain} &\textbf {Is Abstract (Yes/No)}\\ \hline
+\textbf{ Class Name} &\textbf{ Is Singleton (Yes/No)} &\textbf {Is the class will has parametrized constructor(Yes/No)}\\ \hline
  CEO 		&Yes	&Yes \\\hline
 Company		&Yes	&Yes \\\hline
 Office		&Yes	&Yes \\\hline
@@ -1801,8 +1801,12 @@ In our project Multilevel inheritance is used as
 
 \newpage
 \chapter {Detailed Object Oriented Design}
-\begin{center} \includegraphics[scale=0.7]{./UIs for Latex Reports/UML.jpg}\end{center}
 
+\begin{figure}
+  \centering
+    \includegraphics[scale=0.8]{./UIs for Latex Reports/UML.jpg}
+  \caption{The detailed Object Oriented Design of the project that will be implemented according to mentioned logic}
+\end{figure}
 \newpage
 \chapter {Data Structure}
 
@@ -1819,6 +1823,8 @@ U10 &Linked List&In the U10 (Update Rider), update the rider data. Selection of 
 U11 &Queue      & In the U11(Order Product), To place the order we use the mechanism of First in and First Out (first order item will be placed first)\\ \hline
 U12 &Stack      & In the U12 (Email), To send the mail and view the mail (first send mail is shown in the last and the most recent one in the first)\\ \hline
 U13 &Linked List& In the U13 (Add Warehouse), Add the detail data of the warehouse in the list.\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{2cm} | m{3cm}|m{9cm}| } \hline
 U14 &Linked List& In the U14 (Detail Warehouse), Select the desired warehouse and delete the data of the warehouse and also delete the data from the list and selection of list is that to delete the warehouse other indexes of list easily manage.
  
 \\ \hline
@@ -1834,7 +1840,7 @@ U21 &Linked List&In the U21 (Create Account), Linked list is used to add user. \
 
 \end{tabular}
 \newpage
-\chapter {Exceptions:}
+\chapter {Exceptions}
 
 \begin{tabular}{ | m{2cm} | m{5cm}|m{3cm}||m{4cm}| } \hline
 \textbf{Type of Exception} & \textbf{Why this exception will occur} &\textbf{ Use Case Id in which exception could be occurred} & \textbf{How you will handle the} exception \\  \hline

@@ -51,7 +51,7 @@
 \contentsline {section}{\numberline {6.24}Shopkeeper Record }{57}{}%
 \contentsline {section}{\numberline {6.25}Add Payment }{58}{}%
 \contentsline {section}{\numberline {6.26}Withdraw Expenses }{59}{}%
-\contentsline {chapter}{\numberline {7}User Interface Details}{60}{}%
+\contentsline {chapter}{\numberline {7}User Interface Details }{60}{}%
 \contentsline {chapter}{\numberline {8}Classes}{63}{}%
 \contentsline {chapter}{\numberline {9}Object Oriented Features}{65}{}%
 \contentsline {section}{\numberline {9.1}Composition}{65}{}%
@@ -60,12 +60,12 @@
 \contentsline {section}{\numberline {9.4}Aggregation}{66}{}%
 \contentsline {section}{\numberline {9.5}Association}{66}{}%
 \contentsline {chapter}{\numberline {10}Detailed Object Oriented Design}{67}{}%
-\contentsline {chapter}{\numberline {11}Data Structure}{68}{}%
-\contentsline {chapter}{\numberline {12}Exceptions:}{70}{}%
-\contentsline {chapter}{\numberline {13}Data Storage}{71}{}%
-\contentsline {section}{\numberline {13.1}Mails (CSV)}{71}{}%
-\contentsline {section}{\numberline {13.2}Products (CSV)}{71}{}%
-\contentsline {section}{\numberline {13.3}Users (CSV)}{72}{}%
-\contentsline {chapter}{\numberline {14}Email Sending}{73}{}%
-\contentsline {chapter}{\numberline {15}Project Plan}{74}{}%
-\contentsline {chapter}{\numberline {16}Analytical Reports}{75}{}%
+\contentsline {chapter}{\numberline {11}Data Structure}{69}{}%
+\contentsline {chapter}{\numberline {12}Exceptions}{72}{}%
+\contentsline {chapter}{\numberline {13}Data Storage}{73}{}%
+\contentsline {section}{\numberline {13.1}Mails (CSV)}{73}{}%
+\contentsline {section}{\numberline {13.2}Products (CSV)}{73}{}%
+\contentsline {section}{\numberline {13.3}Users (CSV)}{74}{}%
+\contentsline {chapter}{\numberline {14}Email Sending}{75}{}%
+\contentsline {chapter}{\numberline {15}Project Plan}{76}{}%
+\contentsline {chapter}{\numberline {16}Analytical Reports}{77}{}%
