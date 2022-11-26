@@ -231,7 +231,7 @@ Post-Condition &  Password will successfully changed  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 3(CEO Dashboard)}
+\section{Use Case 3(CEO Dashboard)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -511,7 +511,7 @@ Post-Condition &  Selected Data (Product) will get modified  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 9(Add Rider)}
+\section{Use Case 9(Add Rider)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -544,7 +544,7 @@ Post-Condition &  Rider Information will be Added to your system  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 10(Update Rider)}
+\section{Use Case 10(Update Rider)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -720,7 +720,7 @@ Post-Condition &  A new Warehouse will be added to the office   \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 14(View/Delete Warehouse)}
+\section{Use Case 14(View/Delete Warehouse)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -764,7 +764,7 @@ Post-Condition &  Detailed Warehouse data will be displayed or deletion occurs i
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 15(Edit Warehouse) }
+\section{Use Case 15(Edit Warehouse) }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -836,7 +836,7 @@ Post-Condition &  You can now track the progress of your order   \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 17(Route Finder)}
+\section{Use Case 17(Route Finder)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -867,7 +867,7 @@ Post-Condition &  You will be shown all the possible routes from source to desti
 
 \end{tabular}
 %------------------------------------------
-\section{ Use Case 18(Add Shopkeeper)}
+\section{Use Case 18(Add Shopkeeper)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -1018,7 +1018,7 @@ Post-Condition &    \\ \hline
 \end{tabular}
 %------------------------------------------
 
-\section{ Use Case 21(Create Account)}
+\section{Use Case 21(Create Account)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -1754,11 +1754,174 @@ Linked List	&No		&Yes \\ \hline
 Binary Search Tree  &No		&Yes\\  \hline
 \end{tabular}
 \end{center}
+%------------------------------------
+\newpage
+\chapter {Object Oriented Features}
+\section{Composition}
+In our Project there are 8 places where we use Composition
+\begin{itemize}
+\item   Company Class has composition of Ledger Class
+\item  Company Class has composition of Office Class
+\item  Company Class has composition of Warehouse Class
+\item  Company Class has composition of CEO Class
+\item  Warehouse Class has composition of  Warehouse Manager Class
+\item  Rider Class has composition of Vehicle Class
+\item  Office Class has composition of User Class ( Employee, Rider)
+\item  Shop Owner Class has composition of Shop Class
+\end{itemize}
+\section{Inheritance}
+In our project inheritance is used in following places
+\begin{itemize}
+\item   User inherits the class of CEO
+\item User inherits the class of Rider 
+\item User inherits the class of Shopkeeper
+\item User inherits the class of Warehouse Manager  
+\end{itemize}
+\section{Multi-Level Inheritance}
+In our project Multilevel inheritance is used as
+\begin{itemize}
+\item User class inherits the CEO class and CEO class inherits the Employee Class
+\end{itemize}
+\section{Aggregation}
+In our project Multilevel inheritance is used as
+\begin{itemize}
+\item Rider Aggregate the Rating Class in our project
+\end{itemize}
+\section{Association}
+In our project Multilevel inheritance is used as
+\begin{itemize}
+\item Warehouse Manager manages the order.
+\item CEO manages the products
+\item Rider take the order 
+\item Rider adds the order
+\item Employee adds the products
+\item Employee manages the order 
+\end{itemize}
 
 
+\newpage
+\chapter {Detailed Object Oriented Design}
+\begin{center} \includegraphics[scale=0.7]{./UIs for Latex Reports/UML.jpg}\end{center}
+
+\newpage
+\chapter {Data Structure}
+
+\begin{tabular}{ | m{2cm} | m{3cm}|m{9cm}| } \hline
+\textbf{ Use Case ID}&	\textbf{Data Structure Used}	& \textbf{Justification for the use of data structure}  \\ \hline
+U01 &Linked List& In the U01 (LOGIN), search and compare the user from the list so when the user data is found it returns the action.\\ \hline
+U04 &Linked List& In the U04 (Account Details), Grid of the added users shown lists where all the users are stored(added) \\ \hline
+U05 &Linked List& In the U05 (Update Account), Update data of  the user present in the Linked List\\ \hline
+U06 &Linked List&In the U06 (Add Product), Add the product data in the List. \\ \hline
+U07 &Linked List&In the U07 (View Product), View the product data in the Grid that are stored in the list at the backend. \\ \hline
+U08 &Linked List& In the U08 (Update Product), Update the product data in the list where the data of the products are added.\\ \hline
+U09 &Linked List& In the U09 (Add Rider), Add the Rider data in the List. Selection of the list is because there is the ease in the deletion and search in the data of list\\ \hline
+U10 &Linked List&In the U10 (Update Rider), update the rider data. Selection of the list is to search is to ease. \\ \hline
+U11 &Queue      & In the U11(Order Product), To place the order we use the mechanism of First in and First Out (first order item will be placed first)\\ \hline
+U12 &Stack      & In the U12 (Email), To send the mail and view the mail (first send mail is shown in the last and the most recent one in the first)\\ \hline
+U13 &Linked List& In the U13 (Add Warehouse), Add the detail data of the warehouse in the list.\\ \hline
+U14 &Linked List& In the U14 (Detail Warehouse), Select the desired warehouse and delete the data of the warehouse and also delete the data from the list and selection of list is that to delete the warehouse other indexes of list easily manage.
+ 
+\\ \hline
+U15 &Linked List&In the U15 (Edit Warehouse), Select the data from the list and Edit the detail data of the warehouse in the list. 
+ 
+ \\ \hline
+U16 &Linked List& In the U16 (Order Status), Data is selected and data of the desired Order is updated in the list.\\ \hline
+U17 &BST        & In the U17 (Route Finder), Routes are found according to the points (nodes) so selection of BST is due to the ease of the data finding.\\ \hline
+U18 &Linked List&In the U18 (Add Shopkeeper), Add the shopkeeper data in the list because there is an ease for the deletion and searching. \\ \hline
+U19 &Linked List& In the U19 (Add Payment), payment of the specific shopkeeper is added on the list to search and edit the details in the list.\\ \hline
+U20 &Linked List&In the U20 (Add Expenses Amount), Add the Expenses data in the List. Because there is an ease to update the specific data in the list and search or delete it in list. \\ \hline
+U21 &Linked List&In the U21 (Create Account), Linked list is used to add user. \\ \hline
+
+\end{tabular}
+\newpage
+\chapter {Exceptions:}
+
+\begin{tabular}{ | m{2cm} | m{5cm}|m{3cm}||m{4cm}| } \hline
+\textbf{Type of Exception} & \textbf{Why this exception will occur} &\textbf{ Use Case Id in which exception could be occurred} & \textbf{How you will handle the} exception \\  \hline
+Incorrect Format&By default system, take all input in string and the deploy system need to convert into desire format. If the input data is not converted into other datatype like int and float the future task not performed e.g. string 2 and int 2 behave different in CPU. &U06,U19,U09&Restrict the user to enter the required data in correct format.                      \\  \hline
+File not Exit &The required file not in the correct path and CPU not recognize it.&U14,U07,U04&Restrict the user first select the file then perfrom future action
+\\  \hline
+Incorrect URL& The wrong URL of the website broken the link with the DNS and required data not fetch from server. &U17&Apply stick constrain to avoid it. \\
+\hline
+
+\end{tabular}
+\newpage
+\chapter {Data Storage}
+
+\section{Mails (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Columns data names are
+\item Employee and Rider
+\item Rider and Shopkeeper
+\item Warehouse Manager and Employee
+\item CEO and Employee
+\end{enumerate}
+
+
+\section{Products (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Name
+\item Cost
+\item Retail price
+\item Expiry Date
+\item Quantity
+\item In date 
+\item Out date
+\item Manufacturer 
+\item ID
+\item Weight
+\item Volume
+\item Category
+\item Sensitivity
+\item In stock
+\item Rating
+\item Warehouse Hold ID
+\end{enumerate}
+
+\section{Users (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Name 
+\item Gender
+\item Email address
+\item Contact Number
+\item CNIC number
+\item Address
+\item Desigination 
+\end{enumerate}
+
+\newpage
+\chapter {Email Sending}
+At first
+\begin{enumerate}
+\item Rider will email the employee about the order of shopkeeper
+\item Employee email warehouse manager to ready the shipment for rider
+\item Rider will email the Employee and Shopkeeper that he has picked the order and cc to CEO.
+\end{enumerate}
+
+\newpage
+\chapter {Project Plan}
+\begin{tabular}{ | m{2cm} | m{3cm}| | m{4cm}|| m{3cm}|} \hline
+Use Case Id & Use Case Name & Member Name&Estimated Completion Date \\ \hline
+
+\end{tabular}
+
+
+\newpage
+\chapter {Analytical Reports}
+In our project, we can use the analytical reports
+\begin{enumerate}
+\item Salary Report  
+\item Rider Capture Order Report 
+\item Profit Report 
+\item Sold Products
+
+
+\end{enumerate}
 
 
 \end{document}
-
 
 
