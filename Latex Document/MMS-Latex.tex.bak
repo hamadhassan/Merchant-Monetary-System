@@ -1,0 +1,39 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{graphicx}
+
+
+\begin{document}
+%--------------Title Page ------------------
+\begin{center}
+\textbf{\large{Merchant Monetary System}}\\
+\vspace{0.5cm}
+\textbf{ CS-262 Design Document} \\
+\vspace{1cm}
+\includegraphics[scale=.06]{UETLogo}\\
+\vspace{1cm}
+\underline{ Project Supervisor}\\
+\vspace{0.3cm}
+Mr. Samyan Qayyum Wahla\\
+\vspace{1cm}
+\underline {Group ID $(G 11)$} \\
+\vspace{0.3cm}
+Project Member\\
+\vspace{0.3cm}
+\begin{tabular}{c c c }
+ Syed Hashir & 2021-CS-1 \\ 
+ Kabir Ahmed & 2021-CS-3  \\  
+ M. Hamad Hassan & 2021-CS-33
+\end{tabular}
+\vspace{2cm}
+\par\rule{\textwidth}{0.5pt} 
+Department of Computer Science\\
+University of Engineering and Technology, Lahore\\
+Pakistan
+
+
+
+\end{center}
+\end{document}
+
+
+
