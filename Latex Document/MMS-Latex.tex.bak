@@ -1,10 +1,11 @@
 \documentclass[12pt,a4paper]{report}
 \usepackage{graphicx}
 \usepackage{tabularx}
-
+\usepackage{array}
 
 \begin{document}
 %--------------Title Page ------------------
+\thispagestyle{empty}
 \begin{center}
 \textbf{\large{Merchant Monetary System}}\\
 \vspace{0.5cm}
@@ -22,7 +23,7 @@ Project Member\\
 \vspace{0.5cm}
 \begin{tabular}{c c c }
  Syed Hashir & 2021-CS-1 \\ 
- Kabir Ahmed & 2021-CS-3  \\  
+ Kabir Ahmed & 2021-CS-4  \\  
  M. Hamad Hassan & 2021-CS-33
 \end{tabular}
 \vspace{2cm}
@@ -31,10 +32,16 @@ Department of Computer Science\\
 University of Engineering and Technology, Lahore\\
 Pakistan
 \end{center}
+\newpage
+
+\tableofcontents
+\thispagestyle{empty}
+\pagenumbering{arabic}
+
 
 \newpage
+\setcounter{page}{1}
 \chapter {Project Description}
-
 
 The system is designed for a company that provides:
 Logistics (delivery of products to its client), product management (crud operations), and effective communication with their employee and clients.
@@ -116,6 +123,72 @@ The stakeholder is:
 \begin{itemize}
 \item \textbf{Shopkeepers:} Are able to outlook products, place order and check detail.
 \end{itemize}
+\newpage
+\chapter {Use Cases}
+%------------------------------------------
+\section{Use Case 1(Log In)}
+\begin{tabular}{ | m{3cm} | m{12cm}| } 
+  \hline
+Use Case ID & U01   \\\hline
+Name  &  Login Screen \\ \hline
+Actor &   CEO, Employee, Rider, Warehouse Manager \\ \hline
+Description & Respected user will login to this system by providing valid role, username and password. After clicking on Login Button, System will check for its validity if this user is already exist on database. After successful validation, respected panel will show them.  \\ \hline
+UI Interface in JUSTINMIND & \begin{center}
+\includegraphics[scale=0.3]{./UIs for Latex Reports/UI-002 Login@1x.png}
+\end{center}  \\ \hline
+Pre-Condition & Respective User Will initiate this system.  \\ \hline
+
+\end{tabular}
+\newpage
+\begin{tabular}{ | m{3cm} | m{12cm}| } 
+\hline
+Flow & Main Scenario:
+\begin{enumerate}
+\item   By Default Login Screen will appear first
+\item	Select Your Role from combo box then.
+\item	Provide your username you chose while signing up.
+\item	Then enter password for your account
+\item	Then Click on Login Button
+\end{enumerate}
+Alternate Flow:
+\begin{itemize}
+\item If forgot password button is clicked
+	\begin{enumerate}
+		\item Interface I02 will get open
+	\end{enumerate}
+\item If user provides invalid username and password
+	\begin{enumerate}
+	    \item	Message box with a message of invalid input will be displayed
+		\item System remains on the same page
+	\end{enumerate}
+\item If user provides unregistered information
+	\begin{enumerate}
+		\item Message Box with a message of “User Not Found” will get displayed
+	\end{enumerate}
+\item If user don’t provide all required information
+	\begin{enumerate}
+		\item Alert Message will be displayed.
+	\end{enumerate}
+\item If Exit Button is Clicked  
+\end{itemize}
+\\ \hline
+Post-Condition & Password will successfully changed  \\ \hline
+
+\end{tabular}
+%------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  26 NOV 2022 16:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  26 NOV 2022 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -128,55 +128,102 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <UETLogo.png, id=1, 1705.572pt x 1720.026pt>
 File: UETLogo.png Graphic file (type png)
 <use UETLogo.png>
-Package pdftex.def Info: UETLogo.png  used on input line 13.
+Package pdftex.def Info: UETLogo.png  used on input line 14.
 (pdftex.def)             Requested size: 119.40224pt x 120.41412pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 15.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
+(Font)              <6> on input line 16.
  [1
 
 {C:/Users/Hammad Hassan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./UE
-TLogo.png>]
-Chapter 1.
-[2
+TLogo.png>] (MMS-Latex.toc)
+\tf@toc=\write3
+\openout3 = `MMS-Latex.toc'.
 
-] [3] [4]
+ [1
+
+]
+Chapter 1.
+[1
+
+] [2] [3]
 Chapter 2.
-[5
+[4
 
 ]
 Chapter 3.
-[6
+[5
 
 ]
 Chapter 4.
-[7
+[6
 
 ]
 Chapter 5.
-[8
 
-] (MMS-Latex.aux) ) 
+Underfull \hbox (badness 1648) in paragraph at lines 136--136
+[]|\OT1/cmr/m/n/12 UI In-ter-face in
+ []
+
+<./UIs for Latex Reports/UI-002 Login@1x.png, id=34, 933.4875pt x 542.025pt>
+File: ./UIs for Latex Reports/UI-002 Login@1x.png Graphic file (type png)
+<use ./UIs for Latex Reports/UI-002 Login@1x.png>
+Package pdftex.def Info: ./UIs for Latex Reports/UI-002 Login@1x.png  used on i
+nput line 137.
+(pdftex.def)             Requested size: 280.04842pt x 162.60875pt.
+
+Overfull \hbox (61.9913pt too wide) in paragraph at lines 130--142
+[] 
+ []
+
+[7
+
+ <./UIs for Latex Reports/UI-002 Login@1x.png>]
+Overfull \hbox (79.61612pt too wide) in paragraph at lines 143--179
+[][] 
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 191--191
+[]|\OT1/cmr/m/n/12 UI In-ter-face in
+ []
+
+File: ./UIs for Latex Reports/UI-002 Login@1x.png Graphic file (type png)
+<use ./UIs for Latex Reports/UI-002 Login@1x.png>
+Package pdftex.def Info: ./UIs for Latex Reports/UI-002 Login@1x.png  used on i
+nput line 191.
+(pdftex.def)             Requested size: 280.04842pt x 162.60875pt.
+
+Overfull \hbox (61.9913pt too wide) in paragraph at lines 181--195
+[] 
+ []
+
+[8] [9]
+Overfull \hbox (79.61612pt too wide) in paragraph at lines 195--233
+[][] 
+ []
+
+[10] (MMS-Latex.aux) ) 
 Here is how much of TeX's memory you used:
- 1461 strings out of 475284
- 25223 string characters out of 2770292
- 371876 words of memory out of 3000000
- 22972 multiletter control sequences out of 15000+600000
- 473552 words of font info for 42 fonts, out of 8000000 for 9000
+ 1477 strings out of 475284
+ 25789 string characters out of 2770292
+ 372866 words of memory out of 3000000
+ 22983 multiletter control sequences out of 15000+600000
+ 474158 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,62p,750b,179s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\Hammad Hassan\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hammad Hassan/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hammad Hassan/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ha
-mmad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.
-pfb>
-Output written on MMS-Latex.pdf (8 pages, 79901 bytes).
+ 55i,13n,62p,750b,264s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\Hammad Hassan\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hammad Hassan/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hammad Hassan/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users
+/Hammad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+12.pfb>
+Output written on MMS-Latex.pdf (12 pages, 93342 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
