@@ -21,7 +21,7 @@ Mr. Samyan Qayyum Wahla\\
 \vspace{0.5cm}
 Project Member\\
 \vspace{0.5cm}
-\begin{tabular}{c c c }
+\begin{tabular}{ m{5cm} m{4cm}}
  Syed Hashir & 2021-CS-1 \\ 
  Kabir Ahmed & 2021-CS-4  \\  
  M. Hamad Hassan & 2021-CS-33
@@ -1909,9 +1909,11 @@ At first
 
 \newpage
 \chapter {Project Plan}
-\begin{tabular}{ | m{2cm} | m{3cm}| | m{4cm}|| m{3cm}|} \hline
-\textbf{ Use Case Id }& \textbf{Use Case Name} &\textbf{ Member Name}&\textbf{Estimated Completion Date} \\ \hline
-
+\begin{tabular}{ | m{2cm} | m{4cm}|| m{3cm}|} \hline
+\textbf{ Use Case Id }&\textbf{ Member Name}&\textbf{Estimated Completion Date} \\ \hline
+001-008& Syed Hashir 	&09/12/2022   \\ \hline
+009-018& Kabir Ahmed	&10/12/2022   \\ \hline
+019-026& M. Hamad Hassan&11/12/2022  \\ \hline
 \end{tabular}
 
 
