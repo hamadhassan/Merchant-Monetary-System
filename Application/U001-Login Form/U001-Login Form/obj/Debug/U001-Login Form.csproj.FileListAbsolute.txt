@@ -1,0 +1,11 @@
+E:\Final Term Project\U001-Login Form\U001-Login Form\bin\Debug\U001-Login Form.exe.config
+E:\Final Term Project\U001-Login Form\U001-Login Form\bin\Debug\U001-Login Form.exe
+E:\Final Term Project\U001-Login Form\U001-Login Form\bin\Debug\U001-Login Form.pdb
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001-Login Form.csproj.AssemblyReference.cache
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001-Login Form.csproj.SuggestedBindingRedirects.cache
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001_Login_Form.Properties.Resources.resources
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001-Login Form.csproj.GenerateResource.cache
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001-Login Form.csproj.CoreCompileInputs.cache
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001-Login Form.exe
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001-Login Form.pdb
+E:\Final Term Project\U001-Login Form\U001-Login Form\obj\Debug\U001_Login_Form.Form1.resources
