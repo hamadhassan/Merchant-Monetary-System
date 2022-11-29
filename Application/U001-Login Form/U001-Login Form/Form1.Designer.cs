@@ -85,8 +85,8 @@
             // 
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(123, 79);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0, 10, 3, 3);
+            this.comboBox1.Location = new System.Drawing.Point(123, 74);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(0, 5, 3, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(206, 21);
             this.comboBox1.TabIndex = 0;
@@ -114,10 +114,10 @@
             this.lblRole.AutoSize = true;
             this.lblRole.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.Location = new System.Drawing.Point(81, 79);
-            this.lblRole.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblRole.Location = new System.Drawing.Point(81, 76);
+            this.lblRole.Margin = new System.Windows.Forms.Padding(0, 7, 0, 0);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(42, 21);
+            this.lblRole.Size = new System.Drawing.Size(42, 24);
             this.lblRole.TabIndex = 3;
             this.lblRole.Text = "Role";
             this.lblRole.Click += new System.EventHandler(this.label1_Click);
@@ -190,12 +190,12 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(126, 221);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(203, 32);
+            this.button3.Size = new System.Drawing.Size(203, 33);
             this.button3.TabIndex = 7;
             this.button3.Text = "Forgot Password";
             this.button3.UseVisualStyleBackColor = false;
