@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Merchant_Monetary_System
 {
-    public partial class frmIntro : Form
+    public partial class frmSignUp : Form
     {
-        public frmIntro()
+        public frmSignUp()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
