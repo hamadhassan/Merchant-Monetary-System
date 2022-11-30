@@ -130,25 +130,19 @@ The stakeholder is:
 \begin{tabular}{ | m{3cm} | m{12cm}| } 
   \hline
 Use Case ID & U01   \\\hline
-Name  &  Login Screen \\ \hline
+Name  &  Login \\ \hline
 Actor &   CEO, Employee, Rider, Warehouse Manager \\ \hline
-Description & Respected user will login to this system by providing valid role, username and password. After clicking on Login Button, System will check for its validity if this user is already exist on database. After successful validation, respected panel will show them.  \\ \hline
-UI Interface in JUSTINMIND & \begin{center}
-\includegraphics[scale=0.3]{./UIs for Latex Reports/UI-002 Login@1x.png}
-\end{center}  \\ \hline
-Pre-Condition & Respective User Will initiate this system.  \\ \hline
-
-\end{tabular}
-\newpage
-\begin{tabular}{ | m{3cm} | m{12cm}| } 
+Description &The respected actor will log in to the application by providing the assigned role, user name, and password. After clicking the login button, the application will check for its validity. If this actor data exists in the database, the application will show the respective actor dashboard to them.
+The application will show an error message if the entered data is not matched with the database. \\ \hline
+Pre-Condition & The respective actor will initiate the application.  \\
 \hline
 Flow & Main Scenario:
 \begin{enumerate}
-\item   By Default Login Screen will appear first
-\item	Select Your Role from combo box then.
-\item	Provide your username you chose while signing up.
-\item	Then enter password for your account
-\item	Then Click on Login Button
+\item Actor loads the application, and the login form is displayed.
+\item Actor selects their respective role from the combo box. 
+\item Actor enters their assigned username in the textbox.
+\item Actor enters their password in the textbox.
+\item After entering the data, the actor clicks on the login button. 
 \end{enumerate}
 Alternate Flow:
 \begin{itemize}

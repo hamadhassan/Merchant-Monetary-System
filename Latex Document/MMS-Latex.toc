@@ -3,7 +3,7 @@
 \contentsline {chapter}{\numberline {3}Technology Stack}{5}{}%
 \contentsline {chapter}{\numberline {4}Project Actors}{6}{}%
 \contentsline {chapter}{\numberline {5}Use Cases}{7}{}%
-\contentsline {section}{\numberline {5.1}Use Case 1(Log In)}{7}{}%
+\contentsline {section}{\numberline {5.1}Use Case 1(Log In)}{8}{}%
 \contentsline {section}{\numberline {5.2}Use Case 2(Forgot Password)}{9}{}%
 \contentsline {section}{\numberline {5.3}Use Case 3(CEO Dashboard)}{11}{}%
 \contentsline {section}{\numberline {5.4}Use Case 4(Account Details) }{12}{}%
