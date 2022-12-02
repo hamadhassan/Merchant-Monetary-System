@@ -43,63 +43,63 @@ Pakistan
 \setcounter{page}{1}
 \chapter {Project Description}
 
-The system is designed for a company that provides:
-Logistics (delivery of products to its client), product management (crud operations), and effective communication with their employee and clients.
+The system is designed for a company that provides
+logistics (delivery of products to its client), product management (crud operations), and effective communication with their worker, clients, and vendors.
  
 The company has its office, warehouse, and rider. 
-It has a different contract with multiple firms to take the shipment and store it in dedicated warehouses. The rider will take orders from the shopkeeper. Their order is received at the office, and the office will create the feasibility report according to their client's needs and instructions generated for their warehouse manager to fulfill their order. The available rider will receive an email about their order. The office will send a confirmation email to their client. 
+It has a different contract with multiple firms to take the shipment from the vendors and store it in dedicated warehouses. The rider will take orders from the shopkeeper. Their order is received at the office, and the office will create the feasibility report according to their shopkeepers' needs and instructions generated for their warehouse manager to fulfill their order. The area-specific rider will receive an email about their order. The office will send a confirmation email to their shopkeeper. 
  
-There are a total of four actors in the system and one stakeholder. Their title and role are:
+There are a total of four actors in the system and two stakeholders. Their titles and roles are:
 \begin{itemize}
-\item \textbf{ CEO:} The owner of the company could manage all the operations.
-\item \textbf{Employee:} They directly report to CEO and help in company operations.  
-\item \textbf{Warehouse Manager:} Ready the shipment for the rider and managed other expenses.
-\item \textbf{Rider:} Received the order detail and delivered the product to pre-subscribed routes.
+\item \textbf{ CEO:} The company's owner manages all the operations.
+\item \textbf{Employee:} They are assistants to CEO to help in company operations. 
+\item \textbf{Warehouse Manager:} Received the instructions from the employee and ready the shipment for the rider, and managed other expenses.
+\item \textbf{Rider:} They take orders from different shopkeepers and deliver the product according to pre-subscribed routes defined by the system.
 \end{itemize}
 The stakeholder is:
 \begin{itemize}
-\item \textbf{Shopkeepers:} The rider will take the order from the shop owner and deliver it. The rider will receive all orders and payments.
+\item \textbf{Shopkeepers:} Getting the goods and services from the company.
+\item \textbf{Vendor:} The vendor will provide the products to the company. 
 \end{itemize}
-All the actors will be able to create their accounts, and the system will give specific security codes to them. It helps to protect the system from security breaches.
+This system is designed for one company and one CEO. CEO will be provided with already defined credentials. The CEO is responsible for creating accounts for all others actors. The CEO will provide a credential to the actors, and they will be able to update their credentials. 
  
-There first dedicated dashboard for the owner where they monitor all operations. The operations manage their employees, products, and expenses and send emails. The CEO is the only person in the system with access to all operations. CEOs could analyze company operations, including the performance of their workers. The system will generate the company expenditure report.
+The first dedicated dashboard for the CEO, where they monitor all operations. The operations manage their workers, products, and expenses and send emails. The CEO is the only person in the system with access to all operations. CEO analyzes company operations, including the performance of their workers and inventory. The system will present the company expenditure report.
  
-The second dashboard is for the office employees directly contacting the CEO. They have access to manage emails, clients' orders, vendors' orders, and company expenses. The company's expenses are the CEO, rider, and warehouse salaries. The payment of the vendor and clients. An employee will enter all the shipments that the company receives their record. They add the product name, SKU number, weight, volume, cost price, manufacturer, and many more to identify confirmed products.
+The second dashboard is for office employees. They have access to manage emails, shopkeepers' orders, vendors' shipments, and company expenses. The company's expenses are the CEO, rider, and warehouse salaries. The system will present the report of payment to the vendor and shopkeeper. An employee will enter all the shipments that the company receives. They add product identifiers.
  
-The third dashboard is for the warehouse manager, who receives feasibility reports of office employees and readies the order for the rider. The warehouse manager must record the labor used in preparing the order. It could provide the miscellaneous expenses of the warehouse, like electricity costs, etc. They can view the product and make suitable changes according to the requirements. 
+The third dashboard is for the warehouse manager, who receives feasibility reports of office employees and prepares the order for the rider. The warehouse manager must record the labor used in preparing the order. It could provide the miscellaneous expenses of the warehouse, like electricity costs, etc. They can view the product and make suitable changes according to the requirements.
  
-The fourth dashboard is for a rider who takes orders from the warehouse and delivery them to the company client. The system will provide the routes for the destination with the order detail. The rider received a specific amount of fuel to perform the operations. The prescribed fuel is calculated according to the formula. They can see all the products. The product will be sorted in order, like assessing and descending. Search for a specific product from a wide range of available products. The system will deploy different sharp algorithms to access the desired date quickly. Able to place the order and view the detail of the order as well. The order is placed according to the stakeholder shopkeeper's needs.
+The fourth dashboard is for a rider, which is basically the communicator between the company and the shopkeeper.
+The rider is responsible for taking orders from the shopkeeper. 
+Enter order details into the system. 
+The riders will check the current orders assigned to them by the company. They will pick up the shipment from the warehouse and delivery them to the shopkeeper. The system will present the routes to the destination with the order detail. The rider received a specific amount of fuel to perform the operations. The prescribed fuel is calculated according to the formula. They can see all the products. The product will be sorted in any order. Search for a specific product from a wide range of available products. The system will deploy different sharp algorithms to access the desired date orders quickly. Able to place the order and view the detail of the order as well. 
  
-The system will provide the report to the CEO according to the performance of their worker, expenditure, and profit.
+The system will present the report to the CEO according to the performance of their workers, expenditures, sales and profit, salaries, inventory report, riders' performance, shopkeeper and vendor payment, workers' report, individual warehouse report, and miscellaneous expenses.
 Like how many products are received in the warehouse, how many products are left, how many products are delivered to company clients, how many riders have done shipments, which rider performs most shipments, and which rider needs to perform better. It also includes how many orders a shopkeeper placed and whether the company received the payment. 
  
-The email notification mechanism is embedded in the system, which helps the company communicate within and outside with other vendors and clients. The internal communication will send the order details to the warehouse manager to prepare the shipment for the rider. The rider also received the email for the delivery of the order. The employee emails the CEO for any need of assistance with an issue. The warehouse manager and rider also mail to the company office for any assistance. In external communication, the client will receive a confirmation email from the system about their order. They also take assistance from the company with any issue.
+The email notification mechanism is embedded in the system, which helps the company communicate within and outside with other vendors and shopkeepers. After the rider has confirmed the order, the system will send an email to the company. The company will send the order details to the warehouse manager to prepare the shipment for the rider. The rider also received the email for the delivery of the order. The employee emails the CEO for any need of assistance with an issue. The warehouse manager and rider also mail to the company office for any assistance. In external communication, the client will receive a confirmation email from the system about their order. They also take assistance from the company with any issue. 
  
-The flow of new users will be like this. A potential user provides the required detail for account creation, and an employee or CEO selects their role in the company. A unique username is allowed to login into the system. Account successfully creation the, they create the security code to use the system according to their role. 
- 
-All the data is stored in an effective data structure to extract the data according to the need of the system actor and stakeholder
-
+All the data is stored in an effective data structure to extract the data according to the need of the system actor and stakeholder.
 
 \newpage
 \chapter {Project Features}
 
 \begin{enumerate}
-\item CEO are able to manage employee, warehouse manager, rider and shopkeeper.  
-\item CEO and Employee manage product related operations.
+\item CEO is able to manage employees, warehouse manager, rider, and shopkeeper.  
+\item CEO and Employee manage product-related operations.
 \item CEO will be able to analyze company operations.  
-\item Warehouse manager ready the shipment for rider. 
+\item Warehouse manager readies the shipment for the rider. 
 \item Rider delivered the shipment to their shopkeeper. 
-\item Rider are able to selected the shortest route to reach the destination.  
-\item One user is able to notify other user through email.
-\item Rider are able to view products and place order. 
-\item Dedicated security password for each user. 
-\item Company expenditure report will be generated.
+\item Riders are able to select the shortest route to reach the destination.  
+\item One user is able to notify other users through email.
+\item Riders are able to view products and place an order. 
+\item System presents different reports that will be generated.
 
 \end{enumerate}
 
 \newpage
 \chapter {Technology Stack}
-The system is developed in the following language and Integrated development environment.
+The requirement is to design, develop and test the system in a desktop application. The essential system tracks the following language and an Integrated development environment.
  \\ 
 \begin{tabularx}{0.9\textwidth} { 
   | >{\raggedright\arraybackslash}X 
@@ -114,65 +114,79 @@ IDEs  & Microsoft Visual Studio 2022  \\
 
 \newpage
 \chapter {Project Actors}
-The actors are:
+There are a total of four actors in the system and two stakeholders. Their titles and roles are:
 \begin{itemize}
-\item \textbf{ CEO:} The owner of company could manage all the operations.
-\item \textbf{Employee:} They directly reported to CEO and help in company operations.    
-\item \textbf{Warehouse Manager:} Ready the shipment for rider and manage other expenses. 
-\item \textbf{Rider:} Received the detail of order and delivered the product to prescribed routes.  
+\item \textbf{ CEO:} The company's owner manages all the operations.
+\item \textbf{Employee:} They are assistants to CEO to help in company operations. 
+\item \textbf{Warehouse Manager:} Received the instructions from the employee and ready the shipment for the rider, and managed other expenses.
+\item \textbf{Rider:} They take orders from different shopkeepers and deliver the product according to pre-subscribed routes defined by the system.
 \end{itemize}
 The stakeholder is:
 \begin{itemize}
-\item \textbf{Shopkeepers:} Are able to outlook products, place order and check detail.
+\item \textbf{Shopkeepers:} Getting the goods and services from the company.
+\item \textbf{Vendor:} The vendor will provide the products to the company. 
 \end{itemize}
 \newpage
 \chapter {Use Cases}
 %------------------------------------------
-\section{Use Case 1(Log In)}
-\begin{tabular}{ | m{3cm} | m{12cm}| } 
-  \hline
+\section{Use Case 1:Log In}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U01   \\\hline
 Name  &  Login \\ \hline
 Actor &   CEO, Employee, Rider, Warehouse Manager \\ \hline
-Description &The respected actor will log in to the application by providing the assigned role, user name, and password. After clicking the login button, the application will check for its validity. If this actor data exists in the database, the application will show the respective actor dashboard to them.
-The application will show an error message if the entered data is not matched with the database. \\ \hline
-Pre-Condition & The respective actor will initiate the application.  \\
-\hline
-Flow & Main Scenario:
-\begin{enumerate}
-\item Actor loads the application, and the login form is displayed.
-\item Actor selects their respective role from the combo box. 
-\item Actor enters their assigned username in the textbox.
-\item Actor enters their password in the textbox.
-\item After entering the data, the actor clicks on the login button. 
-\end{enumerate}
-Alternate Flow:
-\begin{itemize}
-\item If forgot password button is clicked
-	\begin{enumerate}
-		\item Interface I02 will get open
-	\end{enumerate}
-\item If user provides invalid username and password
-	\begin{enumerate}
-	    \item	Message box with a message of invalid input will be displayed
-		\item System remains on the same page
-	\end{enumerate}
-\item If user provides unregistered information
-	\begin{enumerate}
-		\item Message Box with a message of “User Not Found” will get displayed
-	\end{enumerate}
-\item If user don’t provide all required information
-	\begin{enumerate}
-		\item Alert Message will be displayed.
-	\end{enumerate}
-\item If Exit Button is Clicked  
-\end{itemize}
+Description & The login screen will be presented. The actor will select theor role and enter their username and password. And click on the login button. The system will check for its validity. The system will present the respective dashboard.
 \\ \hline
-Post-Condition & Password will successfully changed  \\ \hline
-
+Pre-Condition & The respective actor will initiate the system, and the login in form is presented.  \\
+\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to take identifiers.
+\item Actor selects his/her role from the given list.   
+\item Actor enters his/her username.
+\item Actor enters his/her password.
+\item Actor clicks on the login button. 
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If forgot password button is clicked \\
+& \begin{enumerate}
+		\item U02 will initiate
+	\end{enumerate}
+*b. If the exit button is clicked \\
+&	\begin{enumerate}
+		\item System will close
+	\end{enumerate}
+\\\hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 2a. If the actor doesn't select his/her role.
+ 	\begin{enumerate}
+		\item Error Signal wil be present.
+	\end{enumerate}
+3a. If the actor doesn't enter his/her username.
+ 	\begin{enumerate}
+		\item Error Signal wil be present.
+	\end{enumerate}
+4a. If the actor doesn't enter his/her password.
+ 	\begin{enumerate}
+		\item Error Signal wil be present.
+	\end{enumerate}
+5a. if the selected role doesn't exist with existing data
+	\begin{enumerate}
+		\item Error Signal wil be present.
+	\end{enumerate}
+5b. if the entered username doesn't exist with existing data
+	\begin{enumerate}
+		\item Error Signal wil be present.
+	\end{enumerate}
+5c. if the entered password doesn't exist with existing data
+	\begin{enumerate}
+		\item Error Signal wil be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & Respective Dashboard will be presented   \\\hline
 \end{tabular}
 %------------------------------------------
-\section{Use Case 2(Forgot Password)}
+\section{Use Case 2:Forgot Password}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -184,11 +198,12 @@ Actor     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
 
 Description & Already registered user can change his/her password. Provide Role, username and your new password. Also confirm your password then after completion your password will be changed. \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-003 Forgot password@1x.png}\end{center}  \\ \hline
-
 Pre-Condition & User Must be registered in the system.   \\ \hline
 
-\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+\end{tabular} 
+
+\begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+
 Flow & Main Scenario:
 
 \begin{enumerate}
@@ -227,19 +242,18 @@ Post-Condition &  Password will successfully changed  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{Use Case 3(CEO Dashboard)}
+\section{Use Case 3:View Dashboard}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Use Case ID & U03  \\\hline
 
-Name  	    & CEO Dashboard  \\ \hline
+Name  	    &  View Dashboard  \\ \hline
 
 Actor     	& CEO \\ \hline
 
 Description & After Successful Logging in to this system by CEO, CEO dashboard will be shown. CEO is the main handler of our system. This interface provides CEO to perform multiple CRUD operations. He has all the authority to add, search, update and delete any information related to all actors and other entities. He is able to view and generate reports. He can send emails as well. \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-007 CEO Dashboard@1x.png}\end{center}  \\ \hline
 
 Pre-Condition &  CEO must have an account and logged in to this system \\ \hline
 
@@ -249,25 +263,26 @@ He can now has all the authorities and can do multiple operations
 \\ \hline
 \end{tabular}
 %------------------------------------------
-\section{Use Case 4(Account Details) }
+\section{Use Case 4:Detail of Account }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Use Case ID & U04  \\\hline
 
-Name  	    & Accounts Detail  \\ \hline
+Name  	    & Detail of Account  \\ \hline
 
 Actor     	& CEO, Employee \\ \hline
 
 Description & Respective Actors can view all the details of each user who have registered themselves on this system. They can filter out users with certain designation, certain attribute and can apply multiple filters to search out specific users. This provides ability to edit and delete (only CEO) selected users.  \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-006 ViewsAndDelete Account@1x.png}\end{center}  \\ \hline
-
 Pre-Condition &  Select Account Details from Option Menu Strip on Top Left
 All users detail will automatically be displayed
  \\ \hline
 
-\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+\end{tabular}
+
+
+ \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
 Flow & Main Scenario:
 
 \begin{enumerate}
@@ -300,7 +315,7 @@ Post-Condition &  Data from selected row will be deleted or updated  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{Use Case 5(Update Account) }
+\section{Use Case 5:Update Account}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -312,7 +327,6 @@ Actor     	&  CEO, Employee\\ \hline
 
 Description &  Respective Actors can view all the details of each user who have registered themselves on this system in Account Details Screen. You can edit your desired row data by providing modified information related to that user.\\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-005 Update Account@1x.png}\end{center}  \\ \hline
 
 Pre-Condition &  Desired Row Must be selected 
 Click Edit Button
@@ -353,7 +367,7 @@ Post-Condition &   Selected Data will get modified \\ \hline
 \end{tabular}
 %------------------------------------------
 
-\section{Use Case 6(Add Products) }
+\section{Use Case 6:Add Products}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -365,7 +379,7 @@ Actor     	& CEO, Employee \\ \hline
 
 Description &  These two concerned actors will add products in for their warehouses. They have to provide all details of the bought products and all the products will get entered in the system records.\\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-008 Add Product@1x.png}\end{center}  \\ \hline
+
 
 Pre-Condition &  Click on Add product Button on CEO or Employee Dashboard \\ \hline
 
