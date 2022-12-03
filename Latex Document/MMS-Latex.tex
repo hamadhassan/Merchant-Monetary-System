@@ -470,6 +470,7 @@ Post-Condition &  Data from selected row will be deleted and a dashboard will be
 %------------------------------------------
 %------------------------------------------
 \section{Use Case 5:SignUp}
+\section{Use Case 5:SignUp}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U05   \\\hline
 Name  &  SignUp \\ \hline
@@ -479,21 +480,22 @@ Pre-Condition & The system presents the SignUp screen \\\hline
 Flow & Main Success Scenario (or Basic Flow):
 \begin{enumerate}
 \item Actor is ready to create the identifiers.   
-\item Actor selects the designation of the worker from the given list to change their role. 
-\item Actor changes worker name.
-\item Actor changes worker's password.
+\item Actor selects the designation of the worker from the given list. 
+\item Actor enters worker name.
+\item Actor enters worker's password.
 \item Actor confirms the entered password.
-\item Actor changes worker's CNIC number.
+\item Actor enters worker's CNIC number.
 \end{enumerate}\\ \hline
 \end{tabular}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Flow &
 \begin{enumerate}
-\item Actor changes worker gender. 
-\item Actor changes worker contact number. 
-\item Actor changes worker's email address.
-\item Actor changes worker's home address. 
+\item Actor enters worker gender. 
+\item Actor enters worker contact number. 
+\item Actor enters worker's email address.
+\item Actor enters worker's home address. 
+\item If the designation is rider, then select the vehicle from the list.
 \item Actor clicks on the create account button, and the system sends an email.
 \end{enumerate}
 Extensions (or Alternative Flows):\\
@@ -589,6 +591,7 @@ Flow & Main Success Scenario (or Basic Flow):
 \item CEO changes their or worker's contact number. 
 \item CEO changes their or worker's email address.
 \item CEO changes their or worker's home address. 
+\item CEO changes the vehicle from the given list.
 \item CEO clicked on the update account button and the system sends an email.
 \end{enumerate}
 Extensions (or Alternative Flows):\\
@@ -689,7 +692,8 @@ Flow &
 \item Employee changes worker gender. 
 \item Employee changes worker contact number. 
 \item Employee changes worker's email address.
-\item Employee changes worker's home address. 
+\item Employee changes worker's home address.
+\item Employee changes the vehicle from the given list. 
  \item Employee clicked on the update account button and the system sends an email.
 \end{enumerate}
 
@@ -1184,49 +1188,80 @@ Post-Condition &  Vendor details will be added to the system. \\ \hline
 \end{tabular}
 
 %------------------------------------------
-\section{Use Case 12(Send Email) }
+\section{Use Case 14:Update Vendor}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U12 \\\hline
+Use Case ID &  U14 \\\hline
 
-Name  	    &  Send Email \\ \hline
+Name  	    &  Update Vendor\\ \hline
 
-Actor     	&  Rider, CEO, Warehouse Manager, Employee \\ \hline
+Actor     	& CEO, Employee \\ \hline
 
-Description & To communicate with each other and notify about each activity, each user can contact with one another through email. \\ \hline
+Description &  The respective actors will update the manufacturer or vendor details by initiating the Update vendor screen. Update the details of your own choice and then click on Update Button. Vendor details have been updated. \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-013 SendEmail@1x.png}\end{center}  \\ \hline
-
-Pre-Condition & You must be a user of this system before  \\ \hline
-
+Pre-Condition &  Update Vendor screen will be presented to the respective actors, and existing details are already filled in the identifiers fields. \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Click on Send Email from your dashboard
-\item   Type To
-\item   Type From
-\item   Subject
-\item   Email Body
-\item   Click Send
 
-
+\item Actor is ready to update the identifiers.
+\item Actor updates vendor name.
+\item Actor updates vendor's landline number.
+\item Actor updates the vendor's address.
+\item Actor updates the concerned person's name.
+\item Actor updates the concerned person's contact number.
+\item Actor clicks on Add button.
 \end{enumerate}
 
-Alternate Flow:
-
-\begin{itemize}
-\item 	Clicking Close Button
-	\begin{enumerate}
-		\item 	Return to Respective Dashboard
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
 	\end{enumerate}
-\item Clicking the Reset will reset the Email
-\end{itemize}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+2a. Actor doesn't enter the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. Actor doesn't enter the vendor's landline number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4a. Actor doesn't enter the vendor's address.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5a. Actor doesn't enter the concerned person's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6a. Actor doesn't enter the concerned person's contact number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
 \\ \hline
-Post-Condition & Email will be send to the person specified in To Section   \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& 7a. Actor enters the invalid landline number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7b. Actor enters the invalid concerned person's number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Vendor details will be updated and added to the system. \\ \hline
 
 \end{tabular}
+
 %------------------------------------------
 \section{Use Case 13(New Warehouse) }
 
