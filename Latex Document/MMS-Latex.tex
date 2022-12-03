@@ -759,7 +759,7 @@ Flow &
 Post-Condition & The account information is updated in the database, and the screen will be closed.\\\hline
 \end{tabular}
 %------------------------------------------
-\section{Use Case 6:Add Products}
+\section{Use Case 8:Add Products}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -769,101 +769,148 @@ Name  	    &  Add Products \\ \hline
 
 Actor     	& CEO, Employee \\ \hline
 
-Description &  These two concerned actors will add products in for their warehouses. They have to provide all details of the bought products and all the products will get entered in the system records.\\ \hline
+Description &  Vendor arrives at the company with a new product. The respective actor adds the product name, weight, and volume and selects a category, vendor, and sensitivity type from the list. Then the actor clicks on Add button. \\ \hline
 
 
 
-Pre-Condition &  Click on Add product Button on CEO or Employee Dashboard \\ \hline
+Pre-Condition &  New Product arrives, and the CEO or Employee wants to add them into the system. The Add Product Form will be presented. \\ \hline
 
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Add Product Form will be displayed
-\item It will ask the users for all details of products
-\item Click on Add Button to add product details
 
+\item Actor is ready to add product.
+\item Product ID will automatically be generated.
+\item Actor enters Product Name.
+\item Actor selects a category from the given list.
+\item Actor selects the vendor of the product from the given list.
+\item Actor enters the weight of each product.
+\item Actor enters the volume of each product.
+\item Actor selects product's sensitivity type.
+\item Actor clicks on Add Button.
 
 \end{enumerate}
 
-Alternate Flow:
-
-\begin{itemize}
-\item If Reset is Clicked
-	\begin{enumerate}
-		\item All text and input areas will get clear
-		\item Control will remain on the same page
-
+Extensions (or Alternative Flows):\\
+& *a. If the Back button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
 	\end{enumerate}
-\item 	If Close is Clicked
-	\begin{enumerate}
-	   	 \item	Form will be closed
-	   	 \item	CEO and Employee Dashboard will again get displayed
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All fields will get cleared.
 	\end{enumerate}
-\item If not necessary conditions are provided
-	\begin{enumerate}
-		\item Error Message will be displayed with a message
-	\end{enumerate} 
-\end{itemize}
+3a. If the actor doesn't enter the product name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
 \\ \hline
-Post-Condition &    Product will be added to system and will be sent to the selected Warehouse\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 4a. If the actor doesn't select a category.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+5a. If the actor doesn't select a vendor.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+6a. If the actor doesn't enter the weight of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6b. If the actor enters the invalid weight of the product, i.e., type string while entering weight.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7a. If the actor doesn't enter the volume of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7b. If the actor enters the invalid volume of the product, i.e., type string while entering volume.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &    A new product info will be added to system\\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{Use Case 7(Products Details) }
+\section{Use Case 9:Update Products}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U07 \\\hline
+Use Case ID &  U08 \\\hline
 
-Name  	    &  Products Details \\ \hline
+Name  	    &  Update Products \\ \hline
 
-Actor     	&  CEO, Employee\\ \hline
+Actor     	& CEO, Employee \\ \hline
 
-Description & This form allows the respective users to view products and perform certain operations on data. Certain operations include search with filters and edit and delete options (only for CEO) as well.  \\ \hline
+Description &  Updation Required for product details. The actor updates the identifiers where required and clicks on the Update Button. Details of the product will be updated in the system. \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-010 ViewAndDelete Products@1x.png}\end{center}  \\ \hline
 
-Pre-Condition &  Click on Option on Top Left Corner
-Select products details
- \\ \hline
 
-\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
+Pre-Condition &  Updation Required for Product Details. An update product screen will be presented. All fields are filled according to the existing details. \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   On Clicking product details, product forms will be displayed
-\item  Select Row from the data and click delete to delete and edit to edit selected item
 
+\item Actor is ready to update product identifiers.
+\item Product ID is automatically disabled and non-editable.
+\item Actor updates Product Name.
+\item Actor updates a category.
+\item Actor updates the vendor of the product.
+\item Actor updates the weight of each product.
+\item Actor updates the volume of each product.
+\item Actor updates product's sensitivity type.
+\item Actor clicks on the Update Button.
 
 \end{enumerate}
 
-Alternate Flow:
-
-\begin{itemize}
-\item If text filters are selected and word text area is empty
-	\begin{enumerate}
-		\item An Alert message of Empty input is entered
+Extensions (or Alternative Flows):\\
+& *a. If the Back button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
 	\end{enumerate}
-\item If delete button is pressed without selecting any row data
-	\begin{enumerate}
-	   	 \item	Exception will be handled and an exception error will be displayed to the user
-	   	 \item User will remain on the same page 
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All fields will get cleared.
 	\end{enumerate}
-\item If Close Button is Clicked
-	\begin{enumerate}
-		\item CEO or Employee Dashboard will again open
+3a. If the actor doesn't enter the product name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
 	\end{enumerate}
-\item If Clear Button is Clicked
-	\begin{enumerate}
-		\item All filters will get cleared
+6a. If the actor doesn't enter the weight of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
 	\end{enumerate}
-\end{itemize}
+6b. If the actor enters the invalid weight of the product, i.e., type string while entering weight.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7a. If the actor doesn't enter the volume of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
 \\ \hline
-Post-Condition &  Selected Row Data will get updated or deleted  \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 7b. If the actor enters the invalid volume of the product, i.e., type string while entering volume.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &    The product with updated details will be added to the system.\\ \hline
 
 \end{tabular}
+
 %------------------------------------------
-\section{Use Case 8(Update Products) }
+\section{Use Case 10(Update Products) }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
