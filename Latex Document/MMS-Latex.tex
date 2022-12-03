@@ -160,27 +160,27 @@ Extensions (or Alternative Flows):\\
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Flow & 2a. If the actor doesn't select his/her role.
  	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 3a. If the actor doesn't enter his/her username.
  	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 4a. If the actor doesn't enter his/her password.
  	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 5a. if the selected role doesn't exist with existing data
 	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 5b. if the entered username doesn't exist with existing data
 	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 5c. if the entered password doesn't exist with existing data
 	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 \\ \hline
 Post-Condition & Respective Dashboard will be presented   \\\hline
@@ -196,72 +196,69 @@ Name  	    & Forgot Password  \\ \hline
 
 Actor     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
 
-Description & Already registered user can change his/her password. Provide Role, username and your new password. Also confirm your password then after completion your password will be changed. \\ \hline
+Description & Already registered users can change their password. The actor selects their role and enters his username and password. Then the actor confirms their password and clicks on Update Button; their password will be changed. \\ \hline
 
-Pre-Condition & User Must be registered in the system.   \\ \hline
-
-\end{tabular} 
-
-\begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
-
-Flow & Main Scenario:
-
+Pre-Condition & User must be registered in the system. Forgot Password Form is presented  \\ \hline
+Flow & Main Success Scenario (or Basic Flow):
 \begin{enumerate}
-\item   Click on Forgot password Button on Log In Screen. i.e., U02
-\item Select Your Role from combo box then.
-\item Provide your username you chose while signing up.
-\item Then enter password for your account
-\item Again type for confirmation
-\item Then Click on Update Button
+\item Actor is ready to enter the identifiers.
+\item Actor selects his/her role from the given list.   
+\item Actor enters his/her username.
+\item Actor enters his/her password.
+\item Actor clicks on the login button. 
 \end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If forgot password button is clicked \\
+& \begin{enumerate}
+		\item U02 will initiate
+	\end{enumerate}
+*b. If the exit button is clicked \\
+&	\begin{enumerate}
+		\item System will close
+	\end{enumerate}
 
-Alternate Flow:
-
-\begin{itemize}
-\item If user provides his previous password
-	\begin{enumerate}
-		\item	He/she will get an error message
-		\item  System return to same page
+2a. If the actor doesn't select his/her role.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
 	\end{enumerate}
-\item If user don’t provide all required information
-	\begin{enumerate}
-	   	\item 	Alert Message will be displayed.
-		\item 	System remain to same page
+3a. If the actor doesn't enter his/her username.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
 	\end{enumerate}
-\item If password is not of length equal to or greater than 8
-	\begin{enumerate}
-		\item 	1.	Password will not be changed
+4a. If the actor doesn't enter his/her password.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
 	\end{enumerate}
-\item If password text and confirm password text not matched
-	\begin{enumerate}
-		\item 	Again error message will be displayed
-	\end{enumerate}
-\end{itemize}
 \\ \hline
-Post-Condition &  Password will successfully changed  \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 5a. if the selected role doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. if the entered username doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5c. if the entered password doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+	
+5d. if the password doesn't match the password that the user confirmed
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+	
+\\ \hline
+Post-Condition & Actor's Password Updated   \\\hline
+
+
+
+
 
 \end{tabular}
 %------------------------------------------
-\section{Use Case 3:View Dashboard}
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID & U03  \\\hline
-
-Name  	    &  View Dashboard  \\ \hline
-
-Actor     	& CEO \\ \hline
-
-Description & After Successful Logging in to this system by CEO, CEO dashboard will be shown. CEO is the main handler of our system. This interface provides CEO to perform multiple CRUD operations. He has all the authority to add, search, update and delete any information related to all actors and other entities. He is able to view and generate reports. He can send emails as well. \\ \hline
-
-
-Pre-Condition &  CEO must have an account and logged in to this system \\ \hline
-
-Flow & Main Scenario:
-After Successful logging by a role of CEO, CEO Dashboard will appear
-He can now has all the authorities and can do multiple operations
-\\ \hline
-\end{tabular}
 %------------------------------------------
 \section{Use Case 4:Detail of Account }
 
