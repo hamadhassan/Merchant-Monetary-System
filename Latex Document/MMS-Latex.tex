@@ -467,59 +467,107 @@ Post-Condition &  Data from selected row will be deleted and a dashboard will be
 \end{tabular}
 
 
-
 %------------------------------------------
-
-\section{Use Case 5:Update Account}
+%------------------------------------------
+\section{Use Case 5:SignUp}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID & U05   \\\hline
+Name  &  SignUp \\ \hline
+Actor &    CEO, Employee \\ \hline
+Description & Actor select the designation of the worker from the given list, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
+Pre-Condition & The system presents the SignUp screen \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to create the identifiers.   
+\item Actor selects the designation of the worker from the given list to change their role. 
+\item Actor changes worker name.
+\item Actor changes worker's password.
+\item Actor confirms the entered password.
+\item Actor changes worker's CNIC number.
+\end{enumerate}\\ \hline
+\end{tabular}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID &  U05 \\\hline
-
-Name  	    &  Accounts Detail \\ \hline
-
-Actor     	&  CEO, Employee\\ \hline
-
-Description &  Respective Actors can view all the details of each user who have registered themselves on this system in Account Details Screen. You can edit your desired row data by providing modified information related to that user.\\ \hline
-
-
-Pre-Condition &  Desired Row Must be selected 
-Click Edit Button
- \\ \hline
-
-
-Flow & Main Scenario:
-
+Flow &
 \begin{enumerate}
-\item   Designation is already selected and non-editable
-\item  Already Available Data will be shown in their respective areas
-\item  Modify data entity of your choice
-\item  Click Update Account Button
-
-
+\item Actor changes worker gender. 
+\item Actor changes worker contact number. 
+\item Actor changes worker's email address.
+\item Actor changes worker's home address. 
+\item Actor clicks on the create account button, and the system sends an email.
 \end{enumerate}
-
-Alternate Flow:
-
-\begin{itemize}
-\item	If user don’t provide all required information
-	\begin{enumerate}
-		\item Alert Message will be displayed.
-		\item System remain to same page
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
 	\end{enumerate}
-\item If password is not of length equal to or greater than 8
-	\begin{enumerate}
-	   	 \item	Password will not be changed
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
 	\end{enumerate}
-\item If password text and confirm password text not matched
-	\begin{enumerate}
-		\item Again error message will be displayed
+3a. If the actor doesn't enter the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
 	\end{enumerate}
-\end{itemize}
+3b. If the actor enters an invalid worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the worker's username\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
 \\ \hline
-Post-Condition &   Selected Data will get modified \\ \hline
-
 \end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+6a. If the actor enters the worker's password does not match the previously entered password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+
+7a. If the actor doesn't enter the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the actor enters invalid the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9a. If the actor doesn't enter the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9b. If the actor enters invalid the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10a. If the actor doesn't enter the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10b. If the actor enters invalid the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+11a. If the actor doesn't enter the worker's home address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+\\ \hline
+Post-Condition & The account information is stored in the database, and the screen will be closed. \\\hline
+\end{tabular}
+%------------------------------------------
 %------------------------------------------
 
 \section{Use Case 6:Add Products}

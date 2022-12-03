@@ -151,36 +151,38 @@ Extensions (or Alternative Flows):\\
 & \begin{enumerate}
 		\item U02 will initiate
 	\end{enumerate}
-*b. If the exit button is clicked \\
-&	\begin{enumerate}
-		\item System will close
-	\end{enumerate}
 \\\hline
 \end{tabular}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-Flow & 2a. If the actor doesn't select his/her role.
+
+Flow & *b. If the exit button is clicked
+	\begin{enumerate}
+		\item System will close
+	\end{enumerate}
+
+ 2a. If the actor doesn't select his/her role.
  	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 3a. If the actor doesn't enter his/her username.
  	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 4a. If the actor doesn't enter his/her password.
  	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 5a. if the selected role doesn't exist with existing data
 	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 5b. if the entered username doesn't exist with existing data
 	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 5c. if the entered password doesn't exist with existing data
 	\begin{enumerate}
-		\item Error Signal wil be present.
+		\item Error Signal will be present.
 	\end{enumerate}
 \\ \hline
 Post-Condition & Respective Dashboard will be presented   \\\hline
@@ -196,175 +198,376 @@ Name  	    & Forgot Password  \\ \hline
 
 Actor     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
 
-Description & Already registered user can change his/her password. Provide Role, username and your new password. Also confirm your password then after completion your password will be changed. \\ \hline
+Description & Already registered users can change their password. The actor selects their role and enters his username and password. Then the actor confirms their password and clicks on Update Button; their password will be changed. \\ \hline
 
-Pre-Condition & User Must be registered in the system.   \\ \hline
-
-\end{tabular} 
-
-\begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
-
-Flow & Main Scenario:
-
-\begin{enumerate}
-\item   Click on Forgot password Button on Log In Screen. i.e., U02
-\item Select Your Role from combo box then.
-\item Provide your username you chose while signing up.
-\item Then enter password for your account
-\item Again type for confirmation
-\item Then Click on Update Button
-\end{enumerate}
-
-Alternate Flow:
-
-\begin{itemize}
-\item If user provides his previous password
-	\begin{enumerate}
-		\item	He/she will get an error message
-		\item  System return to same page
-	\end{enumerate}
-\item If user don’t provide all required information
-	\begin{enumerate}
-	   	\item 	Alert Message will be displayed.
-		\item 	System remain to same page
-	\end{enumerate}
-\item If password is not of length equal to or greater than 8
-	\begin{enumerate}
-		\item 	1.	Password will not be changed
-	\end{enumerate}
-\item If password text and confirm password text not matched
-	\begin{enumerate}
-		\item 	Again error message will be displayed
-	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &  Password will successfully changed  \\ \hline
-
+Pre-Condition & User must be registered in the system. Forgot Password screen is presented.  \\ \hline
 \end{tabular}
-%------------------------------------------
-\section{Use Case 3:View Dashboard}
-
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor selects his/her role from the given list.   
+\item Actor enters his/her username.
+\item Actor enters his/her password.
+\item Actor confirms his/her password.
+\item Actor clicks on the Update button.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If forgot password button is clicked \\
+& \begin{enumerate}
+		\item U02 will initiate
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All fields will get cleared.
+	\end{enumerate}
 
-Use Case ID & U03  \\\hline
+2a. If the actor doesn't select his/her role.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. If the actor doesn't enter his/her username.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter his/her password.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
 
-Name  	    &  View Dashboard  \\ \hline
-
-Actor     	& CEO \\ \hline
-
-Description & After Successful Logging in to this system by CEO, CEO dashboard will be shown. CEO is the main handler of our system. This interface provides CEO to perform multiple CRUD operations. He has all the authority to add, search, update and delete any information related to all actors and other entities. He is able to view and generate reports. He can send emails as well. \\ \hline
-
-
-Pre-Condition &  CEO must have an account and logged in to this system \\ \hline
-
-Flow & Main Scenario:
-After Successful logging by a role of CEO, CEO Dashboard will appear
-He can now has all the authorities and can do multiple operations
+5a. if the selected role doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. if the entered username doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
 \\ \hline
 \end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 5c. if the entered password doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+	
+5d. if the password doesn't match the password that the user confirmed
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+	
+\\ \hline
+Post-Condition & Actor's Password Updated   \\\hline
+\end{tabular}
 %------------------------------------------
-\section{Use Case 4:Detail of Account }
+\section{Use Case 3:Detail of Accounts for CEO }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Use Case ID & U04  \\\hline
 
-Name  	    & Detail of Account  \\ \hline
+Name  	    & Detail of Account for CEO  \\ \hline
 
-Actor     	& CEO, Employee \\ \hline
+Actor     	& CEO\\ \hline
 
-Description & Respective Actors can view all the details of each user who have registered themselves on this system. They can filter out users with certain designation, certain attribute and can apply multiple filters to search out specific users. This provides ability to edit and delete (only CEO) selected users.  \\ \hline
+Description &  CEO can view the details of each user who have registered themselves on this system. CEO can filter out users with certain designations and certain attributes and can apply multiple filters to search out specific users and  their data. CEO can delete as well as edit users.\\ \hline
 
-Pre-Condition &  Select Account Details from Option Menu Strip on Top Left
-All users detail will automatically be displayed
- \\ \hline
+Pre-Condition &  Detail of Accounts Screen is presented. \\ \hline
 
-\end{tabular}
-
-
- \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
-Flow & Main Scenario:
+Flow       & Main Scenario:
 
 \begin{enumerate}
-\item   Select Your desired Row for required operations
-\item  Click Delete Button at the bottom of the screen if you want to delete selected row respectively. 
-\item  Clicking Edit Button will open a new interface I05 with selected row data.
+\item  CEO selects the designation from the given list.
+\item  CEO selects the attribute from the given list. 
+\item  CEO could search the data from the identifier.
+\item  CEO selects the filters from the given list.
+\item  CEO clicks on the Go button.
+\item  CEO selects the data(any row shown in the grid )from the grid. 
+\item  CEO clicks on the Edit button, and a new Edit user screen opens.
+\item  CEO clicks on the Delete button.
+\item  CEO clicks on the Close button.
 
 
-\end{enumerate}
+\end{enumerate}\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Alternate Flow:
+&Extensions (or Alternative Flows):\\
 
-\begin{itemize}
-\item If text filters are selected and word text area is empty
-	\begin{enumerate}
-		\item 	An Alert message of Empty input is entered
+& 1. If CEO did not select any designation from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
 	\end{enumerate}
-\item  	If delete button is pressed without selecting any row data
-	\begin{enumerate}
-		\item 	Exception will be handled and an exception error will be displayed to the user
-		\item 	User will remain on the same page 
+\\ 
+
+      & 2. If CEO did not select any attribute from the drop-down.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
 	\end{enumerate}
-\item 	If Close Button is Clicked
-	\begin{enumerate}
-		\item 	CEO or Employee Dashboard will again open
+\\ 
+& 3a. If CEO did not select any designation and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
 	\end{enumerate}
-\end{itemize}
-\\ \hline
+\\
+& 3b. If CEO did not select any Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+& 3c. If CEO did not select any designation and  Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+
+& 4a. If CEO did not select any Filter from the given list \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+& 4b. If CEO did not select any Attribute from the given list and select any filter  \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+
+& 5a. If CEO did not select any Attribute, Designation, or filter from the given list and not enter the data to be searched in identifier \\
+& \begin{enumerate}
+		\item Error Message box will be shown.
+	\end{enumerate}
+\\  
+& 6. If CEO did not select any data from the grid list.  \\
+& \begin{enumerate}
+		\item No operation is performed.
+	\end{enumerate}
+\\ \hline  
+\end{tabular}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline 
+& 7. If CEO did not select any data from the grid list and clicked the edit button.\\
+& \begin{enumerate}
+		\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\
+Flow       & 8. If CEO did not select any data from the grid list and clicked the delete button.\\
+ 	&\begin{enumerate}
+			\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\ \hline 
+
+
 Post-Condition &  Data from selected row will be deleted or updated  \\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{Use Case 5:Update Account}
+\section{Use Case 4:Detail of Accounts for Employee }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U05 \\\hline
+Use Case ID & U04  \\\hline
 
-Name  	    &  Accounts Detail \\ \hline
+Name  	    & Detail of Account for Employee  \\ \hline
 
-Actor     	&  CEO, Employee\\ \hline
+Actor     	& Employee\\ \hline
 
-Description &  Respective Actors can view all the details of each user who have registered themselves on this system in Account Details Screen. You can edit your desired row data by providing modified information related to that user.\\ \hline
+Description &  Employee can view the details of each user who have registered themselves on this system. Employee can filter out users with certain designations and certain attributes and can apply multiple filters to search out specific users and  their data. Employee can delete as well as edit users.\\ \hline
 
+Pre-Condition &  Detail of Accounts Screen is presented. \\ \hline
 
-Pre-Condition &  Desired Row Must be selected 
-Click Edit Button
- \\ \hline
-
-
-Flow & Main Scenario:
+Flow       & Main Scenario:
 
 \begin{enumerate}
-\item   Designation is already selected and non-editable
-\item  Already Available Data will be shown in their respective areas
-\item  Modify data entity of your choice
-\item  Click Update Account Button
+\item  Employee selects the designation from the given list.
+\item  Employee selects the attribute from the given list. 
+\item  Employee could search the data from the identifier.
+\item  Employee selects the filters from the given list.
+\item  Employee clicks on the Go button.
+\item  Employee selects the data(any row shown in the grid )from the grid. 
+\item  Employee clicks on the Edit button, and a new Edit user screen opens.
+\item  Employee clicks on the Delete button.
+\item  Employee clicks on the Close button.
 
 
-\end{enumerate}
+\end{enumerate}\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Alternate Flow:
+&Extensions (or Alternative Flows):\\
 
-\begin{itemize}
-\item	If user don’t provide all required information
-	\begin{enumerate}
-		\item Alert Message will be displayed.
-		\item System remain to same page
+& 1. If Employee did not select any designation from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
 	\end{enumerate}
-\item If password is not of length equal to or greater than 8
-	\begin{enumerate}
-	   	 \item	Password will not be changed
+\\ 
+
+      & 2. If Employee did not select any attribute from the drop-down.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
 	\end{enumerate}
-\item If password text and confirm password text not matched
-	\begin{enumerate}
-		\item Again error message will be displayed
+\\ 
+& 3a. If Employee did not select any designation and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
 	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &   Selected Data will get modified \\ \hline
+\\
+& 3b. If Employee did not select any Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+& 3c. If Employee did not select any designation and  Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+
+& 4a. If Employee did not select any Filter from the given list \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+& 4b. If Employee did not select any Attribute from the given list and select any filter  \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+
+& 5a. If Employee did not select any Attribute, Designation, or filter from the given list and not enter the data to be searched in identifier \\
+& \begin{enumerate}
+		\item Error Message box will be shown.
+	\end{enumerate}
+\\  
+& 6. If Employee did not select any data from the grid list.  \\
+& \begin{enumerate}
+		\item No operation is performed.
+	\end{enumerate}
+\\ \hline  
+\end{tabular}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline 
+& 7. If Employee did not select any data from the grid list and clicked the edit button.\\
+& \begin{enumerate}
+		\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\
+Flow       & 8. If Employee did not select any data from the grid list and clicked the delete button.\\
+ 	&\begin{enumerate}
+			\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\ \hline 
+
+
+Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
 
 \end{tabular}
+
+
+%------------------------------------------
+%------------------------------------------
+\section{Use Case 5:SignUp}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID & U05   \\\hline
+Name  &  SignUp \\ \hline
+Actor &    CEO, Employee \\ \hline
+Description & Actor select the designation of the worker from the given list, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
+Pre-Condition & The system presents the SignUp screen \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to create the identifiers.   
+\item Actor selects the designation of the worker from the given list to change their role. 
+\item Actor changes worker name.
+\item Actor changes worker's password.
+\item Actor confirms the entered password.
+\item Actor changes worker's CNIC number.
+\end{enumerate}\\ \hline
+\end{tabular}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+\begin{enumerate}
+\item Actor changes worker gender. 
+\item Actor changes worker contact number. 
+\item Actor changes worker's email address.
+\item Actor changes worker's home address. 
+\item Actor clicks on the create account button, and the system sends an email.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+3a. If the actor doesn't enter the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the worker's username\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+6a. If the actor enters the worker's password does not match the previously entered password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+
+7a. If the actor doesn't enter the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the actor enters invalid the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9a. If the actor doesn't enter the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9b. If the actor enters invalid the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10a. If the actor doesn't enter the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10b. If the actor enters invalid the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+11a. If the actor doesn't enter the worker's home address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+\\ \hline
+Post-Condition & The account information is stored in the database, and the screen will be closed. \\\hline
+\end{tabular}
+%------------------------------------------
 %------------------------------------------
 
 \section{Use Case 6:Add Products}
