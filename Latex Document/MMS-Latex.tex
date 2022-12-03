@@ -151,14 +151,16 @@ Extensions (or Alternative Flows):\\
 & \begin{enumerate}
 		\item U02 will initiate
 	\end{enumerate}
-*b. If the exit button is clicked \\
-&	\begin{enumerate}
-		\item System will close
-	\end{enumerate}
 \\\hline
 \end{tabular}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-Flow & 2a. If the actor doesn't select his/her role.
+
+Flow & *b. If the exit button is clicked
+	\begin{enumerate}
+		\item System will close
+	\end{enumerate}
+
+ 2a. If the actor doesn't select his/her role.
  	\begin{enumerate}
 		\item Error Signal will be present.
 	\end{enumerate}
@@ -198,23 +200,26 @@ Actor     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
 
 Description & Already registered users can change their password. The actor selects their role and enters his username and password. Then the actor confirms their password and clicks on Update Button; their password will be changed. \\ \hline
 
-Pre-Condition & User must be registered in the system. Forgot Password Form is presented  \\ \hline
+Pre-Condition & User must be registered in the system. Forgot Password screen is presented.  \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Flow & Main Success Scenario (or Basic Flow):
 \begin{enumerate}
 \item Actor is ready to enter the identifiers.
 \item Actor selects his/her role from the given list.   
 \item Actor enters his/her username.
 \item Actor enters his/her password.
-\item Actor clicks on the login button. 
+\item Actor confirms his/her password.
+\item Actor clicks on the Update button.
 \end{enumerate}
 Extensions (or Alternative Flows):\\
 & *a. If forgot password button is clicked \\
 & \begin{enumerate}
 		\item U02 will initiate
 	\end{enumerate}
-*b. If the exit button is clicked \\
+*b. If the reset button is clicked \\
 &	\begin{enumerate}
-		\item System will close
+		\item All fields will get cleared.
 	\end{enumerate}
 
 2a. If the actor doesn't select his/her role.
@@ -229,10 +234,8 @@ Extensions (or Alternative Flows):\\
  	\begin{enumerate}
 		\item Error Signal will be present.
 	\end{enumerate}
-\\ \hline
-\end{tabular}
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-Flow & 5a. if the selected role doesn't exist with in existing data
+
+5a. if the selected role doesn't exist with in existing data
 	\begin{enumerate}
 		\item Error Signal will be present.
 	\end{enumerate}
@@ -240,7 +243,10 @@ Flow & 5a. if the selected role doesn't exist with in existing data
 	\begin{enumerate}
 		\item Error Signal will be present.
 	\end{enumerate}
-5c. if the entered password doesn't exist with in existing data
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 5c. if the entered password doesn't exist with in existing data
 	\begin{enumerate}
 		\item Error Signal will be present.
 	\end{enumerate}
@@ -260,7 +266,7 @@ Post-Condition & Actor's Password Updated   \\\hline
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 4:Detail of Account }
+\section{Use Case 3:Detail of Account }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
