@@ -563,12 +563,109 @@ Flow &
 &	\begin{enumerate}
 		\item Error Signal will be present.
 	\end{enumerate}
-
 \\ \hline
 Post-Condition & The account information is stored in the database, and the screen will be closed. \\\hline
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
+%------------------------------------------
+\section{Use Case 6: Update Account Information by CEO}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID & U06   \\\hline
+Name  &  Update Account Information by CEO \\ \hline
+Actor &   CEO\\ \hline
+Description & CEO could change the designation of their worker from the given list of designation, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
+Pre-Condition & The Updated Account Information screen is presented. The registered account information of the actors in the system will be presented in the identifiers.  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item CEO is ready to update the identifiers.   
+\item CEO selects the designation of the worker from the given list to change their role. 
+\item  CEO changes their or worker's name.
+\item  CEO changes their or worker's username.
+\item  CEO changes their or worker's password.
+\item  CEO confirms the entered password.
+\item  CEO changes their or worker's CNIC number.
+\item CEO changes their or worker's gender. 
+\item CEO changes their or worker's contact number. 
+\item CEO changes their or worker's email address.
+\item CEO changes their or worker's home address. 
+\item CEO clicked on the update account button and the system sends an email.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+\\\hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 
+3a. If the CEO doesn't enter their or the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the CEO enters invalid their or the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the CEO doesn't enter their or the worker's username\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the CEO doesn't enter their or the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the CEO enters invalid their or the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a. If the CEO enter their or the worker's password does not match the previously entered password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7a. If the CEO doesn't enter their or the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the CEO enters invalid their or the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9a. If the CEO doesn't enter their or the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9b. If the CEO enters invalid their or the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+10a. If the CEO doesn't enter their or the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10b. If the CEO enters invalid their or the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+11a. If the CEO doesn't enter their or the worker's home address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  The account information is updated in the database, and the screen will be closed. \\\hline
+\end{tabular}
+%------------------------------------------
+
+
 
 \section{Use Case 6:Add Products}
 
