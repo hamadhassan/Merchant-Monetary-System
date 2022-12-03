@@ -18,57 +18,57 @@
 \contentsline {section}{\numberline {5.13}Use Case 12:Update Category}{29}{}%
 \contentsline {section}{\numberline {5.14}Use Case 13:Add Vendor}{30}{}%
 \contentsline {section}{\numberline {5.15}Use Case 14:Update Vendor}{31}{}%
-\contentsline {section}{\numberline {5.16}Use Case 13(New Warehouse) }{34}{}%
-\contentsline {section}{\numberline {5.17}Use Case 14(View/Delete Warehouse)}{35}{}%
-\contentsline {section}{\numberline {5.18}Use Case 15(Edit Warehouse) }{36}{}%
-\contentsline {section}{\numberline {5.19}Use Case 16(Order Status) }{37}{}%
-\contentsline {section}{\numberline {5.20}Use Case 17(Route Finder)}{38}{}%
-\contentsline {section}{\numberline {5.21}Use Case 18(Add Shopkeeper)}{39}{}%
-\contentsline {section}{\numberline {5.22}Use Case 19(Add Payment) }{40}{}%
-\contentsline {section}{\numberline {5.23}Use Case 20(Withdraw Expenses) }{42}{}%
-\contentsline {section}{\numberline {5.24}Use Case 21(Create Account)}{44}{}%
-\contentsline {chapter}{\numberline {6}Use Interfaces}{45}{}%
-\contentsline {section}{\numberline {6.1}Intro}{45}{}%
-\contentsline {section}{\numberline {6.2}Login}{46}{}%
-\contentsline {section}{\numberline {6.3}Forgot Password }{47}{}%
-\contentsline {section}{\numberline {6.4}Create Account }{48}{}%
-\contentsline {section}{\numberline {6.5}Update Information}{49}{}%
-\contentsline {section}{\numberline {6.6}Account Detail }{50}{}%
-\contentsline {section}{\numberline {6.7}CEO Dashboard }{51}{}%
-\contentsline {section}{\numberline {6.8}Add Product }{52}{}%
-\contentsline {section}{\numberline {6.9}Update Product }{53}{}%
-\contentsline {section}{\numberline {6.10}Product Detail }{54}{}%
-\contentsline {section}{\numberline {6.11}Order Product}{55}{}%
-\contentsline {section}{\numberline {6.12}Order Summary}{56}{}%
-\contentsline {section}{\numberline {6.13}Send Email }{57}{}%
-\contentsline {section}{\numberline {6.14}New Warehouse}{58}{}%
-\contentsline {section}{\numberline {6.15}Update Warehouse }{59}{}%
-\contentsline {section}{\numberline {6.16}Warehouse Detail }{60}{}%
-\contentsline {section}{\numberline {6.17}Warehouse Manager Dashboard }{61}{}%
-\contentsline {section}{\numberline {6.18}Employee Dashboard }{61}{}%
-\contentsline {section}{\numberline {6.19}Rider Dashboard }{62}{}%
-\contentsline {section}{\numberline {6.20}Add Rider }{63}{}%
-\contentsline {section}{\numberline {6.21}Update Rider }{64}{}%
-\contentsline {section}{\numberline {6.22}Order Status }{65}{}%
-\contentsline {section}{\numberline {6.23}Order Status }{66}{}%
-\contentsline {section}{\numberline {6.24}Shopkeeper Record }{67}{}%
-\contentsline {section}{\numberline {6.25}Add Payment }{68}{}%
-\contentsline {section}{\numberline {6.26}Withdraw Expenses }{69}{}%
-\contentsline {chapter}{\numberline {7}User Interface Details }{70}{}%
-\contentsline {chapter}{\numberline {8}Classes}{73}{}%
-\contentsline {chapter}{\numberline {9}Object Oriented Features}{75}{}%
-\contentsline {section}{\numberline {9.1}Composition}{75}{}%
-\contentsline {section}{\numberline {9.2}Inheritance}{75}{}%
-\contentsline {section}{\numberline {9.3}Multi-Level Inheritance}{76}{}%
-\contentsline {section}{\numberline {9.4}Aggregation}{76}{}%
-\contentsline {section}{\numberline {9.5}Association}{76}{}%
-\contentsline {chapter}{\numberline {10}Detailed Object Oriented Design}{77}{}%
-\contentsline {chapter}{\numberline {11}Data Structure}{79}{}%
-\contentsline {chapter}{\numberline {12}Exceptions}{82}{}%
-\contentsline {chapter}{\numberline {13}Data Storage}{83}{}%
-\contentsline {section}{\numberline {13.1}Mails (CSV)}{83}{}%
-\contentsline {section}{\numberline {13.2}Products (CSV)}{83}{}%
-\contentsline {section}{\numberline {13.3}Users (CSV)}{84}{}%
-\contentsline {chapter}{\numberline {14}Email Sending}{85}{}%
-\contentsline {chapter}{\numberline {15}Project Plan}{86}{}%
-\contentsline {chapter}{\numberline {16}Analytical Reports}{87}{}%
+\contentsline {section}{\numberline {5.16}Use Case 15:Add Stock}{33}{}%
+\contentsline {section}{\numberline {5.17}Use Case 14(View/Delete Warehouse)}{36}{}%
+\contentsline {section}{\numberline {5.18}Use Case 15(Edit Warehouse) }{37}{}%
+\contentsline {section}{\numberline {5.19}Use Case 16(Order Status) }{38}{}%
+\contentsline {section}{\numberline {5.20}Use Case 17(Route Finder)}{39}{}%
+\contentsline {section}{\numberline {5.21}Use Case 18(Add Shopkeeper)}{40}{}%
+\contentsline {section}{\numberline {5.22}Use Case 19(Add Payment) }{41}{}%
+\contentsline {section}{\numberline {5.23}Use Case 20(Withdraw Expenses) }{43}{}%
+\contentsline {section}{\numberline {5.24}Use Case 21(Create Account)}{45}{}%
+\contentsline {chapter}{\numberline {6}Use Interfaces}{46}{}%
+\contentsline {section}{\numberline {6.1}Intro}{46}{}%
+\contentsline {section}{\numberline {6.2}Login}{47}{}%
+\contentsline {section}{\numberline {6.3}Forgot Password }{48}{}%
+\contentsline {section}{\numberline {6.4}Create Account }{49}{}%
+\contentsline {section}{\numberline {6.5}Update Information}{50}{}%
+\contentsline {section}{\numberline {6.6}Account Detail }{51}{}%
+\contentsline {section}{\numberline {6.7}CEO Dashboard }{52}{}%
+\contentsline {section}{\numberline {6.8}Add Product }{53}{}%
+\contentsline {section}{\numberline {6.9}Update Product }{54}{}%
+\contentsline {section}{\numberline {6.10}Product Detail }{55}{}%
+\contentsline {section}{\numberline {6.11}Order Product}{56}{}%
+\contentsline {section}{\numberline {6.12}Order Summary}{57}{}%
+\contentsline {section}{\numberline {6.13}Send Email }{58}{}%
+\contentsline {section}{\numberline {6.14}New Warehouse}{59}{}%
+\contentsline {section}{\numberline {6.15}Update Warehouse }{60}{}%
+\contentsline {section}{\numberline {6.16}Warehouse Detail }{61}{}%
+\contentsline {section}{\numberline {6.17}Warehouse Manager Dashboard }{62}{}%
+\contentsline {section}{\numberline {6.18}Employee Dashboard }{62}{}%
+\contentsline {section}{\numberline {6.19}Rider Dashboard }{63}{}%
+\contentsline {section}{\numberline {6.20}Add Rider }{64}{}%
+\contentsline {section}{\numberline {6.21}Update Rider }{65}{}%
+\contentsline {section}{\numberline {6.22}Order Status }{66}{}%
+\contentsline {section}{\numberline {6.23}Order Status }{67}{}%
+\contentsline {section}{\numberline {6.24}Shopkeeper Record }{68}{}%
+\contentsline {section}{\numberline {6.25}Add Payment }{69}{}%
+\contentsline {section}{\numberline {6.26}Withdraw Expenses }{70}{}%
+\contentsline {chapter}{\numberline {7}User Interface Details }{71}{}%
+\contentsline {chapter}{\numberline {8}Classes}{74}{}%
+\contentsline {chapter}{\numberline {9}Object Oriented Features}{76}{}%
+\contentsline {section}{\numberline {9.1}Composition}{76}{}%
+\contentsline {section}{\numberline {9.2}Inheritance}{76}{}%
+\contentsline {section}{\numberline {9.3}Multi-Level Inheritance}{77}{}%
+\contentsline {section}{\numberline {9.4}Aggregation}{77}{}%
+\contentsline {section}{\numberline {9.5}Association}{77}{}%
+\contentsline {chapter}{\numberline {10}Detailed Object Oriented Design}{78}{}%
+\contentsline {chapter}{\numberline {11}Data Structure}{80}{}%
+\contentsline {chapter}{\numberline {12}Exceptions}{83}{}%
+\contentsline {chapter}{\numberline {13}Data Storage}{84}{}%
+\contentsline {section}{\numberline {13.1}Mails (CSV)}{84}{}%
+\contentsline {section}{\numberline {13.2}Products (CSV)}{84}{}%
+\contentsline {section}{\numberline {13.3}Users (CSV)}{85}{}%
+\contentsline {chapter}{\numberline {14}Email Sending}{86}{}%
+\contentsline {chapter}{\numberline {15}Project Plan}{87}{}%
+\contentsline {chapter}{\numberline {16}Analytical Reports}{88}{}%

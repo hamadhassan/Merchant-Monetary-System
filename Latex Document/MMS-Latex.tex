@@ -1263,47 +1263,99 @@ Post-Condition &  Vendor details will be updated and added to the system. \\ \hl
 \end{tabular}
 
 %------------------------------------------
-\section{Use Case 13(New Warehouse) }
+\section{Use Case 15:Add Stock}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U13 \\\hline
+Use Case ID &  U16 \\\hline
 
-Name  	    &  New Warehouse \\ \hline
+Name  	    &  Add Stock \\ \hline
 
 Actor     	& CEO, Employee \\ \hline
 
-Description &  CEO and Employee Dashboard have an option to add a new warehouse for a company. Provide Necessary details like warehouse volume, capacity, etc and manager name as well. \\ \hline
+Description &  Stock of added products will now add. Initiate Add Stock screen and add identifiers. Select product; enters quantity retail price and cost price, and select expiry manufacturing and date of stock add. then click on Add button. Stock will be added.\\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-014 AddWarehouse@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &   Click on Add Warehouse in Employee and CEO Dashboard\\ \hline
-
+Pre-Condition &  Add Stock screen will be presented to the respective actor. \\ \hline
 
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   New Warehouse UI screen will be displayed
-\item  Provide details of a new warehouse
-\item  Assign a New manager
-\item  Click on Add
 
+\item Actor is ready to enter the stock.
+\item Actor selects the product from the given list.
+\item Actor enters the product quantity.
+\item Actor enters the Retail Price.
+\item Actor enters the Cost Price.
+\end{enumerate}
+\\ \hline
+\end{tabular}
 
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+\begin{enumerate}
+\item Actor selects the date of the stock added.
+\item Actor selects the manufacturing date of the stock.
+\item Actor selects the expiry date of the stock.
+\item Actor clicks on Add button.
 \end{enumerate}
 
-Alternate Flow:
-
-\begin{itemize}
-\item 	Clicking Close Button
-	\begin{enumerate}
-		\item 	Return to Respective Dashboard
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
 	\end{enumerate}
-\item Clicking the Clear will reset the fields
-\end{itemize}
-\\ \hline
-Post-Condition &  A new Warehouse will be added to the office   \\ \hline
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+2a. actor doesn't enter the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. if the actor enters string instead of integers.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3b. if the actor enters a negative quantity.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
 
+4a. if the actor enters a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4b. if the actor enters a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5a. if the actor enters a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5b. if the actor enters a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
 \end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& 9a. If the manufacturing date is greater than the expiry date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9b. If the manufacturing date is greater than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9c. If the expiry date is less than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Stock of the product will be added. \\ \hline
+\end{tabular}
+
 %------------------------------------------
 \section{Use Case 14(View/Delete Warehouse)}
 
