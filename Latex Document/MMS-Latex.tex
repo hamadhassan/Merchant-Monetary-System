@@ -1057,6 +1057,54 @@ Post-Condition &    The Category will be added to the system. \\ \hline
 \end{tabular}
 
 %------------------------------------------
+\section{Use Case 12:Update Category}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U12 \\\hline
+
+Name  	    &  Update Category \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Updating a category will initiate with the Update Category screen. The respective Actor updates the category name and clicks on the Update Button. The category is updated.  \\ \hline
+
+Pre-Condition &  Update Category screen will be presented and the identifier is already filled with previously entered category \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to update identifier.
+\item Actor updates the category name
+\item Actor clicks on the Update Button.
+
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item Category identifier will get cleared.
+	\end{enumerate}
+2a. Actor doesn't enter the category name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 2b. Actor enters the invalid category, i.e., integer instead of string
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &    The Category will be updated and added to the system. \\ \hline
+
+\end{tabular}
 
 %------------------------------------------
 \section{Use Case 12(Send Email) }
