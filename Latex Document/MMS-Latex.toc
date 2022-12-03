@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {5.7}Use Case 7: Update Account Information by Employee}{20}{}%
 \contentsline {section}{\numberline {5.8}Use Case 8:Add Products}{23}{}%
 \contentsline {section}{\numberline {5.9}Use Case 9:Update Products}{24}{}%
-\contentsline {section}{\numberline {5.10}Use Case 8(Update Products) }{27}{}%
+\contentsline {section}{\numberline {5.10}Use Case 10(Update Products) }{27}{}%
 \contentsline {section}{\numberline {5.11}Use Case 9(Add Rider)}{28}{}%
 \contentsline {section}{\numberline {5.12}Use Case 10(Update Rider)}{29}{}%
 \contentsline {section}{\numberline {5.13}Use Case 11(Order Product) }{30}{}%
