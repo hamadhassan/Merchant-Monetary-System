@@ -1380,9 +1380,8 @@ Flow       & Main Scenario:
 \item Actor enters the capacity volume of wareHouse.
 \item Actor clicks on Next Button.
 
-\end{enumerate}\\ \hline
-\end{tabular}
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+\end{enumerate}\\
+
 
 &Extensions (or Alternative Flows):\\
 & 2a. If Actor did not enter the wareHouse name. \\
@@ -1394,7 +1393,9 @@ Flow       & Main Scenario:
 & \begin{enumerate}
 		\item Error Signal will be present.
 	\end{enumerate}
-\\ 
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline 
 & 2c. If Actor enter inproper data(single alphabet etc) in the wareHouse name. \\
 & \begin{enumerate}
 		\item Error Signal will be present.
@@ -1452,6 +1453,102 @@ Post-Condition &  after clicked next button new form of Add WareHouse Manager wi
 %------------------------------------------
 
 
+\section{Use Case 17:Update WareHouse}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID & U17  \\\hline
+
+Name  	    & Add WareHouse  \\ \hline
+
+Actor     	& CEO,Employee\\ \hline
+
+Description &  . The respective actor can edit the warehouse name, area, city, state, and capacity volume.  \\ \hline
+
+Pre-Condition &  Edit WareHouse Screen will be presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item Actor is ready to edit wareHouse.
+\item Actor edits WareHouse Name.
+\item Actor edits the area of wareHouse.
+\item Actor edits the city of wareHouse.
+\item Actor edits the state of wareHouse.
+\item Actor updates the capacity volume of wareHouse.
+\item Actor clicks on Next Button.
+
+\end{enumerate}\\
+
+
+&Extensions (or Alternative Flows):\\
+& 2a. If Actor did not enter the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& 2b. If Actor enter invalid characters in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 2c. If Actor enter inproper data(single alphabet etc) in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 2d. If Actor enter digits in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+& 3. If Actor did not select any area from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+&  4. If Actor did not select any city from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+&  5. If Actor did not select any state from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\
+&  6a. If Actor did not enter capacity volume  from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+		\item 
+	\end{enumerate}
+\\
+
+& 6b. If Actor enter invalid characters in the wareHouse capacity. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 6c. If Actor enter inproper data(alphabets, negative values etc) in the wareHouse capacity. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+
+\\ \hline 
+
+
+Post-Condition &  Dashboard will be presented.  \\ \hline
+
+\end{tabular}
+
+
+
+%------------------------------------------
 
 
 
