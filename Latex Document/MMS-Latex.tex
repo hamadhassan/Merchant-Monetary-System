@@ -1105,6 +1105,83 @@ Flow & 2b. Actor enters the invalid category, i.e., integer instead of string
 Post-Condition &    The Category will be updated and added to the system. \\ \hline
 
 \end{tabular}
+%------------------------------------------
+
+\section{Use Case 13:Add Vendor}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U13 \\\hline
+
+Name  	    &  Add Vendor\\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  The respective actors will add the manufacturer or vendor details by entering the details, e.g.,  its name, address, landline number, concerned person, and contact. Then click on Add Button. Now you have a new vendor for your company \\ \hline
+
+Pre-Condition &  Add Vendor screen will be presented to the respective actors. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to enter the identifiers.
+\item Actor enters vendor name.
+\item Actor enters vendor's landline number.
+\item Actor enters vendor's address.
+\item Actor enters the concerned person's name.
+\item Actor enters the concerned person's contact number.
+\item Actor clicks on Add button.
+\end{enumerate}
+
+
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& 2a. Actor doesn't enter the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+
+3a. Actor doesn't enter the vendor's landline number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4a. Actor doesn't enter the vendor's address.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+
+5a. Actor doesn't enter the concerned person's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6a. Actor doesn't enter the concerned person's contact number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7a. Actor enters the invalid landline number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7b. Actor enters the invalid concerned person's number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Vendor details will be added to the system. \\ \hline
+
+\end{tabular}
 
 %------------------------------------------
 \section{Use Case 12(Send Email) }
