@@ -1552,6 +1552,98 @@ Post-Condition &  Dashboard will be presented.  \\ \hline
 
 
 
+\section{Use Case 18:Detail of WareHouses  }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID & U18  \\\hline
+
+Name  	    & Detail of WareHouses  \\ \hline
+
+Actor     	& CEO,Employee\\ \hline
+
+Description &  Actor can view the details of each WareHouse that registered on this system. Actor can filter out WareHouses with certain attributes and can apply multiple filters to search out specific wareHouse and  their data. Actor can delete as well as edit wareHouses.\\ \hline
+
+Pre-Condition &  Detail of Accounts Screen is presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item  Actor selects the attribute from the given list. 
+\item  Actor could search the data from the identifier.
+\item  Actor selects the filters from the given list.
+\item  Actor clicks on the Go button.
+\item  Actor selects the data(any row shown in the grid )from the grid. 
+\item  Actor clicks on the Edit button, and a new Edit user screen opens.
+\item  Actor clicks on the Delete button.
+\item  Actor clicks on the Close button.
+
+
+\end{enumerate}\\ 
+
+&Extensions (or Alternative Flows):\\
+
+& 1. If Actor did not select any attribute from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+& 2a. If Actor did not select any Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+& 2b. If Actor did not select any designation and  Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+& 3a. If Actor did not select any Filter from the given list \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+& 3b. If Actor did not select any Attribute from the given list and select any filter  \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+
+& 4a. If Actor did not select any Attribute, Designation, or filter from the given list and not enter the data to be searched in identifier \\
+& \begin{enumerate}
+		\item Error Message box will be shown.
+	\end{enumerate}
+\\  
+& 5. If Actor did not select any data from the grid list.  \\
+& \begin{enumerate}
+		\item No operation is performed.
+	\end{enumerate}
+\\ 
+& 6. If Actor did not select any data from the grid list and clicked the edit button.\\
+& \begin{enumerate}
+		\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\
+Flow       & 7. If Actor did not select any data from the grid list and clicked the delete button.\\
+ 	&\begin{enumerate}
+			\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\ \hline 
+
+
+Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
+
+\end{tabular}
+
+
+
+%------------------------------------------
 
 
 
