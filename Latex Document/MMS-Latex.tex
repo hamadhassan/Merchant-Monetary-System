@@ -1957,6 +1957,75 @@ Extensions (or Alternative Flows):\\
 Post-Condition &  Data is updated in the database, and the screen is closed. \\\hline
 \end{tabular}
 %------------------------------------------
+%------------------------------------------
+\section{Use Case 23: Add Shop and Shopkeeper}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID & U23   \\\hline
+Name  &  Add Shop and Shopkeeper \\ \hline
+Actor &   Rider,Employee,CEO\\ \hline
+Description &. The actor enters the shop name, phone number, and shop number, select the area from the given list, selects the city from the given list, selects the state from the given list, and the country is only Pakistan. \\ \hline
+Pre-Condition & Shopkeeper screen is presented.  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor enters shopkeeper name.   
+\item Actor enters shop name.   
+\item Actor enters landline number.
+\item Actor enters an email address.
+\item Actor selects the area from the given list.
+\item Actor selects the city from the given list.
+\item Actor select state from the given list.
+\item  Actor click on the next button
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+\\\hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 
+2a. If the actor doesn't enter the shopkeeper name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+2b. If the actor enters an invalid shopkeeper name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3a. If the actor doesn't enter the shop name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid shop name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the landline number \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4b. If the actor enters an invalid landline number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the email address \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & Actor click on the next button to add warehouse manager.  \\\hline
+\end{tabular}
+%------------------------------------------
 
 %------------------------------------------
 \section{Use Case 16(Order Status) }
