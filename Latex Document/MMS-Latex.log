@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  4 DEC 2022 19:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  4 DEC 2022 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,20 +1231,19 @@ Chapter 9.
 
 ] [99]
 Chapter 10.
-<./UIs for Latex Reports/UML.jpg, id=399, 542.77782pt x 464.4853pt>
-File: ./UIs for Latex Reports/UML.jpg Graphic file (type jpg)
-<use ./UIs for Latex Reports/UML.jpg>
-Package pdftex.def Info: ./UIs for Latex Reports/UML.jpg  used on input line 33
-63.
-(pdftex.def)             Requested size: 434.22284pt x 371.58875pt.
+<Image.jpg, id=399, 706.13812pt x 486.31688pt>
+File: Image.jpg Graphic file (type jpg)
+<use Image.jpg>
+Package pdftex.def Info: Image.jpg  used on input line 3363.
+(pdftex.def)             Requested size: 564.91127pt x 389.05403pt.
 
-Overfull \hbox (44.22284pt too wide) in paragraph at lines 3363--3364
+Overfull \hbox (174.91127pt too wide) in paragraph at lines 3363--3364
  [][] 
  []
 
 [100
 
-] [101 <./UIs for Latex Reports/UML.jpg>]
+] [101 <./Image.jpg>]
 Chapter 11.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3370--3370
@@ -1404,8 +1403,8 @@ Chapter 16.
 
 ] (MMS-Latex.aux) ) 
 Here is how much of TeX's memory you used:
- 1703 strings out of 475284
- 36717 string characters out of 2770292
+ 1702 strings out of 475284
+ 36561 string characters out of 2770292
  405868 words of memory out of 3000000
  23175 multiletter control sequences out of 15000+600000
  474158 words of font info for 44 fonts, out of 8000000 for 9000
@@ -1417,7 +1416,7 @@ r/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hammad Hassan/AppData/Local/Programs
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ha
 mmad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.
 pfb>
-Output written on MMS-Latex.pdf (116 pages, 878279 bytes).
+Output written on MMS-Latex.pdf (116 pages, 885971 bytes).
 PDF statistics:
  463 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
