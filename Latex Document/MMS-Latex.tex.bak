@@ -1426,7 +1426,6 @@ Flow       & Main Scenario:
 &  6a. If Actor did not enter capacity volume  from the drop-down. \\
 & \begin{enumerate}
 		\item Error Signal will be present.
-		\item 
 	\end{enumerate}
 \\
 
@@ -1524,7 +1523,6 @@ Flow       & Main Scenario:
 &  6a. If Actor did not enter capacity volume  from the drop-down. \\
 & \begin{enumerate}
 		\item Error Signal will be present.
-		\item 
 	\end{enumerate}
 \\
 
@@ -1552,7 +1550,7 @@ Post-Condition &  Dashboard will be presented.  \\ \hline
 
 
 
-\section{Use Case 18:Detail of WareHouses  }
+\section{Use Case 18:View WareHouse  }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -1644,116 +1642,259 @@ Post-Condition &  Data from selected row will be deleted and a dashboard will be
 
 
 %------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Use Case 14(View/Delete Warehouse)}
+\section{Use Case 19:Take Order}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID &  U19 \\\hline
 
-Use Case ID &  U14 \\\hline
+Name  	    &  Take Order \\ \hline
 
-Name  	    &  View/Delete Warehouse \\ \hline
+Actor     	& Rider \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Description &  Rider is now at the shop. The shopkeeper tells the rider about the products which he wants to order. The rider adds the product from the list with the specified quantity to the cart. The process continues until the shopkeeper orders all required products. Then the rider moves toward the Order Summary screen. Selects the shopkeeper from the list. The rider can change the order details. And in the end, click on the Buy button to place the order. \\ \hline
 
-Actor     	&  CEO, Employee\\ \hline
-
-Description &  This form allows you to view all the warehouse with their details. Only CEO has the authority to delete warehouses. The concerned user can also filter out the warehouse details. \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-016 ViewAndDelete Warehouse@1x.png}\end{center}  \\ \hline
-
-Pre-Condition & Click on Option in CEO or Employee Dashboard Click Warehouse details  \\ \hline
-
+Pre-Condition &  Rider has arrived at the shop, and the shopkeeper is giving him the order. Take Order screen is presented.  \\ \hline
 
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Warehouse Details UI will appear
-\item  View Details
-\item  For deletion, select data row and click delete from below.
+\item Actor is ready to take the order.
 
+\item Actor recommends different products to the shopkeeper.
+
+\item Actor adds the product to the cart by clicking on Add to Cart button with the shopkeeper's consent and requirement, i.e., the quantity of the shopkeeper's need.
+
+\item The process continues until the shopkeeper orders all required products.
+
+
+\item Actor clicks on View Cart.
+
+\item Order Summary screen will be presented.
+\item Grand Total Amount is shown at the bottom left of the screen.
+\item Actor selects the shopkeeper's name from the given list.
+
+\item Actor can update and remove the product from the ordered items list of the shopkeeper.
+
+\item Click on the Buy button at the end of the screen to confirm the order.
 
 \end{enumerate}
 
-Alternate Flow:
+Extensions (or Alternative Flows):\\
 
-\begin{itemize}
-\item Clicking Edit Button
-	\begin{enumerate}
-		\item Will open a Edit Warehouse Form
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
 	\end{enumerate}
-\item Clicking Clear Button
-	\begin{enumerate}
-	   	 \item	Will reset the filters
+
+*b. If the reset button is clicked in the Order Summary screen\\
+
+& \begin{enumerate}
+
+		\item Ordered items list will get cleared.
+
 	\end{enumerate}
-\end{itemize}
+	\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& *c. If the back button is clicked in the Order Summary screen\\
+
+& \begin{enumerate}
+
+		\item Take Order screen will be presented.
+
+	\end{enumerate}
+
+3a. if the specified quantity is greater than the available quantity
+
+ 	\begin{enumerate}
+
+		\item Product will not add
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+3b. if the actor enters a negative quantity.
+
+ 	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+9a. If the Buy button is clicked with zero items ordered.
+
+	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+
+
 \\ \hline
-Post-Condition &  Detailed Warehouse data will be displayed or deletion occurs if any   \\ \hline
+
+Post-Condition &  Order has been placed and is waiting for employee approval. Order status has been set as "Not Confirmed" \\ \hline
+
+\end{tabular}
+
+%------------------------------------------
+\section{Use Case 20:Confirm the Incoming Order}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID &  U20 \\\hline
+
+Name  	    &  Confirm the Incoming Order \\ \hline
+
+Actor     	& Employee \\ \hline
+Description  &  Order has now been placed by the rider and delivered to the employee for confirmation. Actor clicks on Confirm Button. The confirmation includes two things. Again it will check the product's availability in the warehouse and the rider's vehicle capacity. After successful validation, the order status will be changed from "Not Confirmed" to "Confirmed" in the View Order Details screen. The employee will email the warehouse manager and the assigned rider. \\ \hline
+
+Pre-Condition & Order has been received by the employee.  \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Flow & Main Scenario:
+
+
+
+\begin{enumerate}
+
+
+
+\item View Orders Details screen will be presented.
+
+\item Actor will click on the Confirm button against the first order.
+
+\item The system will check the product's availability in the warehouse.
+
+\item After Successful availability, a small screen for assigning a rider is presented
+
+\item Select the rider from the list.
+
+\item Check rider's vehicle's capacity and assign.
+
+\item Click on Assign Button, and the control will again shift back to the View Order Details screen.
+
+\item system automatically sends emails to the assigned rider and the warehouse manager.
+
+\end{enumerate}
+
+
+
+Extensions (or Alternative Flows):\\
+
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
+
+*b. If the remove button is clicked against any item\\
+
+& \begin{enumerate}
+
+		\item Corresponding order will get removed.
+
+	\end{enumerate}
+
+*c. If the back button is clicked\\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
+
+4a. if the products ordered are not available in the warehouse
+
+ 	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+8a. If the rider's vehicle's capacity is insufficient to carry the order.
+
+ 	\begin{enumerate}
+
+		\item Assign button is disabled.
+
+	\end{enumerate}
+
+\\ \hline
+
+Post-Condition &  Order is confirmed now and the warehouse manager is notified about the order.\\ \hline
 
 \end{tabular}
 %------------------------------------------
-\section{Use Case 15(Edit Warehouse) }
-
+\section{Use Case 21: Add Vehicle}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID &  U15 \\\hline
-
-Name  	    &  Edit Warehouse \\ \hline
-
-Actor     	& CEO, Employee \\ \hline
-
-Description &  Selecting Warehouse Details and then Clicking Update button after selecting row, will allow you to modify selected Warehouse Details. Change your required fields and Save the information \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-015 EditWarehouse@1x.png}\end{center}  \\ \hline
-
-Pre-Condition & Click on Update in Warehouse details after selecting data  \\ \hline
-
-
-Flow & Main Scenario:
-
+Use Case ID & U21   \\\hline
+Name   &   Add Vehicle\\ \hline
+Actor &  CEO, Employee  \\ \hline
+Description & Actor select the type of vehicle from the given list, enter the capacity in volume, capacity in weight, and registration number, and click on add button to save data in the database .\\ \hline
+Pre-Condition & Add vehicle screen is presented. \\\hline
+Flow & Main Success Scenario (or Basic Flow):
 \begin{enumerate}
-\item   Update Warehouse UI will show
-\item   Modify already filled fields with your requirements
-\item   Click Update
-
-
+\item Actor is ready to enter the identifiers
+, \item Actor, select the vehicle type from the given list.   
+\item Actor enters the capacity of the vehicle in volume.
+\item Actor enters the capacity of the vehicle in weight.
+\item Actor enters the registration number. 
+\item Actor clicks on the add button.
 \end{enumerate}
-
-Alternate Flow:
-
-\begin{itemize}
-\item Clicking Clear Button
-	\begin{enumerate}
-		\item Clear All fields
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
 	\end{enumerate}
-\item  Clicking Back Button
-	\begin{enumerate}
-	   	 \item	Back to Previous Warehouse Details
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
 	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &   Selected Warehouse details will be modified  \\ \hline
-
+3a. If the actor doesn't enter the capacity in capacity in volume\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid capacity in volume \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the capacity in capacity in weight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\\hline
 \end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 
+4b. If the actor enters an invalid capacity in wight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a.If the entered data is not stored in the database  
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Data stored in the database and screen closed. \\\hline
+\end{tabular}
+%------------------------------------------
+
 %------------------------------------------
 \section{Use Case 16(Order Status) }
 

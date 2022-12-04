@@ -1894,6 +1894,69 @@ Flow &
 Post-Condition &  Data stored in the database and screen closed. \\\hline
 \end{tabular}
 %------------------------------------------
+%------------------------------------------
+\section{Use Case 22: Update Vehicle Information}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID & U22   \\\hline
+Name   &   Update Vehicle Information \\ \hline
+Actor &  CEO, Employee  \\ \hline
+Description & Actor select the type of vehicle from the given list, enter the capacity in volume, capacity in weight, and registration number, and click on add button to save data in the database .\\ \hline
+Pre-Condition & Update Vehicle Information is presented, and registered information is displayed in the identifiers  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to update the identifiers.
+\item Actor changes the vehicle type from the given list.   
+\item Actor updates the capacity of the vehicle in volume.
+\item Actor updates the capacity of the vehicle in weight.
+\item Actor updates the registration number. 
+\item Actor clicks on the update button.
+\end{enumerate}
+\\\hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+
+3a. If the actor doesn't enter the capacity in capacity in volume\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid capacity in volume \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the capacity in capacity in weight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4b. If the actor enters an invalid capacity in wight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a.If the entered data is not stored in the database  
+\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Data is updated in the database, and the screen is closed. \\\hline
+\end{tabular}
+%------------------------------------------
 
 %------------------------------------------
 \section{Use Case 16(Order Status) }
