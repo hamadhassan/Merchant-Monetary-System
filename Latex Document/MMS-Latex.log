@@ -1,16 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  4 DEC 2022 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.3)  4 DEC 2022 19:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./MMS-Latex.tex
 (MMS-Latex.tex
-LaTeX2e <2022-11-01>
-L3 programming layer <2022-11-02>
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
-Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
-
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
-File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-09-28>
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@chapter=\count186
@@ -23,43 +22,36 @@ File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \c@table=\count193
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen140
+\bibindent=\dimen138
 )
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphi
-cx.sty
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval
-.sty
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphi
-cs.sty
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.s
-ty
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gr
-aphics.cfg
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pd
-ftex.def
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen139
+\stockheight=\dimen140
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
-)
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.
-sty
+) (C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen143
 \ar@mcellbox=\box51
@@ -77,9 +69,9 @@ Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
 \TX@cols=\count194
 \TX@ftn=\toks18
 )
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3bac
-kend-pdftex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex
+.def
+File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count195
 \l__pdf_internal_box=\box53
 ) (MMS-Latex.aux)
@@ -100,8 +92,7 @@ LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\sup
-p-pdf.mkii
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count196
 \scratchdimen=\dimen150
@@ -115,14 +106,13 @@ p-pdf.mkii
 \makeMPintoPDFobject=\count267
 \everyMPtoPDFconversion=\toks20
 )
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\ep
-stopdf-base.sty
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base
+.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\Hammad Hassan\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstop
-df-sys.cfg
+(C:\Users\AA\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 <UETLogo.png, id=1, 1705.572pt x 1720.026pt>
@@ -138,8 +128,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 16.
  [1
 
-{C:/Users/Hammad Hassan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./UE
-TLogo.png>] (MMS-Latex.toc [2
+{C:/Users/AA/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./UETLogo.png>]
+ (MMS-Latex.toc [2
 
 ] [3])
 \tf@toc=\write3
@@ -1247,22 +1237,22 @@ Overfull \hbox (44.22284pt too wide) in paragraph at lines 3364--3365
 ] [101 <./UIs for Latex Reports/UML.jpg>]
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3371--3371
+Underfull \hbox (badness 10000) in paragraph at lines 3370--3370
 []|\OT1/cmr/bx/n/12 Data Struc-
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 3373--3373
+Underfull \hbox (badness 2409) in paragraph at lines 3372--3372
 []|\OT1/cmr/m/n/12 In the U04 (Ac-count De-tails), Grid of the
  []
 
 
-Overfull \hbox (45.93854pt too wide) in paragraph at lines 3370--3399
+Overfull \hbox (45.93854pt too wide) in paragraph at lines 3369--3398
 []
  []
 
 
-Overfull \hbox (45.93854pt too wide) in paragraph at lines 3370--3399
+Overfull \hbox (45.93854pt too wide) in paragraph at lines 3369--3398
 [] 
  []
 
@@ -1275,47 +1265,102 @@ Overfull \vbox (54.19974pt too high) has occurred while \output is active []
 [103] [104]
 Chapter 12.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3403--3403
+Underfull \hbox (badness 10000) in paragraph at lines 3402--3402
 []|\OT1/cmr/bx/n/12 Type of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3403--3403
+Underfull \hbox (badness 10000) in paragraph at lines 3402--3402
 \OT1/cmr/bx/n/12 Ex-cep-
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 3403--3403
+Underfull \hbox (badness 2521) in paragraph at lines 3402--3402
 \OT1/cmr/bx/n/12 in which ex-
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 3403--3403
+Underfull \hbox (badness 2351) in paragraph at lines 3402--3402
 \OT1/cmr/bx/n/12 cep-tion could
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3404--3404
+Underfull \hbox (badness 10000) in paragraph at lines 3403--3403
 []|\OT1/cmr/m/n/12 Incorrect
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3404--3404
+Underfull \hbox (badness 6608) in paragraph at lines 3405--3406
+\OT1/cmr/m/n/12 U14 U19 U20
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 3405--3406
+\OT1/cmr/m/n/12 U21 U22 U23
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 3405--3406
+\OT1/cmr/m/n/12 U24 U25 U26
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 3405--3406
+\OT1/cmr/m/n/12 U27 U28 U29
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3406--3406
 []|\OT1/cmr/m/n/12 Restrict the user
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3405--3405
+Underfull \hbox (badness 10000) in paragraph at lines 3407--3407
 []|\OT1/cmr/m/n/12 File not
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3407--3407
-[]|\OT1/cmr/m/n/12 Incorrect
+Underfull \hbox (badness 6658) in paragraph at lines 3407--3407
+[]|\OT1/cmr/m/n/12 Error msg will be
  []
 
 
-Overfull \hbox (60.73853pt too wide) in paragraph at lines 3402--3411
+Underfull \hbox (badness 10000) in paragraph at lines 3408--3408
+[]|\OT1/cmr/m/n/12 Stack
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3408--3408
+[]|\OT1/cmr/m/n/12 Almost All
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3408--3408
+\OT1/cmr/m/n/12 UIs ex-cept
+ []
+
+
+Underfull \hbox (badness 6658) in paragraph at lines 3408--3408
+[]|\OT1/cmr/m/n/12 Error msg will be
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 3409--3409
+\OT1/cmr/m/n/12 Of Range
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 3409--3409
+[]|\OT1/cmr/m/n/12 when an in-valid in-dex is
+ []
+
+
+Underfull \hbox (badness 6658) in paragraph at lines 3409--3409
+[]|\OT1/cmr/m/n/12 Error msg will be
+ []
+
+
+Overfull \hbox (60.73853pt too wide) in paragraph at lines 3401--3411
 [] 
  []
 
@@ -1349,20 +1394,19 @@ Chapter 16.
 
 ] (MMS-Latex.aux) ) 
 Here is how much of TeX's memory you used:
- 1703 strings out of 475284
- 36717 string characters out of 2770292
- 405868 words of memory out of 3000000
- 23175 multiletter control sequences out of 15000+600000
+ 1702 strings out of 475385
+ 35967 string characters out of 2778323
+ 404071 words of memory out of 3000000
+ 23073 multiletter control sequences out of 15000+600000
  474158 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,13n,62p,763b,264s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\Hammad Hassan\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Hammad Hassan/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hammad Hassan/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ha
-mmad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.
-pfb>
-Output written on MMS-Latex.pdf (116 pages, 877987 bytes).
+ 55i,13n,62p,763b,262s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\AA\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm1200.pk><C:/Users/AA/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/AA/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/AA/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on MMS-Latex.pdf (116 pages, 878244 bytes).
 PDF statistics:
  463 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
