@@ -2740,54 +2740,39 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 %------------------------------------------
 
 %------------------------------------------
-\section{Order Status }
+\section{View Route }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID & I22  \\\hline
+Interface ID & I20  \\\hline
 
-Name  & Order Status  \\ \hline
+Name  & View Route  \\ \hline
 
-Linked Use Case &U16  \\ \hline
+Linked Use Case & U128 and UI29  \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-023 OrderStatus@1x.png}\end{center}  \\ \hline
-
-\end{tabular} 
-%------------------------------------------
-\section{Order Status }
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Interface ID &  I23 \\\hline
-
-Name  & Order Status  \\ \hline
-
-Linked Use Case & U17 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-024 Route Finder@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-034 Route Finder@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
 \item  Street No. Must not be negative
 \item All fields must be appropriately filled to find the routes
- 
-
-\end{itemize}
-\\ \hline
-
+ \end{itemize}
+ \\ \hline
 \end{tabular} 
 %------------------------------------------
-\section{Shopkeeper Record }
+
+%------------------------------------------
+\section{Add Shop/Shopkeeper}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID &  I24 \\\hline
+Interface ID &  I21 \\\hline
 
-Name  & Shopkeeper Record  \\ \hline
+Name  & Add Shop/Shopkeeper \\ \hline
 
-Linked Use Case & U18 \\ \hline
+Linked Use Case & U23 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-025 Add ShopKeeper@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-019 Add ShopAndShopKeeper@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2806,13 +2791,13 @@ Validators &
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID & I25  \\\hline
+Interface ID & I22  \\\hline
 
 Name  &  Add Payment \\ \hline
 
-Linked Use Case & U19	 \\ \hline
+Linked Use Case & U26	 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-026 Add Payment@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-021 Add Payment@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2825,32 +2810,235 @@ Validators &
 \\ \hline
 
 \end{tabular} 
-%------------------------------------------
-\section{Withdraw Expenses }
+\section{Update Payment Information}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID & I26  \\\hline
+Interface ID & I23  \\\hline
 
-Name  & Withdraw Expenses  \\ \hline
+Name  &  Update Payment Information \\ \hline
 
-Linked Use Case &  \\ \hline
+Linked Use Case & U25	 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-027 Add Withdraw Expenses@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-022Update Payment Information.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
-\item   Withdraw and Retype Withdraw Amount must be a number not string
+\item   Deposit and Retype Deposit Amount must be a number not string
 \item  Before Clicking Add, Both fields must be filled
 \item  Both fields must be same
 
 
 \end{itemize}
 \\ \hline
-
 \end{tabular} 
 %------------------------------------------
-\newpage
+\section{Add Vehicle}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I24  \\\hline
+
+Name  &  Add Vehicle \\ \hline
+
+Linked Use Case & U21	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-023 AddVehicle@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   
+\item  
+\item 
+
+
+\end{itemize}
+\\ \hline
+\end{tabular} 
+%------------------------------------------
+\section{Update Vehicle Information}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I25  \\\hline
+
+Name  &  Update Vehicle Information \\ \hline
+
+Linked Use Case & U22	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-024 Update Vehicle Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Registration number,Capacity in volume and weight must be number
+\end{itemize}
+\\ \hline
+\end{tabular} 
+%------------------------------------------
+\section{Add Category}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I26  \\\hline
+
+Name  &  Add Category \\ \hline
+
+Linked Use Case & U11	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-025 Add Category@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Category must be a word.
+\end{itemize}
+\\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Update Category Information}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I27  \\\hline
+
+Name  &  Update Category Information \\ \hline
+
+Linked Use Case & U12	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-026Update Category Inofrmation@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Category must be a word.
+\end{itemize}
+\\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Add Vendor}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I28  \\\hline
+
+Name  &  Add Vendor \\ \hline
+
+Linked Use Case & U13	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-027Add Vendor@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Vendor name and company name must be a alphabetic and word.
+\item   Phone number and land line number must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Update Vendor Information}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I29  \\\hline
+
+Name  &  Update Vendor Information \\ \hline
+
+Linked Use Case & U14	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-028 Update Vendor Information@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Vendor name and company name must be a alphabetic and word.
+\item   Phone number and land line number must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Add Stock}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I30  \\\hline
+
+Name  & Add Stock\\ \hline
+
+Linked Use Case & U15	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-029Add Stock.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Quantity,retail price and cost price must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Update Stock Information}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I31  \\\hline
+
+Name  &Update Stock Information\\ \hline
+
+Linked Use Case & U30	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-030Update Stock Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Quantity,retail price and cost price must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Order Summary}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I32  \\\hline
+
+Name  &Order Summary\\ \hline
+
+Linked Use Case & U19	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-031 Order Summary@1x.png}\end{center}  \\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Order Detail}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I33  \\\hline
+
+Name  &Order Summary\\ \hline
+
+Linked Use Case & U19	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-032 Order Details@1x.png}\end{center}  \\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Add Company}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I31  \\\hline
+
+Name  &Add Company\\ \hline
+
+Linked Use Case & U31	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-033 Add Company @1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Contact number must be number and no use of special character used. 
+\item   Name must be alphabetic. 
+\end{itemize}
+\\ \hline
+\end{tabular}
+
+%------------------------------------------
+%------------------------------------------
 \chapter {User Interface Details }
 \begin{center}
 \begin{tabular}{ | m{1.5cm} | m{1.5cm}| | m{1.5cm}|| m{1.5cm}| | m{1cm} | m{1.5cm}| | m{1.5cm}|} 
