@@ -32,19 +32,19 @@
 \contentsline {section}{\numberline {5.27}Use Case 27:Ready the Incoming Order}{55}{}%
 \contentsline {section}{\numberline {5.28}Use Case 28:Accomplish the Order}{55}{}%
 \contentsline {section}{\numberline {5.29}Use Case 29: Plot the Minimum Spanning Tree for Multiple Shops}{56}{}%
-\contentsline {chapter}{\numberline {6}Use Interfaces}{58}{}%
+\contentsline {chapter}{\numberline {6}User Interfaces}{58}{}%
 \contentsline {section}{\numberline {6.1}Intro}{58}{}%
 \contentsline {section}{\numberline {6.2}Login}{59}{}%
 \contentsline {section}{\numberline {6.3}Forgot Password }{60}{}%
-\contentsline {section}{\numberline {6.4}Create Account }{61}{}%
-\contentsline {section}{\numberline {6.5}Update Information}{62}{}%
-\contentsline {section}{\numberline {6.6}Account Detail }{63}{}%
-\contentsline {section}{\numberline {6.7}CEO Dashboard }{64}{}%
-\contentsline {section}{\numberline {6.8}Add Product }{65}{}%
-\contentsline {section}{\numberline {6.9}Update Product }{66}{}%
-\contentsline {section}{\numberline {6.10}Product Detail }{67}{}%
-\contentsline {section}{\numberline {6.11}Order Product}{68}{}%
-\contentsline {section}{\numberline {6.12}Order Summary}{69}{}%
+\contentsline {section}{\numberline {6.4}SignUp}{61}{}%
+\contentsline {section}{\numberline {6.5}Update Account Information (CEO)}{62}{}%
+\contentsline {section}{\numberline {6.6}Update Account Information (Employee)}{63}{}%
+\contentsline {section}{\numberline {6.7}Account Detail (CEO) }{64}{}%
+\contentsline {section}{\numberline {6.8}Account Detail (Employee) }{65}{}%
+\contentsline {section}{\numberline {6.9}CEO Dashboard }{66}{}%
+\contentsline {section}{\numberline {6.10}Add Product }{67}{}%
+\contentsline {section}{\numberline {6.11}Update Product Record}{68}{}%
+\contentsline {section}{\numberline {6.12}Take Order}{69}{}%
 \contentsline {section}{\numberline {6.13}Send Email }{70}{}%
 \contentsline {section}{\numberline {6.14}New Warehouse}{71}{}%
 \contentsline {section}{\numberline {6.15}Update Warehouse }{72}{}%

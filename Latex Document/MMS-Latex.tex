@@ -2315,19 +2315,20 @@ Post-Condition &  Rider reached his destination. \\ \hline
 
 \end{tabular}
 %------------------------------------------
+%--------------User Interface ----------------------------
 \newpage
-\chapter {Use Interfaces}
+\chapter {User Interfaces}
 \section{Intro}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID & I01  \\\hline
 
-Name  	      & Intro  \\ \hline
+Name  	      & Introduction  \\ \hline
 
 Linked Use Case & NULL \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-001 Intro@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-001 Intro@1x.png}\end{center}  \\ \hline
 \end{tabular} 
 %------------------------------------------
 \section{Login}
@@ -2340,7 +2341,7 @@ Name  	      & Login  \\ \hline
 
 Linked Use Case & U01 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-002 Login@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-002 Login@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2360,9 +2361,9 @@ Interface ID &  103 \\\hline
 
 Name  	      & Forgot Password  \\ \hline
 
-Linked Use Case &  \\ \hline
+Linked Use Case & U02 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-003 Forgot password@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-003 Forgot password@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2374,17 +2375,17 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{Create Account }
+\section{SignUp}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID &   104 \\\hline
 
-Name  	      &   Create Account\\ \hline
+Name  	      &   SignUp\\ \hline
 
-Linked Use Case &  U21\\ \hline
+Linked Use Case &  U05\\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-004 Create Account@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-004a Create Account Except Rider@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2401,17 +2402,17 @@ Validators &
 \end{tabular} 
 %------------------------------------------
 
-\section{Update Information}
+\section{Update Account Information (CEO)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID &  I05 \\\hline
 
-Name  	      &  Update Information \\ \hline
+Name  	      &  Update Account Information (CEO) \\ \hline
 
-Linked Use Case &  \\ \hline
+Linked Use Case & U03 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-005 Update Account@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2427,17 +2428,71 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{Account Detail }
+%------------------------------------------
+
+\section{Update Account Information (Employee)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID &  I06 \\\hline
 
-Name  	      &  Account Detail \\ \hline
+Name  	      &  Update Account Information (Employee) \\ \hline
 
-Linked Use Case & U04 \\ \hline
+Linked Use Case & U06 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-006 ViewsAndDelete Account@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   New Password and Confirmation password must be the same
+\item CNIC must be of 13 digits
+\item Contact Number must be of 11 digits
+\item All Information must be provided before account creation
+\item Email Validations
+
+
+\end{itemize}
+\\ \hline
+
+\end{tabular} 
+%------------------------------------------
+\section{Account Detail (CEO) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID &  I07 \\\hline
+
+Name  	      &  Account Detail (CEO) \\ \hline
+
+Linked Use Case & U06 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-006 ViewAndDelete Account@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   On clicked delete and edit button there is must to select any column first from grid list. 
+\item  Filters must be applied before clicking Go
+
+
+\end{itemize}
+\\ \hline
+
+\end{tabular} 
+%------------------------------------------
+%------------------------------------------
+\section{Account Detail (Employee) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID &  I08 \\\hline
+
+Name  	      &  Account Detail (Employee) \\ \hline
+
+Linked Use Case & U07 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-006 ViewAndDelete Account@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2454,13 +2509,11 @@ Validators &
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID &  I07 \\\hline
+Interface ID &  I09 \\\hline
 
 Name  	      & CEO Dashboard  \\ \hline
 
-Linked Use Case & U03 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-007 CEO Dashboard@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-007 CEO Dashboard@1x.png}\end{center}  \\ \hline
 
 \end{tabular} 
 %------------------------------------------
@@ -2468,42 +2521,14 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs fo
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID & I08  \\\hline
+Interface ID & I10  \\\hline
 
 Name & Add Product  \\ \hline
 
-Linked Use Case & U06	 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-008 Add Product@1x.png}\end{center}  \\ \hline
-
-Validators & 
-\begin{itemize}
-\item   Product Name must contain only Digits and alphabets.
-\item Cost Price must not be negative.
-\item The date must be positive. And not previous than current.
-\item Quantity must be positive. And not in decimals.
-\item Rating must be positive and integer.
-\item SKU-ID must be positive.
-\item Weight and Volume must be in integers and decimals and positive.
-\item IN Stock check box must be filled.
+Linked Use Case & U08	 \\ \hline
 
 
-\end{itemize}
-\\ \hline
-
-\end{tabular} 
-%------------------------------------------
-\section{Update Product }
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Interface ID & I09  \\\hline
-
-Name  &  Update Product \\ \hline
-
-Linked Use Case & U08	  \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-009 Update Product@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-008 Add Product@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2522,40 +2547,48 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{Product Detail }
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Interface ID &  I10 \\\hline
-
-Name  &  Product Detail \\ \hline
-
-Linked Use Case & U07	 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-010 ViewAndDelete Products@1x.png}\end{center}  \\ \hline
-
-Validators & 
-\begin{itemize}
-\item   On clicked delete and edit button there is must to select any column first from grid list. 
-\item  Filters must be applied before clicking Go.
-
-
-\end{itemize}
-\\ \hline
-
-\end{tabular} 
-%------------------------------------------
-\section{Order Product}
+\section{Update Product Record}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID & I11  \\\hline
 
-Name  &  Order Product \\ \hline
+Name  &  Update Product Record \\ \hline
 
-Linked Use Case & U11	 \\ \hline
+Linked Use Case & U09	  \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-011 Order Product@1x.png}\end{center}  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-009 Update Product Record@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Product Name must contain only Digits and alphabets.
+\item Cost Price must not be negative.
+\item The date must be positive. And not previous than current.
+\item Quantity must be positive. And not in decimals.
+\item Rating must be positive and integer.
+\item SKU-ID must be positive.
+\item Weight and Volume must be in integers and decimals and positive.
+\item IN Stock check box must be filled.
+
+
+\end{itemize}
+\\ \hline
+
+\end{tabular} 
+%------------------------------------------
+%------------------------------------------
+\section{Take Order}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I19 \\\hline
+
+Name  &  Take Order \\ \hline
+
+Linked Use Case & U12	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-011 Order Product@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2569,30 +2602,6 @@ Search text only contains alphabets and integers only.
 
 \end{tabular} 
 %------------------------------------------
-\section{Order Summary}
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Interface ID & I12  \\\hline
-
-Name  & Order Summary  \\ \hline
-
-Linked Use Case & U11 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-012 Order Summery@1x.png}\end{center}  \\ \hline
-
-Validators & 
-\begin{itemize}
-\item   Street No. must be integer
-\item   Contact No. must be of 11 digits
-\item   Delivery time must be a number may be float or integer
-\item   All fields must be typed before buying products
-
-
-\end{itemize}
-\\ \hline
-
-\end{tabular} 
 %------------------------------------------
 \section{Send Email }
 
