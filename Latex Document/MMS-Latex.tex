@@ -2241,36 +2241,40 @@ Post-Condition &  Order is ready now, and the rider can pick it up.\\ \hline
 
 
 %------------------------------------------
-\section{Use Case 17(Route Finder)}
+\section{Use Case 28:Accomplish the Order}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U17 \\\hline
+Use Case ID &  U28 \\\hline
 
-Name  	    & Route Finder  \\ \hline
+Name  	    &  Accomplish the Order \\ \hline
 
 Actor     	& Rider \\ \hline
 
-Description & After the successful acceptance of certain order from warehouse, now rider has to select the best and the shortest path or route to the destination so his miscellaneous expenses (e.g., fuel) should be less. This allows him to select the shortest route. But he has been shown all possible routes.   \\ \hline
+Description  & Rider has reached the respective shop and delivered the order. Now he will set the order status completed. Click on the View Orders button, and a View Order Details screen will be presented. Click on the complete order button. The corresponding order will be set as completed. \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-024 Route Finder@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  Select Find Route from Rider’s Dashboard \\ \hline
-
+Pre-Condition & Rider has delivered the order successfully. The rider clicks on the view order option.  \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Route Find Form will open
-\item   Fill Source Address
-\item   Fill Destination Address
-\item   Select Find
 
-
+\item View Order Details screen will be presented.
+\item Actor will set the order status as "Completed."
+\item Actor confirms the order status has been set to complete.
+\item Email now will send email to the assigned employee and CEO.
 \end{enumerate}
-\\ \hline
-Post-Condition &  You will be shown all the possible routes from source to destination   \\ \hline
 
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Order is deleivered sucessfully.\\ \hline
 \end{tabular}
+
 %------------------------------------------
 \section{Use Case 18(Add Shopkeeper)}
 
