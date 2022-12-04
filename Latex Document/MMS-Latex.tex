@@ -2276,185 +2276,42 @@ Post-Condition &  Order is deleivered sucessfully.\\ \hline
 \end{tabular}
 
 %------------------------------------------
-\section{Use Case 18(Add Shopkeeper)}
+\section{Use Case 29: Plot the Minimum Spanning Tree for Multiple Shops}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID &  U29 \\\hline
 
-Use Case ID & U18  \\\hline
+Name  	    &  Plot the Minimum Spanning Tree for Multiple Shops \\ \hline
 
-Name  	    &  Add Shopkeeper \\ \hline
-
-Actor     	& Rider, CEO, Employee \\ \hline
-
-Description & Rider will approach the shopkeeper. If shopkeeper is not registered with the system before, the rider will register him first if the shopkeeper orders something. Second scenario may be the CEO and Employee both have the authority to add shopkeeper details what the rider would give them   \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-025 Add ShopKeeper@1x.png}\end{center}  \\ \hline
-
-Pre-Condition & Select Add Shopkeeper from CEO’s, Rider’s, or Employee’s Dashboard  \\ \hline
-
-
-Flow & Main Scenario:
-
-\begin{enumerate}
-\item   Select Appropriate Designation
-\item  Fill all necessary details with the shop details as well
-\item  Click Add button
-
-
-\end{enumerate}
-
-Alternate Flow:
-
-\begin{itemize}
-\item Clicking Clear Button
-	\begin{enumerate}
-		\item Will clear all the fields you have filled
-	\end{enumerate}
-\item 	Clicking Close Button
-	\begin{enumerate}
-	   	 \item	Will happen to return to the respective/corresponding dashboard
-	\end{enumerate}
-\item If all necessary field are not filled
-	\begin{enumerate}
-		\item Alert Message will occur
-		\item Control will remain on the same page
-	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &  Shopkeeper Information will be added to your system   \\ \hline
-
+Actor     	& Rider \\ \hline
 \end{tabular}
-%------------------------------------------
-\section{Use Case 19(Add Payment) }
-
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID &  U19 \\\hline
-
-Name  	    & Add  Payment  \\ \hline
-
-Actor     	& Rider, Employee, CEO \\ \hline
-
-Description & Rider will approach the shopkeeper. Took Payment from the shopkeeper and add it into the system. \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-026 Add Payment@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  Select Add Payment from Rider’s Dashboard(Shopkeeper Must be registered first) \\ \hline
-
-\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
-Flow & Main Scenario:
-
-\begin{enumerate}
-\item   Payment Form will open
-\item   Select Shop Name (it should be registered first)
-\item   Add Deposit Amount and Confirm
-\item   Click Add
-
-
+Description &     Whenever rider status changes(to "On the way"), a spanning tree will be  generated between warehouse and shopkeeper's Locations. Rider can veiw the route between two locations by clicking on the new route button.
+ Data structures used in it are:\\
+&\begin{enumerate}
+   \item Graph
+   \item BST 
 \end{enumerate}
-
-Alternate Flow:
-
-\begin{itemize}
-\item 	Clicking Clear Button
-	\begin{enumerate}
-		\item Will clear all the fields you have filled
-	\end{enumerate}
-\item Clicking Close Button
-	\begin{enumerate}
-	   	 \item	Will happen to return to the respective/corresponding dashboard
-	\end{enumerate}
-\item If deposit amount and Retype Deposit Amount are not same
-	\begin{enumerate}
-		\item Error Message will occur
-		\item System will return to the same page after clicking on OK button
-	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &   Payment will be accepted for the selected shopkeeper  \\ \hline
-
-\end{tabular}
-%------------------------------------------
-\section{Use Case 20(Withdraw Expenses) }
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID & U20  \\\hline
-
-Name  	    &  Withdraw Expenses \\ \hline
-
-Actor     	&  CEO \\ \hline
-
-Description & --- \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-027 Add Withdraw Expenses@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &   \\ \hline
-
-\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
-Flow & Main Scenario:
-
-\begin{enumerate}
-\item   Payment Form will open
-\item Select Payment Type
-\item Type Withdraw Amount and Retype it in the next box
-\item Click Add
-
-
+Algorithems used for making Minimum spanning tree is: \\
+&\begin{enumerate}
+   \item Greedy Algorithems
 \end{enumerate}
+Rider can view the shortest route of his destination one by one. As one order is accomplished the rider's location will be updated. Now he can view the shortest path towards his second destination.
+\\
+\hline
 
-Alternate Flow:
-
-\begin{itemize}
-\item Clicking Clear Button
-	\begin{enumerate}
-		\item Will clear all the fields you have filled
-	\end{enumerate}
-\item Clicking Close Button
-	\begin{enumerate}
-	   	 \item	Will happen to return to the respective/corresponding dashboard
-	\end{enumerate}
-\item If Withdraw amount and Retype Withdraw Amount are not same
-	\begin{enumerate}
-		\item Error Message will occur
-		\item System will return to the same page after clicking on OK button
-	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &    \\ \hline
-
-\end{tabular}
-%------------------------------------------
-
-\section{Use Case 21(Create Account)}
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID &  U21 \\\hline
-
-Name  	    & Create Account  \\ \hline
-
-Actor     	& All \\ \hline
-
-Description & All actors can link with the system by creating account and register themselves for this system. Provide Necessary Information and you can dive into the system by logging into the system. \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-004 Create Account@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  System Will Initiate with this page \\ \hline
-
+Pre-Condition &  Rider is ready to deliver the order.  \\ \hline
 
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Select Your Designation
-\item  Provide All Necessary Details
-\item  Click on Create Account
-
-
+\item View Route Screen is presented.
+\item Now he can view the shortest path towards his destination.
 \end{enumerate}
 
 \\ \hline
-Post-Condition &  You are now the user of this system  \\ \hline
+
+Post-Condition &  Rider reached his destination. \\ \hline
 
 \end{tabular}
 %------------------------------------------
