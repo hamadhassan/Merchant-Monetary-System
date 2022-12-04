@@ -1552,7 +1552,7 @@ Post-Condition &  Dashboard will be presented.  \\ \hline
 
 
 
-\section{Use Case 18:Detail of WareHouses  }
+\section{Use Case 18:View WareHouse  }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
@@ -1644,72 +1644,105 @@ Post-Condition &  Data from selected row will be deleted and a dashboard will be
 
 
 %------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Use Case 14(View/Delete Warehouse)}
+\section{Use Case 19:Take Order}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID &  U19 \\\hline
 
-Use Case ID &  U14 \\\hline
+Name  	    &  Take Order \\ \hline
 
-Name  	    &  View/Delete Warehouse \\ \hline
+Actor     	& Rider \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Description &  Rider is now at the shop. The shopkeeper tells the rider about the products which he wants to order. The rider adds the product from the list with the specified quantity to the cart. The process continues until the shopkeeper orders all required products. Then the rider moves toward the Order Summary screen. Selects the shopkeeper from the list. The rider can change the order details. And in the end, click on the Buy button to place the order. \\ \hline
 
-Actor     	&  CEO, Employee\\ \hline
-
-Description &  This form allows you to view all the warehouse with their details. Only CEO has the authority to delete warehouses. The concerned user can also filter out the warehouse details. \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-016 ViewAndDelete Warehouse@1x.png}\end{center}  \\ \hline
-
-Pre-Condition & Click on Option in CEO or Employee Dashboard Click Warehouse details  \\ \hline
-
+Pre-Condition &  Rider has arrived at the shop, and the shopkeeper is giving him the order. Take Order screen is presented.  \\ \hline
 
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Warehouse Details UI will appear
-\item  View Details
-\item  For deletion, select data row and click delete from below.
+\item Actor is ready to take the order.
 
+\item Actor recommends different products to the shopkeeper.
+
+\item Actor adds the product to the cart by clicking on Add to Cart button with the shopkeeper's consent and requirement, i.e., the quantity of the shopkeeper's need.
+
+\item The process continues until the shopkeeper orders all required products.
+
+\item Actor clicks on View Cart.
+
+\item Order Summary screen will be presented.
+
+\item Actor selects the shopkeeper's name from the given list.
+
+\item Actor can update and remove the product from the ordered items list of the shopkeeper.
+
+\item Click on the Buy button at the end of the screen to confirm the order.
 
 \end{enumerate}
 
-Alternate Flow:
+Extensions (or Alternative Flows):\\
 
-\begin{itemize}
-\item Clicking Edit Button
-	\begin{enumerate}
-		\item Will open a Edit Warehouse Form
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
 	\end{enumerate}
-\item Clicking Clear Button
-	\begin{enumerate}
-	   	 \item	Will reset the filters
+
+*b. If the reset button is clicked in the Order Summary screen\\
+
+& \begin{enumerate}
+
+		\item Ordered items list will get cleared.
+
 	\end{enumerate}
-\end{itemize}
+	\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& *c. If the back button is clicked in the Order Summary screen\\
+
+& \begin{enumerate}
+
+		\item Take Order screen will be presented.
+
+	\end{enumerate}
+
+3a. if the specified quantity is greater than the available quantity
+
+ 	\begin{enumerate}
+
+		\item Product will not add
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+3b. if the actor enters a negative quantity.
+
+ 	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+9a. If the Buy button is clicked with zero items ordered.
+
+	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+
+
 \\ \hline
-Post-Condition &  Detailed Warehouse data will be displayed or deletion occurs if any   \\ \hline
+
+Post-Condition &  Order has been placed and is waiting for employee approval. Order status has been set as "Not Confirmed" \\ \hline
 
 \end{tabular}
+
 %------------------------------------------
 \section{Use Case 15(Edit Warehouse) }
 
