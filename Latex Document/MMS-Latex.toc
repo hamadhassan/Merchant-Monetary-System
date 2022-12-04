@@ -22,7 +22,7 @@
 \contentsline {section}{\numberline {5.17}Use Case 17:Update WareHouse}{38}{}%
 \contentsline {section}{\numberline {5.18}Use Case 18:View WareHouse }{40}{}%
 \contentsline {section}{\numberline {5.19}Use Case 19:Take Order}{41}{}%
-\contentsline {section}{\numberline {5.20}Use Case 15(Edit Warehouse) }{44}{}%
+\contentsline {section}{\numberline {5.20}Use Case 20:Confirm the Incoming Order}{43}{}%
 \contentsline {section}{\numberline {5.21}Use Case 16(Order Status) }{45}{}%
 \contentsline {section}{\numberline {5.22}Use Case 17(Route Finder)}{46}{}%
 \contentsline {section}{\numberline {5.23}Use Case 18(Add Shopkeeper)}{47}{}%
