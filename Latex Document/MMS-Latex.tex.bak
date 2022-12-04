@@ -2155,14 +2155,18 @@ Name  &  Edit Payment \\ \hline
 Actor &   CEO, Employee, Warehouse Manager, Rider \\ \hline
 Description & Actor select the payment type from the list, select the payment mode from the options, update the descriptions, select the date, update the amount, and select the sender designation, name and reiver designation name, and receiver. \\ \hline
 The pre-Condition & Add payment screen is presented, and stored information is displayed in the attributes. \\\hline
-\end{tabular}
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Flow & Main Success Scenario (or Basic Flow):
 \begin{enumerate}
 \item Actor is ready to enter the identifiers.
 \item Actor selects the payment type from the given list.   
 \item Actor selects the payment mode from the given options.
 \item Actor updates the description.
+\end{enumerate}\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+\begin{enumerate}
+
 \item Actor selects the date. 
 \item Actor updates the amount.
 \item Actor confirms the amount.
