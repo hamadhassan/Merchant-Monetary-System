@@ -2284,8 +2284,7 @@ Use Case ID &  U29 \\\hline
 Name  	    &  Plot the Minimum Spanning Tree for Multiple Shops \\ \hline
 
 Actor     	& Rider \\ \hline
-\end{tabular}
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
 Description &     Whenever rider status changes(to "On the way"), a spanning tree will be  generated between warehouse and shopkeeper's Locations. Rider can veiw the route between two locations by clicking on the new route button.
  Data structures used in it are:\\
 &\begin{enumerate}
@@ -2295,8 +2294,10 @@ Description &     Whenever rider status changes(to "On the way"), a spanning tre
 Algorithems used for making Minimum spanning tree is: \\
 &\begin{enumerate}
    \item Greedy Algorithems
-\end{enumerate}
-Rider can view the shortest route of his destination one by one. As one order is accomplished the rider's location will be updated. Now he can view the shortest path towards his second destination.
+\end{enumerate}\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Description & Rider can view the shortest route of his destination one by one. As one order is accomplished the rider's location will be updated. Now he can view the shortest path towards his second destination.
 \\
 \hline
 
@@ -2315,6 +2316,152 @@ Post-Condition &  Rider reached his destination. \\ \hline
 
 \end{tabular}
 %------------------------------------------
+\section{Use Case 30:Update Stock}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Use Case ID &  U15 \\\hline
+
+Name  	    &  Update Stock \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Stock of added products will now add. Initiate update Stock screen and update identifiers. Select product, update quantity retail price and cost price, and select expiry manufacturing and date of stock add. then click on Add button. Stock will be added.\\ \hline
+
+Pre-Condition &  Add Stock screen will be presented to the respective actor. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to update the stock.
+\item Actor selects the product from the given list.
+\item Actor update the product quantity.
+\item Actor update the Retail Price.
+\item Actor update the Cost Price.
+\end{enumerate}
+\\ \hline
+\end{tabular}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+\begin{enumerate}
+\item Actor selects the date of the stock added.
+\item Actor selects the manufacturing date of the stock.
+\item Actor selects the expiry date of the stock.
+\item Actor clicks on Add button.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+2a. actor doesn't update the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. if the actor update string instead of integers.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3b. if the actor enters a negative quantity.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+
+4a. if the actor update a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4b. if the actor update a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5a. if the actor enters a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5b. if the actor enters a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& 9a. If the manufacturing date is greater than the expiry date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9b. If the manufacturing date is greater than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9c. If the expiry date is less than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Stock of the product will be added. \\ \hline
+\end{tabular}
+%------------------------------------------
+\section{Use Case 31: Add Company }
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID & U31   \\\hline
+Name   &   Update Vehicle Information \\ \hline
+Actor &  CEO  \\ \hline
+Description & CEO  enter the name, contact number, and address of the company .\\ \hline
+Pre-Condition & Add company screen is presented. \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item CEO  is ready to enter the identifiers.
+\item CEO enter the company name.   
+\item CEO enters the company phone number.   
+\item CEO enters the company address.   
+\item Actor clicks on the click button.
+\end{enumerate}
+\\\hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow & 
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+
+2a.  If the CEO doesn't enter the name\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+2b. If the CEO enters an invalid name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3a.  If the CEO doesn't enter the contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the CEO enters an invalid contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a.  If the CEO doesn't enter the address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Data is stored in the database. \\\hline
+\end{tabular}
+
 %--------------User Interface ----------------------------
 \newpage
 \chapter {User Interfaces}
