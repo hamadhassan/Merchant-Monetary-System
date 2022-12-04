@@ -106,12 +106,11 @@ The requirement is to design, develop and test the system in a desktop applicati
   | >{\centering\arraybackslash}X |
   }
   \hline
- Language & C \# (.net framework 4.8)   \\
+ Language & C \# (.net framework 4.8) and  Python   \\
  \hline
-IDEs  & Microsoft Visual Studio 2022  \\
-\hline
+IDEs  & Microsoft Visual Studio 2022 and Spyder 
+ \\ \hline
 \end{tabularx}
-
 \newpage
 \chapter {Project Actors}
 There are a total of four actors in the system and two stakeholders. Their titles and roles are:
@@ -3361,7 +3360,7 @@ In our project Multilevel inheritance is used as
 
 \begin{figure}
   \centering
-    \includegraphics[scale=0.8]{./UIs for Latex Reports/UML.jpg}
+    \includegraphics[scale=0.8]{Image.jpg}
   \caption{The detailed Object Oriented Design of the project that will be implemented according to mentioned logic}
 \end{figure}
 \newpage
@@ -3401,12 +3400,13 @@ U21 &Linked List&In the U21 (Create Account), Linked list is used to add user. \
 
 \begin{tabular}{ | m{2cm} | m{5cm}|m{3cm}||m{4cm}| } \hline
 \textbf{Type of Exception} & \textbf{Why this exception will occur} &\textbf{ Use Case Id in which exception could be occurred} & \textbf{How you will handle the} exception \\  \hline
-Incorrect Format&By default system, take all input in string and the deploy system need to convert into desire format. If the input data is not converted into other datatype like int and float the future task not performed e.g. string 2 and int 2 behave different in CPU. &U06,U19,U09&Restrict the user to enter the required data in correct format.                      \\  \hline
-File not Exit &The required file not in the correct path and CPU not recognize it.&U14,U07,U04&Restrict the user first select the file then perfrom future action
-\\  \hline
-Incorrect URL& The wrong URL of the website broken the link with the DNS and required data not fetch from server. &U17&Apply stick constrain to avoid it. \\
-\hline
+Incorrect Format & By default system, take all input in string and the deploy system need to convert into desire format. If the input data is not converted into other datatype like int and float the future task not performed e.g. string 2 and int 2 behave different in CPU.
 
+& U2 U3 U4a U4b U5a U5b U6 U7 U8 U9 U11 U13 U14 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U33a
+&Restrict the user to enter the required data in correct format.                      \\  \hline
+File not Loaded & File not found or b. & U6 U10 U11 U15 U32 &Error msg will be shown and give option to user to enter correct path of the file.   \\  \hline
+Stack OverFlow & When the data is more used than the assigned memory or b. & Almost All UIs except Dashboards &Error msg will be shown and give option to user to enter correct operation.   \\  \hline
+Index Out Of Range Exception & when an invalid index is used to access a member of an array or a collection & All add ,update and view UIs.& Error msg will be shown. \\  \hline
 \end{tabular}
 \newpage
 \chapter {Data Storage}
