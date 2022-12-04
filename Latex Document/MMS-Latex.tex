@@ -2101,7 +2101,7 @@ Post-Condition & The warehouse information is updated in the system, and the scr
 Use Case ID & U25   \\\hline
 Name  &  Add Payment \\ \hline
 Actor &   CEO, Employee, Warehouse Manager, Rider \\ \hline
-Description & Actor select the payment type from the list, select the payment mode from the options, enter the descriptions, select the date and enter the amount. \\ \hline
+Description & Actor select the payment type from the list, select the payment mode from the options, enter the descriptions, select the date, update the amount, and select the sender designation, name and reiver designation name, and receiver. \\ \hline
 The pre-Condition & Add payment screen is presented.  \\\hline
 Flow & Main Success Scenario (or Basic Flow):
 \begin{enumerate}
@@ -2145,6 +2145,60 @@ Flow &
 	\end{enumerate}
 \\ \hline
 Post-Condition & Data are stored in the database, and the screen is closed.  \\\hline
+\end{tabular}
+%------------------------------------------
+%------------------------------------------
+\section{Use Case 26: Edit Payment}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID & U26   \\\hline
+Name  &  Edit Payment \\ \hline
+Actor &   CEO, Employee, Warehouse Manager, Rider \\ \hline
+Description & Actor select the payment type from the list, select the payment mode from the options, update the descriptions, select the date, update the amount, and select the sender designation, name and reiver designation name, and receiver. \\ \hline
+The pre-Condition & Add payment screen is presented, and stored information is displayed in the attributes. \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor selects the payment type from the given list.   
+\item Actor selects the payment mode from the given options.
+\item Actor updates the description.
+\end{enumerate}\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Flow &
+\begin{enumerate}
+
+\item Actor selects the date. 
+\item Actor updates the amount.
+\item Actor confirms the amount.
+\item Actor clicks on the update button.
+\item Actor selects their role from the given list.
+\item Actor selects their name from the given list.
+\item Actor selects the sender role from the given list.
+\item Actor selects the sender name from the given list.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+4a. If the actor doesn't enter description \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a. If the actor doesn't enter the amount\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the actor enters an invalid amount\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & Data are updated in the database, and the screen is closed.  \\\hline
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
