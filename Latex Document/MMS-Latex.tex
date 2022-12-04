@@ -2027,7 +2027,7 @@ Post-Condition & Actor click on the next button to add warehouse manager.  \\\hl
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 23: Add Shop and Shopkeeper}
+\section{Use Case 24: Update Shop and Shopkeeper}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U23   \\\hline
 Name  &  Add Shop and Shopkeeper \\ \hline
@@ -2096,7 +2096,7 @@ Post-Condition & The warehouse information is updated in the system, and the scr
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 25: Add Payment}
+\section{Use Case 25: Add Expenses}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U25   \\\hline
 Name  &  Add Payment \\ \hline
@@ -2148,7 +2148,7 @@ Post-Condition & Data are stored in the database, and the screen is closed.  \\\
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 26: Edit Payment}
+\section{Use Case 26: Edit Expenses}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U26   \\\hline
 Name  &  Edit Payment \\ \hline
@@ -2202,33 +2202,44 @@ Post-Condition & Data are updated in the database, and the screen is closed.  \\
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 16(Order Status) }
+\section{Use Case 27:Ready the Incoming Order}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U16 \\\hline
 
-Name  	    &  Order Status \\ \hline
-
-Actor     	&  CEO, Employee, Shopkeeper, Warehouse Manager \\ \hline
-
-Description & From the Order Details, you are able to view the status of the order whether it is pending, in progress or completed/delivered. This will allow the concerned user to track progress details about specific order.   \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-023 OrderStatus@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  Order Details Form should open \\ \hline
-
+Use Case ID &  U27 \\\hline
+Name  	    &  Ready the Incoming Order \\ \hline
+Actor     	& Warehouse Manager \\ \hline
+Description  & Order after confirmation from the employee, now move toward the warehouse manager for the ordered items to be ready for delivery. After confirmation by the warehouse manager that order is ready, the rider will be notified. Now the rider can pick it up.\\ \hline
+Pre-Condition & Order has been confirmed by the employee. And the warehouse manager gets notified. \\ \hline
 Flow & Main Scenario:
-
 \begin{enumerate}
-\item   From Orders List Click on Check Status.
-\item   A new Form Order Status will open
+\item View Orders Details screen will be presented with the order status of products confirmed.
+
+\item Actor clicks on the Ready Button.
+
+\item Actor confirms the order status has been set ready.
+
+\item Email now will send email to the assigned rider and employee.
+
 \end{enumerate}
+Extensions (or Alternative Flows):\\
+
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
 
 \\ \hline
-Post-Condition &  You can now track the progress of your order   \\ \hline
+
+Post-Condition &  Order is ready now, and the rider can pick it up.\\ \hline
 
 \end{tabular}
+
+
 %------------------------------------------
 \section{Use Case 17(Route Finder)}
 
