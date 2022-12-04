@@ -2027,7 +2027,7 @@ Post-Condition & Actor click on the next button to add warehouse manager.  \\\hl
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 23: Add Shop and Shopkeeper}
+\section{Use Case 24: Update Shop and Shopkeeper}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U23   \\\hline
 Name  &  Add Shop and Shopkeeper \\ \hline
@@ -2202,260 +2202,133 @@ Post-Condition & Data are updated in the database, and the screen is closed.  \\
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 16(Order Status) }
+\section{Use Case 27:Ready the Incoming Order}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U16 \\\hline
 
-Name  	    &  Order Status \\ \hline
-
-Actor     	&  CEO, Employee, Shopkeeper, Warehouse Manager \\ \hline
-
-Description & From the Order Details, you are able to view the status of the order whether it is pending, in progress or completed/delivered. This will allow the concerned user to track progress details about specific order.   \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-023 OrderStatus@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  Order Details Form should open \\ \hline
-
+Use Case ID &  U27 \\\hline
+Name  	    &  Ready the Incoming Order \\ \hline
+Actor     	& Warehouse Manager \\ \hline
+Description  & Order after confirmation from the employee, now move toward the warehouse manager for the ordered items to be ready for delivery. After confirmation by the warehouse manager that order is ready, the rider will be notified. Now the rider can pick it up.\\ \hline
+Pre-Condition & Order has been confirmed by the employee. And the warehouse manager gets notified. \\ \hline
 Flow & Main Scenario:
-
 \begin{enumerate}
-\item   From Orders List Click on Check Status.
-\item   A new Form Order Status will open
+\item View Orders Details screen will be presented with the order status of products confirmed.
+
+\item Actor clicks on the Ready Button.
+
+\item Actor confirms the order status has been set ready.
+
+\item Email now will send email to the assigned rider and employee.
+
 \end{enumerate}
+Extensions (or Alternative Flows):\\
+
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
 
 \\ \hline
-Post-Condition &  You can now track the progress of your order   \\ \hline
+
+Post-Condition &  Order is ready now, and the rider can pick it up.\\ \hline
 
 \end{tabular}
+
+
 %------------------------------------------
-\section{Use Case 17(Route Finder)}
+\section{Use Case 28:Accomplish the Order}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Use Case ID &  U17 \\\hline
+Use Case ID &  U28 \\\hline
 
-Name  	    & Route Finder  \\ \hline
+Name  	    &  Accomplish the Order \\ \hline
 
 Actor     	& Rider \\ \hline
 
-Description & After the successful acceptance of certain order from warehouse, now rider has to select the best and the shortest path or route to the destination so his miscellaneous expenses (e.g., fuel) should be less. This allows him to select the shortest route. But he has been shown all possible routes.   \\ \hline
+Description  & Rider has reached the respective shop and delivered the order. Now he will set the order status completed. Click on the View Orders button, and a View Order Details screen will be presented. Click on the complete order button. The corresponding order will be set as completed. \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-024 Route Finder@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  Select Find Route from Rider’s Dashboard \\ \hline
-
+Pre-Condition & Rider has delivered the order successfully. The rider clicks on the view order option.  \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Route Find Form will open
-\item   Fill Source Address
-\item   Fill Destination Address
-\item   Select Find
 
-
+\item View Order Details screen will be presented.
+\item Actor will set the order status as "Completed."
+\item Actor confirms the order status has been set to complete.
+\item Email now will send email to the assigned employee and CEO.
 \end{enumerate}
-\\ \hline
-Post-Condition &  You will be shown all the possible routes from source to destination   \\ \hline
 
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Order is deleivered sucessfully.\\ \hline
 \end{tabular}
+
 %------------------------------------------
-\section{Use Case 18(Add Shopkeeper)}
+\section{Use Case 29: Plot the Minimum Spanning Tree for Multiple Shops}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID &  U29 \\\hline
 
-Use Case ID & U18  \\\hline
+Name  	    &  Plot the Minimum Spanning Tree for Multiple Shops \\ \hline
 
-Name  	    &  Add Shopkeeper \\ \hline
-
-Actor     	& Rider, CEO, Employee \\ \hline
-
-Description & Rider will approach the shopkeeper. If shopkeeper is not registered with the system before, the rider will register him first if the shopkeeper orders something. Second scenario may be the CEO and Employee both have the authority to add shopkeeper details what the rider would give them   \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-025 Add ShopKeeper@1x.png}\end{center}  \\ \hline
-
-Pre-Condition & Select Add Shopkeeper from CEO’s, Rider’s, or Employee’s Dashboard  \\ \hline
-
-
-Flow & Main Scenario:
-
-\begin{enumerate}
-\item   Select Appropriate Designation
-\item  Fill all necessary details with the shop details as well
-\item  Click Add button
-
-
-\end{enumerate}
-
-Alternate Flow:
-
-\begin{itemize}
-\item Clicking Clear Button
-	\begin{enumerate}
-		\item Will clear all the fields you have filled
-	\end{enumerate}
-\item 	Clicking Close Button
-	\begin{enumerate}
-	   	 \item	Will happen to return to the respective/corresponding dashboard
-	\end{enumerate}
-\item If all necessary field are not filled
-	\begin{enumerate}
-		\item Alert Message will occur
-		\item Control will remain on the same page
-	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &  Shopkeeper Information will be added to your system   \\ \hline
-
+Actor     	& Rider \\ \hline
 \end{tabular}
-%------------------------------------------
-\section{Use Case 19(Add Payment) }
-
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID &  U19 \\\hline
-
-Name  	    & Add  Payment  \\ \hline
-
-Actor     	& Rider, Employee, CEO \\ \hline
-
-Description & Rider will approach the shopkeeper. Took Payment from the shopkeeper and add it into the system. \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-026 Add Payment@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  Select Add Payment from Rider’s Dashboard(Shopkeeper Must be registered first) \\ \hline
-
-\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
-Flow & Main Scenario:
-
-\begin{enumerate}
-\item   Payment Form will open
-\item   Select Shop Name (it should be registered first)
-\item   Add Deposit Amount and Confirm
-\item   Click Add
-
-
+Description &     Whenever rider status changes(to "On the way"), a spanning tree will be  generated between warehouse and shopkeeper's Locations. Rider can veiw the route between two locations by clicking on the new route button.
+ Data structures used in it are:\\
+&\begin{enumerate}
+   \item Graph
+   \item BST 
 \end{enumerate}
-
-Alternate Flow:
-
-\begin{itemize}
-\item 	Clicking Clear Button
-	\begin{enumerate}
-		\item Will clear all the fields you have filled
-	\end{enumerate}
-\item Clicking Close Button
-	\begin{enumerate}
-	   	 \item	Will happen to return to the respective/corresponding dashboard
-	\end{enumerate}
-\item If deposit amount and Retype Deposit Amount are not same
-	\begin{enumerate}
-		\item Error Message will occur
-		\item System will return to the same page after clicking on OK button
-	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &   Payment will be accepted for the selected shopkeeper  \\ \hline
-
-\end{tabular}
-%------------------------------------------
-\section{Use Case 20(Withdraw Expenses) }
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID & U20  \\\hline
-
-Name  	    &  Withdraw Expenses \\ \hline
-
-Actor     	&  CEO \\ \hline
-
-Description & --- \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-027 Add Withdraw Expenses@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &   \\ \hline
-
-\end{tabular} \newpage \begin{tabular}{ | m{3cm} | m{12cm}| }  \hline
-Flow & Main Scenario:
-
-\begin{enumerate}
-\item   Payment Form will open
-\item Select Payment Type
-\item Type Withdraw Amount and Retype it in the next box
-\item Click Add
-
-
+Algorithems used for making Minimum spanning tree is: \\
+&\begin{enumerate}
+   \item Greedy Algorithems
 \end{enumerate}
+Rider can view the shortest route of his destination one by one. As one order is accomplished the rider's location will be updated. Now he can view the shortest path towards his second destination.
+\\
+\hline
 
-Alternate Flow:
-
-\begin{itemize}
-\item Clicking Clear Button
-	\begin{enumerate}
-		\item Will clear all the fields you have filled
-	\end{enumerate}
-\item Clicking Close Button
-	\begin{enumerate}
-	   	 \item	Will happen to return to the respective/corresponding dashboard
-	\end{enumerate}
-\item If Withdraw amount and Retype Withdraw Amount are not same
-	\begin{enumerate}
-		\item Error Message will occur
-		\item System will return to the same page after clicking on OK button
-	\end{enumerate}
-\end{itemize}
-\\ \hline
-Post-Condition &    \\ \hline
-
-\end{tabular}
-%------------------------------------------
-
-\section{Use Case 21(Create Account)}
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Use Case ID &  U21 \\\hline
-
-Name  	    & Create Account  \\ \hline
-
-Actor     	& All \\ \hline
-
-Description & All actors can link with the system by creating account and register themselves for this system. Provide Necessary Information and you can dive into the system by logging into the system. \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-004 Create Account@1x.png}\end{center}  \\ \hline
-
-Pre-Condition &  System Will Initiate with this page \\ \hline
-
+Pre-Condition &  Rider is ready to deliver the order.  \\ \hline
 
 Flow & Main Scenario:
 
 \begin{enumerate}
-\item   Select Your Designation
-\item  Provide All Necessary Details
-\item  Click on Create Account
-
-
+\item View Route Screen is presented.
+\item Now he can view the shortest path towards his destination.
 \end{enumerate}
 
 \\ \hline
-Post-Condition &  You are now the user of this system  \\ \hline
+
+Post-Condition &  Rider reached his destination. \\ \hline
 
 \end{tabular}
 %------------------------------------------
+%--------------User Interface ----------------------------
 \newpage
-\chapter {Use Interfaces}
+\chapter {User Interfaces}
 \section{Intro}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID & I01  \\\hline
 
-Name  	      & Intro  \\ \hline
+Name  	      & Introduction  \\ \hline
 
 Linked Use Case & NULL \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-001 Intro@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-001 Intro@1x.png}\end{center}  \\ \hline
 \end{tabular} 
 %------------------------------------------
 \section{Login}
@@ -2468,7 +2341,7 @@ Name  	      & Login  \\ \hline
 
 Linked Use Case & U01 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-002 Login@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-002 Login@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2488,9 +2361,9 @@ Interface ID &  103 \\\hline
 
 Name  	      & Forgot Password  \\ \hline
 
-Linked Use Case &  \\ \hline
+Linked Use Case & U02 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-003 Forgot password@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-003 Forgot password@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2502,17 +2375,17 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{Create Account }
+\section{SignUp}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID &   104 \\\hline
 
-Name  	      &   Create Account\\ \hline
+Name  	      &   SignUp\\ \hline
 
-Linked Use Case &  U21\\ \hline
+Linked Use Case &  U05\\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-004 Create Account@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-004a Create Account Except Rider@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2529,17 +2402,17 @@ Validators &
 \end{tabular} 
 %------------------------------------------
 
-\section{Update Information}
+\section{Update Account Information (CEO)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID &  I05 \\\hline
 
-Name  	      &  Update Information \\ \hline
+Name  	      &  Update Account Information (CEO) \\ \hline
 
-Linked Use Case &  \\ \hline
+Linked Use Case & U03 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-005 Update Account@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2555,17 +2428,71 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{Account Detail }
+%------------------------------------------
+
+\section{Update Account Information (Employee)}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID &  I06 \\\hline
 
-Name  	      &  Account Detail \\ \hline
+Name  	      &  Update Account Information (Employee) \\ \hline
 
-Linked Use Case & U04 \\ \hline
+Linked Use Case & U06 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-006 ViewsAndDelete Account@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   New Password and Confirmation password must be the same
+\item CNIC must be of 13 digits
+\item Contact Number must be of 11 digits
+\item All Information must be provided before account creation
+\item Email Validations
+
+
+\end{itemize}
+\\ \hline
+
+\end{tabular} 
+%------------------------------------------
+\section{Account Detail (CEO) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID &  I07 \\\hline
+
+Name  	      &  Account Detail (CEO) \\ \hline
+
+Linked Use Case & U06 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-006 ViewAndDelete Account@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   On clicked delete and edit button there is must to select any column first from grid list. 
+\item  Filters must be applied before clicking Go
+
+
+\end{itemize}
+\\ \hline
+
+\end{tabular} 
+%------------------------------------------
+%------------------------------------------
+\section{Account Detail (Employee) }
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID &  I08 \\\hline
+
+Name  	      &  Account Detail (Employee) \\ \hline
+
+Linked Use Case & U07 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-006 ViewAndDelete Account@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2582,13 +2509,11 @@ Validators &
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID &  I07 \\\hline
+Interface ID &  I09 \\\hline
 
 Name  	      & CEO Dashboard  \\ \hline
 
-Linked Use Case & U03 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-007 CEO Dashboard@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-007 CEO Dashboard@1x.png}\end{center}  \\ \hline
 
 \end{tabular} 
 %------------------------------------------
@@ -2596,42 +2521,14 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs fo
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
-Interface ID & I08  \\\hline
+Interface ID & I10  \\\hline
 
 Name & Add Product  \\ \hline
 
-Linked Use Case & U06	 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-008 Add Product@1x.png}\end{center}  \\ \hline
-
-Validators & 
-\begin{itemize}
-\item   Product Name must contain only Digits and alphabets.
-\item Cost Price must not be negative.
-\item The date must be positive. And not previous than current.
-\item Quantity must be positive. And not in decimals.
-\item Rating must be positive and integer.
-\item SKU-ID must be positive.
-\item Weight and Volume must be in integers and decimals and positive.
-\item IN Stock check box must be filled.
+Linked Use Case & U08	 \\ \hline
 
 
-\end{itemize}
-\\ \hline
-
-\end{tabular} 
-%------------------------------------------
-\section{Update Product }
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Interface ID & I09  \\\hline
-
-Name  &  Update Product \\ \hline
-
-Linked Use Case & U08	  \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-009 Update Product@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-008 Add Product@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2650,40 +2547,48 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{Product Detail }
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Interface ID &  I10 \\\hline
-
-Name  &  Product Detail \\ \hline
-
-Linked Use Case & U07	 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-010 ViewAndDelete Products@1x.png}\end{center}  \\ \hline
-
-Validators & 
-\begin{itemize}
-\item   On clicked delete and edit button there is must to select any column first from grid list. 
-\item  Filters must be applied before clicking Go.
-
-
-\end{itemize}
-\\ \hline
-
-\end{tabular} 
-%------------------------------------------
-\section{Order Product}
+\section{Update Product Record}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID & I11  \\\hline
 
-Name  &  Order Product \\ \hline
+Name  &  Update Product Record \\ \hline
 
-Linked Use Case & U11	 \\ \hline
+Linked Use Case & U09	  \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-011 Order Product@1x.png}\end{center}  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-009 Update Product Record@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Product Name must contain only Digits and alphabets.
+\item Cost Price must not be negative.
+\item The date must be positive. And not previous than current.
+\item Quantity must be positive. And not in decimals.
+\item Rating must be positive and integer.
+\item SKU-ID must be positive.
+\item Weight and Volume must be in integers and decimals and positive.
+\item IN Stock check box must be filled.
+
+
+\end{itemize}
+\\ \hline
+
+\end{tabular} 
+%------------------------------------------
+%------------------------------------------
+\section{Take Order}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+Interface ID & I12 \\\hline
+
+Name  &  Take Order \\ \hline
+
+Linked Use Case & U19	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-011 Order Product@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2697,42 +2602,16 @@ Search text only contains alphabets and integers only.
 
 \end{tabular} 
 %------------------------------------------
-\section{Order Summary}
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
-Interface ID & I12  \\\hline
-
-Name  & Order Summary  \\ \hline
-
-Linked Use Case & U11 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-012 Order Summery@1x.png}\end{center}  \\ \hline
-
-Validators & 
-\begin{itemize}
-\item   Street No. must be integer
-\item   Contact No. must be of 11 digits
-\item   Delivery time must be a number may be float or integer
-\item   All fields must be typed before buying products
-
-
-\end{itemize}
-\\ \hline
-
-\end{tabular} 
 %------------------------------------------
-\section{Send Email }
+\section{Email }
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID & I13  \\\hline
 
-Name  &  Send Email \\ \hline
+Name  & Email \\ \hline
 
-Linked Use Case & U12 \\ \hline
-
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-013 SendEmail@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-012 SendEmail@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -2745,17 +2624,19 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{New Warehouse}
+\section{Add Warehouse}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID &  I14 \\\hline
 
-Name  & New Warehouse  \\ \hline
+Name  & Add Warehouse  \\ \hline
 
-Linked Use Case & U13	 \\ \hline
+Linked Use Case & U16	 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-014 AddWarehouse@1x.png}\end{center}  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-013 AddWarehouse@1x.png}\end{center}  \\ \hline
+
 
 Validators & 
 \begin{itemize}
@@ -2768,17 +2649,17 @@ Validators &
 
 \end{tabular} 
 %------------------------------------------
-\section{Update Warehouse }
+\section{Update Warehouse Record}
 
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 
 Interface ID & I15  \\\hline
 
-Name  &  Update Warehouse \\ \hline
+Name  &  Update Warehouse Record \\ \hline
 
-Linked Use Case & U15 \\ \hline
+Linked Use Case & U17 \\ \hline
 
-UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./UIs for Latex Reports/UI-015 EditWarehouse@1x.png}\end{center}  \\ \hline
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-014 EditWarehouse@1x.png}\end{center}  \\ \hline
 
 Validators & 
 \begin{itemize}
@@ -3103,23 +2984,24 @@ The classes which are used in the project are as under with there specific prope
 
 \textbf {Class Name} & \textbf{ Software/ Domain }&\textbf {Is Abstract (Yes/No)}\\ \hline
  CEO 		&Domain			&No\\ \hline
-Company		&Domain			&No\\ \hline
-Office		&Domain			&No\\ \hline
-WareHouse	&Domain			&No\\ \hline
-User		&Domain			&No\\ \hline
-Rider		&Domain			&No\\ \hline
-Employee  	&Domain			&No\\ \hline
-WareHouseManager&Domain		&No\\ \hline
-ShopOwner 	&Domain			&No\\ \hline
-Shop	  	&Domain			&No\\ \hline
-Ledger	  	&Domain			&No\\ \hline
-Order		&Domain			&No\\ \hline
-Product		&Domain			&No\\ \hline
-Vehicle		&Domain			&No\\ \hline
-Stack		&Software		&No\\ \hline
-Queue		&Software		&No\\ \hline
-Linked List	&Software		&No\\ \hline
-Binary Search Tree&Software	&No\\ \hline
+ Company		&Domain			&No\\ \hline
+ Office		&Domain			&No\\ \hline
+ WareHouse	&Domain			&No\\ \hline
+ User		&Domain			&No\\ \hline
+ Rider		&Domain			&No\\ \hline
+ Employee  	&Domain			&No\\ \hline
+ WareHouseManager&Domain		&No\\ \hline
+ ShopOwner 	&Domain			&No\\ \hline
+ Shop	  	&Domain			&No\\ \hline
+ Ledger	  	&Domain			&No\\ \hline
+ Order		&Domain			&No\\ \hline
+ Product		&Domain			&No\\ \hline
+ Vehicle		&Domain			&No\\ \hline
+ Stack		&Software		&No\\ \hline
+ Queue		&Software		&No\\ \hline
+ Linked List	&Software		&No\\ \hline
+ Binary Search Tree&Software	&No\\ \hline
+ Spanning Tree  &Software		&No\\  \hline
 \end{tabular}
 \end{center}
 %----------------------------
@@ -3128,14 +3010,14 @@ Binary Search Tree&Software	&No\\ \hline
  \hline
 
 \textbf{ Class Name} &\textbf{ Is Singleton (Yes/No)} &\textbf {Is the class will has parametrized constructor(Yes/No)}\\ \hline
- CEO 		&Yes	&Yes \\\hline
+CEO 		&Yes	&Yes \\\hline
 Company		&Yes	&Yes \\\hline
 Office		&Yes	&Yes \\\hline
-WareHouse	&No		&Yes \\\hline
+WareHouse	&Yes		&Yes \\\hline
 User		&No		&Yes \\\hline
 Rider		&No		&Yes \\\hline
 Employee  	&No		&Yes \\\hline
-WareHouse Manger  &No		&Yes\\ \hline
+WareHouse Manger  &Yes		&Yes\\ \hline
 ShopOwner 	&No		&Yes\\ \hline
 Shop	  	&No		&Yes \\ \hline
 Ledger	  	&Yes	&Yes \\ \hline
@@ -3146,6 +3028,7 @@ Stack		&No		&Yes \\ \hline
 Queue		&No		&Yes \\ \hline
 Linked List	&No		&Yes \\ \hline
 Binary Search Tree  &No		&Yes\\  \hline
+Spanning Tree  &No		&Yes\\  \hline
 \end{tabular}
 \end{center}
 %------------------------------------
@@ -3292,15 +3175,119 @@ Columns data names are
 \item Desigination 
 \end{enumerate}
 
-\newpage
-\chapter {Email Sending}
-At first
+\section{Orders (CSV)}
+Columns data names are
 \begin{enumerate}
-\item Rider will email the employee about the order of shopkeeper
-\item Employee email warehouse manager to ready the shipment for rider
-\item Rider will email the Employee and Shopkeeper that he has picked the order and cc to CEO.
+\item Product Title
+\item Quantity
+\item Shopkeeper Name
+\item Shopkeeper Contact 
+\item Rider Name 
+\item Location 
+\item Order Status
+\item Order 
 \end{enumerate}
 
+\section{Sale Products (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Sale-Date    
+\item Name
+\item Cost
+\item Retail price
+\item Expiry Date
+\item Quantity
+\item In date 
+\item Out date
+\item Manufacturer 
+\item ID
+\item Weight
+\item Volume
+\item Category
+\item Sensitivity
+\item In stock
+\item Rating
+\item Warehouse Hold ID
+\end{enumerate}
+
+\section{Category (CSV)}
+Columns data names are
+\begin{enumerate} 
+\item Name
+\end{enumerate}
+
+\section{Vendors (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Name
+\item LandLine
+\item Concered Person 
+\item Contact Number
+\end{enumerate}
+
+\section{Vehicles (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Type
+\item Volume Capcity
+\item Weight Capcity 
+\item Registeration Number
+\end{enumerate}
+
+
+\section{Payment Records (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Type 
+\item Date
+\item Amount 
+\item Reciever  
+\item Payment By  
+\item Mode 
+\item Description 
+\end{enumerate}
+
+\newpage
+\chapter {Email Sending}
+\begin{enumerate}
+\item When Rider registers the Shopkeeper.
+ \begin{enumerate}
+    \item An Email is send to the Employee.
+    \item An Email is send to the Shopkeeper.
+ \end{enumerate}
+
+\item When Rider takes and add the order from the Shopkeeper.
+ \begin{enumerate}
+    \item An Email is send to the Employee.
+    \item An Email is send to the Shopkeeper.
+ \end{enumerate}
+
+\item When Employee assigns order to the Rider.
+ \begin{enumerate}
+    \item An Email is send to the Rider
+    \item An Email is send to the WareHouse Manager.
+ \end{enumerate}
+
+ \item When Rider adds payment from the Shopkeeper.
+ \begin{enumerate}
+    \item An Email is send to the Employee.
+    \item An Email is send to the Rider.
+ \end{enumerate}
+ 
+ \item When Stock from the Vendor added.
+ \begin{enumerate}
+    \item An Email is send to the Vendor
+    \item An Email is send to the Employee.
+ \end{enumerate}
+
+ \item When WareHouseManager ready the order.
+ \begin{enumerate}
+    \item An Email is send to the Rider
+    \item An Email is send to the Employee.
+ \end{enumerate}
+
+
+\end{enumerate}
 \newpage
 \chapter {Project Plan}
 \begin{tabular}{ | m{2cm} | m{4cm}|| m{3cm}|} \hline
@@ -3313,15 +3300,16 @@ At first
 
 \newpage
 \chapter {Analytical Reports}
-In our project, we can use the analytical reports
+In our project, we will use these analytical reports:
 \begin{enumerate}
 \item Salary Report  
 \item Rider Capture Order Report 
 \item Profit Report 
-\item Sold Products
-
-
+\item Sold Products Report
+\item Daily Stock Report 
+\item Expenditure Report
 \end{enumerate}
+
 
 
 \end{document}

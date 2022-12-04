@@ -45,41 +45,39 @@
 \contentsline {section}{\numberline {6.10}Add Product }{67}{}%
 \contentsline {section}{\numberline {6.11}Update Product Record}{68}{}%
 \contentsline {section}{\numberline {6.12}Take Order}{69}{}%
-\contentsline {section}{\numberline {6.13}Send Email }{70}{}%
-\contentsline {section}{\numberline {6.14}New Warehouse}{71}{}%
-\contentsline {section}{\numberline {6.15}Update Warehouse }{72}{}%
+\contentsline {section}{\numberline {6.13}Email }{70}{}%
+\contentsline {section}{\numberline {6.14}Add Warehouse}{71}{}%
+\contentsline {section}{\numberline {6.15}Update Warehouse Record}{72}{}%
 \contentsline {section}{\numberline {6.16}Warehouse Detail }{73}{}%
 \contentsline {section}{\numberline {6.17}Warehouse Manager Dashboard }{74}{}%
 \contentsline {section}{\numberline {6.18}Employee Dashboard }{74}{}%
 \contentsline {section}{\numberline {6.19}Rider Dashboard }{75}{}%
-\contentsline {section}{\numberline {6.20}Add Rider }{76}{}%
-\contentsline {section}{\numberline {6.21}Update Rider }{77}{}%
-\contentsline {section}{\numberline {6.22}Order Status }{78}{}%
-\contentsline {section}{\numberline {6.23}Order Status }{79}{}%
-\contentsline {section}{\numberline {6.24}Shopkeeper Record }{80}{}%
-\contentsline {section}{\numberline {6.25}Add Payment }{81}{}%
-\contentsline {section}{\numberline {6.26}Withdraw Expenses }{82}{}%
-\contentsline {chapter}{\numberline {7}User Interface Details }{83}{}%
-\contentsline {chapter}{\numberline {8}Classes}{86}{}%
-\contentsline {chapter}{\numberline {9}Object Oriented Features}{88}{}%
-\contentsline {section}{\numberline {9.1}Composition}{88}{}%
-\contentsline {section}{\numberline {9.2}Inheritance}{88}{}%
-\contentsline {section}{\numberline {9.3}Multi-Level Inheritance}{89}{}%
-\contentsline {section}{\numberline {9.4}Aggregation}{89}{}%
-\contentsline {section}{\numberline {9.5}Association}{89}{}%
-\contentsline {chapter}{\numberline {10}Detailed Object Oriented Design}{90}{}%
-\contentsline {chapter}{\numberline {11}Data Structure}{92}{}%
-\contentsline {chapter}{\numberline {12}Exceptions}{95}{}%
-\contentsline {chapter}{\numberline {13}Data Storage}{96}{}%
-\contentsline {section}{\numberline {13.1}Mails (CSV)}{96}{}%
-\contentsline {section}{\numberline {13.2}Products (CSV)}{96}{}%
-\contentsline {section}{\numberline {13.3}Users (CSV)}{97}{}%
-\contentsline {section}{\numberline {13.4}Orders (CSV)}{97}{}%
-\contentsline {section}{\numberline {13.5}Sale Products (CSV)}{98}{}%
-\contentsline {section}{\numberline {13.6}Category (CSV)}{99}{}%
-\contentsline {section}{\numberline {13.7}Vendors (CSV)}{99}{}%
-\contentsline {section}{\numberline {13.8}Vehicles (CSV)}{99}{}%
-\contentsline {section}{\numberline {13.9}Payment Records (CSV)}{99}{}%
-\contentsline {chapter}{\numberline {14}Email Sending}{100}{}%
-\contentsline {chapter}{\numberline {15}Project Plan}{101}{}%
-\contentsline {chapter}{\numberline {16}Analytical Reports}{102}{}%
+\contentsline {section}{\numberline {6.20}Order Status }{75}{}%
+\contentsline {section}{\numberline {6.21}Order Status }{76}{}%
+\contentsline {section}{\numberline {6.22}Shopkeeper Record }{77}{}%
+\contentsline {section}{\numberline {6.23}Add Payment }{78}{}%
+\contentsline {section}{\numberline {6.24}Withdraw Expenses }{79}{}%
+\contentsline {chapter}{\numberline {7}User Interface Details }{80}{}%
+\contentsline {chapter}{\numberline {8}Classes}{83}{}%
+\contentsline {chapter}{\numberline {9}Object Oriented Features}{85}{}%
+\contentsline {section}{\numberline {9.1}Composition}{85}{}%
+\contentsline {section}{\numberline {9.2}Inheritance}{85}{}%
+\contentsline {section}{\numberline {9.3}Multi-Level Inheritance}{86}{}%
+\contentsline {section}{\numberline {9.4}Aggregation}{86}{}%
+\contentsline {section}{\numberline {9.5}Association}{86}{}%
+\contentsline {chapter}{\numberline {10}Detailed Object Oriented Design}{87}{}%
+\contentsline {chapter}{\numberline {11}Data Structure}{89}{}%
+\contentsline {chapter}{\numberline {12}Exceptions}{92}{}%
+\contentsline {chapter}{\numberline {13}Data Storage}{93}{}%
+\contentsline {section}{\numberline {13.1}Mails (CSV)}{93}{}%
+\contentsline {section}{\numberline {13.2}Products (CSV)}{93}{}%
+\contentsline {section}{\numberline {13.3}Users (CSV)}{94}{}%
+\contentsline {section}{\numberline {13.4}Orders (CSV)}{94}{}%
+\contentsline {section}{\numberline {13.5}Sale Products (CSV)}{95}{}%
+\contentsline {section}{\numberline {13.6}Category (CSV)}{96}{}%
+\contentsline {section}{\numberline {13.7}Vendors (CSV)}{96}{}%
+\contentsline {section}{\numberline {13.8}Vehicles (CSV)}{96}{}%
+\contentsline {section}{\numberline {13.9}Payment Records (CSV)}{96}{}%
+\contentsline {chapter}{\numberline {14}Email Sending}{97}{}%
+\contentsline {chapter}{\numberline {15}Project Plan}{98}{}%
+\contentsline {chapter}{\numberline {16}Analytical Reports}{99}{}%
