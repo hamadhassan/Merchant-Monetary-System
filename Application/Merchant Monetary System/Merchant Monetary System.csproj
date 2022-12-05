@@ -46,22 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmIntroduction.cs">
+    <Compile Include="Forms\frmAddCompnay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIntroduction.Designer.cs">
+    <Compile Include="Forms\frmAddCompnay.Designer.cs">
+      <DependentUpon>frmAddCompnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntroduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntroduction.Designer.cs">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSignUp.cs">
+    <Compile Include="Forms\frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSignUp.Designer.cs">
+    <Compile Include="Forms\frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmViewAndDeleteAccount.cs">
+    <Compile Include="Forms\frmViewAndDeleteAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewAndDeleteAccount.Designer.cs">
+    <Compile Include="Forms\frmViewAndDeleteAccount.Designer.cs">
       <DependentUpon>frmViewAndDeleteAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -72,13 +78,16 @@
     <Compile Include="UpdateUser_form.Designer.cs">
       <DependentUpon>UpdateUser_form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmIntroduction.resx">
+    <EmbeddedResource Include="Forms\frmAddCompnay.resx">
+      <DependentUpon>frmAddCompnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIntroduction.resx">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSignUp.resx">
+    <EmbeddedResource Include="Forms\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewAndDeleteAccount.resx">
+    <EmbeddedResource Include="Forms\frmViewAndDeleteAccount.resx">
       <DependentUpon>frmViewAndDeleteAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

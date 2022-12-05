@@ -16,5 +16,12 @@ namespace Merchant_Monetary_System
         {
             InitializeComponent();
         }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            timer.Enabled = false;
+            frmSignUp frmSignUp = new frmSignUp();
+            frmSignUp.Show();
+            this.Hide();
+        }
     }
 }

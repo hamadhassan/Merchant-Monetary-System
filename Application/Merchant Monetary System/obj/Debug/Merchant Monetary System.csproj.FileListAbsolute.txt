@@ -10,3 +10,6 @@ D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term P
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.pdb
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmIntroduction.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmSignUp.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewAndDeleteAccount.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.UpdateUser_form.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddCompnay.resources

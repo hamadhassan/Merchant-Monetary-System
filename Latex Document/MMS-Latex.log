@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  4 DEC 2022 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  4 DEC 2022 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -467,6 +467,11 @@ Overfull \hbox (61.9913pt too wide) in paragraph at lines 1961--2029
  []
 
 [47] [48]
+Overfull \hbox (15.80577pt too wide) in paragraph at lines 2029--2029
+[]\OT1/cmr/bx/n/17.28 Use Case 24:Up-date Shop and Shop-keeper 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 2035--2035
 []|\OT1/cmr/m/n/12 The pre-
  []
@@ -1431,7 +1436,7 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Use
 rs/Hammad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi12.pfb><C:/Users/Hammad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb>
-Output written on MMS-Latex.pdf (118 pages, 932297 bytes).
+Output written on MMS-Latex.pdf (118 pages, 932242 bytes).
 PDF statistics:
  470 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
