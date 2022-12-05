@@ -39,9 +39,9 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNameSignal = new System.Windows.Forms.Label();
             this.lblContactNumberSignal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNameSignal = new System.Windows.Forms.Label();
+            this.lblAddressSignal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,8 @@
             this.txtbxContactNumber.Name = "txtbxContactNumber";
             this.txtbxContactNumber.Size = new System.Drawing.Size(203, 26);
             this.txtbxContactNumber.TabIndex = 10;
+            this.txtbxContactNumber.Text = " ";
+            this.txtbxContactNumber.TextChanged += new System.EventHandler(this.txtbxContactNumber_TextChanged);
             // 
             // lblContactNumber
             // 
@@ -90,20 +92,22 @@
             // 
             // rtxtbxAddress
             // 
+            this.rtxtbxAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtbxAddress.Location = new System.Drawing.Point(223, 184);
             this.rtxtbxAddress.Name = "rtxtbxAddress";
             this.rtxtbxAddress.Size = new System.Drawing.Size(602, 78);
             this.rtxtbxAddress.TabIndex = 12;
             this.rtxtbxAddress.Text = "";
+            this.rtxtbxAddress.TextChanged += new System.EventHandler(this.rtxtbxAddress_TextChanged);
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Location = new System.Drawing.Point(82, 184);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(123, 20);
+            this.lblAddress.Size = new System.Drawing.Size(76, 20);
             this.lblAddress.TabIndex = 11;
-            this.lblAddress.Text = "Home Address :";
+            this.lblAddress.Text = "Address :";
             // 
             // btnCreateAccount
             // 
@@ -149,7 +153,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblAddressSignal);
             this.groupBox1.Controls.Add(this.lblContactNumberSignal);
             this.groupBox1.Controls.Add(this.lblNameSignal);
             this.groupBox1.Controls.Add(this.btnCreateAccount);
@@ -165,16 +169,6 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
-            // lblNameSignal
-            // 
-            this.lblNameSignal.AutoSize = true;
-            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNameSignal.Location = new System.Drawing.Point(211, 152);
-            this.lblNameSignal.Name = "lblNameSignal";
-            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblNameSignal.TabIndex = 17;
-            this.lblNameSignal.Text = ".";
-            // 
             // lblContactNumberSignal
             // 
             this.lblContactNumberSignal.AutoSize = true;
@@ -183,16 +177,27 @@
             this.lblContactNumberSignal.Name = "lblContactNumberSignal";
             this.lblContactNumberSignal.Size = new System.Drawing.Size(13, 20);
             this.lblContactNumberSignal.TabIndex = 18;
-            this.lblContactNumberSignal.Text = ".";
+            this.lblContactNumberSignal.Text = " ";
             // 
-            // label2
+            // lblNameSignal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 253);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 20);
-            this.label2.TabIndex = 19;
-            this.label2.Text = ".";
+            this.lblNameSignal.AutoSize = true;
+            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblNameSignal.Location = new System.Drawing.Point(211, 152);
+            this.lblNameSignal.Name = "lblNameSignal";
+            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblNameSignal.TabIndex = 17;
+            this.lblNameSignal.Text = " ";
+            // 
+            // lblAddressSignal
+            // 
+            this.lblAddressSignal.AutoSize = true;
+            this.lblAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblAddressSignal.Location = new System.Drawing.Point(211, 253);
+            this.lblAddressSignal.Name = "lblAddressSignal";
+            this.lblAddressSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblAddressSignal.TabIndex = 20;
+            this.lblAddressSignal.Text = " ";
             // 
             // frmAddCompnay
             // 
@@ -229,8 +234,8 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblContactNumberSignal;
         private System.Windows.Forms.Label lblNameSignal;
+        private System.Windows.Forms.Label lblAddressSignal;
     }
 }

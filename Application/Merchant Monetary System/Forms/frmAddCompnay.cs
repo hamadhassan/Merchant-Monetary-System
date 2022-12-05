@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Merchant_Monetary_System
@@ -17,7 +18,9 @@ namespace Merchant_Monetary_System
         {
             InitializeComponent();
         }
-
+        bool isNameCorrect=true;
+        bool isContactNumberCorrect=true;
+        bool isAddressCorrect=true;
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -33,43 +36,80 @@ namespace Merchant_Monetary_System
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            if(txtbxName_TextChanged(sender, e))
-            {
-                MessageBox.Show("store data");
-            }
-            else
+            if (isNameCorrect == false && isContactNumberCorrect==false && isAddressCorrect==false)
             {
                 frmSignUp frmSignUp = new frmSignUp();
                 frmSignUp.Show();
                 this.Hide();
             }
-           
+            else
+            {
+                MessageBox.Show("All field must be filled correctly","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
 
-        private bool txtbxName_TextChanged(object sender, EventArgs e)
+        private void txtbxName_TextChanged(object sender, EventArgs e)
         {
             int i;
             if (txtbxName.Text == string.Empty)
-            {
+            {// check is empty
                 lblNameSignal.Text = "Enter the name";
-                return true;
+                isNameCorrect= true;
             }
             else if (int.TryParse(txtbxName.Text, out i))
-            {
+            {//Check isnumberic
                 lblNameSignal.Text = "Allowed characters: a-z, A-Z";
-                return true;
+                isNameCorrect = true;
             }
             else if(txtbxName.Text.Any(ch => !char.IsLetterOrDigit(ch)))
-            {
+            {//check isSpecialCharactor
                 lblNameSignal.Text = "Allowed characters: a-z, A-Z";
-                return true;
+                isNameCorrect = true;
             }
             else
-            {
+            {//ready for storage
                 lblNameSignal.Text = " ";
-                return false;
+                isNameCorrect = false;
             }
-            return false;
+        }
+
+        private void txtbxContactNumber_TextChanged(object sender, EventArgs e)
+        {
+            int i;
+            if (txtbxContactNumber.Text == string.Empty)
+            {// check is empty
+                lblContactNumberSignal.Text = "Enter the contact number";
+                isContactNumberCorrect = true;
+            }
+            else if (!int.TryParse(txtbxContactNumber.Text, out i))
+            {//Check isalphabetic
+                lblContactNumberSignal.Text = "Allowed characters: 0-9";
+                isContactNumberCorrect = true;
+            }
+            else if (txtbxContactNumber.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+            {//check isSpecialCharactor
+                lblContactNumberSignal.Text = "Allowed characters: 0-9";
+                isContactNumberCorrect = true;
+            }
+            else
+            {//ready for storage
+                lblContactNumberSignal.Text = " ";
+                isContactNumberCorrect = false;
+            }
+        }
+
+        private void rtxtbxAddress_TextChanged(object sender, EventArgs e)
+        {
+            if (rtxtbxAddress.Text == string.Empty)
+            {// check is empty
+                lblAddressSignal.Text = "Enter the address";
+                isAddressCorrect = true;
+            }
+            else
+            {//ready for storage
+                lblAddressSignal.Text = " ";
+                isAddressCorrect = false;
+            }
         }
     }
 }

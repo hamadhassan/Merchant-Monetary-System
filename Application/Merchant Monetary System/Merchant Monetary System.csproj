@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Compnay.cs" />
     <Compile Include="Forms\frmAddCompnay.cs">
       <SubType>Form</SubType>
     </Compile>
