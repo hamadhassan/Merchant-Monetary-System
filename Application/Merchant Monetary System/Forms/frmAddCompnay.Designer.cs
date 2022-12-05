@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAddCompany = new System.Windows.Forms.Label();
             this.txtbxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtbxContactNumber = new System.Windows.Forms.TextBox();
@@ -45,22 +45,22 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblAddCompany
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(331, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Add Company";
+            this.lblAddCompany.AutoSize = true;
+            this.lblAddCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddCompany.Location = new System.Drawing.Point(331, 22);
+            this.lblAddCompany.Name = "lblAddCompany";
+            this.lblAddCompany.Size = new System.Drawing.Size(244, 39);
+            this.lblAddCompany.TabIndex = 1;
+            this.lblAddCompany.Text = "Add Company";
             // 
             // txtbxName
             // 
             this.txtbxName.Location = new System.Drawing.Point(223, 137);
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.Size = new System.Drawing.Size(203, 26);
-            this.txtbxName.TabIndex = 3;
+            this.txtbxName.TabIndex = 0;
             this.txtbxName.TextChanged += new System.EventHandler(this.txtbxName_TextChanged);
             // 
             // lblName
@@ -77,7 +77,7 @@
             this.txtbxContactNumber.Location = new System.Drawing.Point(622, 137);
             this.txtbxContactNumber.Name = "txtbxContactNumber";
             this.txtbxContactNumber.Size = new System.Drawing.Size(203, 26);
-            this.txtbxContactNumber.TabIndex = 10;
+            this.txtbxContactNumber.TabIndex = 1;
             this.txtbxContactNumber.Text = " ";
             this.txtbxContactNumber.TextChanged += new System.EventHandler(this.txtbxContactNumber_TextChanged);
             // 
@@ -96,7 +96,7 @@
             this.rtxtbxAddress.Location = new System.Drawing.Point(223, 184);
             this.rtxtbxAddress.Name = "rtxtbxAddress";
             this.rtxtbxAddress.Size = new System.Drawing.Size(602, 78);
-            this.rtxtbxAddress.TabIndex = 12;
+            this.rtxtbxAddress.TabIndex = 2;
             this.rtxtbxAddress.Text = "";
             this.rtxtbxAddress.TextChanged += new System.EventHandler(this.rtxtbxAddress_TextChanged);
             // 
@@ -118,7 +118,7 @@
             this.btnCreateAccount.Location = new System.Drawing.Point(566, 308);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(200, 30);
-            this.btnCreateAccount.TabIndex = 14;
+            this.btnCreateAccount.TabIndex = 2;
             this.btnCreateAccount.Text = "Next";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
@@ -132,7 +132,7 @@
             this.btnClear.Location = new System.Drawing.Point(356, 308);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(200, 30);
-            this.btnClear.TabIndex = 16;
+            this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear All";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -146,7 +146,7 @@
             this.btnClose.Location = new System.Drawing.Point(140, 308);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 30);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -162,7 +162,7 @@
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Controls.Add(this.lblContactNumber);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblAddCompany);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(906, 516);
@@ -223,7 +223,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAddCompany;
         private System.Windows.Forms.TextBox txtbxName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtbxContactNumber;
