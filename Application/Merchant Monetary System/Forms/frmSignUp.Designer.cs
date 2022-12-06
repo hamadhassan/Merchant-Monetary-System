@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbx = new System.Windows.Forms.GroupBox();
+            this.lblHomeAddressSignal = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.lblVehicle = new System.Windows.Forms.Label();
             this.cmbxVehicle = new System.Windows.Forms.ComboBox();
@@ -66,7 +67,6 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.lblHomeAddressSignal = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,16 @@
             this.gbx.TabIndex = 0;
             this.gbx.TabStop = false;
             this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
+            // 
+            // lblHomeAddressSignal
+            // 
+            this.lblHomeAddressSignal.AutoSize = true;
+            this.lblHomeAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblHomeAddressSignal.Location = new System.Drawing.Point(619, 363);
+            this.lblHomeAddressSignal.Name = "lblHomeAddressSignal";
+            this.lblHomeAddressSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblHomeAddressSignal.TabIndex = 30;
+            this.lblHomeAddressSignal.Text = " ";
             // 
             // label20
             // 
@@ -249,6 +259,7 @@
             this.rtxtbxHomeAddress.Size = new System.Drawing.Size(203, 72);
             this.rtxtbxHomeAddress.TabIndex = 10;
             this.rtxtbxHomeAddress.Text = "";
+            this.rtxtbxHomeAddress.TextChanged += new System.EventHandler(this.rtxtbxHomeAddress_TextChanged);
             // 
             // rdbtnFemale
             // 
@@ -264,6 +275,7 @@
             // rdbtnMale
             // 
             this.rdbtnMale.AutoSize = true;
+            this.rdbtnMale.Checked = true;
             this.rdbtnMale.Location = new System.Drawing.Point(618, 141);
             this.rdbtnMale.Name = "rdbtnMale";
             this.rdbtnMale.Size = new System.Drawing.Size(61, 24);
@@ -317,6 +329,7 @@
             this.txtbxCNIC.Name = "txtbxCNIC";
             this.txtbxCNIC.Size = new System.Drawing.Size(203, 26);
             this.txtbxCNIC.TabIndex = 5;
+            this.txtbxCNIC.TextChanged += new System.EventHandler(this.txtbxCNIC_TextChanged);
             // 
             // txtbxConfirmPassword
             // 
@@ -324,6 +337,7 @@
             this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
             this.txtbxConfirmPassword.Size = new System.Drawing.Size(203, 26);
             this.txtbxConfirmPassword.TabIndex = 4;
+            this.txtbxConfirmPassword.TextChanged += new System.EventHandler(this.txtbxConfirmPassword_TextChanged);
             // 
             // txtbxNewPassowrd
             // 
@@ -331,6 +345,7 @@
             this.txtbxNewPassowrd.Name = "txtbxNewPassowrd";
             this.txtbxNewPassowrd.Size = new System.Drawing.Size(203, 26);
             this.txtbxNewPassowrd.TabIndex = 3;
+            this.txtbxNewPassowrd.TextChanged += new System.EventHandler(this.txtbxNewPassowrd_TextChanged);
             // 
             // txtbxEmailAddress
             // 
@@ -338,6 +353,7 @@
             this.txtbxEmailAddress.Name = "txtbxEmailAddress";
             this.txtbxEmailAddress.Size = new System.Drawing.Size(203, 26);
             this.txtbxEmailAddress.TabIndex = 9;
+            this.txtbxEmailAddress.TextChanged += new System.EventHandler(this.txtbxEmailAddress_TextChanged);
             // 
             // txtbxUsername
             // 
@@ -345,6 +361,7 @@
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
             this.txtbxUsername.TabIndex = 2;
+            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
             // txtbxContactNumber
             // 
@@ -352,6 +369,7 @@
             this.txtbxContactNumber.Name = "txtbxContactNumber";
             this.txtbxContactNumber.Size = new System.Drawing.Size(203, 26);
             this.txtbxContactNumber.TabIndex = 8;
+            this.txtbxContactNumber.TextChanged += new System.EventHandler(this.txtbxContactNumber_TextChanged);
             // 
             // txtbxName
             // 
@@ -359,6 +377,7 @@
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.Size = new System.Drawing.Size(203, 26);
             this.txtbxName.TabIndex = 1;
+            this.txtbxName.TextChanged += new System.EventHandler(this.txtbxName_TextChanged);
             // 
             // lblCNIC
             // 
@@ -466,6 +485,7 @@
             this.cmbxDesignation.Size = new System.Drawing.Size(203, 28);
             this.cmbxDesignation.Sorted = true;
             this.cmbxDesignation.TabIndex = 0;
+            this.cmbxDesignation.SelectedIndexChanged += new System.EventHandler(this.cmbxDesignation_SelectedIndexChanged);
             // 
             // lblSignUp
             // 
@@ -476,16 +496,6 @@
             this.lblSignUp.Size = new System.Drawing.Size(136, 39);
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "SignUp";
-            // 
-            // lblHomeAddressSignal
-            // 
-            this.lblHomeAddressSignal.AutoSize = true;
-            this.lblHomeAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblHomeAddressSignal.Location = new System.Drawing.Point(619, 363);
-            this.lblHomeAddressSignal.Name = "lblHomeAddressSignal";
-            this.lblHomeAddressSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblHomeAddressSignal.TabIndex = 30;
-            this.lblHomeAddressSignal.Text = " ";
             // 
             // frmSignUp
             // 
