@@ -90,80 +90,91 @@ namespace Merchant_Monetary_System
         private void txtbxNewPassowrd_TextChanged(object sender, EventArgs e)
         {
             string newPassword=txtbxNewPassowrd.Text;
-            int validConditions = 0;
+            bool isLowercase = false;
+            bool isUppercase = false;
+            bool isNumber = false;
+            bool isSpecialChar = false;
+            bool isLength = false;
+            int count = 0;
             int i;
             char[] specialCharactor = { '@', '#', '$', '%', '^', '&', '+', '=','_','!'};
             
-            if (txtbxNewPassowrd.Text == string.Empty)
-            {// check is empty
-                lblNewPasswordSignal.Text = "Enter the password";
-                validConditions++;
-            }
-            else
-            {
-                lblNewPasswordSignal.Text = " ";
-            }
             
-           
             foreach (char c in newPassword)
             {//islowercase
                 if (c >= 'a' && c <= 'z')
                 {
-                    validConditions++;
-                    //lblNewPasswordSignal.Text = " ";
+                    isLowercase= true;
+                    lblNewPasswordSignal.Text = " ";
                     break;
                 }
-                else
-                {
-                    lblNewPasswordSignal.Text = "At least one lowercase charactor";
-                }
-
             }
-           
             foreach (char c in newPassword)
             {//isuppercase
                 if (c >= 'A' && c <= 'Z')
                 {
-                    validConditions++;
-                    //lblNewPasswordSignal.Text = " ";
+                    isUppercase = true;
+                    lblNewPasswordSignal.Text = " ";
                     break;
                 }
-                else
-                {
-                    lblNewPasswordSignal.Text = "At least one uppercase charactor";
-                }
             }
-           
             foreach (char c in newPassword)
             {//isnumber
                 if (c >= '0' && c <= '9')
                 {
-                    validConditions++;
-                    //lblNewPasswordSignal.Text = " ";
-                    lblNewPasswordSignal.Text = "At least one number";
+                    isNumber=true;
+                    lblNewPasswordSignal.Text = " ";
                     break;
                 }
-                else
+            }
+            foreach (char c in newPassword)
+            {//is special charactor
+                foreach (char s in specialCharactor)
                 {
-                   
+                    if (c == s)
+                    {
+                        isSpecialChar = true;
+                        lblNewPasswordSignal.Text = " ";
+                    }
                 }
             }
-           
-            if (newPassword.IndexOfAny(specialCharactor) == -1)
-            {//is special charactor
-               
-                lblNewPasswordSignal.Text = "At least one special charactor";
+            foreach (char c in txtbxNewPassowrd.Text)
+            {
+                count++;
+                if (count >= 8)
+                {
+                    isLength = true;
+                }
+            }
+            if (txtbxNewPassowrd.Text == string.Empty)
+            {// check is empty
+                lblNewPasswordSignal.Text = "Enter the password";
+            }
+            else if (!isLowercase == true)
+            {//check isLowercase
+                lblNewPasswordSignal.Text = "Include least one lowercase charactor";
+            }
+            else if (!isUppercase == true)
+            {//check isUppercase
+                lblNewPasswordSignal.Text = "Include least one uppercase charactor";
+            }
+            else if(!isNumber==true)
+            {//check isNumber
+                lblNewPasswordSignal.Text = "Include least one number";
+            }
+            else if(!isSpecialChar==true)
+            {//check isSpecial charactor
+                lblNewPasswordSignal.Text = "Include least one special charactor";
+            }
+            else if (!(isLength== true))
+            {//check is lenght >8
+                lblNewPasswordSignal.Text = "Password must 8 characters long";
             }
             else
             {
-                validConditions++;
-            }
-            
-            if (validConditions == 5)
-            { // ready for storage or action
-                lblNewPasswordSignal.Text = " ";
                 isPassword = false;
             }
+
         }
 
         private void txtbxConfirmPassword_TextChanged(object sender, EventArgs e)
@@ -171,6 +182,7 @@ namespace Merchant_Monetary_System
             if(txtbxConfirmPassword.Text == txtbxNewPassowrd.Text)
             {
                isPasswordConfirm=false;
+                lblConfirmPasswordSignal.Text = " ";
             }
             else
             {
@@ -180,7 +192,32 @@ namespace Merchant_Monetary_System
 
         private void txtbxCNIC_TextChanged(object sender, EventArgs e)
         {
-
+            int count = 0;
+            foreach (char num in txtbxCNIC.Text)
+            {
+                count++;
+            }
+            Int64 i;
+            if (txtbxCNIC.Text == string.Empty)
+            {// check is empty
+                lblCNICSignal.Text = "Enter the contact number";
+                isCNIC = true;
+            }
+            else if (!Int64.TryParse(txtbxCNIC.Text, out i))
+            {//Check isnumber
+                lblCNICSignal.Text = "Allowed characters: 0-9";
+                isCNIC = true;
+            }
+            else if (!(count== 13))
+            {//check count
+                lblCNICSignal.Text = "Lenght must be 13 characters";
+                isCNIC = true;
+            }
+            else
+            {//ready for storage
+                lblCNICSignal.Text = " ";
+                isCNIC = false;
+            }
         }
 
         private void txtbxContactNumber_TextChanged(object sender, EventArgs e)
@@ -210,7 +247,28 @@ namespace Merchant_Monetary_System
 
         private void txtbxEmailAddress_TextChanged(object sender, EventArgs e)
         {
-
+            bool isSpecialChar = false;
+            foreach (char c in txtbxEmailAddress.Text)
+            {//is special charactor
+                if (c == '@')
+                {
+                    isSpecialChar = true;
+                    lblEmailAddressSignal.Text = " ";
+                }
+            }
+            if (txtbxEmailAddress.Text == string.Empty)
+            {// check is empty
+                lblEmailAddressSignal.Text = "Enter the email-address";
+            }
+            else if (isSpecialChar == false)
+            {// check is has @ sign
+                lblEmailAddressSignal.Text = "Enter the correct address";
+            }
+            else
+            {//ready for storage
+                lblEmailAddressSignal.Text = " ";
+                isEmail = false;
+            }
         }
 
         private void rtxtbxHomeAddress_TextChanged(object sender, EventArgs e)
@@ -239,6 +297,57 @@ namespace Merchant_Monetary_System
                 lblVehicle.Visible = false;
                 cmbxVehicle.Visible = false;
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            if(isName==false && isUsername==false && isPassword==false && isPasswordConfirm==false && 
+             isCNIC==false&& isPhone==false && isAddress==false && isEmail == false)
+            {//CEO Dashboard Open
+                MessageBox.Show("Open new form");
+            }
+            else
+            {
+                MessageBox.Show("All field must be filled correctly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtbxName.Clear();
+            txtbxUsername.Clear();
+            txtbxNewPassowrd.Clear();
+            txtbxConfirmPassword.Clear();
+            txtbxCNIC.Clear();
+            txtbxContactNumber.Clear();
+            txtbxEmailAddress.Clear();
+            rtxtbxHomeAddress.Clear();
+            txtbxCNIC.Clear();
+            
+        }
+        private void btnShowPassword_MouseHover(object sender, EventArgs e)
+        {
+            txtbxNewPassowrd.UseSystemPasswordChar = false;
+        }
+
+        private void btnShowPassword_MouseLeave(object sender, EventArgs e)
+        {
+            txtbxNewPassowrd.UseSystemPasswordChar = true;
+        }
+
+        private void btnShowPasswrd2_MouseHover(object sender, EventArgs e)
+        {
+            txtbxConfirmPassword.UseSystemPasswordChar = false;
+        }
+
+        private void btnShowPasswrd2_MouseLeave(object sender, EventArgs e)
+        {
+            txtbxConfirmPassword.UseSystemPasswordChar = true;
         }
     }
 }

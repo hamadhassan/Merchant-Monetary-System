@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.gbx = new System.Windows.Forms.GroupBox();
             this.lblHomeAddressSignal = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.lblVehicle = new System.Windows.Forms.Label();
             this.cmbxVehicle = new System.Windows.Forms.ComboBox();
             this.lblEmailAddressSignal = new System.Windows.Forms.Label();
@@ -67,13 +67,16 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
+            this.btnShowPassword = new System.Windows.Forms.Button();
+            this.btnShowPasswrd2 = new System.Windows.Forms.Button();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbx
             // 
+            this.gbx.Controls.Add(this.btnShowPasswrd2);
+            this.gbx.Controls.Add(this.btnShowPassword);
             this.gbx.Controls.Add(this.lblHomeAddressSignal);
-            this.gbx.Controls.Add(this.label20);
             this.gbx.Controls.Add(this.lblVehicle);
             this.gbx.Controls.Add(this.cmbxVehicle);
             this.gbx.Controls.Add(this.lblEmailAddressSignal);
@@ -126,16 +129,6 @@
             this.lblHomeAddressSignal.Size = new System.Drawing.Size(13, 20);
             this.lblHomeAddressSignal.TabIndex = 30;
             this.lblHomeAddressSignal.Text = " ";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.label20.Location = new System.Drawing.Point(427, 236);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 20);
-            this.label20.TabIndex = 28;
-            this.label20.Text = " ";
             // 
             // lblVehicle
             // 
@@ -296,6 +289,7 @@
             this.btnCreateAccount.TabIndex = 13;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnClear
             // 
@@ -309,6 +303,7 @@
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear All";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnClose
             // 
@@ -322,6 +317,7 @@
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtbxCNIC
             // 
@@ -335,16 +331,18 @@
             // 
             this.txtbxConfirmPassword.Location = new System.Drawing.Point(219, 288);
             this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
-            this.txtbxConfirmPassword.Size = new System.Drawing.Size(203, 26);
+            this.txtbxConfirmPassword.Size = new System.Drawing.Size(180, 26);
             this.txtbxConfirmPassword.TabIndex = 4;
+            this.txtbxConfirmPassword.UseSystemPasswordChar = true;
             this.txtbxConfirmPassword.TextChanged += new System.EventHandler(this.txtbxConfirmPassword_TextChanged);
             // 
             // txtbxNewPassowrd
             // 
             this.txtbxNewPassowrd.Location = new System.Drawing.Point(219, 239);
             this.txtbxNewPassowrd.Name = "txtbxNewPassowrd";
-            this.txtbxNewPassowrd.Size = new System.Drawing.Size(203, 26);
+            this.txtbxNewPassowrd.Size = new System.Drawing.Size(180, 26);
             this.txtbxNewPassowrd.TabIndex = 3;
+            this.txtbxNewPassowrd.UseSystemPasswordChar = true;
             this.txtbxNewPassowrd.TextChanged += new System.EventHandler(this.txtbxNewPassowrd_TextChanged);
             // 
             // txtbxEmailAddress
@@ -497,6 +495,32 @@
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "SignUp";
             // 
+            // btnShowPassword
+            // 
+            this.btnShowPassword.FlatAppearance.BorderSize = 0;
+            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPassword.Image")));
+            this.btnShowPassword.Location = new System.Drawing.Point(402, 240);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(20, 24);
+            this.btnShowPassword.TabIndex = 31;
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.MouseLeave += new System.EventHandler(this.btnShowPassword_MouseLeave);
+            this.btnShowPassword.MouseHover += new System.EventHandler(this.btnShowPassword_MouseHover);
+            // 
+            // btnShowPasswrd2
+            // 
+            this.btnShowPasswrd2.FlatAppearance.BorderSize = 0;
+            this.btnShowPasswrd2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPasswrd2.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPasswrd2.Image")));
+            this.btnShowPasswrd2.Location = new System.Drawing.Point(402, 290);
+            this.btnShowPasswrd2.Name = "btnShowPasswrd2";
+            this.btnShowPasswrd2.Size = new System.Drawing.Size(20, 24);
+            this.btnShowPasswrd2.TabIndex = 32;
+            this.btnShowPasswrd2.UseVisualStyleBackColor = true;
+            this.btnShowPasswrd2.MouseLeave += new System.EventHandler(this.btnShowPasswrd2_MouseLeave);
+            this.btnShowPasswrd2.MouseHover += new System.EventHandler(this.btnShowPasswrd2_MouseHover);
+            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -553,9 +577,10 @@
         private System.Windows.Forms.Label lblNewPasswordSignal;
         private System.Windows.Forms.Label lblUsernameSignal;
         private System.Windows.Forms.Label lblNameSignal;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lblVehicle;
         private System.Windows.Forms.ComboBox cmbxVehicle;
         private System.Windows.Forms.Label lblHomeAddressSignal;
+        private System.Windows.Forms.Button btnShowPasswrd2;
+        private System.Windows.Forms.Button btnShowPassword;
     }
 }
