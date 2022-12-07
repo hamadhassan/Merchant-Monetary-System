@@ -65,7 +65,7 @@
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
@@ -109,7 +109,7 @@
             this.gbx.Controls.Add(this.lblConfirmPassword);
             this.gbx.Controls.Add(this.lblContactNumber);
             this.gbx.Controls.Add(this.lblName);
-            this.gbx.Controls.Add(this.label6);
+            this.gbx.Controls.Add(this.lblGender);
             this.gbx.Controls.Add(this.lblDesignation);
             this.gbx.Controls.Add(this.cmbxDesignation);
             this.gbx.Controls.Add(this.lblSignUp);
@@ -118,7 +118,6 @@
             this.gbx.Size = new System.Drawing.Size(906, 516);
             this.gbx.TabIndex = 0;
             this.gbx.TabStop = false;
-            this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
             // 
             // btnShowPasswrd2
             // 
@@ -438,7 +437,6 @@
             this.lblEmailAddress.Size = new System.Drawing.Size(119, 20);
             this.lblEmailAddress.TabIndex = 2;
             this.lblEmailAddress.Text = "Email Address :";
-            this.lblEmailAddress.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblUsername
             // 
@@ -448,7 +446,6 @@
             this.lblUsername.Size = new System.Drawing.Size(95, 20);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "User name :";
-            this.lblUsername.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblConfirmPassword
             // 
@@ -477,14 +474,14 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name :";
             // 
-            // label6
+            // lblGender
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(453, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Gender :";
+            this.lblGender.AutoSize = true;
+            this.lblGender.Location = new System.Drawing.Point(453, 136);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(71, 20);
+            this.lblGender.TabIndex = 2;
+            this.lblGender.Text = "Gender :";
             // 
             // lblDesignation
             // 
@@ -562,7 +559,7 @@
         private System.Windows.Forms.Label lblHomeAddress;
         private System.Windows.Forms.Label lblEmailAddress;
         private System.Windows.Forms.Label lblContactNumber;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.RichTextBox rtxtbxHomeAddress;
         private System.Windows.Forms.RadioButton rdbtnFemale;
         private System.Windows.Forms.Button btnClose;

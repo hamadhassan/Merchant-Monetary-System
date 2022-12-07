@@ -25,18 +25,6 @@ namespace Merchant_Monetary_System
         bool isEmail = true;
         bool isPhone = true;
         bool isAddress = true;
-
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbx_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmSignUp_Load(object sender, EventArgs e)
         {
             cmbxDesignation.SelectedIndex = 0;
@@ -44,6 +32,7 @@ namespace Merchant_Monetary_System
 
         private void txtbxName_TextChanged(object sender, EventArgs e)
         {
+
             int i;
             if (txtbxName.Text == string.Empty)
             {// check is empty
@@ -308,8 +297,29 @@ namespace Merchant_Monetary_System
         {
             if(isName==false && isUsername==false && isPassword==false && isPasswordConfirm==false && 
              isCNIC==false&& isPhone==false && isAddress==false && isEmail == false)
-            {//CEO Dashboard Open
-                MessageBox.Show("Open new form");
+            {//Store Record into file and open login form
+                string designation=cmbxDesignation.Text;
+                string name=txtbxName.Text;
+                string gender = " ";
+                if (rdbtnFemale.Checked == true)
+                {
+                     gender = rdbtnFemale.Text;
+                }
+                else
+                {
+                    gender = rdbtnMale.Text;
+                }
+                double cnic=Convert.ToInt64(txtbxCNIC.Text);
+                string emailAddress=txtbxEmailAddress.Text;
+                int contactNumber=Convert.ToInt32(txtbxContactNumber.Text);
+                string homeAddress=rtxtbxHomeAddress.Text;
+                Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress);
+                UsersDL.UsersList.Add(user);
+                UsersDL.storeRecordIntoFile(user, FilePath.Users);
+                
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                this.Hide();
             }
             else
             {

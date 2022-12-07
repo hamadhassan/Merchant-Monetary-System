@@ -44,7 +44,7 @@
             this.lblConfirmPasswordSignal = new System.Windows.Forms.Label();
             this.btnShowConfirmPassword = new System.Windows.Forms.Button();
             this.txtbxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             this.gbx.Controls.Add(this.lblConfirmPasswordSignal);
             this.gbx.Controls.Add(this.btnShowConfirmPassword);
             this.gbx.Controls.Add(this.txtbxConfirmPassword);
-            this.gbx.Controls.Add(this.label2);
+            this.gbx.Controls.Add(this.lblConfirmPassword);
             this.gbx.Controls.Add(this.lblPasswordSignal);
             this.gbx.Controls.Add(this.lblDesignationSingal);
             this.gbx.Controls.Add(this.btnShowPassword);
@@ -225,14 +225,14 @@
             this.txtbxConfirmPassword.UseSystemPasswordChar = true;
             this.txtbxConfirmPassword.TextChanged += new System.EventHandler(this.txtbxConfirmPassword_TextChanged);
             // 
-            // label2
+            // lblConfirmPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(465, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 20);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Confirm Password :";
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Location = new System.Drawing.Point(465, 187);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(145, 20);
+            this.lblConfirmPassword.TabIndex = 50;
+            this.lblConfirmPassword.Text = "Confirm Password :";
             // 
             // btnUpdate
             // 
@@ -302,7 +302,7 @@
         private System.Windows.Forms.Label lblConfirmPasswordSignal;
         private System.Windows.Forms.Button btnShowConfirmPassword;
         private System.Windows.Forms.TextBox txtbxConfirmPassword;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Label lblPasswordSignal;
         private System.Windows.Forms.Label lblDesignationSingal;
         private System.Windows.Forms.Button btnShowPassword;
