@@ -49,6 +49,12 @@
     <Compile Include="BL\Compnay.cs" />
     <Compile Include="BL\CEO.cs" />
     <Compile Include="FilesPaths\FilePath.cs" />
+    <Compile Include="Forms\Product\frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Users\frmAddCompnay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <Compile Include="BL\Users.cs" />
     <Compile Include="DL\UsersDL.cs" />
+    <EmbeddedResource Include="Forms\Product\frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmAddCompnay.resx">
       <DependentUpon>frmAddCompnay.cs</DependentUpon>
     </EmbeddedResource>
