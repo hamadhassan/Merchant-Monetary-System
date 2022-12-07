@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblSignIn = new System.Windows.Forms.Label();
             this.gbx = new System.Windows.Forms.GroupBox();
-            this.lblDesignation = new System.Windows.Forms.Label();
-            this.cmbxDesignation = new System.Windows.Forms.ComboBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnForgetPassword = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblPasswordSignal = new System.Windows.Forms.Label();
+            this.lblDesignationSingal = new System.Windows.Forms.Label();
             this.btnShowPassword = new System.Windows.Forms.Button();
             this.lblUsernameSignal = new System.Windows.Forms.Label();
             this.txtbxPassowrd = new System.Windows.Forms.TextBox();
             this.txtbxUsername = new System.Windows.Forms.TextBox();
             this.lblNewPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.lblDesignationSingal = new System.Windows.Forms.Label();
-            this.lblPasswordSignal = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnForgetPassword = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.lblDesignation = new System.Windows.Forms.Label();
+            this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,124 @@
             this.gbx.TabIndex = 2;
             this.gbx.TabStop = false;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(513, 304);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(90, 30);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnForgetPassword
+            // 
+            this.btnForgetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(97)))), ((int)(((byte)(139)))));
+            this.btnForgetPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnForgetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForgetPassword.ForeColor = System.Drawing.Color.White;
+            this.btnForgetPassword.Location = new System.Drawing.Point(400, 350);
+            this.btnForgetPassword.Name = "btnForgetPassword";
+            this.btnForgetPassword.Size = new System.Drawing.Size(211, 30);
+            this.btnForgetPassword.TabIndex = 6;
+            this.btnForgetPassword.Text = "Forgot Password";
+            this.btnForgetPassword.UseVisualStyleBackColor = false;
+            this.btnForgetPassword.Click += new System.EventHandler(this.btnForgetPassword_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(400, 304);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(90, 30);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblPasswordSignal
+            // 
+            this.lblPasswordSignal.AutoSize = true;
+            this.lblPasswordSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblPasswordSignal.Location = new System.Drawing.Point(400, 281);
+            this.lblPasswordSignal.Name = "lblPasswordSignal";
+            this.lblPasswordSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblPasswordSignal.TabIndex = 39;
+            this.lblPasswordSignal.Text = " ";
+            // 
+            // lblDesignationSingal
+            // 
+            this.lblDesignationSingal.AutoSize = true;
+            this.lblDesignationSingal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblDesignationSingal.Location = new System.Drawing.Point(400, 182);
+            this.lblDesignationSingal.Name = "lblDesignationSingal";
+            this.lblDesignationSingal.Size = new System.Drawing.Size(13, 20);
+            this.lblDesignationSingal.TabIndex = 38;
+            this.lblDesignationSingal.Text = " ";
+            // 
+            // btnShowPassword
+            // 
+            this.btnShowPassword.FlatAppearance.BorderSize = 0;
+            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPassword.Image")));
+            this.btnShowPassword.Location = new System.Drawing.Point(583, 253);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(20, 24);
+            this.btnShowPassword.TabIndex = 3;
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.MouseLeave += new System.EventHandler(this.btnShowPassword_MouseLeave);
+            this.btnShowPassword.MouseHover += new System.EventHandler(this.btnShowPassword_MouseHover);
+            // 
+            // lblUsernameSignal
+            // 
+            this.lblUsernameSignal.AutoSize = true;
+            this.lblUsernameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblUsernameSignal.Location = new System.Drawing.Point(400, 231);
+            this.lblUsernameSignal.Name = "lblUsernameSignal";
+            this.lblUsernameSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblUsernameSignal.TabIndex = 36;
+            this.lblUsernameSignal.Text = " ";
+            // 
+            // txtbxPassowrd
+            // 
+            this.txtbxPassowrd.Location = new System.Drawing.Point(400, 252);
+            this.txtbxPassowrd.Name = "txtbxPassowrd";
+            this.txtbxPassowrd.Size = new System.Drawing.Size(180, 26);
+            this.txtbxPassowrd.TabIndex = 2;
+            this.txtbxPassowrd.UseSystemPasswordChar = true;
+            // 
+            // txtbxUsername
+            // 
+            this.txtbxUsername.Location = new System.Drawing.Point(400, 202);
+            this.txtbxUsername.Name = "txtbxUsername";
+            this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
+            this.txtbxUsername.TabIndex = 1;
+            // 
+            // lblNewPassword
+            // 
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Location = new System.Drawing.Point(250, 254);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(86, 20);
+            this.lblNewPassword.TabIndex = 33;
+            this.lblNewPassword.Text = "Password :";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(250, 205);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(95, 20);
+            this.lblUsername.TabIndex = 34;
+            this.lblUsername.Text = "User name :";
+            // 
             // lblDesignation
             // 
             this.lblDesignation.AutoSize = true;
@@ -102,126 +220,8 @@
             this.cmbxDesignation.Location = new System.Drawing.Point(400, 151);
             this.cmbxDesignation.Name = "cmbxDesignation";
             this.cmbxDesignation.Size = new System.Drawing.Size(203, 28);
-            this.cmbxDesignation.TabIndex = 3;
+            this.cmbxDesignation.TabIndex = 0;
             this.cmbxDesignation.Leave += new System.EventHandler(this.cmbxDesignation_Leave);
-            // 
-            // btnShowPassword
-            // 
-            this.btnShowPassword.FlatAppearance.BorderSize = 0;
-            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPassword.Image")));
-            this.btnShowPassword.Location = new System.Drawing.Point(583, 253);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(20, 24);
-            this.btnShowPassword.TabIndex = 37;
-            this.btnShowPassword.UseVisualStyleBackColor = true;
-            this.btnShowPassword.MouseLeave += new System.EventHandler(this.btnShowPassword_MouseLeave);
-            this.btnShowPassword.MouseHover += new System.EventHandler(this.btnShowPassword_MouseHover);
-            // 
-            // lblUsernameSignal
-            // 
-            this.lblUsernameSignal.AutoSize = true;
-            this.lblUsernameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblUsernameSignal.Location = new System.Drawing.Point(400, 231);
-            this.lblUsernameSignal.Name = "lblUsernameSignal";
-            this.lblUsernameSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblUsernameSignal.TabIndex = 36;
-            this.lblUsernameSignal.Text = " ";
-            // 
-            // txtbxPassowrd
-            // 
-            this.txtbxPassowrd.Location = new System.Drawing.Point(400, 252);
-            this.txtbxPassowrd.Name = "txtbxPassowrd";
-            this.txtbxPassowrd.Size = new System.Drawing.Size(180, 26);
-            this.txtbxPassowrd.TabIndex = 35;
-            this.txtbxPassowrd.UseSystemPasswordChar = true;
-            // 
-            // txtbxUsername
-            // 
-            this.txtbxUsername.Location = new System.Drawing.Point(400, 202);
-            this.txtbxUsername.Name = "txtbxUsername";
-            this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
-            this.txtbxUsername.TabIndex = 32;
-            // 
-            // lblNewPassword
-            // 
-            this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(250, 254);
-            this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(86, 20);
-            this.lblNewPassword.TabIndex = 33;
-            this.lblNewPassword.Text = "Password :";
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(250, 205);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(95, 20);
-            this.lblUsername.TabIndex = 34;
-            this.lblUsername.Text = "User name :";
-            // 
-            // lblDesignationSingal
-            // 
-            this.lblDesignationSingal.AutoSize = true;
-            this.lblDesignationSingal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblDesignationSingal.Location = new System.Drawing.Point(400, 182);
-            this.lblDesignationSingal.Name = "lblDesignationSingal";
-            this.lblDesignationSingal.Size = new System.Drawing.Size(13, 20);
-            this.lblDesignationSingal.TabIndex = 38;
-            this.lblDesignationSingal.Text = " ";
-            // 
-            // lblPasswordSignal
-            // 
-            this.lblPasswordSignal.AutoSize = true;
-            this.lblPasswordSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblPasswordSignal.Location = new System.Drawing.Point(400, 281);
-            this.lblPasswordSignal.Name = "lblPasswordSignal";
-            this.lblPasswordSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblPasswordSignal.TabIndex = 39;
-            this.lblPasswordSignal.Text = " ";
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(513, 304);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(90, 30);
-            this.btnLogin.TabIndex = 42;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnForgetPassword
-            // 
-            this.btnForgetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(97)))), ((int)(((byte)(139)))));
-            this.btnForgetPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnForgetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForgetPassword.ForeColor = System.Drawing.Color.White;
-            this.btnForgetPassword.Location = new System.Drawing.Point(400, 350);
-            this.btnForgetPassword.Name = "btnForgetPassword";
-            this.btnForgetPassword.Size = new System.Drawing.Size(211, 30);
-            this.btnForgetPassword.TabIndex = 41;
-            this.btnForgetPassword.Text = "Forgot Password";
-            this.btnForgetPassword.UseVisualStyleBackColor = false;
-            this.btnForgetPassword.Click += new System.EventHandler(this.btnForgetPassword_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(400, 304);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(90, 30);
-            this.btnExit.TabIndex = 40;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmLogin
             // 

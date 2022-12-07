@@ -47,35 +47,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Compnay.cs" />
-    <Compile Include="Forms\frmAddCompnay.cs">
+    <Compile Include="Forms\Users\frmAddCompnay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAddCompnay.Designer.cs">
+    <Compile Include="Forms\Users\frmAddCompnay.Designer.cs">
       <DependentUpon>frmAddCompnay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmIntroduction.cs">
+    <Compile Include="Forms\Users\frmIntroduction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmIntroduction.Designer.cs">
+    <Compile Include="Forms\Users\frmIntroduction.Designer.cs">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSignUp.cs">
+    <Compile Include="Forms\Users\frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSignUp.Designer.cs">
+    <Compile Include="Forms\Users\frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmViewAndDeleteAccount.cs">
+    <Compile Include="Forms\Users\frmViewAndDeleteAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmViewAndDeleteAccount.Designer.cs">
+    <Compile Include="Forms\Users\frmViewAndDeleteAccount.Designer.cs">
       <DependentUpon>frmViewAndDeleteAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLogin.cs">
+    <Compile Include="Forms\Users\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.cs">
+    <Compile Include="Forms\Users\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\frmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frmForgetPassword.Designer.cs">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,19 +91,22 @@
     <Compile Include="UpdateUser_form.Designer.cs">
       <DependentUpon>UpdateUser_form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\frmAddCompnay.resx">
+    <EmbeddedResource Include="Forms\Users\frmAddCompnay.resx">
       <DependentUpon>frmAddCompnay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmIntroduction.resx">
+    <EmbeddedResource Include="Forms\Users\frmForgetPassword.resx">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\frmIntroduction.resx">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
+    <EmbeddedResource Include="Forms\Users\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSignUp.resx">
+    <EmbeddedResource Include="Forms\Users\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmViewAndDeleteAccount.resx">
+    <EmbeddedResource Include="Forms\Users\frmViewAndDeleteAccount.resx">
       <DependentUpon>frmViewAndDeleteAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

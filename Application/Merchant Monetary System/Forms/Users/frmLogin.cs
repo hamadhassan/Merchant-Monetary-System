@@ -23,12 +23,15 @@ namespace Merchant_Monetary_System
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {//respective dashboard will be open 
             
         }
 
         private void btnForgetPassword_Click(object sender, EventArgs e)
         {
+            frmForgetPassword frmForgetPassword = new frmForgetPassword();
+            frmForgetPassword.Show();
+            this.Hide();
 
         }
 
@@ -41,7 +44,7 @@ namespace Merchant_Monetary_System
         {
             if (cmbxDesignation.SelectedIndex == 0)
             {
-                lblDesignationSingal.Text = "Select a Role";
+                lblDesignationSingal.Text = "Select a Designation";
             }
             else
             {
