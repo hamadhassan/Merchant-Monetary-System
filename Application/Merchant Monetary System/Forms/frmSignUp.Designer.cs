@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.gbx = new System.Windows.Forms.GroupBox();
+            this.btnShowPasswrd2 = new System.Windows.Forms.Button();
+            this.btnShowPassword = new System.Windows.Forms.Button();
             this.lblHomeAddressSignal = new System.Windows.Forms.Label();
             this.lblVehicle = new System.Windows.Forms.Label();
             this.cmbxVehicle = new System.Windows.Forms.ComboBox();
@@ -67,8 +69,6 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.btnShowPassword = new System.Windows.Forms.Button();
-            this.btnShowPasswrd2 = new System.Windows.Forms.Button();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,16 +115,42 @@
             this.gbx.Controls.Add(this.lblSignUp);
             this.gbx.Location = new System.Drawing.Point(12, 12);
             this.gbx.Name = "gbx";
-            this.gbx.Size = new System.Drawing.Size(890, 477);
+            this.gbx.Size = new System.Drawing.Size(906, 516);
             this.gbx.TabIndex = 0;
             this.gbx.TabStop = false;
             this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
+            // 
+            // btnShowPasswrd2
+            // 
+            this.btnShowPasswrd2.FlatAppearance.BorderSize = 0;
+            this.btnShowPasswrd2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPasswrd2.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPasswrd2.Image")));
+            this.btnShowPasswrd2.Location = new System.Drawing.Point(410, 284);
+            this.btnShowPasswrd2.Name = "btnShowPasswrd2";
+            this.btnShowPasswrd2.Size = new System.Drawing.Size(20, 24);
+            this.btnShowPasswrd2.TabIndex = 32;
+            this.btnShowPasswrd2.UseVisualStyleBackColor = true;
+            this.btnShowPasswrd2.MouseLeave += new System.EventHandler(this.btnShowPasswrd2_MouseLeave);
+            this.btnShowPasswrd2.MouseHover += new System.EventHandler(this.btnShowPasswrd2_MouseHover);
+            // 
+            // btnShowPassword
+            // 
+            this.btnShowPassword.FlatAppearance.BorderSize = 0;
+            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPassword.Image")));
+            this.btnShowPassword.Location = new System.Drawing.Point(410, 234);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(20, 24);
+            this.btnShowPassword.TabIndex = 31;
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.MouseLeave += new System.EventHandler(this.btnShowPassword_MouseLeave);
+            this.btnShowPassword.MouseHover += new System.EventHandler(this.btnShowPassword_MouseHover);
             // 
             // lblHomeAddressSignal
             // 
             this.lblHomeAddressSignal.AutoSize = true;
             this.lblHomeAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblHomeAddressSignal.Location = new System.Drawing.Point(619, 363);
+            this.lblHomeAddressSignal.Location = new System.Drawing.Point(627, 357);
             this.lblHomeAddressSignal.Name = "lblHomeAddressSignal";
             this.lblHomeAddressSignal.Size = new System.Drawing.Size(13, 20);
             this.lblHomeAddressSignal.TabIndex = 30;
@@ -133,7 +159,7 @@
             // lblVehicle
             // 
             this.lblVehicle.AutoSize = true;
-            this.lblVehicle.Location = new System.Drawing.Point(69, 348);
+            this.lblVehicle.Location = new System.Drawing.Point(77, 342);
             this.lblVehicle.Name = "lblVehicle";
             this.lblVehicle.Size = new System.Drawing.Size(69, 20);
             this.lblVehicle.TabIndex = 27;
@@ -148,7 +174,7 @@
             "CEO",
             "Employee",
             "Rider"});
-            this.cmbxVehicle.Location = new System.Drawing.Point(219, 340);
+            this.cmbxVehicle.Location = new System.Drawing.Point(227, 334);
             this.cmbxVehicle.Name = "cmbxVehicle";
             this.cmbxVehicle.Size = new System.Drawing.Size(203, 28);
             this.cmbxVehicle.Sorted = true;
@@ -158,7 +184,7 @@
             // 
             this.lblEmailAddressSignal.AutoSize = true;
             this.lblEmailAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblEmailAddressSignal.Location = new System.Drawing.Point(620, 269);
+            this.lblEmailAddressSignal.Location = new System.Drawing.Point(628, 263);
             this.lblEmailAddressSignal.Name = "lblEmailAddressSignal";
             this.lblEmailAddressSignal.Size = new System.Drawing.Size(13, 20);
             this.lblEmailAddressSignal.TabIndex = 25;
@@ -168,7 +194,7 @@
             // 
             this.lblContactNumberSignal.AutoSize = true;
             this.lblContactNumberSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblContactNumberSignal.Location = new System.Drawing.Point(620, 219);
+            this.lblContactNumberSignal.Location = new System.Drawing.Point(628, 213);
             this.lblContactNumberSignal.Name = "lblContactNumberSignal";
             this.lblContactNumberSignal.Size = new System.Drawing.Size(13, 20);
             this.lblContactNumberSignal.TabIndex = 24;
@@ -178,7 +204,7 @@
             // 
             this.lblGenderSignal.AutoSize = true;
             this.lblGenderSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblGenderSignal.Location = new System.Drawing.Point(619, 168);
+            this.lblGenderSignal.Location = new System.Drawing.Point(627, 162);
             this.lblGenderSignal.Name = "lblGenderSignal";
             this.lblGenderSignal.Size = new System.Drawing.Size(13, 20);
             this.lblGenderSignal.TabIndex = 23;
@@ -188,7 +214,7 @@
             // 
             this.lblConfirmPasswordSignal.AutoSize = true;
             this.lblConfirmPasswordSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblConfirmPasswordSignal.Location = new System.Drawing.Point(219, 317);
+            this.lblConfirmPasswordSignal.Location = new System.Drawing.Point(227, 311);
             this.lblConfirmPasswordSignal.Name = "lblConfirmPasswordSignal";
             this.lblConfirmPasswordSignal.Size = new System.Drawing.Size(13, 20);
             this.lblConfirmPasswordSignal.TabIndex = 22;
@@ -198,7 +224,7 @@
             // 
             this.lblNewPasswordSignal.AutoSize = true;
             this.lblNewPasswordSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNewPasswordSignal.Location = new System.Drawing.Point(219, 268);
+            this.lblNewPasswordSignal.Location = new System.Drawing.Point(227, 262);
             this.lblNewPasswordSignal.Name = "lblNewPasswordSignal";
             this.lblNewPasswordSignal.Size = new System.Drawing.Size(13, 20);
             this.lblNewPasswordSignal.TabIndex = 21;
@@ -208,7 +234,7 @@
             // 
             this.lblUsernameSignal.AutoSize = true;
             this.lblUsernameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblUsernameSignal.Location = new System.Drawing.Point(219, 218);
+            this.lblUsernameSignal.Location = new System.Drawing.Point(227, 212);
             this.lblUsernameSignal.Name = "lblUsernameSignal";
             this.lblUsernameSignal.Size = new System.Drawing.Size(13, 20);
             this.lblUsernameSignal.TabIndex = 20;
@@ -218,7 +244,7 @@
             // 
             this.lblNameSignal.AutoSize = true;
             this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNameSignal.Location = new System.Drawing.Point(219, 166);
+            this.lblNameSignal.Location = new System.Drawing.Point(227, 160);
             this.lblNameSignal.Name = "lblNameSignal";
             this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
             this.lblNameSignal.TabIndex = 19;
@@ -228,7 +254,7 @@
             // 
             this.lblCNICSignal.AutoSize = true;
             this.lblCNICSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblCNICSignal.Location = new System.Drawing.Point(619, 117);
+            this.lblCNICSignal.Location = new System.Drawing.Point(627, 111);
             this.lblCNICSignal.Name = "lblCNICSignal";
             this.lblCNICSignal.Size = new System.Drawing.Size(13, 20);
             this.lblCNICSignal.TabIndex = 18;
@@ -238,7 +264,7 @@
             // 
             this.lblDesignationSingal.AutoSize = true;
             this.lblDesignationSingal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblDesignationSingal.Location = new System.Drawing.Point(219, 114);
+            this.lblDesignationSingal.Location = new System.Drawing.Point(227, 108);
             this.lblDesignationSingal.Name = "lblDesignationSingal";
             this.lblDesignationSingal.Size = new System.Drawing.Size(13, 20);
             this.lblDesignationSingal.TabIndex = 1;
@@ -247,7 +273,7 @@
             // rtxtbxHomeAddress
             // 
             this.rtxtbxHomeAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtbxHomeAddress.Location = new System.Drawing.Point(619, 288);
+            this.rtxtbxHomeAddress.Location = new System.Drawing.Point(627, 282);
             this.rtxtbxHomeAddress.Name = "rtxtbxHomeAddress";
             this.rtxtbxHomeAddress.Size = new System.Drawing.Size(203, 72);
             this.rtxtbxHomeAddress.TabIndex = 10;
@@ -257,7 +283,7 @@
             // rdbtnFemale
             // 
             this.rdbtnFemale.AutoSize = true;
-            this.rdbtnFemale.Location = new System.Drawing.Point(697, 141);
+            this.rdbtnFemale.Location = new System.Drawing.Point(705, 135);
             this.rdbtnFemale.Name = "rdbtnFemale";
             this.rdbtnFemale.Size = new System.Drawing.Size(80, 24);
             this.rdbtnFemale.TabIndex = 7;
@@ -269,7 +295,7 @@
             // 
             this.rdbtnMale.AutoSize = true;
             this.rdbtnMale.Checked = true;
-            this.rdbtnMale.Location = new System.Drawing.Point(618, 141);
+            this.rdbtnMale.Location = new System.Drawing.Point(626, 135);
             this.rdbtnMale.Name = "rdbtnMale";
             this.rdbtnMale.Size = new System.Drawing.Size(61, 24);
             this.rdbtnMale.TabIndex = 6;
@@ -283,7 +309,7 @@
             this.btnCreateAccount.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAccount.ForeColor = System.Drawing.Color.White;
-            this.btnCreateAccount.Location = new System.Drawing.Point(558, 412);
+            this.btnCreateAccount.Location = new System.Drawing.Point(566, 406);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(200, 30);
             this.btnCreateAccount.TabIndex = 13;
@@ -297,7 +323,7 @@
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(340, 412);
+            this.btnClear.Location = new System.Drawing.Point(348, 406);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(200, 30);
             this.btnClear.TabIndex = 12;
@@ -311,7 +337,7 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(134, 412);
+            this.btnClose.Location = new System.Drawing.Point(142, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 30);
             this.btnClose.TabIndex = 11;
@@ -321,7 +347,7 @@
             // 
             // txtbxCNIC
             // 
-            this.txtbxCNIC.Location = new System.Drawing.Point(619, 88);
+            this.txtbxCNIC.Location = new System.Drawing.Point(627, 82);
             this.txtbxCNIC.Name = "txtbxCNIC";
             this.txtbxCNIC.Size = new System.Drawing.Size(203, 26);
             this.txtbxCNIC.TabIndex = 5;
@@ -329,7 +355,7 @@
             // 
             // txtbxConfirmPassword
             // 
-            this.txtbxConfirmPassword.Location = new System.Drawing.Point(219, 288);
+            this.txtbxConfirmPassword.Location = new System.Drawing.Point(227, 282);
             this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
             this.txtbxConfirmPassword.Size = new System.Drawing.Size(180, 26);
             this.txtbxConfirmPassword.TabIndex = 4;
@@ -338,7 +364,7 @@
             // 
             // txtbxNewPassowrd
             // 
-            this.txtbxNewPassowrd.Location = new System.Drawing.Point(219, 239);
+            this.txtbxNewPassowrd.Location = new System.Drawing.Point(227, 233);
             this.txtbxNewPassowrd.Name = "txtbxNewPassowrd";
             this.txtbxNewPassowrd.Size = new System.Drawing.Size(180, 26);
             this.txtbxNewPassowrd.TabIndex = 3;
@@ -347,7 +373,7 @@
             // 
             // txtbxEmailAddress
             // 
-            this.txtbxEmailAddress.Location = new System.Drawing.Point(619, 240);
+            this.txtbxEmailAddress.Location = new System.Drawing.Point(627, 234);
             this.txtbxEmailAddress.Name = "txtbxEmailAddress";
             this.txtbxEmailAddress.Size = new System.Drawing.Size(203, 26);
             this.txtbxEmailAddress.TabIndex = 9;
@@ -355,7 +381,7 @@
             // 
             // txtbxUsername
             // 
-            this.txtbxUsername.Location = new System.Drawing.Point(219, 189);
+            this.txtbxUsername.Location = new System.Drawing.Point(227, 183);
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
             this.txtbxUsername.TabIndex = 2;
@@ -363,7 +389,7 @@
             // 
             // txtbxContactNumber
             // 
-            this.txtbxContactNumber.Location = new System.Drawing.Point(619, 190);
+            this.txtbxContactNumber.Location = new System.Drawing.Point(627, 184);
             this.txtbxContactNumber.Name = "txtbxContactNumber";
             this.txtbxContactNumber.Size = new System.Drawing.Size(203, 26);
             this.txtbxContactNumber.TabIndex = 8;
@@ -371,7 +397,7 @@
             // 
             // txtbxName
             // 
-            this.txtbxName.Location = new System.Drawing.Point(219, 137);
+            this.txtbxName.Location = new System.Drawing.Point(227, 131);
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.Size = new System.Drawing.Size(203, 26);
             this.txtbxName.TabIndex = 1;
@@ -380,7 +406,7 @@
             // lblCNIC
             // 
             this.lblCNIC.AutoSize = true;
-            this.lblCNIC.Location = new System.Drawing.Point(445, 94);
+            this.lblCNIC.Location = new System.Drawing.Point(453, 88);
             this.lblCNIC.Name = "lblCNIC";
             this.lblCNIC.Size = new System.Drawing.Size(55, 20);
             this.lblCNIC.TabIndex = 2;
@@ -389,7 +415,7 @@
             // lblHomeAddress
             // 
             this.lblHomeAddress.AutoSize = true;
-            this.lblHomeAddress.Location = new System.Drawing.Point(445, 286);
+            this.lblHomeAddress.Location = new System.Drawing.Point(453, 280);
             this.lblHomeAddress.Name = "lblHomeAddress";
             this.lblHomeAddress.Size = new System.Drawing.Size(123, 20);
             this.lblHomeAddress.TabIndex = 2;
@@ -398,7 +424,7 @@
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(69, 241);
+            this.lblNewPassword.Location = new System.Drawing.Point(77, 235);
             this.lblNewPassword.Name = "lblNewPassword";
             this.lblNewPassword.Size = new System.Drawing.Size(121, 20);
             this.lblNewPassword.TabIndex = 2;
@@ -407,7 +433,7 @@
             // lblEmailAddress
             // 
             this.lblEmailAddress.AutoSize = true;
-            this.lblEmailAddress.Location = new System.Drawing.Point(445, 238);
+            this.lblEmailAddress.Location = new System.Drawing.Point(453, 232);
             this.lblEmailAddress.Name = "lblEmailAddress";
             this.lblEmailAddress.Size = new System.Drawing.Size(119, 20);
             this.lblEmailAddress.TabIndex = 2;
@@ -417,7 +443,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(69, 192);
+            this.lblUsername.Location = new System.Drawing.Point(77, 186);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(95, 20);
             this.lblUsername.TabIndex = 2;
@@ -427,7 +453,7 @@
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(69, 290);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(77, 284);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(145, 20);
             this.lblConfirmPassword.TabIndex = 2;
@@ -436,7 +462,7 @@
             // lblContactNumber
             // 
             this.lblContactNumber.AutoSize = true;
-            this.lblContactNumber.Location = new System.Drawing.Point(445, 190);
+            this.lblContactNumber.Location = new System.Drawing.Point(453, 184);
             this.lblContactNumber.Name = "lblContactNumber";
             this.lblContactNumber.Size = new System.Drawing.Size(133, 20);
             this.lblContactNumber.TabIndex = 2;
@@ -445,7 +471,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(69, 143);
+            this.lblName.Location = new System.Drawing.Point(77, 137);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(59, 20);
             this.lblName.TabIndex = 2;
@@ -454,7 +480,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(445, 142);
+            this.label6.Location = new System.Drawing.Point(453, 136);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 2;
@@ -463,7 +489,7 @@
             // lblDesignation
             // 
             this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Location = new System.Drawing.Point(69, 94);
+            this.lblDesignation.Location = new System.Drawing.Point(77, 88);
             this.lblDesignation.Name = "lblDesignation";
             this.lblDesignation.Size = new System.Drawing.Size(102, 20);
             this.lblDesignation.TabIndex = 2;
@@ -478,7 +504,7 @@
             "CEO",
             "Employee",
             "Rider"});
-            this.cmbxDesignation.Location = new System.Drawing.Point(219, 86);
+            this.cmbxDesignation.Location = new System.Drawing.Point(227, 80);
             this.cmbxDesignation.Name = "cmbxDesignation";
             this.cmbxDesignation.Size = new System.Drawing.Size(203, 28);
             this.cmbxDesignation.Sorted = true;
@@ -489,43 +515,17 @@
             // 
             this.lblSignUp.AutoSize = true;
             this.lblSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignUp.Location = new System.Drawing.Point(377, 22);
+            this.lblSignUp.Location = new System.Drawing.Point(388, 22);
             this.lblSignUp.Name = "lblSignUp";
             this.lblSignUp.Size = new System.Drawing.Size(136, 39);
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "SignUp";
             // 
-            // btnShowPassword
-            // 
-            this.btnShowPassword.FlatAppearance.BorderSize = 0;
-            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPassword.Image")));
-            this.btnShowPassword.Location = new System.Drawing.Point(402, 240);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(20, 24);
-            this.btnShowPassword.TabIndex = 31;
-            this.btnShowPassword.UseVisualStyleBackColor = true;
-            this.btnShowPassword.MouseLeave += new System.EventHandler(this.btnShowPassword_MouseLeave);
-            this.btnShowPassword.MouseHover += new System.EventHandler(this.btnShowPassword_MouseHover);
-            // 
-            // btnShowPasswrd2
-            // 
-            this.btnShowPasswrd2.FlatAppearance.BorderSize = 0;
-            this.btnShowPasswrd2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowPasswrd2.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPasswrd2.Image")));
-            this.btnShowPasswrd2.Location = new System.Drawing.Point(402, 290);
-            this.btnShowPasswrd2.Name = "btnShowPasswrd2";
-            this.btnShowPasswrd2.Size = new System.Drawing.Size(20, 24);
-            this.btnShowPasswrd2.TabIndex = 32;
-            this.btnShowPasswrd2.UseVisualStyleBackColor = true;
-            this.btnShowPasswrd2.MouseLeave += new System.EventHandler(this.btnShowPasswrd2_MouseLeave);
-            this.btnShowPasswrd2.MouseHover += new System.EventHandler(this.btnShowPasswrd2_MouseHover);
-            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 501);
+            this.ClientSize = new System.Drawing.Size(930, 540);
             this.Controls.Add(this.gbx);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
