@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="BL\Compnay.cs" />
     <Compile Include="BL\CEO.cs" />
+    <Compile Include="BL\Crediationals.cs" />
+    <Compile Include="DL\CrediationalsDL.cs" />
     <Compile Include="FilesPaths\FilePath.cs" />
     <Compile Include="Forms\Product\frmAddProduct.cs">
       <SubType>Form</SubType>

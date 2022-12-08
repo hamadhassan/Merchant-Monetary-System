@@ -15,6 +15,7 @@ namespace Merchant_Monetary_System
         protected string emailAddress;
         protected int contactNumber;
         protected string homeAddress;
+        private Crediationals crediational;
 
         public string Designation { get => designation; set => designation = value; }
         public string Name { get => name; set => name = value; }
@@ -23,8 +24,9 @@ namespace Merchant_Monetary_System
         public string EmailAddress { get => emailAddress; set => emailAddress = value; }
         public int ContactNumber { get => contactNumber; set => contactNumber = value; }
         public string HomeAddress { get => homeAddress; set => homeAddress = value; }
+        public Crediationals Crediational { get => crediational; set => crediational = value; }
 
-        public Users(string designation, string name, string gender, double cnic, string emailAddress, int contactNumber, string homeAddress)
+        public Users(string designation, string name, string gender, double cnic, string emailAddress, int contactNumber, string homeAddress,Crediationals crediational)
         {
             this.designation = designation;
             this.name = name;
@@ -33,7 +35,9 @@ namespace Merchant_Monetary_System
             this.emailAddress = emailAddress;
             this.contactNumber = contactNumber;
             this.homeAddress = homeAddress;
+            this.crediational = crediational;
         }
+       
     }
 }
 

@@ -300,7 +300,7 @@ namespace Merchant_Monetary_System
             {//Store Record into file and open login form
                 string designation=cmbxDesignation.Text;
                 string name=txtbxName.Text;
-                string gender = " ";
+                string gender;
                 if (rdbtnFemale.Checked == true)
                 {
                      gender = rdbtnFemale.Text;
@@ -313,9 +313,12 @@ namespace Merchant_Monetary_System
                 string emailAddress=txtbxEmailAddress.Text;
                 int contactNumber=Convert.ToInt32(txtbxContactNumber.Text);
                 string homeAddress=rtxtbxHomeAddress.Text;
-                Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress);
+                string username = txtbxUsername.Text;
+                string password = txtbxNewPassowrd.Text;
+                Crediationals crediational = new Crediationals(username, password);
+                Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress,crediational);
                 UsersDL.UsersList.Add(user);
-                UsersDL.storeRecordIntoFile(user, FilePath.Users);
+                //UsersDL.storeRecordIntoFile(user, FilePath.Users);
                 
                 frmLogin frmLogin = new frmLogin();
                 frmLogin.Show();
