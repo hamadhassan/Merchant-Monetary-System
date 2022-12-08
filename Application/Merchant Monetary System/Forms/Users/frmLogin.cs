@@ -24,7 +24,17 @@ namespace Merchant_Monetary_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {//respective dashboard will be open 
-            
+            string designation = cmbxDesignation.Text;
+            string username = txtbxUsername.Text;
+            string password = txtbxPassowrd.Text;
+            if(UsersDL.isUserCrediationalMatch(designation, username, password))
+            {//authorize to enter into the system 
+                MessageBox.Show("authorize");
+            }
+            else
+            {
+                lblPasswordSignal.Text = "Invalid Crediationals";
+            }
         }
 
         private void btnForgetPassword_Click(object sender, EventArgs e)
@@ -60,6 +70,21 @@ namespace Merchant_Monetary_System
         private void btnShowPassword_MouseLeave(object sender, EventArgs e)
         {
             txtbxPassowrd.UseSystemPasswordChar = true;
+        }
+
+        private void txtbxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbxPassowrd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxDesignation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

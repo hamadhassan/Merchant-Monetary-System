@@ -54,22 +54,16 @@ namespace Merchant_Monetary_System
         {
             usersList.Clear();
         }
-        public static string parseData(string record, int field)
-        {
-            int comma = 1;
-            string item = "";
-            for (int x = 0; x < record.Length; x++)
+        public static bool isUserCrediationalMatch(string designation, string username, string password)
+        {// the user enter data matched with the database result
+            foreach (Users user in usersList)
             {
-                if (record[x] == ',')
+                if (designation == user.Designation && username == user.Crediational.Username && password == user.Crediational.Password)
                 {
-                    comma++;
-                }
-                else if (comma == field)
-                {
-                    item = item + record[x];
+                    return true;
                 }
             }
-            return item;
+            return false;
         }
     }
 }

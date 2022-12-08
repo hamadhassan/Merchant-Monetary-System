@@ -21,47 +21,32 @@ namespace Merchant_Monetary_System
             file.Close();
 
         }
-        public static bool loadRecordFromFile(string path)
-        {
-            clearList();
-            if (File.Exists(path))
-            {
-                StreamReader fileVariable = new StreamReader(path);
-                string record;
-                while ((record = fileVariable.ReadLine()) != null)
-                {
-                    string username= parseData(record, 1);
-                    string password=parseData(record,2) ;
-                    crediationalsList.Add(new Crediationals(username, password));
-                }
-                fileVariable.Close();
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //public static bool loadRecordFromFile(string path)
+        //{
+        //    clearList();
+        //    if (File.Exists(path))
+        //    {
+        //        StreamReader fileVariable = new StreamReader(path);
+        //        string record;
+        //        while ((record = fileVariable.ReadLine()) != null)
+        //        {
+        //            string username= parseData(record, 1);
+        //            string password=parseData(record,2) ;
+        //            crediationalsList.Add(new Crediationals(username, password));
+        //        }
+        //        fileVariable.Close();
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
         public static void clearList()
         {
             crediationalsList.Clear();
         }
-        public static string parseData(string record, int field)
-        {
-            int comma = 1;
-            string item = "";
-            for (int x = 0; x < record.Length; x++)
-            {
-                if (record[x] == ',')
-                {
-                    comma++;
-                }
-                else if (comma == field)
-                {
-                    item = item + record[x];
-                }
-            }
-            return item;
-        }
+       
+       
     }
 }
