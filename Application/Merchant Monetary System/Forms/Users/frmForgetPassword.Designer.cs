@@ -49,6 +49,16 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblDataStoredSignal = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btnAddWarehouseManager = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +75,16 @@
             // 
             // gbx
             // 
+            this.gbx.Controls.Add(this.button6);
+            this.gbx.Controls.Add(this.button7);
+            this.gbx.Controls.Add(this.button8);
+            this.gbx.Controls.Add(this.button9);
+            this.gbx.Controls.Add(this.btnAddWarehouseManager);
+            this.gbx.Controls.Add(this.button3);
+            this.gbx.Controls.Add(this.btnAddEmployee);
+            this.gbx.Controls.Add(this.button4);
+            this.gbx.Controls.Add(this.button2);
+            this.gbx.Controls.Add(this.button5);
             this.gbx.Controls.Add(this.lblDataStoredSignal);
             this.gbx.Controls.Add(this.btnUpdate);
             this.gbx.Controls.Add(this.btnClearAll);
@@ -288,6 +308,156 @@
             this.lblDataStoredSignal.TabIndex = 54;
             this.lblDataStoredSignal.Text = " ";
             // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(32, 462);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(194, 46);
+            this.button6.TabIndex = 64;
+            this.button6.Text = "Clear All";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(32, 416);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(194, 46);
+            this.button7.TabIndex = 63;
+            this.button7.Text = " h";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(32, 370);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(194, 46);
+            this.button8.TabIndex = 62;
+            this.button8.Text = " ";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(32, 324);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(194, 46);
+            this.button9.TabIndex = 61;
+            this.button9.Text = "h";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // btnAddWarehouseManager
+            // 
+            this.btnAddWarehouseManager.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAddWarehouseManager.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddWarehouseManager.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddWarehouseManager.FlatAppearance.BorderSize = 0;
+            this.btnAddWarehouseManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddWarehouseManager.ForeColor = System.Drawing.Color.Black;
+            this.btnAddWarehouseManager.Location = new System.Drawing.Point(32, 94);
+            this.btnAddWarehouseManager.Name = "btnAddWarehouseManager";
+            this.btnAddWarehouseManager.Size = new System.Drawing.Size(194, 46);
+            this.btnAddWarehouseManager.TabIndex = 56;
+            this.btnAddWarehouseManager.Text = "AddWarehouseManager";
+            this.btnAddWarehouseManager.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(32, 278);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(194, 46);
+            this.button3.TabIndex = 60;
+            this.button3.Text = " f";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAddEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddEmployee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.Black;
+            this.btnAddEmployee.Location = new System.Drawing.Point(32, 48);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(194, 46);
+            this.btnAddEmployee.TabIndex = 55;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(32, 232);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(194, 46);
+            this.button4.TabIndex = 59;
+            this.button4.Text = " h";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(32, 140);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(194, 46);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "k";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(32, 186);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(194, 46);
+            this.button5.TabIndex = 58;
+            this.button5.Text = " h";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // frmForgetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -329,5 +499,15 @@
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblDataStoredSignal;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnAddWarehouseManager;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
     }
 }

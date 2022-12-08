@@ -27,6 +27,8 @@ namespace Merchant_Monetary_System
                 if(UsersDL.setPassword(cmbxDesignation.Text, txtbxUsername.Text, txtbxConfirmPassword.Text)==true)
                 {
                     lblDataStoredSignal.Text = "Passeword successfully updated";
+                    clearField();
+                    cmbxDesignation.Focus();
                 }
                 else
                 {
@@ -34,12 +36,15 @@ namespace Merchant_Monetary_System
                 }
             }
         }
-
-        private void btnClearAll_Click(object sender, EventArgs e)
+        private void clearField()
         {
             txtbxUsername.Clear();
             txtbxPassowrd.Clear();
             txtbxConfirmPassword.Clear();
+        }
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            clearField();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

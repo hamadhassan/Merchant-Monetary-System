@@ -59,7 +59,6 @@ namespace Merchant_Monetary_System
                 {
                     user.Crediational.Password=newPassword;
                     return true;
-                    MessageBox.Show("coorect");
                 }
             }
             return false;
