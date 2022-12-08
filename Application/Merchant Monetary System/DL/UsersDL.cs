@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Merchant_Monetary_System;
+using System.Windows.Forms;
 
 namespace Merchant_Monetary_System
 {
@@ -23,33 +24,7 @@ namespace Merchant_Monetary_System
             file.Close();
 
         }
-        //public static bool loadRecordFromFile(string path)
-        //{
-            //clearList();
-            //if (File.Exists(path))
-            //{
-            //    StreamReader fileVariable = new StreamReader(path);
-            //    string record;
-            //    while ((record = fileVariable.ReadLine()) != null)
-            //    {
-            //        string designation =parseData(record,1);
-            //        string name=parseData(record,2);
-            //        string gender = parseData(record, 3);
-            //        double cnic =Convert.ToInt64(parseData(record, 4));
-            //        string emailAddress = parseData(record, 5);
-            //        int contactNumber =Convert.ToInt32( parseData(record, 6));
-            //        string homeAddress = parseData(record, 7);
-            //        Users users = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress);
-            //        usersList.Add(users);
-            //    }
-            //    fileVariable.Close();
-            //    return true;
-            //}
-            //else
-            //{
-            //    return false;
-            //}
-        //}
+       
         public static void clearList()
         {
             usersList.Clear();
@@ -65,5 +40,56 @@ namespace Merchant_Monetary_System
             }
             return false;
         }
+        public static bool isUsernameExit(string username)
+        {
+            foreach (Users user in usersList)
+            {
+                if (username == user.Crediational.Username)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool setPassword(string designation, string username,string newPassword)
+        {
+            foreach (Users user in usersList)
+            {
+                if (designation == user.Designation && username == user.Crediational.Username)
+                {
+                    user.Crediational.Password=newPassword;
+                    return true;
+                    MessageBox.Show("coorect");
+                }
+            }
+            return false;
+        }
+        //public static bool loadRecordFromFile(string path)
+        //{
+        //clearList();
+        //if (File.Exists(path))
+        //{
+        //    StreamReader fileVariable = new StreamReader(path);
+        //    string record;
+        //    while ((record = fileVariable.ReadLine()) != null)
+        //    {
+        //        string designation =parseData(record,1);
+        //        string name=parseData(record,2);
+        //        string gender = parseData(record, 3);
+        //        double cnic =Convert.ToInt64(parseData(record, 4));
+        //        string emailAddress = parseData(record, 5);
+        //        int contactNumber =Convert.ToInt32( parseData(record, 6));
+        //        string homeAddress = parseData(record, 7);
+        //        Users users = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress);
+        //        usersList.Add(users);
+        //    }
+        //    fileVariable.Close();
+        //    return true;
+        //}
+        //else
+        //{
+        //    return false;
+        //}
+        //}
     }
 }

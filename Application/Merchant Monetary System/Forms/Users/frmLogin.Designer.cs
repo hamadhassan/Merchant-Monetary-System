@@ -171,7 +171,7 @@
             this.txtbxPassowrd.Size = new System.Drawing.Size(180, 26);
             this.txtbxPassowrd.TabIndex = 2;
             this.txtbxPassowrd.UseSystemPasswordChar = true;
-            this.txtbxPassowrd.TextChanged += new System.EventHandler(this.txtbxPassowrd_TextChanged);
+            this.txtbxPassowrd.Leave += new System.EventHandler(this.txtbxPassowrd_Leave);
             // 
             // txtbxUsername
             // 
@@ -180,6 +180,7 @@
             this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
             this.txtbxUsername.TabIndex = 1;
             this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
+            this.txtbxUsername.Leave += new System.EventHandler(this.txtbxUsername_Leave);
             // 
             // lblNewPassword
             // 
@@ -223,7 +224,6 @@
             this.cmbxDesignation.Name = "cmbxDesignation";
             this.cmbxDesignation.Size = new System.Drawing.Size(203, 28);
             this.cmbxDesignation.TabIndex = 0;
-            this.cmbxDesignation.SelectedIndexChanged += new System.EventHandler(this.cmbxDesignation_SelectedIndexChanged);
             this.cmbxDesignation.Leave += new System.EventHandler(this.cmbxDesignation_Leave);
             // 
             // frmLogin

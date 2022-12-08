@@ -31,6 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForgetPassword));
             this.lblSignIn = new System.Windows.Forms.Label();
             this.gbx = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnClearAll = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblConfirmPasswordSignal = new System.Windows.Forms.Label();
+            this.btnShowConfirmPassword = new System.Windows.Forms.Button();
+            this.txtbxConfirmPassword = new System.Windows.Forms.TextBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.lblPasswordSignal = new System.Windows.Forms.Label();
             this.lblDesignationSingal = new System.Windows.Forms.Label();
             this.btnShowPassword = new System.Windows.Forms.Button();
@@ -41,13 +48,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
-            this.lblConfirmPasswordSignal = new System.Windows.Forms.Label();
-            this.btnShowConfirmPassword = new System.Windows.Forms.Button();
-            this.txtbxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.lblConfirmPassword = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnClearAll = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.lblDataStoredSignal = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,9 +65,10 @@
             // 
             // gbx
             // 
+            this.gbx.Controls.Add(this.lblDataStoredSignal);
             this.gbx.Controls.Add(this.btnUpdate);
             this.gbx.Controls.Add(this.btnClearAll);
-            this.gbx.Controls.Add(this.btnExit);
+            this.gbx.Controls.Add(this.btnBack);
             this.gbx.Controls.Add(this.lblConfirmPasswordSignal);
             this.gbx.Controls.Add(this.btnShowConfirmPassword);
             this.gbx.Controls.Add(this.txtbxConfirmPassword);
@@ -89,6 +91,89 @@
             this.gbx.Size = new System.Drawing.Size(904, 512);
             this.gbx.TabIndex = 49;
             this.gbx.TabStop = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(581, 280);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(211, 30);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnClearAll
+            // 
+            this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(97)))), ((int)(((byte)(139)))));
+            this.btnClearAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClearAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearAll.ForeColor = System.Drawing.Color.White;
+            this.btnClearAll.Location = new System.Drawing.Point(348, 280);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(211, 30);
+            this.btnClearAll.TabIndex = 7;
+            this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.UseVisualStyleBackColor = false;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(112, 280);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(211, 30);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblConfirmPasswordSignal
+            // 
+            this.lblConfirmPasswordSignal.AutoSize = true;
+            this.lblConfirmPasswordSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblConfirmPasswordSignal.Location = new System.Drawing.Point(631, 215);
+            this.lblConfirmPasswordSignal.Name = "lblConfirmPasswordSignal";
+            this.lblConfirmPasswordSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblConfirmPasswordSignal.TabIndex = 53;
+            this.lblConfirmPasswordSignal.Text = " ";
+            // 
+            // btnShowConfirmPassword
+            // 
+            this.btnShowConfirmPassword.FlatAppearance.BorderSize = 0;
+            this.btnShowConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowConfirmPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowConfirmPassword.Image")));
+            this.btnShowConfirmPassword.Location = new System.Drawing.Point(815, 186);
+            this.btnShowConfirmPassword.Name = "btnShowConfirmPassword";
+            this.btnShowConfirmPassword.Size = new System.Drawing.Size(20, 24);
+            this.btnShowConfirmPassword.TabIndex = 5;
+            this.btnShowConfirmPassword.UseVisualStyleBackColor = true;
+            this.btnShowConfirmPassword.MouseLeave += new System.EventHandler(this.btnShowConfirmPassword_MouseLeave);
+            this.btnShowConfirmPassword.MouseHover += new System.EventHandler(this.btnShowConfirmPassword_MouseHover);
+            // 
+            // txtbxConfirmPassword
+            // 
+            this.txtbxConfirmPassword.Location = new System.Drawing.Point(632, 185);
+            this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
+            this.txtbxConfirmPassword.Size = new System.Drawing.Size(180, 26);
+            this.txtbxConfirmPassword.TabIndex = 4;
+            this.txtbxConfirmPassword.UseSystemPasswordChar = true;
+            this.txtbxConfirmPassword.TextChanged += new System.EventHandler(this.txtbxConfirmPassword_TextChanged);
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Location = new System.Drawing.Point(465, 187);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(145, 20);
+            this.lblConfirmPassword.TabIndex = 50;
+            this.lblConfirmPassword.Text = "Confirm Password :";
             // 
             // lblPasswordSignal
             // 
@@ -148,6 +233,7 @@
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
             this.txtbxUsername.TabIndex = 1;
+            this.txtbxUsername.Leave += new System.EventHandler(this.txtbxUsername_Leave);
             // 
             // lblNewPassword
             // 
@@ -193,88 +279,14 @@
             this.cmbxDesignation.TabIndex = 0;
             this.cmbxDesignation.Leave += new System.EventHandler(this.cmbxDesignation_Leave);
             // 
-            // lblConfirmPasswordSignal
+            // lblDataStoredSignal
             // 
-            this.lblConfirmPasswordSignal.AutoSize = true;
-            this.lblConfirmPasswordSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblConfirmPasswordSignal.Location = new System.Drawing.Point(631, 215);
-            this.lblConfirmPasswordSignal.Name = "lblConfirmPasswordSignal";
-            this.lblConfirmPasswordSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblConfirmPasswordSignal.TabIndex = 53;
-            this.lblConfirmPasswordSignal.Text = " ";
-            // 
-            // btnShowConfirmPassword
-            // 
-            this.btnShowConfirmPassword.FlatAppearance.BorderSize = 0;
-            this.btnShowConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowConfirmPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowConfirmPassword.Image")));
-            this.btnShowConfirmPassword.Location = new System.Drawing.Point(815, 186);
-            this.btnShowConfirmPassword.Name = "btnShowConfirmPassword";
-            this.btnShowConfirmPassword.Size = new System.Drawing.Size(20, 24);
-            this.btnShowConfirmPassword.TabIndex = 5;
-            this.btnShowConfirmPassword.UseVisualStyleBackColor = true;
-            this.btnShowConfirmPassword.MouseLeave += new System.EventHandler(this.btnShowConfirmPassword_MouseLeave);
-            this.btnShowConfirmPassword.MouseHover += new System.EventHandler(this.btnShowConfirmPassword_MouseHover);
-            // 
-            // txtbxConfirmPassword
-            // 
-            this.txtbxConfirmPassword.Location = new System.Drawing.Point(632, 185);
-            this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
-            this.txtbxConfirmPassword.Size = new System.Drawing.Size(180, 26);
-            this.txtbxConfirmPassword.TabIndex = 4;
-            this.txtbxConfirmPassword.UseSystemPasswordChar = true;
-            this.txtbxConfirmPassword.TextChanged += new System.EventHandler(this.txtbxConfirmPassword_TextChanged);
-            // 
-            // lblConfirmPassword
-            // 
-            this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(465, 187);
-            this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(145, 20);
-            this.lblConfirmPassword.TabIndex = 50;
-            this.lblConfirmPassword.Text = "Confirm Password :";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(581, 280);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(211, 30);
-            this.btnUpdate.TabIndex = 8;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnClearAll
-            // 
-            this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(97)))), ((int)(((byte)(139)))));
-            this.btnClearAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnClearAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearAll.ForeColor = System.Drawing.Color.White;
-            this.btnClearAll.Location = new System.Drawing.Point(348, 280);
-            this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(211, 30);
-            this.btnClearAll.TabIndex = 7;
-            this.btnClearAll.Text = "Clear All";
-            this.btnClearAll.UseVisualStyleBackColor = false;
-            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(112, 280);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(211, 30);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.lblDataStoredSignal.AutoSize = true;
+            this.lblDataStoredSignal.Location = new System.Drawing.Point(344, 237);
+            this.lblDataStoredSignal.Name = "lblDataStoredSignal";
+            this.lblDataStoredSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblDataStoredSignal.TabIndex = 54;
+            this.lblDataStoredSignal.Text = " ";
             // 
             // frmForgetPassword
             // 
@@ -315,6 +327,7 @@
         private System.Windows.Forms.ComboBox cmbxDesignation;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClearAll;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblDataStoredSignal;
     }
 }

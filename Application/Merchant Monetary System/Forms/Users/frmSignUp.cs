@@ -69,6 +69,11 @@ namespace Merchant_Monetary_System
                 lblUsernameSignal.Text = "Allowed characters: a-z, A-Z, 0-9";
                 isUsername = true;
             }
+            else if(txtbxUsername.Text.Length <= 2)
+            {//length greater than 3
+                lblUsernameSignal.Text = "Username must 3 characters long";
+                isUsername = true;
+            }
             else
             {//ready for storage or action
                 lblUsernameSignal.Text = " ";
@@ -83,8 +88,6 @@ namespace Merchant_Monetary_System
             bool isUppercase = false;
             bool isNumber = false;
             bool isSpecialChar = false;
-            bool isLength = false;
-            int count = 0;
             int i;
             char[] specialCharactor = { '@', '#', '$', '%', '^', '&', '+', '=','_','!'};
             
@@ -127,14 +130,6 @@ namespace Merchant_Monetary_System
                     }
                 }
             }
-            foreach (char c in txtbxNewPassowrd.Text)
-            {
-                count++;
-                if (count >= 8)
-                {
-                    isLength = true;
-                }
-            }
             if (txtbxNewPassowrd.Text == string.Empty)
             {// check is empty
                 lblNewPasswordSignal.Text = "Enter the password";
@@ -155,7 +150,7 @@ namespace Merchant_Monetary_System
             {//check isSpecial charactor
                 lblNewPasswordSignal.Text = "Include least one special charactor";
             }
-            else if (!(isLength== true))
+            else if (txtbxNewPassowrd.Text.Length< 8)
             {//check is lenght >8
                 lblNewPasswordSignal.Text = "Password must 8 characters long";
             }

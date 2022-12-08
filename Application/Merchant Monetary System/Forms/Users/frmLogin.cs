@@ -17,6 +17,9 @@ namespace Merchant_Monetary_System
             InitializeComponent();
         }
 
+        bool isUsername=true;
+        bool isPassword=true;
+        bool isDesignation=true;
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -33,7 +36,8 @@ namespace Merchant_Monetary_System
             }
             else
             {
-                lblPasswordSignal.Text = "Invalid Crediationals";
+                lblUsernameSignal.Text = "Invalid Username";
+                lblPasswordSignal.Text = "Invalid Password";
             }
         }
 
@@ -74,17 +78,32 @@ namespace Merchant_Monetary_System
 
         private void txtbxUsername_TextChanged(object sender, EventArgs e)
         {
-
+            lblUsernameSignal.Text = " ";
         }
 
-        private void txtbxPassowrd_TextChanged(object sender, EventArgs e)
-        {
-
+        private void txtbxUsername_Leave(object sender, EventArgs e)
+        {//Username must be enter 
+            if (txtbxUsername.Text.Length <= 2)
+            {
+                lblUsernameSignal.Text = "Enter Correct Username";
+            }
+            else
+            {
+                lblUsernameSignal.Text = " ";
+            }
         }
 
-        private void cmbxDesignation_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtbxPassowrd_Leave(object sender, EventArgs e)
         {
-
+            //Password must be enter 
+            if (txtbxPassowrd.Text.Length < 8)
+            {
+                lblPasswordSignal.Text = "Enter Correct Password";
+            }
+            else
+            {
+                lblPasswordSignal.Text = " ";
+            }
         }
     }
 }

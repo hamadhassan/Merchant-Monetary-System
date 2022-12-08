@@ -16,11 +16,23 @@ namespace Merchant_Monetary_System
         {
             InitializeComponent();
         }
+        bool isDesignation=true;
+        bool isUsername=true;
         bool isPassword = true;
         bool isPasswordConfirm = true;
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            if(isPassword==false && isPasswordConfirm == false && isUsername==false && isDesignation== false)
+            {
+                if(UsersDL.setPassword(cmbxDesignation.Text, txtbxUsername.Text, txtbxConfirmPassword.Text)==true)
+                {
+                    lblDataStoredSignal.Text = "Passeword successfully updated";
+                }
+                else
+                {
+                    lblDataStoredSignal.Text = "There is an error while updating the data";
+                }
+            }
         }
 
         private void btnClearAll_Click(object sender, EventArgs e)
@@ -30,9 +42,12 @@ namespace Merchant_Monetary_System
             txtbxConfirmPassword.Clear();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+            this.Hide();
+
         }
 
         private void cmbxDesignation_Leave(object sender, EventArgs e)
@@ -44,6 +59,7 @@ namespace Merchant_Monetary_System
             else
             {
                 lblDesignationSingal.Text = " ";
+                isDesignation = false;
             }
         }
 
@@ -79,8 +95,6 @@ namespace Merchant_Monetary_System
             bool isUppercase = false;
             bool isNumber = false;
             bool isSpecialChar = false;
-            bool isLength = false;
-            int count = 0;
             int i;
             char[] specialCharactor = { '@', '#', '$', '%', '^', '&', '+', '=', '_', '!' };
 
@@ -123,14 +137,7 @@ namespace Merchant_Monetary_System
                     }
                 }
             }
-            foreach (char c in newPassword)
-            {
-                count++;
-                if (count >= 8)
-                {
-                    isLength = true;
-                }
-            }
+           
             if (newPassword == string.Empty)
             {// check is empty
                 lblPasswordSignal.Text = "Enter the password";
@@ -151,7 +158,7 @@ namespace Merchant_Monetary_System
             {//check isSpecial charactor
                 lblPasswordSignal.Text = "Include least one special charactor";
             }
-            else if (!(isLength == true))
+            else if (newPassword.Length < 8)
             {//check is lenght >8
                 lblPasswordSignal.Text = "Password must 8 characters long";
             }
@@ -171,6 +178,19 @@ namespace Merchant_Monetary_System
             else
             {
                 lblConfirmPasswordSignal.Text = "Password is not matched";
+            }
+        }
+
+        private void txtbxUsername_Leave(object sender, EventArgs e)
+        {
+            if (!(UsersDL.isUsernameExit(txtbxUsername.Text)))
+            {
+                lblUsernameSignal.Text = "Enter correct username";
+            }
+            else
+            {
+                lblUsernameSignal.Text = " ";
+                isUsername = false;
             }
         }
     }
