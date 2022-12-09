@@ -34,3 +34,4 @@ C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetar
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.pdb
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Product.frmAddProduct.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCEODashboard.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAccountDetails.resources

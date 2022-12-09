@@ -26,5 +26,31 @@ namespace Merchant_Monetary_System
         {
 
         }
+        public void loadform(object Form)
+        {
+            if (this.pParent.Controls.Count > 0)
+                this.pParent.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.pParent.Controls.Add(f);
+            this.pParent.Tag = f;
+            f.Show();
+        }
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            loadform(new frmForgetPassword());
+
+        }
+
+        private void frmCEODashboard_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void viewAccountsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAccountDetails());
+        }
     }
 }
