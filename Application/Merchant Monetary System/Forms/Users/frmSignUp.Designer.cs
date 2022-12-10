@@ -69,11 +69,13 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
+            this.lblRecordSignal = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbx
             // 
+            this.gbx.Controls.Add(this.lblRecordSignal);
             this.gbx.Controls.Add(this.btnShowPasswrd2);
             this.gbx.Controls.Add(this.btnShowPassword);
             this.gbx.Controls.Add(this.lblHomeAddressSignal);
@@ -118,6 +120,7 @@
             this.gbx.Size = new System.Drawing.Size(906, 516);
             this.gbx.TabIndex = 0;
             this.gbx.TabStop = false;
+            this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
             // 
             // btnShowPasswrd2
             // 
@@ -315,6 +318,7 @@
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
+            this.btnCreateAccount.MouseLeave += new System.EventHandler(this.btnCreateAccount_MouseLeave);
             // 
             // btnClear
             // 
@@ -518,6 +522,15 @@
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "SignUp";
             // 
+            // lblRecordSignal
+            // 
+            this.lblRecordSignal.AutoSize = true;
+            this.lblRecordSignal.Location = new System.Drawing.Point(291, 379);
+            this.lblRecordSignal.Name = "lblRecordSignal";
+            this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblRecordSignal.TabIndex = 33;
+            this.lblRecordSignal.Text = " ";
+            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -579,5 +592,6 @@
         private System.Windows.Forms.Label lblHomeAddressSignal;
         private System.Windows.Forms.Button btnShowPasswrd2;
         private System.Windows.Forms.Button btnShowPassword;
+        private System.Windows.Forms.Label lblRecordSignal;
     }
 }

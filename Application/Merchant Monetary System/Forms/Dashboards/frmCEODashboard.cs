@@ -48,7 +48,7 @@ namespace Merchant_Monetary_System
             //The following block will be deleted after testing
             //---------------------------------
             loadform(new frmAccountDetails());
-            Crediationals crediational = new Crediationals("1", "1");
+            Crediationals crediational = new Crediationals("123", "1");
             Users user = new Users("CEO", "abc", "male", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", crediational);
             UsersDL.UsersList.Add(user);
             //--------------------------------

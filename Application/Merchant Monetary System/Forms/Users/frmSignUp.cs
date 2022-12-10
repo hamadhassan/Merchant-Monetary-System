@@ -57,10 +57,8 @@ namespace Merchant_Monetary_System
          
            
         }
-
         private void txtbxName_TextChanged(object sender, EventArgs e)
         {
-
             int i;
             if (txtbxName.Text == string.Empty)
             {// check is empty
@@ -340,12 +338,25 @@ namespace Merchant_Monetary_System
                 string password = txtbxNewPassowrd.Text;
                 Crediationals crediational = new Crediationals(username, password);
                 Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress,crediational);
-                UsersDL.UsersList.Add(user);
-                //UsersDL.storeRecordIntoFile(user, FilePath.Users);
-                
-                frmLogin frmLogin = new frmLogin();
-                frmLogin.Show();
-                this.Hide();
+                if (previousObj != null)
+                {
+                    if (UsersDL.updateRecord(user))
+                    {
+                        lblRecordSignal.Text = "Account successfully updated";
+                    }
+                    else
+                    {
+                        lblRecordSignal.Text = "There is an error while updating the data";
+                    }
+                }
+                else
+                {
+                    UsersDL.UsersList.Add(user);
+                    //UsersDL.storeRecordIntoFile(user, FilePath.Users);
+                    frmLogin frmLogin = new frmLogin();
+                    frmLogin.Show();
+                    this.Hide();
+                }
             }
             else
             {
@@ -395,6 +406,16 @@ namespace Merchant_Monetary_System
         private void btnShowPasswrd2_MouseLeave(object sender, EventArgs e)
         {
             txtbxConfirmPassword.UseSystemPasswordChar = true;
+        }
+
+        private void gbx_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateAccount_MouseLeave(object sender, EventArgs e)
+        {
+            lblRecordSignal.Text = " ";
         }
     }
 }

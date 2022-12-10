@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Merchant_Monetary_System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Merchant_Monetary_System
 {
@@ -22,7 +23,6 @@ namespace Merchant_Monetary_System
                 +","+record.ContactNumber+","+record.EmailAddress+","+record.HomeAddress);
             file.Flush();
             file.Close();
-
         }
        
         public static void clearList()
@@ -58,6 +58,25 @@ namespace Merchant_Monetary_System
                 if (designation == user.Designation && username == user.Crediational.Username)
                 {
                     user.Crediational.Password=newPassword;
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool updateRecord(Users updatedUser)
+        {
+            foreach (Users user in usersList)
+            {
+                if (updatedUser.Crediational.Username == user.Crediational.Username)
+                {
+                    user.Designation = updatedUser.Designation;
+                    user.Name=updatedUser.Name;
+                    user.Crediational.Password =updatedUser.Crediational.Password;
+                    user.Cnic = updatedUser.Cnic;
+                    user.Gender = updatedUser.Gender;
+                    user.ContactNumber = updatedUser.ContactNumber;
+                    user.EmailAddress = updatedUser.EmailAddress;
+                    user.HomeAddress = updatedUser.HomeAddress;
                     return true;
                 }
             }

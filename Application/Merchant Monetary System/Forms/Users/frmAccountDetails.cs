@@ -53,7 +53,7 @@ namespace Merchant_Monetary_System
             }
             else
             {
-                lblDatagvSignal.Text = "Select a record from the above table";
+                lblDatagvSignal.Text = "Select a row from the above table";
             }
         }
 

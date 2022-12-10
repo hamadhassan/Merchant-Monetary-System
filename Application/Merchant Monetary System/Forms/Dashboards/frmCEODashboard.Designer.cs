@@ -60,8 +60,8 @@
             this.toolStriplblDate = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
-            this.pParent = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.pParent = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -401,18 +401,22 @@
             this.toolStriplblTime.Size = new System.Drawing.Size(33, 22);
             this.toolStriplblTime.Text = "Time";
             // 
-            // pParent
-            // 
-            this.pParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pParent.Location = new System.Drawing.Point(213, 29);
-            this.pParent.Name = "pParent";
-            this.pParent.Size = new System.Drawing.Size(931, 545);
-            this.pParent.TabIndex = 5;
-            // 
             // timer
             // 
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // pParent
+            // 
+            this.pParent.ColumnCount = 1;
+            this.pParent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pParent.Location = new System.Drawing.Point(213, 29);
+            this.pParent.Name = "pParent";
+            this.pParent.RowCount = 1;
+            this.pParent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pParent.Size = new System.Drawing.Size(931, 545);
+            this.pParent.TabIndex = 5;
             // 
             // frmCEODashboard
             // 
@@ -426,7 +430,6 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
             this.Name = "frmCEODashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CEO Dashboard";
@@ -473,10 +476,10 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStriplblAllRight;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.Panel pParent;
         private System.Windows.Forms.ToolStripLabel toolStriplblDate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStriplblTime;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.TableLayoutPanel pParent;
     }
 }
