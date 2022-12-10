@@ -78,6 +78,7 @@
             this.gbx.Size = new System.Drawing.Size(906, 516);
             this.gbx.TabIndex = 2;
             this.gbx.TabStop = false;
+            this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
             // 
             // btnLogin
             // 
@@ -228,6 +229,7 @@
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 540);

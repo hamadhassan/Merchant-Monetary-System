@@ -75,12 +75,6 @@
     <Compile Include="Forms\Users\frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Users\frmViewAndDeleteAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Users\frmViewAndDeleteAccount.Designer.cs">
-      <DependentUpon>frmViewAndDeleteAccount.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Users\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +98,12 @@
     </Compile>
     <Compile Include="Forms\Users\frmAccountDetails.Designer.cs">
       <DependentUpon>frmAccountDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboards\frmEmployeeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboards\frmEmployeeDashboard.Designer.cs">
+      <DependentUpon>frmEmployeeDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,8 +133,8 @@
     <EmbeddedResource Include="Forms\Users\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users\frmViewAndDeleteAccount.resx">
-      <DependentUpon>frmViewAndDeleteAccount.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dashboards\frmEmployeeDashboard.resx">
+      <DependentUpon>frmEmployeeDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

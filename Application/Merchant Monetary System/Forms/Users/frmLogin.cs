@@ -37,6 +37,14 @@ namespace Merchant_Monetary_System
                     frmCEODashboard.Show();
                     this.Hide();
                 }
+                else if (cmbxDesignation.SelectedIndex == 2)
+                {
+                    frmEmployeeDashboard frmEmployeeDashboard = new frmEmployeeDashboard();
+                    frmEmployeeDashboard.Show();
+                    this.Hide();
+                   
+                }
+
             }
             else
             {
@@ -56,7 +64,16 @@ namespace Merchant_Monetary_System
         private void frmLogin_Load(object sender, EventArgs e)
         {
             cmbxDesignation.SelectedIndex = 0;
-            
+            //The following block will be deleted after testing
+            //--------------------------------
+            Crediationals crediational = new Crediationals("123", "1");
+            Users user = new Users("CEO", "abc", "male", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", crediational);
+            UsersDL.UsersList.Add(user);
+            Crediationals crediational2 = new Crediationals("123", "1");
+            Users user2 = new Users("Employee", "abc", "Female", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", crediational2);
+            UsersDL.UsersList.Add(user2);
+            //--------------------------------
+
         }
 
         private void cmbxDesignation_Leave(object sender, EventArgs e)
@@ -109,6 +126,11 @@ namespace Merchant_Monetary_System
             {
                 lblPasswordSignal.Text = " ";
             }
+        }
+
+        private void gbx_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

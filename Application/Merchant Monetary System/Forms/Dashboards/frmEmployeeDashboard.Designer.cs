@@ -1,6 +1,6 @@
 ﻿namespace Merchant_Monetary_System
 {
-    partial class frmCEODashboard
+    partial class frmEmployeeDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -41,9 +41,9 @@
             this.warehouseMangerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnForgotPassword = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnAddWarehouseManger = new System.Windows.Forms.Button();
             this.btnAddRider = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
@@ -52,18 +52,17 @@
             this.btnViewOrder = new System.Windows.Forms.Button();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.btnSendEmail = new System.Windows.Forms.Button();
-            this.ptoolStrip = new System.Windows.Forms.Panel();
+            this.tParent = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStriplblAllRight = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStriplblDate = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.pParent = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.ptoolStrip.SuspendLayout();
+            this.tParent.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +82,7 @@
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
             this.menuStrip.Size = new System.Drawing.Size(1144, 29);
-            this.menuStrip.TabIndex = 0;
+            this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
             // optionToolStripMenuItem
@@ -106,16 +105,15 @@
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
-            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // riderToolStripMenuItem
             // 
@@ -159,22 +157,6 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // btnAddEmployee
-            // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddEmployee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
-            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.Black;
-            this.btnAddEmployee.Location = new System.Drawing.Point(3, 3);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(207, 55);
-            this.btnAddEmployee.TabIndex = 58;
-            this.btnAddEmployee.Text = "Add Employee";
-            this.btnAddEmployee.UseVisualStyleBackColor = false;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddWarehouseManager_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -204,8 +186,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999969F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.00007F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(213, 572);
-            this.tableLayoutPanel1.TabIndex = 3;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // btnForgotPassword
             // 
@@ -221,7 +202,21 @@
             this.btnForgotPassword.TabIndex = 64;
             this.btnForgotPassword.Text = "-";
             this.btnForgotPassword.UseVisualStyleBackColor = false;
-            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddEmployee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.Black;
+            this.btnAddEmployee.Location = new System.Drawing.Point(3, 3);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(207, 55);
+            this.btnAddEmployee.TabIndex = 58;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
             // 
             // btnAddWarehouseManger
             // 
@@ -343,35 +338,40 @@
             this.btnSendEmail.Text = "Send Email";
             this.btnSendEmail.UseVisualStyleBackColor = false;
             // 
-            // ptoolStrip
+            // tParent
             // 
-            this.ptoolStrip.Controls.Add(this.toolStrip);
-            this.ptoolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ptoolStrip.Location = new System.Drawing.Point(213, 574);
-            this.ptoolStrip.Name = "ptoolStrip";
-            this.ptoolStrip.Size = new System.Drawing.Size(931, 27);
-            this.ptoolStrip.TabIndex = 4;
+            this.tParent.ColumnCount = 1;
+            this.tParent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tParent.Controls.Add(this.toolStrip, 0, 1);
+            this.tParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tParent.Location = new System.Drawing.Point(213, 29);
+            this.tParent.Name = "tParent";
+            this.tParent.RowCount = 2;
+            this.tParent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.09097F));
+            this.tParent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.909029F));
+            this.tParent.Size = new System.Drawing.Size(931, 572);
+            this.tParent.TabIndex = 6;
+            this.tParent.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // toolStrip
             // 
-            this.toolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStriplblAllRight,
+            this.toolStripLabel1,
             this.toolStripSeparator1,
             this.toolStriplblDate,
             this.toolStripSeparator2,
             this.toolStriplblTime});
-            this.toolStrip.Location = new System.Drawing.Point(0, 2);
+            this.toolStrip.Location = new System.Drawing.Point(0, 543);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(931, 25);
             this.toolStrip.TabIndex = 0;
             this.toolStrip.Text = "toolStrip1";
             // 
-            // toolStriplblAllRight
+            // toolStripLabel1
             // 
-            this.toolStriplblAllRight.Name = "toolStriplblAllRight";
-            this.toolStriplblAllRight.Size = new System.Drawing.Size(271, 22);
-            this.toolStriplblAllRight.Text = "All right reserved with Merchant Monetary System";
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(271, 22);
+            this.toolStripLabel1.Text = "All right reserved with Merchant Monetary System";
             // 
             // toolStripSeparator1
             // 
@@ -381,8 +381,8 @@
             // toolStriplblDate
             // 
             this.toolStriplblDate.Name = "toolStriplblDate";
-            this.toolStriplblDate.Size = new System.Drawing.Size(34, 22);
-            this.toolStriplblDate.Text = "Date ";
+            this.toolStriplblDate.Size = new System.Drawing.Size(31, 22);
+            this.toolStriplblDate.Text = "Date";
             // 
             // toolStripSeparator2
             // 
@@ -400,40 +400,24 @@
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // pParent
-            // 
-            this.pParent.ColumnCount = 1;
-            this.pParent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pParent.Location = new System.Drawing.Point(213, 29);
-            this.pParent.Name = "pParent";
-            this.pParent.RowCount = 1;
-            this.pParent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pParent.Size = new System.Drawing.Size(931, 545);
-            this.pParent.TabIndex = 5;
-            // 
-            // frmCEODashboard
+            // frmEmployeeDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 601);
-            this.Controls.Add(this.pParent);
-            this.Controls.Add(this.ptoolStrip);
+            this.Controls.Add(this.tParent);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
-            this.Name = "frmCEODashboard";
+            this.Name = "frmEmployeeDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CEO Dashboard";
-            this.Load += new System.EventHandler(this.frmCEODashboard_Load);
+            this.Text = "Employee Dashboard";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.ptoolStrip.ResumeLayout(false);
-            this.ptoolStrip.PerformLayout();
+            this.tParent.ResumeLayout(false);
+            this.tParent.PerformLayout();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -445,6 +429,9 @@
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem signUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewAccountsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem riderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
@@ -452,8 +439,9 @@
         private System.Windows.Forms.ToolStripMenuItem warehouseMangerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnForgotPassword;
+        private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Button btnAddWarehouseManger;
         private System.Windows.Forms.Button btnAddRider;
         private System.Windows.Forms.Button btnAddProduct;
@@ -462,18 +450,13 @@
         private System.Windows.Forms.Button btnViewOrder;
         private System.Windows.Forms.Button btnAddStock;
         private System.Windows.Forms.Button btnSendEmail;
-        private System.Windows.Forms.Button btnForgotPassword;
-        private System.Windows.Forms.Panel ptoolStrip;
-        private System.Windows.Forms.ToolStripMenuItem signUpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewAccountsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tParent;
         private System.Windows.Forms.ToolStrip toolStrip;
-        private System.Windows.Forms.ToolStripLabel toolStriplblAllRight;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStriplblDate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStriplblTime;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.TableLayoutPanel pParent;
     }
 }

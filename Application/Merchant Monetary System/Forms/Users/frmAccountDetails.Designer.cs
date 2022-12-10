@@ -46,7 +46,6 @@
             this.lblAccountDetails = new System.Windows.Forms.Label();
             this.btnLoadRecords = new System.Windows.Forms.Button();
             this.lblDatagvSignal = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvAccountDetails)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +69,6 @@
             this.gbx.Controls.Add(this.lblDesignation);
             this.gbx.Controls.Add(this.cmbxDesignation);
             this.gbx.Controls.Add(this.lblAccountDetails);
-            this.gbx.Controls.Add(this.tableLayoutPanel1);
             this.gbx.Location = new System.Drawing.Point(12, 12);
             this.gbx.Name = "gbx";
             this.gbx.Size = new System.Drawing.Size(906, 516);
@@ -118,6 +116,7 @@
             this.btnDelete.TabIndex = 53;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // datagvAccountDetails
             // 
@@ -269,7 +268,7 @@
             this.btnLoadRecords.Location = new System.Drawing.Point(386, 276);
             this.btnLoadRecords.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoadRecords.Name = "btnLoadRecords";
-            this.btnLoadRecords.Size = new System.Drawing.Size(134, 26);
+            this.btnLoadRecords.Size = new System.Drawing.Size(114, 26);
             this.btnLoadRecords.TabIndex = 56;
             this.btnLoadRecords.Text = "Load Records";
             this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -286,31 +285,9 @@
             this.lblDatagvSignal.TabIndex = 57;
             this.lblDatagvSignal.Text = " ";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.88389F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.02485F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.41292F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.62435F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.94443F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.15834F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.951228F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.007579F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.511369F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.928667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.09776F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.942974F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(900, 491);
-            this.tableLayoutPanel1.TabIndex = 58;
-            // 
             // frmAccountDetails
             // 
+            this.AcceptButton = this.btnGo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 540);
@@ -349,6 +326,5 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnLoadRecords;
         private System.Windows.Forms.Label lblDatagvSignal;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

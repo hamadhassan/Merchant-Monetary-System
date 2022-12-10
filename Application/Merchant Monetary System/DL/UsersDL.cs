@@ -24,7 +24,20 @@ namespace Merchant_Monetary_System
             file.Flush();
             file.Close();
         }
-       
+        public static List<Users> getUsersListExceptCEO()
+        {
+            
+            List<Users> usersListExceptCEO = new List<Users>();
+            foreach (Users user in usersList)
+            {
+                if (!(user.Designation== "CEO"))
+                {
+                    usersListExceptCEO.Add(user);
+                }
+            }
+            clearList();
+            return usersListExceptCEO;
+        }
         public static void clearList()
         {
             usersList.Clear();
@@ -77,6 +90,18 @@ namespace Merchant_Monetary_System
                     user.ContactNumber = updatedUser.ContactNumber;
                     user.EmailAddress = updatedUser.EmailAddress;
                     user.HomeAddress = updatedUser.HomeAddress;
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool deleteRecord(Users deleteUser)
+        {
+            foreach (Users user in usersList)
+            {
+                if (deleteUser.Crediational.Username == user.Crediational.Username)
+                {
+                    usersList.Remove(user);
                     return true;
                 }
             }

@@ -12,17 +12,26 @@ namespace Merchant_Monetary_System
 {
     public partial class frmAccountDetails : Form
     {
+        bool isCEO=false; //check which user enter into the system
         public frmAccountDetails()
         {
             InitializeComponent();
         }
-
+        public frmAccountDetails(bool isCEO)
+        {
+            InitializeComponent();
+            this.isCEO = isCEO;
+        }
         private void frmAccountDetails_Load(object sender, EventArgs e)
         {
+            if (isCEO ==false)
+            {//employee is login into the system
+                cmbxDesignation.Items.RemoveAt(0);
+            }
             cmbxDesignation.SelectedIndex = 0;
             cmbxAttributes.SelectedIndex = 0;
             cmbxFiliter.SelectedIndex = 0;
-            
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -32,7 +41,14 @@ namespace Merchant_Monetary_System
         public void DataBind()
         {
             datagvAccountDetails.DataSource = null;
-            datagvAccountDetails.DataSource = UsersDL.UsersList;
+            if (isCEO==true)
+            {//CEO is login into the system
+                datagvAccountDetails.DataSource = UsersDL.UsersList;
+            }
+            else if(isCEO==false)
+            {//employee is login into the system
+                datagvAccountDetails.DataSource = UsersDL.getUsersListExceptCEO();
+            }
             datagvAccountDetails.Refresh();
         }
 
@@ -48,8 +64,13 @@ namespace Merchant_Monetary_System
             if (datagvAccountDetails.SelectedRows.Count == 1)
             {
                 Users currentObj = (Users)datagvAccountDetails.CurrentRow.DataBoundItem;
-                frmSignUp frmSignUp=new frmSignUp(currentObj);
+                frmSignUp frmSignUp;
+                if (isCEO)
+                    frmSignUp = new frmSignUp(currentObj, true);  
+                else
+                   frmSignUp = new frmSignUp(currentObj, false);
                 frmSignUp.ShowDialog();
+                DataBind();
             }
             else
             {
@@ -60,6 +81,20 @@ namespace Merchant_Monetary_System
         private void btnEdit_MouseLeave(object sender, EventArgs e)
         {
             lblDatagvSignal.Text = " ";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (datagvAccountDetails.SelectedRows.Count == 1)
+            {
+                Users currentObj = (Users)datagvAccountDetails.CurrentRow.DataBoundItem;
+                UsersDL.deleteRecord(currentObj);
+                DataBind();
+            }
+            else
+            {
+                lblDatagvSignal.Text = "Select a row from the above table";
+            }
         }
     }
 }

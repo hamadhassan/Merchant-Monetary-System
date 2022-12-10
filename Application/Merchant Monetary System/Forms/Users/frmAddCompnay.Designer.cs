@@ -35,13 +35,13 @@
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.rtxtbxAddress = new System.Windows.Forms.RichTextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.btnCreateAccount = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAddressSignal = new System.Windows.Forms.Label();
             this.lblContactNumberSignal = new System.Windows.Forms.Label();
             this.lblNameSignal = new System.Windows.Forms.Label();
-            this.lblAddressSignal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,19 +109,19 @@
             this.lblAddress.TabIndex = 11;
             this.lblAddress.Text = "Address :";
             // 
-            // btnCreateAccount
+            // btnNext
             // 
-            this.btnCreateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.btnCreateAccount.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateAccount.ForeColor = System.Drawing.Color.White;
-            this.btnCreateAccount.Location = new System.Drawing.Point(566, 308);
-            this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(200, 30);
-            this.btnCreateAccount.TabIndex = 2;
-            this.btnCreateAccount.Text = "Next";
-            this.btnCreateAccount.UseVisualStyleBackColor = false;
-            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(566, 308);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(200, 30);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnClear
             // 
@@ -156,7 +156,7 @@
             this.groupBox1.Controls.Add(this.lblAddressSignal);
             this.groupBox1.Controls.Add(this.lblContactNumberSignal);
             this.groupBox1.Controls.Add(this.lblNameSignal);
-            this.groupBox1.Controls.Add(this.btnCreateAccount);
+            this.groupBox1.Controls.Add(this.btnNext);
             this.groupBox1.Controls.Add(this.lblAddress);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnClose);
@@ -168,6 +168,16 @@
             this.groupBox1.Size = new System.Drawing.Size(906, 516);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
+            // 
+            // lblAddressSignal
+            // 
+            this.lblAddressSignal.AutoSize = true;
+            this.lblAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblAddressSignal.Location = new System.Drawing.Point(211, 253);
+            this.lblAddressSignal.Name = "lblAddressSignal";
+            this.lblAddressSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblAddressSignal.TabIndex = 20;
+            this.lblAddressSignal.Text = " ";
             // 
             // lblContactNumberSignal
             // 
@@ -189,18 +199,9 @@
             this.lblNameSignal.TabIndex = 17;
             this.lblNameSignal.Text = " ";
             // 
-            // lblAddressSignal
-            // 
-            this.lblAddressSignal.AutoSize = true;
-            this.lblAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblAddressSignal.Location = new System.Drawing.Point(211, 253);
-            this.lblAddressSignal.Name = "lblAddressSignal";
-            this.lblAddressSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblAddressSignal.TabIndex = 20;
-            this.lblAddressSignal.Text = " ";
-            // 
             // frmAddCompnay
             // 
+            this.AcceptButton = this.btnNext;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 540);
@@ -230,7 +231,7 @@
         private System.Windows.Forms.Label lblContactNumber;
         private System.Windows.Forms.RichTextBox rtxtbxAddress;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Button btnCreateAccount;
+        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox groupBox1;

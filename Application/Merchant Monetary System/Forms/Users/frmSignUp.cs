@@ -13,17 +13,26 @@ namespace Merchant_Monetary_System
 {
     public partial class frmSignUp : Form
     {
-        Users previousObj= null;
+        Users previousObj= null;//this is used for edit button
+        bool isCEO=false;//if isCEO true then all task of CEO implemented else Employee
+        int roleId = 0; //0 for First time create account, 1 for CEO and 2 for Employee
         public frmSignUp()
         {
             InitializeComponent();
         }
-        public frmSignUp(Users previousObj)
-        {
+        public frmSignUp(Users previousObj,bool isCEO)
+        {//This is used check whose is user and perform action according to it. 
             InitializeComponent();
             this.previousObj= previousObj;
+            this.isCEO= isCEO;
         }
-        bool isName=true;
+        public frmSignUp(int roleId)
+        {//This is used in dashboards for check open login form or not 
+            InitializeComponent();
+            this.roleId = roleId;
+        }
+        //--------------Check is field is filled and user this information for action--------
+        bool isName=true; 
         bool isUsername = true;
         bool isPassword = true;
         bool isPasswordConfirm=true;
@@ -31,6 +40,7 @@ namespace Merchant_Monetary_System
         bool isEmail = true;
         bool isPhone = true;
         bool isAddress = true;
+        //------------------------------------------------------------------------------------
         private void frmSignUp_Load(object sender, EventArgs e)
         {
             if (previousObj != null)
@@ -48,11 +58,14 @@ namespace Merchant_Monetary_System
                 txtbxEmailAddress.Text = previousObj.EmailAddress;
                 txtbxContactNumber.Text = previousObj.ContactNumber.ToString();
                 rtxtbxHomeAddress.Text = previousObj.HomeAddress;
-                txtbxUsername.Enabled = false;
                 lblSignUp.Text = "Update Account Information";
                 lblSignUp.Left -=130;
                 btnCreateAccount.Text = "Update";
-                
+                txtbxUsername.Enabled = false;
+                if (isCEO==false)
+                {//Employee is enter into the sytem then it not able to change the the assign role of worker
+                    cmbxDesignation.Enabled = false;
+                }
             }
          
            
@@ -190,7 +203,7 @@ namespace Merchant_Monetary_System
         private void txtbxConfirmPassword_TextChanged(object sender, EventArgs e)
         {
             if(txtbxConfirmPassword.Text == txtbxNewPassowrd.Text)
-            {
+            {//match the password
                isPasswordConfirm=false;
                 lblConfirmPasswordSignal.Text = " ";
             }
@@ -352,10 +365,14 @@ namespace Merchant_Monetary_System
                 else
                 {
                     UsersDL.UsersList.Add(user);
+                    if (roleId==0)
+                    {
+                        frmLogin frmLogin = new frmLogin();
+                        frmLogin.Show();
+                        this.Hide();
+                    }
                     //UsersDL.storeRecordIntoFile(user, FilePath.Users);
-                    frmLogin frmLogin = new frmLogin();
-                    frmLogin.Show();
-                    this.Hide();
+                    
                 }
             }
             else
@@ -389,22 +406,22 @@ namespace Merchant_Monetary_System
             
         }
         private void btnShowPassword_MouseHover(object sender, EventArgs e)
-        {
+        { //hide password
             txtbxNewPassowrd.UseSystemPasswordChar = false;
         }
 
         private void btnShowPassword_MouseLeave(object sender, EventArgs e)
-        {
+        {//show password
             txtbxNewPassowrd.UseSystemPasswordChar = true;
         }
 
         private void btnShowPasswrd2_MouseHover(object sender, EventArgs e)
-        {
+        {//hide password
             txtbxConfirmPassword.UseSystemPasswordChar = false;
         }
 
         private void btnShowPasswrd2_MouseLeave(object sender, EventArgs e)
-        {
+        {//show password
             txtbxConfirmPassword.UseSystemPasswordChar = true;
         }
 
@@ -414,7 +431,7 @@ namespace Merchant_Monetary_System
         }
 
         private void btnCreateAccount_MouseLeave(object sender, EventArgs e)
-        {
+        {//remove signals
             lblRecordSignal.Text = " ";
         }
     }
