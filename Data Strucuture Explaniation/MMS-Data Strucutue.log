@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  10 DEC 2022 18:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.11.26)  10 DEC 2022 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -140,60 +140,45 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {C:/Users/Hammad Hassan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./UE
 TLogo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+[]|\OT1/cmr/m/n/12 U01,U02,U03,U04,U05,U06,U07,U08,U09,U010,U11,U12,U13,U14,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
 []|\OT1/cmr/bx/n/12 Data Struc-ture
  []
 
 
-Overfull \hbox (90.44406pt too wide) in paragraph at lines 41--89
+Overfull \hbox (90.44406pt too wide) in paragraph at lines 41--84
  [] 
  []
 
 
-Overfull \hbox (90.44406pt too wide) in paragraph at lines 41--89
+Overfull \hbox (90.44406pt too wide) in paragraph at lines 41--84
  [] 
  []
 
 [2
 
-] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
-[]|\OT1/cmr/bx/n/12 Data Struc-
- []
-
-
-Underfull \hbox (badness 2409) in paragraph at lines 94--94
-[]|\OT1/cmr/m/n/12 In the U04 (Ac-count De-tails), Grid of the
- []
-
-
-Overfull \hbox (63.56335pt too wide) in paragraph at lines 91--120
-[][]
- []
-
-
-Overfull \hbox (45.93854pt too wide) in paragraph at lines 91--120
-[] 
- []
-
-[4] [5] (MMS-Data Strucutue.aux) ) 
+] [3] (MMS-Data Strucutue.aux) ) 
 Here is how much of TeX's memory you used:
- 1460 strings out of 475284
- 25414 string characters out of 2770292
- 378886 words of memory out of 3000000
- 22972 multiletter control sequences out of 15000+600000
- 473821 words of font info for 43 fonts, out of 8000000 for 9000
+ 1458 strings out of 475284
+ 25379 string characters out of 2770292
+ 377886 words of memory out of 3000000
+ 22970 multiletter control sequences out of 15000+600000
+ 473215 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,62p,498b,198s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/Hammad Hassan/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hammad Hassan/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/H
-ammad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Users/Hammad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb>
-Output written on "MMS-Data Strucutue.pdf" (5 pages, 85137 bytes).
+ 55i,9n,62p,573b,204s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/Hammad Hassan/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Hammad Hassan/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Ham
+mad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><C:/Users/Hammad Hassan/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb>
+Output written on "MMS-Data Strucutue.pdf" (3 pages, 79880 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
