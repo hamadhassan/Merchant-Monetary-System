@@ -13,9 +13,15 @@ namespace Merchant_Monetary_System
 {
     public partial class frmSignUp : Form
     {
+        Users previousObj= null;
         public frmSignUp()
         {
             InitializeComponent();
+        }
+        public frmSignUp(Users previousObj)
+        {
+            InitializeComponent();
+            this.previousObj= previousObj;
         }
         bool isName=true;
         bool isUsername = true;
@@ -27,7 +33,29 @@ namespace Merchant_Monetary_System
         bool isAddress = true;
         private void frmSignUp_Load(object sender, EventArgs e)
         {
-            cmbxDesignation.SelectedIndex = 0;
+            if (previousObj != null)
+            {
+                cmbxDesignation.Text = previousObj.Designation;
+                txtbxName.Text = previousObj.Name;
+                txtbxUsername.Text = previousObj.Crediational.Username;
+                txtbxNewPassowrd.Text = previousObj.Crediational.Password;
+                txtbxConfirmPassword.Text = previousObj.Crediational.Password;
+                txtbxCNIC.Text = previousObj.Cnic.ToString();
+                if (previousObj.Gender == "Male")
+                    rdbtnMale.Checked=true;
+                else
+                    rdbtnFemale.Checked=true;
+                txtbxEmailAddress.Text = previousObj.EmailAddress;
+                txtbxContactNumber.Text = previousObj.ContactNumber.ToString();
+                rtxtbxHomeAddress.Text = previousObj.HomeAddress;
+                txtbxUsername.Enabled = false;
+                lblSignUp.Text = "Update Account Information";
+                lblSignUp.Left -=130;
+                btnCreateAccount.Text = "Update";
+                
+            }
+         
+           
         }
 
         private void txtbxName_TextChanged(object sender, EventArgs e)
@@ -324,11 +352,9 @@ namespace Merchant_Monetary_System
                 MessageBox.Show("All field must be filled correctly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void btnClear_Click(object sender, EventArgs e)
+        private void clearField()
         {
             txtbxName.Clear();
-            txtbxUsername.Clear();
             txtbxNewPassowrd.Clear();
             txtbxConfirmPassword.Clear();
             txtbxCNIC.Clear();
@@ -336,6 +362,19 @@ namespace Merchant_Monetary_System
             txtbxEmailAddress.Clear();
             rtxtbxHomeAddress.Clear();
             txtbxCNIC.Clear();
+        }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            if (previousObj != null)
+            {
+                clearField();
+            }
+            else
+            {
+                clearField();
+                txtbxUsername.Clear();
+            }
+            
             
         }
         private void btnShowPassword_MouseHover(object sender, EventArgs e)

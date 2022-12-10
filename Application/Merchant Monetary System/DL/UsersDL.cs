@@ -14,7 +14,7 @@ namespace Merchant_Monetary_System
         private static List<Users> usersList=new List<Users>();
 
         public static List<Users> UsersList { get => usersList; set => usersList = value; }
-       
+        
         public static void storeRecordIntoFile(Users record, string path)
         {
             StreamWriter file = new StreamWriter(path, true);

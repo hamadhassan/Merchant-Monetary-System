@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,9 +55,13 @@
             this.btnSendEmail = new System.Windows.Forms.Button();
             this.ptoolStrip = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStriplblAllRight = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStriplblDate = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.pParent = new System.Windows.Forms.Panel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -357,24 +362,44 @@
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripSeparator1});
+            this.toolStriplblAllRight,
+            this.toolStripSeparator1,
+            this.toolStriplblDate,
+            this.toolStripSeparator2,
+            this.toolStriplblTime});
             this.toolStrip1.Location = new System.Drawing.Point(0, 2);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(931, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // toolStriplblAllRight
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(271, 22);
-            this.toolStripLabel1.Text = "All right reserved with Merchant Monetary System";
+            this.toolStriplblAllRight.Name = "toolStriplblAllRight";
+            this.toolStriplblAllRight.Size = new System.Drawing.Size(271, 22);
+            this.toolStriplblAllRight.Text = "All right reserved with Merchant Monetary System";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStriplblDate
+            // 
+            this.toolStriplblDate.Name = "toolStriplblDate";
+            this.toolStriplblDate.Size = new System.Drawing.Size(34, 22);
+            this.toolStriplblDate.Text = "Date ";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStriplblTime
+            // 
+            this.toolStriplblTime.Name = "toolStriplblTime";
+            this.toolStriplblTime.Size = new System.Drawing.Size(33, 22);
+            this.toolStriplblTime.Text = "Time";
             // 
             // pParent
             // 
@@ -383,6 +408,11 @@
             this.pParent.Name = "pParent";
             this.pParent.Size = new System.Drawing.Size(931, 545);
             this.pParent.TabIndex = 5;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // frmCEODashboard
             // 
@@ -396,6 +426,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "frmCEODashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CEO Dashboard";
@@ -440,8 +471,12 @@
         private System.Windows.Forms.ToolStripMenuItem viewAccountsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStriplblAllRight;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Panel pParent;
+        private System.Windows.Forms.ToolStripLabel toolStriplblDate;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripLabel toolStriplblTime;
+        private System.Windows.Forms.Timer timer;
     }
 }

@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Xml.Linq;
 
 namespace Merchant_Monetary_System
 {
@@ -16,10 +19,6 @@ namespace Merchant_Monetary_System
         {
             InitializeComponent();
         }
-
-        bool isUsername=true;
-        bool isPassword=true;
-        bool isDesignation=true;
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -32,7 +31,12 @@ namespace Merchant_Monetary_System
             string password = txtbxPassowrd.Text;
             if(UsersDL.isUserCrediationalMatch(designation, username, password))
             {//authorize to enter into the system 
-                MessageBox.Show("authorize");
+                if (cmbxDesignation.SelectedIndex == 1)
+                {
+                    frmCEODashboard frmCEODashboard = new frmCEODashboard();
+                    frmCEODashboard.Show();
+                    this.Hide();
+                }
             }
             else
             {
@@ -52,6 +56,7 @@ namespace Merchant_Monetary_System
         private void frmLogin_Load(object sender, EventArgs e)
         {
             cmbxDesignation.SelectedIndex = 0;
+            
         }
 
         private void cmbxDesignation_Leave(object sender, EventArgs e)

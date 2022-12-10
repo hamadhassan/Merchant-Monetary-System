@@ -45,12 +45,24 @@ namespace Merchant_Monetary_System
 
         private void frmCEODashboard_Load(object sender, EventArgs e)
         {
-           
+            //The following block will be deleted after testing
+            //---------------------------------
+            loadform(new frmAccountDetails());
+            Crediationals crediational = new Crediationals("1", "1");
+            Users user = new Users("CEO", "abc", "male", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", crediational);
+            UsersDL.UsersList.Add(user);
+            //--------------------------------
         }
 
         private void viewAccountsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmAccountDetails());
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            toolStriplblDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
+            toolStriplblTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
         }
     }
 }
