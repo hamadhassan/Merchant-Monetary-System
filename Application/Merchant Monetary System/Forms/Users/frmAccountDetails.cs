@@ -40,6 +40,7 @@ namespace Merchant_Monetary_System
         }
         public void DataBind()
         {//it will display the data into the data gride view
+
             datagvAccountDetails.DataSource = null;
             if (isCEO==true)
             {//CEO is login into the system
@@ -54,8 +55,10 @@ namespace Merchant_Monetary_System
 
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
+            UsersDL.loadRecordFromFile(FilePath.Users);
             DataBind();
             btnLoadRecords.Visible = false;
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

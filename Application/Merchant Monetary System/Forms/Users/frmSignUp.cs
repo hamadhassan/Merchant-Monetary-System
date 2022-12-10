@@ -47,9 +47,9 @@ namespace Merchant_Monetary_System
             {
                 cmbxDesignation.Text = previousObj.Designation;
                 txtbxName.Text = previousObj.Name;
-                txtbxUsername.Text = previousObj.Crediational.Username;
-                txtbxNewPassowrd.Text = previousObj.Crediational.Password;
-                txtbxConfirmPassword.Text = previousObj.Crediational.Password;
+                txtbxUsername.Text = previousObj.Username;
+                txtbxNewPassowrd.Text = previousObj.Password;
+                txtbxConfirmPassword.Text = previousObj.Password;
                 txtbxCNIC.Text = previousObj.Cnic.ToString();
                 if (previousObj.Gender == "Male")
                     rdbtnMale.Checked=true;
@@ -66,6 +66,11 @@ namespace Merchant_Monetary_System
                 {//Employee is enter into the sytem then it not able to change the the assign role of worker
                     cmbxDesignation.Enabled = false;
                 }
+                if (roleId == 2)
+                {
+                    cmbxDesignation.Items.RemoveAt(0);
+                }
+                cmbxDesignation.SelectedIndex = 0;
             }
          
            
@@ -349,13 +354,15 @@ namespace Merchant_Monetary_System
                 string homeAddress=rtxtbxHomeAddress.Text;
                 string username = txtbxUsername.Text;
                 string password = txtbxNewPassowrd.Text;
-                Crediationals crediational = new Crediationals(username, password);
-                Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress,crediational);
+                Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password);
                 if (previousObj != null)
                 {
                     if (UsersDL.updateRecord(user))
                     {
+                        UsersDL.storeAllRecordIntoFile(FilePath.Users);
+                        UsersDL.loadRecordFromFile(FilePath.Users);
                         lblRecordSignal.Text = "Account successfully updated";
+
                     }
                     else
                     {
@@ -365,14 +372,20 @@ namespace Merchant_Monetary_System
                 else
                 {
                     UsersDL.UsersList.Add(user);
+                    UsersDL.storeRecordIntoFile(user,FilePath.Users);
                     if (roleId==0)
                     {
                         frmLogin frmLogin = new frmLogin();
                         frmLogin.Show();
                         this.Hide();
                     }
-                    //UsersDL.storeRecordIntoFile(user, FilePath.Users);
-                    
+                    else if (roleId == 1 || roleId==2)
+                    {
+                        clearField();
+                        txtbxUsername.Clear();
+                        lblRecordSignal.Text = "Account successfully created";
+                        this.Hide();
+                    }
                 }
             }
             else

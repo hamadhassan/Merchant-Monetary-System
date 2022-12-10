@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.gbx = new System.Windows.Forms.GroupBox();
+            this.lblRecordSignal = new System.Windows.Forms.Label();
             this.btnShowPasswrd2 = new System.Windows.Forms.Button();
             this.btnShowPassword = new System.Windows.Forms.Button();
             this.lblHomeAddressSignal = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.lblRecordSignal = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,6 +121,15 @@
             this.gbx.TabIndex = 0;
             this.gbx.TabStop = false;
             this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
+            // 
+            // lblRecordSignal
+            // 
+            this.lblRecordSignal.AutoSize = true;
+            this.lblRecordSignal.Location = new System.Drawing.Point(291, 379);
+            this.lblRecordSignal.Name = "lblRecordSignal";
+            this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblRecordSignal.TabIndex = 33;
+            this.lblRecordSignal.Text = " ";
             // 
             // btnShowPasswrd2
             // 
@@ -504,7 +513,8 @@
             this.cmbxDesignation.Items.AddRange(new object[] {
             "CEO",
             "Employee",
-            "Rider"});
+            "Rider",
+            "Warehouse Manager"});
             this.cmbxDesignation.Location = new System.Drawing.Point(227, 80);
             this.cmbxDesignation.Name = "cmbxDesignation";
             this.cmbxDesignation.Size = new System.Drawing.Size(203, 28);
@@ -521,15 +531,6 @@
             this.lblSignUp.Size = new System.Drawing.Size(136, 39);
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "SignUp";
-            // 
-            // lblRecordSignal
-            // 
-            this.lblRecordSignal.AutoSize = true;
-            this.lblRecordSignal.Location = new System.Drawing.Point(291, 379);
-            this.lblRecordSignal.Name = "lblRecordSignal";
-            this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblRecordSignal.TabIndex = 33;
-            this.lblRecordSignal.Text = " ";
             // 
             // frmSignUp
             // 

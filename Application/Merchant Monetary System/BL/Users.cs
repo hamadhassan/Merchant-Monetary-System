@@ -8,14 +8,15 @@ namespace Merchant_Monetary_System
 {
     public class Users
     {
-        protected string designation;
-        protected string name;
-        protected string gender;
-        protected double cnic;
-        protected string emailAddress;
-        protected int contactNumber;
-        protected string homeAddress;
-        private Crediationals crediational;
+        private string designation;
+        private string name;
+        private string gender;
+        private double cnic;
+        private string emailAddress;
+        private int contactNumber;
+        private string homeAddress;
+        private string username;
+        private string password;
 
         public string Designation { get => designation; set => designation = value; }
         public string Name { get => name; set => name = value; }
@@ -24,9 +25,10 @@ namespace Merchant_Monetary_System
         public string EmailAddress { get => emailAddress; set => emailAddress = value; }
         public int ContactNumber { get => contactNumber; set => contactNumber = value; }
         public string HomeAddress { get => homeAddress; set => homeAddress = value; }
-        public Crediationals Crediational { get => crediational; set => crediational = value; }
+        public string Username { get => username; set => username = value; }
+        public string Password { get => password; set => password = value; }
 
-        public Users(string designation, string name, string gender, double cnic, string emailAddress, int contactNumber, string homeAddress,Crediationals crediational)
+        public Users(string designation, string name, string gender, double cnic, string emailAddress, int contactNumber, string homeAddress,string username,string password)
         {
             this.designation = designation;
             this.name = name;
@@ -35,7 +37,8 @@ namespace Merchant_Monetary_System
             this.emailAddress = emailAddress;
             this.contactNumber = contactNumber;
             this.homeAddress = homeAddress;
-            this.crediational = crediational;
+            this.username = username;
+            this.password = password;
         }
         
     }

@@ -23,5 +23,10 @@ namespace Merchant_Monetary_System
             frmAddCompnay.Show();
             this.Hide();
         }
+
+        private void frmIntroduction_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

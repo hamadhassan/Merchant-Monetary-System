@@ -26,6 +26,8 @@ namespace Merchant_Monetary_System
             {
                 if(UsersDL.setPassword(cmbxDesignation.Text, txtbxUsername.Text, txtbxConfirmPassword.Text)==true)
                 {
+                    UsersDL.storeAllRecordIntoFile(FilePath.Users);
+                    UsersDL.loadRecordFromFile(FilePath.Users);
                     lblDataStoredSignal.Text = "Passeword successfully updated";
                     clearField();
                     cmbxDesignation.Focus();

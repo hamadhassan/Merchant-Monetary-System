@@ -29,7 +29,8 @@ namespace Merchant_Monetary_System
             string designation = cmbxDesignation.Text;
             string username = txtbxUsername.Text;
             string password = txtbxPassowrd.Text;
-            if(UsersDL.isUserCrediationalMatch(designation, username, password))
+            UsersDL.loadRecordFromFile(FilePath.Users);
+            if (UsersDL.isUserCrediationalMatch(designation, username, password))
             {//authorize to enter into the system 
                 if (cmbxDesignation.SelectedIndex == 1)
                 {
@@ -66,11 +67,9 @@ namespace Merchant_Monetary_System
             cmbxDesignation.SelectedIndex = 0;
             //The following block will be deleted after testing
             //--------------------------------
-            Crediationals crediational = new Crediationals("123", "1");
-            Users user = new Users("CEO", "abc", "male", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", crediational);
+            Users user = new Users("CEO", "abc", "male", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", "abc","1");
             UsersDL.UsersList.Add(user);
-            Crediationals crediational2 = new Crediationals("123", "1");
-            Users user2 = new Users("Employee", "abc", "Female", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", crediational2);
+            Users user2 = new Users("Employee", "abc", "Female", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", "abc","1");
             UsersDL.UsersList.Add(user2);
             //--------------------------------
 
