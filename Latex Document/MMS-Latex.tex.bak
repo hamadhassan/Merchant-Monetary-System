@@ -569,7 +569,7 @@ Post-Condition & The account information is stored in the database, and the scre
 %------------------------------------------
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 6: Update Account Information by CEO}
+\section{Use Case 6:Update Account Information by CEO}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U06   \\\hline
 Name  &  Update Account Information by CEO \\ \hline
@@ -666,7 +666,7 @@ Post-Condition &  The account information is updated in the database, and the sc
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 7: Update Account Information by Employee}
+\section{Use Case 7:Update Account Information by Employee}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U07   \\\hline
 Name  &  Update Account Information by Employee \\ \hline
@@ -1832,7 +1832,7 @@ Post-Condition &  Order is confirmed now and the warehouse manager is notified a
 
 \end{tabular}
 %------------------------------------------
-\section{Use Case 21: Add Vehicle}
+\section{Use Case 21:Add Vehicle}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U21   \\\hline
 Name   &   Add Vehicle\\ \hline
@@ -1894,7 +1894,7 @@ Post-Condition &  Data stored in the database and screen closed. \\\hline
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 22: Update Vehicle Information}
+\section{Use Case 22:Update Vehicle Information}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U22   \\\hline
 Name   &   Update Vehicle Information \\ \hline
@@ -1957,7 +1957,7 @@ Post-Condition &  Data is updated in the database, and the screen is closed. \\\
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 23: Add Shop and Shopkeeper}
+\section{Use Case 23:Add Shop and Shopkeeper}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U23   \\\hline
 Name  &  Add Shop and Shopkeeper \\ \hline
@@ -2026,7 +2026,7 @@ Post-Condition & Actor click on the next button to add warehouse manager.  \\\hl
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 24: Update Shop and Shopkeeper}
+\section{Use Case 24:Update Shop and Shopkeeper}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U23   \\\hline
 Name  &  Add Shop and Shopkeeper \\ \hline
@@ -2095,7 +2095,7 @@ Post-Condition & The warehouse information is updated in the system, and the scr
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 25: Add Payment}
+\section{Use Case 25:Add Payment}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U25   \\\hline
 Name  &  Add Payment \\ \hline
@@ -2147,7 +2147,7 @@ Post-Condition & Data are stored in the database, and the screen is closed.  \\\
 \end{tabular}
 %------------------------------------------
 %------------------------------------------
-\section{Use Case 26: Edit Payment}
+\section{Use Case 26:Edit Payment}
 \begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Use Case ID & U26   \\\hline
 Name  &  Edit Payment \\ \hline
@@ -3584,9 +3584,36 @@ Columns data names are
 08& Kabir Ahmed	&08/12/2022   \\ \hline
 09& M. Hamad Hassan&08/12/2022  \\ \hline
 
-07& Syed Hashir 	&08/12/2022   \\ \hline
-08& Kabir Ahmed	&08/12/2022   \\ \hline
-09& M. Hamad Hassan&08/12/2022  \\ \hline
+10& Syed Hashir 	&09/12/2022   \\ \hline
+11& Kabir Ahmed	&09/12/2022   \\ \hline
+12& M. Hamad Hassan&09/12/2022  \\ \hline
+
+13& Syed Hashir 	&10/12/2022   \\ \hline
+14& Kabir Ahmed	&10/12/2022   \\ \hline
+15& M. Hamad Hassan&10/12/2022  \\ \hline
+
+16& Syed Hashir 	&11/12/2022   \\ \hline
+17& Kabir Ahmed		&11/12/2022   \\ \hline
+18& M. Hamad Hassan&11/12/2022  \\ \hline
+
+19& Syed Hashir 	&12/12/2022   \\ \hline
+20& Kabir Ahmed		&12/12/2022   \\ \hline
+21& M. Hamad Hassan&12/12/2022  \\ \hline
+
+22& Syed Hashir 	&13/12/2022   \\ \hline
+23& Kabir Ahmed		&13/12/2022   \\ \hline
+24& M. Hamad Hassan&13/12/2022  \\ \hline
+\end{tabular}\\
+\begin{tabular}{ | m{2cm} | m{4cm}|| m{3cm}|} \hline
+\textbf{ Use Case Id }&\textbf{ Member Name}&\textbf{Estimated Completion Date} \\ \hline
+25& Syed Hashir 	&14/12/2022   \\ \hline
+26& Kabir Ahmed		&14/12/2022   \\ \hline
+27& M. Hamad Hassan&14/12/2022  \\ \hline
+
+
+28& Syed Hashir 	&15/12/2022   \\ \hline
+29& Kabir Ahmed		&15/12/2022   \\ \hline
+30 and 31 & M. Hamad Hassan&15/12/2022  \\ \hline
 
 
 \end{tabular}
@@ -3603,6 +3630,12 @@ In our project, we will use these analytical reports:
 \item Daily Stock Report 
 \item Expenditure Report
 \end{enumerate}
+The format of report will as follow. 
+\begin{figure}
+  \centering
+    \includegraphics[scale=0.8]{profits.png}
+  \caption{Monthly profit report. X shown Months and Y shown Profit}
+\end{figure}
 
 
 
