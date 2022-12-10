@@ -39,7 +39,7 @@ namespace Merchant_Monetary_System
             this.Close();
         }
         public void DataBind()
-        {
+        {//it will display the data into the data gride view
             datagvAccountDetails.DataSource = null;
             if (isCEO==true)
             {//CEO is login into the system
@@ -59,7 +59,7 @@ namespace Merchant_Monetary_System
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
-        {
+        {//edit the record
            
             if (datagvAccountDetails.SelectedRows.Count == 1)
             {
@@ -79,12 +79,12 @@ namespace Merchant_Monetary_System
         }
 
         private void btnEdit_MouseLeave(object sender, EventArgs e)
-        {
+        {//remove the signal
             lblDatagvSignal.Text = " ";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
+        {//delete the record
             if (datagvAccountDetails.SelectedRows.Count == 1)
             {
                 Users currentObj = (Users)datagvAccountDetails.CurrentRow.DataBoundItem;

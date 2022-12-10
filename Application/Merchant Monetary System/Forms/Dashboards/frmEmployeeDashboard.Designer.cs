@@ -42,10 +42,10 @@
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnForgotPassword = new System.Windows.Forms.Button();
+            this.btnAddPayament = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnAddWarehouseManger = new System.Windows.Forms.Button();
-            this.btnAddRider = new System.Windows.Forms.Button();
+            this.btnOrderDetail = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnViewProduct = new System.Windows.Forms.Button();
             this.btnViewReport = new System.Windows.Forms.Button();
@@ -161,10 +161,10 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnForgotPassword, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddPayament, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnAddEmployee, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWarehouseManger, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddRider, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnOrderDetail, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnAddProduct, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnViewProduct, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnViewReport, 0, 5);
@@ -188,20 +188,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(213, 572);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // btnForgotPassword
+            // btnAddPayament
             // 
-            this.btnForgotPassword.BackColor = System.Drawing.Color.Transparent;
-            this.btnForgotPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnForgotPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnForgotPassword.FlatAppearance.BorderSize = 0;
-            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForgotPassword.ForeColor = System.Drawing.Color.Black;
-            this.btnForgotPassword.Location = new System.Drawing.Point(3, 515);
-            this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(207, 54);
-            this.btnForgotPassword.TabIndex = 64;
-            this.btnForgotPassword.Text = "-";
-            this.btnForgotPassword.UseVisualStyleBackColor = false;
+            this.btnAddPayament.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPayament.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddPayament.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddPayament.FlatAppearance.BorderSize = 0;
+            this.btnAddPayament.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPayament.ForeColor = System.Drawing.Color.Black;
+            this.btnAddPayament.Location = new System.Drawing.Point(3, 515);
+            this.btnAddPayament.Name = "btnAddPayament";
+            this.btnAddPayament.Size = new System.Drawing.Size(207, 54);
+            this.btnAddPayament.TabIndex = 64;
+            this.btnAddPayament.Text = "Add Payment";
+            this.btnAddPayament.UseVisualStyleBackColor = false;
             // 
             // btnAddEmployee
             // 
@@ -233,20 +233,20 @@
             this.btnAddWarehouseManger.Text = "Add Warehouse Manager";
             this.btnAddWarehouseManger.UseVisualStyleBackColor = false;
             // 
-            // btnAddRider
+            // btnOrderDetail
             // 
-            this.btnAddRider.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddRider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddRider.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddRider.FlatAppearance.BorderSize = 0;
-            this.btnAddRider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddRider.ForeColor = System.Drawing.Color.Black;
-            this.btnAddRider.Location = new System.Drawing.Point(3, 116);
-            this.btnAddRider.Name = "btnAddRider";
-            this.btnAddRider.Size = new System.Drawing.Size(207, 51);
-            this.btnAddRider.TabIndex = 61;
-            this.btnAddRider.Text = "Add Rider";
-            this.btnAddRider.UseVisualStyleBackColor = false;
+            this.btnOrderDetail.BackColor = System.Drawing.Color.Transparent;
+            this.btnOrderDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOrderDetail.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnOrderDetail.FlatAppearance.BorderSize = 0;
+            this.btnOrderDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderDetail.ForeColor = System.Drawing.Color.Black;
+            this.btnOrderDetail.Location = new System.Drawing.Point(3, 116);
+            this.btnOrderDetail.Name = "btnOrderDetail";
+            this.btnOrderDetail.Size = new System.Drawing.Size(207, 51);
+            this.btnOrderDetail.TabIndex = 61;
+            this.btnOrderDetail.Text = "Order Detail";
+            this.btnOrderDetail.UseVisualStyleBackColor = false;
             // 
             // btnAddProduct
             // 
@@ -440,10 +440,10 @@
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnForgotPassword;
+        private System.Windows.Forms.Button btnAddPayament;
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Button btnAddWarehouseManger;
-        private System.Windows.Forms.Button btnAddRider;
+        private System.Windows.Forms.Button btnOrderDetail;
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnViewProduct;
         private System.Windows.Forms.Button btnViewReport;

@@ -43,7 +43,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnForgotPassword = new System.Windows.Forms.Button();
+            this.btnOrderDetail = new System.Windows.Forms.Button();
             this.btnAddWarehouseManger = new System.Windows.Forms.Button();
             this.btnAddRider = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
@@ -106,14 +106,14 @@
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -179,7 +179,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnForgotPassword, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btnOrderDetail, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnAddEmployee, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWarehouseManger, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnAddRider, 0, 2);
@@ -207,21 +207,21 @@
             this.tableLayoutPanel1.TabIndex = 3;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // btnForgotPassword
+            // btnOrderDetail
             // 
-            this.btnForgotPassword.BackColor = System.Drawing.Color.Transparent;
-            this.btnForgotPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnForgotPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnForgotPassword.FlatAppearance.BorderSize = 0;
-            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForgotPassword.ForeColor = System.Drawing.Color.Black;
-            this.btnForgotPassword.Location = new System.Drawing.Point(3, 515);
-            this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(207, 54);
-            this.btnForgotPassword.TabIndex = 64;
-            this.btnForgotPassword.Text = "-";
-            this.btnForgotPassword.UseVisualStyleBackColor = false;
-            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
+            this.btnOrderDetail.BackColor = System.Drawing.Color.Transparent;
+            this.btnOrderDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnOrderDetail.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnOrderDetail.FlatAppearance.BorderSize = 0;
+            this.btnOrderDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderDetail.ForeColor = System.Drawing.Color.Black;
+            this.btnOrderDetail.Location = new System.Drawing.Point(3, 515);
+            this.btnOrderDetail.Name = "btnOrderDetail";
+            this.btnOrderDetail.Size = new System.Drawing.Size(207, 54);
+            this.btnOrderDetail.TabIndex = 64;
+            this.btnOrderDetail.Text = "-";
+            this.btnOrderDetail.UseVisualStyleBackColor = false;
+            this.btnOrderDetail.Click += new System.EventHandler(this.btnForgotPassword_Click);
             // 
             // btnAddWarehouseManger
             // 
@@ -462,7 +462,7 @@
         private System.Windows.Forms.Button btnViewOrder;
         private System.Windows.Forms.Button btnAddStock;
         private System.Windows.Forms.Button btnSendEmail;
-        private System.Windows.Forms.Button btnForgotPassword;
+        private System.Windows.Forms.Button btnOrderDetail;
         private System.Windows.Forms.Panel ptoolStrip;
         private System.Windows.Forms.ToolStripMenuItem signUpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewAccountsToolStripMenuItem;
