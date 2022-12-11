@@ -36,6 +36,7 @@
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warehouseMangerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +62,7 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
-            this.addWarehouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewWarehousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -134,6 +133,12 @@
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(80, 23);
             this.employeeToolStripMenuItem.Text = "Employee";
             // 
+            // addAddToolStripMenuItem
+            // 
+            this.addAddToolStripMenuItem.Name = "addAddToolStripMenuItem";
+            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.addAddToolStripMenuItem.Text = "Add Add";
+            // 
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
@@ -149,8 +154,7 @@
             // warehouseMangerToolStripMenuItem
             // 
             this.warehouseMangerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addWarehouseToolStripMenuItem,
-            this.addManagerToolStripMenuItem});
+            this.viewWarehousesToolStripMenuItem});
             this.warehouseMangerToolStripMenuItem.Name = "warehouseMangerToolStripMenuItem";
             this.warehouseMangerToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
             this.warehouseMangerToolStripMenuItem.Text = "Warehouse";
@@ -421,23 +425,12 @@
             this.pParent.Size = new System.Drawing.Size(931, 545);
             this.pParent.TabIndex = 5;
             // 
-            // addWarehouseToolStripMenuItem
+            // viewWarehousesToolStripMenuItem
             // 
-            this.addWarehouseToolStripMenuItem.Name = "addWarehouseToolStripMenuItem";
-            this.addWarehouseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.addWarehouseToolStripMenuItem.Text = "Add Warehouse";
-            // 
-            // addManagerToolStripMenuItem
-            // 
-            this.addManagerToolStripMenuItem.Name = "addManagerToolStripMenuItem";
-            this.addManagerToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.addManagerToolStripMenuItem.Text = "Add Manager";
-            // 
-            // addAddToolStripMenuItem
-            // 
-            this.addAddToolStripMenuItem.Name = "addAddToolStripMenuItem";
-            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.addAddToolStripMenuItem.Text = "Add Add";
+            this.viewWarehousesToolStripMenuItem.Name = "viewWarehousesToolStripMenuItem";
+            this.viewWarehousesToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.viewWarehousesToolStripMenuItem.Text = "View Warehouses";
+            this.viewWarehousesToolStripMenuItem.Click += new System.EventHandler(this.viewWarehousesToolStripMenuItem_Click);
             // 
             // frmCEODashboard
             // 
@@ -502,8 +495,7 @@
         private System.Windows.Forms.ToolStripLabel toolStriplblTime;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TableLayoutPanel pParent;
-        private System.Windows.Forms.ToolStripMenuItem addWarehouseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addManagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addAddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewWarehousesToolStripMenuItem;
     }
 }

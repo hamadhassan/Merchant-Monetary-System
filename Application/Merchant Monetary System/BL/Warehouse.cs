@@ -8,7 +8,7 @@ namespace Merchant_Monetary_System
 {
     public class Warehouse
     {
-        private int id;
+        private int id=0;
         private string name;
         private float totalSpace;
         private float currentSpace;
@@ -24,6 +24,7 @@ namespace Merchant_Monetary_System
 
         public Warehouse(string name,float totalSpace,Location location)
         {
+            id = id + 1;
             this.name = name;
             this.totalSpace = totalSpace;
             this.location = location;

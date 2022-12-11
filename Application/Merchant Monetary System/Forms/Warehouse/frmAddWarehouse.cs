@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,11 +12,17 @@ using System.Xml.Linq;
 
 namespace Merchant_Monetary_System
 {
-    public partial class frmWarehouse : Form
+    public partial class frmAddWarehouse : Form
     {
-        public frmWarehouse()
+        Warehouse previouObj;
+        public frmAddWarehouse()
         {
             InitializeComponent();
+        }
+        public frmAddWarehouse(Warehouse previouObj)
+        {
+            InitializeComponent();
+            this.previouObj = previouObj;
         }
         bool isName=true;
         bool isCapacity=true;
@@ -38,9 +45,28 @@ namespace Merchant_Monetary_System
                 string state=cmbxState.Text;
                 Location location=new Location(area, city, state);
                 Warehouse warehouse = new Warehouse(name, totalSpace, location);
-                WarehouseDL.WarehousesList.Add(warehouse);
-                frmSignUp frmSignUp = new frmSignUp(true);
-                frmSignUp.ShowDialog();
+                if (previouObj != null)
+                {//update the record
+                    if (WarehouseDL.updateRecord(warehouse))
+                    {
+                        //UsersDL.storeAllRecordIntoFile(FilePath.Users);
+                        //UsersDL.loadRecordFromFile(FilePath.Users);
+                        lblRecordSignal.Text = "Account successfully updated";
+
+                    }
+                    else
+                    {
+                        lblRecordSignal.Text = "There is an error while updating the data";
+                    }
+
+                }
+                else
+                {
+                    WarehouseDL.WarehousesList.Add(warehouse);
+                    frmSignUp frmSignUp = new frmSignUp(true);
+                    frmSignUp.ShowDialog();
+                }
+                
             }
             else
             {
@@ -107,11 +133,28 @@ namespace Merchant_Monetary_System
 
         private void frmWarehouse_Load(object sender, EventArgs e)
         {
+            if (previouObj != null)
+            {
+                txtbxName.Text = previouObj.Name;
+                txtbxCapacityInVolume.Text =previouObj.TotalSpace.ToString();
+                cmbxArea.Text = previouObj.Location.Area;
+                cmbxCity.Text = previouObj.Location.City;
+                cmbxState.Text = previouObj.Location.State;
+
+
+                lblAddWarehouse.Text = "Update Warehouse Record";
+                lblAddWarehouse.Left -= 130;
+                btnNext.Text = "Update";
+            }
             cmbxArea.SelectedIndex = 0;
             cmbxCity.SelectedIndex = 0;
             cmbxState.SelectedIndex = 0;
+
         }
 
-        
+        private void gbx_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

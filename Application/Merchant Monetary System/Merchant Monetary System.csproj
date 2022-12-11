@@ -106,13 +106,19 @@
     </Compile>
     <Compile Include="Data Structure\DoublyLinkedList\Node.cs" />
     <Compile Include="Data Structure\DoublyLinkedList\DLinkedList.cs" />
-    <Compile Include="Forms\Warehouse\frmWarehouse.cs">
+    <Compile Include="Forms\Warehouse\frmAddWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Warehouse\frmWarehouse.Designer.cs">
-      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    <Compile Include="Forms\Warehouse\frmAddWarehouse.Designer.cs">
+      <DependentUpon>frmAddWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="BL\Location.cs" />
+    <Compile Include="Forms\Warehouse\frmViewWarehouses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Warehouse\frmViewWarehouses.Designer.cs">
+      <DependentUpon>frmViewWarehouses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BL\Users.cs" />
@@ -146,8 +152,11 @@
     <EmbeddedResource Include="Forms\Dashboards\frmEmployeeDashboard.resx">
       <DependentUpon>frmEmployeeDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Warehouse\frmWarehouse.resx">
-      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Warehouse\frmAddWarehouse.resx">
+      <DependentUpon>frmAddWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Warehouse\frmViewWarehouses.resx">
+      <DependentUpon>frmViewWarehouses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

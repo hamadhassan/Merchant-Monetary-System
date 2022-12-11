@@ -82,7 +82,17 @@ namespace Merchant_Monetary_System
 
         private void btnAddWarehouseManger_Click(object sender, EventArgs e)
         {
-            loadform(new frmWarehouse());
+            loadform(new frmAddWarehouse());
+        }
+
+        private void editWarehouseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewWarehousesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmViewWarehouses());
         }
     }
 }
