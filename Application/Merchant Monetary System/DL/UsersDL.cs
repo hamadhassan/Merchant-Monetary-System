@@ -13,6 +13,7 @@ namespace Merchant_Monetary_System
     internal class UsersDL
     {
         private static List<Users> usersList=new List<Users>();
+        private static DLinkedList<> usersLinkedList=new DLinkedList<Users>();
 
         public static List<Users> UsersList { get => usersList; set => usersList = value; }
 

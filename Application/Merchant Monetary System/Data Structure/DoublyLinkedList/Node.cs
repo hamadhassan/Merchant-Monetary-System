@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Merchant_Monetary_System
 {
-    internal class Node
+
+    public class Node <T>
     {
+        private T users;
+        private T next;
+        private T pre;-
+
+        public Node(T users)
+        {
+            this.users = users;
+            this.next = null;
+            this.pre = null;
+        }
     }
+   
 }
