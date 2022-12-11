@@ -31,7 +31,15 @@ namespace Merchant_Monetary_System
         {
             if (isName == false && isCapacity == false)
             {
-                frmSignUp frmSignUp = new frmSignUp(3);
+                string name=txtbxName.Text;
+                float totalSpace=float.Parse(txtbxCapacityInVolume.Text);
+                string area=cmbxArea.Text;
+                string city=cmbxCity.Text;
+                string state=cmbxState.Text;
+                Location location=new Location(area, city, state);
+                Warehouse warehouse = new Warehouse(name, totalSpace, location);
+                WarehouseDL.WarehousesList.Add(warehouse);
+                frmSignUp frmSignUp = new frmSignUp(true);
                 frmSignUp.ShowDialog();
             }
             else
@@ -100,7 +108,7 @@ namespace Merchant_Monetary_System
         private void frmWarehouse_Load(object sender, EventArgs e)
         {
             cmbxArea.SelectedIndex = 0;
-            cmbxCity.SelectedItem = 0;
+            cmbxCity.SelectedIndex = 0;
             cmbxState.SelectedIndex = 0;
         }
 

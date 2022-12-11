@@ -139,7 +139,7 @@
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(95, 218);
+            this.lblArea.Location = new System.Drawing.Point(95, 227);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(51, 20);
             this.lblArea.TabIndex = 25;
@@ -173,7 +173,7 @@
             this.cmbxArea.FormattingEnabled = true;
             this.cmbxArea.Items.AddRange(new object[] {
             "UET Lahore"});
-            this.cmbxArea.Location = new System.Drawing.Point(253, 210);
+            this.cmbxArea.Location = new System.Drawing.Point(253, 219);
             this.cmbxArea.Name = "cmbxArea";
             this.cmbxArea.Size = new System.Drawing.Size(203, 28);
             this.cmbxArea.TabIndex = 26;

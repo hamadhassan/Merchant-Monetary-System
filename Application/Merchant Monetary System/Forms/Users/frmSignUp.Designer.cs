@@ -70,11 +70,15 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
+            this.lblWarehouse = new System.Windows.Forms.Label();
+            this.cmbxWarehouse = new System.Windows.Forms.ComboBox();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbx
             // 
+            this.gbx.Controls.Add(this.lblWarehouse);
+            this.gbx.Controls.Add(this.cmbxWarehouse);
             this.gbx.Controls.Add(this.lblRecordSignal);
             this.gbx.Controls.Add(this.btnShowPasswrd2);
             this.gbx.Controls.Add(this.btnShowPassword);
@@ -181,10 +185,6 @@
             this.cmbxVehicle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxVehicle.FormattingEnabled = true;
-            this.cmbxVehicle.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
             this.cmbxVehicle.Location = new System.Drawing.Point(227, 334);
             this.cmbxVehicle.Name = "cmbxVehicle";
             this.cmbxVehicle.Size = new System.Drawing.Size(203, 28);
@@ -532,6 +532,26 @@
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "SignUp";
             // 
+            // lblWarehouse
+            // 
+            this.lblWarehouse.AutoSize = true;
+            this.lblWarehouse.Location = new System.Drawing.Point(77, 342);
+            this.lblWarehouse.Name = "lblWarehouse";
+            this.lblWarehouse.Size = new System.Drawing.Size(99, 20);
+            this.lblWarehouse.TabIndex = 35;
+            this.lblWarehouse.Text = "Warehouse :";
+            // 
+            // cmbxWarehouse
+            // 
+            this.cmbxWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxWarehouse.FormattingEnabled = true;
+            this.cmbxWarehouse.Location = new System.Drawing.Point(227, 335);
+            this.cmbxWarehouse.Name = "cmbxWarehouse";
+            this.cmbxWarehouse.Size = new System.Drawing.Size(203, 28);
+            this.cmbxWarehouse.Sorted = true;
+            this.cmbxWarehouse.TabIndex = 34;
+            // 
             // frmSignUp
             // 
             this.AcceptButton = this.btnCreateAccount;
@@ -595,5 +615,7 @@
         private System.Windows.Forms.Button btnShowPasswrd2;
         private System.Windows.Forms.Button btnShowPassword;
         private System.Windows.Forms.Label lblRecordSignal;
+        private System.Windows.Forms.Label lblWarehouse;
+        private System.Windows.Forms.ComboBox cmbxWarehouse;
     }
 }

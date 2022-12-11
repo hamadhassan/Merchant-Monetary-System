@@ -24,7 +24,7 @@ namespace Merchant_Monetary_System
 
         private void btnAddWarehouseManager_Click(object sender, EventArgs e)
         {
-
+            loadform(new frmSignUp(1));
         }
         public void loadform(object Form)
         {
@@ -78,6 +78,11 @@ namespace Merchant_Monetary_System
         private void signUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmSignUp(1));
+        }
+
+        private void btnAddWarehouseManger_Click(object sender, EventArgs e)
+        {
+            loadform(new frmWarehouse());
         }
     }
 }

@@ -15,21 +15,28 @@ namespace Merchant_Monetary_System
     {
         Users previousObj= null;//this is used for edit button
         bool isCEO=false;//if isCEO true then all task of CEO implemented else Employee
-        int roleId = 0; //0 for First time create account, 1 for CEO and 2 for Employee
+        int roleId = 0; //0 for First time create account, 1 for CEO and 2 for Employee 
+        int createAccountFor = 0;//3 for warehouse manger and 4 for rider
+        bool isForWarehouseManager=false; // if it is true it means user come for create account for warehouse manager and from the given list delete all other option from cmbxdesignation
         public frmSignUp()
         {
             InitializeComponent();
         }
         public frmSignUp(Users previousObj,bool isCEO)
-        {//This is used check whose is user and perform action according to it. 
+        {//This is used check whose is user and perform action according to it.(This is only for CEO and Employee to access all or particular data
             InitializeComponent();
             this.previousObj= previousObj;
             this.isCEO= isCEO;
         }
         public frmSignUp(int roleId)
-        {//This is used in dashboards for check open login form or not 
+        {// id 1 and 2.This is used in dashboards for check open login form or not only fot CEO and Employee
             InitializeComponent();
             this.roleId = roleId;
+        }
+        public frmSignUp(bool isForWarehouseManager)
+        {
+            InitializeComponent();
+            this.isForWarehouseManager = isForWarehouseManager;
         }
         //--------------Check is field is filled and user this information for action--------
         bool isName=true; 
@@ -41,6 +48,114 @@ namespace Merchant_Monetary_System
         bool isPhone = true;
         bool isAddress = true;
         //------------------------------------------------------------------------------------
+        
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            if (isName == false && isUsername == false && isPassword == false && isPasswordConfirm == false &&
+             isCNIC == false && isPhone == false && isAddress == false && isEmail == false)
+            {//Store Record into file and open login form
+                string designation = cmbxDesignation.Text;
+                string name = txtbxName.Text;
+                string gender;
+                if (rdbtnFemale.Checked == true)
+                {
+                    gender = rdbtnFemale.Text;
+                }
+                else
+                {
+                    gender = rdbtnMale.Text;
+                }
+                double cnic = Convert.ToInt64(txtbxCNIC.Text);
+                string emailAddress = txtbxEmailAddress.Text;
+                int contactNumber = Convert.ToInt32(txtbxContactNumber.Text);
+                string homeAddress = rtxtbxHomeAddress.Text;
+                string username = txtbxUsername.Text;
+                string password = txtbxNewPassowrd.Text;
+                Users user=null;
+                if (roleId==0 || roleId==1 || roleId == 2)
+                {//for ceo and employee
+                     user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password);
+                }
+                else if (createAccountFor == 3)
+                {//for warehouse manager
+                    int warehouseID = cmbxWarehouse.SelectedIndex;
+                    user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, warehouseID);
+                }
+                else if (createAccountFor == 4)
+                {//for rider
+                    float vehicelID = cmbxVehicle.SelectedIndex;
+                    user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, vehicelID);
+                }
+                if (previousObj != null)
+                {//for updating of account
+                    if (UsersDL.updateRecord(user))
+                    {
+                        UsersDL.storeAllRecordIntoFile(FilePath.Users);
+                        UsersDL.loadRecordFromFile(FilePath.Users);
+                        lblRecordSignal.Text = "Account successfully updated";
+
+                    }
+                    else
+                    {
+                        lblRecordSignal.Text = "There is an error while updating the data";
+                    }
+                }
+                else
+                {//for new creation of account
+                    UsersDL.UsersList.Add(user);
+                    UsersDL.storeRecordIntoFile(user, FilePath.Users);
+                    if (roleId == 0)
+                    {//open form login form as it it is first time login
+                        frmLogin frmLogin = new frmLogin();
+                        frmLogin.Show();
+                        this.Hide();
+                    }
+                    else if (roleId == 1 || roleId == 2)
+                    {// close the form as it is open when the dashboard of ceo or rider
+                        clearField();
+                        txtbxUsername.Clear();
+                        lblRecordSignal.Text = "Account successfully created";
+                        this.Hide();
+                    }
+                    else if (createAccountFor == 3)
+                    {
+                        clearField();
+                        txtbxUsername.Clear();
+                        lblRecordSignal.Text = "Account successfully created";
+                        this.Hide();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("All field must be filled correctly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void clearField()
+        {
+            txtbxName.Clear();
+            txtbxNewPassowrd.Clear();
+            txtbxConfirmPassword.Clear();
+            txtbxCNIC.Clear();
+            txtbxContactNumber.Clear();
+            txtbxEmailAddress.Clear();
+            rtxtbxHomeAddress.Clear();
+            txtbxCNIC.Clear();
+        }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            if (previousObj != null)
+            {
+                clearField();
+            }
+            else
+            {
+                clearField();
+                txtbxUsername.Clear();
+            }
+
+
+        }
         private void frmSignUp_Load(object sender, EventArgs e)
         {
             if (previousObj != null)
@@ -52,17 +167,17 @@ namespace Merchant_Monetary_System
                 txtbxConfirmPassword.Text = previousObj.Password;
                 txtbxCNIC.Text = previousObj.Cnic.ToString();
                 if (previousObj.Gender == "Male")
-                    rdbtnMale.Checked=true;
+                    rdbtnMale.Checked = true;
                 else
-                    rdbtnFemale.Checked=true;
+                    rdbtnFemale.Checked = true;
                 txtbxEmailAddress.Text = previousObj.EmailAddress;
                 txtbxContactNumber.Text = previousObj.ContactNumber.ToString();
                 rtxtbxHomeAddress.Text = previousObj.HomeAddress;
                 lblSignUp.Text = "Update Account Information";
-                lblSignUp.Left -=130;
+                lblSignUp.Left -= 130;
                 btnCreateAccount.Text = "Update";
                 txtbxUsername.Enabled = false;
-                if (isCEO==false)
+                if (isCEO == false)
                 {//Employee is enter into the sytem then it not able to change the the assign role of worker
                     cmbxDesignation.Enabled = false;
                 }
@@ -72,8 +187,14 @@ namespace Merchant_Monetary_System
                 }
                 cmbxDesignation.SelectedIndex = 0;
             }
-         
-           
+            if (isForWarehouseManager)
+            {
+                cmbxDesignation.SelectedIndex = 3;
+                cmbxDesignation.Enabled = false;
+                cmbxWarehouse.SelectedIndex = 0;
+            }
+
+
         }
         private void txtbxName_TextChanged(object sender, EventArgs e)
         {
@@ -316,14 +437,25 @@ namespace Merchant_Monetary_System
         private void cmbxDesignation_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cmbxDesignation.SelectedIndex == 2)
-            {
+            {//rider is selected
                 lblVehicle.Visible = true;
                 cmbxVehicle.Visible = true;
+                lblWarehouse.Visible = false;
+                cmbxWarehouse.Visible = false;
+                createAccountFor = 4;
             }
-            else
-            {
+            else if(cmbxDesignation.SelectedIndex==3)
+            {//warehouse is selected
+                lblWarehouse.Visible = true;
+                cmbxWarehouse.Visible = true;
                 lblVehicle.Visible = false;
                 cmbxVehicle.Visible = false;
+                createAccountFor = 3;
+                //add all warehouse 
+                foreach (Warehouse w in WarehouseDL.WarehousesList)
+                {
+                    cmbxWarehouse.Items.Add(w.Name);
+                }
             }
         }
 
@@ -332,92 +464,7 @@ namespace Merchant_Monetary_System
             this.Hide();
         }
 
-        private void btnCreateAccount_Click(object sender, EventArgs e)
-        {
-            if(isName==false && isUsername==false && isPassword==false && isPasswordConfirm==false && 
-             isCNIC==false&& isPhone==false && isAddress==false && isEmail == false)
-            {//Store Record into file and open login form
-                string designation=cmbxDesignation.Text;
-                string name=txtbxName.Text;
-                string gender;
-                if (rdbtnFemale.Checked == true)
-                {
-                     gender = rdbtnFemale.Text;
-                }
-                else
-                {
-                    gender = rdbtnMale.Text;
-                }
-                double cnic=Convert.ToInt64(txtbxCNIC.Text);
-                string emailAddress=txtbxEmailAddress.Text;
-                int contactNumber=Convert.ToInt32(txtbxContactNumber.Text);
-                string homeAddress=rtxtbxHomeAddress.Text;
-                string username = txtbxUsername.Text;
-                string password = txtbxNewPassowrd.Text;
-                Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password);
-                if (previousObj != null)
-                {
-                    if (UsersDL.updateRecord(user))
-                    {
-                        UsersDL.storeAllRecordIntoFile(FilePath.Users);
-                        UsersDL.loadRecordFromFile(FilePath.Users);
-                        lblRecordSignal.Text = "Account successfully updated";
-
-                    }
-                    else
-                    {
-                        lblRecordSignal.Text = "There is an error while updating the data";
-                    }
-                }
-                else
-                {
-                    UsersDL.UsersList.Add(user);
-                    UsersDL.storeRecordIntoFile(user,FilePath.Users);
-                    if (roleId==0)
-                    {
-                        frmLogin frmLogin = new frmLogin();
-                        frmLogin.Show();
-                        this.Hide();
-                    }
-                    else if (roleId == 1 || roleId==2)
-                    {
-                        clearField();
-                        txtbxUsername.Clear();
-                        lblRecordSignal.Text = "Account successfully created";
-                        this.Hide();
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("All field must be filled correctly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-        private void clearField()
-        {
-            txtbxName.Clear();
-            txtbxNewPassowrd.Clear();
-            txtbxConfirmPassword.Clear();
-            txtbxCNIC.Clear();
-            txtbxContactNumber.Clear();
-            txtbxEmailAddress.Clear();
-            rtxtbxHomeAddress.Clear();
-            txtbxCNIC.Clear();
-        }
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            if (previousObj != null)
-            {
-                clearField();
-            }
-            else
-            {
-                clearField();
-                txtbxUsername.Clear();
-            }
-            
-            
-        }
+        
         private void btnShowPassword_MouseHover(object sender, EventArgs e)
         { //hide password
             txtbxNewPassowrd.UseSystemPasswordChar = false;

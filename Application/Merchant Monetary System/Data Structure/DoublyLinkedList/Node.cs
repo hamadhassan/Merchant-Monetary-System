@@ -11,13 +11,12 @@ namespace Merchant_Monetary_System
     {
         private T users;
         private T next;
-        private T pre;-
+        private T pre;
 
         public Node(T users)
         {
             this.users = users;
-            this.next = null;
-            this.pre = null;
+            
         }
     }
    

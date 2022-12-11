@@ -61,6 +61,9 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
+            this.addWarehouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -99,21 +102,21 @@
             // signUpToolStripMenuItem
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -125,6 +128,8 @@
             // 
             // employeeToolStripMenuItem
             // 
+            this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addAddToolStripMenuItem});
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(80, 23);
             this.employeeToolStripMenuItem.Text = "Employee";
@@ -143,6 +148,9 @@
             // 
             // warehouseMangerToolStripMenuItem
             // 
+            this.warehouseMangerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addWarehouseToolStripMenuItem,
+            this.addManagerToolStripMenuItem});
             this.warehouseMangerToolStripMenuItem.Name = "warehouseMangerToolStripMenuItem";
             this.warehouseMangerToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
             this.warehouseMangerToolStripMenuItem.Text = "Warehouse";
@@ -237,6 +245,7 @@
             this.btnAddWarehouseManger.TabIndex = 59;
             this.btnAddWarehouseManger.Text = "Add Warehouse Manager";
             this.btnAddWarehouseManger.UseVisualStyleBackColor = false;
+            this.btnAddWarehouseManger.Click += new System.EventHandler(this.btnAddWarehouseManger_Click);
             // 
             // btnAddRider
             // 
@@ -412,6 +421,24 @@
             this.pParent.Size = new System.Drawing.Size(931, 545);
             this.pParent.TabIndex = 5;
             // 
+            // addWarehouseToolStripMenuItem
+            // 
+            this.addWarehouseToolStripMenuItem.Name = "addWarehouseToolStripMenuItem";
+            this.addWarehouseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.addWarehouseToolStripMenuItem.Text = "Add Warehouse";
+            // 
+            // addManagerToolStripMenuItem
+            // 
+            this.addManagerToolStripMenuItem.Name = "addManagerToolStripMenuItem";
+            this.addManagerToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.addManagerToolStripMenuItem.Text = "Add Manager";
+            // 
+            // addAddToolStripMenuItem
+            // 
+            this.addAddToolStripMenuItem.Name = "addAddToolStripMenuItem";
+            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.addAddToolStripMenuItem.Text = "Add Add";
+            // 
             // frmCEODashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -475,5 +502,8 @@
         private System.Windows.Forms.ToolStripLabel toolStriplblTime;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TableLayoutPanel pParent;
+        private System.Windows.Forms.ToolStripMenuItem addWarehouseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addAddToolStripMenuItem;
     }
 }
