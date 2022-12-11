@@ -32,7 +32,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.lblCategoryTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(571, 323);
+            this.btnUpdate.Location = new System.Drawing.Point(571, 330);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(200, 30);
             this.btnUpdate.TabIndex = 22;
@@ -55,7 +55,7 @@
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(353, 323);
+            this.btnClear.Location = new System.Drawing.Point(353, 330);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(200, 30);
             this.btnClear.TabIndex = 21;
@@ -68,7 +68,7 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(126, 325);
+            this.btnClose.Location = new System.Drawing.Point(126, 330);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 30);
             this.btnClose.TabIndex = 20;
@@ -85,13 +85,13 @@
             this.lblCategory.TabIndex = 19;
             this.lblCategory.Text = "Category:";
             // 
-            // textBox1
+            // txtCategory
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(406, 190);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 23);
-            this.textBox1.TabIndex = 18;
+            this.txtCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategory.Location = new System.Drawing.Point(406, 190);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(203, 23);
+            this.txtCategory.TabIndex = 18;
             // 
             // lblCategoryTitle
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblCategory);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.lblCategoryTitle);
             this.Name = "frmUpdateCategory";
             this.Text = "frmUpdateCategory";
@@ -127,7 +127,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label lblCategoryTitle;
     }
 }

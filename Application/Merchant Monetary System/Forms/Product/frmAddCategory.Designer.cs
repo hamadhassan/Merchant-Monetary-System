@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblCategoryTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -40,25 +40,25 @@
             // 
             this.lblCategoryTitle.AutoSize = true;
             this.lblCategoryTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryTitle.Location = new System.Drawing.Point(365, 38);
+            this.lblCategoryTitle.Location = new System.Drawing.Point(357, 38);
             this.lblCategoryTitle.Name = "lblCategoryTitle";
             this.lblCategoryTitle.Size = new System.Drawing.Size(237, 39);
             this.lblCategoryTitle.TabIndex = 0;
             this.lblCategoryTitle.Text = "Add Category";
             // 
-            // textBox1
+            // txtCategory
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(422, 165);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategory.Location = new System.Drawing.Point(414, 165);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(203, 23);
+            this.txtCategory.TabIndex = 1;
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(313, 168);
+            this.lblCategory.Location = new System.Drawing.Point(305, 168);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(69, 17);
             this.lblCategory.TabIndex = 2;
@@ -114,7 +114,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblCategory);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.lblCategoryTitle);
             this.Name = "frmAddCategory";
             this.Text = "frmAddCategory";
@@ -126,7 +126,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCategoryTitle;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
