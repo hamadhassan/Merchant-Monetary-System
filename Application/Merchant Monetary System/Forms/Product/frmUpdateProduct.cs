@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Merchant_Monetary_System.DL;
 
 namespace Merchant_Monetary_System.Forms.Product
 {
@@ -114,17 +115,23 @@ namespace Merchant_Monetary_System.Forms.Product
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-
+            
         }
-
+        private void clearField()
+        {
+            txtbxName.Clear();
+            txtbxSKU_ID.Clear();
+            txtbxWeight.Clear();
+            txtbxVolume.Clear();
+        }
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            clearField();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void lbl_Volume_Click(object sender, EventArgs e)
