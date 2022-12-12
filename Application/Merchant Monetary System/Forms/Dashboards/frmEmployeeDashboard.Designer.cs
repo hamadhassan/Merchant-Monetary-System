@@ -98,21 +98,21 @@
             // signUpToolStripMenuItem
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             // 
             // riderToolStripMenuItem
@@ -232,6 +232,7 @@
             this.btnAddWarehouseManger.TabIndex = 59;
             this.btnAddWarehouseManger.Text = "Add Warehouse Manager";
             this.btnAddWarehouseManger.UseVisualStyleBackColor = false;
+            this.btnAddWarehouseManger.Click += new System.EventHandler(this.btnAddWarehouseManger_Click);
             // 
             // btnOrderDetail
             // 

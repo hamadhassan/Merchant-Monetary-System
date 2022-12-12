@@ -101,21 +101,21 @@
             // signUpToolStripMenuItem
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -446,7 +446,6 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
             this.Name = "frmCEODashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CEO Dashboard";

@@ -49,8 +49,8 @@ namespace Merchant_Monetary_System
                 {//update the record
                     if (WarehouseDL.updateRecord(warehouse))
                     {
-                        //UsersDL.storeAllRecordIntoFile(FilePath.Users);
-                        //UsersDL.loadRecordFromFile(FilePath.Users);
+                        WarehouseDL.storeAllRecordIntoFile(FilePath.Warehouse);
+
                         lblRecordSignal.Text = "Account successfully updated";
 
                     }
@@ -63,6 +63,7 @@ namespace Merchant_Monetary_System
                 else
                 {
                     WarehouseDL.WarehousesList.Add(warehouse);
+                    WarehouseDL.storeRecordIntoFile(warehouse, FilePath.Warehouse);
                     frmSignUp frmSignUp = new frmSignUp(true);
                     frmSignUp.ShowDialog();
                 }

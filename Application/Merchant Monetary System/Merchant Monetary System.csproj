@@ -58,6 +58,21 @@
     <Compile Include="Forms\Product\frmViewProducts.Designer.cs">
       <DependentUpon>frmViewProducts.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Forms\Product\frmAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\frmAddCategory.Designer.cs">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="Forms\Product\frmUpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\frmUpdateCategory.Designer.cs">
+      <DependentUpon>frmUpdateCategory.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="Forms\Users\frmAddCompnay.cs">
       <SubType>Form</SubType>
     </Compile>
