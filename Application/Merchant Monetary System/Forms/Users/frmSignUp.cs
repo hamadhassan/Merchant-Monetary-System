@@ -494,5 +494,155 @@ namespace Merchant_Monetary_System
         {//remove signals
             lblRecordSignal.Text = " ";
         }
+
+        private void lblWarehouse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxWarehouse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRecordSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShowPasswrd2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShowPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHomeAddressSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVehicle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxVehicle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmailAddressSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblContactNumberSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGenderSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblConfirmPasswordSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNewPasswordSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsernameSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNameSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCNICSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDesignationSingal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbtnFemale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbtnMale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCNIC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHomeAddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNewPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmailAddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblConfirmPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblContactNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGender_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDesignation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSignUp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -200,5 +200,10 @@ namespace Merchant_Monetary_System
                 isUsername = false;
             }
         }
+
+        private void gbx_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

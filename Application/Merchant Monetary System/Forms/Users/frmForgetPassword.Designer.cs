@@ -91,6 +91,7 @@
             this.gbx.Size = new System.Drawing.Size(904, 512);
             this.gbx.TabIndex = 49;
             this.gbx.TabStop = false;
+            this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
             // 
             // lblDataStoredSignal
             // 

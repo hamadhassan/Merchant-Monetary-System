@@ -40,6 +40,7 @@
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warehouseMangerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewWarehousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddEmployee = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
-            this.viewWarehousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -158,6 +158,13 @@
             this.warehouseMangerToolStripMenuItem.Name = "warehouseMangerToolStripMenuItem";
             this.warehouseMangerToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
             this.warehouseMangerToolStripMenuItem.Text = "Warehouse";
+            // 
+            // viewWarehousesToolStripMenuItem
+            // 
+            this.viewWarehousesToolStripMenuItem.Name = "viewWarehousesToolStripMenuItem";
+            this.viewWarehousesToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.viewWarehousesToolStripMenuItem.Text = "View Warehouses";
+            this.viewWarehousesToolStripMenuItem.Click += new System.EventHandler(this.viewWarehousesToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
@@ -265,6 +272,7 @@
             this.btnAddRider.TabIndex = 61;
             this.btnAddRider.Text = "Add Rider";
             this.btnAddRider.UseVisualStyleBackColor = false;
+            this.btnAddRider.Click += new System.EventHandler(this.btnAddRider_Click);
             // 
             // btnAddProduct
             // 
@@ -280,6 +288,7 @@
             this.btnAddProduct.TabIndex = 62;
             this.btnAddProduct.Text = "Add Product";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btnViewProduct
             // 
@@ -424,13 +433,6 @@
             this.pParent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.pParent.Size = new System.Drawing.Size(931, 545);
             this.pParent.TabIndex = 5;
-            // 
-            // viewWarehousesToolStripMenuItem
-            // 
-            this.viewWarehousesToolStripMenuItem.Name = "viewWarehousesToolStripMenuItem";
-            this.viewWarehousesToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
-            this.viewWarehousesToolStripMenuItem.Text = "View Warehouses";
-            this.viewWarehousesToolStripMenuItem.Click += new System.EventHandler(this.viewWarehousesToolStripMenuItem_Click);
             // 
             // frmCEODashboard
             // 

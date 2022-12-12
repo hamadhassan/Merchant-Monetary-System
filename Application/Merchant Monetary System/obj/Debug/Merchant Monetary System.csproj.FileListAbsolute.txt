@@ -18,15 +18,12 @@ C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetar
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\Merchant Monetary System.pdb
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.AssemblyReference.cache
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.SuggestedBindingRedirects.cache
-C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Product.frmAddProduct.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddCompnay.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmForgetPassword.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmIntroduction.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmLogin.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmSignUp.resources
-C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewAndDeleteAccount.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Properties.Resources.resources
-C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.UpdateUser_form.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.GenerateResource.cache
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.CoreCompileInputs.cache
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.exe
@@ -37,3 +34,10 @@ D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term P
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmEmployeeDashboard.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddWarehouse.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewWarehouses.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCEODashboard.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAccountDetails.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmEmployeeDashboard.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddWarehouse.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewWarehouses.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Product.frmViewProducts.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddProduct.resources

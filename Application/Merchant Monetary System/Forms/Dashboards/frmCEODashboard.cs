@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Merchant_Monetary_System.Forms.Product;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,6 +94,16 @@ namespace Merchant_Monetary_System
         private void viewWarehousesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmViewWarehouses());
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddProduct());
+        }
+
+        private void btnAddRider_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

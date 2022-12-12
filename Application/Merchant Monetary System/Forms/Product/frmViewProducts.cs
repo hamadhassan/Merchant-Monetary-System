@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Merchant_Monetary_System
+namespace Merchant_Monetary_System.Forms.Product
 {
-    public partial class frmAddProduct : Form
+    public partial class frmViewProducts : Form
     {
-        public frmAddProduct()
+        public frmViewProducts()
         {
             InitializeComponent();
+        }
+
+        private void grpbx_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

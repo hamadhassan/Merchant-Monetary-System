@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.gbx = new System.Windows.Forms.GroupBox();
+            this.lblWarehouse = new System.Windows.Forms.Label();
+            this.cmbxWarehouse = new System.Windows.Forms.ComboBox();
             this.lblRecordSignal = new System.Windows.Forms.Label();
             this.btnShowPasswrd2 = new System.Windows.Forms.Button();
             this.btnShowPassword = new System.Windows.Forms.Button();
@@ -70,8 +72,6 @@
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.lblWarehouse = new System.Windows.Forms.Label();
-            this.cmbxWarehouse = new System.Windows.Forms.ComboBox();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +126,28 @@
             this.gbx.TabStop = false;
             this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
             // 
+            // lblWarehouse
+            // 
+            this.lblWarehouse.AutoSize = true;
+            this.lblWarehouse.Location = new System.Drawing.Point(77, 342);
+            this.lblWarehouse.Name = "lblWarehouse";
+            this.lblWarehouse.Size = new System.Drawing.Size(99, 20);
+            this.lblWarehouse.TabIndex = 35;
+            this.lblWarehouse.Text = "Warehouse :";
+            this.lblWarehouse.Click += new System.EventHandler(this.lblWarehouse_Click);
+            // 
+            // cmbxWarehouse
+            // 
+            this.cmbxWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxWarehouse.FormattingEnabled = true;
+            this.cmbxWarehouse.Location = new System.Drawing.Point(227, 335);
+            this.cmbxWarehouse.Name = "cmbxWarehouse";
+            this.cmbxWarehouse.Size = new System.Drawing.Size(203, 28);
+            this.cmbxWarehouse.Sorted = true;
+            this.cmbxWarehouse.TabIndex = 34;
+            this.cmbxWarehouse.SelectedIndexChanged += new System.EventHandler(this.cmbxWarehouse_SelectedIndexChanged);
+            // 
             // lblRecordSignal
             // 
             this.lblRecordSignal.AutoSize = true;
@@ -134,6 +156,7 @@
             this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
             this.lblRecordSignal.TabIndex = 33;
             this.lblRecordSignal.Text = " ";
+            this.lblRecordSignal.Click += new System.EventHandler(this.lblRecordSignal_Click);
             // 
             // btnShowPasswrd2
             // 
@@ -145,6 +168,7 @@
             this.btnShowPasswrd2.Size = new System.Drawing.Size(20, 24);
             this.btnShowPasswrd2.TabIndex = 32;
             this.btnShowPasswrd2.UseVisualStyleBackColor = true;
+            this.btnShowPasswrd2.Click += new System.EventHandler(this.btnShowPasswrd2_Click);
             this.btnShowPasswrd2.MouseLeave += new System.EventHandler(this.btnShowPasswrd2_MouseLeave);
             this.btnShowPasswrd2.MouseHover += new System.EventHandler(this.btnShowPasswrd2_MouseHover);
             // 
@@ -158,6 +182,7 @@
             this.btnShowPassword.Size = new System.Drawing.Size(20, 24);
             this.btnShowPassword.TabIndex = 31;
             this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             this.btnShowPassword.MouseLeave += new System.EventHandler(this.btnShowPassword_MouseLeave);
             this.btnShowPassword.MouseHover += new System.EventHandler(this.btnShowPassword_MouseHover);
             // 
@@ -170,6 +195,7 @@
             this.lblHomeAddressSignal.Size = new System.Drawing.Size(13, 20);
             this.lblHomeAddressSignal.TabIndex = 30;
             this.lblHomeAddressSignal.Text = " ";
+            this.lblHomeAddressSignal.Click += new System.EventHandler(this.lblHomeAddressSignal_Click);
             // 
             // lblVehicle
             // 
@@ -179,6 +205,7 @@
             this.lblVehicle.Size = new System.Drawing.Size(69, 20);
             this.lblVehicle.TabIndex = 27;
             this.lblVehicle.Text = "Vehicel :";
+            this.lblVehicle.Click += new System.EventHandler(this.lblVehicle_Click);
             // 
             // cmbxVehicle
             // 
@@ -190,6 +217,7 @@
             this.cmbxVehicle.Size = new System.Drawing.Size(203, 28);
             this.cmbxVehicle.Sorted = true;
             this.cmbxVehicle.TabIndex = 14;
+            this.cmbxVehicle.SelectedIndexChanged += new System.EventHandler(this.cmbxVehicle_SelectedIndexChanged);
             // 
             // lblEmailAddressSignal
             // 
@@ -200,6 +228,7 @@
             this.lblEmailAddressSignal.Size = new System.Drawing.Size(13, 20);
             this.lblEmailAddressSignal.TabIndex = 25;
             this.lblEmailAddressSignal.Text = " ";
+            this.lblEmailAddressSignal.Click += new System.EventHandler(this.lblEmailAddressSignal_Click);
             // 
             // lblContactNumberSignal
             // 
@@ -210,6 +239,7 @@
             this.lblContactNumberSignal.Size = new System.Drawing.Size(13, 20);
             this.lblContactNumberSignal.TabIndex = 24;
             this.lblContactNumberSignal.Text = " ";
+            this.lblContactNumberSignal.Click += new System.EventHandler(this.lblContactNumberSignal_Click);
             // 
             // lblGenderSignal
             // 
@@ -220,6 +250,7 @@
             this.lblGenderSignal.Size = new System.Drawing.Size(13, 20);
             this.lblGenderSignal.TabIndex = 23;
             this.lblGenderSignal.Text = " ";
+            this.lblGenderSignal.Click += new System.EventHandler(this.lblGenderSignal_Click);
             // 
             // lblConfirmPasswordSignal
             // 
@@ -230,6 +261,7 @@
             this.lblConfirmPasswordSignal.Size = new System.Drawing.Size(13, 20);
             this.lblConfirmPasswordSignal.TabIndex = 22;
             this.lblConfirmPasswordSignal.Text = " ";
+            this.lblConfirmPasswordSignal.Click += new System.EventHandler(this.lblConfirmPasswordSignal_Click);
             // 
             // lblNewPasswordSignal
             // 
@@ -240,6 +272,7 @@
             this.lblNewPasswordSignal.Size = new System.Drawing.Size(13, 20);
             this.lblNewPasswordSignal.TabIndex = 21;
             this.lblNewPasswordSignal.Text = " ";
+            this.lblNewPasswordSignal.Click += new System.EventHandler(this.lblNewPasswordSignal_Click);
             // 
             // lblUsernameSignal
             // 
@@ -250,6 +283,7 @@
             this.lblUsernameSignal.Size = new System.Drawing.Size(13, 20);
             this.lblUsernameSignal.TabIndex = 20;
             this.lblUsernameSignal.Text = " ";
+            this.lblUsernameSignal.Click += new System.EventHandler(this.lblUsernameSignal_Click);
             // 
             // lblNameSignal
             // 
@@ -260,6 +294,7 @@
             this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
             this.lblNameSignal.TabIndex = 19;
             this.lblNameSignal.Text = " ";
+            this.lblNameSignal.Click += new System.EventHandler(this.lblNameSignal_Click);
             // 
             // lblCNICSignal
             // 
@@ -270,6 +305,7 @@
             this.lblCNICSignal.Size = new System.Drawing.Size(13, 20);
             this.lblCNICSignal.TabIndex = 18;
             this.lblCNICSignal.Text = " ";
+            this.lblCNICSignal.Click += new System.EventHandler(this.lblCNICSignal_Click);
             // 
             // lblDesignationSingal
             // 
@@ -280,6 +316,7 @@
             this.lblDesignationSingal.Size = new System.Drawing.Size(13, 20);
             this.lblDesignationSingal.TabIndex = 1;
             this.lblDesignationSingal.Text = " ";
+            this.lblDesignationSingal.Click += new System.EventHandler(this.lblDesignationSingal_Click);
             // 
             // rtxtbxHomeAddress
             // 
@@ -301,6 +338,7 @@
             this.rdbtnFemale.TabStop = true;
             this.rdbtnFemale.Text = "Female";
             this.rdbtnFemale.UseVisualStyleBackColor = true;
+            this.rdbtnFemale.CheckedChanged += new System.EventHandler(this.rdbtnFemale_CheckedChanged);
             // 
             // rdbtnMale
             // 
@@ -313,6 +351,7 @@
             this.rdbtnMale.TabStop = true;
             this.rdbtnMale.Text = "Male";
             this.rdbtnMale.UseVisualStyleBackColor = true;
+            this.rdbtnMale.CheckedChanged += new System.EventHandler(this.rdbtnMale_CheckedChanged);
             // 
             // btnCreateAccount
             // 
@@ -423,6 +462,7 @@
             this.lblCNIC.Size = new System.Drawing.Size(55, 20);
             this.lblCNIC.TabIndex = 2;
             this.lblCNIC.Text = "CNIC :";
+            this.lblCNIC.Click += new System.EventHandler(this.lblCNIC_Click);
             // 
             // lblHomeAddress
             // 
@@ -432,6 +472,7 @@
             this.lblHomeAddress.Size = new System.Drawing.Size(123, 20);
             this.lblHomeAddress.TabIndex = 2;
             this.lblHomeAddress.Text = "Home Address :";
+            this.lblHomeAddress.Click += new System.EventHandler(this.lblHomeAddress_Click);
             // 
             // lblNewPassword
             // 
@@ -441,6 +482,7 @@
             this.lblNewPassword.Size = new System.Drawing.Size(121, 20);
             this.lblNewPassword.TabIndex = 2;
             this.lblNewPassword.Text = "New Password :";
+            this.lblNewPassword.Click += new System.EventHandler(this.lblNewPassword_Click);
             // 
             // lblEmailAddress
             // 
@@ -450,6 +492,7 @@
             this.lblEmailAddress.Size = new System.Drawing.Size(119, 20);
             this.lblEmailAddress.TabIndex = 2;
             this.lblEmailAddress.Text = "Email Address :";
+            this.lblEmailAddress.Click += new System.EventHandler(this.lblEmailAddress_Click);
             // 
             // lblUsername
             // 
@@ -459,6 +502,7 @@
             this.lblUsername.Size = new System.Drawing.Size(95, 20);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "User name :";
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // lblConfirmPassword
             // 
@@ -468,6 +512,7 @@
             this.lblConfirmPassword.Size = new System.Drawing.Size(145, 20);
             this.lblConfirmPassword.TabIndex = 2;
             this.lblConfirmPassword.Text = "Confirm Password :";
+            this.lblConfirmPassword.Click += new System.EventHandler(this.lblConfirmPassword_Click);
             // 
             // lblContactNumber
             // 
@@ -477,6 +522,7 @@
             this.lblContactNumber.Size = new System.Drawing.Size(133, 20);
             this.lblContactNumber.TabIndex = 2;
             this.lblContactNumber.Text = "Conatct Number :";
+            this.lblContactNumber.Click += new System.EventHandler(this.lblContactNumber_Click);
             // 
             // lblName
             // 
@@ -486,6 +532,7 @@
             this.lblName.Size = new System.Drawing.Size(59, 20);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name :";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblGender
             // 
@@ -495,6 +542,7 @@
             this.lblGender.Size = new System.Drawing.Size(71, 20);
             this.lblGender.TabIndex = 2;
             this.lblGender.Text = "Gender :";
+            this.lblGender.Click += new System.EventHandler(this.lblGender_Click);
             // 
             // lblDesignation
             // 
@@ -504,6 +552,7 @@
             this.lblDesignation.Size = new System.Drawing.Size(102, 20);
             this.lblDesignation.TabIndex = 2;
             this.lblDesignation.Text = "Designation :";
+            this.lblDesignation.Click += new System.EventHandler(this.lblDesignation_Click);
             // 
             // cmbxDesignation
             // 
@@ -531,26 +580,7 @@
             this.lblSignUp.Size = new System.Drawing.Size(136, 39);
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "SignUp";
-            // 
-            // lblWarehouse
-            // 
-            this.lblWarehouse.AutoSize = true;
-            this.lblWarehouse.Location = new System.Drawing.Point(77, 342);
-            this.lblWarehouse.Name = "lblWarehouse";
-            this.lblWarehouse.Size = new System.Drawing.Size(99, 20);
-            this.lblWarehouse.TabIndex = 35;
-            this.lblWarehouse.Text = "Warehouse :";
-            // 
-            // cmbxWarehouse
-            // 
-            this.cmbxWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbxWarehouse.FormattingEnabled = true;
-            this.cmbxWarehouse.Location = new System.Drawing.Point(227, 335);
-            this.cmbxWarehouse.Name = "cmbxWarehouse";
-            this.cmbxWarehouse.Size = new System.Drawing.Size(203, 28);
-            this.cmbxWarehouse.Sorted = true;
-            this.cmbxWarehouse.TabIndex = 34;
+            this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
             // 
             // frmSignUp
             // 
