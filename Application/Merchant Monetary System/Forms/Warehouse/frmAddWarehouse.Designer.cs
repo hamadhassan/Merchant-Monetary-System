@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbx = new System.Windows.Forms.GroupBox();
+            this.lblRecordSignal = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.txtbxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddWarehouse = new System.Windows.Forms.Label();
-            this.lblRecordSignal = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,15 @@
             this.gbx.TabIndex = 0;
             this.gbx.TabStop = false;
             this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
+            // 
+            // lblRecordSignal
+            // 
+            this.lblRecordSignal.AutoSize = true;
+            this.lblRecordSignal.Location = new System.Drawing.Point(286, 280);
+            this.lblRecordSignal.Name = "lblRecordSignal";
+            this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblRecordSignal.TabIndex = 34;
+            this.lblRecordSignal.Text = " ";
             // 
             // btnNext
             // 
@@ -243,15 +252,6 @@
             this.lblAddWarehouse.Size = new System.Drawing.Size(274, 39);
             this.lblAddWarehouse.TabIndex = 2;
             this.lblAddWarehouse.Text = "Add Warehouse";
-            // 
-            // lblRecordSignal
-            // 
-            this.lblRecordSignal.AutoSize = true;
-            this.lblRecordSignal.Location = new System.Drawing.Point(286, 280);
-            this.lblRecordSignal.Name = "lblRecordSignal";
-            this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblRecordSignal.TabIndex = 34;
-            this.lblRecordSignal.Text = " ";
             // 
             // frmAddWarehouse
             // 
