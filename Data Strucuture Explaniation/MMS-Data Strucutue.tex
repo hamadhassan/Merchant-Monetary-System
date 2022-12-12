@@ -40,36 +40,14 @@ The following section shows the reason for choosing the data structure in the pa
 \begin{center}
 \begin{tabular}{ | m{4cm}|m{12cm}| }\hline
 \textbf{Use Case IDs}& U01,U02,U03,U04,U05,U06,U07,U08,U09,U010,U11,U12,U13,U14,
-U15,U16,U17,U18,U21,U22,U23,U24,U25,U26,U30,U31 \\ \hline
+U15,U16,U17,U18,U21,U22,U25,U26,U30,U31 \\ \hline
 \textbf{Data Structure Used}& Linked List \\ \hline
 
 \textbf{Time Complexity}& 
 In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
 \textbf{Space Complexity}& O(n)\\\hline
-
-\textbf{Pseudocode}& 
-\textbf{Search:} \\&
-LIST-SEARCH(L,k)\\&
-1 x=L.head\\&
-2 while x $\neq$ NIL and x:key $\neq$ k \\&
-3\hspace{6 mm} x = x.next\\&
-4 return x\\&
-\textbf{Insert:} \\&
-LIST-INSERT(L, x) \\&
-1 x.next=L.head \\&
-2 if L.head $\neq$ NIL \\&
-3\hspace{6 mm} L.head.pre = x \\&
-4 L.head = x \\&
-5 x.pre = NIL \\&
-\textbf{Delete:} \\&
-LIST-DELETE(L,x)\\&
-1 if x.pre $\neq$ NIL\\&
-2\hspace{6 mm} x.pre.next=x.next\\&
-3 else L.head D x.next\\&
-4 if x.next $\neq$ NIL\\&
-5\hspace{6 mm} x.next.pre =x.pre
- \\ \hline
  \end{tabular}
+ 
 \begin{tabular}{ | m{4cm}|m{12cm}| }\hline
 \textbf{Justification for the use of data structure}&
 In mentioned use case required a linear-dynamic data structure. 
@@ -80,6 +58,130 @@ Doubly LinkedList provides an efficient way to search the specific information f
 \textbf{Comparison}&
 The array list worst and average case time complexity is O(n). It takes contiguous memory. The hash table is best in the average case, but in the worst case time, complexity rise to O(n). It takes contiguous memory for storing the hash function value. In the average and worst case, the linked list insertion and deletion take O(1) time. In the average and worst case, it takes O(n) time for deletion. It did not require contiguous memory allocation.Array list, hash table, and linked list space complexity O(n) are the same.
  \\ \hline
+\end{tabular} 
+
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Use Case IDs}& U19 \\ \hline
+\textbf{Data Structure Used}& Queue \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+ \end{tabular}
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a linear-dynamic data structure. 
+Queue provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result. It helps to store the data of orders in specific pattern . It allows  to get the ordered pattern of incoming and outgoing orders data and shows the required result.
+ 
+ \\ \hline
+\textbf{Available choices}& Array List,Hash Table, Linked List \\ \hline
+\textbf{Comparison}&
+The array list worst and average case time complexity is O(n). It takes contiguous memory. The hash table is best in the average case, but in the worst case time, complexity rise to O(n). It takes contiguous memory for storing the hash function value. In the average and worst case, the linked list insertion and deletion take O(1) time. In the average and worst case, Queue takes O(n) time for deletion. It gives the specific ordered pattern to store and Dequeue reguired data.Array list, hash table, and linked list space complexity O(n) are the same.
+ \\ \hline
 \end{tabular}
+
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Use Case IDs}& U11,U12 \\ \hline
+\textbf{Data Structure Used}& Array List \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+ \end{tabular}
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a linear-dynamic data structure. 
+Queue provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result.IT allows to get specific data and shows  the required result.Only a specific detail of the data is required to store the specific information in this use case. 
+ 
+ \\ \hline
+\textbf{Available choices}& Linked List \\ \hline
+\textbf{Comparison}&
+The array list worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Array list and linked list space complexity O(n) are the same therefore for the small data Array list used.
+\\
+\\
+ \\
+ \\ \hline
+\end{tabular}
+
+
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Use Case IDs}& U23,U24 \\ \hline
+\textbf{Data Structure Used}& Heap \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(n), Insertion: O(n), Deletion: O(n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+ \end{tabular}
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a Heap data structure. 
+Heap provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to get specific data of some specific data, it allows to apply specific operation on that and shows the required result.
+ 
+ \\ \hline
+\textbf{Available choices}& Linked List \\ \hline
+\textbf{Comparison}&
+The Heap worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Heap and linked list space complexity O(n) are the same therefore for the Detailed  data Heap used.
+\\
+\\
+\\
+ \\ \hline
+\end{tabular}
+
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Use Case IDs}& U20 \\ \hline
+\textbf{Data Structure Used}& Tree \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(lg n), Insertion: O( lg n), Deletion: O(lg n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+ \end{tabular}
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a Tree data structure. 
+Tree provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to get specific detailed ordered data in a specfic manner and point out the points to some reference .
+ 
+ \\ \hline
+\textbf{Available choices}& Linked List \\ \hline
+\textbf{Comparison}&
+The Tree worst and average case time complexity is O(lg n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Tree and linked list space complexity O(n) are not same therefore, for the Detailed  data Tree is prefered to be used.
+ \\ 
+\\ 
+ \\
+ \hline
+\end{tabular}
+
+
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Use Case IDs}& U29 \\ \hline
+\textbf{Data Structure Used}& Graph \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(lg n), Insertion: O( lg n), Deletion: O(lg n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+ \end{tabular}
+\begin{tabular}{ | m{4cm}|m{12cm}| }\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a Tree data structure. 
+Tree provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to plot the data and apply operation on the data to show the required result.
+ 
+ \\ \hline
+\textbf{Available choices}& Tree \\ \hline
+\textbf{Comparison}&
+The Graph worst and average case time complexity is O(lg n). In the average and worst case, the Tree insertion and deletion take O(lg n) time. IN the average and worst case, Tree takes O(n) time for deletion. It did not require contiguous memory allocation.Tree and Graph space complexity O(n) are  same therefore, for the Plotting  data graph is prefered to be used.
+ \\ \hline
+\end{tabular}
+
+
+
+
+
+
+
+
 \end{center}
 \end{document}
