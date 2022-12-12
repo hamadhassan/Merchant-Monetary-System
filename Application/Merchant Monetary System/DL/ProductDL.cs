@@ -19,7 +19,7 @@ namespace Merchant_Monetary_System.DL
             return true;
         }
 
-                public static bool updateRecord(Product updatedProduct)
+        public static bool updateRecord(Product updatedProduct)
         {
             foreach (Product product in ProductList)
             {
@@ -38,5 +38,19 @@ namespace Merchant_Monetary_System.DL
             }
             return false;
         }
+        public static bool itProducrlMatch(string Name, int SKU_Number)
+        {// the product  data matched with the database result
+            foreach (Product product in ProductList)
+            {
+                if (Name == product.Name && SKU_Number == product.SKU_Number)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
     }
 }

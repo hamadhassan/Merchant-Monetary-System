@@ -23,5 +23,18 @@ namespace Merchant_Monetary_System.BL
         public string SensitivityType { get => sensitivityType; set => sensitivityType = value; }
         public string Category { get => category; set => category = value; }
         public string Manufacturer { get => manufacturer; set => manufacturer = value; }
+
+        public Product(string Name, int  SKU_Number, float Weight , double Volume, string Manufacturer, string Category,  string SensitivityType)
+        {
+            this.Name= Name;
+            this.SKU_Number = SKU_Number;
+            this.Weight = Weight;
+            this.Volume = Volume;
+            this.Manufacturer = Manufacturer;
+            this.Category = Category;
+            this.sensitivityType = SensitivityType;
+
+        }
+
     }
 }
