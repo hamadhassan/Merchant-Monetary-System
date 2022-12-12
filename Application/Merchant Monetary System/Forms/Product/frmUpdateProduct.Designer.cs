@@ -78,12 +78,12 @@
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.lblupdate_);
-            this.groupBox1.Location = new System.Drawing.Point(2, -4);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox1.Location = new System.Drawing.Point(2, -1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(911, 501);
+            this.groupBox1.Size = new System.Drawing.Size(911, 498);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // lbl_Volume
             // 
@@ -91,7 +91,7 @@
             this.lbl_Volume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
             this.lbl_Volume.Location = new System.Drawing.Point(221, 313);
             this.lbl_Volume.Name = "lbl_Volume";
-            this.lbl_Volume.Size = new System.Drawing.Size(10, 13);
+            this.lbl_Volume.Size = new System.Drawing.Size(13, 20);
             this.lbl_Volume.TabIndex = 65;
             this.lbl_Volume.Text = " ";
             this.lbl_Volume.Click += new System.EventHandler(this.lbl_Volume_Click);
@@ -118,7 +118,7 @@
             "Rider"});
             this.comboCategory.Location = new System.Drawing.Point(633, 237);
             this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(203, 21);
+            this.comboCategory.Size = new System.Drawing.Size(203, 28);
             this.comboCategory.Sorted = true;
             this.comboCategory.TabIndex = 61;
             this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
@@ -145,7 +145,7 @@
             "Rider"});
             this.cmbxSenstivity.Location = new System.Drawing.Point(636, 188);
             this.cmbxSenstivity.Name = "cmbxSenstivity";
-            this.cmbxSenstivity.Size = new System.Drawing.Size(203, 21);
+            this.cmbxSenstivity.Size = new System.Drawing.Size(203, 28);
             this.cmbxSenstivity.Sorted = true;
             this.cmbxSenstivity.TabIndex = 60;
             this.cmbxSenstivity.SelectedIndexChanged += new System.EventHandler(this.cmbxSenstivity_SelectedIndexChanged);
@@ -156,7 +156,7 @@
             this.lbl_Weight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
             this.lbl_Weight.Location = new System.Drawing.Point(221, 261);
             this.lbl_Weight.Name = "lbl_Weight";
-            this.lbl_Weight.Size = new System.Drawing.Size(10, 13);
+            this.lbl_Weight.Size = new System.Drawing.Size(13, 20);
             this.lbl_Weight.TabIndex = 54;
             this.lbl_Weight.Text = " ";
             this.lbl_Weight.Click += new System.EventHandler(this.lbl_Weight_Click);
@@ -167,7 +167,7 @@
             this.lblS_Number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
             this.lblS_Number.Location = new System.Drawing.Point(221, 214);
             this.lblS_Number.Name = "lblS_Number";
-            this.lblS_Number.Size = new System.Drawing.Size(10, 13);
+            this.lblS_Number.Size = new System.Drawing.Size(13, 20);
             this.lblS_Number.TabIndex = 52;
             this.lblS_Number.Text = " ";
             this.lblS_Number.Click += new System.EventHandler(this.lblS_Number_Click);
@@ -178,7 +178,7 @@
             this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
             this.lblNameSignal.Location = new System.Drawing.Point(221, 162);
             this.lblNameSignal.Name = "lblNameSignal";
-            this.lblNameSignal.Size = new System.Drawing.Size(10, 13);
+            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
             this.lblNameSignal.TabIndex = 50;
             this.lblNameSignal.Text = " ";
             this.lblNameSignal.Click += new System.EventHandler(this.lblNameSignal_Click);
@@ -187,7 +187,7 @@
             // 
             this.txtbxVolume.Location = new System.Drawing.Point(221, 284);
             this.txtbxVolume.Name = "txtbxVolume";
-            this.txtbxVolume.Size = new System.Drawing.Size(203, 20);
+            this.txtbxVolume.Size = new System.Drawing.Size(203, 26);
             this.txtbxVolume.TabIndex = 55;
             this.txtbxVolume.UseSystemPasswordChar = true;
             this.txtbxVolume.TextChanged += new System.EventHandler(this.txtbxVolume_TextChanged);
@@ -196,7 +196,7 @@
             // 
             this.txtbxWeight.Location = new System.Drawing.Point(221, 235);
             this.txtbxWeight.Name = "txtbxWeight";
-            this.txtbxWeight.Size = new System.Drawing.Size(203, 20);
+            this.txtbxWeight.Size = new System.Drawing.Size(203, 26);
             this.txtbxWeight.TabIndex = 53;
             this.txtbxWeight.UseSystemPasswordChar = true;
             this.txtbxWeight.TextChanged += new System.EventHandler(this.txtbxWeight_TextChanged);
@@ -205,7 +205,7 @@
             // 
             this.txtbxSKU_ID.Location = new System.Drawing.Point(221, 185);
             this.txtbxSKU_ID.Name = "txtbxSKU_ID";
-            this.txtbxSKU_ID.Size = new System.Drawing.Size(203, 20);
+            this.txtbxSKU_ID.Size = new System.Drawing.Size(203, 26);
             this.txtbxSKU_ID.TabIndex = 51;
             this.txtbxSKU_ID.TextChanged += new System.EventHandler(this.txtbxSKU_ID_TextChanged);
             // 
@@ -284,7 +284,7 @@
             "Rider"});
             this.cmbxManufacture.Location = new System.Drawing.Point(633, 136);
             this.cmbxManufacture.Name = "cmbxManufacture";
-            this.cmbxManufacture.Size = new System.Drawing.Size(203, 21);
+            this.cmbxManufacture.Size = new System.Drawing.Size(203, 28);
             this.cmbxManufacture.Sorted = true;
             this.cmbxManufacture.TabIndex = 59;
             this.cmbxManufacture.SelectedIndexChanged += new System.EventHandler(this.cmbxManufacture_SelectedIndexChanged);
@@ -348,6 +348,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 501);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateProduct";
