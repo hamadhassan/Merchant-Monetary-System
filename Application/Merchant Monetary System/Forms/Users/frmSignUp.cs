@@ -451,6 +451,7 @@ namespace Merchant_Monetary_System
                 lblVehicle.Visible = false;
                 cmbxVehicle.Visible = false;
                 createAccountFor = 3;
+                WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
                 //add all warehouse 
                 foreach (Warehouse w in WarehouseDL.WarehousesList)
                 {

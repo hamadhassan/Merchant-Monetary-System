@@ -52,5 +52,10 @@ namespace Merchant_Monetary_System
         {
             loadform(new frmAccountDetails(false));
         }
+
+        private void btnAddWarehouseManger_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddWarehouse());
+        }
     }
 }

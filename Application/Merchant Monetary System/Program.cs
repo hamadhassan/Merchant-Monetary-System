@@ -17,7 +17,7 @@ namespace Merchant_Monetary_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCEODashboard());
+            Application.Run(new frmSignUp());
         }
     }
 }
