@@ -16,5 +16,10 @@ namespace Merchant_Monetary_System
         {
             InitializeComponent();
         }
+
+        private void gbx_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

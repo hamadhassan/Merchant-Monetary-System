@@ -51,13 +51,11 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbx
             // 
-            this.gbx.Controls.Add(this.tableLayoutPanel1);
             this.gbx.Controls.Add(this.lblCategory);
             this.gbx.Controls.Add(this.comboCategory);
             this.gbx.Controls.Add(this.lblManufacture);
@@ -85,6 +83,7 @@
             this.gbx.Size = new System.Drawing.Size(906, 516);
             this.gbx.TabIndex = 1;
             this.gbx.TabStop = false;
+            this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
             // 
             // lblCategory
             // 
@@ -321,19 +320,6 @@
             this.lblSignUp.TabIndex = 21;
             this.lblSignUp.Text = "Add Product";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(875, 34);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 43;
-            // 
             // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -377,6 +363,5 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblSignUp;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

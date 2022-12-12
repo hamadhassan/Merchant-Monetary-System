@@ -49,6 +49,8 @@
     <Compile Include="BL\Compnay.cs" />
     <Compile Include="BL\CEO.cs" />
     <Compile Include="BL\Crediationals.cs" />
+    <Compile Include="BL\Product.cs" />
+    <Compile Include="DL\ProductDL.cs" />
     <Compile Include="FilesPaths\FilePath.cs" />
     <Compile Include="Forms\Product\frmViewProducts.cs">
       <SubType>Form</SubType>
