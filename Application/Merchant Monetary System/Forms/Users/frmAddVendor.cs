@@ -8,27 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Merchant_Monetary_System
+namespace Merchant_Monetary_System.Forms.Users
 {
-    public partial class frmProductDetails_ : Form
+    public partial class frmAddVendor : Form
     {
-        public frmProductDetails_()
+        public frmAddVendor()
         {
             InitializeComponent();
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
 
         }
 
-        private void btnLoadRecords_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void datagvAccountDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void lblAddCompany_Click(object sender, EventArgs e)
         {
 
         }

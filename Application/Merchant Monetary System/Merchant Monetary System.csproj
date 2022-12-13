@@ -88,6 +88,18 @@
     <Compile Include="Forms\Users\frmIntroduction.Designer.cs">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Users\frmAddVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frmAddVendor.Designer.cs">
+      <DependentUpon>frmAddVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\frmUpdateVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frmUpdateVendor.Designer.cs">
+      <DependentUpon>frmUpdateVendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Users\frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,7 @@
     <Compile Include="Forms\Product\frmProductDetails_.Designer.cs">
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Forms\Users\frmAddShopkeeper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,38 +188,14 @@
     <Compile Include="Forms\Orders\frmViewOrders.Designer.cs">
       <DependentUpon>frmViewOrders.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Forms\Payment\frmAddPayment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Payment\frmAddPayment.Designer.cs">
       <DependentUpon>frmAddPayment.cs</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <Compile Include="frmAddvendor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddvendor.Designer.cs">
-      <DependentUpon>frmAddvendor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmUpdatevendor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUpdatevendor.Designer.cs">
-      <DependentUpon>frmUpdatevendor.cs</DependentUpon>
-=======
-=======
->>>>>>> Stashed changes
-    <Compile Include="frmTakeOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTakeOrder.Designer.cs">
-      <DependentUpon>frmTakeOrder.cs</DependentUpon>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    </Compile>
+
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BL\Users.cs" />
@@ -258,6 +247,7 @@
     <EmbeddedResource Include="Forms\Product\frmProductDetails_.resx">
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Forms\Users\frmAddShopkeeper.resx">
       <DependentUpon>frmAddShopkeeper.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,22 +257,7 @@
     <EmbeddedResource Include="Forms\Orders\frmViewOrders.resx">
       <DependentUpon>frmViewOrders.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <EmbeddedResource Include="frmAddvendor.resx">
-      <DependentUpon>frmAddvendor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdatevendor.resx">
-      <DependentUpon>frmUpdatevendor.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="frmTakeOrder.resx">
-      <DependentUpon>frmTakeOrder.cs</DependentUpon>
->>>>>>> Stashed changes
-=======
-    <EmbeddedResource Include="frmTakeOrder.resx">
-      <DependentUpon>frmTakeOrder.cs</DependentUpon>
->>>>>>> Stashed changes
-    </EmbeddedResource>
+
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

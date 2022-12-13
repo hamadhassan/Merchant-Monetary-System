@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Merchant_Monetary_System
+namespace Merchant_Monetary_System.Forms.Users
 {
-    public partial class frmUpdatevendor : Form
+    public partial class frmUpdateVendor : Form
     {
-        public frmUpdatevendor()
+        public frmUpdateVendor()
         {
             InitializeComponent();
         }
+
     }
 }

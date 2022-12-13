@@ -70,7 +70,6 @@
             this.groupBox1.Size = new System.Drawing.Size(930, 540);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblDatagvSignal
             // 
@@ -253,7 +252,6 @@
             this.lblDesignation.Size = new System.Drawing.Size(98, 20);
             this.lblDesignation.TabIndex = 60;
             this.lblDesignation.Text = "Designation:";
-            this.lblDesignation.Click += new System.EventHandler(this.lblDesignation_Click);
             // 
             // cmbxDesignation
             // 
@@ -269,7 +267,6 @@
             this.cmbxDesignation.Name = "cmbxDesignation";
             this.cmbxDesignation.Size = new System.Drawing.Size(142, 28);
             this.cmbxDesignation.TabIndex = 59;
-            this.cmbxDesignation.SelectedIndexChanged += new System.EventHandler(this.cmbxDesignation_SelectedIndexChanged);
             // 
             // lblProductDetails
             // 
