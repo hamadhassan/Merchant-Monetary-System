@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Merchant_Monetary_System.Forms;
 using Merchant_Monetary_System.Forms.Dashboards;
+using Merchant_Monetary_System.Forms.Payment;
 
 namespace Merchant_Monetary_System
 {
@@ -19,7 +20,7 @@ namespace Merchant_Monetary_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRiderDashboard());
+            Application.Run(new frmAddPayment());
         }
     }
 }

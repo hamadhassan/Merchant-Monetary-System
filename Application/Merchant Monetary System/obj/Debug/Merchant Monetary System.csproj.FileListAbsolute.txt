@@ -170,3 +170,4 @@ D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmADDvendor.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Dashboards.frmRiderDashboard.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmTakeOrder.resources
+D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Payment.frmEditPayment.resources
