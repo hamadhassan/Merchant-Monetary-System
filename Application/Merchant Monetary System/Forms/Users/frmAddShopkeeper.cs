@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Merchant_Monetary_System
 {
-    public partial class frmAddStock : Form
+    public partial class frmAddShopkeeper : Form
     {
-        public frmAddStock()
+        public frmAddShopkeeper()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void txtbxUsername_TextChanged(object sender, EventArgs e)
         {
-            this.Hide();
+
+        }
+
+        private void lblShopName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
