@@ -53,6 +53,12 @@
     <Compile Include="CompanyDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
     <Compile Include="FilesPaths\FilePath.cs" />
+    <Compile Include="Forms\Dashboards\frmRiderDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboards\frmRiderDashboard.Designer.cs">
+      <DependentUpon>frmRiderDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Emails\frmEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,7 +68,9 @@
     <Compile Include="Forms\Orders\frmTakeOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Orders\frmTakeOrder.Designer.cs" />
+    <Compile Include="Forms\Orders\frmTakeOrder.designer.cs">
+      <DependentUpon>frmTakeOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Product\frmUpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,13 +215,18 @@
     <EmbeddedResource Include="Forms\Dashboards\frmCEODashboard.resx">
       <DependentUpon>frmCEODashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboards\frmRiderDashboard.resx">
+      <DependentUpon>frmRiderDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboards\frmWarehouseManagerDashboard.resx">
       <DependentUpon>frmWarehouseManagerDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Emails\frmEmail.resx">
       <DependentUpon>frmEmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Orders\frmTakeOrder.resx" />
+    <EmbeddedResource Include="Forms\Orders\frmTakeOrder.resx">
+      <DependentUpon>frmTakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmUpdateProduct.resx">
       <DependentUpon>frmUpdateProduct.cs</DependentUpon>
     </EmbeddedResource>

@@ -62,7 +62,8 @@
             this.groupBox1.Controls.Add(this.lblVendorName);
             this.groupBox1.Controls.Add(this.lblContactNumber);
             this.groupBox1.Controls.Add(this.lblAddVendor);
-            this.groupBox1.Location = new System.Drawing.Point(1, 3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(904, 512);
             this.groupBox1.TabIndex = 22;
@@ -128,7 +129,7 @@
             this.lblAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
             this.lblAddressSignal.Location = new System.Drawing.Point(211, 253);
             this.lblAddressSignal.Name = "lblAddressSignal";
-            this.lblAddressSignal.Size = new System.Drawing.Size(10, 13);
+            this.lblAddressSignal.Size = new System.Drawing.Size(13, 20);
             this.lblAddressSignal.TabIndex = 20;
             this.lblAddressSignal.Text = " ";
             // 
@@ -138,7 +139,7 @@
             this.lblContactNumberSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
             this.lblContactNumberSignal.Location = new System.Drawing.Point(610, 153);
             this.lblContactNumberSignal.Name = "lblContactNumberSignal";
-            this.lblContactNumberSignal.Size = new System.Drawing.Size(10, 13);
+            this.lblContactNumberSignal.Size = new System.Drawing.Size(13, 20);
             this.lblContactNumberSignal.TabIndex = 18;
             this.lblContactNumberSignal.Text = " ";
             // 
@@ -219,6 +220,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmADDvendor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmADDvendor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

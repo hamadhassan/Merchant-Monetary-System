@@ -146,7 +146,6 @@ D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCEODashboard.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Dashboards.frmWarehouseManagerDashboard.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Emails.frmEmail.resources
-D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Orders.frmTakeOrder.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Product.frmUpdateProduct.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAccountDetails.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddCompnay.resources
@@ -169,3 +168,5 @@ D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.pdb
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Users.frmUpdateVendor.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmADDvendor.resources
+D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Dashboards.frmRiderDashboard.resources
+D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmTakeOrder.resources
