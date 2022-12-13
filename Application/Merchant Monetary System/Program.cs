@@ -21,7 +21,11 @@ namespace Merchant_Monetary_System
             Application.SetCompatibleTextRenderingDefault(false);
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             Application.Run(new frmLogin());
+=======
+            Application.Run(new frmCEODashboard());
+>>>>>>> Stashed changes
 =======
             Application.Run(new frmCEODashboard());
 >>>>>>> Stashed changes
