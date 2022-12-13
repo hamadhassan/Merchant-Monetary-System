@@ -55,23 +55,23 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.txtbxCNIC = new System.Windows.Forms.TextBox();
             this.txtbxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.txtbxNewPassowrd = new System.Windows.Forms.TextBox();
             this.txtbxEmailAddress = new System.Windows.Forms.TextBox();
-            this.txtbxUsername = new System.Windows.Forms.TextBox();
             this.txtbxContactNumber = new System.Windows.Forms.TextBox();
-            this.txtbxName = new System.Windows.Forms.TextBox();
             this.lblCNIC = new System.Windows.Forms.Label();
             this.lblHomeAddress = new System.Windows.Forms.Label();
-            this.lblNewPassword = new System.Windows.Forms.Label();
             this.lblEmailAddress = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.lblContactNumber = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
-            this.lblDesignation = new System.Windows.Forms.Label();
-            this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
+            this.lblNewPassword = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtbxNewPassowrd = new System.Windows.Forms.TextBox();
+            this.txtbxUsername = new System.Windows.Forms.TextBox();
+            this.txtbxName = new System.Windows.Forms.TextBox();
+            this.cmbxDesignation = new System.Windows.Forms.ComboBox();
+            this.lblDesignation = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -413,15 +413,6 @@
             this.txtbxConfirmPassword.UseSystemPasswordChar = true;
             this.txtbxConfirmPassword.TextChanged += new System.EventHandler(this.txtbxConfirmPassword_TextChanged);
             // 
-            // txtbxNewPassowrd
-            // 
-            this.txtbxNewPassowrd.Location = new System.Drawing.Point(227, 233);
-            this.txtbxNewPassowrd.Name = "txtbxNewPassowrd";
-            this.txtbxNewPassowrd.Size = new System.Drawing.Size(180, 26);
-            this.txtbxNewPassowrd.TabIndex = 3;
-            this.txtbxNewPassowrd.UseSystemPasswordChar = true;
-            this.txtbxNewPassowrd.TextChanged += new System.EventHandler(this.txtbxNewPassowrd_TextChanged);
-            // 
             // txtbxEmailAddress
             // 
             this.txtbxEmailAddress.Location = new System.Drawing.Point(627, 234);
@@ -430,14 +421,6 @@
             this.txtbxEmailAddress.TabIndex = 9;
             this.txtbxEmailAddress.TextChanged += new System.EventHandler(this.txtbxEmailAddress_TextChanged);
             // 
-            // txtbxUsername
-            // 
-            this.txtbxUsername.Location = new System.Drawing.Point(227, 183);
-            this.txtbxUsername.Name = "txtbxUsername";
-            this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
-            this.txtbxUsername.TabIndex = 2;
-            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
-            // 
             // txtbxContactNumber
             // 
             this.txtbxContactNumber.Location = new System.Drawing.Point(627, 184);
@@ -445,14 +428,6 @@
             this.txtbxContactNumber.Size = new System.Drawing.Size(203, 26);
             this.txtbxContactNumber.TabIndex = 8;
             this.txtbxContactNumber.TextChanged += new System.EventHandler(this.txtbxContactNumber_TextChanged);
-            // 
-            // txtbxName
-            // 
-            this.txtbxName.Location = new System.Drawing.Point(227, 131);
-            this.txtbxName.Name = "txtbxName";
-            this.txtbxName.Size = new System.Drawing.Size(203, 26);
-            this.txtbxName.TabIndex = 1;
-            this.txtbxName.TextChanged += new System.EventHandler(this.txtbxName_TextChanged);
             // 
             // lblCNIC
             // 
@@ -474,16 +449,6 @@
             this.lblHomeAddress.Text = "Home Address :";
             this.lblHomeAddress.Click += new System.EventHandler(this.lblHomeAddress_Click);
             // 
-            // lblNewPassword
-            // 
-            this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(77, 235);
-            this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(121, 20);
-            this.lblNewPassword.TabIndex = 2;
-            this.lblNewPassword.Text = "New Password :";
-            this.lblNewPassword.Click += new System.EventHandler(this.lblNewPassword_Click);
-            // 
             // lblEmailAddress
             // 
             this.lblEmailAddress.AutoSize = true;
@@ -493,16 +458,6 @@
             this.lblEmailAddress.TabIndex = 2;
             this.lblEmailAddress.Text = "Email Address :";
             this.lblEmailAddress.Click += new System.EventHandler(this.lblEmailAddress_Click);
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(77, 186);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(95, 20);
-            this.lblUsername.TabIndex = 2;
-            this.lblUsername.Text = "User name :";
-            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // lblConfirmPassword
             // 
@@ -524,16 +479,6 @@
             this.lblContactNumber.Text = "Conatct Number :";
             this.lblContactNumber.Click += new System.EventHandler(this.lblContactNumber_Click);
             // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(77, 137);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(59, 20);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "Name :";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
-            // 
             // lblGender
             // 
             this.lblGender.AutoSize = true;
@@ -544,15 +489,71 @@
             this.lblGender.Text = "Gender :";
             this.lblGender.Click += new System.EventHandler(this.lblGender_Click);
             // 
-            // lblDesignation
+            // lblSignUp
             // 
-            this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Location = new System.Drawing.Point(77, 88);
-            this.lblDesignation.Name = "lblDesignation";
-            this.lblDesignation.Size = new System.Drawing.Size(102, 20);
-            this.lblDesignation.TabIndex = 2;
-            this.lblDesignation.Text = "Designation :";
-            this.lblDesignation.Click += new System.EventHandler(this.lblDesignation_Click);
+            this.lblSignUp.AutoSize = true;
+            this.lblSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUp.Location = new System.Drawing.Point(388, 22);
+            this.lblSignUp.Name = "lblSignUp";
+            this.lblSignUp.Size = new System.Drawing.Size(136, 39);
+            this.lblSignUp.TabIndex = 0;
+            this.lblSignUp.Text = "SignUp";
+            this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
+            // 
+            // lblNewPassword
+            // 
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Location = new System.Drawing.Point(77, 235);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(121, 20);
+            this.lblNewPassword.TabIndex = 2;
+            this.lblNewPassword.Text = "New Password :";
+            this.lblNewPassword.Click += new System.EventHandler(this.lblNewPassword_Click);
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(77, 186);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(95, 20);
+            this.lblUsername.TabIndex = 2;
+            this.lblUsername.Text = "User name :";
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(77, 137);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(59, 20);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Name :";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
+            // 
+            // txtbxNewPassowrd
+            // 
+            this.txtbxNewPassowrd.Location = new System.Drawing.Point(227, 233);
+            this.txtbxNewPassowrd.Name = "txtbxNewPassowrd";
+            this.txtbxNewPassowrd.Size = new System.Drawing.Size(180, 26);
+            this.txtbxNewPassowrd.TabIndex = 3;
+            this.txtbxNewPassowrd.UseSystemPasswordChar = true;
+            this.txtbxNewPassowrd.TextChanged += new System.EventHandler(this.txtbxNewPassowrd_TextChanged);
+            // 
+            // txtbxUsername
+            // 
+            this.txtbxUsername.Location = new System.Drawing.Point(227, 183);
+            this.txtbxUsername.Name = "txtbxUsername";
+            this.txtbxUsername.Size = new System.Drawing.Size(203, 26);
+            this.txtbxUsername.TabIndex = 2;
+            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
+            // 
+            // txtbxName
+            // 
+            this.txtbxName.Location = new System.Drawing.Point(227, 131);
+            this.txtbxName.Name = "txtbxName";
+            this.txtbxName.Size = new System.Drawing.Size(203, 26);
+            this.txtbxName.TabIndex = 1;
+            this.txtbxName.TextChanged += new System.EventHandler(this.txtbxName_TextChanged);
             // 
             // cmbxDesignation
             // 
@@ -571,16 +572,15 @@
             this.cmbxDesignation.TabIndex = 0;
             this.cmbxDesignation.SelectedIndexChanged += new System.EventHandler(this.cmbxDesignation_SelectedIndexChanged);
             // 
-            // lblSignUp
+            // lblDesignation
             // 
-            this.lblSignUp.AutoSize = true;
-            this.lblSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignUp.Location = new System.Drawing.Point(388, 22);
-            this.lblSignUp.Name = "lblSignUp";
-            this.lblSignUp.Size = new System.Drawing.Size(136, 39);
-            this.lblSignUp.TabIndex = 0;
-            this.lblSignUp.Text = "SignUp";
-            this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
+            this.lblDesignation.AutoSize = true;
+            this.lblDesignation.Location = new System.Drawing.Point(77, 88);
+            this.lblDesignation.Name = "lblDesignation";
+            this.lblDesignation.Size = new System.Drawing.Size(102, 20);
+            this.lblDesignation.TabIndex = 2;
+            this.lblDesignation.Text = "Designation :";
+            this.lblDesignation.Click += new System.EventHandler(this.lblDesignation_Click);
             // 
             // frmSignUp
             // 

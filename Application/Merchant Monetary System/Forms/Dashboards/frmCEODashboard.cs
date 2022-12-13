@@ -119,17 +119,11 @@ namespace Merchant_Monetary_System
         private void btnAddStock_Click(object sender, EventArgs e)
         {
             //loadform(new frmAddStock());
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
             loadform(new frmViewOrders());
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         }
     }
 }
