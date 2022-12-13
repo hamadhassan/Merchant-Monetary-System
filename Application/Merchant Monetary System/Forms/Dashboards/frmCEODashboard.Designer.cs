@@ -49,7 +49,6 @@
             this.btnAddWarehouseManger = new System.Windows.Forms.Button();
             this.btnAddRider = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
-            this.btnViewProduct = new System.Windows.Forms.Button();
             this.btnViewReport = new System.Windows.Forms.Button();
             this.btnViewOrder = new System.Windows.Forms.Button();
             this.btnAddStock = new System.Windows.Forms.Button();
@@ -63,6 +62,7 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
+            this.btnViewProduct = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -101,21 +101,21 @@
             // signUpToolStripMenuItem
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -222,6 +222,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999969F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999969F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.00007F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(213, 572);
             this.tableLayoutPanel1.TabIndex = 3;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
@@ -289,21 +290,6 @@
             this.btnAddProduct.Text = "Add Product";
             this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // btnViewProduct
-            // 
-            this.btnViewProduct.BackColor = System.Drawing.Color.Transparent;
-            this.btnViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnViewProduct.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewProduct.FlatAppearance.BorderSize = 0;
-            this.btnViewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnViewProduct.Location = new System.Drawing.Point(3, 230);
-            this.btnViewProduct.Name = "btnViewProduct";
-            this.btnViewProduct.Size = new System.Drawing.Size(207, 51);
-            this.btnViewProduct.TabIndex = 63;
-            this.btnViewProduct.Text = "View Product";
-            this.btnViewProduct.UseVisualStyleBackColor = false;
             // 
             // btnViewReport
             // 
@@ -433,6 +419,23 @@
             this.pParent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.pParent.Size = new System.Drawing.Size(931, 545);
             this.pParent.TabIndex = 5;
+            this.pParent.Paint += new System.Windows.Forms.PaintEventHandler(this.pParent_Paint);
+            // 
+            // btnViewProduct
+            // 
+            this.btnViewProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnViewProduct.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnViewProduct.FlatAppearance.BorderSize = 0;
+            this.btnViewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnViewProduct.Location = new System.Drawing.Point(3, 230);
+            this.btnViewProduct.Name = "btnViewProduct";
+            this.btnViewProduct.Size = new System.Drawing.Size(207, 51);
+            this.btnViewProduct.TabIndex = 63;
+            this.btnViewProduct.Text = "View Product";
+            this.btnViewProduct.UseVisualStyleBackColor = false;
+            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
             // 
             // frmCEODashboard
             // 
@@ -478,7 +481,6 @@
         private System.Windows.Forms.Button btnAddWarehouseManger;
         private System.Windows.Forms.Button btnAddRider;
         private System.Windows.Forms.Button btnAddProduct;
-        private System.Windows.Forms.Button btnViewProduct;
         private System.Windows.Forms.Button btnViewReport;
         private System.Windows.Forms.Button btnViewOrder;
         private System.Windows.Forms.Button btnAddStock;
@@ -498,5 +500,6 @@
         private System.Windows.Forms.TableLayoutPanel pParent;
         private System.Windows.Forms.ToolStripMenuItem addAddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewWarehousesToolStripMenuItem;
+        private System.Windows.Forms.Button btnViewProduct;
     }
 }

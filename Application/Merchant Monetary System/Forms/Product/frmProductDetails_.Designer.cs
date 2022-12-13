@@ -1,6 +1,6 @@
-﻿namespace Merchant_Monetary_System.Forms.Product
+﻿namespace Merchant_Monetary_System
 {
-    partial class frmProductDetails
+    partial class frmProductDetails_
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             this.lblAttributes = new System.Windows.Forms.Label();
             this.lblDesignation = new System.Windows.Forms.Label();
             this.cmbxDesignation = new System.Windows.Forms.ComboBox();
-            this.lblAccountDetails = new System.Windows.Forms.Label();
+            this.lblProductDetails = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvAccountDetails)).BeginInit();
             this.SuspendLayout();
@@ -68,10 +68,10 @@
             this.groupBox1.Controls.Add(this.lblAttributes);
             this.groupBox1.Controls.Add(this.lblDesignation);
             this.groupBox1.Controls.Add(this.cmbxDesignation);
-            this.groupBox1.Controls.Add(this.lblAccountDetails);
-            this.groupBox1.Location = new System.Drawing.Point(1, 1);
+            this.groupBox1.Controls.Add(this.lblProductDetails);
+            this.groupBox1.Location = new System.Drawing.Point(1, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(913, 498);
+            this.groupBox1.Size = new System.Drawing.Size(930, 540);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -79,7 +79,7 @@
             // 
             this.lblDatagvSignal.AutoSize = true;
             this.lblDatagvSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblDatagvSignal.Location = new System.Drawing.Point(21, 479);
+            this.lblDatagvSignal.Location = new System.Drawing.Point(30, 500);
             this.lblDatagvSignal.Name = "lblDatagvSignal";
             this.lblDatagvSignal.Size = new System.Drawing.Size(13, 20);
             this.lblDatagvSignal.TabIndex = 74;
@@ -90,7 +90,7 @@
             this.btnLoadRecords.BackColor = System.Drawing.SystemColors.Control;
             this.btnLoadRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadRecords.Location = new System.Drawing.Point(389, 265);
+            this.btnLoadRecords.Location = new System.Drawing.Point(398, 286);
             this.btnLoadRecords.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoadRecords.Name = "btnLoadRecords";
             this.btnLoadRecords.Size = new System.Drawing.Size(114, 26);
@@ -105,7 +105,7 @@
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(809, 469);
+            this.btnEdit.Location = new System.Drawing.Point(818, 490);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(90, 30);
             this.btnEdit.TabIndex = 72;
@@ -118,12 +118,13 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(617, 469);
+            this.btnClose.Location = new System.Drawing.Point(626, 490);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(90, 30);
             this.btnClose.TabIndex = 71;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
             // 
@@ -131,7 +132,7 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(713, 469);
+            this.btnDelete.Location = new System.Drawing.Point(722, 490);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(90, 30);
             this.btnDelete.TabIndex = 70;
@@ -144,7 +145,7 @@
             this.datagvAccountDetails.AllowUserToDeleteRows = false;
             this.datagvAccountDetails.BackgroundColor = System.Drawing.SystemColors.Control;
             this.datagvAccountDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvAccountDetails.Location = new System.Drawing.Point(18, 112);
+            this.datagvAccountDetails.Location = new System.Drawing.Point(27, 133);
             this.datagvAccountDetails.Name = "datagvAccountDetails";
             this.datagvAccountDetails.ReadOnly = true;
             this.datagvAccountDetails.Size = new System.Drawing.Size(881, 351);
@@ -156,7 +157,7 @@
             this.btnGo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGo.ForeColor = System.Drawing.Color.White;
-            this.btnGo.Location = new System.Drawing.Point(809, 76);
+            this.btnGo.Location = new System.Drawing.Point(818, 97);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(90, 30);
             this.btnGo.TabIndex = 68;
@@ -169,7 +170,7 @@
             this.btnClearAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClearAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearAll.ForeColor = System.Drawing.Color.White;
-            this.btnClearAll.Location = new System.Drawing.Point(713, 76);
+            this.btnClearAll.Location = new System.Drawing.Point(722, 97);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(90, 30);
             this.btnClearAll.TabIndex = 67;
@@ -187,7 +188,7 @@
             "Decending Order",
             "Start With",
             "Contain"});
-            this.cmbxFiliter.Location = new System.Drawing.Point(757, 41);
+            this.cmbxFiliter.Location = new System.Drawing.Point(766, 62);
             this.cmbxFiliter.Name = "cmbxFiliter";
             this.cmbxFiliter.Size = new System.Drawing.Size(142, 28);
             this.cmbxFiliter.TabIndex = 66;
@@ -195,7 +196,7 @@
             // lblFiliter
             // 
             this.lblFiliter.AutoSize = true;
-            this.lblFiliter.Location = new System.Drawing.Point(709, 45);
+            this.lblFiliter.Location = new System.Drawing.Point(718, 66);
             this.lblFiliter.Name = "lblFiliter";
             this.lblFiliter.Size = new System.Drawing.Size(51, 20);
             this.lblFiliter.TabIndex = 65;
@@ -203,7 +204,7 @@
             // 
             // txtbxSearch
             // 
-            this.txtbxSearch.Location = new System.Drawing.Point(557, 42);
+            this.txtbxSearch.Location = new System.Drawing.Point(566, 63);
             this.txtbxSearch.Name = "txtbxSearch";
             this.txtbxSearch.Size = new System.Drawing.Size(142, 26);
             this.txtbxSearch.TabIndex = 64;
@@ -212,7 +213,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(493, 45);
+            this.lblSearch.Location = new System.Drawing.Point(502, 66);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(64, 20);
             this.lblSearch.TabIndex = 63;
@@ -231,7 +232,7 @@
             "Email",
             "Contact Number",
             "Home Address"});
-            this.cmbxAttributes.Location = new System.Drawing.Point(340, 41);
+            this.cmbxAttributes.Location = new System.Drawing.Point(349, 62);
             this.cmbxAttributes.Name = "cmbxAttributes";
             this.cmbxAttributes.Size = new System.Drawing.Size(142, 28);
             this.cmbxAttributes.TabIndex = 62;
@@ -239,7 +240,7 @@
             // lblAttributes
             // 
             this.lblAttributes.AutoSize = true;
-            this.lblAttributes.Location = new System.Drawing.Point(267, 45);
+            this.lblAttributes.Location = new System.Drawing.Point(276, 66);
             this.lblAttributes.Name = "lblAttributes";
             this.lblAttributes.Size = new System.Drawing.Size(74, 20);
             this.lblAttributes.TabIndex = 61;
@@ -248,7 +249,7 @@
             // lblDesignation
             // 
             this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Location = new System.Drawing.Point(14, 45);
+            this.lblDesignation.Location = new System.Drawing.Point(23, 66);
             this.lblDesignation.Name = "lblDesignation";
             this.lblDesignation.Size = new System.Drawing.Size(98, 20);
             this.lblDesignation.TabIndex = 60;
@@ -264,33 +265,33 @@
             "Employee",
             "Rider",
             "Warehouse Manager"});
-            this.cmbxDesignation.Location = new System.Drawing.Point(114, 41);
+            this.cmbxDesignation.Location = new System.Drawing.Point(123, 62);
             this.cmbxDesignation.Name = "cmbxDesignation";
             this.cmbxDesignation.Size = new System.Drawing.Size(142, 28);
             this.cmbxDesignation.TabIndex = 59;
             // 
-            // lblAccountDetails
+            // lblProductDetails
             // 
-            this.lblAccountDetails.AutoSize = true;
-            this.lblAccountDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountDetails.Location = new System.Drawing.Point(314, -1);
-            this.lblAccountDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAccountDetails.Name = "lblAccountDetails";
-            this.lblAccountDetails.Size = new System.Drawing.Size(263, 39);
-            this.lblAccountDetails.TabIndex = 58;
-            this.lblAccountDetails.Text = "Product Details";
+            this.lblProductDetails.AutoSize = true;
+            this.lblProductDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductDetails.Location = new System.Drawing.Point(323, 20);
+            this.lblProductDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductDetails.Name = "lblProductDetails";
+            this.lblProductDetails.Size = new System.Drawing.Size(263, 39);
+            this.lblProductDetails.TabIndex = 58;
+            this.lblProductDetails.Text = "Product Details";
             // 
-            // frmProductDetails
+            // frmProductDetails_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 501);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmProductDetails";
-            this.Text = "frmProductDetails";
+            this.Name = "frmProductDetails_";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmProductDetails_";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvAccountDetails)).EndInit();
@@ -317,6 +318,6 @@
         private System.Windows.Forms.Label lblAttributes;
         private System.Windows.Forms.Label lblDesignation;
         private System.Windows.Forms.ComboBox cmbxDesignation;
-        private System.Windows.Forms.Label lblAccountDetails;
+        private System.Windows.Forms.Label lblProductDetails;
     }
 }

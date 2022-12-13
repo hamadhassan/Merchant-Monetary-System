@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Merchant_Monetary_System.Forms;
 namespace Merchant_Monetary_System
 {
     internal static class Program
@@ -17,7 +17,7 @@ namespace Merchant_Monetary_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddProduct());
+            Application.Run(new frmCEODashboard());
         }
     }
 }

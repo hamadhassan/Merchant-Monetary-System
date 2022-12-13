@@ -58,12 +58,6 @@
     <Compile Include="Forms\Product\frmUpdateProduct.Designer.cs">
       <DependentUpon>frmUpdateProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Product\frmViewProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Product\frmViewProducts.Designer.cs">
-      <DependentUpon>frmViewProducts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Product\frmAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +139,12 @@
     <Compile Include="Forms\Product\frmAddProduct.Designer.cs">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Product\frmProductDetails_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\frmProductDetails_.Designer.cs">
+      <DependentUpon>frmProductDetails_.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BL\Users.cs" />
@@ -156,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmUpdateProduct.resx">
       <DependentUpon>frmUpdateProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Product\frmViewProducts.resx">
-      <DependentUpon>frmViewProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmAccountDetails.resx">
       <DependentUpon>frmAccountDetails.cs</DependentUpon>
@@ -189,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmAddProduct.resx">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\frmProductDetails_.resx">
+      <DependentUpon>frmProductDetails_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

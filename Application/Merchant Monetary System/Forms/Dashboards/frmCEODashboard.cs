@@ -105,5 +105,16 @@ namespace Merchant_Monetary_System
         {
            
         }
+
+        private void btnViewProduct_Click(object sender, EventArgs e)
+        {
+            loadform(new frmProductDetails_());
+        }
+
+        private void pParent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }
