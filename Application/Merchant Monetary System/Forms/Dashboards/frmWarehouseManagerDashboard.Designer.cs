@@ -39,7 +39,7 @@
             this.ptoolStrip = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.btnAddWarehouseManger = new System.Windows.Forms.Button();
+            this.btnAddPayment = new System.Windows.Forms.Button();
             this.btnViewProducts = new System.Windows.Forms.Button();
             this.btnSendEmail = new System.Windows.Forms.Button();
             this.btnViewProduct = new System.Windows.Forms.Button();
@@ -130,7 +130,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnAddEmployee, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddWarehouseManger, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddPayment, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnViewProducts, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnSendEmail, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnViewProduct, 0, 4);
@@ -166,21 +166,22 @@
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
-            // btnAddWarehouseManger
+            // btnAddPayment
             // 
-            this.btnAddWarehouseManger.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddWarehouseManger.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddWarehouseManger.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddWarehouseManger.FlatAppearance.BorderSize = 0;
-            this.btnAddWarehouseManger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddWarehouseManger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddWarehouseManger.ForeColor = System.Drawing.Color.Black;
-            this.btnAddWarehouseManger.Location = new System.Drawing.Point(3, 105);
-            this.btnAddWarehouseManger.Name = "btnAddWarehouseManger";
-            this.btnAddWarehouseManger.Size = new System.Drawing.Size(207, 81);
-            this.btnAddWarehouseManger.TabIndex = 59;
-            this.btnAddWarehouseManger.Text = "Add Payment";
-            this.btnAddWarehouseManger.UseVisualStyleBackColor = false;
+            this.btnAddPayment.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPayment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddPayment.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddPayment.FlatAppearance.BorderSize = 0;
+            this.btnAddPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPayment.ForeColor = System.Drawing.Color.Black;
+            this.btnAddPayment.Location = new System.Drawing.Point(3, 105);
+            this.btnAddPayment.Name = "btnAddPayment";
+            this.btnAddPayment.Size = new System.Drawing.Size(207, 81);
+            this.btnAddPayment.TabIndex = 59;
+            this.btnAddPayment.Text = "Add Payment";
+            this.btnAddPayment.UseVisualStyleBackColor = false;
+            this.btnAddPayment.Click += new System.EventHandler(this.btnAddPayment_Click);
             // 
             // btnViewProducts
             // 
@@ -428,7 +429,7 @@
         private System.Windows.Forms.ToolStripLabel toolStriplblTime;
         private System.Windows.Forms.Panel ptoolStrip;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnAddWarehouseManger;
+        private System.Windows.Forms.Button btnAddPayment;
         private System.Windows.Forms.Button btnViewProducts;
         private System.Windows.Forms.Button btnSendEmail;
         private System.Windows.Forms.Button btnViewProduct;

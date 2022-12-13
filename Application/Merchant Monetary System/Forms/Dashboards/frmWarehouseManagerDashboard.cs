@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Merchant_Monetary_System.Forms.Emails;
+using Merchant_Monetary_System.Forms.Payment;
 
 namespace Merchant_Monetary_System.Forms.Dashboards
 {
@@ -50,6 +51,19 @@ namespace Merchant_Monetary_System.Forms.Dashboards
             if (this.tblForm.Controls.Count > 0)
                 this.tblForm.Controls.RemoveAt(0);
             Form f = new frmEmail();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.tblForm.Controls.Add(f);
+            this.tblForm.Tag = f;
+            f.Show();
+        }
+
+
+        private void btnAddPayment_Click(object sender, EventArgs e)
+        {
+            if (this.tblForm.Controls.Count > 0)
+                this.tblForm.Controls.RemoveAt(0);
+            Form f = new frmAddPayment();
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.tblForm.Controls.Add(f);
