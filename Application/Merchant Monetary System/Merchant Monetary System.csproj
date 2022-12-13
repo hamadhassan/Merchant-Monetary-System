@@ -64,6 +64,11 @@
     <Compile Include="Forms\Product\frmAddCategory.Designer.cs">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
     </Compile>
+
+
+
+
+    
     <Compile Include="Forms\Product\frmUpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +87,22 @@
     <Compile Include="Forms\Users\frmIntroduction.Designer.cs">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Forms\Users\frmAddVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frmAddVendor.Designer.cs">
+      <DependentUpon>frmAddVendor.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="Forms\Users\frmUpdateVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frmUpdateVendor.Designer.cs">
+      <DependentUpon>frmUpdateVendor.cs</DependentUpon>
+    </Compile>
+
+
     <Compile Include="Forms\Users\frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +127,14 @@
     <Compile Include="Forms\Dashboards\frmCEODashboard.Designer.cs">
       <DependentUpon>frmCEODashboard.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="Forms\Dashboards\frmWarehouseManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboards\frmWarehouseManagerDashboard.Designer.cs">
+      <DependentUpon>frmWarehouseManagerDashboard.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="Forms\Users\frmAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
