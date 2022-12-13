@@ -134,3 +134,7 @@ C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetar
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Orders.frmTakeOrder.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddShopkeeper.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewOrders.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Orders.frmTakeOrder.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddShopkeeper.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddStock.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewOrders.resources

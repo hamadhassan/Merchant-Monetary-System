@@ -50,6 +50,7 @@
     <Compile Include="BL\CEO.cs" />
     <Compile Include="BL\Crediationals.cs" />
     <Compile Include="BL\Product.cs" />
+    <Compile Include="CompanyDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
     <Compile Include="FilesPaths\FilePath.cs" />
     <Compile Include="Forms\Emails\frmEmail.cs">

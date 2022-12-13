@@ -15,5 +15,12 @@ namespace Merchant_Monetary_System
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }
         public int Phone { get => phone; set => phone = value; }
+
+        public Compnay(string name, string adress, int phone)
+        {
+            this.name = name;
+            this.address = adress;
+            this.phone = phone;
+        }
     }
 }

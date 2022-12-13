@@ -38,6 +38,13 @@ namespace Merchant_Monetary_System
         {
             if (isNameCorrect == false && isContactNumberCorrect==false && isAddressCorrect==false)
             {
+                string name = txtbxName.Text;
+                string address = rtxtbxAddress.Text;
+                int phone = int.Parse(txtbxContactNumber.Text);
+                Compnay compnay = new Compnay(name, address, phone);
+                CompanyDL.storeRecordIntoFile(compnay, FilePath.Company);
+                UsersDL.loadRecordFromFile(FilePath.Users);
+
                 frmSignUp frmSignUp = new frmSignUp();
                 frmSignUp.Show();
                 this.Hide();

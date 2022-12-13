@@ -19,9 +19,19 @@ namespace Merchant_Monetary_System
         private void timer_Tick(object sender, EventArgs e)
         {
             timer.Enabled = false;
-            frmAddCompnay frmAddCompnay = new frmAddCompnay();
-            frmAddCompnay.Show();
-            this.Hide();
+            if (CompanyDL.loadRecordFromFile(FilePath.Company)==false)
+            {
+                frmAddCompnay frmAddCompnay = new frmAddCompnay();
+                frmAddCompnay.Show();
+                this.Hide();
+            }
+            else
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                this.Hide();
+            }
+          
         }
 
         private void frmIntroduction_Load(object sender, EventArgs e)
