@@ -335,6 +335,7 @@
             this.btnAddStock.TabIndex = 66;
             this.btnAddStock.Text = "Add Stock";
             this.btnAddStock.UseVisualStyleBackColor = false;
+            this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
             // 
             // btnSendEmail
             // 
