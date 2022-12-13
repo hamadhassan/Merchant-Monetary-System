@@ -176,6 +176,7 @@
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
     </Compile>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
     <Compile Include="Forms\Users\frmAddShopkeeper.cs">
       <SubType>Form</SubType>
@@ -196,6 +197,8 @@
       <DependentUpon>frmViewOrders.cs</DependentUpon>
     </Compile>
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     <Compile Include="Program.cs" />
@@ -253,6 +256,7 @@
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
     </EmbeddedResource>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
     <EmbeddedResource Include="Forms\Users\frmAddShopkeeper.resx">
       <DependentUpon>frmAddShopkeeper.cs</DependentUpon>
@@ -264,6 +268,8 @@
       <DependentUpon>frmViewOrders.cs</DependentUpon>
     </EmbeddedResource>
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     <EmbeddedResource Include="Properties\Resources.resx">
