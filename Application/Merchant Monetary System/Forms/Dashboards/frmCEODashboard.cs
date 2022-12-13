@@ -118,7 +118,7 @@ namespace Merchant_Monetary_System
 
         private void btnAddStock_Click(object sender, EventArgs e)
         {
-            loadform(new frmAddStock());
+            //loadform(new frmAddStock());
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
