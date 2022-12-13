@@ -22,5 +22,15 @@ namespace Merchant_Monetary_System
             this.Hide();
 
         }
+
+        private void btnLoadRecords_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datagvAccountDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -64,11 +64,6 @@
     <Compile Include="Forms\Product\frmAddCategory.Designer.cs">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
     </Compile>
-
-
-
-
-    
     <Compile Include="Forms\Product\frmUpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,22 +82,18 @@
     <Compile Include="Forms\Users\frmIntroduction.Designer.cs">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Users\frmAddVendor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Users\frmAddVendor.Designer.cs">
       <DependentUpon>frmAddVendor.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Users\frmUpdateVendor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Users\frmUpdateVendor.Designer.cs">
       <DependentUpon>frmUpdateVendor.cs</DependentUpon>
     </Compile>
-
-
     <Compile Include="Forms\Users\frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,14 +118,12 @@
     <Compile Include="Forms\Dashboards\frmCEODashboard.Designer.cs">
       <DependentUpon>frmCEODashboard.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Dashboards\frmWarehouseManagerDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Dashboards\frmWarehouseManagerDashboard.Designer.cs">
       <DependentUpon>frmWarehouseManagerDashboard.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Users\frmAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,17 +163,23 @@
     <Compile Include="Forms\Product\frmProductDetails_.Designer.cs">
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddShopkeeper.cs">
+    <Compile Include="Forms\Users\frmAddShopkeeper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddShopkeeper.Designer.cs">
+    <Compile Include="Forms\Users\frmAddShopkeeper.Designer.cs">
       <DependentUpon>frmAddShopkeeper.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddStock.cs">
+    <Compile Include="Forms\Product\frmAddStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddStock.Designer.cs">
+    <Compile Include="Forms\Product\frmAddStock.Designer.cs">
       <DependentUpon>frmAddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Orders\frmViewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Orders\frmViewOrders.Designer.cs">
+      <DependentUpon>frmViewOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -231,11 +226,14 @@
     <EmbeddedResource Include="Forms\Product\frmProductDetails_.resx">
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddShopkeeper.resx">
+    <EmbeddedResource Include="Forms\Users\frmAddShopkeeper.resx">
       <DependentUpon>frmAddShopkeeper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddStock.resx">
+    <EmbeddedResource Include="Forms\Product\frmAddStock.resx">
       <DependentUpon>frmAddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Orders\frmViewOrders.resx">
+      <DependentUpon>frmViewOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -259,8 +257,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Orders\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

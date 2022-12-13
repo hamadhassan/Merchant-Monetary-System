@@ -120,5 +120,10 @@ namespace Merchant_Monetary_System
         {
             loadform(new frmAddStock());
         }
+
+        private void btnViewOrder_Click(object sender, EventArgs e)
+        {
+            loadform(new frmViewOrders());
+        }
     }
 }

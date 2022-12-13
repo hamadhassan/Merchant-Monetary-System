@@ -49,6 +49,7 @@
             this.btnAddWarehouseManger = new System.Windows.Forms.Button();
             this.btnAddRider = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnViewProduct = new System.Windows.Forms.Button();
             this.btnViewReport = new System.Windows.Forms.Button();
             this.btnViewOrder = new System.Windows.Forms.Button();
             this.btnAddStock = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
-            this.btnViewProduct = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -291,6 +291,22 @@
             this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
+            // btnViewProduct
+            // 
+            this.btnViewProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnViewProduct.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnViewProduct.FlatAppearance.BorderSize = 0;
+            this.btnViewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnViewProduct.Location = new System.Drawing.Point(3, 230);
+            this.btnViewProduct.Name = "btnViewProduct";
+            this.btnViewProduct.Size = new System.Drawing.Size(207, 51);
+            this.btnViewProduct.TabIndex = 63;
+            this.btnViewProduct.Text = "View Product";
+            this.btnViewProduct.UseVisualStyleBackColor = false;
+            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
+            // 
             // btnViewReport
             // 
             this.btnViewReport.BackColor = System.Drawing.Color.Transparent;
@@ -320,6 +336,7 @@
             this.btnViewOrder.TabIndex = 65;
             this.btnViewOrder.Text = "View Order";
             this.btnViewOrder.UseVisualStyleBackColor = false;
+            this.btnViewOrder.Click += new System.EventHandler(this.btnViewOrder_Click);
             // 
             // btnAddStock
             // 
@@ -421,22 +438,6 @@
             this.pParent.Size = new System.Drawing.Size(931, 545);
             this.pParent.TabIndex = 5;
             this.pParent.Paint += new System.Windows.Forms.PaintEventHandler(this.pParent_Paint);
-            // 
-            // btnViewProduct
-            // 
-            this.btnViewProduct.BackColor = System.Drawing.Color.Transparent;
-            this.btnViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnViewProduct.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewProduct.FlatAppearance.BorderSize = 0;
-            this.btnViewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnViewProduct.Location = new System.Drawing.Point(3, 230);
-            this.btnViewProduct.Name = "btnViewProduct";
-            this.btnViewProduct.Size = new System.Drawing.Size(207, 51);
-            this.btnViewProduct.TabIndex = 63;
-            this.btnViewProduct.Text = "View Product";
-            this.btnViewProduct.UseVisualStyleBackColor = false;
-            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
             // 
             // frmCEODashboard
             // 

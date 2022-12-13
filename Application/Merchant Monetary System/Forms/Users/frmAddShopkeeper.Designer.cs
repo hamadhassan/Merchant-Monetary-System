@@ -29,8 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtbxEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail_ = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblArea = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
+            this.txtbxShopkeeperNumber = new System.Windows.Forms.TextBox();
             this.lblRecordSignal = new System.Windows.Forms.Label();
+            this.lblShopkeeperNumber = new System.Windows.Forms.Label();
             this.cmbxState = new System.Windows.Forms.ComboBox();
             this.lblContactNumberSignal = new System.Windows.Forms.Label();
             this.lblGenderSignal = new System.Windows.Forms.Label();
@@ -49,15 +58,6 @@
             this.lblCity = new System.Windows.Forms.Label();
             this.cmbxCity = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtbxShopkeeperNumber = new System.Windows.Forms.TextBox();
-            this.lblShopkeeperNumber = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblArea = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtbxEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail_ = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,9 +80,6 @@
             this.groupBox1.Controls.Add(this.lblUsernameSignal);
             this.groupBox1.Controls.Add(this.lblNameSignal);
             this.groupBox1.Controls.Add(this.lblDesignationSingal);
-            this.groupBox1.Controls.Add(this.btnAddShopKeeper);
-            this.groupBox1.Controls.Add(this.btnClear);
-            this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.txtbxShopName);
             this.groupBox1.Controls.Add(this.txtbxShopNumber);
             this.groupBox1.Controls.Add(this.txtbxShopkeeperName);
@@ -92,11 +89,85 @@
             this.groupBox1.Controls.Add(this.lblCity);
             this.groupBox1.Controls.Add(this.cmbxCity);
             this.groupBox1.Controls.Add(this.lblSignUp);
+            this.groupBox1.Controls.Add(this.btnAddShopKeeper);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(930, 540);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.label3.Location = new System.Drawing.Point(651, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 20);
+            this.label3.TabIndex = 83;
+            this.label3.Text = " ";
+            // 
+            // txtbxEmail
+            // 
+            this.txtbxEmail.Location = new System.Drawing.Point(639, 149);
+            this.txtbxEmail.Name = "txtbxEmail";
+            this.txtbxEmail.Size = new System.Drawing.Size(203, 26);
+            this.txtbxEmail.TabIndex = 81;
+            // 
+            // lblEmail_
+            // 
+            this.lblEmail_.AutoSize = true;
+            this.lblEmail_.Location = new System.Drawing.Point(494, 152);
+            this.lblEmail_.Name = "lblEmail_";
+            this.lblEmail_.Size = new System.Drawing.Size(56, 20);
+            this.lblEmail_.TabIndex = 82;
+            this.lblEmail_.Text = "Email :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.label2.Location = new System.Drawing.Point(627, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 20);
+            this.label2.TabIndex = 79;
+            this.label2.Text = " ";
+            // 
+            // lblArea
+            // 
+            this.lblArea.AutoSize = true;
+            this.lblArea.Location = new System.Drawing.Point(494, 254);
+            this.lblArea.Name = "lblArea";
+            this.lblArea.Size = new System.Drawing.Size(51, 20);
+            this.lblArea.TabIndex = 80;
+            this.lblArea.Text = "Area :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "CEO",
+            "Employee",
+            "Rider",
+            "Warehouse Manager"});
+            this.comboBox1.Location = new System.Drawing.Point(640, 248);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(203, 28);
+            this.comboBox1.Sorted = true;
+            this.comboBox1.TabIndex = 78;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.label1.Location = new System.Drawing.Point(264, 322);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 20);
+            this.label1.TabIndex = 72;
+            this.label1.Text = " ";
             // 
             // lblState
             // 
@@ -107,6 +178,13 @@
             this.lblState.TabIndex = 77;
             this.lblState.Text = "State :";
             // 
+            // txtbxShopkeeperNumber
+            // 
+            this.txtbxShopkeeperNumber.Location = new System.Drawing.Point(263, 293);
+            this.txtbxShopkeeperNumber.Name = "txtbxShopkeeperNumber";
+            this.txtbxShopkeeperNumber.Size = new System.Drawing.Size(203, 26);
+            this.txtbxShopkeeperNumber.TabIndex = 71;
+            // 
             // lblRecordSignal
             // 
             this.lblRecordSignal.AutoSize = true;
@@ -115,6 +193,15 @@
             this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
             this.lblRecordSignal.TabIndex = 75;
             this.lblRecordSignal.Text = " ";
+            // 
+            // lblShopkeeperNumber
+            // 
+            this.lblShopkeeperNumber.AutoSize = true;
+            this.lblShopkeeperNumber.Location = new System.Drawing.Point(89, 299);
+            this.lblShopkeeperNumber.Name = "lblShopkeeperNumber";
+            this.lblShopkeeperNumber.Size = new System.Drawing.Size(147, 20);
+            this.lblShopkeeperNumber.TabIndex = 70;
+            this.lblShopkeeperNumber.Text = "LandLine  Number :";
             // 
             // cmbxState
             // 
@@ -183,7 +270,7 @@
             this.btnAddShopKeeper.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddShopKeeper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddShopKeeper.ForeColor = System.Drawing.Color.White;
-            this.btnAddShopKeeper.Location = new System.Drawing.Point(578, 447);
+            this.btnAddShopKeeper.Location = new System.Drawing.Point(577, 447);
             this.btnAddShopKeeper.Name = "btnAddShopKeeper";
             this.btnAddShopKeeper.Size = new System.Drawing.Size(200, 30);
             this.btnAddShopKeeper.TabIndex = 61;
@@ -196,7 +283,7 @@
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(360, 447);
+            this.btnClear.Location = new System.Drawing.Point(364, 447);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(200, 30);
             this.btnClear.TabIndex = 60;
@@ -209,12 +296,13 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(154, 447);
+            this.btnClose.Location = new System.Drawing.Point(153, 447);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 30);
             this.btnClose.TabIndex = 59;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtbxShopName
             // 
@@ -300,93 +388,6 @@
             this.lblSignUp.Size = new System.Drawing.Size(285, 39);
             this.lblSignUp.TabIndex = 36;
             this.lblSignUp.Text = "Add Shopkeeper";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.label1.Location = new System.Drawing.Point(264, 322);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 20);
-            this.label1.TabIndex = 72;
-            this.label1.Text = " ";
-            // 
-            // txtbxShopkeeperNumber
-            // 
-            this.txtbxShopkeeperNumber.Location = new System.Drawing.Point(263, 293);
-            this.txtbxShopkeeperNumber.Name = "txtbxShopkeeperNumber";
-            this.txtbxShopkeeperNumber.Size = new System.Drawing.Size(203, 26);
-            this.txtbxShopkeeperNumber.TabIndex = 71;
-            // 
-            // lblShopkeeperNumber
-            // 
-            this.lblShopkeeperNumber.AutoSize = true;
-            this.lblShopkeeperNumber.Location = new System.Drawing.Point(89, 299);
-            this.lblShopkeeperNumber.Name = "lblShopkeeperNumber";
-            this.lblShopkeeperNumber.Size = new System.Drawing.Size(147, 20);
-            this.lblShopkeeperNumber.TabIndex = 70;
-            this.lblShopkeeperNumber.Text = "LandLine  Number :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.label2.Location = new System.Drawing.Point(627, 274);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 20);
-            this.label2.TabIndex = 79;
-            this.label2.Text = " ";
-            // 
-            // lblArea
-            // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(494, 254);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(51, 20);
-            this.lblArea.TabIndex = 80;
-            this.lblArea.Text = "Area :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
-            this.comboBox1.Location = new System.Drawing.Point(640, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 28);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 78;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.label3.Location = new System.Drawing.Point(651, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 20);
-            this.label3.TabIndex = 83;
-            this.label3.Text = " ";
-            // 
-            // txtbxEmail
-            // 
-            this.txtbxEmail.Location = new System.Drawing.Point(639, 149);
-            this.txtbxEmail.Name = "txtbxEmail";
-            this.txtbxEmail.Size = new System.Drawing.Size(203, 26);
-            this.txtbxEmail.TabIndex = 81;
-            // 
-            // lblEmail_
-            // 
-            this.lblEmail_.AutoSize = true;
-            this.lblEmail_.Location = new System.Drawing.Point(494, 152);
-            this.lblEmail_.Name = "lblEmail_";
-            this.lblEmail_.Size = new System.Drawing.Size(56, 20);
-            this.lblEmail_.TabIndex = 82;
-            this.lblEmail_.Text = "Email :";
             // 
             // frmAddShopkeeper
             // 

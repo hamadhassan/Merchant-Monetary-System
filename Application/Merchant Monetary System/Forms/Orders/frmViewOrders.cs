@@ -10,27 +10,31 @@ using System.Windows.Forms;
 
 namespace Merchant_Monetary_System
 {
-    public partial class frmAddShopkeeper : Form
+    public partial class frmViewOrders : Form
     {
-        public frmAddShopkeeper()
+        public frmViewOrders()
         {
             InitializeComponent();
         }
 
-        private void txtbxUsername_TextChanged(object sender, EventArgs e)
+        private void txtbxSearch_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lblShopName_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnLoadRecords_Click(object sender, EventArgs e)
+        {
+            btnLoadRecords.Visible = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
-
         }
     }
 }

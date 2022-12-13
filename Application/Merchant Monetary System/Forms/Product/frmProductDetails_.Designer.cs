@@ -69,7 +69,7 @@
             this.groupBox1.Controls.Add(this.lblDesignation);
             this.groupBox1.Controls.Add(this.cmbxDesignation);
             this.groupBox1.Controls.Add(this.lblProductDetails);
-            this.groupBox1.Location = new System.Drawing.Point(1, 2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(930, 540);
             this.groupBox1.TabIndex = 0;
@@ -98,6 +98,7 @@
             this.btnLoadRecords.Text = "Load Records";
             this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadRecords.UseVisualStyleBackColor = false;
+            this.btnLoadRecords.Click += new System.EventHandler(this.btnLoadRecords_Click);
             // 
             // btnEdit
             // 
@@ -150,6 +151,7 @@
             this.datagvAccountDetails.ReadOnly = true;
             this.datagvAccountDetails.Size = new System.Drawing.Size(881, 351);
             this.datagvAccountDetails.TabIndex = 69;
+            this.datagvAccountDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvAccountDetails_CellContentClick);
             // 
             // btnGo
             // 
@@ -285,9 +287,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 501);
+            this.ClientSize = new System.Drawing.Size(930, 540);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmProductDetails_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
