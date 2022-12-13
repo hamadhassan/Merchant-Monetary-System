@@ -38,16 +38,20 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.ptoolStrip = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnAddWarehouseManger = new System.Windows.Forms.Button();
-            this.btnAddRider = new System.Windows.Forms.Button();
-            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnViewProducts = new System.Windows.Forms.Button();
+            this.btnSendEmail = new System.Windows.Forms.Button();
             this.btnViewProduct = new System.Windows.Forms.Button();
+            this.btnViewReport = new System.Windows.Forms.Button();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewWarehousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warehouseMangerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblForm = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,11 +61,11 @@
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnViewReport = new System.Windows.Forms.Button();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
             this.toolStrip.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.pParent.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +106,7 @@
             this.toolStriplblTime});
             this.toolStrip.Location = new System.Drawing.Point(0, 2);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(675, 25);
+            this.toolStrip.Size = new System.Drawing.Size(931, 25);
             this.toolStrip.TabIndex = 0;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -116,9 +120,9 @@
             // 
             this.ptoolStrip.Controls.Add(this.toolStrip);
             this.ptoolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ptoolStrip.Location = new System.Drawing.Point(213, 446);
+            this.ptoolStrip.Location = new System.Drawing.Point(213, 574);
             this.ptoolStrip.Name = "ptoolStrip";
-            this.ptoolStrip.Size = new System.Drawing.Size(675, 27);
+            this.ptoolStrip.Size = new System.Drawing.Size(931, 27);
             this.ptoolStrip.TabIndex = 8;
             // 
             // tableLayoutPanel1
@@ -127,8 +131,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnAddEmployee, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAddWarehouseManger, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddRider, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddProduct, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnViewProducts, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnSendEmail, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnViewProduct, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnViewReport, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -142,8 +146,25 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999969F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999969F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(213, 444);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(213, 572);
             this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddEmployee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.Black;
+            this.btnAddEmployee.Location = new System.Drawing.Point(3, 3);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(207, 96);
+            this.btnAddEmployee.TabIndex = 58;
+            this.btnAddEmployee.Text = "Order Details";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // btnAddWarehouseManger
             // 
@@ -154,44 +175,46 @@
             this.btnAddWarehouseManger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddWarehouseManger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddWarehouseManger.ForeColor = System.Drawing.Color.Black;
-            this.btnAddWarehouseManger.Location = new System.Drawing.Point(3, 82);
+            this.btnAddWarehouseManger.Location = new System.Drawing.Point(3, 105);
             this.btnAddWarehouseManger.Name = "btnAddWarehouseManger";
-            this.btnAddWarehouseManger.Size = new System.Drawing.Size(207, 61);
+            this.btnAddWarehouseManger.Size = new System.Drawing.Size(207, 81);
             this.btnAddWarehouseManger.TabIndex = 59;
             this.btnAddWarehouseManger.Text = "Add Payment";
             this.btnAddWarehouseManger.UseVisualStyleBackColor = false;
             // 
-            // btnAddRider
+            // btnViewProducts
             // 
-            this.btnAddRider.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddRider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddRider.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddRider.FlatAppearance.BorderSize = 0;
-            this.btnAddRider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddRider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRider.ForeColor = System.Drawing.Color.Black;
-            this.btnAddRider.Location = new System.Drawing.Point(3, 149);
-            this.btnAddRider.Name = "btnAddRider";
-            this.btnAddRider.Size = new System.Drawing.Size(207, 68);
-            this.btnAddRider.TabIndex = 61;
-            this.btnAddRider.Text = "View Product";
-            this.btnAddRider.UseVisualStyleBackColor = false;
+            this.btnViewProducts.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnViewProducts.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnViewProducts.FlatAppearance.BorderSize = 0;
+            this.btnViewProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewProducts.ForeColor = System.Drawing.Color.Black;
+            this.btnViewProducts.Location = new System.Drawing.Point(3, 192);
+            this.btnViewProducts.Name = "btnViewProducts";
+            this.btnViewProducts.Size = new System.Drawing.Size(207, 89);
+            this.btnViewProducts.TabIndex = 61;
+            this.btnViewProducts.Text = "View Product";
+            this.btnViewProducts.UseVisualStyleBackColor = false;
+            this.btnViewProducts.Click += new System.EventHandler(this.btnViewProducts_Click);
             // 
-            // btnAddProduct
+            // btnSendEmail
             // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddProduct.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddProduct.FlatAppearance.BorderSize = 0;
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnAddProduct.Location = new System.Drawing.Point(3, 223);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(207, 68);
-            this.btnAddProduct.TabIndex = 62;
-            this.btnAddProduct.Text = "Send Email";
-            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnSendEmail.BackColor = System.Drawing.Color.Transparent;
+            this.btnSendEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSendEmail.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSendEmail.FlatAppearance.BorderSize = 0;
+            this.btnSendEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendEmail.ForeColor = System.Drawing.Color.Black;
+            this.btnSendEmail.Location = new System.Drawing.Point(3, 287);
+            this.btnSendEmail.Name = "btnSendEmail";
+            this.btnSendEmail.Size = new System.Drawing.Size(207, 89);
+            this.btnSendEmail.TabIndex = 62;
+            this.btnSendEmail.Text = "Send Email";
+            this.btnSendEmail.UseVisualStyleBackColor = false;
+            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
             // btnViewProduct
             // 
@@ -202,12 +225,28 @@
             this.btnViewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnViewProduct.Location = new System.Drawing.Point(3, 297);
+            this.btnViewProduct.Location = new System.Drawing.Point(3, 382);
             this.btnViewProduct.Name = "btnViewProduct";
-            this.btnViewProduct.Size = new System.Drawing.Size(207, 68);
+            this.btnViewProduct.Size = new System.Drawing.Size(207, 89);
             this.btnViewProduct.TabIndex = 63;
             this.btnViewProduct.Text = "Forgot Password";
             this.btnViewProduct.UseVisualStyleBackColor = false;
+            // 
+            // btnViewReport
+            // 
+            this.btnViewReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnViewReport.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnViewReport.FlatAppearance.BorderSize = 0;
+            this.btnViewReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewReport.ForeColor = System.Drawing.Color.Black;
+            this.btnViewReport.Location = new System.Drawing.Point(3, 477);
+            this.btnViewReport.Name = "btnViewReport";
+            this.btnViewReport.Size = new System.Drawing.Size(207, 92);
+            this.btnViewReport.TabIndex = 60;
+            this.btnViewReport.Text = "View Stock";
+            this.btnViewReport.UseVisualStyleBackColor = false;
             // 
             // helpToolStripMenuItem
             // 
@@ -245,13 +284,40 @@
             // 
             this.pParent.ColumnCount = 1;
             this.pParent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pParent.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.pParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pParent.Location = new System.Drawing.Point(0, 29);
             this.pParent.Name = "pParent";
             this.pParent.RowCount = 1;
             this.pParent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pParent.Size = new System.Drawing.Size(888, 444);
+            this.pParent.Size = new System.Drawing.Size(1144, 572);
             this.pParent.TabIndex = 9;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tblForm, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1138, 566);
+            this.tableLayoutPanel2.TabIndex = 6;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+            // 
+            // tblForm
+            // 
+            this.tblForm.ColumnCount = 1;
+            this.tblForm.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tblForm.Location = new System.Drawing.Point(210, 3);
+            this.tblForm.Name = "tblForm";
+            this.tblForm.RowCount = 1;
+            this.tblForm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblForm.Size = new System.Drawing.Size(925, 560);
+            this.tblForm.TabIndex = 6;
             // 
             // menuStrip
             // 
@@ -268,7 +334,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(888, 29);
+            this.menuStrip.Size = new System.Drawing.Size(1144, 29);
             this.menuStrip.TabIndex = 6;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -326,44 +392,11 @@
             this.productToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.productToolStripMenuItem.Text = "Product";
             // 
-            // btnViewReport
-            // 
-            this.btnViewReport.BackColor = System.Drawing.Color.Transparent;
-            this.btnViewReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnViewReport.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewReport.FlatAppearance.BorderSize = 0;
-            this.btnViewReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewReport.ForeColor = System.Drawing.Color.Black;
-            this.btnViewReport.Location = new System.Drawing.Point(3, 371);
-            this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(207, 70);
-            this.btnViewReport.TabIndex = 60;
-            this.btnViewReport.Text = "View Stock";
-            this.btnViewReport.UseVisualStyleBackColor = false;
-            // 
-            // btnAddEmployee
-            // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddEmployee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddEmployee.FlatAppearance.BorderSize = 0;
-            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.Black;
-            this.btnAddEmployee.Location = new System.Drawing.Point(3, 3);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(207, 73);
-            this.btnAddEmployee.TabIndex = 58;
-            this.btnAddEmployee.Text = "Order Details";
-            this.btnAddEmployee.UseVisualStyleBackColor = false;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
-            // 
             // frmWarehouseManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 473);
+            this.ClientSize = new System.Drawing.Size(1144, 601);
             this.Controls.Add(this.ptoolStrip);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pParent);
@@ -375,6 +408,8 @@
             this.ptoolStrip.ResumeLayout(false);
             this.ptoolStrip.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.pParent.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -394,8 +429,8 @@
         private System.Windows.Forms.Panel ptoolStrip;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnAddWarehouseManger;
-        private System.Windows.Forms.Button btnAddRider;
-        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnViewProducts;
+        private System.Windows.Forms.Button btnSendEmail;
         private System.Windows.Forms.Button btnViewProduct;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
@@ -414,5 +449,7 @@
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
         private System.Windows.Forms.Button btnViewReport;
         private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tblForm;
     }
 }

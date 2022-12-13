@@ -52,6 +52,12 @@
     <Compile Include="BL\Product.cs" />
     <Compile Include="DL\ProductDL.cs" />
     <Compile Include="FilesPaths\FilePath.cs" />
+    <Compile Include="Forms\Emails\frmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Emails\frmEmail.Designer.cs">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Product\frmUpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +70,6 @@
     <Compile Include="Forms\Product\frmAddCategory.Designer.cs">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
     </Compile>
-
-
-
-
-    
     <Compile Include="Forms\Product\frmUpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,22 +88,18 @@
     <Compile Include="Forms\Users\frmIntroduction.Designer.cs">
       <DependentUpon>frmIntroduction.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Users\frmAddVendor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Users\frmAddVendor.Designer.cs">
       <DependentUpon>frmAddVendor.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Users\frmUpdateVendor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Users\frmUpdateVendor.Designer.cs">
       <DependentUpon>frmUpdateVendor.cs</DependentUpon>
     </Compile>
-
-
     <Compile Include="Forms\Users\frmSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,14 +124,12 @@
     <Compile Include="Forms\Dashboards\frmCEODashboard.Designer.cs">
       <DependentUpon>frmCEODashboard.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Dashboards\frmWarehouseManagerDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Dashboards\frmWarehouseManagerDashboard.Designer.cs">
       <DependentUpon>frmWarehouseManagerDashboard.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\Users\frmAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +189,12 @@
     <Compile Include="DL\WarehouseDL.cs" />
     <EmbeddedResource Include="Forms\Dashboards\frmCEODashboard.resx">
       <DependentUpon>frmCEODashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboards\frmWarehouseManagerDashboard.resx">
+      <DependentUpon>frmWarehouseManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Emails\frmEmail.resx">
+      <DependentUpon>frmEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmUpdateProduct.resx">
       <DependentUpon>frmUpdateProduct.cs</DependentUpon>
