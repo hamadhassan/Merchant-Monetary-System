@@ -142,8 +142,8 @@
     <Compile Include="Forms\Dashboards\frmEmployeeDashboard.Designer.cs">
       <DependentUpon>frmEmployeeDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data Structure\DoublyLinkedList\Node.cs" />
-    <Compile Include="Data Structure\DoublyLinkedList\DLinkedList.cs" />
+    <Compile Include="Data Structure\DoublyLinkedList\DoublyLinkedList.cs" />
+    <Compile Include="Data Structure\DoublyLinkedList\DoublyLinkedListNode.cs" />
     <Compile Include="Forms\Warehouse\frmAddWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,18 +168,6 @@
     </Compile>
     <Compile Include="Forms\Product\frmProductDetails_.Designer.cs">
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAddShopkeeper.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddShopkeeper.Designer.cs">
-      <DependentUpon>frmAddShopkeeper.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAddStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddStock.Designer.cs">
-      <DependentUpon>frmAddStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -231,12 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmProductDetails_.resx">
       <DependentUpon>frmProductDetails_.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddShopkeeper.resx">
-      <DependentUpon>frmAddShopkeeper.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddStock.resx">
-      <DependentUpon>frmAddStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
