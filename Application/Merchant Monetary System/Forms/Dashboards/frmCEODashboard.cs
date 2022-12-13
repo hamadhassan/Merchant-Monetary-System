@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Merchant_Monetary_System.Forms;
+using Merchant_Monetary_System.Forms.Emails;
 
 namespace Merchant_Monetary_System
 {
@@ -103,7 +105,8 @@ namespace Merchant_Monetary_System
 
         private void btnAddRider_Click(object sender, EventArgs e)
         {
-           
+            loadform(new frmSignUp());
+            
         }
 
         private void btnViewProduct_Click(object sender, EventArgs e)
@@ -118,12 +121,46 @@ namespace Merchant_Monetary_System
 
         private void btnAddStock_Click(object sender, EventArgs e)
         {
-            //loadform(new frmAddStock());
+            loadform(new frmAddStock());
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
             loadform(new frmViewOrders());
+        }
+
+
+        private void addVendorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddvendor());
+        }
+
+        private void updateVendorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmUpdatevendor());
+        }
+
+        private void btnSendEmail_Click(object sender, EventArgs e)
+        {
+            loadform(new frmEmail());
+
+        }
+
+        private void btnAddShopkeeper_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddShopkeeper());
+
+        }
+
+        private void btnForgotPassword_Click_1(object sender, EventArgs e)
+        {
+            loadform(new frmForgetPassword());
+
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

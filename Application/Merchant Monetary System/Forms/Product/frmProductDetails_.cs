@@ -20,7 +20,6 @@ namespace Merchant_Monetary_System
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
-
         }
 
         private void btnLoadRecords_Click(object sender, EventArgs e)

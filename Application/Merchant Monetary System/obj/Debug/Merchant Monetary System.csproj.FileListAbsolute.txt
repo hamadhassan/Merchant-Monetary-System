@@ -130,4 +130,9 @@ E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant M
 E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.CoreCompileInputs.cache
 E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.exe
 E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.pdb
+<<<<<<< Updated upstream
 
+=======
+E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddvendor.resources
+E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmUpdatevendor.resources
+>>>>>>> Stashed changes

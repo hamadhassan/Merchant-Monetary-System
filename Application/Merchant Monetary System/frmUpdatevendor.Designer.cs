@@ -1,6 +1,6 @@
-﻿namespace Merchant_Monetary_System.Forms.Users
+﻿namespace Merchant_Monetary_System
 {
-    partial class frmUpdateVendor
+    partial class frmUpdatevendor
     {
         /// <summary>
         /// Required designer variable.
@@ -36,12 +36,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblAddressSignal = new System.Windows.Forms.Label();
             this.lblContactNumberSignal = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblVendorName = new System.Windows.Forms.Label();
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.lblUpdateVendor = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +120,19 @@
             this.lblContactNumberSignal.TabIndex = 18;
             this.lblContactNumberSignal.Text = " ";
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(574, 382);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(200, 30);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(97)))), ((int)(((byte)(139)))));
@@ -176,19 +189,6 @@
             this.lblUpdateVendor.TabIndex = 1;
             this.lblUpdateVendor.Text = "Update Vendor Information";
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(574, 382);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(200, 30);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox3);
@@ -205,21 +205,21 @@
             this.groupBox1.Controls.Add(this.lblVendorName);
             this.groupBox1.Controls.Add(this.lblContactNumber);
             this.groupBox1.Controls.Add(this.lblUpdateVendor);
-            this.groupBox1.Location = new System.Drawing.Point(-9, -22);
+            this.groupBox1.Location = new System.Drawing.Point(12, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(906, 516);
-            this.groupBox1.TabIndex = 25;
+            this.groupBox1.Size = new System.Drawing.Size(880, 498);
+            this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
-            // frmUpdateVendor
+            // frmUpdatevendor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 473);
+            this.ClientSize = new System.Drawing.Size(904, 512);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmUpdateVendor";
-            this.Text = "frmUpdateVendor";
+            this.Name = "frmUpdatevendor";
+            this.Text = "frmUpdatevendor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -236,12 +236,12 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblAddressSignal;
         private System.Windows.Forms.Label lblContactNumberSignal;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblVendorName;
         private System.Windows.Forms.Label lblContactNumber;
         private System.Windows.Forms.Label lblUpdateVendor;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }
