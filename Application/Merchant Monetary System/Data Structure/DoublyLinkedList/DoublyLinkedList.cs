@@ -15,12 +15,10 @@ namespace Merchant_Monetary_System
             Tail = Head;
             Count = 1;
         }
-        public DoublyLinkedList(IEnumerable<T> data)
+        public DoublyLinkedList()
         {
-            foreach (var d in data)
-            {
-                Add(d);
-            }
+            Tail = Head;
+            Count = 0;
         }
         public int Count { get; private set; }
 
@@ -48,7 +46,7 @@ namespace Merchant_Monetary_System
         }
         public DoublyLinkedListNode<T> Add(T data)
         {
-            if (Head is null)
+            if (Head == null)
             {
                 return AddHead(data);
             }
@@ -81,47 +79,7 @@ namespace Merchant_Monetary_System
             Count++;
             return node;
         }
-
-
-        public IEnumerable<T> GetData()
-        {
-            var current = Head;
-            while (current != null)
-            {
-                yield return current.Data;
-                current = current.Next;
-            }
-        }
-        public IEnumerable<T> GetDataReversed()
-        {
-            var current = Tail;
-            while (current != null)
-            {
-                yield return current.Data;
-                current = current.Previous;
-            }
-        }
-        public void Reverse()
-        {
-            var current = Head;
-            DoublyLinkedListNode<T> temp = null;
-
-            while (current != null)
-            {
-                temp = current.Previous;
-                current.Previous = current.Next;
-                current.Next = temp;
-                current = current.Previous;
-            }
-
-            Tail = Head;
-
-            // temp can be null on empty list
-            if (temp != null)
-            {
-                Head = temp.Previous;
-            }
-        }
+        
         public DoublyLinkedListNode<T> Find(T data)
         {
             var current = Head;
@@ -134,8 +92,6 @@ namespace Merchant_Monetary_System
                 current = current.Next;
             }
             return null;
-
-           // throw new ItemNotFoundException();
         }
         public DoublyLinkedListNode<T> GetAt(int position)
         {
@@ -155,13 +111,13 @@ namespace Merchant_Monetary_System
 
         public void RemoveHead()
         {
-            if (Head is null)
+            if (Head == null)
             {
                 throw new InvalidOperationException();
             }
 
             Head = Head.Next;
-            if (Head is null)
+            if (Head == null)
             {
                 Tail = null;
                 Count = 0;
@@ -171,15 +127,15 @@ namespace Merchant_Monetary_System
             Head.Previous = null;
             Count--;
         }
-        public void Remove()
+        public void RemoveAll()
         {
-            if (Tail is null)
+            if (Tail == null)
             {
                 throw new InvalidOperationException("Cannot prune empty list");
             }
 
             Tail = Tail.Previous;
-            if (Tail is null)
+            if (Tail == null)
             {
                 Head = null;
                 Count = 0;
@@ -200,11 +156,11 @@ namespace Merchant_Monetary_System
 
             if (node == Tail)
             {
-                Remove();
+                RemoveAll();
                 return;
             }
 
-            if (node.Previous is null || node.Next is null)
+            if (node.Previous == null || node.Next == null)
             {
                 throw new ArgumentException(
                     $"{nameof(node)} cannot have Previous or Next null if it's an internal node");
@@ -214,15 +170,7 @@ namespace Merchant_Monetary_System
             node.Next.Previous = node.Previous;
             Count--;
         }
-
-        public void Remove(T data)
-        {
-            var node = Find(data);
-            RemoveNode(node);
-        }
-
-
-        public int IndexOf(T data)
+        public int listCount(T data)
         {
             var current = Head;
             var index = 0;
@@ -239,7 +187,6 @@ namespace Merchant_Monetary_System
 
             return -1;
         }
-        public bool Contains(T data) => IndexOf(data) != -1;
     }
 
 

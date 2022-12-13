@@ -19,7 +19,7 @@ namespace Merchant_Monetary_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmWarehouseManagerDashboard());
+            Application.Run(new frmLogin());
         }
     }
 }

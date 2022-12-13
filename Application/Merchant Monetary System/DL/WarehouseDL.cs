@@ -83,6 +83,7 @@ namespace Merchant_Monetary_System
                     string area= spilitedRecord[7];
                     string city = spilitedRecord[8];
                     string state = spilitedRecord[9];
+
                     Location location=new Location(latitude,longitude,area, city, state);
                     Warehouse warehouse = new Warehouse(id, name, totalSpace, currentSpace, occupiedSpace,location);
                     warehousesList.Add(warehouse);

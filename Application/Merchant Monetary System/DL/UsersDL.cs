@@ -102,8 +102,8 @@ namespace Merchant_Monetary_System
         {
             StreamWriter file = new StreamWriter(path, true);
             file.WriteLine(record.Designation + "," + record.Name + "," + record.Gender + "," + record.Cnic
-                + "," + record.EmailAddress + "," + record.ContactNumber + "," + record.HomeAddress + "," + 
-                record.Username + "," + record.Password);
+                 + "," + record.EmailAddress + "," + record.ContactNumber + "," + record.HomeAddress + "," +
+                 record.Username + "," + record.Password + "," + record.WarehouseID + "," + record.RiderId);
             file.Flush();
             file.Close();
         }
@@ -114,7 +114,7 @@ namespace Merchant_Monetary_System
             {
                 file.WriteLine(record.Designation + "," + record.Name + "," + record.Gender + "," + record.Cnic
                 + "," + record.EmailAddress + "," + record.ContactNumber + "," + record.HomeAddress + "," +
-                record.Username + "," + record.Password);
+                record.Username + "," + record.Password + "," + record.WarehouseID + "," + record.RiderId);
             }
             file.Flush();
             file.Close();
@@ -138,7 +138,9 @@ namespace Merchant_Monetary_System
                     string homeAddress = spilitedRecord[6];
                     string username= spilitedRecord[7];
                     string password= spilitedRecord[8];
-                    Users users = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress,username,password);
+                    int warehouseID=Convert.ToInt16(spilitedRecord[9]);
+                    float riderId=Convert.ToInt16(spilitedRecord[10]);
+                    Users users = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress,username,password,warehouseID,riderId);
                     usersList.Add(users);
                 }
                 fileVariable.Close();

@@ -72,6 +72,20 @@ namespace Merchant_Monetary_System
             this.password = password;
             this.riderId = riderID;
         }
+        public Users(string designation, string name, string gender, double cnic, string emailAddress, int contactNumber, string homeAddress, string username, string password, int warehouseID,float riderId)
+        {// to show all data 
+            this.designation = designation;
+            this.name = name;
+            this.gender = gender;
+            this.cnic = cnic;
+            this.emailAddress = emailAddress;
+            this.contactNumber = contactNumber;
+            this.homeAddress = homeAddress;
+            this.username = username;
+            this.password = password;
+            this.warehouseID = warehouseID;
+            this.riderId = riderId;
+        }
 
 
     }

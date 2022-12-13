@@ -193,6 +193,7 @@ namespace Merchant_Monetary_System
                 cmbxDesignation.Enabled = false;
                 cmbxWarehouse.SelectedIndex = 0;
             }
+            cmbxDesignation.SelectedIndex = 0;
 
 
         }
@@ -436,7 +437,8 @@ namespace Merchant_Monetary_System
 
         private void cmbxDesignation_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbxDesignation.SelectedIndex == 2)
+           
+            if (cmbxDesignation.SelectedIndex == 2)
             {//rider is selected
                 lblVehicle.Visible = true;
                 cmbxVehicle.Visible = true;
@@ -457,6 +459,13 @@ namespace Merchant_Monetary_System
                 {
                     cmbxWarehouse.Items.Add(w.Name);
                 }
+            }
+            else
+            {
+                lblWarehouse.Visible = false;
+                cmbxWarehouse.Visible = false;
+                lblVehicle.Visible = false;
+                cmbxVehicle.Visible = false;
             }
         }
 

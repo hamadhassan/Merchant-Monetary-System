@@ -57,5 +57,10 @@ namespace Merchant_Monetary_System
         {
             loadform(new frmAddWarehouse());
         }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmLogin());
+        }
     }
 }
