@@ -1,4 +1,6 @@
-﻿using Merchant_Monetary_System.Forms.Product;
+﻿using Merchant_Monetary_System.Forms.Emails;
+using Merchant_Monetary_System.Forms.Product;
+using Merchant_Monetary_System.Forms.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,11 +88,6 @@ namespace Merchant_Monetary_System
             loadform(new frmAddWarehouse());
         }
 
-        private void editWarehouseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void viewWarehousesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmViewWarehouses());
@@ -118,12 +115,44 @@ namespace Merchant_Monetary_System
 
         private void btnAddStock_Click(object sender, EventArgs e)
         {
-            //loadform(new frmAddStock());
+            loadform(new frmAddStock());
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
             loadform(new frmViewOrders());
+        }
+
+        private void btnAddShopkeeper_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddShopkeeper());
+        }
+
+        private void btnForgotPassword_Click_1(object sender, EventArgs e)
+        {
+            loadform(new frmForgetPassword());
+        }
+
+        private void btnSendEmail_Click(object sender, EventArgs e)
+        {
+            loadform(new frmEmail());
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form f = new frmLogin();
+            f.Show();
+        }
+
+        private void addVendorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmADDvendor());
+        }
+
+        private void updateVendorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmUpdateVendor());
         }
     }
 }

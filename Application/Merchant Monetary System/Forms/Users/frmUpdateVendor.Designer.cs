@@ -205,9 +205,9 @@
             this.groupBox1.Controls.Add(this.lblVendorName);
             this.groupBox1.Controls.Add(this.lblContactNumber);
             this.groupBox1.Controls.Add(this.lblUpdateVendor);
-            this.groupBox1.Location = new System.Drawing.Point(-9, -22);
+            this.groupBox1.Location = new System.Drawing.Point(12, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(906, 516);
+            this.groupBox1.Size = new System.Drawing.Size(861, 467);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             // 
@@ -215,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 473);
+            this.ClientSize = new System.Drawing.Size(897, 479);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUpdateVendor";

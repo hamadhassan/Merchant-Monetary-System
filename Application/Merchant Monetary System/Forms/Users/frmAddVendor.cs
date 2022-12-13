@@ -8,33 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Merchant_Monetary_System.Forms.Users
+namespace Merchant_Monetary_System
 {
-    public partial class frmAddVendor : Form
+    public partial class frmADDvendor : Form
     {
-        public frmAddVendor()
+        public frmADDvendor()
         {
             InitializeComponent();
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblAddCompany_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
