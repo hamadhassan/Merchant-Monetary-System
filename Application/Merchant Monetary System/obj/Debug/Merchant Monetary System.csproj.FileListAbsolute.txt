@@ -131,8 +131,16 @@ E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant M
 E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.exe
 E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.pdb
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
 E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddvendor.resources
 E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmUpdatevendor.resources
+>>>>>>> Stashed changes
+=======
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Dashboards.frmWarehouseManagerDashboard.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Emails.frmEmail.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddShopkeeper.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewOrders.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmTakeOrder.resources
 >>>>>>> Stashed changes

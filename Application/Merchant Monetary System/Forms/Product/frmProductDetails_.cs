@@ -31,5 +31,20 @@ namespace Merchant_Monetary_System
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDesignation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxDesignation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
