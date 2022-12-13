@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Merchant_Monetary_System.Forms.Emails;
 
 namespace Merchant_Monetary_System.Forms.Dashboards
 {
@@ -20,6 +21,40 @@ namespace Merchant_Monetary_System.Forms.Dashboards
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddRider_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnViewProducts_Click(object sender, EventArgs e)
+        {
+            if (this.tblForm.Controls.Count > 0)
+                this.tblForm.Controls.RemoveAt(0);
+            Form f = new frmProductDetails_();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.tblForm.Controls.Add(f);
+            this.tblForm.Tag = f;
+            f.Show();
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSendEmail_Click(object sender, EventArgs e)
+        {
+            if (this.tblForm.Controls.Count > 0)
+                this.tblForm.Controls.RemoveAt(0);
+            Form f = new frmEmail();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.tblForm.Controls.Add(f);
+            this.tblForm.Tag = f;
+            f.Show();
         }
     }
 }
