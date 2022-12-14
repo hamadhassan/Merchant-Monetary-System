@@ -105,8 +105,8 @@ namespace Merchant_Monetary_System.DL
                     string SensitivityType = spilitedRecord[4];
                     string Category = spilitedRecord[5];
                     string Manufacturer = spilitedRecord[6];
-                    Product product = new Product( Name, SKU_Number,float.(Weight) , Volume, Manufacturer, SensitivityType, username);
-                    ProductList.Add(product);
+                  //  Product product = new Product( Name, SKU_Number,float.(Weight) , Volume, Manufacturer, SensitivityType);
+                   // ProductList.Add(product);
                 }
                 fileVariable.Close();
                 return true;
