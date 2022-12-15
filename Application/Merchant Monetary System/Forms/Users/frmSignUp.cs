@@ -83,8 +83,8 @@ namespace Merchant_Monetary_System
                 }
                 else if (createAccountFor == 4)
                 {//for rider
-                    float vehicelID = cmbxVehicle.SelectedIndex;
-                    user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, vehicelID);
+                    //float vehicelID = cmbxVehicle.SelectedIndex;
+                    //user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, vehicelID);
                 }
                 if (previousObj != null)
                 {//for updating of account
@@ -440,8 +440,8 @@ namespace Merchant_Monetary_System
            
             if (cmbxDesignation.SelectedIndex == 2)
             {//rider is selected
-                lblVehicle.Visible = true;
-                cmbxVehicle.Visible = true;
+               // lblVehicle.Visible = true;
+               // cmbxVehicle.Visible = true;
                 lblWarehouse.Visible = false;
                 cmbxWarehouse.Visible = false;
                 createAccountFor = 4;
@@ -450,8 +450,8 @@ namespace Merchant_Monetary_System
             {//warehouse is selected
                 lblWarehouse.Visible = true;
                 cmbxWarehouse.Visible = true;
-                lblVehicle.Visible = false;
-                cmbxVehicle.Visible = false;
+               // lblVehicle.Visible = false;
+               // cmbxVehicle.Visible = false;
                 createAccountFor = 3;
                 WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
                 //add all warehouse 
@@ -464,8 +464,8 @@ namespace Merchant_Monetary_System
             {
                 lblWarehouse.Visible = false;
                 cmbxWarehouse.Visible = false;
-                lblVehicle.Visible = false;
-                cmbxVehicle.Visible = false;
+              //  lblVehicle.Visible = false;
+                //cmbxVehicle.Visible = false;
             }
         }
 
