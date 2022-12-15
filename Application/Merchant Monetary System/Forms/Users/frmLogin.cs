@@ -131,5 +131,20 @@ namespace Merchant_Monetary_System
         {
 
         }
+
+        private void lblDesignationSingal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsernameSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

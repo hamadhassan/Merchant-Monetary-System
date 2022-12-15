@@ -246,3 +246,5 @@ D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmRoutes.resources
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.CopyComplete
 D:\DSA\FinalProject\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Product.frmUpdateCategory.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Product.frmAddCategory.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Product.frmUpdateCategory.resources
