@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Merchant_Monetary_System.DL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Merchant_Monetary_System;
 
 namespace Merchant_Monetary_System.Forms.Product
 {
     public partial class frmAddCategory : Form
     {
+        bool isName = true;
         public frmAddCategory()
         {
             InitializeComponent();
@@ -19,12 +23,62 @@ namespace Merchant_Monetary_System.Forms.Product
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            txtCategory.Clear();
         }
 
         private void lblCategory_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txtCategory.Text != "" && !isName)
+            {
+                string categoryName = txtCategory.Text;
+                categoryDL.addIntoCategoryList(categoryName);
+                categoryDL.StoreDataIntoFiles(FilePath.Category);
+                MessageBox.Show("Category Added Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Fill the field correctly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void lblCategoryValid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCategory_TextChanged(object sender, EventArgs e)
+        {
+            int i;
+            if (txtCategory.Text == string.Empty)
+            {// check is empty
+                lblCategoryValid.Text = "Enter the category";
+                isName = true;
+            }
+            else if (int.TryParse(txtCategory.Text, out i))
+            {//Check isnumberic
+                lblCategoryValid.Text = "Allowed characters: a-z, A-Z";
+                isName = true;
+            }
+            else if (txtCategory.Text.Any(ch => !char.IsLetter(ch)))
+            {//check isSpecialCharactor
+                lblCategoryValid.Text = "Allowed characters: a-z, A-Z";
+                isName = true;
+            }
+            else
+            {//ready for storage or action
+                lblCategoryValid.Text = " ";
+                isName = false;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

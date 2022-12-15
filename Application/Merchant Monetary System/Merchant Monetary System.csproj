@@ -88,6 +88,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Category.cs" />
+    <Compile Include="DL\categoryDL.cs" />
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +286,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payment\frmEditPayment.resx">
       <DependentUpon>frmEditPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\frmUpdateCategory.resx">
+      <DependentUpon>frmUpdateCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmUpdateProduct.resx">
       <DependentUpon>frmUpdateProduct.cs</DependentUpon>

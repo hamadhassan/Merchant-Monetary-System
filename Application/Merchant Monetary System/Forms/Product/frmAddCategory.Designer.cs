@@ -34,6 +34,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblCategoryValid = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCategoryTitle
@@ -53,6 +54,7 @@
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(203, 23);
             this.txtCategory.TabIndex = 1;
+            this.txtCategory.TextChanged += new System.EventHandler(this.txtCategory_TextChanged);
             // 
             // lblCategory
             // 
@@ -77,6 +79,7 @@
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -104,12 +107,26 @@
             this.btnClose.TabIndex = 14;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblCategoryValid
+            // 
+            this.lblCategoryValid.AutoSize = true;
+            this.lblCategoryValid.BackColor = System.Drawing.Color.Transparent;
+            this.lblCategoryValid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryValid.ForeColor = System.Drawing.Color.Red;
+            this.lblCategoryValid.Location = new System.Drawing.Point(414, 195);
+            this.lblCategoryValid.Name = "lblCategoryValid";
+            this.lblCategoryValid.Size = new System.Drawing.Size(0, 20);
+            this.lblCategoryValid.TabIndex = 17;
+            this.lblCategoryValid.Click += new System.EventHandler(this.lblCategoryValid_Click);
             // 
             // frmAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 473);
+            this.Controls.Add(this.lblCategoryValid);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnClose);
@@ -131,5 +148,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblCategoryValid;
     }
 }
