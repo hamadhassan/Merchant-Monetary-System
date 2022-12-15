@@ -205,5 +205,15 @@ namespace Merchant_Monetary_System
         {
 
         }
+
+        private void lblDesignationSingal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblConfirmPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
