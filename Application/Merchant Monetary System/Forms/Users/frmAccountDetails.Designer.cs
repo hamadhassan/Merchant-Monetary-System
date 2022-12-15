@@ -95,7 +95,7 @@
             this.btnLoadRecords.Location = new System.Drawing.Point(386, 276);
             this.btnLoadRecords.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoadRecords.Name = "btnLoadRecords";
-            this.btnLoadRecords.Size = new System.Drawing.Size(114, 26);
+            this.btnLoadRecords.Size = new System.Drawing.Size(156, 39);
             this.btnLoadRecords.TabIndex = 56;
             this.btnLoadRecords.Text = "Load Records";
             this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

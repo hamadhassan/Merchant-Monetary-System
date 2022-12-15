@@ -43,8 +43,13 @@
             this.viewWarehousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addVendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateVendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnForgotPassword = new System.Windows.Forms.Button();
             this.btnAddShopkeeper = new System.Windows.Forms.Button();
             this.btnAddWarehouseManger = new System.Windows.Forms.Button();
             this.btnAddRider = new System.Windows.Forms.Button();
@@ -63,11 +68,6 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
-            this.btnForgotPassword = new System.Windows.Forms.Button();
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addVendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateVendorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -142,7 +142,7 @@
             // addAddToolStripMenuItem
             // 
             this.addAddToolStripMenuItem.Name = "addAddToolStripMenuItem";
-            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.addAddToolStripMenuItem.Text = "Add Add";
             // 
             // productToolStripMenuItem
@@ -186,6 +186,26 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 23);
             this.helpToolStripMenuItem.Text = "Vendor";
+            // 
+            // addVendorToolStripMenuItem
+            // 
+            this.addVendorToolStripMenuItem.Name = "addVendorToolStripMenuItem";
+            this.addVendorToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.addVendorToolStripMenuItem.Text = "Add Vendor";
+            this.addVendorToolStripMenuItem.Click += new System.EventHandler(this.addVendorToolStripMenuItem_Click);
+            // 
+            // updateVendorToolStripMenuItem
+            // 
+            this.updateVendorToolStripMenuItem.Name = "updateVendorToolStripMenuItem";
+            this.updateVendorToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.updateVendorToolStripMenuItem.Text = "Update Vendor";
+            this.updateVendorToolStripMenuItem.Click += new System.EventHandler(this.updateVendorToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(49, 23);
+            this.helpToolStripMenuItem1.Text = "Help";
             // 
             // btnAddEmployee
             // 
@@ -239,6 +259,38 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(213, 572);
             this.tableLayoutPanel1.TabIndex = 3;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.ForeColor = System.Drawing.Color.Black;
+            this.btnSignOut.Location = new System.Drawing.Point(3, 521);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(207, 48);
+            this.btnSignOut.TabIndex = 69;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnForgotPassword
+            // 
+            this.btnForgotPassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnForgotPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnForgotPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnForgotPassword.FlatAppearance.BorderSize = 0;
+            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForgotPassword.ForeColor = System.Drawing.Color.Black;
+            this.btnForgotPassword.Location = new System.Drawing.Point(3, 463);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(207, 52);
+            this.btnForgotPassword.TabIndex = 68;
+            this.btnForgotPassword.Text = "Forgot Password";
+            this.btnForgotPassword.UseVisualStyleBackColor = false;
+            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click_1);
             // 
             // btnAddShopkeeper
             // 
@@ -334,6 +386,7 @@
             this.btnViewReport.TabIndex = 60;
             this.btnViewReport.Text = "View Report";
             this.btnViewReport.UseVisualStyleBackColor = false;
+            this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
             // 
             // btnViewOrder
             // 
@@ -452,58 +505,6 @@
             this.pParent.Size = new System.Drawing.Size(931, 545);
             this.pParent.TabIndex = 5;
             this.pParent.Paint += new System.Windows.Forms.PaintEventHandler(this.pParent_Paint);
-            // 
-            // btnForgotPassword
-            // 
-            this.btnForgotPassword.BackColor = System.Drawing.Color.Transparent;
-            this.btnForgotPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnForgotPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnForgotPassword.FlatAppearance.BorderSize = 0;
-            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForgotPassword.ForeColor = System.Drawing.Color.Black;
-            this.btnForgotPassword.Location = new System.Drawing.Point(3, 463);
-            this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(207, 52);
-            this.btnForgotPassword.TabIndex = 68;
-            this.btnForgotPassword.Text = "Forgot Password";
-            this.btnForgotPassword.UseVisualStyleBackColor = false;
-            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click_1);
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSignOut.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSignOut.FlatAppearance.BorderSize = 0;
-            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignOut.ForeColor = System.Drawing.Color.Black;
-            this.btnSignOut.Location = new System.Drawing.Point(3, 521);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(207, 48);
-            this.btnSignOut.TabIndex = 69;
-            this.btnSignOut.Text = "Sign Out";
-            this.btnSignOut.UseVisualStyleBackColor = false;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
-            // 
-            // helpToolStripMenuItem1
-            // 
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(49, 23);
-            this.helpToolStripMenuItem1.Text = "Help";
-            // 
-            // addVendorToolStripMenuItem
-            // 
-            this.addVendorToolStripMenuItem.Name = "addVendorToolStripMenuItem";
-            this.addVendorToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.addVendorToolStripMenuItem.Text = "Add Vendor";
-            this.addVendorToolStripMenuItem.Click += new System.EventHandler(this.addVendorToolStripMenuItem_Click);
-            // 
-            // updateVendorToolStripMenuItem
-            // 
-            this.updateVendorToolStripMenuItem.Name = "updateVendorToolStripMenuItem";
-            this.updateVendorToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.updateVendorToolStripMenuItem.Text = "Update Vendor";
-            this.updateVendorToolStripMenuItem.Click += new System.EventHandler(this.updateVendorToolStripMenuItem_Click);
             // 
             // frmCEODashboard
             // 

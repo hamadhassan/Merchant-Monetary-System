@@ -34,12 +34,14 @@ namespace Merchant_Monetary_System
             if (this.pParent.Controls.Count > 0)
                 this.pParent.Controls.RemoveAt(0);
             Form f = Form as Form;
+            f.FormBorderStyle= FormBorderStyle.None;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.pParent.Controls.Add(f);
             this.pParent.Tag = f;
             f.Show();
         }
+
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
             loadform(new frmForgetPassword());
@@ -100,7 +102,7 @@ namespace Merchant_Monetary_System
 
         private void btnAddRider_Click(object sender, EventArgs e)
         {
-           
+            loadform(new frmSignUp());
         }
 
         private void btnViewProduct_Click(object sender, EventArgs e)
@@ -153,6 +155,11 @@ namespace Merchant_Monetary_System
         private void updateVendorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmUpdateVendor());
+        }
+
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
