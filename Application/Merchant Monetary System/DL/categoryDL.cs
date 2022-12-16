@@ -27,7 +27,7 @@ namespace Merchant_Monetary_System.DL
             }
         }
 
-        public List<string> CategoryList { get => categoryList; set => categoryList = value; }
+        public static List<string> CategoryList { get => categoryList; set => categoryList = value; }
 
         public static void addIntoCategoryList(string categoryName)
         {
@@ -42,6 +42,17 @@ namespace Merchant_Monetary_System.DL
             {
                 file.Write(category);
                 if(i != categoryList.Count - 1) file.WriteLine();
+            }
+            file.Close();
+        }
+
+        public static void loadDataFromFiles(string path)
+        {
+            StreamReader file = new StreamReader(path);
+            string record;
+            while((record = file.ReadLine()) != null)
+            {
+                categoryDL.addIntoCategoryList(record);
             }
             file.Close();
         }

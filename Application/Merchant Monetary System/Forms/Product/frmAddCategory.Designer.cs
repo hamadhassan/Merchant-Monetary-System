@@ -133,6 +133,7 @@
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.lblCategoryTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddCategory";
             this.Text = "frmAddCategory";
             this.ResumeLayout(false);
