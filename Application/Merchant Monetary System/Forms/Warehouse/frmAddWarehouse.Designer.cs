@@ -388,7 +388,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAddWarehouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmWarehouse";
+            this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.frmWarehouse_Load);
             this.gbx.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

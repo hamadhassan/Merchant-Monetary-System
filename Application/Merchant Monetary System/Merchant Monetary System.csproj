@@ -225,11 +225,11 @@
       <DependentUpon>frmAddWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="BL\Location.cs" />
-    <Compile Include="Forms\Warehouse\frmViewWarehouses.cs">
+    <Compile Include="Forms\Warehouse\frmWarehouseDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Warehouse\frmViewWarehouses.Designer.cs">
-      <DependentUpon>frmViewWarehouses.cs</DependentUpon>
+    <Compile Include="Forms\Warehouse\frmWarehouseDetails.Designer.cs">
+      <DependentUpon>frmWarehouseDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Product\frmAddProduct.cs">
       <SubType>Form</SubType>
@@ -336,8 +336,8 @@
     <EmbeddedResource Include="Forms\Warehouse\frmAddWarehouse.resx">
       <DependentUpon>frmAddWarehouse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Warehouse\frmViewWarehouses.resx">
-      <DependentUpon>frmViewWarehouses.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Warehouse\frmWarehouseDetails.resx">
+      <DependentUpon>frmWarehouseDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmAddProduct.resx">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
