@@ -44,13 +44,13 @@
             this.txtbxVolume = new System.Windows.Forms.TextBox();
             this.lbl_Volume = new System.Windows.Forms.Label();
             this.gbx = new System.Windows.Forms.GroupBox();
-            this.lblNameSignal = new System.Windows.Forms.Label();
-            this.lblS_Number = new System.Windows.Forms.Label();
-            this.lbl_Weight = new System.Windows.Forms.Label();
-            this.cmbxSenstivity = new System.Windows.Forms.ComboBox();
-            this.lblManufacture = new System.Windows.Forms.Label();
-            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.cmbxCategory = new System.Windows.Forms.ComboBox();
+            this.lblManufacture = new System.Windows.Forms.Label();
+            this.cmbxSenstivity = new System.Windows.Forms.ComboBox();
+            this.lbl_Weight = new System.Windows.Forms.Label();
+            this.lblS_Number = new System.Windows.Forms.Label();
+            this.lblNameSignal = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +104,7 @@
             this.btnAddProduct.TabIndex = 42;
             this.btnAddProduct.Text = "Add Product";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // cmbxManufacture
             // 
@@ -177,6 +178,7 @@
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.Size = new System.Drawing.Size(203, 26);
             this.txtbxName.TabIndex = 27;
+            this.txtbxName.TextChanged += new System.EventHandler(this.txtbxName_TextChanged_1);
             // 
             // txtbxSKU_ID
             // 
@@ -184,6 +186,7 @@
             this.txtbxSKU_ID.Name = "txtbxSKU_ID";
             this.txtbxSKU_ID.Size = new System.Drawing.Size(203, 26);
             this.txtbxSKU_ID.TabIndex = 29;
+            this.txtbxSKU_ID.TextChanged += new System.EventHandler(this.txtbxSKU_ID_TextChanged);
             // 
             // txtbxWeight
             // 
@@ -191,7 +194,7 @@
             this.txtbxWeight.Name = "txtbxWeight";
             this.txtbxWeight.Size = new System.Drawing.Size(203, 26);
             this.txtbxWeight.TabIndex = 31;
-            this.txtbxWeight.UseSystemPasswordChar = true;
+            this.txtbxWeight.TextChanged += new System.EventHandler(this.txtbxWeight_TextChanged);
             // 
             // txtbxVolume
             // 
@@ -199,7 +202,7 @@
             this.txtbxVolume.Name = "txtbxVolume";
             this.txtbxVolume.Size = new System.Drawing.Size(203, 26);
             this.txtbxVolume.TabIndex = 33;
-            this.txtbxVolume.UseSystemPasswordChar = true;
+            this.txtbxVolume.TextChanged += new System.EventHandler(this.txtbxVolume_TextChanged);
             // 
             // lbl_Volume
             // 
@@ -215,7 +218,7 @@
             // 
             this.gbx.Controls.Add(this.lbl_Volume);
             this.gbx.Controls.Add(this.lblCategory);
-            this.gbx.Controls.Add(this.comboCategory);
+            this.gbx.Controls.Add(this.cmbxCategory);
             this.gbx.Controls.Add(this.lblManufacture);
             this.gbx.Controls.Add(this.cmbxSenstivity);
             this.gbx.Controls.Add(this.lbl_Weight);
@@ -240,37 +243,43 @@
             this.gbx.Size = new System.Drawing.Size(906, 516);
             this.gbx.TabIndex = 1;
             this.gbx.TabStop = false;
+            this.gbx.TextChanged += new System.EventHandler(this.gbx_TextChanged);
             this.gbx.Enter += new System.EventHandler(this.gbx_Enter);
             // 
-            // lblNameSignal
+            // lblCategory
             // 
-            this.lblNameSignal.AutoSize = true;
-            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNameSignal.Location = new System.Drawing.Point(219, 170);
-            this.lblNameSignal.Name = "lblNameSignal";
-            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblNameSignal.TabIndex = 28;
-            this.lblNameSignal.Text = " ";
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblCategory.Location = new System.Drawing.Point(478, 248);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(81, 20);
+            this.lblCategory.TabIndex = 36;
+            this.lblCategory.Text = "Category :";
             // 
-            // lblS_Number
+            // cmbxCategory
             // 
-            this.lblS_Number.AutoSize = true;
-            this.lblS_Number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblS_Number.Location = new System.Drawing.Point(219, 222);
-            this.lblS_Number.Name = "lblS_Number";
-            this.lblS_Number.Size = new System.Drawing.Size(13, 20);
-            this.lblS_Number.TabIndex = 30;
-            this.lblS_Number.Text = " ";
+            this.cmbxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxCategory.FormattingEnabled = true;
+            this.cmbxCategory.Items.AddRange(new object[] {
+            "CEO",
+            "Employee",
+            "Rider"});
+            this.cmbxCategory.Location = new System.Drawing.Point(631, 245);
+            this.cmbxCategory.Name = "cmbxCategory";
+            this.cmbxCategory.Size = new System.Drawing.Size(203, 28);
+            this.cmbxCategory.Sorted = true;
+            this.cmbxCategory.TabIndex = 39;
             // 
-            // lbl_Weight
+            // lblManufacture
             // 
-            this.lbl_Weight.AutoSize = true;
-            this.lbl_Weight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lbl_Weight.Location = new System.Drawing.Point(219, 269);
-            this.lbl_Weight.Name = "lbl_Weight";
-            this.lbl_Weight.Size = new System.Drawing.Size(13, 20);
-            this.lbl_Weight.TabIndex = 32;
-            this.lbl_Weight.Text = " ";
+            this.lblManufacture.AutoSize = true;
+            this.lblManufacture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblManufacture.Location = new System.Drawing.Point(478, 147);
+            this.lblManufacture.Name = "lblManufacture";
+            this.lblManufacture.Size = new System.Drawing.Size(107, 20);
+            this.lblManufacture.TabIndex = 34;
+            this.lblManufacture.Text = "Manufacture :";
             // 
             // cmbxSenstivity
             // 
@@ -287,40 +296,35 @@
             this.cmbxSenstivity.Sorted = true;
             this.cmbxSenstivity.TabIndex = 38;
             // 
-            // lblManufacture
+            // lbl_Weight
             // 
-            this.lblManufacture.AutoSize = true;
-            this.lblManufacture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblManufacture.Location = new System.Drawing.Point(478, 147);
-            this.lblManufacture.Name = "lblManufacture";
-            this.lblManufacture.Size = new System.Drawing.Size(107, 20);
-            this.lblManufacture.TabIndex = 34;
-            this.lblManufacture.Text = "Manufacture :";
+            this.lbl_Weight.AutoSize = true;
+            this.lbl_Weight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lbl_Weight.Location = new System.Drawing.Point(219, 269);
+            this.lbl_Weight.Name = "lbl_Weight";
+            this.lbl_Weight.Size = new System.Drawing.Size(13, 20);
+            this.lbl_Weight.TabIndex = 32;
+            this.lbl_Weight.Text = " ";
             // 
-            // comboCategory
+            // lblS_Number
             // 
-            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
-            this.comboCategory.Location = new System.Drawing.Point(631, 245);
-            this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(203, 28);
-            this.comboCategory.Sorted = true;
-            this.comboCategory.TabIndex = 39;
+            this.lblS_Number.AutoSize = true;
+            this.lblS_Number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblS_Number.Location = new System.Drawing.Point(219, 222);
+            this.lblS_Number.Name = "lblS_Number";
+            this.lblS_Number.Size = new System.Drawing.Size(13, 20);
+            this.lblS_Number.TabIndex = 30;
+            this.lblS_Number.Text = " ";
             // 
-            // lblCategory
+            // lblNameSignal
             // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCategory.Location = new System.Drawing.Point(478, 248);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(81, 20);
-            this.lblCategory.TabIndex = 36;
-            this.lblCategory.Text = "Category :";
+            this.lblNameSignal.AutoSize = true;
+            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblNameSignal.Location = new System.Drawing.Point(219, 170);
+            this.lblNameSignal.Name = "lblNameSignal";
+            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblNameSignal.TabIndex = 28;
+            this.lblNameSignal.Text = " ";
             // 
             // frmAddProduct
             // 
@@ -359,7 +363,7 @@
         private System.Windows.Forms.Label lbl_Volume;
         private System.Windows.Forms.GroupBox gbx;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.ComboBox comboCategory;
+        private System.Windows.Forms.ComboBox cmbxCategory;
         private System.Windows.Forms.Label lblManufacture;
         private System.Windows.Forms.ComboBox cmbxSenstivity;
         private System.Windows.Forms.Label lbl_Weight;

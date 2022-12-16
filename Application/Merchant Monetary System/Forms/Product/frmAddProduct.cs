@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-
+using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.DL;
 namespace Merchant_Monetary_System
 {
     public partial class frmAddProduct : Form
@@ -39,12 +41,17 @@ namespace Merchant_Monetary_System
         {
             clearField();
         }
-        private void txtbxName_TextChanged(object sender, EventArgs e)
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void txtbxName_TextChanged_1(object sender, EventArgs e)
         {
             int i;
             if (txtbxName.Text == string.Empty)
-            {
-                // check is empty
+            {// check is empty
                 lblNameSignal.Text = "Enter the name";
                 isName = true;
             }
@@ -65,9 +72,122 @@ namespace Merchant_Monetary_System
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void gbx_TextChanged(object sender, EventArgs e)
         {
-           this.Hide();
+
+        }
+
+        private void txtbxSKU_ID_TextChanged(object sender, EventArgs e)
+        {
+            {
+                int i;
+                if (txtbxSKU_ID.Text == string.Empty)
+                {// check is empty
+                    lblS_Number.Text = "Enter the SKU number";
+                    isSKU_Number = true;
+                }
+                else if (!int.TryParse(txtbxSKU_ID.Text, out i))
+                {//Check isalphabetic
+                    lblS_Number.Text = "Allowed characters: 0-9";
+                    isSKU_Number = true;
+                }
+                else if (txtbxSKU_ID.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+                {//check isSpecialCharactor
+                    lblS_Number.Text = "Allowed characters: 0-9";
+                    isSKU_Number = true;
+                }
+                else
+                {//ready for storage
+                    lblS_Number.Text = " ";
+                    isSKU_Number = false;
+                }
+            }
+        }
+
+        private void txtbxWeight_TextChanged(object sender, EventArgs e)
+        {
+            {
+                int i;
+                if (txtbxSKU_ID.Text == string.Empty)
+                {// check is empty
+                    lblS_Number.Text = "Enter the SKU number";
+                    isSKU_Number = true;
+                }
+                else if (!int.TryParse(txtbxSKU_ID.Text, out i))
+                {//Check isalphabetic
+                    lblS_Number.Text = "Allowed characters: 0-9";
+                    isSKU_Number = true;
+                }
+                else if (txtbxSKU_ID.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+                {//check isSpecialCharactor
+                    lblS_Number.Text = "Allowed characters: 0-9";
+                    isSKU_Number = true;
+                }
+                else
+                {//ready for storage
+                    lblS_Number.Text = " ";
+                    isSKU_Number = false;
+                }
+            }
+        }
+
+        private void txtbxVolume_TextChanged(object sender, EventArgs e)
+        {
+            {
+                int i;
+                if (txtbxSKU_ID.Text == string.Empty)
+                {// check is empty
+                    lblS_Number.Text = "Enter the SKU number";
+                    isSKU_Number = true;
+                }
+                else if (!int.TryParse(txtbxSKU_ID.Text, out i))
+                {//Check isalphabetic
+                    lblS_Number.Text = "Allowed characters: 0-9";
+                    isSKU_Number = true;
+                }
+                else if (txtbxSKU_ID.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+                {//check isSpecialCharactor
+                    lblS_Number.Text = "Allowed characters: 0-9";
+                    isSKU_Number = true;
+                }
+                else
+                {//ready for storage
+                    lblS_Number.Text = " ";
+                    isSKU_Number = false;
+                }
+            }
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (isName == true && isSKU_Number == true && isWeight == true && isVolume == true && cmbxCategory.Text != null && cmbxManufacture.Text != null && cmbxSenstivity.Text != null)
+                {
+                    string name = txtbxName.Text;
+                    int sku_number = Convert.ToInt16(txtbxSKU_ID.Text);
+                    double weight = Convert.ToInt64(txtbxWeight.Text);
+                    double Volume = Convert.ToInt64(txtbxVolume.Text);
+                    string manufacturer = cmbxManufacture.Text;
+                    string category = cmbxCategory.Text;
+                    string sensitivity = cmbxSenstivity.Text;
+                    Product product = null;
+
+                    product = new Product(name, sku_number, weight, Volume, manufacturer, sensitivity, category);
+                    Product.storeRecordIntoFile(product, FilePath.Products);
+                    MessageBox.Show("Product successfully added");
+
+                }
+            }
+            catch 
+            {
+            }
+            else 
+            {
+                MessageBox.Show("Product not added");
+            }
+            
+
         }
     }
 }
