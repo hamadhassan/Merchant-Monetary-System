@@ -68,6 +68,7 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -98,6 +99,7 @@
             // 
             this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.signUpToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.viewAccountsToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
@@ -107,21 +109,21 @@
             // signUpToolStripMenuItem
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -506,6 +508,13 @@
             this.pParent.TabIndex = 5;
             this.pParent.Paint += new System.Windows.Forms.PaintEventHandler(this.pParent_Paint);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(197, 24);
+            this.toolStripMenuItem1.Text = "Update Companay ";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // frmCEODashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -575,5 +584,6 @@
         private System.Windows.Forms.ToolStripMenuItem addVendorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateVendorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

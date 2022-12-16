@@ -14,9 +14,15 @@ namespace Merchant_Monetary_System
 {
     public partial class frmAddCompnay : Form
     {
+        bool isForUpdate;
         public frmAddCompnay()
         {
             InitializeComponent();
+        }
+        public frmAddCompnay(bool isForUpdate)
+        {
+            InitializeComponent();
+            this.isForUpdate = isForUpdate;
         }
         bool isNameCorrect=true;
         bool isContactNumberCorrect=true;
@@ -38,16 +44,26 @@ namespace Merchant_Monetary_System
         {
             if (isNameCorrect == false && isContactNumberCorrect==false && isAddressCorrect==false)
             {
+                
                 string name = txtbxName.Text;
                 string address = rtxtbxAddress.Text;
                 int phone = int.Parse(txtbxContactNumber.Text);
                 Compnay compnay = new Compnay(name, address, phone);
+                if (isForUpdate == false)
+                {
+                    UsersDL.loadRecordFromFile(FilePath.Users);
+                    frmSignUp frmSignUp = new frmSignUp();
+                    frmSignUp.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    compnay.updateRecord(compnay);
+                    this.Hide();
+                }
                 CompanyDL.storeRecordIntoFile(compnay, FilePath.Company);
-                UsersDL.loadRecordFromFile(FilePath.Users);
 
-                frmSignUp frmSignUp = new frmSignUp();
-                frmSignUp.Show();
-                this.Hide();
+
             }
             else
             {
@@ -116,6 +132,20 @@ namespace Merchant_Monetary_System
             {//ready for storage
                 lblAddressSignal.Text = " ";
                 isAddressCorrect = false;
+            }
+        }
+
+        private void frmAddCompnay_Load(object sender, EventArgs e)
+        {
+            if (isForUpdate)
+            {
+                CompanyDL.loadRecordFromFile(FilePath.Company);
+                Compnay compnay  = Compnay.Instance;
+                txtbxName.Text=compnay.Name;
+                rtxtbxAddress.Text= compnay.Address;
+                txtbxContactNumber.Text=compnay.Phone.ToString();
+                lblAddCompany.Text = "Update Compnay";
+                btnNext.Text = "Update";
             }
         }
     }

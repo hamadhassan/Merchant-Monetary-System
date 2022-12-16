@@ -39,24 +39,24 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblAddressSignal = new System.Windows.Forms.Label();
-            this.lblContactNumberSignal = new System.Windows.Forms.Label();
-            this.lblNameSignal = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblContactNumberSignal = new System.Windows.Forms.Label();
+            this.lblNameSignal = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblAddressSignal = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAddCompany
@@ -109,7 +109,7 @@
             this.rtxtbxAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtbxAddress.Location = new System.Drawing.Point(143, 3);
             this.rtxtbxAddress.Name = "rtxtbxAddress";
-            this.rtxtbxAddress.Size = new System.Drawing.Size(602, 66);
+            this.rtxtbxAddress.Size = new System.Drawing.Size(602, 65);
             this.rtxtbxAddress.TabIndex = 2;
             this.rtxtbxAddress.Text = "";
             this.rtxtbxAddress.TextChanged += new System.EventHandler(this.rtxtbxAddress_TextChanged);
@@ -175,49 +175,6 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
-            // lblAddressSignal
-            // 
-            this.lblAddressSignal.AutoSize = true;
-            this.lblAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblAddressSignal.Location = new System.Drawing.Point(143, 72);
-            this.lblAddressSignal.Name = "lblAddressSignal";
-            this.lblAddressSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblAddressSignal.TabIndex = 20;
-            this.lblAddressSignal.Text = " ";
-            // 
-            // lblContactNumberSignal
-            // 
-            this.lblContactNumberSignal.AutoSize = true;
-            this.lblContactNumberSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblContactNumberSignal.Location = new System.Drawing.Point(544, 31);
-            this.lblContactNumberSignal.Name = "lblContactNumberSignal";
-            this.lblContactNumberSignal.Size = new System.Drawing.Size(13, 18);
-            this.lblContactNumberSignal.TabIndex = 18;
-            this.lblContactNumberSignal.Text = " ";
-            // 
-            // lblNameSignal
-            // 
-            this.lblNameSignal.AutoSize = true;
-            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNameSignal.Location = new System.Drawing.Point(147, 31);
-            this.lblNameSignal.Name = "lblNameSignal";
-            this.lblNameSignal.Size = new System.Drawing.Size(13, 18);
-            this.lblNameSignal.TabIndex = 17;
-            this.lblNameSignal.Text = " ";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(930, 540);
-            this.tableLayoutPanel1.TabIndex = 21;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -265,6 +222,75 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(912, 167);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 4;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.16329F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.12873F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.18951F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.51847F));
+            this.tableLayoutPanel6.Controls.Add(this.lblContactNumberSignal, 3, 1);
+            this.tableLayoutPanel6.Controls.Add(this.txtbxContactNumber, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lblName, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txtbxName, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lblContactNumber, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lblNameSignal, 1, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(69, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.2653F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.7347F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(840, 50);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // lblContactNumberSignal
+            // 
+            this.lblContactNumberSignal.AutoSize = true;
+            this.lblContactNumberSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblContactNumberSignal.Location = new System.Drawing.Point(544, 31);
+            this.lblContactNumberSignal.Name = "lblContactNumberSignal";
+            this.lblContactNumberSignal.Size = new System.Drawing.Size(13, 19);
+            this.lblContactNumberSignal.TabIndex = 18;
+            this.lblContactNumberSignal.Text = " ";
+            // 
+            // lblNameSignal
+            // 
+            this.lblNameSignal.AutoSize = true;
+            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblNameSignal.Location = new System.Drawing.Point(147, 31);
+            this.lblNameSignal.Name = "lblNameSignal";
+            this.lblNameSignal.Size = new System.Drawing.Size(13, 19);
+            this.lblNameSignal.TabIndex = 17;
+            this.lblNameSignal.Text = " ";
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.68653F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.31347F));
+            this.tableLayoutPanel7.Controls.Add(this.lblAddressSignal, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lblAddress, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.rtxtbxAddress, 1, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(69, 59);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.06723F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.93277F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(840, 105);
+            this.tableLayoutPanel7.TabIndex = 1;
+            // 
+            // lblAddressSignal
+            // 
+            this.lblAddressSignal.AutoSize = true;
+            this.lblAddressSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblAddressSignal.Location = new System.Drawing.Point(143, 71);
+            this.lblAddressSignal.Name = "lblAddressSignal";
+            this.lblAddressSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblAddressSignal.TabIndex = 20;
+            this.lblAddressSignal.Text = " ";
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 4;
@@ -284,44 +310,18 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(912, 220);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
-            // tableLayoutPanel6
+            // tableLayoutPanel1
             // 
-            this.tableLayoutPanel6.ColumnCount = 4;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.16329F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.12873F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.18951F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.51847F));
-            this.tableLayoutPanel6.Controls.Add(this.lblContactNumberSignal, 3, 1);
-            this.tableLayoutPanel6.Controls.Add(this.txtbxContactNumber, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.lblName, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.txtbxName, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.lblContactNumber, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.lblNameSignal, 1, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(70, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.2653F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.7347F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(839, 49);
-            this.tableLayoutPanel6.TabIndex = 0;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.68653F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.31347F));
-            this.tableLayoutPanel7.Controls.Add(this.rtxtbxAddress, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.lblAddressSignal, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.lblAddress, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(70, 58);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.06723F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.93277F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(839, 106);
-            this.tableLayoutPanel7.TabIndex = 1;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(930, 540);
+            this.tableLayoutPanel1.TabIndex = 21;
             // 
             // frmAddCompnay
             // 
@@ -335,17 +335,18 @@
             this.Name = "frmAddCompnay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compnay";
+            this.Load += new System.EventHandler(this.frmAddCompnay_Load);
             this.groupBox1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
