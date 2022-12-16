@@ -106,6 +106,7 @@
             this.groupBox1.Size = new System.Drawing.Size(890, 540);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblCostPriceValid
             // 
@@ -160,6 +161,23 @@
             this.DGVStock.Size = new System.Drawing.Size(745, 140);
             this.DGVStock.TabIndex = 77;
             this.DGVStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVStock_CellContentClick);
+<<<<<<< Updated upstream
+=======
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.HeaderText = "Update";
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ReadOnly = true;
+            this.btnUpdate.UseColumnTextForButtonValue = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.HeaderText = "Delete";
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ReadOnly = true;
+            this.btnDelete.UseColumnTextForButtonValue = true;
+>>>>>>> Stashed changes
             // 
             // lblVendor
             // 
