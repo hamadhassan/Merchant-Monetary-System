@@ -278,6 +278,7 @@
             this.btnClear.TabIndex = 95;
             this.btnClear.Text = "Clear All";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnClose
             // 
@@ -291,6 +292,7 @@
             this.btnClose.TabIndex = 94;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblCostPriceValid
             // 

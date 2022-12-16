@@ -110,5 +110,17 @@ namespace Merchant_Monetary_System.Forms.Product
                 MessageBox.Show("Stock Updated Successfully", "Information Message", MessageBoxButtons.OK);
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtbxCostPrice.Clear();
+            txtbxQuantity.Clear();
+            txtbxRetailPrice.Clear();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
