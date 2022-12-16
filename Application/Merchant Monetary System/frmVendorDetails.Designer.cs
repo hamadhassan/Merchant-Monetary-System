@@ -34,7 +34,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.datagvProductDetails = new System.Windows.Forms.DataGridView();
+            this.datagvVendorsDetails = new System.Windows.Forms.DataGridView();
             this.btnGo = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.cmbxFiliter = new System.Windows.Forms.ComboBox();
@@ -45,7 +45,7 @@
             this.lblAttributes = new System.Windows.Forms.Label();
             this.lblVendorDetails = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvVendorsDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Controls.Add(this.datagvProductDetails);
+            this.groupBox1.Controls.Add(this.datagvVendorsDetails);
             this.groupBox1.Controls.Add(this.btnGo);
             this.groupBox1.Controls.Add(this.btnClearAll);
             this.groupBox1.Controls.Add(this.cmbxFiliter);
@@ -95,6 +95,7 @@
             this.btnLoadRecords.Text = "Load Records";
             this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadRecords.UseVisualStyleBackColor = false;
+            this.btnLoadRecords.Click += new System.EventHandler(this.btnLoadRecords_Click);
             // 
             // btnEdit
             // 
@@ -108,6 +109,7 @@
             this.btnEdit.TabIndex = 87;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnClose
             // 
@@ -121,6 +123,7 @@
             this.btnClose.TabIndex = 86;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
             // 
@@ -134,18 +137,20 @@
             this.btnDelete.TabIndex = 85;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // datagvProductDetails
+            // datagvVendorsDetails
             // 
-            this.datagvProductDetails.AllowUserToAddRows = false;
-            this.datagvProductDetails.AllowUserToDeleteRows = false;
-            this.datagvProductDetails.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.datagvProductDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvProductDetails.Location = new System.Drawing.Point(25, 133);
-            this.datagvProductDetails.Name = "datagvProductDetails";
-            this.datagvProductDetails.ReadOnly = true;
-            this.datagvProductDetails.Size = new System.Drawing.Size(881, 351);
-            this.datagvProductDetails.TabIndex = 84;
+            this.datagvVendorsDetails.AllowUserToAddRows = false;
+            this.datagvVendorsDetails.AllowUserToDeleteRows = false;
+            this.datagvVendorsDetails.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.datagvVendorsDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagvVendorsDetails.Location = new System.Drawing.Point(25, 133);
+            this.datagvVendorsDetails.Name = "datagvVendorsDetails";
+            this.datagvVendorsDetails.ReadOnly = true;
+            this.datagvVendorsDetails.Size = new System.Drawing.Size(881, 351);
+            this.datagvVendorsDetails.TabIndex = 84;
+            this.datagvVendorsDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvVendorsDetails_CellContentClick);
             // 
             // btnGo
             // 
@@ -266,7 +271,7 @@
             this.Text = "frmVendorDetails";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvVendorsDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,7 +284,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView datagvProductDetails;
+        private System.Windows.Forms.DataGridView datagvVendorsDetails;
         private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.ComboBox cmbxFiliter;

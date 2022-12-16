@@ -131,5 +131,55 @@ namespace Merchant_Monetary_System
                 }
             }
         }
+
+        private void lblDatagvSignal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxFiliter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFiliter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxAttributes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAttributes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProductDetails_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

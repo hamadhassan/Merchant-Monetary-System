@@ -76,6 +76,7 @@
             this.lblDatagvSignal.Size = new System.Drawing.Size(13, 20);
             this.lblDatagvSignal.TabIndex = 74;
             this.lblDatagvSignal.Text = " ";
+            this.lblDatagvSignal.Click += new System.EventHandler(this.lblDatagvSignal_Click);
             // 
             // btnLoadRecords
             // 
@@ -159,6 +160,7 @@
             this.btnGo.TabIndex = 68;
             this.btnGo.Text = "Go";
             this.btnGo.UseVisualStyleBackColor = false;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // btnClearAll
             // 
@@ -172,6 +174,7 @@
             this.btnClearAll.TabIndex = 67;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = false;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // cmbxFiliter
             // 
@@ -188,6 +191,7 @@
             this.cmbxFiliter.Name = "cmbxFiliter";
             this.cmbxFiliter.Size = new System.Drawing.Size(142, 28);
             this.cmbxFiliter.TabIndex = 66;
+            this.cmbxFiliter.SelectedIndexChanged += new System.EventHandler(this.cmbxFiliter_SelectedIndexChanged);
             // 
             // lblFiliter
             // 
@@ -197,6 +201,7 @@
             this.lblFiliter.Size = new System.Drawing.Size(51, 20);
             this.lblFiliter.TabIndex = 65;
             this.lblFiliter.Text = "Filiter:";
+            this.lblFiliter.Click += new System.EventHandler(this.lblFiliter_Click);
             // 
             // txtbxSearch
             // 
@@ -205,6 +210,7 @@
             this.txtbxSearch.Size = new System.Drawing.Size(142, 26);
             this.txtbxSearch.TabIndex = 64;
             this.txtbxSearch.UseSystemPasswordChar = true;
+            this.txtbxSearch.TextChanged += new System.EventHandler(this.txtbxSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -214,6 +220,7 @@
             this.lblSearch.Size = new System.Drawing.Size(64, 20);
             this.lblSearch.TabIndex = 63;
             this.lblSearch.Text = "Search:";
+            this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
             // 
             // cmbxAttributes
             // 
@@ -232,6 +239,7 @@
             this.cmbxAttributes.Name = "cmbxAttributes";
             this.cmbxAttributes.Size = new System.Drawing.Size(142, 28);
             this.cmbxAttributes.TabIndex = 62;
+            this.cmbxAttributes.SelectedIndexChanged += new System.EventHandler(this.cmbxAttributes_SelectedIndexChanged);
             // 
             // lblAttributes
             // 
@@ -241,6 +249,7 @@
             this.lblAttributes.Size = new System.Drawing.Size(74, 20);
             this.lblAttributes.TabIndex = 61;
             this.lblAttributes.Text = "Attribute:";
+            this.lblAttributes.Click += new System.EventHandler(this.lblAttributes_Click);
             // 
             // lblProductDetails
             // 
@@ -252,6 +261,7 @@
             this.lblProductDetails.Size = new System.Drawing.Size(263, 39);
             this.lblProductDetails.TabIndex = 58;
             this.lblProductDetails.Text = "Product Details";
+            this.lblProductDetails.Click += new System.EventHandler(this.lblProductDetails_Click);
             // 
             // frmProductDetails_
             // 

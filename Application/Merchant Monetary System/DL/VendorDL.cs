@@ -103,7 +103,7 @@ namespace Merchant_Monetary_System.DL
         {
             VendorList.Clear();
         }
-        public  bool loadRecordFromFile(string path)
+        public static bool loadRecordFromFile(string path)
         {
             clearList();
             StreamReader fileVariable = new StreamReader(path);
