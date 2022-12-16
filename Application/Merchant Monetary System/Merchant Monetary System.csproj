@@ -89,7 +89,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Category.cs" />
+    <Compile Include="BL\Stock.cs" />
+    <Compile Include="BL\Vendor.cs" />
     <Compile Include="DL\categoryDL.cs" />
+    <Compile Include="DL\StockDL.cs" />
+    <Compile Include="DL\VendorDL.cs" />
+    <Compile Include="Forms\Product\UpdatStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\UpdatStock.Designer.cs">
+      <DependentUpon>UpdatStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmUpdateProduct.resx">
       <DependentUpon>frmUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\UpdatStock.resx">
+      <DependentUpon>UpdatStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmAccountDetails.resx">
       <DependentUpon>frmAccountDetails.cs</DependentUpon>
