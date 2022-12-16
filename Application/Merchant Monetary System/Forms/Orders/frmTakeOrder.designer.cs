@@ -31,8 +31,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.checkbxStock = new System.Windows.Forms.CheckBox();
             this.lblAvalibility = new System.Windows.Forms.Label();
@@ -50,16 +48,18 @@
             this.lblProductDetails = new System.Windows.Forms.Label();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.btnLoadRecords = new System.Windows.Forms.Button();
+            this.datagvProductDetails = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLoadRecords);
+            this.groupBox1.Controls.Add(this.datagvProductDetails);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.btnClose);
-            this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.btnClearAll);
             this.groupBox1.Controls.Add(this.checkbxStock);
             this.groupBox1.Controls.Add(this.lblAvalibility);
@@ -111,23 +111,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(35, 154);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(853, 338);
-            this.panel1.TabIndex = 81;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(853, 338);
-            this.dataGridView1.TabIndex = 0;
             // 
             // btnClearAll
             // 
@@ -312,6 +295,33 @@
             this.lblSearch.Text = "Search:";
             this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
             // 
+            // btnLoadRecords
+            // 
+            this.btnLoadRecords.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLoadRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadRecords.Location = new System.Drawing.Point(396, 248);
+            this.btnLoadRecords.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoadRecords.Name = "btnLoadRecords";
+            this.btnLoadRecords.Size = new System.Drawing.Size(114, 26);
+            this.btnLoadRecords.TabIndex = 82;
+            this.btnLoadRecords.Text = "Load Records";
+            this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLoadRecords.UseVisualStyleBackColor = false;
+            // 
+            // datagvProductDetails
+            // 
+            this.datagvProductDetails.AllowUserToAddRows = false;
+            this.datagvProductDetails.AllowUserToDeleteRows = false;
+            this.datagvProductDetails.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.datagvProductDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagvProductDetails.Location = new System.Drawing.Point(25, 95);
+            this.datagvProductDetails.Name = "datagvProductDetails";
+            this.datagvProductDetails.ReadOnly = true;
+            this.datagvProductDetails.Size = new System.Drawing.Size(881, 351);
+            this.datagvProductDetails.TabIndex = 81;
+            this.datagvProductDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvProductDetails_CellContentClick);
+            // 
             // frmTakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -325,8 +335,7 @@
             this.Text = "frmTakeOrder";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,13 +356,13 @@
         private System.Windows.Forms.ComboBox cmbxCategory;
         private System.Windows.Forms.TextBox txtbxPRICEmin;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox checkbxStock;
         private System.Windows.Forms.Label lblAvalibility;
         private System.Windows.Forms.TextBox txtPriceMax;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnClearAll;
+        private System.Windows.Forms.Button btnLoadRecords;
+        private System.Windows.Forms.DataGridView datagvProductDetails;
     }
 }

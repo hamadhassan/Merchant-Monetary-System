@@ -94,7 +94,7 @@ namespace Merchant_Monetary_System
         {
             if (datagvVendorsDetails.SelectedRows.Count == 1)
             {
-                Product S = (Product)datagvVendorsDetails.CurrentRow.DataBoundItem;
+                Vendor S = (Vendor)datagvVendorsDetails.CurrentRow.DataBoundItem;
                 if (S != null)
                 {
                     Form f = new frmUpdateVendor(S);
