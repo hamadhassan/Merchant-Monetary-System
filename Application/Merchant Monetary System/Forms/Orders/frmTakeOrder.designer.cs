@@ -50,12 +50,14 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnLoadRecords = new System.Windows.Forms.Button();
             this.datagvProductDetails = new System.Windows.Forms.DataGridView();
+            this.lblDatagvSignal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblDatagvSignal);
             this.groupBox1.Controls.Add(this.btnLoadRecords);
             this.groupBox1.Controls.Add(this.datagvProductDetails);
             this.groupBox1.Controls.Add(this.btnEdit);
@@ -322,6 +324,16 @@
             this.datagvProductDetails.TabIndex = 81;
             this.datagvProductDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvProductDetails_CellContentClick);
             // 
+            // lblDatagvSignal
+            // 
+            this.lblDatagvSignal.AutoSize = true;
+            this.lblDatagvSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblDatagvSignal.Location = new System.Drawing.Point(21, 498);
+            this.lblDatagvSignal.Name = "lblDatagvSignal";
+            this.lblDatagvSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblDatagvSignal.TabIndex = 83;
+            this.lblDatagvSignal.Text = " ";
+            // 
             // frmTakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -364,5 +376,6 @@
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Button btnLoadRecords;
         private System.Windows.Forms.DataGridView datagvProductDetails;
+        private System.Windows.Forms.Label lblDatagvSignal;
     }
 }
