@@ -186,5 +186,10 @@ namespace Merchant_Monetary_System
         {
             loadform(new frmForgetPassword());
         }
+
+        private void viewRoutesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmRoutes());
+        }
     }
 }

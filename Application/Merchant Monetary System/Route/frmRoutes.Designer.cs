@@ -32,10 +32,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbx = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblViewRoute = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblViewRoute = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbx.SuspendLayout();
@@ -112,16 +112,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 470);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // lblViewRoute
-            // 
-            this.lblViewRoute.AutoSize = true;
-            this.lblViewRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewRoute.Location = new System.Drawing.Point(320, 0);
-            this.lblViewRoute.Name = "lblViewRoute";
-            this.lblViewRoute.Size = new System.Drawing.Size(202, 38);
-            this.lblViewRoute.TabIndex = 3;
-            this.lblViewRoute.Text = "View Route";
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -136,13 +126,23 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(896, 38);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
+            // lblViewRoute
+            // 
+            this.lblViewRoute.AutoSize = true;
+            this.lblViewRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewRoute.Location = new System.Drawing.Point(320, 0);
+            this.lblViewRoute.Name = "lblViewRoute";
+            this.lblViewRoute.Size = new System.Drawing.Size(202, 38);
+            this.lblViewRoute.TabIndex = 3;
+            this.lblViewRoute.Text = "View Route";
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.79464F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.60268F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.49107F));
-            this.tableLayoutPanel4.Controls.Add(this.btnBack, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnClose, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnFind, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 432);
@@ -152,18 +152,19 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(896, 35);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
-            // btnBack
+            // btnClose
             // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(709, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(89, 29);
-            this.btnBack.TabIndex = 5;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(709, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(89, 29);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnFind
             // 
@@ -177,6 +178,7 @@
             this.btnFind.TabIndex = 6;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // frmRoutes
             // 
@@ -209,7 +211,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lblViewRoute;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnFind;
     }
 }

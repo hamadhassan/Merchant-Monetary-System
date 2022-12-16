@@ -23,6 +23,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
             if (this.tblForm.Controls.Count > 0)
                 this.tblForm.Controls.RemoveAt(0);
             Form f = Form as Form;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.tblForm.Controls.Add(f);
@@ -59,6 +60,11 @@ namespace Merchant_Monetary_System.Forms.Dashboards
         private void btnForgetPassword_Click(object sender, EventArgs e)
         {
             loadform(new frmForgetPassword());
+        }
+
+        private void btnViewRoutes_Click(object sender, EventArgs e)
+        {
+            loadform(new frmRoutes());
         }
     }
 }

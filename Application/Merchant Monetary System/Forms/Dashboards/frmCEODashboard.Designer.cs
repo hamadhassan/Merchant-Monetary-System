@@ -72,6 +72,7 @@
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
             this.addWarehouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forgotPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewRoutesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -140,6 +141,8 @@
             // 
             // riderToolStripMenuItem
             // 
+            this.riderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewRoutesToolStripMenuItem});
             this.riderToolStripMenuItem.Name = "riderToolStripMenuItem";
             this.riderToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
             this.riderToolStripMenuItem.Text = "Rider";
@@ -543,6 +546,13 @@
             this.forgotPasswordToolStripMenuItem.Text = "Forgot Password";
             this.forgotPasswordToolStripMenuItem.Click += new System.EventHandler(this.forgotPasswordToolStripMenuItem_Click);
             // 
+            // viewRoutesToolStripMenuItem
+            // 
+            this.viewRoutesToolStripMenuItem.Name = "viewRoutesToolStripMenuItem";
+            this.viewRoutesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewRoutesToolStripMenuItem.Text = "View Routes";
+            this.viewRoutesToolStripMenuItem.Click += new System.EventHandler(this.viewRoutesToolStripMenuItem_Click);
+            // 
             // frmCEODashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -616,5 +626,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addWarehouseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forgotPasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewRoutesToolStripMenuItem;
     }
 }
