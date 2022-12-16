@@ -37,6 +37,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbx.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -144,6 +145,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.49107F));
             this.tableLayoutPanel4.Controls.Add(this.btnClose, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnFind, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblMessage, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 432);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -180,6 +182,15 @@
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(3, 0);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(13, 20);
+            this.lblMessage.TabIndex = 7;
+            this.lblMessage.Text = " ";
+            // 
             // frmRoutes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -198,6 +209,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -213,5 +225,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Label lblMessage;
     }
 }
