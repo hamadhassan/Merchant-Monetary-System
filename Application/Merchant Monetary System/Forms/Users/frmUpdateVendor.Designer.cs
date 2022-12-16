@@ -32,8 +32,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.lblConcernedPerson = new System.Windows.Forms.Label();
             this.lblLandline = new System.Windows.Forms.Label();
-            this.txt = new System.Windows.Forms.TextBox();
-            this.txtbxName = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblAddressSignal = new System.Windows.Forms.Label();
             this.lblContactNumberSignal = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -83,22 +83,22 @@
             this.lblLandline.TabIndex = 24;
             this.lblLandline.Text = "Landline Number: ";
             // 
-            // txt
+            // textBox1
             // 
-            this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt.Location = new System.Drawing.Point(603, 169);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(203, 26);
-            this.txt.TabIndex = 22;
-            this.txt.Text = " ";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(603, 169);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(203, 26);
+            this.textBox1.TabIndex = 22;
+            this.textBox1.Text = " ";
             // 
-            // txtbxName
+            // textBox2
             // 
-            this.txtbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxName.Location = new System.Drawing.Point(246, 168);
-            this.txtbxName.Name = "txtbxName";
-            this.txtbxName.Size = new System.Drawing.Size(203, 26);
-            this.txtbxName.TabIndex = 21;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(246, 168);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(203, 26);
+            this.textBox2.TabIndex = 21;
             // 
             // lblAddressSignal
             // 
@@ -195,8 +195,8 @@
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.lblConcernedPerson);
             this.groupBox1.Controls.Add(this.lblLandline);
-            this.groupBox1.Controls.Add(this.txt);
-            this.groupBox1.Controls.Add(this.txtbxName);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.lblAddressSignal);
             this.groupBox1.Controls.Add(this.lblContactNumberSignal);
             this.groupBox1.Controls.Add(this.btnUpdate);
@@ -232,8 +232,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label lblConcernedPerson;
         private System.Windows.Forms.Label lblLandline;
-        private System.Windows.Forms.TextBox txt;
-        private System.Windows.Forms.TextBox txtbxName;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblAddressSignal;
         private System.Windows.Forms.Label lblContactNumberSignal;
         private System.Windows.Forms.Button btnClear;

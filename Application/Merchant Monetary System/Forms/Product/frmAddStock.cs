@@ -157,7 +157,6 @@ namespace Merchant_Monetary_System
             txtbxRetailPrice.Clear();
         }
 
-<<<<<<< Updated upstream
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             if(newStock.Count !=0)
@@ -200,15 +199,6 @@ namespace Merchant_Monetary_System
                 if(newStock.Count != 0)
                 lblRowSignal.Text = "Select a row from the list";
             }
-=======
-        private void DGVStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
->>>>>>> Stashed changes
 
         }
     }

@@ -30,7 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbx = new System.Windows.Forms.GroupBox();
-            this.lblDatagvSignal = new System.Windows.Forms.Label();
+            this.lblRowSignal = new System.Windows.Forms.Label();
             this.btnLoadRecords = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.datagvStockDetails = new System.Windows.Forms.DataGridView();
@@ -75,7 +75,7 @@
             // 
             // gbx
             // 
-            this.gbx.Controls.Add(this.lblDatagvSignal);
+            this.gbx.Controls.Add(this.lblRowSignal);
             this.gbx.Controls.Add(this.btnLoadRecords);
             this.gbx.Controls.Add(this.tableLayoutPanel2);
             this.gbx.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -86,15 +86,15 @@
             this.gbx.TabIndex = 0;
             this.gbx.TabStop = false;
             // 
-            // lblDatagvSignal
+            // lblRowSignal
             // 
-            this.lblDatagvSignal.AutoSize = true;
-            this.lblDatagvSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblDatagvSignal.Location = new System.Drawing.Point(18, 490);
-            this.lblDatagvSignal.Name = "lblDatagvSignal";
-            this.lblDatagvSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblDatagvSignal.TabIndex = 57;
-            this.lblDatagvSignal.Text = " ";
+            this.lblRowSignal.AutoSize = true;
+            this.lblRowSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblRowSignal.Location = new System.Drawing.Point(18, 490);
+            this.lblRowSignal.Name = "lblRowSignal";
+            this.lblRowSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblRowSignal.TabIndex = 57;
+            this.lblRowSignal.Text = " ";
             // 
             // btnLoadRecords
             // 
@@ -146,9 +146,11 @@
             this.datagvStockDetails.Location = new System.Drawing.Point(3, 127);
             this.datagvStockDetails.Name = "datagvStockDetails";
             this.datagvStockDetails.ReadOnly = true;
+            this.datagvStockDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagvStockDetails.Size = new System.Drawing.Size(912, 324);
             this.datagvStockDetails.TabIndex = 52;
             this.datagvStockDetails.Visible = false;
+            this.datagvStockDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvStockDetails_CellContentClick);
             // 
             // tableLayoutPanel3
             // 
@@ -355,6 +357,7 @@
             this.btnDelete.TabIndex = 53;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClose
             // 
@@ -368,6 +371,7 @@
             this.btnClose.TabIndex = 54;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmViewStockDetails
             // 
@@ -397,7 +401,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox gbx;
-        private System.Windows.Forms.Label lblDatagvSignal;
+        private System.Windows.Forms.Label lblRowSignal;
         private System.Windows.Forms.Button btnLoadRecords;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView datagvStockDetails;
