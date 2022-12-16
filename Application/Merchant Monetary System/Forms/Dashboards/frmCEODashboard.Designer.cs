@@ -32,6 +32,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +40,7 @@
             this.addAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warehouseMangerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewWarehousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,8 +70,8 @@
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addWarehouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forgotPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -102,6 +104,7 @@
             this.signUpToolStripMenuItem,
             this.toolStripMenuItem1,
             this.viewAccountsToolStripMenuItem,
+            this.forgotPasswordToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
             this.optionToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
@@ -111,15 +114,20 @@
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
             this.signUpToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(197, 24);
+            this.toolStripMenuItem1.Text = "Update Companay ";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
             this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
@@ -127,7 +135,6 @@
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -148,7 +155,7 @@
             // addAddToolStripMenuItem
             // 
             this.addAddToolStripMenuItem.Name = "addAddToolStripMenuItem";
-            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.addAddToolStripMenuItem.Text = "Add Add";
             // 
             // productToolStripMenuItem
@@ -165,10 +172,18 @@
             this.emailToolStripMenuItem.Size = new System.Drawing.Size(77, 23);
             this.emailToolStripMenuItem.Text = "Category";
             // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // 
             // warehouseMangerToolStripMenuItem
             // 
             this.warehouseMangerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewWarehousesToolStripMenuItem});
+            this.viewWarehousesToolStripMenuItem,
+            this.addWarehouseToolStripMenuItem});
             this.warehouseMangerToolStripMenuItem.Name = "warehouseMangerToolStripMenuItem";
             this.warehouseMangerToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
             this.warehouseMangerToolStripMenuItem.Text = "Warehouse";
@@ -514,18 +529,19 @@
             this.pParent.TabIndex = 5;
             this.pParent.Paint += new System.Windows.Forms.PaintEventHandler(this.pParent_Paint);
             // 
-            // toolStripMenuItem1
+            // addWarehouseToolStripMenuItem
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(197, 24);
-            this.toolStripMenuItem1.Text = "Update Companay ";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // viewToolStripMenuItem
+            this.addWarehouseToolStripMenuItem.Name = "addWarehouseToolStripMenuItem";
+            this.addWarehouseToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.addWarehouseToolStripMenuItem.Text = "Add Warehouse ";
+            this.addWarehouseToolStripMenuItem.Click += new System.EventHandler(this.addWarehouseToolStripMenuItem_Click);
             // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.viewToolStripMenuItem.Text = "View";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // forgotPasswordToolStripMenuItem
+            // 
+            this.forgotPasswordToolStripMenuItem.Name = "forgotPasswordToolStripMenuItem";
+            this.forgotPasswordToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
+            this.forgotPasswordToolStripMenuItem.Text = "Forgot Password";
+            this.forgotPasswordToolStripMenuItem.Click += new System.EventHandler(this.forgotPasswordToolStripMenuItem_Click);
             // 
             // frmCEODashboard
             // 
@@ -598,5 +614,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addWarehouseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem forgotPasswordToolStripMenuItem;
     }
 }

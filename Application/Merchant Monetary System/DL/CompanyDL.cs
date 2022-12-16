@@ -21,7 +21,7 @@ namespace Merchant_Monetary_System
     {
         public static void storeRecordIntoFile(Compnay record, string path)
         {
-            StreamWriter file = new StreamWriter(path, true);
+            StreamWriter file = new StreamWriter(path,false);
             file.WriteLine(record.Name + "," + record.Address + "," + record.Phone);
             file.Flush();
             file.Close();
@@ -38,7 +38,7 @@ namespace Merchant_Monetary_System
                     string name = spilitedRecord[0];
                     string address = spilitedRecord[1];
                     int phone = Convert.ToInt32(spilitedRecord[2]);
-                    Compnay compnay = new Compnay(name, address, phone);
+                    Compnay compnay = Compnay.Instance(name, address, phone);
                 }
                 fileVariable.Close();
                 return true;

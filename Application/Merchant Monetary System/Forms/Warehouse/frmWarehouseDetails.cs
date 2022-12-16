@@ -25,7 +25,7 @@ namespace Merchant_Monetary_System
         }
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
-           // UsersDL.loadRecordFromFile(FilePath.Users);
+            WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
             DataBind();
             btnLoadRecords.Visible = false;
         }

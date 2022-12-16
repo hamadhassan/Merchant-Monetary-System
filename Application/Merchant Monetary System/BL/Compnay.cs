@@ -16,17 +16,18 @@ namespace Merchant_Monetary_System
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }
         public int Phone { get => phone; set => phone = value; }
-        public static Compnay Instance
+        public static Compnay Instance(string name,string address,int phone)
         {
-            get
+            if (instance == null)
             {
-                if (instance == null)
-                {
-                    //instance = new Compnay();
-                }
-                return instance;
-
+                instance = new Compnay(name,address,phone);
             }
+            return instance;
+            
+        }
+        public static Compnay GetInstance()
+        {
+            return instance;
         }
         public Compnay(string name, string address, int phone)
         {

@@ -172,5 +172,19 @@ namespace Merchant_Monetary_System
         {
             loadform(new frmViewCategory());
         }
+
+        private void addWarehouseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddWarehouse());
+        }
+
+        private void updateCompanyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void forgotPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmForgetPassword());
+        }
     }
 }

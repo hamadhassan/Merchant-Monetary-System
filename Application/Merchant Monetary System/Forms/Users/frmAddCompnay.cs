@@ -48,10 +48,11 @@ namespace Merchant_Monetary_System
                 string name = txtbxName.Text;
                 string address = rtxtbxAddress.Text;
                 int phone = int.Parse(txtbxContactNumber.Text);
-                Compnay compnay = new Compnay(name, address, phone);
+                Compnay compnay =new Compnay(name, address, phone);
                 if (isForUpdate == false)
                 {
                     UsersDL.loadRecordFromFile(FilePath.Users);
+                    CompanyDL.storeRecordIntoFile(compnay, FilePath.Company);
                     frmSignUp frmSignUp = new frmSignUp();
                     frmSignUp.Show();
                     this.Hide();
@@ -59,9 +60,10 @@ namespace Merchant_Monetary_System
                 else
                 {
                     compnay.updateRecord(compnay);
+                    CompanyDL.storeRecordIntoFile(compnay, FilePath.Company);
                     this.Hide();
                 }
-                CompanyDL.storeRecordIntoFile(compnay, FilePath.Company);
+                
 
 
             }
@@ -140,7 +142,7 @@ namespace Merchant_Monetary_System
             if (isForUpdate)
             {
                 CompanyDL.loadRecordFromFile(FilePath.Company);
-                Compnay compnay  = Compnay.Instance;
+                Compnay compnay  = Compnay.GetInstance();
                 txtbxName.Text=compnay.Name;
                 rtxtbxAddress.Text= compnay.Address;
                 txtbxContactNumber.Text=compnay.Phone.ToString();
