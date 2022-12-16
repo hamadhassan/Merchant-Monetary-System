@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Merchant_Monetary_System
 {
-    public partial class frmViewWarehouses : Form
+    public partial class frmWarehouseDetails : Form
     {
-        public frmViewWarehouses()
+        public frmWarehouseDetails()
         {
             InitializeComponent();
         }
