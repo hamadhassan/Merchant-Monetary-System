@@ -162,5 +162,9 @@ namespace Merchant_Monetary_System
         {
 
         }
+
+        private void lblAddWarehouse_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

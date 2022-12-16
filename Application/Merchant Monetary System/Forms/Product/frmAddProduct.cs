@@ -178,14 +178,16 @@ namespace Merchant_Monetary_System
                     MessageBox.Show("Product successfully added");
 
                 }
+                else
+                {
+                    MessageBox.Show("Product not added");
+                }
             }
-            catch 
+            catch
             {
+
             }
-            else 
-            {
-                MessageBox.Show("Product not added");
-            }
+          
             
 
         }
