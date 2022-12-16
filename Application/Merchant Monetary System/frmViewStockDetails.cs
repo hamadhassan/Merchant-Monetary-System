@@ -26,7 +26,7 @@ namespace Merchant_Monetary_System
             btnLoadRecords.Visible = false;
             datagvStockDetails.Visible = true;
             Stock s = new Stock("Cake", 12, 13, 14, DateTime.Parse("12/12/2022"), DateTime.Parse("12 / 12 / 2022"), DateTime.Parse("12 / 12 / 2022"), "Kabir");
-            StockDL.addStockIntoList(StockDL.StockList,s);
+            StockDL.addStockIntoList(StockDL.StockList, s);
             datagvStockDetails.DataSource = StockDL.StockList;
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
@@ -41,10 +41,8 @@ namespace Merchant_Monetary_System
         }
         private void DataBind()
         {
-<<<<<<< Updated upstream
-=======
             datagvStockDetails.Columns.Clear();
->>>>>>> Stashed changes
+
             datagvStockDetails.DataSource = null;
             datagvStockDetails.DataSource = StockDL.StockList;
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
@@ -106,8 +104,6 @@ namespace Merchant_Monetary_System
                     StockDL.deleteStock(StockDL.StockList, S);
                     MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataBind();
-<<<<<<< Updated upstream
-=======
                     StockDL.StoreDataIntoFile(FilePath.Stock);
 
                 }
@@ -130,13 +126,12 @@ namespace Merchant_Monetary_System
                     f.ShowDialog();
                     DataBind();
                     StockDL.StoreDataIntoFile(FilePath.Stock);
->>>>>>> Stashed changes
                 }
-            }
-            else
-            {
-                if (StockDL.StockList.Count != 0)
-                    lblRowSignal.Text = "Select a row from the list";
+                else
+                {
+                    if (StockDL.StockList.Count != 0)
+                        lblRowSignal.Text = "Select a row from the list";
+                }
             }
         }
     }

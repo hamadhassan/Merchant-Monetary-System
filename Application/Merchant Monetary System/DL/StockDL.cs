@@ -124,13 +124,14 @@ namespace Merchant_Monetary_System.DL
             return false;
         }
 
-        public static void calculateAmount(List<Stock> Stock)
+        public static double calculateAmount(List<Stock> Stock)
         {
             double amount = 0;
             foreach(Stock S in Stock)
             {
                 amount += S.RetailPrice * S.Quantity;
             }
+            return amount;
         }
 
 

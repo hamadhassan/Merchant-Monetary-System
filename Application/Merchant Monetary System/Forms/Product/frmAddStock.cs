@@ -143,6 +143,8 @@ namespace Merchant_Monetary_System
             Delete.UseColumnTextForButtonValue = true;
             DGVStock.Columns.Add(Update);
             DGVStock.Columns.Add(Delete);
+            double amount = StockDL.calculateAmount(newStock);
+            lblTotalAmount.Text = amount.ToString();
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)

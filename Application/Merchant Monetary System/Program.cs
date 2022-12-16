@@ -21,12 +21,8 @@ namespace Merchant_Monetary_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-<<<<<<< Updated upstream
-            Application.Run(new frmViewStockDetails());
-=======
             Application.Run(new frmAddStock());
->>>>>>> Stashed changes
+
         }
     }
 }
