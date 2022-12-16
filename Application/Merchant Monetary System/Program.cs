@@ -21,7 +21,11 @@ namespace Merchant_Monetary_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new frmAddCompnay());
+=======
+            Application.Run(new frmAddProduct());
+>>>>>>> Stashed changes
         }
     }
 }
