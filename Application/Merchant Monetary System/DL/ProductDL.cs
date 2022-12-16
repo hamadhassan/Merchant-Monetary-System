@@ -117,6 +117,18 @@ namespace Merchant_Monetary_System.DL
             }
         }
 
+        public static Product returnProduct(string productName)
+        {
+            foreach(Product P in ProductList1)
+            {
+                if(P.Name == productName)
+                {
+                    return P;
+                }
+            }
+            return null;
+        }
+
 
 
 

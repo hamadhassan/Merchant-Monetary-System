@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Merchant_Monetary_System.BL
 {
-    internal class Product
+    public class Product
     {
         private string name;
         private float weight;

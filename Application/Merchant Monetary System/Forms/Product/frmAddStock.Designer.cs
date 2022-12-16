@@ -29,126 +29,293 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCostPriceValid = new System.Windows.Forms.Label();
+            this.lblRetailPriceValid = new System.Windows.Forms.Label();
+            this.lblQuantityValid = new System.Windows.Forms.Label();
+            this.btnAddTStock = new System.Windows.Forms.Button();
+            this.DGVStock = new System.Windows.Forms.DataGridView();
+            this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblVendor = new System.Windows.Forms.Label();
+            this.comboBoxVendor = new System.Windows.Forms.ComboBox();
+            this.DateMFG = new System.Windows.Forms.DateTimePicker();
+            this.lblDateMFG = new System.Windows.Forms.Label();
+            this.DateReceived = new System.Windows.Forms.DateTimePicker();
+            this.DateExpiry = new System.Windows.Forms.DateTimePicker();
+            this.lblProuct = new System.Windows.Forms.Label();
+            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
+            this.lblVolumeValid = new System.Windows.Forms.Label();
+            this.lblWeightValid = new System.Windows.Forms.Label();
+            this.lblSKUValid = new System.Windows.Forms.Label();
+            this.lblNameValid = new System.Windows.Forms.Label();
             this.lbl_Volume = new System.Windows.Forms.Label();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.comboCategory = new System.Windows.Forms.ComboBox();
-            this.lblManufacture = new System.Windows.Forms.Label();
-            this.cmbxSenstivity = new System.Windows.Forms.ComboBox();
+            this.lblDateReceived = new System.Windows.Forms.Label();
             this.lbl_Weight = new System.Windows.Forms.Label();
             this.lblS_Number = new System.Windows.Forms.Label();
-            this.lblNameSignal = new System.Windows.Forms.Label();
-            this.txtbxVolume = new System.Windows.Forms.TextBox();
-            this.txtbxWeight = new System.Windows.Forms.TextBox();
-            this.txtbxSKU_ID = new System.Windows.Forms.TextBox();
-            this.txtbxName = new System.Windows.Forms.TextBox();
-            this.lblWeight = new System.Windows.Forms.Label();
-            this.lblSKU_Number = new System.Windows.Forms.Label();
-            this.lblVolume = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblSensitivity_Type = new System.Windows.Forms.Label();
-            this.cmbxManufacture = new System.Windows.Forms.ComboBox();
+            this.txtbxCostPrice = new System.Windows.Forms.TextBox();
+            this.txtbxRetailPrice = new System.Windows.Forms.TextBox();
+            this.txtbxQuantity = new System.Windows.Forms.TextBox();
+            this.lblRetailPrice = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblCostPrice = new System.Windows.Forms.Label();
+            this.lblExpiryDate = new System.Windows.Forms.Label();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVStock)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblCostPriceValid);
+            this.groupBox1.Controls.Add(this.lblRetailPriceValid);
+            this.groupBox1.Controls.Add(this.lblQuantityValid);
+            this.groupBox1.Controls.Add(this.btnAddTStock);
+            this.groupBox1.Controls.Add(this.DGVStock);
+            this.groupBox1.Controls.Add(this.lblVendor);
+            this.groupBox1.Controls.Add(this.comboBoxVendor);
+            this.groupBox1.Controls.Add(this.DateMFG);
+            this.groupBox1.Controls.Add(this.lblDateMFG);
+            this.groupBox1.Controls.Add(this.DateReceived);
+            this.groupBox1.Controls.Add(this.DateExpiry);
+            this.groupBox1.Controls.Add(this.lblProuct);
+            this.groupBox1.Controls.Add(this.comboBoxProduct);
+            this.groupBox1.Controls.Add(this.lblVolumeValid);
+            this.groupBox1.Controls.Add(this.lblWeightValid);
+            this.groupBox1.Controls.Add(this.lblSKUValid);
+            this.groupBox1.Controls.Add(this.lblNameValid);
             this.groupBox1.Controls.Add(this.lbl_Volume);
-            this.groupBox1.Controls.Add(this.lblCategory);
-            this.groupBox1.Controls.Add(this.comboCategory);
-            this.groupBox1.Controls.Add(this.lblManufacture);
-            this.groupBox1.Controls.Add(this.cmbxSenstivity);
+            this.groupBox1.Controls.Add(this.lblDateReceived);
             this.groupBox1.Controls.Add(this.lbl_Weight);
             this.groupBox1.Controls.Add(this.lblS_Number);
-            this.groupBox1.Controls.Add(this.lblNameSignal);
-            this.groupBox1.Controls.Add(this.txtbxVolume);
-            this.groupBox1.Controls.Add(this.txtbxWeight);
-            this.groupBox1.Controls.Add(this.txtbxSKU_ID);
-            this.groupBox1.Controls.Add(this.txtbxName);
-            this.groupBox1.Controls.Add(this.lblWeight);
-            this.groupBox1.Controls.Add(this.lblSKU_Number);
-            this.groupBox1.Controls.Add(this.lblVolume);
-            this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Controls.Add(this.lblSensitivity_Type);
-            this.groupBox1.Controls.Add(this.cmbxManufacture);
+            this.groupBox1.Controls.Add(this.txtbxCostPrice);
+            this.groupBox1.Controls.Add(this.txtbxRetailPrice);
+            this.groupBox1.Controls.Add(this.txtbxQuantity);
+            this.groupBox1.Controls.Add(this.lblRetailPrice);
+            this.groupBox1.Controls.Add(this.lblQuantity);
+            this.groupBox1.Controls.Add(this.lblCostPrice);
+            this.groupBox1.Controls.Add(this.lblExpiryDate);
             this.groupBox1.Controls.Add(this.btnAddProduct);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.lblSignUp);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(930, 540);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(890, 540);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // lblCostPriceValid
+            // 
+            this.lblCostPriceValid.AutoSize = true;
+            this.lblCostPriceValid.ForeColor = System.Drawing.Color.Red;
+            this.lblCostPriceValid.Location = new System.Drawing.Point(231, 260);
+            this.lblCostPriceValid.Name = "lblCostPriceValid";
+            this.lblCostPriceValid.Size = new System.Drawing.Size(0, 20);
+            this.lblCostPriceValid.TabIndex = 81;
+            // 
+            // lblRetailPriceValid
+            // 
+            this.lblRetailPriceValid.AutoSize = true;
+            this.lblRetailPriceValid.ForeColor = System.Drawing.Color.Red;
+            this.lblRetailPriceValid.Location = new System.Drawing.Point(231, 208);
+            this.lblRetailPriceValid.Name = "lblRetailPriceValid";
+            this.lblRetailPriceValid.Size = new System.Drawing.Size(0, 20);
+            this.lblRetailPriceValid.TabIndex = 80;
+            // 
+            // lblQuantityValid
+            // 
+            this.lblQuantityValid.AutoSize = true;
+            this.lblQuantityValid.ForeColor = System.Drawing.Color.Red;
+            this.lblQuantityValid.Location = new System.Drawing.Point(231, 161);
+            this.lblQuantityValid.Name = "lblQuantityValid";
+            this.lblQuantityValid.Size = new System.Drawing.Size(0, 20);
+            this.lblQuantityValid.TabIndex = 79;
+            // 
+            // btnAddTStock
+            // 
+            this.btnAddTStock.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddTStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTStock.ForeColor = System.Drawing.Color.White;
+            this.btnAddTStock.Location = new System.Drawing.Point(755, 266);
+            this.btnAddTStock.Name = "btnAddTStock";
+            this.btnAddTStock.Size = new System.Drawing.Size(75, 28);
+            this.btnAddTStock.TabIndex = 78;
+            this.btnAddTStock.Text = "Add";
+            this.btnAddTStock.UseVisualStyleBackColor = false;
+            this.btnAddTStock.Click += new System.EventHandler(this.btnAddTStock_Click);
+            // 
+            // DGVStock
+            // 
+            this.DGVStock.AllowUserToAddRows = false;
+            this.DGVStock.AllowUserToDeleteRows = false;
+            this.DGVStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnUpdate,
+            this.btnDelete});
+            this.DGVStock.Location = new System.Drawing.Point(85, 300);
+            this.DGVStock.Name = "DGVStock";
+            this.DGVStock.ReadOnly = true;
+            this.DGVStock.Size = new System.Drawing.Size(745, 140);
+            this.DGVStock.TabIndex = 77;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.HeaderText = "Update";
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ReadOnly = true;
+            this.btnUpdate.UseColumnTextForButtonValue = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.HeaderText = "Delete";
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ReadOnly = true;
+            this.btnDelete.UseColumnTextForButtonValue = true;
+            // 
+            // lblVendor
+            // 
+            this.lblVendor.AutoSize = true;
+            this.lblVendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblVendor.Location = new System.Drawing.Point(477, 237);
+            this.lblVendor.Name = "lblVendor";
+            this.lblVendor.Size = new System.Drawing.Size(69, 20);
+            this.lblVendor.TabIndex = 75;
+            this.lblVendor.Text = "Vendor :";
+            // 
+            // comboBoxVendor
+            // 
+            this.comboBoxVendor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxVendor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxVendor.FormattingEnabled = true;
+            this.comboBoxVendor.Items.AddRange(new object[] {
+            "CEO",
+            "Employee",
+            "Rider"});
+            this.comboBoxVendor.Location = new System.Drawing.Point(630, 232);
+            this.comboBoxVendor.Name = "comboBoxVendor";
+            this.comboBoxVendor.Size = new System.Drawing.Size(198, 28);
+            this.comboBoxVendor.Sorted = true;
+            this.comboBoxVendor.TabIndex = 76;
+            // 
+            // DateMFG
+            // 
+            this.DateMFG.Location = new System.Drawing.Point(630, 82);
+            this.DateMFG.Name = "DateMFG";
+            this.DateMFG.Size = new System.Drawing.Size(200, 26);
+            this.DateMFG.TabIndex = 72;
+            // 
+            // lblDateMFG
+            // 
+            this.lblDateMFG.AutoSize = true;
+            this.lblDateMFG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblDateMFG.Location = new System.Drawing.Point(475, 86);
+            this.lblDateMFG.Name = "lblDateMFG";
+            this.lblDateMFG.Size = new System.Drawing.Size(158, 20);
+            this.lblDateMFG.TabIndex = 56;
+            this.lblDateMFG.Text = "Manufacturing Date :";
+            // 
+            // DateReceived
+            // 
+            this.DateReceived.Location = new System.Drawing.Point(630, 185);
+            this.DateReceived.Name = "DateReceived";
+            this.DateReceived.Size = new System.Drawing.Size(200, 26);
+            this.DateReceived.TabIndex = 74;
+            // 
+            // DateExpiry
+            // 
+            this.DateExpiry.Location = new System.Drawing.Point(630, 135);
+            this.DateExpiry.Name = "DateExpiry";
+            this.DateExpiry.Size = new System.Drawing.Size(200, 26);
+            this.DateExpiry.TabIndex = 73;
+            // 
+            // lblProuct
+            // 
+            this.lblProuct.AutoSize = true;
+            this.lblProuct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblProuct.Location = new System.Drawing.Point(83, 88);
+            this.lblProuct.Name = "lblProuct";
+            this.lblProuct.Size = new System.Drawing.Size(72, 20);
+            this.lblProuct.TabIndex = 70;
+            this.lblProuct.Text = "Product :";
+            // 
+            // comboBoxProduct
+            // 
+            this.comboBoxProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxProduct.FormattingEnabled = true;
+            this.comboBoxProduct.Items.AddRange(new object[] {
+            "CEO",
+            "Employee",
+            "Rider"});
+            this.comboBoxProduct.Location = new System.Drawing.Point(231, 83);
+            this.comboBoxProduct.Name = "comboBoxProduct";
+            this.comboBoxProduct.Size = new System.Drawing.Size(203, 28);
+            this.comboBoxProduct.Sorted = true;
+            this.comboBoxProduct.TabIndex = 71;
+            // 
+            // lblVolumeValid
+            // 
+            this.lblVolumeValid.AutoSize = true;
+            this.lblVolumeValid.ForeColor = System.Drawing.Color.Red;
+            this.lblVolumeValid.Location = new System.Drawing.Point(231, 260);
+            this.lblVolumeValid.Name = "lblVolumeValid";
+            this.lblVolumeValid.Size = new System.Drawing.Size(0, 20);
+            this.lblVolumeValid.TabIndex = 69;
+            // 
+            // lblWeightValid
+            // 
+            this.lblWeightValid.AutoSize = true;
+            this.lblWeightValid.ForeColor = System.Drawing.Color.Red;
+            this.lblWeightValid.Location = new System.Drawing.Point(231, 208);
+            this.lblWeightValid.Name = "lblWeightValid";
+            this.lblWeightValid.Size = new System.Drawing.Size(0, 20);
+            this.lblWeightValid.TabIndex = 68;
+            // 
+            // lblSKUValid
+            // 
+            this.lblSKUValid.AutoSize = true;
+            this.lblSKUValid.ForeColor = System.Drawing.Color.Red;
+            this.lblSKUValid.Location = new System.Drawing.Point(231, 159);
+            this.lblSKUValid.Name = "lblSKUValid";
+            this.lblSKUValid.Size = new System.Drawing.Size(0, 20);
+            this.lblSKUValid.TabIndex = 67;
+            // 
+            // lblNameValid
+            // 
+            this.lblNameValid.AutoSize = true;
+            this.lblNameValid.Location = new System.Drawing.Point(235, 109);
+            this.lblNameValid.Name = "lblNameValid";
+            this.lblNameValid.Size = new System.Drawing.Size(0, 20);
+            this.lblNameValid.TabIndex = 66;
             // 
             // lbl_Volume
             // 
             this.lbl_Volume.AutoSize = true;
             this.lbl_Volume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lbl_Volume.Location = new System.Drawing.Point(231, 333);
+            this.lbl_Volume.Location = new System.Drawing.Point(231, 260);
             this.lbl_Volume.Name = "lbl_Volume";
             this.lbl_Volume.Size = new System.Drawing.Size(13, 20);
             this.lbl_Volume.TabIndex = 65;
             this.lbl_Volume.Text = " ";
             // 
-            // lblCategory
+            // lblDateReceived
             // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCategory.Location = new System.Drawing.Point(490, 260);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(81, 20);
-            this.lblCategory.TabIndex = 58;
-            this.lblCategory.Text = "Category :";
-            // 
-            // comboCategory
-            // 
-            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
-            this.comboCategory.Location = new System.Drawing.Point(643, 257);
-            this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(203, 28);
-            this.comboCategory.Sorted = true;
-            this.comboCategory.TabIndex = 61;
-            // 
-            // lblManufacture
-            // 
-            this.lblManufacture.AutoSize = true;
-            this.lblManufacture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblManufacture.Location = new System.Drawing.Point(490, 159);
-            this.lblManufacture.Name = "lblManufacture";
-            this.lblManufacture.Size = new System.Drawing.Size(107, 20);
-            this.lblManufacture.TabIndex = 56;
-            this.lblManufacture.Text = "Manufacture :";
-            // 
-            // cmbxSenstivity
-            // 
-            this.cmbxSenstivity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxSenstivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbxSenstivity.FormattingEnabled = true;
-            this.cmbxSenstivity.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
-            this.cmbxSenstivity.Location = new System.Drawing.Point(646, 208);
-            this.cmbxSenstivity.Name = "cmbxSenstivity";
-            this.cmbxSenstivity.Size = new System.Drawing.Size(203, 28);
-            this.cmbxSenstivity.Sorted = true;
-            this.cmbxSenstivity.TabIndex = 60;
+            this.lblDateReceived.AutoSize = true;
+            this.lblDateReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblDateReceived.Location = new System.Drawing.Point(477, 187);
+            this.lblDateReceived.Name = "lblDateReceived";
+            this.lblDateReceived.Size = new System.Drawing.Size(122, 20);
+            this.lblDateReceived.TabIndex = 58;
+            this.lblDateReceived.Text = "Received Date :";
             // 
             // lbl_Weight
             // 
             this.lbl_Weight.AutoSize = true;
             this.lbl_Weight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lbl_Weight.Location = new System.Drawing.Point(231, 281);
+            this.lbl_Weight.Location = new System.Drawing.Point(231, 208);
             this.lbl_Weight.Name = "lbl_Weight";
             this.lbl_Weight.Size = new System.Drawing.Size(13, 20);
             this.lbl_Weight.TabIndex = 54;
@@ -158,117 +325,75 @@
             // 
             this.lblS_Number.AutoSize = true;
             this.lblS_Number.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblS_Number.Location = new System.Drawing.Point(231, 234);
+            this.lblS_Number.Location = new System.Drawing.Point(231, 161);
             this.lblS_Number.Name = "lblS_Number";
             this.lblS_Number.Size = new System.Drawing.Size(13, 20);
             this.lblS_Number.TabIndex = 52;
             this.lblS_Number.Text = " ";
             // 
-            // lblNameSignal
+            // txtbxCostPrice
             // 
-            this.lblNameSignal.AutoSize = true;
-            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNameSignal.Location = new System.Drawing.Point(231, 182);
-            this.lblNameSignal.Name = "lblNameSignal";
-            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblNameSignal.TabIndex = 50;
-            this.lblNameSignal.Text = " ";
+            this.txtbxCostPrice.Location = new System.Drawing.Point(231, 231);
+            this.txtbxCostPrice.Name = "txtbxCostPrice";
+            this.txtbxCostPrice.Size = new System.Drawing.Size(203, 26);
+            this.txtbxCostPrice.TabIndex = 55;
+            this.txtbxCostPrice.TextChanged += new System.EventHandler(this.txtbxCostPrice_TextChanged);
             // 
-            // txtbxVolume
+            // txtbxRetailPrice
             // 
-            this.txtbxVolume.Location = new System.Drawing.Point(231, 304);
-            this.txtbxVolume.Name = "txtbxVolume";
-            this.txtbxVolume.Size = new System.Drawing.Size(203, 26);
-            this.txtbxVolume.TabIndex = 55;
-            this.txtbxVolume.UseSystemPasswordChar = true;
+            this.txtbxRetailPrice.Location = new System.Drawing.Point(231, 182);
+            this.txtbxRetailPrice.Name = "txtbxRetailPrice";
+            this.txtbxRetailPrice.Size = new System.Drawing.Size(203, 26);
+            this.txtbxRetailPrice.TabIndex = 53;
+            this.txtbxRetailPrice.TextChanged += new System.EventHandler(this.txtbxRetailPrice_TextChanged);
             // 
-            // txtbxWeight
+            // txtbxQuantity
             // 
-            this.txtbxWeight.Location = new System.Drawing.Point(231, 255);
-            this.txtbxWeight.Name = "txtbxWeight";
-            this.txtbxWeight.Size = new System.Drawing.Size(203, 26);
-            this.txtbxWeight.TabIndex = 53;
-            this.txtbxWeight.UseSystemPasswordChar = true;
+            this.txtbxQuantity.Location = new System.Drawing.Point(231, 132);
+            this.txtbxQuantity.Name = "txtbxQuantity";
+            this.txtbxQuantity.Size = new System.Drawing.Size(203, 26);
+            this.txtbxQuantity.TabIndex = 51;
+            this.txtbxQuantity.TextChanged += new System.EventHandler(this.txtbxQuantity_TextChanged);
             // 
-            // txtbxSKU_ID
+            // lblRetailPrice
             // 
-            this.txtbxSKU_ID.Location = new System.Drawing.Point(231, 205);
-            this.txtbxSKU_ID.Name = "txtbxSKU_ID";
-            this.txtbxSKU_ID.Size = new System.Drawing.Size(203, 26);
-            this.txtbxSKU_ID.TabIndex = 51;
+            this.lblRetailPrice.AutoSize = true;
+            this.lblRetailPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblRetailPrice.Location = new System.Drawing.Point(81, 184);
+            this.lblRetailPrice.Name = "lblRetailPrice";
+            this.lblRetailPrice.Size = new System.Drawing.Size(97, 20);
+            this.lblRetailPrice.TabIndex = 47;
+            this.lblRetailPrice.Text = "Retail Price :";
             // 
-            // txtbxName
+            // lblQuantity
             // 
-            this.txtbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtbxName.Location = new System.Drawing.Point(231, 153);
-            this.txtbxName.Name = "txtbxName";
-            this.txtbxName.Size = new System.Drawing.Size(203, 26);
-            this.txtbxName.TabIndex = 49;
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblQuantity.Location = new System.Drawing.Point(81, 135);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(76, 20);
+            this.lblQuantity.TabIndex = 46;
+            this.lblQuantity.Text = "Quantity :";
             // 
-            // lblWeight
+            // lblCostPrice
             // 
-            this.lblWeight.AutoSize = true;
-            this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblWeight.Location = new System.Drawing.Point(81, 257);
-            this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(67, 20);
-            this.lblWeight.TabIndex = 47;
-            this.lblWeight.Text = "Weight :";
+            this.lblCostPrice.AutoSize = true;
+            this.lblCostPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblCostPrice.Location = new System.Drawing.Point(81, 233);
+            this.lblCostPrice.Name = "lblCostPrice";
+            this.lblCostPrice.Size = new System.Drawing.Size(89, 20);
+            this.lblCostPrice.TabIndex = 48;
+            this.lblCostPrice.Text = "Cost Price :";
             // 
-            // lblSKU_Number
+            // lblExpiryDate
             // 
-            this.lblSKU_Number.AutoSize = true;
-            this.lblSKU_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblSKU_Number.Location = new System.Drawing.Point(81, 208);
-            this.lblSKU_Number.Name = "lblSKU_Number";
-            this.lblSKU_Number.Size = new System.Drawing.Size(102, 20);
-            this.lblSKU_Number.TabIndex = 46;
-            this.lblSKU_Number.Text = "SKU Number";
-            // 
-            // lblVolume
-            // 
-            this.lblVolume.AutoSize = true;
-            this.lblVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblVolume.Location = new System.Drawing.Point(81, 306);
-            this.lblVolume.Name = "lblVolume";
-            this.lblVolume.Size = new System.Drawing.Size(67, 20);
-            this.lblVolume.TabIndex = 48;
-            this.lblVolume.Text = "Volume:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblName.Location = new System.Drawing.Point(81, 159);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(59, 20);
-            this.lblName.TabIndex = 45;
-            this.lblName.Text = "Name :";
-            // 
-            // lblSensitivity_Type
-            // 
-            this.lblSensitivity_Type.AutoSize = true;
-            this.lblSensitivity_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblSensitivity_Type.Location = new System.Drawing.Point(490, 211);
-            this.lblSensitivity_Type.Name = "lblSensitivity_Type";
-            this.lblSensitivity_Type.Size = new System.Drawing.Size(121, 20);
-            this.lblSensitivity_Type.TabIndex = 57;
-            this.lblSensitivity_Type.Text = "Sensitivity Type:";
-            // 
-            // cmbxManufacture
-            // 
-            this.cmbxManufacture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxManufacture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbxManufacture.FormattingEnabled = true;
-            this.cmbxManufacture.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
-            this.cmbxManufacture.Location = new System.Drawing.Point(643, 156);
-            this.cmbxManufacture.Name = "cmbxManufacture";
-            this.cmbxManufacture.Size = new System.Drawing.Size(203, 28);
-            this.cmbxManufacture.Sorted = true;
-            this.cmbxManufacture.TabIndex = 59;
+            this.lblExpiryDate.AutoSize = true;
+            this.lblExpiryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblExpiryDate.Location = new System.Drawing.Point(475, 138);
+            this.lblExpiryDate.Name = "lblExpiryDate";
+            this.lblExpiryDate.Size = new System.Drawing.Size(98, 20);
+            this.lblExpiryDate.TabIndex = 57;
+            this.lblExpiryDate.Text = "Expiry Date :";
             // 
             // btnAddProduct
             // 
@@ -295,6 +420,7 @@
             this.btnClear.TabIndex = 63;
             this.btnClear.Text = "Clear All";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnClose
             // 
@@ -308,13 +434,13 @@
             this.btnClose.TabIndex = 62;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // lblSignUp
             // 
             this.lblSignUp.AutoSize = true;
             this.lblSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignUp.Location = new System.Drawing.Point(358, 63);
+            this.lblSignUp.Location = new System.Drawing.Point(358, 17);
             this.lblSignUp.Name = "lblSignUp";
             this.lblSignUp.Size = new System.Drawing.Size(181, 39);
             this.lblSignUp.TabIndex = 44;
@@ -335,6 +461,7 @@
             this.Load += new System.EventHandler(this.frmAddStock_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,24 +469,36 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblCostPriceValid;
+        private System.Windows.Forms.Label lblRetailPriceValid;
+        private System.Windows.Forms.Label lblQuantityValid;
+        private System.Windows.Forms.Button btnAddTStock;
+        private System.Windows.Forms.DataGridView DGVStock;
+        private System.Windows.Forms.DataGridViewButtonColumn btnUpdate;
+        private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
+        private System.Windows.Forms.Label lblVendor;
+        private System.Windows.Forms.ComboBox comboBoxVendor;
+        private System.Windows.Forms.DateTimePicker DateMFG;
+        private System.Windows.Forms.Label lblDateMFG;
+        private System.Windows.Forms.DateTimePicker DateReceived;
+        private System.Windows.Forms.DateTimePicker DateExpiry;
+        private System.Windows.Forms.Label lblProuct;
+        private System.Windows.Forms.ComboBox comboBoxProduct;
+        private System.Windows.Forms.Label lblVolumeValid;
+        private System.Windows.Forms.Label lblWeightValid;
+        private System.Windows.Forms.Label lblSKUValid;
+        private System.Windows.Forms.Label lblNameValid;
         private System.Windows.Forms.Label lbl_Volume;
-        private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.ComboBox comboCategory;
-        private System.Windows.Forms.Label lblManufacture;
-        private System.Windows.Forms.ComboBox cmbxSenstivity;
+        private System.Windows.Forms.Label lblDateReceived;
         private System.Windows.Forms.Label lbl_Weight;
         private System.Windows.Forms.Label lblS_Number;
-        private System.Windows.Forms.Label lblNameSignal;
-        private System.Windows.Forms.TextBox txtbxVolume;
-        private System.Windows.Forms.TextBox txtbxWeight;
-        private System.Windows.Forms.TextBox txtbxSKU_ID;
-        private System.Windows.Forms.TextBox txtbxName;
-        private System.Windows.Forms.Label lblWeight;
-        private System.Windows.Forms.Label lblSKU_Number;
-        private System.Windows.Forms.Label lblVolume;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblSensitivity_Type;
-        private System.Windows.Forms.ComboBox cmbxManufacture;
+        private System.Windows.Forms.TextBox txtbxCostPrice;
+        private System.Windows.Forms.TextBox txtbxRetailPrice;
+        private System.Windows.Forms.TextBox txtbxQuantity;
+        private System.Windows.Forms.Label lblRetailPrice;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblCostPrice;
+        private System.Windows.Forms.Label lblExpiryDate;
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
