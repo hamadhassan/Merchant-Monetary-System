@@ -30,7 +30,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.datagvAccountDetails = new System.Windows.Forms.DataGridView();
+            this.datagvProductDetails = new System.Windows.Forms.DataGridView();
             this.btnGo = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.cmbxFiliter = new System.Windows.Forms.ComboBox();
@@ -39,11 +39,9 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.cmbxAttributes = new System.Windows.Forms.ComboBox();
             this.lblAttributes = new System.Windows.Forms.Label();
-            this.lblDesignation = new System.Windows.Forms.Label();
-            this.cmbxDesignation = new System.Windows.Forms.ComboBox();
             this.lblProductDetails = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagvAccountDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -53,7 +51,7 @@
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Controls.Add(this.datagvAccountDetails);
+            this.groupBox1.Controls.Add(this.datagvProductDetails);
             this.groupBox1.Controls.Add(this.btnGo);
             this.groupBox1.Controls.Add(this.btnClearAll);
             this.groupBox1.Controls.Add(this.cmbxFiliter);
@@ -62,8 +60,6 @@
             this.groupBox1.Controls.Add(this.lblSearch);
             this.groupBox1.Controls.Add(this.cmbxAttributes);
             this.groupBox1.Controls.Add(this.lblAttributes);
-            this.groupBox1.Controls.Add(this.lblDesignation);
-            this.groupBox1.Controls.Add(this.cmbxDesignation);
             this.groupBox1.Controls.Add(this.lblProductDetails);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -108,6 +104,7 @@
             this.btnEdit.TabIndex = 72;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnClose
             // 
@@ -135,19 +132,20 @@
             this.btnDelete.TabIndex = 70;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
-            // datagvAccountDetails
+            // datagvProductDetails
             // 
-            this.datagvAccountDetails.AllowUserToAddRows = false;
-            this.datagvAccountDetails.AllowUserToDeleteRows = false;
-            this.datagvAccountDetails.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.datagvAccountDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvAccountDetails.Location = new System.Drawing.Point(27, 133);
-            this.datagvAccountDetails.Name = "datagvAccountDetails";
-            this.datagvAccountDetails.ReadOnly = true;
-            this.datagvAccountDetails.Size = new System.Drawing.Size(881, 351);
-            this.datagvAccountDetails.TabIndex = 69;
-            this.datagvAccountDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvAccountDetails_CellContentClick);
+            this.datagvProductDetails.AllowUserToAddRows = false;
+            this.datagvProductDetails.AllowUserToDeleteRows = false;
+            this.datagvProductDetails.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.datagvProductDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagvProductDetails.Location = new System.Drawing.Point(27, 133);
+            this.datagvProductDetails.Name = "datagvProductDetails";
+            this.datagvProductDetails.ReadOnly = true;
+            this.datagvProductDetails.Size = new System.Drawing.Size(881, 351);
+            this.datagvProductDetails.TabIndex = 69;
+            this.datagvProductDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvProductDetails_CellContentClick);
             // 
             // btnGo
             // 
@@ -155,7 +153,7 @@
             this.btnGo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGo.ForeColor = System.Drawing.Color.White;
-            this.btnGo.Location = new System.Drawing.Point(818, 97);
+            this.btnGo.Location = new System.Drawing.Point(786, 84);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(90, 30);
             this.btnGo.TabIndex = 68;
@@ -168,7 +166,7 @@
             this.btnClearAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClearAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearAll.ForeColor = System.Drawing.Color.White;
-            this.btnClearAll.Location = new System.Drawing.Point(722, 97);
+            this.btnClearAll.Location = new System.Drawing.Point(690, 84);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(90, 30);
             this.btnClearAll.TabIndex = 67;
@@ -186,7 +184,7 @@
             "Decending Order",
             "Start With",
             "Contain"});
-            this.cmbxFiliter.Location = new System.Drawing.Point(766, 62);
+            this.cmbxFiliter.Location = new System.Drawing.Point(519, 84);
             this.cmbxFiliter.Name = "cmbxFiliter";
             this.cmbxFiliter.Size = new System.Drawing.Size(142, 28);
             this.cmbxFiliter.TabIndex = 66;
@@ -194,7 +192,7 @@
             // lblFiliter
             // 
             this.lblFiliter.AutoSize = true;
-            this.lblFiliter.Location = new System.Drawing.Point(718, 66);
+            this.lblFiliter.Location = new System.Drawing.Point(471, 88);
             this.lblFiliter.Name = "lblFiliter";
             this.lblFiliter.Size = new System.Drawing.Size(51, 20);
             this.lblFiliter.TabIndex = 65;
@@ -202,7 +200,7 @@
             // 
             // txtbxSearch
             // 
-            this.txtbxSearch.Location = new System.Drawing.Point(566, 63);
+            this.txtbxSearch.Location = new System.Drawing.Point(319, 85);
             this.txtbxSearch.Name = "txtbxSearch";
             this.txtbxSearch.Size = new System.Drawing.Size(142, 26);
             this.txtbxSearch.TabIndex = 64;
@@ -211,7 +209,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(502, 66);
+            this.lblSearch.Location = new System.Drawing.Point(255, 88);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(64, 20);
             this.lblSearch.TabIndex = 63;
@@ -230,7 +228,7 @@
             "Email",
             "Contact Number",
             "Home Address"});
-            this.cmbxAttributes.Location = new System.Drawing.Point(349, 62);
+            this.cmbxAttributes.Location = new System.Drawing.Point(102, 84);
             this.cmbxAttributes.Name = "cmbxAttributes";
             this.cmbxAttributes.Size = new System.Drawing.Size(142, 28);
             this.cmbxAttributes.TabIndex = 62;
@@ -238,35 +236,11 @@
             // lblAttributes
             // 
             this.lblAttributes.AutoSize = true;
-            this.lblAttributes.Location = new System.Drawing.Point(276, 66);
+            this.lblAttributes.Location = new System.Drawing.Point(29, 88);
             this.lblAttributes.Name = "lblAttributes";
             this.lblAttributes.Size = new System.Drawing.Size(74, 20);
             this.lblAttributes.TabIndex = 61;
             this.lblAttributes.Text = "Attribute:";
-            // 
-            // lblDesignation
-            // 
-            this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Location = new System.Drawing.Point(23, 66);
-            this.lblDesignation.Name = "lblDesignation";
-            this.lblDesignation.Size = new System.Drawing.Size(98, 20);
-            this.lblDesignation.TabIndex = 60;
-            this.lblDesignation.Text = "Designation:";
-            // 
-            // cmbxDesignation
-            // 
-            this.cmbxDesignation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxDesignation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbxDesignation.FormattingEnabled = true;
-            this.cmbxDesignation.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
-            this.cmbxDesignation.Location = new System.Drawing.Point(123, 62);
-            this.cmbxDesignation.Name = "cmbxDesignation";
-            this.cmbxDesignation.Size = new System.Drawing.Size(142, 28);
-            this.cmbxDesignation.TabIndex = 59;
             // 
             // lblProductDetails
             // 
@@ -293,7 +267,7 @@
             this.Text = "frmProductDetails_";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagvAccountDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,7 +280,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView datagvAccountDetails;
+        private System.Windows.Forms.DataGridView datagvProductDetails;
         private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.ComboBox cmbxFiliter;
@@ -315,8 +289,6 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ComboBox cmbxAttributes;
         private System.Windows.Forms.Label lblAttributes;
-        private System.Windows.Forms.Label lblDesignation;
-        private System.Windows.Forms.ComboBox cmbxDesignation;
         private System.Windows.Forms.Label lblProductDetails;
     }
 }

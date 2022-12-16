@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Merchant_Monetary_System.DL;
+using Merchant_Monetary_System.BL;
 
 namespace Merchant_Monetary_System.Forms.Product
 {
     public partial class frmUpdateProduct : Form
     {
-        public frmUpdateProduct()
+        BL.Product product; 
+        public frmUpdateProduct(BL.Product previous_product)
         {
             InitializeComponent();
+            product = previous_product;
         }
 
         private void frmUpdateProduct_Load(object sender, EventArgs e)

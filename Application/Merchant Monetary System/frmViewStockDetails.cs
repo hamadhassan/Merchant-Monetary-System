@@ -25,19 +25,7 @@ namespace Merchant_Monetary_System
         {
             btnLoadRecords.Visible = false;
             datagvStockDetails.Visible = true;
-            Stock s = new Stock("Cake", 12, 13, 14, DateTime.Parse("12/12/2022"), DateTime.Parse("12 / 12 / 2022"), DateTime.Parse("12 / 12 / 2022"), "Kabir");
-            StockDL.addStockIntoList(StockDL.StockList, s);
-            datagvStockDetails.DataSource = StockDL.StockList;
-            DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
-            Update.HeaderText = "Update";
-            Update.Text = "Update";
-            Update.UseColumnTextForButtonValue = true;
-            DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
-            Delete.HeaderText = "Delete";
-            Delete.Text = "Delete";
-            Delete.UseColumnTextForButtonValue = true;
-            datagvStockDetails.Columns.Add(Update);
-            datagvStockDetails.Columns.Add(Delete);
+            DataBind();
         }
         private void DataBind()
         {

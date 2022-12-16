@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Merchant_Monetary_System.DL
 {
@@ -94,31 +95,43 @@ namespace Merchant_Monetary_System.DL
         }
         public static bool loadRecordFromFile(string path)
         {
-            clearList();
-            StreamReader fileVariable = new StreamReader(path);
-            string record;
-            if (File.Exists(path))
+            try
             {
-                while ((record = fileVariable.ReadLine()) != null)
+                clearList();
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                if (File.Exists(path))
                 {
-                    string[] spilitedRecord = record.Split(',');
-                    string Name = spilitedRecord[0];
-                    int SKU_Number = Convert.ToInt16(spilitedRecord[1]);
-                    double Weight = Convert.ToDouble(spilitedRecord[2]);
-                    double Volume = Convert.ToDouble(spilitedRecord[3]); ;
-                    string SensitivityType = spilitedRecord[4];
-                    string Category = spilitedRecord[5];
-                    string Manufacturer = spilitedRecord[6];
-                    Product product = new Product( Name, SKU_Number, Weight , Volume, Manufacturer, Category,SensitivityType);
-                    ProductList.Add(product);
+                    while ((record = fileVariable.ReadLine()) != null)
+                    {
+                        string[] spilitedRecord = record.Split(',');
+                        string Name = spilitedRecord[0];
+                        int SKU_Number = Convert.ToInt16(spilitedRecord[1]);
+                        double Weight = Convert.ToDouble(spilitedRecord[2]);
+                        double Volume = Convert.ToDouble(spilitedRecord[3]); ;
+                        string SensitivityType = spilitedRecord[4];
+                        string Category = spilitedRecord[5];
+                        string Manufacturer = spilitedRecord[6];
+                        Product product = new Product(Name, SKU_Number, Weight, Volume, Manufacturer, Category, SensitivityType);
+                        ProductList.Add(product);
+                    }
+                    fileVariable.Close();
+                    return true;
                 }
-                fileVariable.Close();
-                return true;
+                else
+                {
+                    return false;
+                }
             }
-            else
-            {
+            catch (Exception exp) { MessageBox.Show(exp.Message);
                 return false;
             }
+
+        }
+
+        private static void cath()
+        {
+            throw new NotImplementedException();
         }
 
         public static Product returnProduct(string productName)

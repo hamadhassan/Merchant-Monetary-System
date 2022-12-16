@@ -336,3 +336,4 @@ D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\o
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.CopyComplete
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.exe
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.pdb
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewStockDetails.resources

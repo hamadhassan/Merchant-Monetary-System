@@ -19,9 +19,13 @@ namespace Merchant_Monetary_System
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddStock());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new frmProductDetails_());
+            }
+            catch (Exception exp) { MessageBox.Show(exp.Message); }
 
         }
     }
