@@ -13,13 +13,21 @@ namespace Merchant_Monetary_System
         private static string company = "Company.txt";
         private static string category = "Category.csv";
         private static string products = "Products.csv";
+<<<<<<< Updated upstream
         private static string vendors = "Vendors.csv";
+=======
+        private static string stock = "Stocks.csv";
+>>>>>>> Stashed changes
 
         public static string Users { get => users; set => users = value; }
         public static string Warehouse { get => warehouse; set => warehouse = value; }
         public static string Company { get => company; set => company = value; }
         public static string Category { get => category; set => category = value; }
         public static string Products { get => products; set => products = value; }
+<<<<<<< Updated upstream
         public static string Vendors { get => vendors; set => vendors = value; }
+=======
+        public static string Stock { get => stock; set => stock = value; }
+>>>>>>> Stashed changes
     }
 }

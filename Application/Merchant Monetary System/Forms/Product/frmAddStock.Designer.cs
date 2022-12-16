@@ -34,8 +34,6 @@
             this.lblQuantityValid = new System.Windows.Forms.Label();
             this.btnAddTStock = new System.Windows.Forms.Button();
             this.DGVStock = new System.Windows.Forms.DataGridView();
-            this.btnUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lblVendor = new System.Windows.Forms.Label();
             this.comboBoxVendor = new System.Windows.Forms.ComboBox();
             this.DateMFG = new System.Windows.Forms.DateTimePicker();
@@ -63,12 +61,14 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblSignUp = new System.Windows.Forms.Label();
+            this.lblRowSignal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStock)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblRowSignal);
             this.groupBox1.Controls.Add(this.lblCostPriceValid);
             this.groupBox1.Controls.Add(this.lblRetailPriceValid);
             this.groupBox1.Controls.Add(this.lblQuantityValid);
@@ -151,29 +151,15 @@
             // 
             this.DGVStock.AllowUserToAddRows = false;
             this.DGVStock.AllowUserToDeleteRows = false;
+            this.DGVStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnUpdate,
-            this.btnDelete});
             this.DGVStock.Location = new System.Drawing.Point(85, 300);
+            this.DGVStock.MultiSelect = false;
             this.DGVStock.Name = "DGVStock";
-            this.DGVStock.ReadOnly = true;
+            this.DGVStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVStock.Size = new System.Drawing.Size(745, 140);
             this.DGVStock.TabIndex = 77;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.HeaderText = "Update";
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.ReadOnly = true;
-            this.btnUpdate.UseColumnTextForButtonValue = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.HeaderText = "Delete";
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.ReadOnly = true;
-            this.btnDelete.UseColumnTextForButtonValue = true;
+            this.DGVStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVStock_CellContentClick);
             // 
             // lblVendor
             // 
@@ -407,6 +393,7 @@
             this.btnAddProduct.TabIndex = 64;
             this.btnAddProduct.Text = "Add Stock";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btnClear
             // 
@@ -446,6 +433,15 @@
             this.lblSignUp.TabIndex = 44;
             this.lblSignUp.Text = "Add Stock";
             // 
+            // lblRowSignal
+            // 
+            this.lblRowSignal.AutoSize = true;
+            this.lblRowSignal.ForeColor = System.Drawing.Color.Red;
+            this.lblRowSignal.Location = new System.Drawing.Point(83, 277);
+            this.lblRowSignal.Name = "lblRowSignal";
+            this.lblRowSignal.Size = new System.Drawing.Size(0, 20);
+            this.lblRowSignal.TabIndex = 82;
+            // 
             // frmAddStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -474,8 +470,6 @@
         private System.Windows.Forms.Label lblQuantityValid;
         private System.Windows.Forms.Button btnAddTStock;
         private System.Windows.Forms.DataGridView DGVStock;
-        private System.Windows.Forms.DataGridViewButtonColumn btnUpdate;
-        private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
         private System.Windows.Forms.Label lblVendor;
         private System.Windows.Forms.ComboBox comboBoxVendor;
         private System.Windows.Forms.DateTimePicker DateMFG;
@@ -503,5 +497,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblSignUp;
+        private System.Windows.Forms.Label lblRowSignal;
     }
 }

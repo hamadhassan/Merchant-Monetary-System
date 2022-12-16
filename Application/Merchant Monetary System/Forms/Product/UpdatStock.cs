@@ -27,8 +27,8 @@ namespace Merchant_Monetary_System.Forms.Product
 
         private void UpdatStock_Load(object sender, EventArgs e)
         {
-            comboBoxProduct.SelectedIndex = comboBoxProduct.Items.IndexOf(stock.Product.Name);
-            comboBoxVendor.SelectedIndex = comboBoxVendor.Items.IndexOf(stock.Vendor.VendorName);
+            comboBoxProduct.SelectedIndex = comboBoxProduct.Items.IndexOf(stock.Product);
+            comboBoxVendor.SelectedIndex = comboBoxVendor.Items.IndexOf(stock.Vendor);
             txtbxQuantity.Text = stock.Quantity.ToString();
             txtbxRetailPrice.Text = stock.RetailPrice.ToString();
             txtbxCostPrice.Text = stock.CostPrice.ToString();
@@ -99,14 +99,14 @@ namespace Merchant_Monetary_System.Forms.Product
             if(txtbxQuantity.Text != string.Empty && txtbxCostPrice.Text != string.Empty && txtbxRetailPrice.Text != string.Empty
                 && comboBoxProduct.Text != "" && comboBoxVendor.Text != "" && !isQuantity && !isCostPrice && !isRetailPrice)
             {
-                stock.Product = ProductDL.returnProduct(comboBoxProduct.Text);
+                stock.Product = comboBoxProduct.Text;
                 stock.Quantity = int.Parse(txtbxQuantity.Text);
                 stock.CostPrice = double.Parse(txtbxCostPrice.Text);
                 stock.RetailPrice = double.Parse(txtbxRetailPrice.Text);
                 stock.ManufacturingDate = DateTime.Parse(DateMFG.ToString());
                 stock.ExpiryDate = DateTime.Parse(DateExpiry.ToString());
                 stock.RecievedDate = DateTime.Parse(DateReceived.ToString());
-                stock.Vendor = VendorDL.returnVendor(comboBoxVendor.Text);
+                stock.Vendor = comboBoxVendor.Text;
                 MessageBox.Show("Stock Updated Successfully", "Information Message", MessageBoxButtons.OK);
             }
         }

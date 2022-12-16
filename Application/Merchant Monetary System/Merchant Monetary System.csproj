@@ -99,6 +99,12 @@
     <Compile Include="Forms\Product\UpdatStock.Designer.cs">
       <DependentUpon>UpdatStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmViewStockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewStockDetails.Designer.cs">
+      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmADDvendor.resx">
       <DependentUpon>frmADDvendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewStockDetails.resx">
+      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route\frmRoutes.resx">
       <DependentUpon>frmRoutes.cs</DependentUpon>

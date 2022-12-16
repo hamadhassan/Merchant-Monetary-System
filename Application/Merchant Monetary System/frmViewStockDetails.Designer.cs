@@ -33,7 +33,7 @@
             this.lblDatagvSignal = new System.Windows.Forms.Label();
             this.btnLoadRecords = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.datagvAccountDetails = new System.Windows.Forms.DataGridView();
+            this.datagvStockDetails = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblStockDetails = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,7 +53,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.gbx.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagvAccountDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvStockDetails)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -112,12 +112,13 @@
             this.btnLoadRecords.Text = "Load Records";
             this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadRecords.UseVisualStyleBackColor = false;
+            this.btnLoadRecords.Click += new System.EventHandler(this.btnLoadRecords_Click);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.datagvAccountDetails, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.datagvStockDetails, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 2);
@@ -135,19 +136,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(918, 509);
             this.tableLayoutPanel2.TabIndex = 58;
             // 
-            // datagvAccountDetails
+            // datagvStockDetails
             // 
-            this.datagvAccountDetails.AllowUserToAddRows = false;
-            this.datagvAccountDetails.AllowUserToDeleteRows = false;
-            this.datagvAccountDetails.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.datagvAccountDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datagvAccountDetails.Location = new System.Drawing.Point(3, 127);
-            this.datagvAccountDetails.Name = "datagvAccountDetails";
-            this.datagvAccountDetails.ReadOnly = true;
-            this.datagvAccountDetails.Size = new System.Drawing.Size(912, 324);
-            this.datagvAccountDetails.TabIndex = 52;
-            this.datagvAccountDetails.Visible = false;
+            this.datagvStockDetails.AllowUserToAddRows = false;
+            this.datagvStockDetails.AllowUserToDeleteRows = false;
+            this.datagvStockDetails.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.datagvStockDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagvStockDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datagvStockDetails.Location = new System.Drawing.Point(3, 127);
+            this.datagvStockDetails.Name = "datagvStockDetails";
+            this.datagvStockDetails.ReadOnly = true;
+            this.datagvStockDetails.Size = new System.Drawing.Size(912, 324);
+            this.datagvStockDetails.TabIndex = 52;
+            this.datagvStockDetails.Visible = false;
             // 
             // tableLayoutPanel3
             // 
@@ -381,7 +382,7 @@
             this.gbx.ResumeLayout(false);
             this.gbx.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.datagvAccountDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagvStockDetails)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -399,7 +400,7 @@
         private System.Windows.Forms.Label lblDatagvSignal;
         private System.Windows.Forms.Button btnLoadRecords;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.DataGridView datagvAccountDetails;
+        private System.Windows.Forms.DataGridView datagvStockDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lblStockDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
