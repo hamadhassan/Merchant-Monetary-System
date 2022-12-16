@@ -69,6 +69,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -110,6 +111,7 @@
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
             this.signUpToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
@@ -117,6 +119,7 @@
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
             this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
@@ -124,6 +127,7 @@
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -144,7 +148,7 @@
             // addAddToolStripMenuItem
             // 
             this.addAddToolStripMenuItem.Name = "addAddToolStripMenuItem";
-            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.addAddToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.addAddToolStripMenuItem.Text = "Add Add";
             // 
             // productToolStripMenuItem
@@ -155,9 +159,11 @@
             // 
             // emailToolStripMenuItem
             // 
+            this.emailToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem});
             this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
-            this.emailToolStripMenuItem.Text = "Email";
+            this.emailToolStripMenuItem.Size = new System.Drawing.Size(77, 23);
+            this.emailToolStripMenuItem.Text = "Category";
             // 
             // warehouseMangerToolStripMenuItem
             // 
@@ -514,6 +520,12 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(197, 24);
             this.toolStripMenuItem1.Text = "Update Companay ";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // frmCEODashboard
             // 
@@ -585,5 +597,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateVendorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
     }
 }

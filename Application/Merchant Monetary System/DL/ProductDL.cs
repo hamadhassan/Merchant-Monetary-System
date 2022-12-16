@@ -39,7 +39,7 @@ namespace Merchant_Monetary_System.DL
             }
             return false;
         }
-        public static bool itProductMatch(string Name, int SKU_Number)
+        public static bool isProductMatch(string Name, int SKU_Number)
         {// the product  data matched with the database result
             foreach (Product product in ProductList)
             {
@@ -49,6 +49,17 @@ namespace Merchant_Monetary_System.DL
                 }
             }
             return false;
+        }
+        public static Product FoundProduct(string Name)
+        {// the product  data matched with the database result
+            foreach (Product product in ProductList)
+            {
+                if (Name == product.Name )
+                {
+                    return product;
+                }
+            }
+            return null;
         }
 
         public static bool deleteRecord(Product deleteProduct)
@@ -64,14 +75,7 @@ namespace Merchant_Monetary_System.DL
             return false;
         }
 
-        public static void storeRecordIntoFile(Product record, string path)
-        {
-            StreamWriter file = new StreamWriter(path, true);
-            file.WriteLine(record.Name + "," + record.SKU_Number + "," + record.Weight + "," + record.Volume
-                 + "," + record.SensitivityType + "," + record.Category + "," + record.Manufacturer );
-            file.Flush();
-            file.Close();
-        }
+
         public static void storeAllRecordIntoFile(string path)
         {
             StreamWriter file = new StreamWriter(path);
@@ -105,8 +109,8 @@ namespace Merchant_Monetary_System.DL
                     string SensitivityType = spilitedRecord[4];
                     string Category = spilitedRecord[5];
                     string Manufacturer = spilitedRecord[6];
-                  //  Product product = new Product( Name, SKU_Number,float.(Weight) , Volume, Manufacturer, SensitivityType);
-                   // ProductList.Add(product);
+                    Product product = new Product( Name, SKU_Number, Weight , Volume, Manufacturer, Category,SensitivityType);
+                    ProductList.Add(product);
                 }
                 fileVariable.Close();
                 return true;

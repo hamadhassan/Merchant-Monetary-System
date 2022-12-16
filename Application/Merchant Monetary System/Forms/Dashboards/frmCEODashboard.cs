@@ -162,9 +162,14 @@ namespace Merchant_Monetary_System
 
         }
 
+
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             loadform(new frmAddCompnay(true));
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmViewCategory());
         }
     }
 }
