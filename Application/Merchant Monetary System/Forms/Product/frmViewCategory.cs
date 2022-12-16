@@ -41,5 +41,10 @@ namespace Merchant_Monetary_System.Forms.Product
             datagvCategory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             datagvCategory.DataSource = categoryDL.CategoryList;
         }
+
+        private void datagvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

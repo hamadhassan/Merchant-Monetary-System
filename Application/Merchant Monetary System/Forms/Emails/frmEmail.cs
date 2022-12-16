@@ -13,8 +13,9 @@ namespace Merchant_Monetary_System.Forms.Emails
     public partial class frmEmail : Form
     {
         public frmEmail()
-        {
+        {   
             InitializeComponent();
+            gbx.Location = new Point(10, 10);
         }
     }
 }

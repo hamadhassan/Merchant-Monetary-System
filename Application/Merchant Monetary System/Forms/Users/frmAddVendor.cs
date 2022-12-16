@@ -16,5 +16,10 @@ namespace Merchant_Monetary_System
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

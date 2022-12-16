@@ -163,6 +163,7 @@
             this.datagvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagvCategory.Size = new System.Drawing.Size(910, 234);
             this.datagvCategory.TabIndex = 0;
+            this.datagvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvCategory_CellContentClick);
             // 
             // btnUpdate
             // 
