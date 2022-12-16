@@ -157,5 +157,10 @@ namespace Merchant_Monetary_System
         {
 
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
