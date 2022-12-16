@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DGVStock = new System.Windows.Forms.DataGridView();
+            this.lblRowSignal = new System.Windows.Forms.Label();
             this.lblCostPriceValid = new System.Windows.Forms.Label();
             this.lblRetailPriceValid = new System.Windows.Forms.Label();
             this.lblQuantityValid = new System.Windows.Forms.Label();
             this.btnAddTStock = new System.Windows.Forms.Button();
-            this.DGVStock = new System.Windows.Forms.DataGridView();
             this.lblVendor = new System.Windows.Forms.Label();
             this.comboBoxVendor = new System.Windows.Forms.ComboBox();
             this.DateMFG = new System.Windows.Forms.DateTimePicker();
@@ -61,19 +62,22 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.lblRowSignal = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalAmount = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStock)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblTotalAmount);
+            this.groupBox1.Controls.Add(this.lblTotal);
+            this.groupBox1.Controls.Add(this.DGVStock);
             this.groupBox1.Controls.Add(this.lblRowSignal);
             this.groupBox1.Controls.Add(this.lblCostPriceValid);
             this.groupBox1.Controls.Add(this.lblRetailPriceValid);
             this.groupBox1.Controls.Add(this.lblQuantityValid);
             this.groupBox1.Controls.Add(this.btnAddTStock);
-            this.groupBox1.Controls.Add(this.DGVStock);
             this.groupBox1.Controls.Add(this.lblVendor);
             this.groupBox1.Controls.Add(this.comboBoxVendor);
             this.groupBox1.Controls.Add(this.DateMFG);
@@ -107,6 +111,28 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // DGVStock
+            // 
+            this.DGVStock.AllowUserToAddRows = false;
+            this.DGVStock.AllowUserToDeleteRows = false;
+            this.DGVStock.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DGVStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVStock.Location = new System.Drawing.Point(86, 300);
+            this.DGVStock.Name = "DGVStock";
+            this.DGVStock.ReadOnly = true;
+            this.DGVStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVStock.Size = new System.Drawing.Size(668, 138);
+            this.DGVStock.TabIndex = 83;
+            // 
+            // lblRowSignal
+            // 
+            this.lblRowSignal.AutoSize = true;
+            this.lblRowSignal.ForeColor = System.Drawing.Color.Red;
+            this.lblRowSignal.Location = new System.Drawing.Point(83, 277);
+            this.lblRowSignal.Name = "lblRowSignal";
+            this.lblRowSignal.Size = new System.Drawing.Size(0, 20);
+            this.lblRowSignal.TabIndex = 82;
+            // 
             // lblCostPriceValid
             // 
             this.lblCostPriceValid.AutoSize = true;
@@ -139,27 +165,13 @@
             this.btnAddTStock.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAddTStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTStock.ForeColor = System.Drawing.Color.White;
-            this.btnAddTStock.Location = new System.Drawing.Point(755, 266);
+            this.btnAddTStock.Location = new System.Drawing.Point(760, 300);
             this.btnAddTStock.Name = "btnAddTStock";
             this.btnAddTStock.Size = new System.Drawing.Size(75, 28);
             this.btnAddTStock.TabIndex = 78;
             this.btnAddTStock.Text = "Add";
             this.btnAddTStock.UseVisualStyleBackColor = false;
             this.btnAddTStock.Click += new System.EventHandler(this.btnAddTStock_Click);
-            // 
-            // DGVStock
-            // 
-            this.DGVStock.AllowUserToAddRows = false;
-            this.DGVStock.AllowUserToDeleteRows = false;
-            this.DGVStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DGVStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVStock.Location = new System.Drawing.Point(85, 300);
-            this.DGVStock.MultiSelect = false;
-            this.DGVStock.Name = "DGVStock";
-            this.DGVStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVStock.Size = new System.Drawing.Size(745, 140);
-            this.DGVStock.TabIndex = 77;
-            this.DGVStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVStock_CellContentClick);
             // 
             // lblVendor
             // 
@@ -433,14 +445,23 @@
             this.lblSignUp.TabIndex = 44;
             this.lblSignUp.Text = "Add Stock";
             // 
-            // lblRowSignal
+            // lblTotal
             // 
-            this.lblRowSignal.AutoSize = true;
-            this.lblRowSignal.ForeColor = System.Drawing.Color.Red;
-            this.lblRowSignal.Location = new System.Drawing.Point(83, 277);
-            this.lblRowSignal.Name = "lblRowSignal";
-            this.lblRowSignal.Size = new System.Drawing.Size(0, 20);
-            this.lblRowSignal.TabIndex = 82;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(774, 355);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(44, 20);
+            this.lblTotal.TabIndex = 84;
+            this.lblTotal.Text = "Total";
+            // 
+            // lblTotalAmount
+            // 
+            this.lblTotalAmount.AutoSize = true;
+            this.lblTotalAmount.Location = new System.Drawing.Point(774, 388);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(18, 20);
+            this.lblTotalAmount.TabIndex = 85;
+            this.lblTotalAmount.Text = "0";
             // 
             // frmAddStock
             // 
@@ -469,7 +490,6 @@
         private System.Windows.Forms.Label lblRetailPriceValid;
         private System.Windows.Forms.Label lblQuantityValid;
         private System.Windows.Forms.Button btnAddTStock;
-        private System.Windows.Forms.DataGridView DGVStock;
         private System.Windows.Forms.Label lblVendor;
         private System.Windows.Forms.ComboBox comboBoxVendor;
         private System.Windows.Forms.DateTimePicker DateMFG;
@@ -498,5 +518,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblSignUp;
         private System.Windows.Forms.Label lblRowSignal;
+        private System.Windows.Forms.DataGridView DGVStock;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblTotalAmount;
     }
 }

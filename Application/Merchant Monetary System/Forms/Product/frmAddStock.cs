@@ -201,5 +201,10 @@ namespace Merchant_Monetary_System
             }
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

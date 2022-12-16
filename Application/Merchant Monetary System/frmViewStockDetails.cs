@@ -41,6 +41,10 @@ namespace Merchant_Monetary_System
         }
         private void DataBind()
         {
+<<<<<<< Updated upstream
+=======
+            datagvStockDetails.Columns.Clear();
+>>>>>>> Stashed changes
             datagvStockDetails.DataSource = null;
             datagvStockDetails.DataSource = StockDL.StockList;
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
@@ -102,6 +106,31 @@ namespace Merchant_Monetary_System
                     StockDL.deleteStock(StockDL.StockList, S);
                     MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataBind();
+<<<<<<< Updated upstream
+=======
+                    StockDL.StoreDataIntoFile(FilePath.Stock);
+
+                }
+            }
+            else
+            {
+                if (StockDL.StockList.Count != 0)
+                    lblRowSignal.Text = "Select a row from the list";
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (datagvStockDetails.SelectedRows.Count == 1)
+            {
+                Stock S = (Stock)datagvStockDetails.CurrentRow.DataBoundItem;
+                if (S != null)
+                {
+                    Form f = new UpdatStock(S);
+                    f.ShowDialog();
+                    DataBind();
+                    StockDL.StoreDataIntoFile(FilePath.Stock);
+>>>>>>> Stashed changes
                 }
             }
             else

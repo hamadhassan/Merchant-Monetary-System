@@ -218,13 +218,12 @@
             this.cmbxAttributes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxAttributes.FormattingEnabled = true;
             this.cmbxAttributes.Items.AddRange(new object[] {
-            "Name",
-            "Username",
-            "CNIC Number",
-            "Gender",
-            "Email",
-            "Contact Number",
-            "Home Address"});
+            "Product Name",
+            "Quantity",
+            "Manufacturing Date",
+            "Expiry Date",
+            "Receiving Date",
+            "Vendor"});
             this.cmbxAttributes.Location = new System.Drawing.Point(341, 3);
             this.cmbxAttributes.Name = "cmbxAttributes";
             this.cmbxAttributes.Size = new System.Drawing.Size(140, 28);
@@ -344,6 +343,7 @@
             this.btnEdit.TabIndex = 55;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 

@@ -103,11 +103,16 @@ namespace Merchant_Monetary_System.Forms.Product
                 stock.Quantity = int.Parse(txtbxQuantity.Text);
                 stock.CostPrice = double.Parse(txtbxCostPrice.Text);
                 stock.RetailPrice = double.Parse(txtbxRetailPrice.Text);
-                stock.ManufacturingDate = DateTime.Parse(DateMFG.ToString());
-                stock.ExpiryDate = DateTime.Parse(DateExpiry.ToString());
-                stock.RecievedDate = DateTime.Parse(DateReceived.ToString());
+                stock.ManufacturingDate = DateTime.Parse(DateMFG.Text);
+                stock.ExpiryDate = DateTime.Parse(DateExpiry.Text);
+                stock.RecievedDate = DateTime.Parse(DateReceived.Text);
                 stock.Vendor = comboBoxVendor.Text;
                 MessageBox.Show("Stock Updated Successfully", "Information Message", MessageBoxButtons.OK);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Fill all fields correctly", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
