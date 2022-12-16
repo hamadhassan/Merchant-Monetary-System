@@ -108,25 +108,20 @@ namespace Merchant_Monetary_System
         {
             {
                 int i;
-                if (txtbxSKU_ID.Text == string.Empty)
+                if (txtbxWeight.Text == string.Empty)
                 {// check is empty
-                    lblS_Number.Text = "Enter the SKU number";
-                    isSKU_Number = true;
+                    lbl_Weight.Text = "Enter the Weight";
+                    isWeight = true;
                 }
-                else if (!int.TryParse(txtbxSKU_ID.Text, out i))
-                {//Check isalphabetic
-                    lblS_Number.Text = "Allowed characters: 0-9";
-                    isSKU_Number = true;
-                }
-                else if (txtbxSKU_ID.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+                else if (txtbxWeight.Text.Any(ch => !char.IsDigit(ch)))
                 {//check isSpecialCharactor
-                    lblS_Number.Text = "Allowed characters: 0-9";
-                    isSKU_Number = true;
+                    lbl_Weight.Text = "Allowed characters: 0-9";
+                    isWeight = true;
                 }
                 else
                 {//ready for storage
-                    lblS_Number.Text = " ";
-                    isSKU_Number = false;
+                    lbl_Weight.Text = " ";
+                    isWeight = false;
                 }
             }
         }
@@ -135,25 +130,25 @@ namespace Merchant_Monetary_System
         {
             {
                 int i;
-                if (txtbxSKU_ID.Text == string.Empty)
+                if (txtbxVolume.Text == string.Empty)
                 {// check is empty
-                    lblS_Number.Text = "Enter the SKU number";
-                    isSKU_Number = true;
+                    lbl_Volume.Text = "Enter the Volume";
+                    isVolume = true;
                 }
-                else if (!int.TryParse(txtbxSKU_ID.Text, out i))
-                {//Check isalphabetic
-                    lblS_Number.Text = "Allowed characters: 0-9";
-                    isSKU_Number = true;
-                }
-                else if (txtbxSKU_ID.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+                //else if (!int.TryParse(txtbxSKU_ID.Text, out i))
+                //{//Check isalphabetic
+                //    lbl_Volume.Text = "Allowed characters: 0-9";
+                //    isVolume = true;
+                //}
+                else if (txtbxVolume.Text.Any(ch => !char.IsDigit(ch)))
                 {//check isSpecialCharactor
-                    lblS_Number.Text = "Allowed characters: 0-9";
-                    isSKU_Number = true;
+                    lbl_Volume.Text = "Allowed characters: 0-9";
+                    isVolume = true;
                 }
                 else
                 {//ready for storage
-                    lblS_Number.Text = " ";
-                    isSKU_Number = false;
+                    lbl_Volume.Text = " ";
+                    isVolume = false;
                 }
             }
         }
@@ -162,7 +157,7 @@ namespace Merchant_Monetary_System
         {
             try
             {
-                if (isName == true && isSKU_Number == true && isWeight == true && isVolume == true && cmbxCategory.Text != null && cmbxManufacture.Text != null && cmbxSenstivity.Text != null)
+                if (!isName && !isSKU_Number && !isWeight && !isVolume && cmbxCategory.Text != "" && cmbxManufacture.Text != "" && cmbxSenstivity.Text != "")
                 {
                     string name = txtbxName.Text;
                     int sku_number = Convert.ToInt16(txtbxSKU_ID.Text);
@@ -171,24 +166,21 @@ namespace Merchant_Monetary_System
                     string manufacturer = cmbxManufacture.Text;
                     string category = cmbxCategory.Text;
                     string sensitivity = cmbxSenstivity.Text;
-                    Product product = null;
-
-                    product = new Product(name, sku_number, weight, Volume, manufacturer, sensitivity, category);
+                    Product product = new Product(name, sku_number, weight, Volume, manufacturer, sensitivity, category);
+                    ProductDL.ProductList1.Add(product);
                     Product.storeRecordIntoFile(product, FilePath.Products);
                     MessageBox.Show("Product successfully added");
-
                 }
                 else
                 {
                     MessageBox.Show("Product not added");
                 }
             }
-            catch
+            catch (Exception exp)
             {
-
+                MessageBox.Show(exp.Message);
             }
-          
-            
+
 
         }
     }
