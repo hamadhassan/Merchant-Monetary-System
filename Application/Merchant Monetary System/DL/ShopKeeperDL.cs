@@ -55,7 +55,9 @@ namespace Merchant_Monetary_System.DL
                     string shopArea = eachShop[3];
                     string shopState = eachShop[4];
                     Shop shop = new Shop(id, shopName, shopCity, shopArea, shopState);
+                    shopDL.addDataIntoList(shop);
                     shopkeeper.ShopList.Add(shop);
+                    ShopKeeperDL.addShopkeeperIntoList(shopkeeper);
                 }
             }
             file.Close();
@@ -85,5 +87,17 @@ namespace Merchant_Monetary_System.DL
             return false;
         }
 
+        public static bool deleteShopkeeper(Shopkeeper shopkeeper)
+        {
+            foreach(Shopkeeper shopk in shopkeeperList)
+            {
+                if(shopkeeper == shopk)
+                {
+                    shopkeeperList.Remove(shopk);
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

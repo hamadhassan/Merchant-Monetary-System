@@ -9,6 +9,7 @@ using Merchant_Monetary_System.Forms.Dashboards;
 using Merchant_Monetary_System.Forms.Payment;
 using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System.Forms.Emails;
+using Merchant_Monetary_System.DL;
 
 namespace Merchant_Monetary_System
 {
@@ -20,11 +21,13 @@ namespace Merchant_Monetary_System
         [STAThread]
         static void Main()
         {
+            ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
+
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmCEODashboard());
+                Application.Run(new ViewShopkeeperDetails());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 

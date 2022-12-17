@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Merchant_Monetary_System.BL
 {
@@ -34,11 +36,9 @@ namespace Merchant_Monetary_System.BL
             this.Manufacturer = Manufacturer;
             this.Category = Category;
             this.sensitivityType = SensitivityType;
-
         }
         public Product()
         {
-
         }
         public static void storeRecordIntoFile(Product record, string path)
         {
@@ -48,6 +48,5 @@ namespace Merchant_Monetary_System.BL
             file.Flush();
             file.Close();
         }
-
     }
 }
