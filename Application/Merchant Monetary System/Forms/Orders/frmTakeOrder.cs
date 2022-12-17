@@ -49,16 +49,26 @@ namespace Merchant_Monetary_System
                 Product S = (Product)datagvProductDetails.CurrentRow.DataBoundItem;
                 if (index == 7)
                 {
-                    // ADDD Product to Temprory Order List
-
-                    //ProductDL.storeAllRecordIntoFile(FilePath.Products);
+                    Form form = new frmUpdateProduct(S);
+                    form.ShowDialog();
+                    ProductDL.storeAllRecordIntoFile(FilePath.Products);
                 }
-                
+                else if (index == 8)
+                {
+                    bool done = ProductDL.deleteRecord(S);
+                    if (done)
+                    {
+                        MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
             else
             {
-                if (ProductDL
-                    .ProductList1.Count != 0)
+                if (ProductDL.ProductList1.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
@@ -66,26 +76,6 @@ namespace Merchant_Monetary_System
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
 
-        }
-        private void DataBind()
-        {
-            try
-            {
-                datagvProductDetails.Columns.Clear();
-
-                datagvProductDetails.DataSource = null;
-                ProductDL.loadRecordFromFile(FilePath.Products);
-                datagvProductDetails.DataSource = ProductDL.ProductList1;
-                DataGridViewButtonColumn AddToCart = new DataGridViewButtonColumn();
-                AddToCart.HeaderText = "Add To Cart";
-                AddToCart.Text = "Add To Cart";
-                AddToCart.UseColumnTextForButtonValue = true;
-                datagvProductDetails.Columns.Add(AddToCart);
-
-
-
-            }
-            catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
     }
 }

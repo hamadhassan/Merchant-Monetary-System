@@ -22,8 +22,6 @@ namespace Merchant_Monetary_System.BL
         public double ContactNumber { get => contactNumber; set => contactNumber = value; }
         public double Amount { get => amount; set => amount = value; }
 
-        public  Vendor() { }
-
         public Vendor(string VendorName, double LandlineNumber, string ConcernedPerson, double ContactNumber, double amount )
         {
             this.VendorName = VendorName;

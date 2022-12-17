@@ -27,11 +27,7 @@ namespace Merchant_Monetary_System
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
                 Application.Run(new ViewShopkeeperDetails());
-=======
-                Application.Run(new frmVendorDetails());
->>>>>>> Stashed changes
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 
