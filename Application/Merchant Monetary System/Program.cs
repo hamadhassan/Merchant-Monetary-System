@@ -8,6 +8,7 @@ using Merchant_Monetary_System.Forms;
 using Merchant_Monetary_System.Forms.Dashboards;
 using Merchant_Monetary_System.Forms.Payment;
 using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.Forms.Emails;
 
 namespace Merchant_Monetary_System
 {
@@ -19,19 +20,18 @@ namespace Merchant_Monetary_System
         [STAThread]
         static void Main()
         {
-<<<<<<< Updated upstream
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmProductDetails_());
+                Application.Run(new frmEmail());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
-=======
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddShopkeeper());
->>>>>>> Stashed changes
+
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new frmAddShopkeeper());
+
 
         }
     }

@@ -154,7 +154,7 @@ namespace Merchant_Monetary_System
 
         private void updateVendorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmUpdateVendor());
+            //loadform(new frmUpdateVendor());
         }
 
         private void btnViewReport_Click(object sender, EventArgs e)
