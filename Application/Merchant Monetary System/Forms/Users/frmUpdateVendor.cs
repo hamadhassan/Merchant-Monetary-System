@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,11 @@ namespace Merchant_Monetary_System.Forms.Users
 {
     public partial class frmUpdateVendor : Form
     {
-        Vendor vendor;
+        Vendor vendor= new BL.Vendor();
         public frmUpdateVendor(Vendor p_vendor)
         {
             InitializeComponent();
-            vendor = p_vendor;
+            this.vendor = p_vendor;
         }
 
         bool isName = true;
@@ -182,14 +183,14 @@ namespace Merchant_Monetary_System.Forms.Users
         {
             if (!isName && !isPerson && !isLandLineNumber && !isContactNumber)
             {
-               string name= txtbxName.Text;
-               double contact= Convert.ToInt64(txtbxContactNumber.Text) ;
-               double landline= Convert.ToInt64(txtbxLandLineNumber.Text) ;
-               string person= txtbxPerson.Text;
-                Vendor updated_vendor = new Vendor(name, landline, person, contact);
-                VendorDL.updateVendorMatch(updated_vendor);
-                VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
-                MessageBox.Show("Stock Updated Successfully", "Information Message", MessageBoxButtons.OK);
+               vendor.VendorName= txtbxName.Text;
+               vendor.ContactNumber = Convert.ToInt64(txtbxContactNumber.Text) ;
+               vendor.LandlineNumber= Convert.ToInt64(txtbxLandLineNumber.Text) ;
+               vendor.ConcernedPerson= txtbxPerson.Text;
+                //Vendor updated_vendor = new Vendor(name, landline, person, contact);
+                //VendorDL.updateVendorMatch(updated_vendor);
+               // VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
+                MessageBox.Show("Vendor Updated Successfully", "Information Message", MessageBoxButtons.OK);
                 this.Hide();
             }
             else
@@ -197,6 +198,16 @@ namespace Merchant_Monetary_System.Forms.Users
                 MessageBox.Show("Fill all fields correctly", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

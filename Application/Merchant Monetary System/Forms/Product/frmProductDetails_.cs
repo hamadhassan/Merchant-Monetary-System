@@ -42,9 +42,12 @@ namespace Merchant_Monetary_System
                 DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
                 Delete.HeaderText = "Delete";
                 Delete.Text = "Delete";
+
                 Delete.UseColumnTextForButtonValue = true;
                 datagvProductDetails.Columns.Add(Update);
                 datagvProductDetails.Columns.Add(Delete);
+
+
             }
             catch(Exception exp) { MessageBox.Show(exp.Message); }
         }
@@ -81,6 +84,7 @@ namespace Merchant_Monetary_System
                         MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+
                 DataBind();
             }
             else

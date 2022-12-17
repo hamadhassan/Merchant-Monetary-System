@@ -76,7 +76,7 @@ namespace Merchant_Monetary_System.DL
         {
             foreach (Vendor vendor in VendorList)
             {
-                if (deletevendor.VendorName == vendor.VendorName)
+                if (deletevendor == vendor)
                 {
                     VendorList.Remove(vendor);
                     return true;

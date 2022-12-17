@@ -74,6 +74,7 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblUpdateVendor
             // 
@@ -122,6 +123,7 @@
             this.groupBox1.Size = new System.Drawing.Size(861, 467);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblContactNumber
             // 
