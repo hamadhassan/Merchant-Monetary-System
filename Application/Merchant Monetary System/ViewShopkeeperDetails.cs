@@ -35,15 +35,20 @@ namespace Merchant_Monetary_System
             datagvShopkeeperDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             datagvShopkeeperDetails.DataSource = ShopKeeperDL.shopkeeperList;
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
-            Update.HeaderText = "    Update    ";
+            Update.HeaderText = "Update";
             Update.Text = "Update";
             Update.UseColumnTextForButtonValue = true;
             DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
-            Delete.HeaderText = "    Delete    ";
+            Delete.HeaderText = "Delete";
             Delete.Text = "Delete";
             Delete.UseColumnTextForButtonValue = true;
+            DataGridViewButtonColumn Shops = new DataGridViewButtonColumn();
+            Shops.HeaderText = "Shops";
+            Shops.Text = "Shops";
+            Shops.UseColumnTextForButtonValue = true;
             datagvShopkeeperDetails.Columns.Add(Update);
             datagvShopkeeperDetails.Columns.Add(Delete);
+            datagvShopkeeperDetails.Columns.Add(Shops);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -69,7 +74,6 @@ namespace Merchant_Monetary_System
                     if (done)
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DataBind();
                         ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
                     }
                     else
@@ -77,6 +81,12 @@ namespace Merchant_Monetary_System
                         MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                if(index == 6)
+                {
+                    Form f = new ViewShops(S.ShopList);
+                    f.ShowDialog();
+                }
+                DataBind();
             }
             else
             {

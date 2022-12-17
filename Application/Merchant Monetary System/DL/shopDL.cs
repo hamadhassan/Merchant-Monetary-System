@@ -30,5 +30,17 @@ namespace Merchant_Monetary_System.DL
                 .ToList().ForEach(e => _builder.Append(e));
             return _builder.ToString();
         }
+        public static bool deleteShop(List<Shop> shopList,Shop deleteShop)
+        {
+            foreach(Shop shop in shopList)
+            {
+                if(deleteShop == shop)
+                {
+                    shopList.Remove(shop);
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

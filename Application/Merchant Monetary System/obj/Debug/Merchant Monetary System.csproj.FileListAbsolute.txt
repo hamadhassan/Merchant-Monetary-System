@@ -339,3 +339,5 @@ D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\o
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewStockDetails.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.ViewShopkeeperDetails.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.UpdateShopKeeper.resources
+D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmUpdateShop.resources
+D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.ViewShops.resources

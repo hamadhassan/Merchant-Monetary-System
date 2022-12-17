@@ -103,6 +103,12 @@
     <Compile Include="Forms\Product\UpdatStock.Designer.cs">
       <DependentUpon>UpdatStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateShop.Designer.cs">
+      <DependentUpon>frmUpdateShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmViewStockDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +312,12 @@
     <Compile Include="ViewShopkeeperDetails.Designer.cs">
       <DependentUpon>ViewShopkeeperDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewShops.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewShops.Designer.cs">
+      <DependentUpon>ViewShops.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Dashboards\frmCEODashboard.resx">
       <DependentUpon>frmCEODashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +399,9 @@
     <EmbeddedResource Include="Forms\Users\frmADDvendor.resx">
       <DependentUpon>frmADDvendor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateShop.resx">
+      <DependentUpon>frmUpdateShop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmViewStockDetails.resx">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewShopkeeperDetails.resx">
       <DependentUpon>ViewShopkeeperDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewShops.resx">
+      <DependentUpon>ViewShops.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
