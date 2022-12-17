@@ -13,10 +13,9 @@ namespace Merchant_Monetary_System
         private static string company = "Company.txt";
         private static string category = "Category.csv";
         private static string products = "Products.csv";
-
         private static string vendors = "Vendors.csv";
-
         private static string stock = "Stocks.csv";
+        private static string shopkeeper = "Shopkeepers.csv";
 
 
         public static string Users { get => users; set => users = value; }

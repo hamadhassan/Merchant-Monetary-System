@@ -7,6 +7,7 @@ using System.Data;
 using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,11 +17,13 @@ namespace Merchant_Monetary_System
 {
     public partial class frmAddShopkeeper : Form
     {
+        public event EventHandler isBtnFoundClicked;
         bool isCNIC = true;
         bool isName = true;
         bool isEmail = true;
         bool isPhone = true;
         bool isShop = true;
+        Shopkeeper shopkeeperFound;
         public frmAddShopkeeper()
         {
             InitializeComponent();
@@ -66,7 +69,7 @@ namespace Merchant_Monetary_System
             Int64 i;
             if (txtCNIC.Text == string.Empty)
             {// check is empty
-                lblCNICSignal.Text = "Enter the contact number";
+                lblCNICSignal.Text = "Enter the CNIC number";
                 isCNIC = true;
             }
             else if (!Int64.TryParse(txtCNIC.Text, out i))
@@ -83,6 +86,17 @@ namespace Merchant_Monetary_System
             {//ready for storage
                 lblCNICSignal.Text = " ";
                 isCNIC = false;
+                shopkeeperFound = ShopKeeperDL.returnShopkeeperDetails(Double.Parse(txtCNIC.Text));
+                if(shopkeeperFound != null)
+                {
+                    btnFound.Enabled = true;
+                    btnFound.Visible = true;
+                }
+            }
+            if(isCNIC)
+            {
+                btnFound.Enabled = false;
+                btnFound.Visible = false;
             }
         }
 
@@ -134,20 +148,25 @@ namespace Merchant_Monetary_System
 
         private void txtbxShopkeeperNumber_TextChanged(object sender, EventArgs e)
         {
-            int i;
+            long i;
+            int count = 0;
+            foreach (char num in txtbxShopkeeperNumber.Text)
+            {
+                count++;
+            }
             if (txtbxShopkeeperNumber.Text == string.Empty)
             {// check is empty
                 lblContactSignal.Text = "Enter the contact number";
                 isPhone = true;
             }
-            else if (!int.TryParse(txtbxShopkeeperNumber.Text, out i))
-            {//Check isalphabetic
+            else if (!Int64.TryParse(txtbxShopkeeperNumber.Text, out i))
+            {//Check isnumber
                 lblContactSignal.Text = "Allowed characters: 0-9";
                 isPhone = true;
             }
-            else if (txtbxShopkeeperNumber.Text.Any(ch => !char.IsLetterOrDigit(ch)))
-            {//check isSpecialCharactor
-                lblContactSignal.Text = "Allowed characters: 0-9";
+            else if (!(count == 11))
+            {//check count
+                lblContactSignal.Text = "Lenght must be 11 characters";
                 isPhone = true;
             }
             else
@@ -185,6 +204,7 @@ namespace Merchant_Monetary_System
                 string ID = shopDL.generateUniqueID();
                 Shop shop = new Shop(ID, shopName, city, area, state);
                 shopDL.addDataIntoList(shop);
+                shopkeeper.ShopList.Add(shop);
                 MessageBox.Show("Shopkeeper Along with the Shop Added", "Adding...");
             }
         }
@@ -192,6 +212,26 @@ namespace Merchant_Monetary_System
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmAddShopkeeper_Load(object sender, EventArgs e)
+        {
+            this.isBtnFoundClicked += new System.EventHandler(this.FillAllFieldsforShopkeeper);
+            Shopkeeper shopkeeper = new Shopkeeper("Hashir", 3520240436747, "syedhashir1001@gmail.com", 03164219759);
+            ShopKeeperDL.shopkeeperList.Add(shopkeeper);
+        }
+
+        private void FillAllFieldsforShopkeeper(object sender, EventArgs e)
+        {
+            Shopkeeper shopkeeper = (Shopkeeper)sender; 
+            txtbxEmail.Text = shopkeeper.Email;
+            txtbxShopkeeperName.Text = shopkeeper.ShopkeeperName;
+            txtbxShopkeeperNumber.Text = shopkeeper.ContactNumber.ToString();
+        }
+
+        private void btnFound_Click(object sender, EventArgs e)
+        {
+            isBtnFoundClicked?.Invoke(shopkeeperFound, EventArgs.Empty);
         }
     }
 }

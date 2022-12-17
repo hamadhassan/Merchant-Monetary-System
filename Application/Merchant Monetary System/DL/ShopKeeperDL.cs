@@ -61,5 +61,17 @@ namespace Merchant_Monetary_System.DL
             file.Close();
         }
 
+        public static Shopkeeper returnShopkeeperDetails(double cnic)
+        {
+            foreach(Shopkeeper shopK in shopkeeperList)
+            {
+                if(cnic == shopK.Cnic)
+                {
+                    return shopK;
+                }
+            }
+            return null;
+        }
+
     }
 }
