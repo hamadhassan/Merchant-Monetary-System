@@ -196,16 +196,32 @@ namespace Merchant_Monetary_System
                 double cnic = double.Parse(txtCNIC.Text);
                 string email = txtbxEmail.Text;
                 double contact = double.Parse(txtbxShopkeeperNumber.Text);
-                Shopkeeper shopkeeper = new Shopkeeper(shopkeeperName, cnic, email, contact);
-                string shopName = txtbxShopName.Text;
-                string city = cmbxCity.Text;
-                string area = comboboxArea.Text;
-                string state = cmbxState.Text;
-                string ID = shopDL.generateUniqueID();
-                Shop shop = new Shop(ID, shopName, city, area, state);
-                shopDL.addDataIntoList(shop);
-                shopkeeper.ShopList.Add(shop);
-                MessageBox.Show("Shopkeeper Along with the Shop Added", "Adding...");
+                Shopkeeper shopkeeper = new Shopkeeper();
+                if (!ShopKeeperDL.MatchShopkeeper(cnic, shopkeeperName))
+                {
+                    MessageBox.Show("Already Registered with given CNIC", "Alert Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
+                }
+                else
+                {
+                    if (ShopKeeperDL.returnShopkeeperDetails(cnic) != null)
+                    {
+                        shopkeeper = ShopKeeperDL.returnShopkeeperDetails(cnic);
+                    }
+                    else
+                    {
+                        shopkeeper = new Shopkeeper(shopkeeperName, cnic, email, contact);
+                    }
+                    string shopName = txtbxShopName.Text;
+                    string city = cmbxCity.Text;
+                    string area = comboboxArea.Text;
+                    string state = cmbxState.Text;
+                    string ID = shopDL.generateUniqueID();
+                    Shop shop = new Shop(ID, shopName, city, area, state);
+                    shopDL.addDataIntoList(shop);
+                    shopkeeper.ShopList.Add(shop);
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                    MessageBox.Show("Shopkeeper Along with the Shop Added", "Adding...");
+                }
             }
         }
 
@@ -217,8 +233,6 @@ namespace Merchant_Monetary_System
         private void frmAddShopkeeper_Load(object sender, EventArgs e)
         {
             this.isBtnFoundClicked += new System.EventHandler(this.FillAllFieldsforShopkeeper);
-            Shopkeeper shopkeeper = new Shopkeeper("Hashir", 3520240436747, "syedhashir1001@gmail.com", 03164219759);
-            ShopKeeperDL.shopkeeperList.Add(shopkeeper);
         }
 
         private void FillAllFieldsforShopkeeper(object sender, EventArgs e)

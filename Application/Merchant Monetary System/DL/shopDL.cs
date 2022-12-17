@@ -30,6 +30,5 @@ namespace Merchant_Monetary_System.DL
                 .ToList().ForEach(e => _builder.Append(e));
             return _builder.ToString();
         }
-
     }
 }

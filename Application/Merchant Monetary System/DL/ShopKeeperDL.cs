@@ -73,5 +73,17 @@ namespace Merchant_Monetary_System.DL
             return null;
         }
 
+        public static bool MatchShopkeeper(double cnic, string name)
+        {
+            foreach(Shopkeeper shopK in shopkeeperList)
+            {
+                if(shopK.Cnic == cnic && shopK.ShopkeeperName == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

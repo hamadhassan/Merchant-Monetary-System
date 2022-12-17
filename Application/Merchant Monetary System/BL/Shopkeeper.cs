@@ -22,6 +22,10 @@ namespace Merchant_Monetary_System.BL
             ContactNumber = contactNumber;
             ShopList = new List<Shop>();
         }
+        public Shopkeeper()
+        {
+
+        }
 
         public string ShopkeeperName { get => shopkeeperName; set => shopkeeperName = value; }
         public double Cnic { get => cnic; set => cnic = value; }

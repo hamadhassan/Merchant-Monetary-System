@@ -25,5 +25,6 @@ namespace Merchant_Monetary_System
         public static string Products { get => products; set => products = value; }
         public static string Vendors { get => vendors; set => vendors = value; }
         public static string Stock { get => stock; set => stock = value; }
+        public static string Shopkeeper { get => shopkeeper; set => shopkeeper = value; }
     }
 }
