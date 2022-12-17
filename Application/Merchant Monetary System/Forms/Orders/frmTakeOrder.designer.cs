@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblDatagvSignal = new System.Windows.Forms.Label();
+            this.btnLoadRecords = new System.Windows.Forms.Button();
+            this.datagvProductDetails = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
@@ -48,9 +51,6 @@
             this.lblProductDetails = new System.Windows.Forms.Label();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.btnLoadRecords = new System.Windows.Forms.Button();
-            this.datagvProductDetails = new System.Windows.Forms.DataGridView();
-            this.lblDatagvSignal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // lblDatagvSignal
+            // 
+            this.lblDatagvSignal.AutoSize = true;
+            this.lblDatagvSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblDatagvSignal.Location = new System.Drawing.Point(21, 498);
+            this.lblDatagvSignal.Name = "lblDatagvSignal";
+            this.lblDatagvSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblDatagvSignal.TabIndex = 83;
+            this.lblDatagvSignal.Text = " ";
+            // 
+            // btnLoadRecords
+            // 
+            this.btnLoadRecords.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLoadRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadRecords.Location = new System.Drawing.Point(396, 248);
+            this.btnLoadRecords.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoadRecords.Name = "btnLoadRecords";
+            this.btnLoadRecords.Size = new System.Drawing.Size(114, 36);
+            this.btnLoadRecords.TabIndex = 82;
+            this.btnLoadRecords.Text = "Load Records";
+            this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLoadRecords.UseVisualStyleBackColor = false;
+            this.btnLoadRecords.Click += new System.EventHandler(this.btnLoadRecords_Click);
+            // 
+            // datagvProductDetails
+            // 
+            this.datagvProductDetails.AllowUserToAddRows = false;
+            this.datagvProductDetails.AllowUserToDeleteRows = false;
+            this.datagvProductDetails.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.datagvProductDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagvProductDetails.Location = new System.Drawing.Point(25, 126);
+            this.datagvProductDetails.Name = "datagvProductDetails";
+            this.datagvProductDetails.ReadOnly = true;
+            this.datagvProductDetails.Size = new System.Drawing.Size(881, 355);
+            this.datagvProductDetails.TabIndex = 81;
+            this.datagvProductDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvProductDetails_CellContentClick);
+            // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DarkGreen;
@@ -93,9 +131,9 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEdit.Location = new System.Drawing.Point(798, 498);
+            this.btnEdit.Location = new System.Drawing.Point(798, 488);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(90, 30);
+            this.btnEdit.Size = new System.Drawing.Size(90, 34);
             this.btnEdit.TabIndex = 75;
             this.btnEdit.Text = "Veiw Cart";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -106,9 +144,9 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(606, 498);
+            this.btnClose.Location = new System.Drawing.Point(606, 488);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(90, 30);
+            this.btnClose.Size = new System.Drawing.Size(90, 34);
             this.btnClose.TabIndex = 74;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -120,9 +158,9 @@
             this.btnClearAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnClearAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearAll.ForeColor = System.Drawing.Color.Black;
-            this.btnClearAll.Location = new System.Drawing.Point(702, 498);
+            this.btnClearAll.Location = new System.Drawing.Point(702, 488);
             this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(90, 30);
+            this.btnClearAll.Size = new System.Drawing.Size(90, 34);
             this.btnClearAll.TabIndex = 73;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = false;
@@ -296,43 +334,6 @@
             this.lblSearch.TabIndex = 65;
             this.lblSearch.Text = "Search:";
             this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
-            // 
-            // btnLoadRecords
-            // 
-            this.btnLoadRecords.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLoadRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadRecords.Location = new System.Drawing.Point(396, 248);
-            this.btnLoadRecords.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLoadRecords.Name = "btnLoadRecords";
-            this.btnLoadRecords.Size = new System.Drawing.Size(114, 26);
-            this.btnLoadRecords.TabIndex = 82;
-            this.btnLoadRecords.Text = "Load Records";
-            this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLoadRecords.UseVisualStyleBackColor = false;
-            // 
-            // datagvProductDetails
-            // 
-            this.datagvProductDetails.AllowUserToAddRows = false;
-            this.datagvProductDetails.AllowUserToDeleteRows = false;
-            this.datagvProductDetails.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.datagvProductDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvProductDetails.Location = new System.Drawing.Point(25, 95);
-            this.datagvProductDetails.Name = "datagvProductDetails";
-            this.datagvProductDetails.ReadOnly = true;
-            this.datagvProductDetails.Size = new System.Drawing.Size(881, 351);
-            this.datagvProductDetails.TabIndex = 81;
-            this.datagvProductDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvProductDetails_CellContentClick);
-            // 
-            // lblDatagvSignal
-            // 
-            this.lblDatagvSignal.AutoSize = true;
-            this.lblDatagvSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblDatagvSignal.Location = new System.Drawing.Point(21, 498);
-            this.lblDatagvSignal.Name = "lblDatagvSignal";
-            this.lblDatagvSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblDatagvSignal.TabIndex = 83;
-            this.lblDatagvSignal.Text = " ";
             // 
             // frmTakeOrder
             // 

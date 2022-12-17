@@ -52,7 +52,6 @@ namespace Merchant_Monetary_System
         {
             btnLoadRecords.Visible = false;
             datagvProductDetails.Visible = true;
-
             DataBind();
         }
 
@@ -67,6 +66,7 @@ namespace Merchant_Monetary_System
                     Form form = new frmUpdateProduct(S);
                     form.ShowDialog();
                     ProductDL.storeAllRecordIntoFile(FilePath.Products);
+
                 }
                 else if (index == 8)
                 {
@@ -74,12 +74,14 @@ namespace Merchant_Monetary_System
                     if (done)
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ProductDL.storeAllRecordIntoFile(FilePath.Products);
                     }
                     else
                     {
                         MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                DataBind();
             }
             else
             {

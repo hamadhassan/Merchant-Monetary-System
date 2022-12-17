@@ -36,6 +36,10 @@ namespace Merchant_Monetary_System.BL
             this.sensitivityType = SensitivityType;
 
         }
+        public Product()
+        {
+
+        }
         public static void storeRecordIntoFile(Product record, string path)
         {
             StreamWriter file = new StreamWriter(path, true);

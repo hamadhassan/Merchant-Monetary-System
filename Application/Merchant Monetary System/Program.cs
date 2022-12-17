@@ -24,7 +24,7 @@ namespace Merchant_Monetary_System
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmAddShopkeeper());
+                Application.Run(new frmCEODashboard());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 

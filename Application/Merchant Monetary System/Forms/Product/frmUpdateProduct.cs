@@ -15,11 +15,11 @@ namespace Merchant_Monetary_System.Forms.Product
 {
     public partial class frmUpdateProduct : Form
     {
-        BL.Product product; 
+        BL.Product product = new BL.Product(); 
         public frmUpdateProduct(BL.Product previous_product)
         {
             InitializeComponent();
-            product = previous_product;
+            this.product = previous_product;
         }
 
         bool isName = true;
@@ -115,16 +115,15 @@ namespace Merchant_Monetary_System.Forms.Product
             {
                 if (!isName && !isSKU_Number && !isWeight && !isVolume && comboCategory.Text != "" && cmbxManufacture.Text != "" && cmbxSenstivity.Text != "")
                 {
-                    string name = txtbxName.Text;
-                    int sku_number = Convert.ToInt16(txtbxSKU_ID.Text);
-                    double weight = Convert.ToInt64(txtbxWeight.Text);
-                    double Volume = Convert.ToInt64(txtbxVolume.Text);
-                    string manufacturer = cmbxManufacture.Text;
-                    string category = comboCategory.Text;
-                    string sensitivity = cmbxSenstivity.Text;
-                    BL.Product product = new BL. Product(name, sku_number, weight, Volume, manufacturer, sensitivity, category);
-                    ProductDL.updateRecord(product);
-                    BL.Product.storeRecordIntoFile(product, FilePath.Products);
+                    product.Name = txtbxName.Text;
+                    product.SKU_Number = Convert.ToInt16(txtbxSKU_ID.Text);
+                    product.Weight = Convert.ToInt64(txtbxWeight.Text);
+                    product.Volume = Convert.ToInt64(txtbxVolume.Text);
+                    product.Manufacturer = cmbxManufacture.Text;
+                    product.Category = comboCategory.Text;
+                    product.SensitivityType = cmbxSenstivity.Text;
+                    //BL.Product product = new BL. Product(name, sku_number, weight, Volume, manufacturer, sensitivity, category);
+                    //ProductDL.updateRecord(product);
                     MessageBox.Show("Product successfully updated");
                 }
                 else

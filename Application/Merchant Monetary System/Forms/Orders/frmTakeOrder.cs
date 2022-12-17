@@ -72,5 +72,10 @@ namespace Merchant_Monetary_System
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
+
+        private void btnLoadRecords_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

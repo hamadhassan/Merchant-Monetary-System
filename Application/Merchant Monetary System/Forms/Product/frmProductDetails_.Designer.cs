@@ -144,6 +144,7 @@
             this.datagvProductDetails.Location = new System.Drawing.Point(27, 133);
             this.datagvProductDetails.Name = "datagvProductDetails";
             this.datagvProductDetails.ReadOnly = true;
+            this.datagvProductDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagvProductDetails.Size = new System.Drawing.Size(881, 351);
             this.datagvProductDetails.TabIndex = 69;
             this.datagvProductDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvProductDetails_CellContentClick);

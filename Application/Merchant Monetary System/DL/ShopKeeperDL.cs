@@ -11,7 +11,7 @@ namespace Merchant_Monetary_System.DL
     {
         public static List<Shopkeeper> shopkeeperList = new List<Shopkeeper>();
 
-        public void addShopkeeperIntoList(Shopkeeper shopkeeper)
+        public static void addShopkeeperIntoList(Shopkeeper shopkeeper)
         {
             shopkeeperList.Add(shopkeeper);
         }
@@ -20,15 +20,15 @@ namespace Merchant_Monetary_System.DL
             StreamWriter file = new StreamWriter(path);
             foreach(Shopkeeper shopkeeper in shopkeeperList)
             {
-                Console.Write(shopkeeper.ShopkeeperName + "," + shopkeeper.Cnic + "," + shopkeeper.Email + "," + shopkeeper.ContactNumber + ",");
+                file.Write(shopkeeper.ShopkeeperName + "," + shopkeeper.Cnic + "," + shopkeeper.Email + "," + shopkeeper.ContactNumber + ",");
                 int i = 0;
-                foreach(Shop shop in shopkeeper.ShopList)
+                foreach (Shop shop in shopkeeper.ShopList)
                 {
-                    if (i != 0) Console.Write("|");
-                    Console.Write(shop.Id + ";" + shop.ShopName + ";" + shop.City + ";" + shop.Area + ";" + shop.State);
+                    if (i != 0) file.Write("|");
+                    file.Write(shop.Id + ";" + shop.ShopName + ";" + shop.City + ";" + shop.Area + ";" + shop.State);
                     i++;
                 }
-                Console.WriteLine();
+                file.WriteLine();
             }
             file.Close();
         }
