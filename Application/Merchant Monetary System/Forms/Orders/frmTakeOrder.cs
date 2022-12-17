@@ -47,13 +47,8 @@ namespace Merchant_Monetary_System
             {
                 int index = datagvProductDetails.CurrentCell.ColumnIndex;
                 Product S = (Product)datagvProductDetails.CurrentRow.DataBoundItem;
-                if (index == 7)
-                {
-                    Form form = new frmUpdateProduct(S);
-                    form.ShowDialog();
-                    ProductDL.storeAllRecordIntoFile(FilePath.Products);
-                }
-                else if (index == 8)
+
+                if (index ==7)
                 {
                     bool done = ProductDL.deleteRecord(S);
                     if (done)
@@ -72,10 +67,29 @@ namespace Merchant_Monetary_System
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
+        private void DataBind()
+        {
+            try
+            {
+                datagvProductDetails.Columns.Clear();
 
+                datagvProductDetails.DataSource = null;
+                ProductDL.loadRecordFromFile(FilePath.Products);
+                datagvProductDetails.DataSource = ProductDL.ProductList1;
+                DataGridViewButtonColumn Add = new DataGridViewButtonColumn();
+                Add.HeaderText = "Add";
+                Add.Text = "Add";
+                Add.UseColumnTextForButtonValue = true;
+                datagvProductDetails.Columns.Add(Add);
+
+            }
+            catch (Exception exp) { MessageBox.Show(exp.Message); }
+        }
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
-
+            btnLoadRecords.Visible = false;
+            datagvProductDetails.Visible = true;
+            DataBind();
         }
     }
 }

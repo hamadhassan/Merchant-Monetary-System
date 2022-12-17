@@ -145,7 +145,6 @@
             this.datagvVendorsDetails.AllowUserToDeleteRows = false;
             this.datagvVendorsDetails.BackgroundColor = System.Drawing.SystemColors.Control;
             this.datagvVendorsDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvVendorsDetails.ColumnHeadersVisible = false;
             this.datagvVendorsDetails.Location = new System.Drawing.Point(25, 133);
             this.datagvVendorsDetails.Name = "datagvVendorsDetails";
             this.datagvVendorsDetails.ReadOnly = true;
