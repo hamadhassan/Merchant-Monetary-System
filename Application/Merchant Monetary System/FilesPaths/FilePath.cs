@@ -16,6 +16,7 @@ namespace Merchant_Monetary_System
         private static string vendors = "Vendors.csv";
         private static string stock = "Stocks.csv";
         private static string shopkeeper = "Shopkeepers.csv";
+        private static string city = "City.csv";
 
 
         public static string Users { get => users; set => users = value; }
@@ -26,5 +27,6 @@ namespace Merchant_Monetary_System
         public static string Vendors { get => vendors; set => vendors = value; }
         public static string Stock { get => stock; set => stock = value; }
         public static string Shopkeeper { get => shopkeeper; set => shopkeeper = value; }
+        public static string City { get => city; set => city = value; }
     }
 }

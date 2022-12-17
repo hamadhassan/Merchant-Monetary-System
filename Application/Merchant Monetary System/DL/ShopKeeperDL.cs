@@ -37,7 +37,7 @@ namespace Merchant_Monetary_System.DL
         {
             StreamReader file = new StreamReader(path);
             string record;
-            while((record = file.ReadLine()) != null)
+            while((record = file.ReadLine()) != null && (record = file.ReadLine()) != null)
             {
                 string[] SplittedRecord = record.Split(',');
                 string shopkeeperName = SplittedRecord[0];

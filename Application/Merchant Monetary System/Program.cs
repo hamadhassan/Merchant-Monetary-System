@@ -22,12 +22,13 @@ namespace Merchant_Monetary_System
         static void Main()
         {
             ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
+            Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
 
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new ViewShopkeeperDetails());
+                Application.Run(new frmCEODashboard());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 

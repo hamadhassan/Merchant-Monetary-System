@@ -234,6 +234,13 @@ namespace Merchant_Monetary_System
         private void frmAddShopkeeper_Load(object sender, EventArgs e)
         {
             this.isBtnFoundClicked += new System.EventHandler(this.FillAllFieldsforShopkeeper);
+            foreach(string city in Misc.Cities)
+            {
+                cmbxCity.Items.Add(city);
+            }
+            cmbxState.Items.Add("Punjab");
+            cmbxState.SelectedIndex = cmbxState.Items.IndexOf("Punjab");
+            cmbxState.Enabled = false ;
         }
 
         private void FillAllFieldsforShopkeeper(object sender, EventArgs e)

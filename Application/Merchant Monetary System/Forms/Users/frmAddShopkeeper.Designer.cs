@@ -144,8 +144,6 @@
             this.cmbxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxCity.FormattingEnabled = true;
-            this.cmbxCity.Items.AddRange(new object[] {
-            "Lahore"});
             this.cmbxCity.Location = new System.Drawing.Point(180, 77);
             this.cmbxCity.Name = "cmbxCity";
             this.cmbxCity.Size = new System.Drawing.Size(203, 28);
@@ -157,8 +155,6 @@
             this.cmbxState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxState.FormattingEnabled = true;
-            this.cmbxState.Items.AddRange(new object[] {
-            "Punjab"});
             this.cmbxState.Location = new System.Drawing.Point(180, 180);
             this.cmbxState.Name = "cmbxState";
             this.cmbxState.Size = new System.Drawing.Size(203, 28);
@@ -185,7 +181,6 @@
             // 
             // comboboxArea
             // 
-            this.comboboxArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboboxArea.FormattingEnabled = true;
             this.comboboxArea.Items.AddRange(new object[] {

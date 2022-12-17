@@ -87,6 +87,7 @@
     <Compile Include="BL\Stock.cs" />
     <Compile Include="BL\Vendor.cs" />
     <Compile Include="DL\categoryDL.cs" />
+    <Compile Include="DL\Misc.cs" />
     <Compile Include="DL\shopDL.cs" />
     <Compile Include="DL\ShopKeeperDL.cs" />
     <Compile Include="DL\StockDL.cs" />
