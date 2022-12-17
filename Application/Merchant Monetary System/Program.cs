@@ -19,6 +19,7 @@ namespace Merchant_Monetary_System
         [STAThread]
         static void Main()
         {
+<<<<<<< Updated upstream
             try
             {
                 Application.EnableVisualStyles();
@@ -26,6 +27,11 @@ namespace Merchant_Monetary_System
                 Application.Run(new frmProductDetails_());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
+=======
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmAddShopkeeper());
+>>>>>>> Stashed changes
 
         }
     }

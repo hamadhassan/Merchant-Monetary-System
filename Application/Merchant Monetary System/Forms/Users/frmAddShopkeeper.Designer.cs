@@ -34,60 +34,43 @@
             this.lblEmail_ = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboboxArea = new System.Windows.Forms.ComboBox();
+            this.lblContactSignal = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
             this.txtbxShopkeeperNumber = new System.Windows.Forms.TextBox();
-            this.lblRecordSignal = new System.Windows.Forms.Label();
             this.lblShopkeeperNumber = new System.Windows.Forms.Label();
             this.cmbxState = new System.Windows.Forms.ComboBox();
-            this.lblContactNumberSignal = new System.Windows.Forms.Label();
-            this.lblGenderSignal = new System.Windows.Forms.Label();
-            this.lblUsernameSignal = new System.Windows.Forms.Label();
+            this.lblEmailSignal = new System.Windows.Forms.Label();
             this.lblNameSignal = new System.Windows.Forms.Label();
             this.lblDesignationSingal = new System.Windows.Forms.Label();
-            this.btnAddShopKeeper = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.txtbxShopName = new System.Windows.Forms.TextBox();
-            this.txtbxShopNumber = new System.Windows.Forms.TextBox();
             this.txtbxShopkeeperName = new System.Windows.Forms.TextBox();
             this.lblShopName = new System.Windows.Forms.Label();
-            this.lblShopNumber = new System.Windows.Forms.Label();
             this.lblShopkeeperName = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
             this.cmbxCity = new System.Windows.Forms.ComboBox();
             this.lblSignUp = new System.Windows.Forms.Label();
+            this.btnAddShopKeeper = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtCNIC = new System.Windows.Forms.TextBox();
+            this.lblCNIC = new System.Windows.Forms.Label();
+            this.lblCNICSignal = new System.Windows.Forms.Label();
+            this.Shop = new System.Windows.Forms.GroupBox();
+            this.lblShopSignal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.Shop.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Shop);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtbxEmail);
-            this.groupBox1.Controls.Add(this.lblEmail_);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lblArea);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblState);
-            this.groupBox1.Controls.Add(this.txtbxShopkeeperNumber);
-            this.groupBox1.Controls.Add(this.lblRecordSignal);
-            this.groupBox1.Controls.Add(this.lblShopkeeperNumber);
-            this.groupBox1.Controls.Add(this.cmbxState);
-            this.groupBox1.Controls.Add(this.lblContactNumberSignal);
-            this.groupBox1.Controls.Add(this.lblGenderSignal);
-            this.groupBox1.Controls.Add(this.lblUsernameSignal);
-            this.groupBox1.Controls.Add(this.lblNameSignal);
             this.groupBox1.Controls.Add(this.lblDesignationSingal);
-            this.groupBox1.Controls.Add(this.txtbxShopName);
-            this.groupBox1.Controls.Add(this.txtbxShopNumber);
-            this.groupBox1.Controls.Add(this.txtbxShopkeeperName);
-            this.groupBox1.Controls.Add(this.lblShopName);
-            this.groupBox1.Controls.Add(this.lblShopNumber);
-            this.groupBox1.Controls.Add(this.lblShopkeeperName);
-            this.groupBox1.Controls.Add(this.lblCity);
-            this.groupBox1.Controls.Add(this.cmbxCity);
             this.groupBox1.Controls.Add(this.lblSignUp);
             this.groupBox1.Controls.Add(this.btnAddShopKeeper);
             this.groupBox1.Controls.Add(this.btnClear);
@@ -97,6 +80,7 @@
             this.groupBox1.Size = new System.Drawing.Size(930, 540);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label3
             // 
@@ -110,15 +94,16 @@
             // 
             // txtbxEmail
             // 
-            this.txtbxEmail.Location = new System.Drawing.Point(639, 149);
+            this.txtbxEmail.Location = new System.Drawing.Point(182, 128);
             this.txtbxEmail.Name = "txtbxEmail";
             this.txtbxEmail.Size = new System.Drawing.Size(203, 26);
             this.txtbxEmail.TabIndex = 81;
+            this.txtbxEmail.TextChanged += new System.EventHandler(this.txtbxEmail_TextChanged);
             // 
             // lblEmail_
             // 
             this.lblEmail_.AutoSize = true;
-            this.lblEmail_.Location = new System.Drawing.Point(494, 152);
+            this.lblEmail_.Location = new System.Drawing.Point(8, 131);
             this.lblEmail_.Name = "lblEmail_";
             this.lblEmail_.Size = new System.Drawing.Size(56, 20);
             this.lblEmail_.TabIndex = 82;
@@ -137,42 +122,42 @@
             // lblArea
             // 
             this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(494, 254);
+            this.lblArea.Location = new System.Drawing.Point(14, 133);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(51, 20);
             this.lblArea.TabIndex = 80;
             this.lblArea.Text = "Area :";
             // 
-            // comboBox1
+            // comboboxArea
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboboxArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboboxArea.FormattingEnabled = true;
+            this.comboboxArea.Items.AddRange(new object[] {
             "CEO",
             "Employee",
             "Rider",
             "Warehouse Manager"});
-            this.comboBox1.Location = new System.Drawing.Point(640, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 28);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 78;
+            this.comboboxArea.Location = new System.Drawing.Point(180, 128);
+            this.comboboxArea.Name = "comboboxArea";
+            this.comboboxArea.Size = new System.Drawing.Size(203, 28);
+            this.comboboxArea.Sorted = true;
+            this.comboboxArea.TabIndex = 78;
             // 
-            // label1
+            // lblContactSignal
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.label1.Location = new System.Drawing.Point(264, 322);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 20);
-            this.label1.TabIndex = 72;
-            this.label1.Text = " ";
+            this.lblContactSignal.AutoSize = true;
+            this.lblContactSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblContactSignal.Location = new System.Drawing.Point(183, 211);
+            this.lblContactSignal.Name = "lblContactSignal";
+            this.lblContactSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblContactSignal.TabIndex = 72;
+            this.lblContactSignal.Text = " ";
             // 
             // lblState
             // 
             this.lblState.AutoSize = true;
-            this.lblState.Location = new System.Drawing.Point(493, 302);
+            this.lblState.Location = new System.Drawing.Point(13, 187);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(56, 20);
             this.lblState.TabIndex = 77;
@@ -180,75 +165,47 @@
             // 
             // txtbxShopkeeperNumber
             // 
-            this.txtbxShopkeeperNumber.Location = new System.Drawing.Point(263, 293);
+            this.txtbxShopkeeperNumber.Location = new System.Drawing.Point(182, 182);
             this.txtbxShopkeeperNumber.Name = "txtbxShopkeeperNumber";
             this.txtbxShopkeeperNumber.Size = new System.Drawing.Size(203, 26);
             this.txtbxShopkeeperNumber.TabIndex = 71;
-            // 
-            // lblRecordSignal
-            // 
-            this.lblRecordSignal.AutoSize = true;
-            this.lblRecordSignal.Location = new System.Drawing.Point(303, 420);
-            this.lblRecordSignal.Name = "lblRecordSignal";
-            this.lblRecordSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblRecordSignal.TabIndex = 75;
-            this.lblRecordSignal.Text = " ";
+            this.txtbxShopkeeperNumber.TextChanged += new System.EventHandler(this.txtbxShopkeeperNumber_TextChanged);
             // 
             // lblShopkeeperNumber
             // 
             this.lblShopkeeperNumber.AutoSize = true;
-            this.lblShopkeeperNumber.Location = new System.Drawing.Point(89, 299);
+            this.lblShopkeeperNumber.Location = new System.Drawing.Point(8, 188);
             this.lblShopkeeperNumber.Name = "lblShopkeeperNumber";
-            this.lblShopkeeperNumber.Size = new System.Drawing.Size(147, 20);
+            this.lblShopkeeperNumber.Size = new System.Drawing.Size(137, 20);
             this.lblShopkeeperNumber.TabIndex = 70;
-            this.lblShopkeeperNumber.Text = "LandLine  Number :";
+            this.lblShopkeeperNumber.Text = "Contact  Number :";
             // 
             // cmbxState
             // 
             this.cmbxState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxState.FormattingEnabled = true;
-            this.cmbxState.Location = new System.Drawing.Point(640, 294);
+            this.cmbxState.Location = new System.Drawing.Point(180, 180);
             this.cmbxState.Name = "cmbxState";
             this.cmbxState.Size = new System.Drawing.Size(203, 28);
             this.cmbxState.Sorted = true;
             this.cmbxState.TabIndex = 62;
             // 
-            // lblContactNumberSignal
+            // lblEmailSignal
             // 
-            this.lblContactNumberSignal.AutoSize = true;
-            this.lblContactNumberSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblContactNumberSignal.Location = new System.Drawing.Point(264, 283);
-            this.lblContactNumberSignal.Name = "lblContactNumberSignal";
-            this.lblContactNumberSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblContactNumberSignal.TabIndex = 69;
-            this.lblContactNumberSignal.Text = " ";
-            // 
-            // lblGenderSignal
-            // 
-            this.lblGenderSignal.AutoSize = true;
-            this.lblGenderSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblGenderSignal.Location = new System.Drawing.Point(635, 320);
-            this.lblGenderSignal.Name = "lblGenderSignal";
-            this.lblGenderSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblGenderSignal.TabIndex = 68;
-            this.lblGenderSignal.Text = " ";
-            // 
-            // lblUsernameSignal
-            // 
-            this.lblUsernameSignal.AutoSize = true;
-            this.lblUsernameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblUsernameSignal.Location = new System.Drawing.Point(239, 233);
-            this.lblUsernameSignal.Name = "lblUsernameSignal";
-            this.lblUsernameSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblUsernameSignal.TabIndex = 65;
-            this.lblUsernameSignal.Text = " ";
+            this.lblEmailSignal.AutoSize = true;
+            this.lblEmailSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblEmailSignal.Location = new System.Drawing.Point(183, 157);
+            this.lblEmailSignal.Name = "lblEmailSignal";
+            this.lblEmailSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblEmailSignal.TabIndex = 65;
+            this.lblEmailSignal.Text = " ";
             // 
             // lblNameSignal
             // 
             this.lblNameSignal.AutoSize = true;
             this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNameSignal.Location = new System.Drawing.Point(239, 181);
+            this.lblNameSignal.Location = new System.Drawing.Point(183, 108);
             this.lblNameSignal.Name = "lblNameSignal";
             this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
             this.lblNameSignal.TabIndex = 64;
@@ -264,91 +221,36 @@
             this.lblDesignationSingal.TabIndex = 39;
             this.lblDesignationSingal.Text = " ";
             // 
-            // btnAddShopKeeper
-            // 
-            this.btnAddShopKeeper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.btnAddShopKeeper.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddShopKeeper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddShopKeeper.ForeColor = System.Drawing.Color.White;
-            this.btnAddShopKeeper.Location = new System.Drawing.Point(577, 447);
-            this.btnAddShopKeeper.Name = "btnAddShopKeeper";
-            this.btnAddShopKeeper.Size = new System.Drawing.Size(200, 30);
-            this.btnAddShopKeeper.TabIndex = 61;
-            this.btnAddShopKeeper.Text = "Add Shopkeeper";
-            this.btnAddShopKeeper.UseVisualStyleBackColor = false;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(97)))), ((int)(((byte)(139)))));
-            this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(364, 447);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(200, 30);
-            this.btnClear.TabIndex = 60;
-            this.btnClear.Text = "Clear All";
-            this.btnClear.UseVisualStyleBackColor = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(153, 447);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(200, 30);
-            this.btnClose.TabIndex = 59;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // txtbxShopName
             // 
-            this.txtbxShopName.Location = new System.Drawing.Point(263, 204);
+            this.txtbxShopName.Location = new System.Drawing.Point(180, 26);
             this.txtbxShopName.Name = "txtbxShopName";
             this.txtbxShopName.Size = new System.Drawing.Size(203, 26);
             this.txtbxShopName.TabIndex = 50;
             this.txtbxShopName.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
-            // txtbxShopNumber
-            // 
-            this.txtbxShopNumber.Location = new System.Drawing.Point(263, 254);
-            this.txtbxShopNumber.Name = "txtbxShopNumber";
-            this.txtbxShopNumber.Size = new System.Drawing.Size(203, 26);
-            this.txtbxShopNumber.TabIndex = 56;
-            // 
             // txtbxShopkeeperName
             // 
-            this.txtbxShopkeeperName.Location = new System.Drawing.Point(263, 152);
+            this.txtbxShopkeeperName.Location = new System.Drawing.Point(182, 79);
             this.txtbxShopkeeperName.Name = "txtbxShopkeeperName";
             this.txtbxShopkeeperName.Size = new System.Drawing.Size(203, 26);
             this.txtbxShopkeeperName.TabIndex = 38;
+            this.txtbxShopkeeperName.TextChanged += new System.EventHandler(this.txtbxShopkeeperName_TextChanged);
             // 
             // lblShopName
             // 
             this.lblShopName.AutoSize = true;
-            this.lblShopName.Location = new System.Drawing.Point(89, 207);
+            this.lblShopName.Location = new System.Drawing.Point(14, 29);
             this.lblShopName.Name = "lblShopName";
             this.lblShopName.Size = new System.Drawing.Size(99, 20);
             this.lblShopName.TabIndex = 45;
             this.lblShopName.Text = "Shop name :";
             this.lblShopName.Click += new System.EventHandler(this.lblShopName_Click);
             // 
-            // lblShopNumber
-            // 
-            this.lblShopNumber.AutoSize = true;
-            this.lblShopNumber.Location = new System.Drawing.Point(89, 254);
-            this.lblShopNumber.Name = "lblShopNumber";
-            this.lblShopNumber.Size = new System.Drawing.Size(119, 20);
-            this.lblShopNumber.TabIndex = 43;
-            this.lblShopNumber.Text = "Shop  Number :";
-            // 
             // lblShopkeeperName
             // 
             this.lblShopkeeperName.AutoSize = true;
-            this.lblShopkeeperName.Location = new System.Drawing.Point(89, 158);
+            this.lblShopkeeperName.Location = new System.Drawing.Point(8, 81);
             this.lblShopkeeperName.Name = "lblShopkeeperName";
             this.lblShopkeeperName.Size = new System.Drawing.Size(59, 20);
             this.lblShopkeeperName.TabIndex = 42;
@@ -357,7 +259,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(490, 205);
+            this.lblCity.Location = new System.Drawing.Point(10, 82);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(47, 20);
             this.lblCity.TabIndex = 40;
@@ -373,7 +275,7 @@
             "Employee",
             "Rider",
             "Warehouse Manager"});
-            this.cmbxCity.Location = new System.Drawing.Point(640, 199);
+            this.cmbxCity.Location = new System.Drawing.Point(180, 77);
             this.cmbxCity.Name = "cmbxCity";
             this.cmbxCity.Size = new System.Drawing.Size(203, 28);
             this.cmbxCity.Sorted = true;
@@ -389,6 +291,126 @@
             this.lblSignUp.TabIndex = 36;
             this.lblSignUp.Text = "Add Shopkeeper";
             // 
+            // btnAddShopKeeper
+            // 
+            this.btnAddShopKeeper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnAddShopKeeper.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddShopKeeper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddShopKeeper.ForeColor = System.Drawing.Color.White;
+            this.btnAddShopKeeper.Location = new System.Drawing.Point(577, 399);
+            this.btnAddShopKeeper.Name = "btnAddShopKeeper";
+            this.btnAddShopKeeper.Size = new System.Drawing.Size(200, 30);
+            this.btnAddShopKeeper.TabIndex = 61;
+            this.btnAddShopKeeper.Text = "Add Shopkeeper";
+            this.btnAddShopKeeper.UseVisualStyleBackColor = false;
+            this.btnAddShopKeeper.Click += new System.EventHandler(this.btnAddShopKeeper_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(97)))), ((int)(((byte)(139)))));
+            this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(364, 399);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(200, 30);
+            this.btnClear.TabIndex = 60;
+            this.btnClear.Text = "Clear All";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(153, 399);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(200, 30);
+            this.btnClose.TabIndex = 59;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtCNIC);
+            this.groupBox2.Controls.Add(this.lblCNIC);
+            this.groupBox2.Controls.Add(this.lblCNICSignal);
+            this.groupBox2.Controls.Add(this.txtbxShopkeeperName);
+            this.groupBox2.Controls.Add(this.lblShopkeeperName);
+            this.groupBox2.Controls.Add(this.txtbxEmail);
+            this.groupBox2.Controls.Add(this.lblEmail_);
+            this.groupBox2.Controls.Add(this.lblNameSignal);
+            this.groupBox2.Controls.Add(this.lblEmailSignal);
+            this.groupBox2.Controls.Add(this.lblContactSignal);
+            this.groupBox2.Controls.Add(this.txtbxShopkeeperNumber);
+            this.groupBox2.Controls.Add(this.lblShopkeeperNumber);
+            this.groupBox2.Location = new System.Drawing.Point(63, 110);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(394, 245);
+            this.groupBox2.TabIndex = 84;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "ShopKeeper";
+            // 
+            // txtCNIC
+            // 
+            this.txtCNIC.Location = new System.Drawing.Point(182, 26);
+            this.txtCNIC.Name = "txtCNIC";
+            this.txtCNIC.Size = new System.Drawing.Size(203, 26);
+            this.txtCNIC.TabIndex = 83;
+            this.txtCNIC.TextChanged += new System.EventHandler(this.txtCNIC_TextChanged);
+            // 
+            // lblCNIC
+            // 
+            this.lblCNIC.AutoSize = true;
+            this.lblCNIC.Location = new System.Drawing.Point(8, 32);
+            this.lblCNIC.Name = "lblCNIC";
+            this.lblCNIC.Size = new System.Drawing.Size(55, 20);
+            this.lblCNIC.TabIndex = 84;
+            this.lblCNIC.Text = "CNIC :";
+            // 
+            // lblCNICSignal
+            // 
+            this.lblCNICSignal.AutoSize = true;
+            this.lblCNICSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblCNICSignal.Location = new System.Drawing.Point(183, 55);
+            this.lblCNICSignal.Name = "lblCNICSignal";
+            this.lblCNICSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblCNICSignal.TabIndex = 85;
+            this.lblCNICSignal.Text = " ";
+            // 
+            // Shop
+            // 
+            this.Shop.BackColor = System.Drawing.Color.Transparent;
+            this.Shop.Controls.Add(this.lblShopSignal);
+            this.Shop.Controls.Add(this.lblShopName);
+            this.Shop.Controls.Add(this.txtbxShopName);
+            this.Shop.Controls.Add(this.lblCity);
+            this.Shop.Controls.Add(this.cmbxCity);
+            this.Shop.Controls.Add(this.cmbxState);
+            this.Shop.Controls.Add(this.lblState);
+            this.Shop.Controls.Add(this.lblArea);
+            this.Shop.Controls.Add(this.comboboxArea);
+            this.Shop.Location = new System.Drawing.Point(474, 107);
+            this.Shop.Name = "Shop";
+            this.Shop.Size = new System.Drawing.Size(394, 248);
+            this.Shop.TabIndex = 85;
+            this.Shop.TabStop = false;
+            this.Shop.Text = "Shop";
+            // 
+            // lblShopSignal
+            // 
+            this.lblShopSignal.AutoSize = true;
+            this.lblShopSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblShopSignal.Location = new System.Drawing.Point(182, 55);
+            this.lblShopSignal.Name = "lblShopSignal";
+            this.lblShopSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblShopSignal.TabIndex = 86;
+            this.lblShopSignal.Text = " ";
+            // 
             // frmAddShopkeeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -403,6 +425,10 @@
             this.Text = "frmAddShopkeeper";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.Shop.ResumeLayout(false);
+            this.Shop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -411,26 +437,21 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblState;
-        private System.Windows.Forms.Label lblRecordSignal;
         private System.Windows.Forms.ComboBox cmbxState;
-        private System.Windows.Forms.Label lblContactNumberSignal;
-        private System.Windows.Forms.Label lblGenderSignal;
-        private System.Windows.Forms.Label lblUsernameSignal;
+        private System.Windows.Forms.Label lblEmailSignal;
         private System.Windows.Forms.Label lblNameSignal;
         private System.Windows.Forms.Label lblDesignationSingal;
         private System.Windows.Forms.Button btnAddShopKeeper;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtbxShopName;
-        private System.Windows.Forms.TextBox txtbxShopNumber;
         private System.Windows.Forms.TextBox txtbxShopkeeperName;
         private System.Windows.Forms.Label lblShopName;
-        private System.Windows.Forms.Label lblShopNumber;
         private System.Windows.Forms.Label lblShopkeeperName;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.ComboBox cmbxCity;
         private System.Windows.Forms.Label lblSignUp;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblContactSignal;
         private System.Windows.Forms.TextBox txtbxShopkeeperNumber;
         private System.Windows.Forms.Label lblShopkeeperNumber;
         private System.Windows.Forms.Label label3;
@@ -438,6 +459,12 @@
         private System.Windows.Forms.Label lblEmail_;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblArea;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboboxArea;
+        private System.Windows.Forms.GroupBox Shop;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtCNIC;
+        private System.Windows.Forms.Label lblCNIC;
+        private System.Windows.Forms.Label lblCNICSignal;
+        private System.Windows.Forms.Label lblShopSignal;
     }
 }

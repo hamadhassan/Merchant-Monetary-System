@@ -137,9 +137,11 @@ namespace Merchant_Monetary_System
             DGVStock.DataSource = newStock;
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
+            Update.Text = "Update";
             Update.UseColumnTextForButtonValue = true;
             DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
             Delete.HeaderText = "Delete";
+            Update.Text = "Delete";
             Delete.UseColumnTextForButtonValue = true;
             DGVStock.Columns.Add(Update);
             DGVStock.Columns.Add(Delete);
