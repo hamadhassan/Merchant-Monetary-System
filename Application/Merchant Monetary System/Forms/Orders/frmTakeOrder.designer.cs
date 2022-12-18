@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblShhopkeekper = new System.Windows.Forms.Label();
             this.lblDatagvSignal = new System.Windows.Forms.Label();
             this.btnLoadRecords = new System.Windows.Forms.Button();
             this.datagvProductDetails = new System.Windows.Forms.DataGridView();
@@ -42,8 +43,6 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblWareenty = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblRating = new System.Windows.Forms.Label();
-            this.cmbxRatings = new System.Windows.Forms.ComboBox();
             this.lblSortedBy = new System.Windows.Forms.Label();
             this.cmboxSortedBy = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
@@ -51,12 +50,15 @@
             this.lblProductDetails = new System.Windows.Forms.Label();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.txtbxName = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtbxName);
+            this.groupBox1.Controls.Add(this.lblShhopkeekper);
             this.groupBox1.Controls.Add(this.lblDatagvSignal);
             this.groupBox1.Controls.Add(this.btnLoadRecords);
             this.groupBox1.Controls.Add(this.datagvProductDetails);
@@ -70,8 +72,6 @@
             this.groupBox1.Controls.Add(this.lblPrice);
             this.groupBox1.Controls.Add(this.lblWareenty);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.lblRating);
-            this.groupBox1.Controls.Add(this.cmbxRatings);
             this.groupBox1.Controls.Add(this.lblSortedBy);
             this.groupBox1.Controls.Add(this.cmboxSortedBy);
             this.groupBox1.Controls.Add(this.lblCategory);
@@ -86,13 +86,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // lblShhopkeekper
+            // 
+            this.lblShhopkeekper.AutoSize = true;
+            this.lblShhopkeekper.Location = new System.Drawing.Point(314, 495);
+            this.lblShhopkeekper.Name = "lblShhopkeekper";
+            this.lblShhopkeekper.Size = new System.Drawing.Size(146, 20);
+            this.lblShhopkeekper.TabIndex = 84;
+            this.lblShhopkeekper.Text = "Shopkeeper Name:";
+            // 
             // lblDatagvSignal
             // 
             this.lblDatagvSignal.AutoSize = true;
+            this.lblDatagvSignal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.lblDatagvSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
             this.lblDatagvSignal.Location = new System.Drawing.Point(21, 498);
             this.lblDatagvSignal.Name = "lblDatagvSignal";
-            this.lblDatagvSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblDatagvSignal.Size = new System.Drawing.Size(10, 13);
             this.lblDatagvSignal.TabIndex = 83;
             this.lblDatagvSignal.Text = " ";
             // 
@@ -120,6 +130,7 @@
             this.datagvProductDetails.Location = new System.Drawing.Point(25, 126);
             this.datagvProductDetails.Name = "datagvProductDetails";
             this.datagvProductDetails.ReadOnly = true;
+            this.datagvProductDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagvProductDetails.Size = new System.Drawing.Size(881, 355);
             this.datagvProductDetails.TabIndex = 81;
             this.datagvProductDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvProductDetails_CellContentClick);
@@ -233,31 +244,6 @@
             this.comboBox1.Size = new System.Drawing.Size(102, 28);
             this.comboBox1.TabIndex = 74;
             // 
-            // lblRating
-            // 
-            this.lblRating.AutoSize = true;
-            this.lblRating.Location = new System.Drawing.Point(229, 95);
-            this.lblRating.Name = "lblRating";
-            this.lblRating.Size = new System.Drawing.Size(72, 20);
-            this.lblRating.TabIndex = 73;
-            this.lblRating.Text = "Ratings :";
-            // 
-            // cmbxRatings
-            // 
-            this.cmbxRatings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxRatings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbxRatings.FormattingEnabled = true;
-            this.cmbxRatings.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
-            this.cmbxRatings.Location = new System.Drawing.Point(319, 92);
-            this.cmbxRatings.Name = "cmbxRatings";
-            this.cmbxRatings.Size = new System.Drawing.Size(60, 28);
-            this.cmbxRatings.TabIndex = 72;
-            this.cmbxRatings.SelectedIndexChanged += new System.EventHandler(this.cmbxRatings_SelectedIndexChanged);
-            // 
             // lblSortedBy
             // 
             this.lblSortedBy.AutoSize = true;
@@ -335,6 +321,22 @@
             this.lblSearch.Text = "Search:";
             this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
             // 
+            // txtbxName
+            // 
+            this.txtbxName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtbxName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtbxName.FormattingEnabled = true;
+            this.txtbxName.Items.AddRange(new object[] {
+            "CEO",
+            "Employee",
+            "Rider",
+            "Warehouse Manager"});
+            this.txtbxName.Location = new System.Drawing.Point(475, 490);
+            this.txtbxName.Name = "txtbxName";
+            this.txtbxName.Size = new System.Drawing.Size(107, 28);
+            this.txtbxName.TabIndex = 85;
+            this.txtbxName.SelectedIndexChanged += new System.EventHandler(this.txtbxName_SelectedIndexChanged);
+            // 
             // frmTakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -346,6 +348,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmTakeOrder";
             this.Text = "frmTakeOrder";
+            this.Load += new System.EventHandler(this.frmTakeOrder_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).EndInit();
@@ -361,8 +364,6 @@
         private System.Windows.Forms.Label lblProductDetails;
         private System.Windows.Forms.Label lblWareenty;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label lblRating;
-        private System.Windows.Forms.ComboBox cmbxRatings;
         private System.Windows.Forms.Label lblSortedBy;
         private System.Windows.Forms.ComboBox cmboxSortedBy;
         private System.Windows.Forms.Label lblCategory;
@@ -378,5 +379,7 @@
         private System.Windows.Forms.Button btnLoadRecords;
         private System.Windows.Forms.DataGridView datagvProductDetails;
         private System.Windows.Forms.Label lblDatagvSignal;
+        private System.Windows.Forms.Label lblShhopkeekper;
+        private System.Windows.Forms.ComboBox txtbxName;
     }
 }

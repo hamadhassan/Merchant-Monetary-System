@@ -66,12 +66,18 @@ namespace Merchant_Monetary_System.DL
         public static void storeAllRecordIntoFile(string path)
         {
             StreamWriter file = new StreamWriter(path);
-            foreach (Order record in OrdersList)
+            foreach (Order order in OrdersList)
             {
-                //file.WriteLine(record.Name + "," + record.SKU_Number + "," + record.Weight + "," + record.Volume
-                // + "," + record.SensitivityType + "," + record.Category + "," + record.Manufacturer);
+                file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," );
+                int i = 0;
+                foreach (Product product in ProductDL.ProductList1)
+                {
+                    if (i != 0) file.Write("|");
+                    file.Write(product.Name + ";" + product.Category + ";" + product.SKU_Number + ";" + product.Volume + ";" + product.Weight + ";" + product.Manufacturer+";"+product.SensitivityType);
+                    i++;
+                }
+                file.WriteLine();
             }
-            file.Flush();
             file.Close();
         }
 
@@ -79,60 +85,39 @@ namespace Merchant_Monetary_System.DL
         {
             ordersList.Clear();
         }
-        public static bool loadRecordFromFile(string path)
+        public static void loadRecordFromFile(string path)
         {
-            try
+            StreamReader file = new StreamReader(path);
+            string record;
+            while ((record = file.ReadLine()) != null && (record = file.ReadLine()) != null)
             {
-                clearList();
-                StreamReader fileVariable = new StreamReader(path);
-                string record;
-                if (File.Exists(path))
+                string[] SplittedRecord = record.Split(',');
+                string  RiderName = SplittedRecord[0];
+                string shopkeeperName = (SplittedRecord[1]);
+                int OrderID = Convert.ToInt16(SplittedRecord[2]);
+                Order order = new Order(RiderName, shopkeeperName, OrderID);
+                string[] products = SplittedRecord[4].Split('|');
+                foreach (string S in products)
                 {
-                    while ((record = fileVariable.ReadLine()) != null)
-                    {
-                    //    string[] spilitedRecord = record.Split(',');
-                    //    string Name = spilitedRecord[0];
-                    //    int SKU_Number = Convert.ToInt16(spilitedRecord[1]);
-                    //    double Weight = Convert.ToDouble(spilitedRecord[2]);
-                    //    double Volume = Convert.ToDouble(spilitedRecord[3]); ;
-                    //    string SensitivityType = spilitedRecord[4];
-
-                        Order order = new Order();
-                        OrdersList.Add(order);
-                    }
-                    fileVariable.Close();
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception exp)
-            {
-                MessageBox.Show(exp.Message);
-                return false;
-            }
-
-        }
-
-        private static void cath()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static Order returnOrder(int OrderID)
-        {
-            foreach (Order order in OrdersList)
-            {
-                if (order.OrderID == OrderID)
-                {
-                    return order;
+                    string[] eachProduct = S.Split(';');
+                    string Name = eachProduct[0];
+                    string Category = eachProduct[1];
+                    int SKU_Number = Convert.ToInt16(eachProduct[2]);
+                    double Volume = Convert.ToInt64(eachProduct[3]);
+                    double Weight = Convert.ToInt64(eachProduct[4]);
+                    string Manufacturer = eachProduct[5];
+                    string SensitivityType = eachProduct[6];
+                    Product product = new Product(Name,SKU_Number,Weight, Volume, Manufacturer,Category,SensitivityType);
+                    ProductDL.InsertProduct(product);
+                    order.Order_products.Add(product);
+                    OrderDL.InsertProduct(order);
                 }
             }
-            return null;
+            file.Close();
         }
-
 
     }
+
+
+
 }

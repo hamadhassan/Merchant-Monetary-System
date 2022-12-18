@@ -99,5 +99,14 @@ namespace Merchant_Monetary_System.DL
             }
             return false;
         }
+        public static List<string> Shopkeepers_names() 
+        {
+            List<string> names = new List<string>();
+            foreach (Shopkeeper name in shopkeeperList) 
+            {
+                names.Add(name.ShopkeeperName);
+            }
+            return names;
+        }
     }
 }
