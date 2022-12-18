@@ -31,15 +31,8 @@ namespace Merchant_Monetary_System
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-                Application.Run(new frmReports());
-=======
-<<<<<<< Updated upstream
-                Application.Run(new ViewShopkeeperDetails());
-=======
+
                 Application.Run(new frmCEODashboard());
->>>>>>> Stashed changes
->>>>>>> c38768b471d3f8a37d93a92ef975f054ef1bf107
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
             

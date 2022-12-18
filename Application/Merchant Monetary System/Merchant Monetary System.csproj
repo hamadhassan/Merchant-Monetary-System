@@ -183,7 +183,6 @@
     <Compile Include="Forms\Stock\frmViewStockDetails.Designer.cs">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="frmReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,14 +190,12 @@
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Reportes.cs" />
-=======
     <Compile Include="frmOrderDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmOrderDetails.Designer.cs">
       <DependentUpon>frmOrderDetails.cs</DependentUpon>
     </Compile>
->>>>>>> c38768b471d3f8a37d93a92ef975f054ef1bf107
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -504,13 +501,12 @@
     <EmbeddedResource Include="Forms\Stock\frmViewStockDetails.resx">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>
-=======
     <EmbeddedResource Include="frmOrderDetails.resx">
       <DependentUpon>frmOrderDetails.cs</DependentUpon>
->>>>>>> c38768b471d3f8a37d93a92ef975f054ef1bf107
+    <EmbeddedResource Include="frmOrderDetails.resx">
+      <DependentUpon>frmOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route\frmRoutes.resx">
       <DependentUpon>frmRoutes.cs</DependentUpon>
