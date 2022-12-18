@@ -36,7 +36,7 @@ namespace Merchant_Monetary_System.DL
             }
             return false;
         }
-        public static Order FoundOrder(int ID)
+        public static Order FoundOrder(string ID)
         {// the product  data matched with the database result
             foreach (Order order  in OrdersList)
             {
@@ -94,7 +94,7 @@ namespace Merchant_Monetary_System.DL
                 string[] SplittedRecord = record.Split(',');
                 string  RiderName = SplittedRecord[0];
                 string shopkeeperName = (SplittedRecord[1]);
-                int OrderID = Convert.ToInt16(SplittedRecord[2]);
+                string OrderID = (SplittedRecord[2]);
                 Order order = new Order(RiderName, shopkeeperName, OrderID);
                 string[] products = SplittedRecord[4].Split('|');
                 foreach (string S in products)

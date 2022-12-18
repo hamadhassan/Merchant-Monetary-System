@@ -115,9 +115,8 @@ namespace Merchant_Monetary_System
             try
             {
                 Order order = new Order(shopkeeper, rider, cart);
-                for (int i = 0; i < cart.Count; i++) 
-                    order.Order_products.Add(cart[i]); 
                 OrderDL.ordersList.Add(order);
+                OrderDL.storeAllRecordIntoFile(FilePath.Orders);
                 MessageBox.Show("Order Added");
             }
             catch (Exception exp) 
@@ -137,7 +136,7 @@ namespace Merchant_Monetary_System
         {
             Form form = new frmTakeOrder(rider);
             form.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

@@ -58,7 +58,7 @@ namespace Merchant_Monetary_System
             //3. Cover mao with overlay
             map.Overlays.Add(markers);
             map.AutoScroll = true;
-            map.refreshMap();
+           // map.refreshMap();
             //------------------Get Route----------------------
             //Start: Arifwala End:UET Lahore
             //GetRoutes(start, end);

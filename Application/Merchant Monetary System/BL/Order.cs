@@ -13,12 +13,12 @@ namespace Merchant_Monetary_System.BL
         private List<Product> order_products;
         private string shopKeeperName;
         private string riderName;
-        private int orderID;
+        private string orderID;
 
         public string RiderName { get => riderName; set => riderName = value; }
         public string ShopKeeperName { get => shopKeeperName; set => shopKeeperName = value; }
         public List<Product> Order_products { get => order_products; set => order_products = value; }
-        public int OrderID { get => orderID; set => orderID = value; }
+        public string OrderID { get => orderID; set => orderID = value; }
 
         public Order() { }
         public static string generateOrderID(int _characterLength = 5)
@@ -38,17 +38,17 @@ namespace Merchant_Monetary_System.BL
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
-            this.OrderID = Convert.ToInt16(generateOrderID());
+            this.OrderID = (generateOrderID());
             this.Order_products = new List<Product>();
         }
         public Order(string ShopKeeperName, string RiderName, List<Product>product)
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
-            this.OrderID = Convert.ToInt16(generateOrderID()); ;
+            this.OrderID = (generateOrderID()); ;
             this.Order_products = product;
         }
-        public Order(string ShopKeeperName, string RiderName, int OrderID)
+        public Order(string ShopKeeperName, string RiderName, string OrderID)
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
