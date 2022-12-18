@@ -167,7 +167,11 @@ namespace Merchant_Monetary_System
             {
                 StockDL.MergeStock(newStock, StockDL.StockList);
                 MessageBox.Show("Stock Added Successfully \n Sending Email...","Stock Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+<<<<<<< Updated upstream
                 Misc.sendEmail("merchantmonetarysystem11@gmail.com", "Stock Added", "Stock has been Added in the warehouse" + "<br> + Date: " + DateTime.Now + "<br> Vendor: " + comboBoxVendor.Text, "Employee");
+=======
+                Misc.sendEmail("merchantmonetarysystem@gmail.com", "Stock Added", "Stock has been Added in the warehouse" + "<br> + Date: " + DateTime.Now + "<br> Vendor: " + comboBoxVendor.Text, "Employee");
+>>>>>>> Stashed changes
             }
             else
             {

@@ -30,7 +30,11 @@ namespace Merchant_Monetary_System
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
                 Application.Run(new frmRiderDashboard());
+=======
+                Application.Run(new frmTakeOrder("Ali"));
+>>>>>>> Stashed changes
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 
