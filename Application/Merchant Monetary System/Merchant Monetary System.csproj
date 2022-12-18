@@ -503,8 +503,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>
+      </EmbeddedResource>
     <EmbeddedResource Include="frmOrderDetails.resx">
       <DependentUpon>frmOrderDetails.cs</DependentUpon>
+      </EmbeddedResource>
     <EmbeddedResource Include="frmOrderDetails.resx">
       <DependentUpon>frmOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
