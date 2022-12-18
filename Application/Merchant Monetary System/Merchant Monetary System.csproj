@@ -104,16 +104,16 @@
     <Compile Include="Forms\Product\UpdatStock.Designer.cs">
       <DependentUpon>UpdatStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateShop.cs">
+    <Compile Include="Forms\Shop\frmUpdateShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateShop.Designer.cs">
+    <Compile Include="Forms\Shop\frmUpdateShop.Designer.cs">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmViewStockDetails.cs">
+    <Compile Include="Forms\Stock\frmViewStockDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewStockDetails.Designer.cs">
+    <Compile Include="Forms\Stock\frmViewStockDetails.Designer.cs">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Route\frmRoutes.cs">
@@ -122,10 +122,10 @@
     <Compile Include="Route\frmRoutes.Designer.cs">
       <DependentUpon>frmRoutes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmViewCategory.cs">
+    <Compile Include="Forms\Shop\frmViewCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewCategory.Designer.cs">
+    <Compile Include="Forms\Shop\frmViewCategory.Designer.cs">
       <DependentUpon>frmViewCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Route\ConfigAPI.cs" />
@@ -301,22 +301,22 @@
     <Compile Include="DL\UsersDL.cs" />
     <Compile Include="BL\Warehouse.cs" />
     <Compile Include="DL\WarehouseDL.cs" />
-    <Compile Include="UpdateShopKeeper.cs">
+    <Compile Include="Forms\Shop\UpdateShopKeeper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateShopKeeper.Designer.cs">
+    <Compile Include="Forms\Shop\UpdateShopKeeper.Designer.cs">
       <DependentUpon>UpdateShopKeeper.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewShopkeeperDetails.cs">
+    <Compile Include="Forms\Shop\ViewShopkeeperDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewShopkeeperDetails.Designer.cs">
+    <Compile Include="Forms\Shop\ViewShopkeeperDetails.Designer.cs">
       <DependentUpon>ViewShopkeeperDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewShops.cs">
+    <Compile Include="Forms\Shop\ViewShops.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewShops.Designer.cs">
+    <Compile Include="Forms\Shop\ViewShops.Designer.cs">
       <DependentUpon>ViewShops.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Dashboards\frmCEODashboard.resx">
@@ -400,16 +400,16 @@
     <EmbeddedResource Include="Forms\Users\frmADDvendor.resx">
       <DependentUpon>frmADDvendor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateShop.resx">
+    <EmbeddedResource Include="Forms\Shop\frmUpdateShop.resx">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewStockDetails.resx">
+    <EmbeddedResource Include="Forms\Stock\frmViewStockDetails.resx">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route\frmRoutes.resx">
       <DependentUpon>frmRoutes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewCategory.resx">
+    <EmbeddedResource Include="Forms\Shop\frmViewCategory.resx">
       <DependentUpon>frmViewCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -422,13 +422,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UpdateShopKeeper.resx">
+    <EmbeddedResource Include="Forms\Shop\UpdateShopKeeper.resx">
       <DependentUpon>UpdateShopKeeper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewShopkeeperDetails.resx">
+    <EmbeddedResource Include="Forms\Shop\ViewShopkeeperDetails.resx">
       <DependentUpon>ViewShopkeeperDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewShops.resx">
+    <EmbeddedResource Include="Forms\Shop\ViewShops.resx">
       <DependentUpon>ViewShops.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />

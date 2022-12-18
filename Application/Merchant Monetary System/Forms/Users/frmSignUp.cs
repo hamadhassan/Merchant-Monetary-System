@@ -16,8 +16,8 @@ namespace Merchant_Monetary_System
         Users previousObj= null;//this is used for edit button
         bool isCEO=false;//if isCEO true then all task of CEO implemented else Employee
         int roleId = 0; //0 for First time create account, 1 for CEO and 2 for Employee 
-        int createAccountFor = 0;//3 for warehouse manger and 4 for rider
-        bool isForWarehouseManager=false; // if it is true it means user come for create account for warehouse manager and from the given list delete all other option from cmbxdesignation
+        int createAccountFor = 0;//3 for warehouse manger and 4 for rider to call relivent object 
+        bool isForWarehouseManager=false; // It true means it come for add warehouue manager 
         public frmSignUp()
         {
             InitializeComponent();
@@ -193,7 +193,6 @@ namespace Merchant_Monetary_System
                 cmbxDesignation.Enabled = false;
                 cmbxWarehouse.SelectedIndex = 0;
             }
-            cmbxDesignation.SelectedIndex = 0;
 
 
         }
@@ -440,18 +439,16 @@ namespace Merchant_Monetary_System
            
             if (cmbxDesignation.SelectedIndex == 2)
             {//rider is selected
-               // lblVehicle.Visible = true;
-               // cmbxVehicle.Visible = true;
                 lblWarehouse.Visible = false;
                 cmbxWarehouse.Visible = false;
                 createAccountFor = 4;
+                //add all vehichle for rider
+
             }
             else if(cmbxDesignation.SelectedIndex==3)
             {//warehouse is selected
                 lblWarehouse.Visible = true;
                 cmbxWarehouse.Visible = true;
-               // lblVehicle.Visible = false;
-               // cmbxVehicle.Visible = false;
                 createAccountFor = 3;
                 WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
                 //add all warehouse 
@@ -464,8 +461,6 @@ namespace Merchant_Monetary_System
             {
                 lblWarehouse.Visible = false;
                 cmbxWarehouse.Visible = false;
-              //  lblVehicle.Visible = false;
-                //cmbxVehicle.Visible = false;
             }
         }
 
@@ -495,164 +490,9 @@ namespace Merchant_Monetary_System
             txtbxConfirmPassword.UseSystemPasswordChar = true;
         }
 
-        private void gbx_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreateAccount_MouseLeave(object sender, EventArgs e)
         {//remove signals
             lblRecordSignal.Text = " ";
-        }
-
-        private void lblWarehouse_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbxWarehouse_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRecordSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnShowPasswrd2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnShowPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHomeAddressSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblVehicle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbxVehicle_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmailAddressSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblContactNumberSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblGenderSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblConfirmPasswordSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNewPasswordSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUsernameSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNameSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCNICSignal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDesignationSingal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdbtnFemale_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdbtnMale_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCNIC_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHomeAddress_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNewPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmailAddress_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblConfirmPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblContactNumber_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblGender_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDesignation_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSignUp_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
