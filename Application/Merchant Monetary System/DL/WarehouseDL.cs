@@ -66,10 +66,11 @@ namespace Merchant_Monetary_System
         public static bool loadRecordFromFile(string path)
         {
             clearList();
-            StreamReader fileVariable = new StreamReader(path);
-            string record;
+            
             if (File.Exists(path))
             {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
                 while ((record = fileVariable.ReadLine()) != null)
                 {
                     string[] spilitedRecord = record.Split(',');

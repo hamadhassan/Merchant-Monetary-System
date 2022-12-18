@@ -190,7 +190,7 @@ namespace Merchant_Monetary_System
 
         private void txtbxUsername_Leave(object sender, EventArgs e)
         {
-            if (!(UsersDL.isUsernameExit(txtbxUsername.Text)))
+            if ((UsersDL.isUsernameExit(cmbxDesignation.Text,txtbxUsername.Text)))
             {
                 lblUsernameSignal.Text = "Enter correct username";
             }

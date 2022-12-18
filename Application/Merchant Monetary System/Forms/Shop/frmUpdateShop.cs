@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,7 +51,17 @@ namespace Merchant_Monetary_System
                 MessageBox.Show("Shop Details Updated");
             }
         }
-
+        public bool isValidString(string input)
+        {
+            bool isValid = true;
+            isValid = Regex.IsMatch(input, @"^[a-zA-Z]+$");
+            foreach (char c in input)
+            {
+                if (!Char.IsLetter(c))
+                    isValid = false;
+            }
+            return isValid;
+        }
         private void txtbxShopName_TextChanged(object sender, EventArgs e)
         {
             int i;
@@ -59,7 +70,7 @@ namespace Merchant_Monetary_System
                 lblShopSignal.Text = "Enter the name";
                 isShop = true;
             }
-            else if (txtbxShopName.Text.Any(ch => !char.IsLetter(ch)))
+            else if (isValidString(txtbxShopName.Text)==false)
             {//check isSpecialCharactor
                 lblShopSignal.Text = "Allowed characters: a-z, A-Z";
                 isShop = true;

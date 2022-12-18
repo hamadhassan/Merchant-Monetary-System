@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -46,7 +47,17 @@ namespace Merchant_Monetary_System
         {
             this.Hide();
         }
-
+        public bool isValidString(string input)
+        {
+            bool isValid = true;
+            isValid = Regex.IsMatch(input, @"^[a-zA-Z]+$");
+            foreach (char c in input)
+            {
+                if (!Char.IsLetter(c))
+                    isValid = false;
+            }
+            return isValid;
+        }
         private void txtbxName_TextChanged_1(object sender, EventArgs e)
         {
             int i;
@@ -55,7 +66,7 @@ namespace Merchant_Monetary_System
                 lblNameSignal.Text = "Enter the name";
                 isName = true;
             }
-            else if (int.TryParse(txtbxName.Text, out i))
+            else if (isValidString(txtbxName.Text)==false)
             {//Check isnumberic
                 lblNameSignal.Text = "Allowed characters: a-z, A-Z";
                 isName = true;

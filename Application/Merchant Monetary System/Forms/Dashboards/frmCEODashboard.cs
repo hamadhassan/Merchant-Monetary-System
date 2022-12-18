@@ -82,7 +82,7 @@ namespace Merchant_Monetary_System
 
         private void signUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmSignUp(1));
+            loadform(new frmSignUp(3));
         }
 
         private void btnAddWarehouseManger_Click(object sender, EventArgs e)
