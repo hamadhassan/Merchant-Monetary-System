@@ -166,6 +166,8 @@ namespace Merchant_Monetary_System
             if(newStock.Count !=0)
             {
                 StockDL.MergeStock(newStock, StockDL.StockList);
+                MessageBox.Show("Stock Added Successfully \n Sending Email...","Stock Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                Misc.sendEmail("merchantmonetarysystem11@gmail.com", "Stock Added", "Stock has been Added in the warehouse" + "<br> + Date: " + DateTime.Now + "<br> Vendor: " + comboBoxVendor.Text, "Employee");
             }
             else
             {

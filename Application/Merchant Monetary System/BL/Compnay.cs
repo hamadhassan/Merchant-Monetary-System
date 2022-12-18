@@ -11,11 +11,14 @@ namespace Merchant_Monetary_System
         private string name;
         private string address;
         private int phone;
+        private double revenue;
         private static Compnay instance = null;
 
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }
         public int Phone { get => phone; set => phone = value; }
+        public double Revenue { get => revenue; set => revenue = value; }
+
         public static Compnay Instance(string name,string address,int phone)
         {
             if (instance == null)

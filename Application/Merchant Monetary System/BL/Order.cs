@@ -41,11 +41,11 @@ namespace Merchant_Monetary_System.BL
             this.OrderID = Convert.ToInt16(generateOrderID());
             this.Order_products = new List<Product>();
         }
-        public Order(string ShopKeeperName, string RiderName, int OrderID,List<Product>product)
+        public Order(string ShopKeeperName, string RiderName, List<Product>product)
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
-            this.OrderID = OrderID;
+            this.OrderID = Convert.ToInt16(generateOrderID()); ;
             this.Order_products = product;
         }
         public Order(string ShopKeeperName, string RiderName, int OrderID)

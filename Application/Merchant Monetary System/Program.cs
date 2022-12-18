@@ -30,21 +30,13 @@ namespace Merchant_Monetary_System
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
-                Application.Run(new frmTakeOrder("Ali"));
-            }
-            catch (Exception exp) { MessageBox.Show(exp.Message); }
-
-
-=======
-                Application.Run(new frmViewLedger());
+                Application.Run(new frmRiderDashboard());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmAddShopkeeper());
->>>>>>> Stashed changes
         }
     }
 }

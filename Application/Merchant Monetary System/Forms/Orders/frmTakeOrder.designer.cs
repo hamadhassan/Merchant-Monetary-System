@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtbxName = new System.Windows.Forms.ComboBox();
             this.lblShhopkeekper = new System.Windows.Forms.Label();
             this.lblDatagvSignal = new System.Windows.Forms.Label();
             this.btnLoadRecords = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.lblProductDetails = new System.Windows.Forms.Label();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.txtbxName = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +85,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtbxName
+            // 
+            this.txtbxName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtbxName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtbxName.FormattingEnabled = true;
+            this.txtbxName.Items.AddRange(new object[] {
+            "CEO",
+            "Employee",
+            "Rider",
+            "Warehouse Manager"});
+            this.txtbxName.Location = new System.Drawing.Point(475, 490);
+            this.txtbxName.Name = "txtbxName";
+            this.txtbxName.Size = new System.Drawing.Size(107, 28);
+            this.txtbxName.TabIndex = 85;
+            this.txtbxName.SelectedIndexChanged += new System.EventHandler(this.txtbxName_SelectedIndexChanged);
             // 
             // lblShhopkeekper
             // 
@@ -148,6 +164,7 @@
             this.btnEdit.TabIndex = 75;
             this.btnEdit.Text = "Veiw Cart";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnClose
             // 
@@ -320,22 +337,6 @@
             this.lblSearch.TabIndex = 65;
             this.lblSearch.Text = "Search:";
             this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
-            // 
-            // txtbxName
-            // 
-            this.txtbxName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtbxName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtbxName.FormattingEnabled = true;
-            this.txtbxName.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
-            this.txtbxName.Location = new System.Drawing.Point(475, 490);
-            this.txtbxName.Name = "txtbxName";
-            this.txtbxName.Size = new System.Drawing.Size(107, 28);
-            this.txtbxName.TabIndex = 85;
-            this.txtbxName.SelectedIndexChanged += new System.EventHandler(this.txtbxName_SelectedIndexChanged);
             // 
             // frmTakeOrder
             // 

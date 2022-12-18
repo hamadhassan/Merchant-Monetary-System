@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Merchant_Monetary_System.BL;
-<<<<<<< Updated upstream
-=======
 using System.IO;
->>>>>>> Stashed changes
+
 
 namespace Merchant_Monetary_System.DL
 {
@@ -21,13 +19,6 @@ namespace Merchant_Monetary_System.DL
         {
             VehicleList.Add(vehicle);
         }
-<<<<<<< Updated upstream
-        public static void deleteVehicle(Vehicle V)
-        {
-            VehicleList.Remove(V);
-        }
-
-=======
         public static bool deleteVehicle(Vehicle V)
         {
             foreach(Vehicle vehicle in VehicleList)
@@ -84,6 +75,5 @@ namespace Merchant_Monetary_System.DL
             }
             return false;
         }
->>>>>>> Stashed changes
     }
 }

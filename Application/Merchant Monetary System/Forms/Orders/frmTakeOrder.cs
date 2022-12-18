@@ -106,5 +106,11 @@ namespace Merchant_Monetary_System
         {
             txtbxName.DataSource = ShopKeeperDL.Shopkeepers_names();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Form form = new frmViewOrders(txtbxName.Text,name,cartlist);
+            form.Show();
+        }
     }
 }

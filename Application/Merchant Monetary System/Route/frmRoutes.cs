@@ -81,5 +81,9 @@ namespace Merchant_Monetary_System
             lblMessage.Text=Convert.ToString(route.Distance)+" KM";
         }
 
+        private void map_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
