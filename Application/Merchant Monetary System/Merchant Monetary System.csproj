@@ -82,17 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Category.cs" />
-    <Compile Include="BL\Order.cs" />
     <Compile Include="BL\Shop.cs" />
     <Compile Include="BL\Shopkeeper.cs" />
     <Compile Include="BL\Stock.cs" />
     <Compile Include="BL\Vendor.cs" />
     <Compile Include="DL\categoryDL.cs" />
-<<<<<<< Updated upstream
     <Compile Include="DL\Misc.cs" />
-=======
-    <Compile Include="DL\OrderDL.cs" />
->>>>>>> Stashed changes
     <Compile Include="DL\shopDL.cs" />
     <Compile Include="DL\ShopKeeperDL.cs" />
     <Compile Include="DL\StockDL.cs" />
@@ -114,12 +109,6 @@
     </Compile>
     <Compile Include="frmUpdateShop.Designer.cs">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Users\frmVendorDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Users\frmVendorDetails.Designer.cs">
-      <DependentUpon>frmVendorDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewStockDetails.cs">
       <SubType>Form</SubType>
@@ -413,9 +402,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateShop.resx">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Users\frmVendorDetails.resx">
-      <DependentUpon>frmVendorDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewStockDetails.resx">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>

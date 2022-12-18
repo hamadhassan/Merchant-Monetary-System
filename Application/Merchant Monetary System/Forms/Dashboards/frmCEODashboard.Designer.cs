@@ -225,7 +225,6 @@
             this.updateVendorToolStripMenuItem.Name = "updateVendorToolStripMenuItem";
             this.updateVendorToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.updateVendorToolStripMenuItem.Text = "Update Vendor";
-            this.updateVendorToolStripMenuItem.Click += new System.EventHandler(this.updateVendorToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem1
             // 

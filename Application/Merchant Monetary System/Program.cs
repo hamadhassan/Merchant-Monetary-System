@@ -21,30 +21,20 @@ namespace Merchant_Monetary_System
         [STAThread]
         static void Main()
         {
-<<<<<<< Updated upstream
             ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
             Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
-=======
-            //.LoadDataFromFiles(FilePath.Shopkeeper);
->>>>>>> Stashed changes
 
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
                 Application.Run(new frmCEODashboard());
-=======
-                Application.Run(new frmTakeOrder());
->>>>>>> Stashed changes
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmAddShopkeeper());
-
-
         }
     }
 }

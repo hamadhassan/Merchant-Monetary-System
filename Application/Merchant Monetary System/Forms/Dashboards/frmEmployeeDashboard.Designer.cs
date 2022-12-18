@@ -60,6 +60,8 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStriplblTime = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.addRiderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewRidersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tParent.SuspendLayout();
@@ -98,26 +100,29 @@
             // signUpToolStripMenuItem
             // 
             this.signUpToolStripMenuItem.Name = "signUpToolStripMenuItem";
-            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signUpToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signUpToolStripMenuItem.Text = "SignUp";
             this.signUpToolStripMenuItem.Click += new System.EventHandler(this.signUpToolStripMenuItem_Click);
             // 
             // viewAccountsToolStripMenuItem
             // 
             this.viewAccountsToolStripMenuItem.Name = "viewAccountsToolStripMenuItem";
-            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewAccountsToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.viewAccountsToolStripMenuItem.Text = "Account Detail";
             this.viewAccountsToolStripMenuItem.Click += new System.EventHandler(this.viewAccountsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // riderToolStripMenuItem
             // 
+            this.riderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addRiderToolStripMenuItem,
+            this.viewRidersToolStripMenuItem});
             this.riderToolStripMenuItem.Name = "riderToolStripMenuItem";
             this.riderToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
             this.riderToolStripMenuItem.Text = "Rider";
@@ -203,6 +208,7 @@
             this.btnAddPayament.TabIndex = 64;
             this.btnAddPayament.Text = "Add Payment";
             this.btnAddPayament.UseVisualStyleBackColor = false;
+            this.btnAddPayament.Click += new System.EventHandler(this.btnAddPayament_Click);
             // 
             // btnAddEmployee
             // 
@@ -249,6 +255,7 @@
             this.btnOrderDetail.TabIndex = 61;
             this.btnOrderDetail.Text = "Order Detail";
             this.btnOrderDetail.UseVisualStyleBackColor = false;
+            this.btnOrderDetail.Click += new System.EventHandler(this.btnOrderDetail_Click);
             // 
             // btnAddProduct
             // 
@@ -264,6 +271,7 @@
             this.btnAddProduct.TabIndex = 62;
             this.btnAddProduct.Text = "Add Product";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btnViewProduct
             // 
@@ -279,6 +287,7 @@
             this.btnViewProduct.TabIndex = 63;
             this.btnViewProduct.Text = "View Product";
             this.btnViewProduct.UseVisualStyleBackColor = false;
+            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
             // 
             // btnViewReport
             // 
@@ -324,6 +333,7 @@
             this.btnAddStock.TabIndex = 66;
             this.btnAddStock.Text = "Add Stock";
             this.btnAddStock.UseVisualStyleBackColor = false;
+            this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
             // 
             // btnSendEmail
             // 
@@ -339,6 +349,7 @@
             this.btnSendEmail.TabIndex = 67;
             this.btnSendEmail.Text = "Send Email";
             this.btnSendEmail.UseVisualStyleBackColor = false;
+            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
             // tParent
             // 
@@ -402,6 +413,18 @@
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // addRiderToolStripMenuItem
+            // 
+            this.addRiderToolStripMenuItem.Name = "addRiderToolStripMenuItem";
+            this.addRiderToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.addRiderToolStripMenuItem.Text = "Add Rider";
+            // 
+            // viewRidersToolStripMenuItem
+            // 
+            this.viewRidersToolStripMenuItem.Name = "viewRidersToolStripMenuItem";
+            this.viewRidersToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewRidersToolStripMenuItem.Text = "View Riders";
+            // 
             // frmEmployeeDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -460,5 +483,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStriplblTime;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ToolStripMenuItem addRiderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewRidersToolStripMenuItem;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Merchant_Monetary_System.Forms.Emails;
+using Merchant_Monetary_System.Forms.Payment;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +23,7 @@ namespace Merchant_Monetary_System
             if (this.tParent.Controls.Count > 0)
                 this.tParent.Controls.RemoveAt(0);
             Form f = Form as Form;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.tParent.Controls.Add(f);
@@ -61,6 +64,41 @@ namespace Merchant_Monetary_System
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmLogin());
+        }
+
+        private void btnOrderDetail_Click(object sender, EventArgs e)
+        {
+            loadform(new frmViewOrders());
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddProduct());
+        }
+
+        private void btnViewProduct_Click(object sender, EventArgs e)
+        {
+            loadform(new frmProductDetails_());
+        }
+
+        private void btnAddStock_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddStock());
+        }
+
+        private void btnSendEmail_Click(object sender, EventArgs e)
+        {
+            loadform(new frmEmail());
+        }
+
+        private void btnAddPayament_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddPayment());
+        }
+
+        private void riderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

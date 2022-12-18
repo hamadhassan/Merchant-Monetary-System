@@ -145,11 +145,9 @@
             this.datagvVendorsDetails.AllowUserToDeleteRows = false;
             this.datagvVendorsDetails.BackgroundColor = System.Drawing.SystemColors.Control;
             this.datagvVendorsDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvVendorsDetails.ColumnHeadersVisible = false;
             this.datagvVendorsDetails.Location = new System.Drawing.Point(25, 133);
             this.datagvVendorsDetails.Name = "datagvVendorsDetails";
             this.datagvVendorsDetails.ReadOnly = true;
-            this.datagvVendorsDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagvVendorsDetails.Size = new System.Drawing.Size(881, 351);
             this.datagvVendorsDetails.TabIndex = 84;
             this.datagvVendorsDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvVendorsDetails_CellContentClick);

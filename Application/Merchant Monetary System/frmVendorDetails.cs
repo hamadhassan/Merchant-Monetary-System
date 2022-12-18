@@ -26,7 +26,6 @@ namespace Merchant_Monetary_System
         {
             btnLoadRecords.Visible = false;
             datagvVendorsDetails.Visible = true;
-            VendorDL.loadRecordFromFile(FilePath.Vendors);
 
             DataBind();
         }
@@ -43,7 +42,7 @@ namespace Merchant_Monetary_System
                 datagvVendorsDetails.Columns.Clear();
 
                 datagvVendorsDetails.DataSource = null;
-
+                VendorDL.loadRecordFromFile(FilePath.Vendors);
                 datagvVendorsDetails.DataSource = VendorDL.VendorList;
                 DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
                 Update.HeaderText = "Update";
@@ -53,14 +52,8 @@ namespace Merchant_Monetary_System
                 Delete.HeaderText = "Delete";
                 Delete.Text = "Delete";
                 Delete.UseColumnTextForButtonValue = true;
-                DataGridViewButtonColumn Pay = new DataGridViewButtonColumn();
-                Pay.HeaderText = "Pay";
-                Pay.Text = "Pay";
-
-                Pay.UseColumnTextForButtonValue = true;
                 datagvVendorsDetails.Columns.Add(Update);
                 datagvVendorsDetails.Columns.Add(Delete);
-                datagvVendorsDetails.Columns.Add(Pay);
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
@@ -75,9 +68,7 @@ namespace Merchant_Monetary_System
                 {
                     Form form = new frmUpdateVendor(S);
                     form.ShowDialog();
-                    VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
-                    
-
+                   VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
                 }
                 else if (index == 6)
                 {
@@ -85,22 +76,12 @@ namespace Merchant_Monetary_System
                     if (done)
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
                     }
                     else
                     {
                         MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                else if (index == 7)
-                {
-                    Form form = new frmUpdateVendor(S);
-                    form.ShowDialog();
-                   // VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
-
-
-                }
-                DataBind();
             }
             else
             {
@@ -141,7 +122,7 @@ namespace Merchant_Monetary_System
                     {
                         VendorDL.deleteVendor(S);
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+                        DataBind();
                         VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
 
                     }
@@ -151,7 +132,7 @@ namespace Merchant_Monetary_System
                     if (VendorDL.VendorList.Count != 0)
                         lblDatagvSignal.Text = "Select a row from the list";
                 }
-            DataBind();
+            
         }
     }
 }
