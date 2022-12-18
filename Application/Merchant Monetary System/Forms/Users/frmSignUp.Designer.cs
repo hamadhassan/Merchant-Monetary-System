@@ -70,10 +70,10 @@
             this.lblRecordSignal = new System.Windows.Forms.Label();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.lblConfirmPasswordSignal = new System.Windows.Forms.Label();
-            this.lblWarehouse = new System.Windows.Forms.Label();
+            this.lbAssigned = new System.Windows.Forms.Label();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.cmbxWarehouse = new System.Windows.Forms.ComboBox();
+            this.cmbxAssigned = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.txtbxConfirmPassword = new System.Windows.Forms.TextBox();
             this.lblHomeAddress = new System.Windows.Forms.Label();
@@ -616,7 +616,7 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.80222F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.19778F));
             this.tableLayoutPanel13.Controls.Add(this.lblConfirmPasswordSignal, 1, 1);
-            this.tableLayoutPanel13.Controls.Add(this.lblWarehouse, 0, 2);
+            this.tableLayoutPanel13.Controls.Add(this.lbAssigned, 0, 2);
             this.tableLayoutPanel13.Controls.Add(this.lblConfirmPassword, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel18, 1, 2);
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel15, 1, 0);
@@ -641,14 +641,14 @@
             this.lblConfirmPasswordSignal.TabIndex = 22;
             this.lblConfirmPasswordSignal.Text = " ";
             // 
-            // lblWarehouse
+            // lbAssigned
             // 
-            this.lblWarehouse.AutoSize = true;
-            this.lblWarehouse.Location = new System.Drawing.Point(3, 60);
-            this.lblWarehouse.Name = "lblWarehouse";
-            this.lblWarehouse.Size = new System.Drawing.Size(99, 20);
-            this.lblWarehouse.TabIndex = 35;
-            this.lblWarehouse.Text = "Warehouse :";
+            this.lbAssigned.AutoSize = true;
+            this.lbAssigned.Location = new System.Drawing.Point(3, 60);
+            this.lbAssigned.Name = "lbAssigned";
+            this.lbAssigned.Size = new System.Drawing.Size(99, 20);
+            this.lbAssigned.TabIndex = 35;
+            this.lbAssigned.Text = "Warehouse :";
             // 
             // lblConfirmPassword
             // 
@@ -664,7 +664,7 @@
             // 
             this.tableLayoutPanel18.ColumnCount = 1;
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Controls.Add(this.cmbxWarehouse, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.cmbxAssigned, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(146, 63);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
@@ -673,17 +673,17 @@
             this.tableLayoutPanel18.Size = new System.Drawing.Size(387, 53);
             this.tableLayoutPanel18.TabIndex = 14;
             // 
-            // cmbxWarehouse
+            // cmbxAssigned
             // 
-            this.cmbxWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbxWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbxWarehouse.FormattingEnabled = true;
-            this.cmbxWarehouse.Location = new System.Drawing.Point(3, 3);
-            this.cmbxWarehouse.Name = "cmbxWarehouse";
-            this.cmbxWarehouse.Size = new System.Drawing.Size(183, 26);
-            this.cmbxWarehouse.Sorted = true;
-            this.cmbxWarehouse.TabIndex = 34;
+            this.cmbxAssigned.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxAssigned.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxAssigned.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxAssigned.FormattingEnabled = true;
+            this.cmbxAssigned.Location = new System.Drawing.Point(3, 3);
+            this.cmbxAssigned.Name = "cmbxAssigned";
+            this.cmbxAssigned.Size = new System.Drawing.Size(183, 26);
+            this.cmbxAssigned.Sorted = true;
+            this.cmbxAssigned.TabIndex = 11;
             // 
             // tableLayoutPanel15
             // 
@@ -797,7 +797,7 @@
             this.btnClose.Location = new System.Drawing.Point(139, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 30);
-            this.btnClose.TabIndex = 11;
+            this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -811,7 +811,7 @@
             this.btnClear.Location = new System.Drawing.Point(349, 3);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(200, 30);
-            this.btnClear.TabIndex = 12;
+            this.btnClear.TabIndex = 13;
             this.btnClear.Text = "Clear All";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -825,7 +825,7 @@
             this.btnCreateAccount.Location = new System.Drawing.Point(563, 3);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(200, 30);
-            this.btnCreateAccount.TabIndex = 13;
+            this.btnCreateAccount.TabIndex = 14;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
@@ -971,8 +971,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.ComboBox cmbxWarehouse;
-        private System.Windows.Forms.Label lblWarehouse;
+        private System.Windows.Forms.ComboBox cmbxAssigned;
+        private System.Windows.Forms.Label lbAssigned;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Label lblHomeAddress;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;

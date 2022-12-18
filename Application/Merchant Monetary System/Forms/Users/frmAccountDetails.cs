@@ -50,6 +50,10 @@ namespace Merchant_Monetary_System
             {//employee is login into the system
                 datagvAccountDetails.DataSource = UsersDL.getUsersListExceptCEO();
             }
+            datagvAccountDetails.Columns["username"].Visible = false;
+            datagvAccountDetails.Columns["password"].Visible = false;
+            datagvAccountDetails.Columns["homeAddress"].Visible = false;
+            datagvAccountDetails.Columns["gender"].Visible = false;
             datagvAccountDetails.Refresh();
         }
 

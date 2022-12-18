@@ -67,7 +67,7 @@ namespace Merchant_Monetary_System
                 }
                 double cnic = Convert.ToInt64(txtbxCNIC.Text);
                 string emailAddress = txtbxEmailAddress.Text;
-                int contactNumber = Convert.ToInt32(txtbxContactNumber.Text);
+                double contactNumber = Convert.ToInt64(txtbxContactNumber.Text);
                 string homeAddress = rtxtbxHomeAddress.Text;
                 string username = txtbxUsername.Text;
                 string password = txtbxNewPassowrd.Text;
@@ -76,15 +76,10 @@ namespace Merchant_Monetary_System
                 {//for ceo and employee
                      user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password);
                 }
-                else if (createAccountFor == 3)
-                {//for warehouse manager
-                    int warehouseID = cmbxWarehouse.SelectedIndex;
-                    user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, warehouseID);
-                }
-                else if (createAccountFor == 4)
-                {//for rider
-                    //float vehicelID = cmbxVehicle.SelectedIndex;
-                    //user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, vehicelID);
+                else if (createAccountFor == 3 || createAccountFor==4)
+                {//for warehouse manager and rider 
+                    string assigned = cmbxAssigned.Text;
+                    user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, assigned);
                 }
                 if (previousObj != null)
                 {//for updating of account
@@ -93,6 +88,7 @@ namespace Merchant_Monetary_System
                         UsersDL.storeAllRecordIntoFile(FilePath.Users);
                         UsersDL.loadRecordFromFile(FilePath.Users);
                         lblRecordSignal.Text = "Account successfully updated";
+                        this.Hide();
 
                     }
                     else
@@ -110,15 +106,8 @@ namespace Merchant_Monetary_System
                         frmLogin.Show();
                         this.Hide();
                     }
-                    else if (roleId == 1 || roleId == 2)
+                    else if (roleId == 1 || roleId == 2 || createAccountFor==3 || createAccountFor==4)
                     {// close the form as it is open when the dashboard of ceo or rider
-                        clearField();
-                        txtbxUsername.Clear();
-                        lblRecordSignal.Text = "Account successfully created";
-                        this.Hide();
-                    }
-                    else if (createAccountFor == 3)
-                    {
                         clearField();
                         txtbxUsername.Clear();
                         lblRecordSignal.Text = "Account successfully created";
@@ -177,22 +166,30 @@ namespace Merchant_Monetary_System
                 lblSignUp.Left -= 130;
                 btnCreateAccount.Text = "Update";
                 txtbxUsername.Enabled = false;
-                if (isCEO == false)
+                cmbxDesignation.SelectedIndex = 0;
+                cmbxAssigned.Text = previousObj.Assigned;
+                if (isCEO == true)
                 {//Employee is enter into the sytem then it not able to change the the assign role of worker
                     cmbxDesignation.Enabled = false;
+                    cmbxDesignation.SelectedIndex = 0;
                 }
                 if (roleId == 2)
                 {
                     cmbxDesignation.Items.RemoveAt(0);
+                    cmbxDesignation.SelectedIndex = 0;
                 }
+            }
+            else
+            {
                 cmbxDesignation.SelectedIndex = 0;
             }
             if (isForWarehouseManager)
             {
                 cmbxDesignation.SelectedIndex = 3;
                 cmbxDesignation.Enabled = false;
-                cmbxWarehouse.SelectedIndex = 0;
+                cmbxAssigned.SelectedIndex = 0;
             }
+            
 
 
         }
@@ -371,13 +368,13 @@ namespace Merchant_Monetary_System
 
         private void txtbxContactNumber_TextChanged(object sender, EventArgs e)
         {
-            int i;
+            Int64 i;
             if (txtbxContactNumber.Text == string.Empty)
             {// check is empty
                 lblContactNumberSignal.Text = "Enter the contact number";
                 isPhone = true;
             }
-            else if (!int.TryParse(txtbxContactNumber.Text, out i))
+            else if (!Int64.TryParse(txtbxContactNumber.Text, out i))
             {//Check isalphabetic
                 lblContactNumberSignal.Text = "Allowed characters: 0-9";
                 isPhone = true;
@@ -439,28 +436,32 @@ namespace Merchant_Monetary_System
            
             if (cmbxDesignation.SelectedIndex == 2)
             {//rider is selected
-                lblWarehouse.Visible = false;
-                cmbxWarehouse.Visible = false;
+                lbAssigned.Text = "Vehicle";
+                lbAssigned.Visible = false;
+                cmbxAssigned.Visible = false;
                 createAccountFor = 4;
                 //add all vehichle for rider
 
+                //cmbxAssigned.SelectedIndex = 0;
             }
             else if(cmbxDesignation.SelectedIndex==3)
             {//warehouse is selected
-                lblWarehouse.Visible = true;
-                cmbxWarehouse.Visible = true;
+                lbAssigned.Text = "Warehouse";
+                lbAssigned.Visible = true;
+                cmbxAssigned.Visible = true;
                 createAccountFor = 3;
                 WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
                 //add all warehouse 
                 foreach (Warehouse w in WarehouseDL.WarehousesList)
                 {
-                    cmbxWarehouse.Items.Add(w.Name);
+                    cmbxAssigned.Items.Add(w.Name);
                 }
+                cmbxAssigned.SelectedIndex = 0;
             }
             else
             {
-                lblWarehouse.Visible = false;
-                cmbxWarehouse.Visible = false;
+                lbAssigned.Visible = false;
+                cmbxAssigned.Visible = false;
             }
         }
 

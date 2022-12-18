@@ -128,6 +128,7 @@
             // 
             this.datagvAccountDetails.AllowUserToAddRows = false;
             this.datagvAccountDetails.AllowUserToDeleteRows = false;
+            this.datagvAccountDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.datagvAccountDetails.BackgroundColor = System.Drawing.SystemColors.Control;
             this.datagvAccountDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagvAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
