@@ -380,6 +380,7 @@
             this.txtbxUsername.Size = new System.Drawing.Size(203, 25);
             this.txtbxUsername.TabIndex = 2;
             this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
+            this.txtbxUsername.Leave += new System.EventHandler(this.txtbxUsername_Leave);
             // 
             // txtbxContactNumber
             // 

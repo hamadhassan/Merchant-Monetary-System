@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -37,7 +38,7 @@ namespace Merchant_Monetary_System
                 lblShopSignal.Text = "Enter the name";
                 isShop = true;
             }
-            else if (txtbxShopName.Text.Any(ch => !char.IsLetter(ch)))
+            else if (isValidString(txtbxShopkeeperName.Text)==false)
             {//check isSpecialCharactor
                 lblShopSignal.Text = "Allowed characters: a-z, A-Z";
                 isShop = true;
@@ -99,7 +100,17 @@ namespace Merchant_Monetary_System
                 btnFound.Visible = false;
             }
         }
-
+        public bool isValidString(string input)
+        {
+            bool isValid = true;
+            isValid = Regex.IsMatch(input, @"^[a-zA-Z]+$");
+            foreach (char c in input)
+            {
+                if (!Char.IsLetter(c))
+                    isValid = false;
+            }
+            return isValid;
+        }
         private void txtbxShopkeeperName_TextChanged(object sender, EventArgs e)
         {
             int i;
@@ -108,7 +119,7 @@ namespace Merchant_Monetary_System
                 lblNameSignal.Text = "Enter the name";
                 isName = true;
             }
-            else if (txtbxShopkeeperName.Text.Any(ch => !char.IsLetter(ch)))
+            else if (isValidString(txtbxShopkeeperName.Text)==false)
             {//check isSpecialCharactor
                 lblNameSignal.Text = "Allowed characters: a-z, A-Z";
                 isName = true;

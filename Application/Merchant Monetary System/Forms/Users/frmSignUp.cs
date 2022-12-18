@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace Merchant_Monetary_System
     {
         Users previousObj= null;//this is used for edit button
         bool isCEO=false;//if isCEO true then all task of CEO implemented else Employee
-        int roleId = 0; //0 for First time create account, 1 for CEO and 2 for Employee 
+        int roleId = 0; //0 for First time create account, 1 for CEO and 2 for Employee 3 for just sigup not for account update
         int createAccountFor = 0;//3 for warehouse manger and 4 for rider to call relivent object 
         bool isForWarehouseManager=false; // It true means it come for add warehouue manager 
         public frmSignUp()
@@ -71,16 +72,8 @@ namespace Merchant_Monetary_System
                 string homeAddress = rtxtbxHomeAddress.Text;
                 string username = txtbxUsername.Text;
                 string password = txtbxNewPassowrd.Text;
-                Users user=null;
-                if (roleId==0 || roleId==1 || roleId == 2)
-                {//for ceo and employee
-                     user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password);
-                }
-                else if (createAccountFor == 3 || createAccountFor==4)
-                {//for warehouse manager and rider 
-                    string assigned = cmbxAssigned.Text;
-                    user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, assigned);
-                }
+                string assigned = cmbxAssigned.Text;
+                Users user = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress, username, password, assigned);
                 if (previousObj != null)
                 {//for updating of account
                     if (UsersDL.updateRecord(user))
@@ -193,6 +186,24 @@ namespace Merchant_Monetary_System
 
 
         }
+         private bool isValidEmail(string email)
+        {
+            string regex = @"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$";
+
+            return Regex.IsMatch(email, regex, RegexOptions.IgnoreCase);
+        }
+        public bool isValidString(string input)
+        {
+            bool isValid = true;
+            isValid = Regex.IsMatch(input, @"^[a-zA-Z]+$");
+            foreach (char c in input)
+            {
+                if (!Char.IsLetter(c))
+                    isValid = false;
+            }
+            return isValid;
+        }
+        
         private void txtbxName_TextChanged(object sender, EventArgs e)
         {
             int i;
@@ -201,7 +212,7 @@ namespace Merchant_Monetary_System
                 lblNameSignal.Text = "Enter the name";
                 isName = true;
             }
-            else if (int.TryParse(txtbxName.Text, out i))
+            else if (isValidString(txtbxName.Text)==false)
             {//Check isnumberic
                 lblNameSignal.Text = "Allowed characters: a-z, A-Z";
                 isName = true;
@@ -393,20 +404,17 @@ namespace Merchant_Monetary_System
 
         private void txtbxEmailAddress_TextChanged(object sender, EventArgs e)
         {
-            bool isSpecialChar = false;
-            foreach (char c in txtbxEmailAddress.Text)
-            {//is special charactor
-                if (c == '@')
-                {
-                    isSpecialChar = true;
-                    lblEmailAddressSignal.Text = " ";
-                }
+            bool isCorrect = false;
+            if (isValidEmail(txtbxEmailAddress.Text))
+            {
+                isCorrect = true;
+                lblEmailAddressSignal.Text = " ";
             }
             if (txtbxEmailAddress.Text == string.Empty)
             {// check is empty
                 lblEmailAddressSignal.Text = "Enter the email-address";
             }
-            else if (isSpecialChar == false)
+            else if (isCorrect == false)
             {// check is has @ sign
                 lblEmailAddressSignal.Text = "Enter the correct address";
             }
@@ -416,7 +424,7 @@ namespace Merchant_Monetary_System
                 isEmail = false;
             }
         }
-
+       
         private void rtxtbxHomeAddress_TextChanged(object sender, EventArgs e)
         {
             if (rtxtbxHomeAddress.Text == string.Empty)
@@ -494,6 +502,20 @@ namespace Merchant_Monetary_System
         private void btnCreateAccount_MouseLeave(object sender, EventArgs e)
         {//remove signals
             lblRecordSignal.Text = " ";
+        }
+
+        private void txtbxUsername_Leave(object sender, EventArgs e)
+        {
+            UsersDL.loadRecordFromFile(FilePath.Users);
+            if (UsersDL.isUsernameExit(cmbxDesignation.Text, txtbxUsername.Text))
+            {
+                lblUsernameSignal.Text = "Enter unique username";
+            }
+            else
+            {
+                lblUsernameSignal.Text = " ";
+                isUsername = false;
+            }
         }
     }
 }

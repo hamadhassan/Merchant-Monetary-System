@@ -44,11 +44,12 @@ namespace Merchant_Monetary_System
             }
             return false;
         }
-        public static bool isUsernameExit(string username)
+        public static bool isUsernameExit(string designation,string username)
         {
+
             foreach (Users user in usersList)
             {
-                if (username == user.Username)
+                if (username == user.Username || designation==user.Designation)
                 {
                     return true;
                 }
@@ -122,10 +123,11 @@ namespace Merchant_Monetary_System
         public static bool loadRecordFromFile(string path)
         {
             clearList();
-            StreamReader fileVariable = new StreamReader(path);
-            string record;
+           
             if (File.Exists(path))
             {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
                 while ((record = fileVariable.ReadLine()) != null)
                 {
                     string[] spilitedRecord=record.Split(',');
