@@ -57,6 +57,7 @@ namespace Merchant_Monetary_System
                 {
                     if (index == 7 && txtbxName.Text!=String.Empty)
                     {
+                        //if (cartlist.Contains(S)){ S.Quantity++; } 
                         cartlist.Add(S);
                         MessageBox.Show("Product Added To Cart");
 
@@ -109,7 +110,7 @@ namespace Merchant_Monetary_System
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Form form = new frmViewOrders(txtbxName.Text,name,cartlist);
+            Form form = new frmCartOrders(txtbxName.Text,name,cartlist);
             form.Show();
             this.Hide();
         }

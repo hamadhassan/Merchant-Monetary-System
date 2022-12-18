@@ -149,6 +149,12 @@
     <Compile Include="Forms\Stock\frmViewStockDetails.Designer.cs">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderDetails.Designer.cs">
+      <DependentUpon>frmOrderDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,11 +316,11 @@
     <Compile Include="Forms\Product\frmAddStock.Designer.cs">
       <DependentUpon>frmAddStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Orders\frmViewOrders.cs">
+    <Compile Include="Forms\Orders\frmCartOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Orders\frmViewOrders.Designer.cs">
-      <DependentUpon>frmViewOrders.cs</DependentUpon>
+    <Compile Include="Forms\Orders\frmCartOrders.Designer.cs">
+      <DependentUpon>frmCartOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Payment\frmAddPayment.cs">
       <SubType>Form</SubType>
@@ -442,8 +448,8 @@
     <EmbeddedResource Include="Forms\Product\frmAddStock.resx">
       <DependentUpon>frmAddStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Orders\frmViewOrders.resx">
-      <DependentUpon>frmViewOrders.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Orders\frmCartOrders.resx">
+      <DependentUpon>frmCartOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmADDvendor.resx">
       <DependentUpon>frmADDvendor.cs</DependentUpon>
@@ -453,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stock\frmViewStockDetails.resx">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderDetails.resx">
+      <DependentUpon>frmOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route\frmRoutes.resx">
       <DependentUpon>frmRoutes.cs</DependentUpon>

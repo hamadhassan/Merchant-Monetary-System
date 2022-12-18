@@ -18,6 +18,7 @@ namespace Merchant_Monetary_System.BL
         private string sensitivityType;
         private string category;
         private string manufacturer;
+        //private int quantity;
 
         public string Name { get => name; set => name = value; }
         public double Volume { get => volume; set => volume = value; }
@@ -26,6 +27,7 @@ namespace Merchant_Monetary_System.BL
         public string Category { get => category; set => category = value; }
         public string Manufacturer { get => manufacturer; set => manufacturer = value; }
         public double Weight { get => weight; set => weight = value; }
+       // public int Quantity { get => quantity; set => quantity = value; }
 
         public Product(string Name, int  SKU_Number, double Weight , double Volume, string Manufacturer, string Category,  string SensitivityType)
         {
@@ -37,6 +39,17 @@ namespace Merchant_Monetary_System.BL
             this.Category = Category;
             this.sensitivityType = SensitivityType;
         }
+        //public Product(string Name, int SKU_Number, double Weight, double Volume, string Manufacturer, string Category, string SensitivityType,int quantity)
+        //{
+        //    this.Name = Name;
+        //    this.SKU_Number = SKU_Number;
+        //    this.Weight = Weight;
+        //    this.Volume = Volume;
+        //    this.Manufacturer = Manufacturer;
+        //    this.Category = Category;
+        //    this.sensitivityType = SensitivityType;
+        //    this.quantity = quantity;
+        //}
         public Product()
         {
         }

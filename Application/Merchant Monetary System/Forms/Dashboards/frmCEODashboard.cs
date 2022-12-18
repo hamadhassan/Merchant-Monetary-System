@@ -122,7 +122,7 @@ namespace Merchant_Monetary_System
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-            loadform(new frmViewOrders());
+            loadform(new frmCartOrders());
         }
 
         private void btnAddShopkeeper_Click(object sender, EventArgs e)

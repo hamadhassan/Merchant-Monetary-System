@@ -68,7 +68,7 @@ namespace Merchant_Monetary_System
 
         private void btnOrderDetail_Click(object sender, EventArgs e)
         {
-            loadform(new frmViewOrders());
+            loadform(new frmCartOrders());
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)

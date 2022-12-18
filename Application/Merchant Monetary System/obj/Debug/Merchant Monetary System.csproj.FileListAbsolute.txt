@@ -363,3 +363,5 @@ C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetar
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Vehicle.frmAddVehicle.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Vehicle.frmUpdateVehicle.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Vehicle.frmViewVehicleData.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmOrderDetails.resources

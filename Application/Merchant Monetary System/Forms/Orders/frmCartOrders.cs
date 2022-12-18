@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Merchant_Monetary_System
 {
-    public partial class frmViewOrders : Form
+    public partial class frmCartOrders : Form
     {
         private  string shopkeeper;
         private string rider;
         private List<Product> cart;
 
 
-        public frmViewOrders(string shopkeeper, string rider,List<Product>cart)
+        public frmCartOrders(string shopkeeper, string rider,List<Product>cart)
         {
             InitializeComponent();
             this.shopkeeper=shopkeeper;
@@ -27,13 +27,13 @@ namespace Merchant_Monetary_System
             this.cart = cart;
         
         }
-        public frmViewOrders(string rider)
+        public frmCartOrders(string rider)
         {
             InitializeComponent();
             this.rider = rider;
 
         }
-        public frmViewOrders()
+        public frmCartOrders()
         {
             InitializeComponent();
 
@@ -76,7 +76,7 @@ namespace Merchant_Monetary_System
                 Add.Text = "Delete";
                 Add.UseColumnTextForButtonValue = true;
                 datagvProductDetails.Columns.Add(Add);
-
+ 
 
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }

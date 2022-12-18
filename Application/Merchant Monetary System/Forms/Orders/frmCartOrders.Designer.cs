@@ -1,6 +1,6 @@
 ﻿namespace Merchant_Monetary_System
 {
-    partial class frmViewOrders
+    partial class frmCartOrders
     {
         /// <summary>
         /// Required designer variable.
@@ -212,9 +212,9 @@
             this.lblProductDetails.Location = new System.Drawing.Point(375, 0);
             this.lblProductDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProductDetails.Name = "lblProductDetails";
-            this.lblProductDetails.Size = new System.Drawing.Size(240, 39);
+            this.lblProductDetails.Size = new System.Drawing.Size(237, 39);
             this.lblProductDetails.TabIndex = 67;
-            this.lblProductDetails.Text = " Order Details";
+            this.lblProductDetails.Text = "CART Details";
             // 
             // txtbxSearch
             // 
@@ -258,7 +258,7 @@
             this.lblSearch.TabIndex = 65;
             this.lblSearch.Text = "Search:";
             // 
-            // frmViewOrders
+            // frmCartOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -267,7 +267,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmViewOrders";
+            this.Name = "frmCartOrders";
             this.Text = "frmViewOrders";
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).EndInit();
             this.groupBox1.ResumeLayout(false);
