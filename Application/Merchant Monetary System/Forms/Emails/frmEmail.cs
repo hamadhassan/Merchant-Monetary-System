@@ -48,5 +48,18 @@ namespace Merchant_Monetary_System.Forms.Emails
         {
             this.Hide();
         }
+
+        private void frmEmail_Load(object sender, EventArgs e)
+        {
+            foreach(var u in UsersDL.UsersList)
+            {
+                cmbxTo.Items.Add(u.EmailAddress);
+            }
+        }
+
+        private void gbx_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

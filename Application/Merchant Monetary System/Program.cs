@@ -26,11 +26,16 @@ namespace Merchant_Monetary_System
             Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
             VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
+            UsersDL.loadRecordFromFile(FilePath.Users);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
                 Application.Run(new ViewShopkeeperDetails());
+=======
+                Application.Run(new frmCEODashboard());
+>>>>>>> Stashed changes
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
             
