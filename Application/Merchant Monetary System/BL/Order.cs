@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Merchant_Monetary_System.DL;
 using System.Collections;
 using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Migrations.Model;
 
 namespace Merchant_Monetary_System.BL
 {
@@ -15,11 +16,13 @@ namespace Merchant_Monetary_System.BL
         private string shopKeeperName;
         private string riderName;
         private string orderID;
+        private string status;
 
         public string RiderName { get => riderName; set => riderName = value; }
         public string ShopKeeperName { get => shopKeeperName; set => shopKeeperName = value; }
         public List<Product> Order_products { get => order_products; set => order_products = value; }
         public string OrderID { get => orderID; set => orderID = value; }
+        public string Status { get => status; set => status = value; }
 
         public Order() { }
         public static string generateOrderID(int _characterLength = 5)
@@ -40,9 +43,11 @@ namespace Merchant_Monetary_System.BL
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
             this.OrderID = (generateOrderID());
+            this.Status = "In Progress";
             this.Order_products = new List<Product>();
 
         }
+
         public Order(string ShopKeeperName, string RiderName, List<Product>product)
         {
             this.ShopKeeperName = ShopKeeperName;
@@ -56,6 +61,10 @@ namespace Merchant_Monetary_System.BL
             this.RiderName = RiderName;
             this.OrderID = OrderID;
             this.Order_products = new List<Product>();
+        }
+        public void  UpdateOrderStatus(string status) 
+        {
+            this.Status = status;
         }
 
     }

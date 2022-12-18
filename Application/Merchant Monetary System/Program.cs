@@ -26,11 +26,20 @@ namespace Merchant_Monetary_System
             Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
             VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
+            UsersDL.loadRecordFromFile(FilePath.Users);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmRiderDashboard("kabir"));
+<<<<<<< HEAD
+                Application.Run(new frmReports());
+=======
+<<<<<<< Updated upstream
+                Application.Run(new ViewShopkeeperDetails());
+=======
+                Application.Run(new frmCEODashboard());
+>>>>>>> Stashed changes
+>>>>>>> c38768b471d3f8a37d93a92ef975f054ef1bf107
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
             
