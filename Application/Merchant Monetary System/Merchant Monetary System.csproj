@@ -149,6 +149,7 @@
     <Compile Include="Forms\Stock\frmViewStockDetails.Designer.cs">
       <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Route\GMapExtensition.cs" />
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>

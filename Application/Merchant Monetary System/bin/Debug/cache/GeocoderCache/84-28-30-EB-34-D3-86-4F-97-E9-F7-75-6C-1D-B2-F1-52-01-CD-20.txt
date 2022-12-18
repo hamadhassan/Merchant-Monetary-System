@@ -1,0 +1,64 @@
+﻿{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Ārifwāla",
+               "short_name" : "Ārifwāla",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Arif Wala",
+               "short_name" : "Arif Wala",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Pakpattan",
+               "short_name" : "Pakpattan",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Punjab",
+               "short_name" : "Punjab",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Pakistan",
+               "short_name" : "PK",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Ārifwāla, Pakpattan, Punjab, Pakistan",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 30.3117124,
+                  "lng" : 73.079443
+               },
+               "southwest" : {
+                  "lat" : 30.2680992,
+                  "lng" : 73.0424962
+               }
+            },
+            "location" : {
+               "lat" : 30.2866673,
+               "lng" : 73.0582368
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 30.3117124,
+                  "lng" : 73.079443
+               },
+               "southwest" : {
+                  "lat" : 30.2680992,
+                  "lng" : 73.0424962
+               }
+            }
+         },
+         "place_id" : "ChIJ6wf9hm44PTkRzxOAwynoYUI",
+         "types" : [ "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}

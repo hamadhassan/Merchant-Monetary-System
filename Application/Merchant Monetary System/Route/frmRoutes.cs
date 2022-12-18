@@ -147,8 +147,8 @@ namespace Merchant_Monetary_System
                 markers.Markers.Add(marker);
                 map.Overlays.Add(markers);
                 //Get Address
-                //List<string> addresses = getAddress(point);
-                //lblMessage.Text = addresses[0].ToString();
+                List<string> addresses = getAddress(point);
+                lblMessage.Text = addresses[0].ToString();
             }
         }
         private List<string> getAddress(PointLatLng point)

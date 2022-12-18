@@ -10,7 +10,6 @@ namespace Merchant_Monetary_System
 {
     public class Location
     {
-        //<<<<<<< Updated upstream
         private double latitude;
         private double longitude;
         private string area;
