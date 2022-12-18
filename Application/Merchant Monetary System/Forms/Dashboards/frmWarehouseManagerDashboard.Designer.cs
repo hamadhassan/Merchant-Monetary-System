@@ -42,8 +42,8 @@
             this.btnAddPayment = new System.Windows.Forms.Button();
             this.btnViewProducts = new System.Windows.Forms.Button();
             this.btnSendEmail = new System.Windows.Forms.Button();
-            this.btnViewProduct = new System.Windows.Forms.Button();
-            this.btnViewReport = new System.Windows.Forms.Button();
+            this.btnForgotPassword = new System.Windows.Forms.Button();
+            this.btnViewStock = new System.Windows.Forms.Button();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewWarehousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -133,8 +133,8 @@
             this.tableLayoutPanel1.Controls.Add(this.btnAddPayment, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnViewProducts, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnSendEmail, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnViewProduct, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnViewReport, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnForgotPassword, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnViewStock, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 29);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -217,38 +217,39 @@
             this.btnSendEmail.UseVisualStyleBackColor = false;
             this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
-            // btnViewProduct
+            // btnForgotPassword
             // 
-            this.btnViewProduct.BackColor = System.Drawing.Color.Transparent;
-            this.btnViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnViewProduct.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewProduct.FlatAppearance.BorderSize = 0;
-            this.btnViewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnViewProduct.Location = new System.Drawing.Point(3, 382);
-            this.btnViewProduct.Name = "btnViewProduct";
-            this.btnViewProduct.Size = new System.Drawing.Size(207, 89);
-            this.btnViewProduct.TabIndex = 63;
-            this.btnViewProduct.Text = "Forgot Password";
-            this.btnViewProduct.UseVisualStyleBackColor = false;
-            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
+            this.btnForgotPassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnForgotPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnForgotPassword.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnForgotPassword.FlatAppearance.BorderSize = 0;
+            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPassword.ForeColor = System.Drawing.Color.Black;
+            this.btnForgotPassword.Location = new System.Drawing.Point(3, 382);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(207, 89);
+            this.btnForgotPassword.TabIndex = 63;
+            this.btnForgotPassword.Text = "Forgot Password";
+            this.btnForgotPassword.UseVisualStyleBackColor = false;
+            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
             // 
-            // btnViewReport
+            // btnViewStock
             // 
-            this.btnViewReport.BackColor = System.Drawing.Color.Transparent;
-            this.btnViewReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnViewReport.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnViewReport.FlatAppearance.BorderSize = 0;
-            this.btnViewReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewReport.ForeColor = System.Drawing.Color.Black;
-            this.btnViewReport.Location = new System.Drawing.Point(3, 477);
-            this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(207, 92);
-            this.btnViewReport.TabIndex = 60;
-            this.btnViewReport.Text = "View Stock";
-            this.btnViewReport.UseVisualStyleBackColor = false;
+            this.btnViewStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnViewStock.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnViewStock.FlatAppearance.BorderSize = 0;
+            this.btnViewStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewStock.ForeColor = System.Drawing.Color.Black;
+            this.btnViewStock.Location = new System.Drawing.Point(3, 477);
+            this.btnViewStock.Name = "btnViewStock";
+            this.btnViewStock.Size = new System.Drawing.Size(207, 92);
+            this.btnViewStock.TabIndex = 60;
+            this.btnViewStock.Text = "View Stock";
+            this.btnViewStock.UseVisualStyleBackColor = false;
+            this.btnViewStock.Click += new System.EventHandler(this.btnViewStock_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -433,7 +434,7 @@
         private System.Windows.Forms.Button btnAddPayment;
         private System.Windows.Forms.Button btnViewProducts;
         private System.Windows.Forms.Button btnSendEmail;
-        private System.Windows.Forms.Button btnViewProduct;
+        private System.Windows.Forms.Button btnForgotPassword;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewWarehousesToolStripMenuItem;
@@ -449,7 +450,7 @@
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addAddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
-        private System.Windows.Forms.Button btnViewReport;
+        private System.Windows.Forms.Button btnViewStock;
         private System.Windows.Forms.Button btnOrderDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tblForm;

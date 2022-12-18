@@ -10,6 +10,7 @@ using Merchant_Monetary_System.Forms.Payment;
 using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System.Forms.Emails;
 using Merchant_Monetary_System.DL;
+using Merchant_Monetary_System.Forms.Vehicle;
 
 namespace Merchant_Monetary_System
 {
@@ -23,16 +24,27 @@ namespace Merchant_Monetary_System
         {
             ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
             Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
-
+            VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
+            LedgerDL.LoadDataFromFiles(FilePath.Ledger);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
                 Application.Run(new frmTakeOrder("Ali"));
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 
 
+=======
+                Application.Run(new frmViewLedger());
+            }
+            catch (Exception exp) { MessageBox.Show(exp.Message); }
+
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new frmAddShopkeeper());
+>>>>>>> Stashed changes
         }
     }
 }

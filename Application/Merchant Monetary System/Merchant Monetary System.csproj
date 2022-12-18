@@ -82,18 +82,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Category.cs" />
+<<<<<<< Updated upstream
     <Compile Include="BL\Order.cs" />
+=======
+    <Compile Include="BL\Ledger.cs" />
+>>>>>>> Stashed changes
     <Compile Include="BL\Shop.cs" />
     <Compile Include="BL\Shopkeeper.cs" />
     <Compile Include="BL\Stock.cs" />
+    <Compile Include="BL\Vehicle.cs" />
     <Compile Include="BL\Vendor.cs" />
     <Compile Include="DL\categoryDL.cs" />
+    <Compile Include="DL\LedgerDL.cs" />
     <Compile Include="DL\Misc.cs" />
     <Compile Include="DL\OrderDL.cs" />
     <Compile Include="DL\shopDL.cs" />
     <Compile Include="DL\ShopKeeperDL.cs" />
     <Compile Include="DL\StockDL.cs" />
+    <Compile Include="DL\VehicleDL.cs" />
     <Compile Include="DL\VendorDL.cs" />
+    <Compile Include="Forms\Payment\frmViewLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payment\frmViewLedger.Designer.cs">
+      <DependentUpon>frmViewLedger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Product\frmViewCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +119,29 @@
     <Compile Include="Forms\Product\UpdatStock.Designer.cs">
       <DependentUpon>UpdatStock.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Forms\Shop\frmUpdateShop.cs">
+=======
+    <Compile Include="Forms\Vehicle\frmAddVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmAddVehicle.Designer.cs">
+      <DependentUpon>frmAddVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmUpdateVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmUpdateVehicle.Designer.cs">
+      <DependentUpon>frmUpdateVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmViewVehicleData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle\frmViewVehicleData.Designer.cs">
+      <DependentUpon>frmViewVehicleData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateShop.cs">
+>>>>>>> Stashed changes
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Shop\frmUpdateShop.Designer.cs">
@@ -336,8 +371,14 @@
     <EmbeddedResource Include="Forms\Orders\frmTakeOrder.resx">
       <DependentUpon>frmTakeOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payment\frmAddPayment.resx">
+      <DependentUpon>frmAddPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payment\frmEditPayment.resx">
       <DependentUpon>frmEditPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payment\frmViewLedger.resx">
+      <DependentUpon>frmViewLedger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmAddCategory.resx">
       <DependentUpon>frmAddCategory.cs</DependentUpon>
@@ -377,6 +418,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmUpdateVendor.resx">
       <DependentUpon>frmUpdateVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle\frmAddVehicle.resx">
+      <DependentUpon>frmAddVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle\frmUpdateVehicle.resx">
+      <DependentUpon>frmUpdateVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle\frmViewVehicleData.resx">
+      <DependentUpon>frmViewVehicleData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Warehouse\frmAddWarehouse.resx">
       <DependentUpon>frmAddWarehouse.cs</DependentUpon>

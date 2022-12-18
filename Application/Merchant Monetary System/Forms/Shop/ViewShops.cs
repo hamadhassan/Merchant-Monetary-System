@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System.DL;
+using Merchant_Monetary_System.Forms.Product;
 
 namespace Merchant_Monetary_System
 {
@@ -104,6 +105,26 @@ namespace Merchant_Monetary_System
             {
                 if (Shops.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (datagvShopDetails.SelectedRows.Count == 1)
+            {
+                Shop S = (Shop)datagvShopDetails.CurrentRow.DataBoundItem;
+                if (S != null)
+                {
+                    Form f = new frmUpdateShop(S);
+                    f.ShowDialog();
+                    DataBind();
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                }
+                else
+                {
+                    if (Shops.Count != 0)
+                        lblDatagvSignal.Text = "Select a row from the list";
+                }
             }
         }
     }

@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.btnUpdateShopKeeper);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnClose);
-            this.groupBox1.Location = new System.Drawing.Point(17, 25);
+            this.groupBox1.Location = new System.Drawing.Point(12, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(890, 477);
             this.groupBox1.TabIndex = 1;

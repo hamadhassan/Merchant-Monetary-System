@@ -12,6 +12,10 @@ namespace Merchant_Monetary_System.BL
         private double vehicleVolume;
         private double vehicleWeight;
         private string registrationNumber;
+<<<<<<< Updated upstream
+=======
+        private bool assigned = false;
+>>>>>>> Stashed changes
 
         public Vehicle(string vehicleType, double vehicleVolume, double vehicleWeight, string registrationNumber)
         {
@@ -25,5 +29,9 @@ namespace Merchant_Monetary_System.BL
         public double VehicleVolume { get => vehicleVolume; set => vehicleVolume = value; }
         public double VehicleWeight { get => vehicleWeight; set => vehicleWeight = value; }
         public string RegistrationNumber { get => registrationNumber; set => registrationNumber = value; }
+<<<<<<< Updated upstream
+=======
+        public bool Assigned { get => assigned; set => assigned = value; }
+>>>>>>> Stashed changes
     }
 }

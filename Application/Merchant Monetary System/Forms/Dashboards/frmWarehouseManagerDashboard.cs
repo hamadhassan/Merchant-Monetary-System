@@ -19,34 +19,27 @@ namespace Merchant_Monetary_System.Forms.Dashboards
         {
             InitializeComponent();
         }
-
-        private void btnAddEmployee_Click(object sender, EventArgs e)
+        private void load_form(object Form)
         {
             if (this.tblForm.Controls.Count > 0)
                 this.tblForm.Controls.RemoveAt(0);
-            Form f = new frmViewOrders();
+            Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
+            f.FormBorderStyle = FormBorderStyle.None;
             this.tblForm.Controls.Add(f);
             this.tblForm.Tag = f;
             f.Show();
         }
 
-        private void btnAddRider_Click(object sender, EventArgs e)
+        private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            
+            load_form(new frmViewOrders());
         }
 
         private void btnViewProducts_Click(object sender, EventArgs e)
         {
-            if (this.tblForm.Controls.Count > 0)
-                this.tblForm.Controls.RemoveAt(0);
-            Form f = new frmProductDetails_();
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.tblForm.Controls.Add(f);
-            this.tblForm.Tag = f;
-            f.Show();
+            load_form(new frmProductDetails_());
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -56,26 +49,12 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnSendEmail_Click(object sender, EventArgs e)
         {
-            if (this.tblForm.Controls.Count > 0)
-                this.tblForm.Controls.RemoveAt(0);
-            Form f = new frmEmail();
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.tblForm.Controls.Add(f);
-            this.tblForm.Tag = f;
-            f.Show();
+            load_form(new frmEmail());
         }
 
         private void btnAddPayment_Click(object sender, EventArgs e)
         {
-            if (this.tblForm.Controls.Count > 0)
-                this.tblForm.Controls.RemoveAt(0);
-            Form f = new frmAddPayment();
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.tblForm.Controls.Add(f);
-            this.tblForm.Tag = f;
-            f.Show();
+            load_form(new frmAddPayment());
         }
 
         private void btnViewProduct_Click(object sender, EventArgs e)
@@ -88,6 +67,20 @@ namespace Merchant_Monetary_System.Forms.Dashboards
             this.tblForm.Controls.Add(f);
             this.tblForm.Tag = f;
             f.Show();
+        }
+
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            load_form(new frmForgetPassword());
+        }
+
+        private void btnViewStock_Click(object sender, EventArgs e)
+        {
+            load_form(new frmViewStockDetails());
         }
     }
 }
