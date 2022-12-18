@@ -72,7 +72,6 @@
             this.map.Size = new System.Drawing.Size(894, 375);
             this.map.TabIndex = 0;
             this.map.Zoom = 0D;
-            this.map.Load += new System.EventHandler(this.map_Load);
             // 
             // tableLayoutPanel1
             // 
@@ -182,6 +181,7 @@
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            this.btnFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.map_MouseClick);
             // 
             // lblMessage
             // 
