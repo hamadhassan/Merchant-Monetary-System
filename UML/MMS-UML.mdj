@@ -21633,7 +21633,8 @@
 								"$ref": "AAAAAAGErfv9R46m3GY="
 							},
 							"name": "PaymentByDesignation",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -21642,7 +21643,8 @@
 								"$ref": "AAAAAAGErfv9R46m3GY="
 							},
 							"name": "PaymentByName",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -21650,7 +21652,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGErfv9R46m3GY="
 							},
-							"name": "ReceivedByDesignation"
+							"name": "ReceivedByDesignation",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -21667,7 +21670,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGErfv9R46m3GY="
 							},
-							"name": "ReceivedByName"
+							"name": "ReceivedByName",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -23455,7 +23459,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGErgyrUeHphNA="
 							},
-							"name": "email"
+							"name": "email",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -24823,7 +24828,8 @@
 								"$ref": "AAAAAAGErizRBOQaErg="
 							},
 							"name": "orderStatus",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [

@@ -30,10 +30,10 @@ namespace Merchant_Monetary_System
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmRiderDashboard());
+                Application.Run(new frmRiderDashboard("kabir"));
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
-
+            
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmAddShopkeeper());

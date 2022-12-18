@@ -314,6 +314,7 @@
             this.tblForm.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblForm.Size = new System.Drawing.Size(925, 572);
             this.tblForm.TabIndex = 9;
+            this.tblForm.Paint += new System.Windows.Forms.PaintEventHandler(this.tblForm_Paint);
             // 
             // frmRiderDashboard
             // 
@@ -325,6 +326,7 @@
             this.Controls.Add(this.menuStrip);
             this.Name = "frmRiderDashboard";
             this.Text = "frmRiderDashboard";
+            this.Load += new System.EventHandler(this.frmRiderDashboard_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

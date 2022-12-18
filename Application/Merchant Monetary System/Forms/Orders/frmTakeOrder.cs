@@ -111,6 +111,7 @@ namespace Merchant_Monetary_System
         {
             Form form = new frmViewOrders(txtbxName.Text,name,cartlist);
             form.Show();
+            this.Hide();
         }
     }
 }

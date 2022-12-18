@@ -27,6 +27,12 @@ namespace Merchant_Monetary_System
             this.cart = cart;
         
         }
+        public frmViewOrders(string rider)
+        {
+            InitializeComponent();
+            this.rider = rider;
+
+        }
         public frmViewOrders()
         {
             InitializeComponent();
@@ -134,8 +140,7 @@ namespace Merchant_Monetary_System
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Form form = new frmTakeOrder(rider);
-            form.Show();
+
             this.Close();
         }
     }

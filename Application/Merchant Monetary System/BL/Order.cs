@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Merchant_Monetary_System.DL;
 using System.Collections;
+using System.Data.Entity.Core.Metadata.Edm;
 
 namespace Merchant_Monetary_System.BL
 {
@@ -40,6 +41,7 @@ namespace Merchant_Monetary_System.BL
             this.RiderName = RiderName;
             this.OrderID = (generateOrderID());
             this.Order_products = new List<Product>();
+
         }
         public Order(string ShopKeeperName, string RiderName, List<Product>product)
         {
