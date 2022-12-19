@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTotalAmount = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.DGVStock = new System.Windows.Forms.DataGridView();
             this.lblRowSignal = new System.Windows.Forms.Label();
             this.lblCostPriceValid = new System.Windows.Forms.Label();
@@ -62,8 +64,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTotalAmount = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStock)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +111,24 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // lblTotalAmount
+            // 
+            this.lblTotalAmount.AutoSize = true;
+            this.lblTotalAmount.Location = new System.Drawing.Point(774, 388);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(18, 20);
+            this.lblTotalAmount.TabIndex = 85;
+            this.lblTotalAmount.Text = "0";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(774, 355);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(44, 20);
+            this.lblTotal.TabIndex = 84;
+            this.lblTotal.Text = "Total";
+            // 
             // DGVStock
             // 
             this.DGVStock.AllowUserToAddRows = false;
@@ -123,6 +141,7 @@
             this.DGVStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVStock.Size = new System.Drawing.Size(668, 138);
             this.DGVStock.TabIndex = 83;
+            this.DGVStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVStock_CellContentClick_1);
             // 
             // lblRowSignal
             // 
@@ -444,24 +463,6 @@
             this.lblSignUp.Size = new System.Drawing.Size(181, 39);
             this.lblSignUp.TabIndex = 44;
             this.lblSignUp.Text = "Add Stock";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(774, 355);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(44, 20);
-            this.lblTotal.TabIndex = 84;
-            this.lblTotal.Text = "Total";
-            // 
-            // lblTotalAmount
-            // 
-            this.lblTotalAmount.AutoSize = true;
-            this.lblTotalAmount.Location = new System.Drawing.Point(774, 388);
-            this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(18, 20);
-            this.lblTotalAmount.TabIndex = 85;
-            this.lblTotalAmount.Text = "0";
             // 
             // frmAddStock
             // 

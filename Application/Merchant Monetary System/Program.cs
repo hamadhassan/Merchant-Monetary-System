@@ -32,7 +32,7 @@ namespace Merchant_Monetary_System
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                // Application.Run(new frmAddProduct());
-                Application.Run(new frmRiderDashboard("Ali"));
+                Application.Run(new frmAddStock());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
             

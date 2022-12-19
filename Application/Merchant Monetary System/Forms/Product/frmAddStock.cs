@@ -20,7 +20,7 @@ namespace Merchant_Monetary_System
         bool isQuantity = true;
         bool isRetailPrice = true;
         bool isCostPrice = true;
-        private List<Stock> newStock = new List<Stock>();
+        private DoublyLinkedList<Stock> newStock = new DoublyLinkedList<Stock>();
 
         public frmAddStock()
         {
@@ -32,19 +32,54 @@ namespace Merchant_Monetary_System
             this.Hide();
         }
 
-        private void frmAddStock_Load(object sender, EventArgs e)
+        private void DataBind()
         {
-            comboBoxProduct.DataSource = ProductDL.ProductList1;
-            comboBoxVendor.DataSource = VendorDL.VendorList;
-            DGVStock.DataSource = newStock;
+            DGVStock.Columns.Clear();
+            DGVStock.DataSource = null;
+            DGVStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            addIntoGrid(newStock);
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
+            Update.Text = "Update";
             Update.UseColumnTextForButtonValue = true;
             DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
             Delete.HeaderText = "Delete";
+            Delete.Text = "Delete";
             Delete.UseColumnTextForButtonValue = true;
             DGVStock.Columns.Add(Update);
             DGVStock.Columns.Add(Delete);
+            DGVStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            double amount = StockDL.calculateAmount(newStock);
+            lblTotalAmount.Text = amount.ToString();
+        }
+
+        private void addIntoGrid(DoublyLinkedList<Stock> stockLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Product");
+            dt.Columns.Add("Quantity");
+            dt.Columns.Add("Retail Price");
+            dt.Columns.Add("Cost Price");
+            dt.Columns.Add("MFG date");
+            dt.Columns.Add("Expiry date");
+            dt.Columns.Add("Received date");
+            dt.Columns.Add("Vendor");
+
+            DoublyLinkedListNode<Stock> Head = stockLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Product, Head.Data.Quantity, Head.Data.RetailPrice, Head.Data.CostPrice, Head.Data.ManufacturingDate, Head.Data.ExpiryDate, Head.Data.RecievedDate);
+                Head = Head.Next;
+            }
+            DGVStock.DataSource = dt;
+        }
+
+        private void frmAddStock_Load(object sender, EventArgs e)
+        {
+            //comboBoxProduct.DataSource = ProductDL.ProductList;
+            //comboBoxVendor.DataSource = VendorDL.VendorList;
+            DataBind();
         }
 
         private void txtbxQuantity_TextChanged(object sender, EventArgs e)
@@ -130,24 +165,6 @@ namespace Merchant_Monetary_System
                 DataBind();
             }
         }
-        private void DataBind()
-        {
-            DGVStock.Columns.Clear();
-            DGVStock.DataSource = null;
-            DGVStock.DataSource = newStock;
-            DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
-            Update.HeaderText = "Update";
-            Update.Text = "Update";
-            Update.UseColumnTextForButtonValue = true;
-            DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
-            Delete.HeaderText = "Delete";
-            Update.Text = "Delete";
-            Delete.UseColumnTextForButtonValue = true;
-            DGVStock.Columns.Add(Update);
-            DGVStock.Columns.Add(Delete);
-            double amount = StockDL.calculateAmount(newStock);
-            lblTotalAmount.Text = amount.ToString();
-        }
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
@@ -182,16 +199,27 @@ namespace Merchant_Monetary_System
             if (DGVStock.SelectedRows.Count == 1)
             {
                 int index = DGVStock.CurrentCell.ColumnIndex;
-                Stock S = (Stock)DGVStock.CurrentRow.DataBoundItem;
+                Stock stock;
+                int rowInd = DGVStock.CurrentCell.RowIndex;
+                string product = DGVStock.Rows[rowInd].Cells[0].Value.ToString();
+                int quantity = int.Parse(DGVStock.Rows[rowInd].Cells[1].Value.ToString());
+                double retailPrice = Double.Parse(DGVStock.Rows[rowInd].Cells[2].Value.ToString());
+                double costPrice = Double.Parse(DGVStock.Rows[rowInd].Cells[3].Value.ToString());
+                DateTime MFGDate = DateTime.Parse(DGVStock.Rows[rowInd].Cells[4].Value.ToString());
+                DateTime ExpiryDate = DateTime.Parse(DGVStock.Rows[rowInd].Cells[5].Value.ToString());
+                DateTime recievedDate = DateTime.Parse(DGVStock.Rows[rowInd].Cells[6].Value.ToString());
+                string vendor = DGVStock.Rows[rowInd].Cells[7].Value.ToString();
+                Stock S = new Stock(product, quantity, retailPrice, costPrice, MFGDate, ExpiryDate, recievedDate, vendor);
+                stock = StockDL.returnStock(S);
                 if (index == 8)
                 {
-                    Form form = new UpdatStock(S);
+                    Form form = new UpdatStock(stock);
                     form.ShowDialog();
                     StockDL.StoreDataIntoFile(FilePath.Stock);
                 }
                 else if (index == 9)
                 {
-                    bool done = StockDL.deleteStock(StockDL.StockList, S);
+                    bool done = StockDL.deleteStock(StockDL.StockList, stock);
                     if (done)
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -212,6 +240,50 @@ namespace Merchant_Monetary_System
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void DGVStock_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DGVStock.SelectedRows.Count == 1)
+            {
+                int index = DGVStock.CurrentCell.ColumnIndex;
+                Stock stock;
+                int rowInd = DGVStock.CurrentCell.RowIndex;
+                string product = DGVStock.Rows[rowInd].Cells[0].Value.ToString();
+                int quantity = int.Parse(DGVStock.Rows[rowInd].Cells[1].Value.ToString());
+                double retailPrice = Double.Parse(DGVStock.Rows[rowInd].Cells[2].Value.ToString());
+                double costPrice = Double.Parse(DGVStock.Rows[rowInd].Cells[3].Value.ToString());
+                DateTime MFGDate = DateTime.Parse(DGVStock.Rows[rowInd].Cells[4].Value.ToString());
+                DateTime ExpiryDate = DateTime.Parse(DGVStock.Rows[rowInd].Cells[5].Value.ToString());
+                DateTime recievedDate = DateTime.Parse(DGVStock.Rows[rowInd].Cells[6].Value.ToString());
+                string vendor = DGVStock.Rows[rowInd].Cells[7].Value.ToString();
+                Stock S = new Stock(product, quantity, retailPrice, costPrice, MFGDate, ExpiryDate, recievedDate, vendor);
+                stock = StockDL.returnStock(S);
+                if (index == 8)
+                {
+                    Form form = new UpdatStock(stock);
+                    form.ShowDialog();
+                    StockDL.StoreDataIntoFile(FilePath.Stock);
+                }
+                else if (index == 9)
+                {
+                    bool done = StockDL.deleteStock(StockDL.StockList, stock);
+                    if (done)
+                    {
+                        MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
+            {
+                if (newStock.Count != 0)
+                    lblRowSignal.Text = "Select a row from the list";
+            }
 
         }
     }

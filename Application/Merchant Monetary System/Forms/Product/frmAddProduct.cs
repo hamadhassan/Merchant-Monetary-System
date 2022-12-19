@@ -178,7 +178,7 @@ namespace Merchant_Monetary_System
                     string category = cmbxCategory.Text;
                     string sensitivity = cmbxSenstivity.Text;
                     Product product = new Product(name, sku_number, weight, Volume, manufacturer, sensitivity, category);
-                    ProductDL.ProductList1.Add(product);
+                    ProductDL.ProductList.Add(product);
                     Product.storeRecordIntoFile(product, FilePath.Products);
                     MessageBox.Show("Product successfully added");
                 }

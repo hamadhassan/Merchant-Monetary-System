@@ -82,9 +82,9 @@ namespace Merchant_Monetary_System.DL
             }
         }
 
-        public static Stock AlreadyStockAdded(List<Stock> stock, Stock S)
+        public static Stock AlreadyStockAdded(DoublyLinkedList<Stock> stock, Stock S)
         {
-            DoublyLinkedListNode<Stock> Head = StockList.Head;
+            DoublyLinkedListNode<Stock> Head = stock.Head;
             while(Head != null)
             {
                 if (Head.Data.Product == S.Product && Head.Data.ManufacturingDate == S.ManufacturingDate && Head.Data.ExpiryDate == S.ExpiryDate

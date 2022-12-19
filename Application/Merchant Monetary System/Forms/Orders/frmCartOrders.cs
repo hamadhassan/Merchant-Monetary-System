@@ -16,10 +16,10 @@ namespace Merchant_Monetary_System
     {
         private  string shopkeeper;
         private string rider;
-        private List<Product> cart;
+        private DoublyLinkedList<Product> cart;
 
 
-        public frmCartOrders(string shopkeeper, string rider,List<Product>cart)
+        public frmCartOrders(string shopkeeper, string rider,DoublyLinkedList<Product>cart)
         {
             InitializeComponent();
             this.shopkeeper=shopkeeper;
@@ -67,19 +67,35 @@ namespace Merchant_Monetary_System
         {
             try
             {
-                datagvProductDetails.Columns.Clear();
 
+                datagvProductDetails.Columns.Clear();
                 datagvProductDetails.DataSource = null;
-                datagvProductDetails.DataSource = cart;
+                datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                addIntoGrid(cart);
                 DataGridViewButtonColumn Add = new DataGridViewButtonColumn();
                 Add.HeaderText = "Delete";
                 Add.Text = "Delete";
                 Add.UseColumnTextForButtonValue = true;
                 datagvProductDetails.Columns.Add(Add);
- 
-
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
+        }
+
+        private void addIntoGrid(DoublyLinkedList<Product> productLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Category");
+            dt.Columns.Add("SKU Number");
+
+            DoublyLinkedListNode<Product> Head = productLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Name, Head.Data.Category, Head.Data.SKU_Number);
+                Head = Head.Next;
+            }
+            datagvProductDetails.DataSource = dt;
         }
 
         private void btnLoadRecords_Click_1(object sender, EventArgs e)
@@ -94,13 +110,18 @@ namespace Merchant_Monetary_System
             if (datagvProductDetails.SelectedRows.Count == 1)
             {
                 int index = datagvProductDetails.CurrentCell.ColumnIndex;
-                Product S = (Product)datagvProductDetails.CurrentRow.DataBoundItem;
+                Product product;
+                int rowInd = datagvProductDetails.CurrentCell.RowIndex;
+                string Name = datagvProductDetails.Rows[rowInd].Cells[0].Value.ToString();
+                int SKU_Number = int.Parse(datagvProductDetails.Rows[rowInd].Cells[2].Value.ToString());
+                product = ProductDL.FoundProduct(Name, SKU_Number);
 
                 try
                 {
                     if (index == 7 )
                     {
-                        cart.Remove(S);
+                        DoublyLinkedListNode<Product> P = cart.Find(product);
+                        cart.RemoveNode(P);
                         DataBind();
                         MessageBox.Show("Product excluded from Cart");
 
@@ -111,7 +132,7 @@ namespace Merchant_Monetary_System
             }
             else
             {
-                if (ProductDL.ProductList1.Count != 0)
+                if (cart.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
@@ -134,7 +155,7 @@ namespace Merchant_Monetary_System
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < cart.Count; i++) { cart.Remove(cart[i]); }
+            cart.Head = null;
             DataBind();
 
         }
