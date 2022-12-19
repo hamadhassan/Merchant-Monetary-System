@@ -27,12 +27,13 @@ namespace Merchant_Monetary_System
             VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
             UsersDL.loadRecordFromFile(FilePath.Users);
+            WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                // Application.Run(new frmAddProduct());
-                Application.Run(new frmAddStock());
+                Application.Run(new frmWarehouseDetails());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
             

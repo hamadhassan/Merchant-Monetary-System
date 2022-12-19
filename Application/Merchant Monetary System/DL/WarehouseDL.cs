@@ -9,36 +9,37 @@ namespace Merchant_Monetary_System
 {
     public class WarehouseDL
     {
-        private static List<Warehouse> warehousesList = new List<Warehouse>();
+        private static DoublyLinkedList<Warehouse> warehousesList = new DoublyLinkedList<Warehouse>();
 
-        public static List<Warehouse> WarehousesList { get => warehousesList; set => warehousesList = value; }
-        public static void clearList()
-        {
-            WarehousesList.Clear();
-        }
+        public static DoublyLinkedList<Warehouse> WarehousesList { get => warehousesList; set => warehousesList = value; }
+
         public static bool updateRecord(Warehouse updatedWarehouse)
         {
-            foreach (Warehouse w in warehousesList)
+            DoublyLinkedListNode<Warehouse> Head = WarehousesList.Head;
+            while(Head != null)
             {
-                if (updatedWarehouse.Id == w.Id)
+                if (updatedWarehouse.Id == Head.Data.Id)
                 {
-                    w.Name = updatedWarehouse.Name;
-                    w.TotalSpace = updatedWarehouse.TotalSpace;
-                    w.Location= updatedWarehouse.Location;
+                    Head.Data.Name = updatedWarehouse.Name;
+                    Head.Data.TotalSpace = updatedWarehouse.TotalSpace;
+                    Head.Data.Location = updatedWarehouse.Location;
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }
         public static bool deleteRecord(Warehouse deleteWarehouse)
         {
-            foreach (Warehouse w in warehousesList)
+            DoublyLinkedListNode<Warehouse> Head = WarehousesList.Head;
+            while (Head != null)
             {
-                if (deleteWarehouse.Id == w.Id)
+                if(deleteWarehouse.Id == Head.Data.Id)
                 {
-                    WarehousesList.Remove(w);
+                    WarehousesList.RemoveNode(Head);
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }
@@ -53,19 +54,24 @@ namespace Merchant_Monetary_System
         }
         public static void storeAllRecordIntoFile(string path)
         {
-            StreamWriter file = new StreamWriter(path);
-            foreach (Warehouse record in warehousesList)
+            if (File.Exists(path))
             {
-                file.WriteLine(record.Id + "," + record.Name + "," + record.TotalSpace + "," + record.CurrentSpace
-              + "," + record.OccupiedSpace + "," + record.Location.Latitude + "," + record.Location.Longitude + "," +
-              record.Location.Area + "," + record.Location.City + "," + record.Location.State);
+                StreamWriter file = new StreamWriter(path);
+                DoublyLinkedListNode<Warehouse> Head = WarehousesList.Head;
+                while (Head != null)
+                {
+                    file.WriteLine(Head.Data.Id + "," + Head.Data.Name + "," + Head.Data.TotalSpace + "," + Head.Data.CurrentSpace
+                    + "," + Head.Data.OccupiedSpace + "," + Head.Data.Location.Latitude + "," + Head.Data.Location.Longitude + "," +
+                    Head.Data.Location.Area + "," + Head.Data.Location.City + "," + Head.Data.Location.State);
+                    Head = Head.Next;
+
+                }
+                file.Flush();
+                file.Close();
             }
-            file.Flush();
-            file.Close();
         }
         public static bool loadRecordFromFile(string path)
         {
-            clearList();
             
             if (File.Exists(path))
             {
@@ -87,7 +93,7 @@ namespace Merchant_Monetary_System
 
                     Location location=new Location(latitude,longitude,area, city, state);
                     Warehouse warehouse = new Warehouse(id, name, totalSpace, currentSpace, occupiedSpace,location);
-                    warehousesList.Add(warehouse);
+                    WarehousesList.Add(warehouse);
                 }
                 fileVariable.Close();
                 return true;
@@ -96,6 +102,20 @@ namespace Merchant_Monetary_System
             {
                 return false;
             }
+        }
+
+        public static Warehouse returnWarehouse(int id)
+        {
+            DoublyLinkedListNode<Warehouse> Head = WarehousesList.Head;
+            while(Head!=null)
+            {
+                if(Head.Data.Id == id)
+                {
+                    return Head.Data;
+                }
+                Head = Head.Next;
+            }
+            return null;
         }
 
     }

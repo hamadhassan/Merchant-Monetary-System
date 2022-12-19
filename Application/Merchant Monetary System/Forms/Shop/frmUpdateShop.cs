@@ -81,5 +81,10 @@ namespace Merchant_Monetary_System
                 isShop = false;
             }
         }
+
+        private void cmbxState_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

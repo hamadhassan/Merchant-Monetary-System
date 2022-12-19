@@ -140,12 +140,15 @@
             this.cmbxState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxState.FormattingEnabled = true;
             this.cmbxState.Items.AddRange(new object[] {
-            "Punjab"});
+            "KPK",
+            "Punjab",
+            "Sindh"});
             this.cmbxState.Location = new System.Drawing.Point(180, 180);
             this.cmbxState.Name = "cmbxState";
             this.cmbxState.Size = new System.Drawing.Size(203, 28);
             this.cmbxState.Sorted = true;
             this.cmbxState.TabIndex = 62;
+            this.cmbxState.SelectedIndexChanged += new System.EventHandler(this.cmbxState_SelectedIndexChanged);
             // 
             // lblState
             // 

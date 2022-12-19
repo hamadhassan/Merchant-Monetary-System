@@ -1,5 +1,4 @@
-﻿using Merchant_Monetary_System.BL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.Forms;
 
 namespace Merchant_Monetary_System.Forms.Payment
 {
