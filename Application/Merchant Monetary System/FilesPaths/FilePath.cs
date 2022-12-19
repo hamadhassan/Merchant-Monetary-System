@@ -20,6 +20,7 @@ namespace Merchant_Monetary_System
         private static string orders = "Orders.csv";
         private static string vehcile = "vehicles.csv";
         private static string ledger = "Ledgers.csv";
+        private static string routes = "Routes.txt";
 
 
         public static string Users { get => users; set => users = value; }
@@ -34,5 +35,6 @@ namespace Merchant_Monetary_System
         public static string Orders { get => orders; set => orders = value; }
         public static string Vehcile { get => vehcile; set => vehcile = value; }
         public static string Ledger { get => ledger; set => ledger = value; }
+        public static string Routes { get => routes; set => routes = value; }
     }
 }

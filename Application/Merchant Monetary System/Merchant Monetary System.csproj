@@ -115,6 +115,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Route\RoutesDL.cs" />
+    <Compile Include="Route\BellmanFord.cs" />
     <Compile Include="BL\Category.cs" />
     <Compile Include="BL\Order.cs" />
     <Compile Include="BL\Ledger.cs" />
@@ -132,6 +134,8 @@
     <Compile Include="DL\StockDL.cs" />
     <Compile Include="DL\VehicleDL.cs" />
     <Compile Include="DL\VendorDL.cs" />
+    <Compile Include="Route\Graph.cs" />
+    <Compile Include="Route\Edge.cs" />
     <Compile Include="Forms\Payment\frmViewLedger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,12 +194,6 @@
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Reportes.cs" />
-    <Compile Include="frmOrderDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmOrderDetails.Designer.cs">
-      <DependentUpon>frmOrderDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -503,12 +501,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>
-      </EmbeddedResource>
-    <EmbeddedResource Include="frmOrderDetails.resx">
-      <DependentUpon>frmOrderDetails.cs</DependentUpon>
-      </EmbeddedResource>
-    <EmbeddedResource Include="frmOrderDetails.resx">
-      <DependentUpon>frmOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route\frmRoutes.resx">
       <DependentUpon>frmRoutes.cs</DependentUpon>

@@ -208,7 +208,6 @@ D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22fina
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmProductDetails_.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddShopkeeper.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddStock.resources
-D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewOrders.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmADDvendor.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Properties.Resources.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant Monetary System.csproj.GenerateResource.cache
@@ -390,7 +389,6 @@ D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22fina
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmReports.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmOrderDetails.resources
-C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
-C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmOrderDetails.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmOrderDetails.resources
+D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources

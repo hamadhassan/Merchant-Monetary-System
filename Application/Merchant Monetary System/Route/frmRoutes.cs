@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using static GMap.NET.Entity.OpenStreetMapRouteEntity;
+using static IronPython.Modules._ast;
+using System.IO;
 
 namespace Merchant_Monetary_System
 {
@@ -28,56 +30,82 @@ namespace Merchant_Monetary_System
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide();    
         }
-
+        
+       
         private void btnFind_Click(object sender, EventArgs e)
         {
-            //Offline Map
-            GMaps.Instance.Mode = AccessMode.ServerAndCache;
-            map.CacheLocation = @"cache";
+            ////Offline Map
+            //GMaps.Instance.Mode = AccessMode.ServerAndCache;
+            //map.CacheLocation = @"cache";
 
-            PointLatLng start = new PointLatLng(31.580344855210168, 74.36079410267418);
-            PointLatLng end = new PointLatLng(30.30098588609462, 73.05889660211788);
+            PointLatLng start = new PointLatLng(31.58101606195333, 74.39284454472681);//it is warehouse
             GMapProviders.GoogleMap.ApiKey = ConfigAPI.ApiKey;
             map.MapProvider = GMapProviders.GoogleMap;
-            map.DragButton = MouseButtons.Left;
-            map.Position = start;
-            map.MinZoom = 5;
-            map.MaxZoom = 100;
-            map.Zoom = 10;//current zoom level
+            //map.DragButton = MouseButtons.Left;
+            //map.Position = start;//starting point of the map
+            //map.MinZoom = 5;
+            //map.MaxZoom = 100;
+            //map.Zoom = 10;//current zoom level
+            //map.AutoScroll = true;
+            //map.Refresh();
+            //distanceWarehouseEachShope(start, listofPoints());
+            algorithum(start, listofPoints());
+        }
+        public void algorithum(PointLatLng warehousePoint, List<PointLatLng> shopePoints)
+        {
+            Int64 verticesCount = shopePoints.Count+1;
+            Int64 edgesCount =Convert.ToInt64(Math.Round(Math.Pow(shopePoints.Count, 2)))+shopePoints.Count;
+            Graph graph = CreateGraph(verticesCount, edgesCount);
+            // Weighted Graph from warehouse
+            List<double> distancesAll = new List<double>();
+            for (int i = 0; i < shopePoints.Count; i++)
+            {
+                graph.edge[i].Source = 0;
+                graph.edge[i].Destination = i + 1;
+                double distance = getRoutesAll(warehousePoint, shopePoints[i]);
+                graph.edge[i].Weight = Convert.ToInt64(distance);
+                distancesAll.Add(distance);
+            }
+            // Weighted graph from each vertice 
+            int count=shopePoints.Count-1;
+            for (int i = 0; i < shopePoints.Count; i++)
+            {
+                for (int j = 0; j < shopePoints.Count; j++)
+                {
+                    graph.edge[count].Source = i + 1;
+                    graph.edge[count].Destination = j+1;
+                    double distance = getRoutesAll(shopePoints[i], shopePoints[j]);
+                    graph.edge[count].Weight = Convert.ToInt64(distance);
+                    distancesAll.Add(distance);
+                    count++;
 
-            GMapMarker marker1 = new GMarkerGoogle(start, GMarkerGoogleType.blue);
-            GMapMarker marker2 = new GMarkerGoogle(end, GMarkerGoogleType.blue);
-
-            //1. Create a Overlay
-            GMapOverlay markers = new GMapOverlay("markers");
-            //2. Add all available marksers to that overlay
-            markers.Markers.Add(marker1);
-            markers.Markers.Add(marker2);
-            //3. Cover mao with overlay
-            map.Overlays.Add(markers);
-            map.AutoScroll = true;
-        // map.refreshMap();
-        //------------------Get Route----------------------
-            //Start: Arifwala End:UET Lahore
-            GetRoutes(start, end);
-            //-------------------Add Polygon----------------------
-            PointLatLng point3 = new PointLatLng(31.56253148472921, 74.43218994597594);
-            PointLatLng point4 = new PointLatLng(31.6157576196817, 74.30001069435704);
+                }
+            }
+            RoutesDL.storeAllRecordIntoFile(FilePath.Routes, distancesAll);
+            Int64[] dis=Bellman_Ford(graph, 0);
+            for (int i = 0; i < dis.Length; i++)
+            {
+                MessageBox.Show(dis[i].ToString());
+            }
+        }
+        public List<PointLatLng> listofPoints()
+        {//These point are list of shopes
             List<PointLatLng> points = new List<PointLatLng>();
-            points.Add(start);
-            points.Add(end);
+            PointLatLng point1 = new PointLatLng(31.586938529376354, 74.33842789178762);
+            PointLatLng point2 = new PointLatLng(31.589570616301724, 74.3628896364054);
+            PointLatLng point3 = new PointLatLng(31.58869326225471, 74.38494812190282);
+            PointLatLng point4 = new PointLatLng(31.573923229204773, 74.36331878981973);
+            PointLatLng point5 = new PointLatLng(31.587889013787468, 74.32615410413729);
+            points.Add(point1);
+            points.Add(point2);
             points.Add(point3);
             points.Add(point4);
-            addPolygon(points);
-            //--------------------Remove Overlay-------------------------
-            //RemoveOverlay(0);
-            //-------------------Set Position by word--------------------------
-            //setPoitionbyKeyword("Arifwala");
-
-            //geoCoding("Arifwala");
+            points.Add(point5);
+            return points;
         }
+       
         public void addMarker(PointLatLng point, GMarkerGoogleType markerType = GMarkerGoogleType.arrow)
         {
             var markers = new GMapOverlay("markers");
@@ -94,18 +122,26 @@ namespace Merchant_Monetary_System
             markers.Markers.Add(marker);
             map.Overlays.Add(markers);
         }
-        public void GetRoutes(PointLatLng start, PointLatLng end)
+        public double getRoutesAll(PointLatLng start, PointLatLng end)
         {
+            var route = GoogleMapProvider.Instance.GetRoute(start, end, false, false, 15);
+            return route.Distance;
+
+        }
+        public double getRoutes(PointLatLng start, PointLatLng end)
+        {
+            addMarker(start, GMarkerGoogleType.blue);
+            addMarker(end, GMarkerGoogleType.blue_small);
             var route = GoogleMapProvider.Instance.GetRoute(start, end, false, false, 15);
             //Add GMap Reference
             var r = new GMapRoute(route.Points, "MY Route");
             r.Stroke = new Pen(Color.Red, 1);
-            //Add route into the map 
+            //Add route into the map      
             var routes = new GMapOverlay("routes");
             routes.Routes.Add(r);
             map.Overlays.Add(routes);
-
-            lblMessage.Text = Convert.ToString(route.Distance) + " KM";
+            return route.Distance;
+            
         }
         public void addPolygon(List<PointLatLng> point)
         {
@@ -166,21 +202,73 @@ namespace Merchant_Monetary_System
             }
             return null;
         }
-        private void geoCoding(string address)
-        {
-            GeoCoderStatusCode statusCode;
-            var pointLanLong = GoogleMapProvider.Instance.GetPoint(address.Trim(), out statusCode);
-            if (statusCode == GeoCoderStatusCode.OK)
-            {
-                double lat = pointLanLong.Value.Lat;
-                double lng = pointLanLong.Value.Lng;
-                lblMessage.Text = lat.ToString() + " " + lng.ToString();
-            }
-        }
+       
 
         private void lblViewRoute_Click(object sender, EventArgs e)
         {
 
         }
+        //-----------------------------------Algorithum--------------------------------------------------
+        public struct Edge
+        {
+            public Int64 Source;
+            public Int64 Destination;
+            public Int64 Weight;
+        }
+
+        public struct Graph
+        {
+            public Int64 VerticesCount;
+            public Int64 EdgesCount;
+            public Edge[] edge;
+        }
+
+        public static Graph CreateGraph(Int64 verticesCount, Int64 edgesCount)
+        {
+            Graph graph = new Graph();
+            graph.VerticesCount = verticesCount;
+            graph.EdgesCount = edgesCount;
+            graph.edge = new Edge[graph.EdgesCount];
+
+            return graph;
+        }
+        private static List<int> distance;
+        public static Int64[] Bellman_Ford(Graph graph, Int64 source)
+        {
+            Int64 verticesCount = graph.VerticesCount;
+            Int64 edgesCount = graph.EdgesCount;
+            Int64[] distance = new Int64[verticesCount];
+
+            for (int i = 0; i < verticesCount; i++)
+                distance[i] = int.MaxValue;
+
+            distance[source] = 0;
+
+            for (int i = 1; i <= verticesCount - 1; ++i)
+            {
+                for (int j = 0; j < edgesCount; ++j)
+                {
+                    Int64 u = graph.edge[j].Source;
+                    Int64 v = graph.edge[j].Destination;
+                    Int64 weight = graph.edge[j].Weight;
+
+                    if (distance[u] != Int64.MaxValue && distance[u] + weight < distance[v])
+                        distance[v] = distance[u] + weight;
+                }
+            }
+
+            for (int i = 0; i < edgesCount; ++i)
+            {
+                Int64 u = graph.edge[i].Source;
+                Int64 v = graph.edge[i].Destination;
+                Int64 weight = graph.edge[i].Weight;
+
+                //if (distance[u] != int.MaxValue && distance[u] + weight < distance[v])
+                    //Console.WriteLine("Graph contains negative weight cycle.");
+            }
+
+           return distance;
+        }
     }
+
 }

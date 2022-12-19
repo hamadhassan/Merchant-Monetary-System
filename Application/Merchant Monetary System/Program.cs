@@ -32,7 +32,7 @@ namespace Merchant_Monetary_System
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmCEODashboard());
+                Application.Run(new frmRoutes());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Merchant_Monetary_System
 {
-    internal class ConfigAPI
+    public class ConfigAPI
     {
         private static string apiKey = "AIzaSyCFE8e8PiPP_3u2-mT-WtZUb6WlPAdShKc";
 

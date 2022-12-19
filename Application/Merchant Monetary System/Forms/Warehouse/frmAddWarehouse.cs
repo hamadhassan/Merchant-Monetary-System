@@ -46,6 +46,7 @@ namespace Merchant_Monetary_System
                 string state=cmbxState.Text;
                 Location location=new Location(area, city, state);
                 Warehouse warehouse = new Warehouse(name, totalSpace, location);
+                //MessageBox.Show(location.Latitude.ToString());
                 if (previouObj != null)
                 {//update the record
                     if (WarehouseDL.updateRecord(warehouse))
