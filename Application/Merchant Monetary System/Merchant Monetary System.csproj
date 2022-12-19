@@ -160,6 +160,12 @@
     <Compile Include="Forms\Shop\frmUpdateShop.Designer.cs">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Stock\frmViewStockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock\frmViewStockDetails.designer.cs">
+      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Users\frmVendorDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,12 +192,6 @@
     </Compile>
     <Compile Include="Forms\Shop\frmUpdateShop.Designer.cs">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Stock\frmViewStockDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Stock\frmViewStockDetails.Designer.cs">
-      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReports.cs">
       <SubType>Form</SubType>
@@ -454,6 +454,9 @@
     <EmbeddedResource Include="Forms\Product\UpdatStock.resx">
       <DependentUpon>UpdatStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock\frmViewStockDetails.resx">
+      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmAccountDetails.resx">
       <DependentUpon>frmAccountDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,9 +519,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shop\frmUpdateShop.resx">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Stock\frmViewStockDetails.resx">
-      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>

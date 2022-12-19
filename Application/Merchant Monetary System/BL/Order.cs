@@ -12,7 +12,7 @@ namespace Merchant_Monetary_System.BL
 {
     public class Order
     {
-        private List<Product> order_products;
+        private DoublyLinkedList<Product> order_products;
         private string shopKeeperName;
         private string riderName;
         private string orderID;
@@ -20,7 +20,7 @@ namespace Merchant_Monetary_System.BL
 
         public string RiderName { get => riderName; set => riderName = value; }
         public string ShopKeeperName { get => shopKeeperName; set => shopKeeperName = value; }
-        public List<Product> Order_products { get => order_products; set => order_products = value; }
+        public DoublyLinkedList<Product> Order_products { get => order_products; set => order_products = value; }
         public string OrderID { get => orderID; set => orderID = value; }
         public string Status { get => status; set => status = value; }
 
@@ -45,11 +45,11 @@ namespace Merchant_Monetary_System.BL
             this.RiderName = RiderName;
             this.OrderID = (generateOrderID());
             this.Status = "In Progress";
-            this.Order_products = new List<Product>();
+            this.Order_products = new DoublyLinkedList<Product>();
 
         }
 
-        public Order(string ShopKeeperName, string RiderName, List<Product>product)
+        public Order(string ShopKeeperName, string RiderName, DoublyLinkedList<Product>product)
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
@@ -62,7 +62,7 @@ namespace Merchant_Monetary_System.BL
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
             this.OrderID = OrderID;
-            this.Order_products = new List<Product>();
+            this.Order_products = new DoublyLinkedList<Product>();
             this.Status = "In Progress";
         }
         public void  UpdateOrderStatus(string status) 
@@ -70,7 +70,7 @@ namespace Merchant_Monetary_System.BL
             this.Status = status;
             OrderDL.storeAllRecordIntoFile(FilePath.Orders);
         }
-        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus, List<Product> product)
+        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus, DoublyLinkedList<Product> product)
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
@@ -83,7 +83,7 @@ namespace Merchant_Monetary_System.BL
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
             this.OrderID = OrderID;
-            this.Order_products = new List<Product>();
+            this.Order_products = new DoublyLinkedList<Product>();
             this.Status = OrderStatus;
         }
     }
