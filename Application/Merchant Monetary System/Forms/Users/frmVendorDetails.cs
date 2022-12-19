@@ -92,8 +92,6 @@ namespace Merchant_Monetary_System
                     {
                         Form form = new frmUpdateVendor(vendor);
                         form.ShowDialog();
-                        DataBind();
-                        VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
                     }
                     else if (index == 6)
                     {
@@ -107,6 +105,8 @@ namespace Merchant_Monetary_System
                             MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
+                    DataBind();
+                    VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
                 }
             }
             else
@@ -141,8 +141,6 @@ namespace Merchant_Monetary_System
                         lblDatagvSignal.Text = "Select a row from the list";
                 }
             }
-
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

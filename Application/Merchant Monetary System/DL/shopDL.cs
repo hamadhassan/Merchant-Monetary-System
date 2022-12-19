@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Merchant_Monetary_System.BL;
 
 namespace Merchant_Monetary_System.DL
@@ -10,9 +11,8 @@ namespace Merchant_Monetary_System.DL
     public class shopDL
     {
         private static List<Shop> shopList = new List<Shop>();
-
         public static List<Shop> ShopList { get => shopList; set => shopList = value; }
-        
+
         public static void addDataIntoList(Shop S)
         {
             shopList.Add(S);
