@@ -244,7 +244,7 @@
             this.groupBox1.Controls.Add(this.lblSearch);
             this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(930, 540);
+            this.groupBox1.Size = new System.Drawing.Size(910, 520);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);

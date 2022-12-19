@@ -111,6 +111,7 @@
             this.lblShopSignal.Size = new System.Drawing.Size(13, 20);
             this.lblShopSignal.TabIndex = 86;
             this.lblShopSignal.Text = " ";
+            this.lblShopSignal.Click += new System.EventHandler(this.lblShopSignal_Click);
             // 
             // lblShopName
             // 

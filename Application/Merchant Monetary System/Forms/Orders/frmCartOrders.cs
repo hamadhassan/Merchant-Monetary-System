@@ -122,8 +122,9 @@ namespace Merchant_Monetary_System
             {
                 Order order = new Order(shopkeeper, rider, cart);
                 OrderDL.ordersList.Add(order);
-                OrderDL.storeAllRecordIntoFile(FilePath.Orders);
+                OrderDL.storeRecordIntoFile(order,FilePath.Orders);
                 MessageBox.Show("Order Added");
+
             }
             catch (Exception exp) 
             {

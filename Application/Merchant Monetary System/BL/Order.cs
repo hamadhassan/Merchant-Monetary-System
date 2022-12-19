@@ -10,7 +10,7 @@ using System.Data.Entity.Migrations.Model;
 
 namespace Merchant_Monetary_System.BL
 {
-    internal class Order
+    public class Order
     {
         private List<Product> order_products;
         private string shopKeeperName;
@@ -38,6 +38,7 @@ namespace Merchant_Monetary_System.BL
                 .ToList().ForEach(e => _builder.Append(e));
             return _builder.ToString();
         }
+
         public Order(string ShopKeeperName,string RiderName) 
         {
             this.ShopKeeperName = ShopKeeperName;
@@ -54,6 +55,7 @@ namespace Merchant_Monetary_System.BL
             this.RiderName = RiderName;
             this.OrderID = (generateOrderID()); ;
             this.Order_products = product;
+            this.Status = "In Progress";
         }
         public Order(string ShopKeeperName, string RiderName, string OrderID)
         {
@@ -61,11 +63,28 @@ namespace Merchant_Monetary_System.BL
             this.RiderName = RiderName;
             this.OrderID = OrderID;
             this.Order_products = new List<Product>();
+            this.Status = "In Progress";
         }
         public void  UpdateOrderStatus(string status) 
         {
             this.Status = status;
+            OrderDL.storeAllRecordIntoFile(FilePath.Orders);
         }
-
+        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus, List<Product> product)
+        {
+            this.ShopKeeperName = ShopKeeperName;
+            this.RiderName = RiderName;
+            this.OrderID = OrderID ;
+            this.Order_products = product;
+            this.Status = OrderStatus;
+        }
+        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus)
+        {
+            this.ShopKeeperName = ShopKeeperName;
+            this.RiderName = RiderName;
+            this.OrderID = OrderID;
+            this.Order_products = new List<Product>();
+            this.Status = OrderStatus;
+        }
     }
 }
