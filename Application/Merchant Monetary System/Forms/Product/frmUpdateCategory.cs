@@ -16,9 +16,11 @@ namespace Merchant_Monetary_System.Forms.Product
     public partial class frmUpdateCategory : Form
     {
         bool isName = true;
-        public frmUpdateCategory()
+        string category;
+        public frmUpdateCategory(string category)
         {
             InitializeComponent();
+            this.category = category;
         }
         public bool isValidString(string input)
         {
@@ -83,7 +85,7 @@ namespace Merchant_Monetary_System.Forms.Product
 
         private void frmUpdateCategory_Load(object sender, EventArgs e)
         {
-
+            txtCategory.Text = category;
         }
     }
 }

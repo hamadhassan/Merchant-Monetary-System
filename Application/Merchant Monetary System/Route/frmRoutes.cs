@@ -58,25 +58,25 @@ namespace Merchant_Monetary_System
             //3. Cover mao with overlay
             map.Overlays.Add(markers);
             map.AutoScroll = true;
-           // map.refreshMap();
-            //------------------Get Route----------------------
+        // map.refreshMap();
+        //------------------Get Route----------------------
             //Start: Arifwala End:UET Lahore
-            //GetRoutes(start, end);
+            GetRoutes(start, end);
             //-------------------Add Polygon----------------------
-            //PointLatLng point3 = new PointLatLng(31.56253148472921, 74.43218994597594);
-            //PointLatLng point4 = new PointLatLng(31.6157576196817, 74.30001069435704);
-            //List<PointLatLng> points = new List<PointLatLng>();
-            //points.Add(start);
-            //points.Add(end);
-            //points.Add(point3);
-            //points.Add(point4);
-            //addPolygon(points);
+            PointLatLng point3 = new PointLatLng(31.56253148472921, 74.43218994597594);
+            PointLatLng point4 = new PointLatLng(31.6157576196817, 74.30001069435704);
+            List<PointLatLng> points = new List<PointLatLng>();
+            points.Add(start);
+            points.Add(end);
+            points.Add(point3);
+            points.Add(point4);
+            addPolygon(points);
             //--------------------Remove Overlay-------------------------
             //RemoveOverlay(0);
             //-------------------Set Position by word--------------------------
-            setPoitionbyKeyword("Arifwala");
+            //setPoitionbyKeyword("Arifwala");
 
-            geoCoding("Arifwala");
+            //geoCoding("Arifwala");
         }
         public void addMarker(PointLatLng point, GMarkerGoogleType markerType = GMarkerGoogleType.arrow)
         {
@@ -178,5 +178,9 @@ namespace Merchant_Monetary_System
             }
         }
 
+        private void lblViewRoute_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

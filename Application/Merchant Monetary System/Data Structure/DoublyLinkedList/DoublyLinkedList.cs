@@ -22,9 +22,9 @@ namespace Merchant_Monetary_System
         }
         public int Count { get; private set; }
 
-        private DoublyLinkedListNode<T> Head { get; set; }
+        public DoublyLinkedListNode<T> Head { get; set; }
 
-        private DoublyLinkedListNode<T> Tail { get; set; }
+        public DoublyLinkedListNode<T> Tail { get; set; }
 
         public DoublyLinkedListNode<T> AddHead(T data)
         {

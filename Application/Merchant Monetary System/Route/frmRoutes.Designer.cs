@@ -136,6 +136,7 @@
             this.lblViewRoute.Size = new System.Drawing.Size(202, 38);
             this.lblViewRoute.TabIndex = 3;
             this.lblViewRoute.Text = "View Route";
+            this.lblViewRoute.Click += new System.EventHandler(this.lblViewRoute_Click);
             // 
             // tableLayoutPanel4
             // 

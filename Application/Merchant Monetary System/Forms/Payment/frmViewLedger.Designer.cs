@@ -165,7 +165,7 @@
             // lblAttributes
             // 
             this.lblAttributes.AutoSize = true;
-            this.lblAttributes.Location = new System.Drawing.Point(105, 0);
+            this.lblAttributes.Location = new System.Drawing.Point(104, 0);
             this.lblAttributes.Name = "lblAttributes";
             this.lblAttributes.Size = new System.Drawing.Size(74, 20);
             this.lblAttributes.TabIndex = 44;
@@ -183,7 +183,7 @@
             "Expiry Date",
             "Receiving Date",
             "Vendor"});
-            this.cmbxAttributes.Location = new System.Drawing.Point(194, 3);
+            this.cmbxAttributes.Location = new System.Drawing.Point(193, 3);
             this.cmbxAttributes.Name = "cmbxAttributes";
             this.cmbxAttributes.Size = new System.Drawing.Size(140, 28);
             this.cmbxAttributes.TabIndex = 45;
@@ -216,7 +216,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(365, 0);
+            this.lblSearch.Location = new System.Drawing.Point(364, 0);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(64, 20);
             this.lblSearch.TabIndex = 46;
@@ -225,7 +225,7 @@
             // lblFiliter
             // 
             this.lblFiliter.AutoSize = true;
-            this.lblFiliter.Location = new System.Drawing.Point(583, 0);
+            this.lblFiliter.Location = new System.Drawing.Point(581, 0);
             this.lblFiliter.Name = "lblFiliter";
             this.lblFiliter.Size = new System.Drawing.Size(48, 20);
             this.lblFiliter.TabIndex = 48;
@@ -233,9 +233,9 @@
             // 
             // txtbxSearch
             // 
-            this.txtbxSearch.Location = new System.Drawing.Point(450, 3);
+            this.txtbxSearch.Location = new System.Drawing.Point(449, 3);
             this.txtbxSearch.Name = "txtbxSearch";
-            this.txtbxSearch.Size = new System.Drawing.Size(127, 26);
+            this.txtbxSearch.Size = new System.Drawing.Size(126, 26);
             this.txtbxSearch.TabIndex = 47;
             this.txtbxSearch.UseSystemPasswordChar = true;
             // 
@@ -250,7 +250,7 @@
             "Decending Order",
             "Start With",
             "Contain"});
-            this.cmbxFiliter.Location = new System.Drawing.Point(645, 3);
+            this.cmbxFiliter.Location = new System.Drawing.Point(642, 3);
             this.cmbxFiliter.Name = "cmbxFiliter";
             this.cmbxFiliter.Size = new System.Drawing.Size(142, 28);
             this.cmbxFiliter.TabIndex = 49;

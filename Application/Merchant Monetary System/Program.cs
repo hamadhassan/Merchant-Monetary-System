@@ -27,21 +27,20 @@ namespace Merchant_Monetary_System
             VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
             UsersDL.loadRecordFromFile(FilePath.Users);
+            categoryDL.loadDataFromFiles(FilePath.Category);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< Updated upstream
-                Application.Run(new ViewShopkeeperDetails());
-=======
-                Application.Run(new frmCEODashboard());
->>>>>>> Stashed changes
+               // Application.Run(new Forms.Product.frmViewCategory());
+                Application.Run(new frmRoutes());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
-            
+
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmAddShopkeeper());
+
         }
     }
 }
