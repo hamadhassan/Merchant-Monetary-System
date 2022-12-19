@@ -115,6 +115,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Orders\OrDerDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Orders\OrDerDetailsForm.designer.cs">
+      <DependentUpon>OrDerDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Route\RoutesDL.cs" />
     <Compile Include="Route\BellmanFord.cs" />
     <Compile Include="BL\Category.cs" />
@@ -189,9 +195,6 @@
     </Compile>
     <Compile Include="Forms\Vehicle\frmViewVehicleData.Designer.cs">
       <DependentUpon>frmViewVehicleData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Shop\frmUpdateShop.Designer.cs">
-      <DependentUpon>frmUpdateShop.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReports.cs">
       <SubType>Form</SubType>
@@ -409,12 +412,6 @@
     <Compile Include="Forms\Shop\ViewShops.Designer.cs">
       <DependentUpon>ViewShops.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Orders\OrDerDetailsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Orders\OrDerDetailsForm.Designer.cs">
-      <DependentUpon>OrDerDetailsForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\Dashboards\frmCEODashboard.resx">
       <DependentUpon>frmCEODashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -429,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\frmTakeOrder.resx">
       <DependentUpon>frmTakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Orders\OrDerDetailsForm.resx">
+      <DependentUpon>OrDerDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payment\frmAddPayment.resx">
       <DependentUpon>frmAddPayment.cs</DependentUpon>
@@ -550,9 +550,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Shop\ViewShops.resx">
       <DependentUpon>ViewShops.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Orders\OrDerDetailsForm.resx">
-      <DependentUpon>OrDerDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

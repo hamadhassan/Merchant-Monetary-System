@@ -1,5 +1,4 @@
 ﻿using Merchant_Monetary_System.BL;
-using Merchant_Monetary_System.DL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,12 +28,6 @@ namespace Merchant_Monetary_System
             cmbxCity.SelectedItem = cmbxCity.Items.IndexOf(shop.City);
             cmbxState.SelectedItem = cmbxState.Items.IndexOf(shop.State);
             comboboxArea.SelectedItem = comboboxArea.Items.IndexOf(shop.Area);
-            foreach (string city in Misc.Cities)
-            {
-                cmbxCity.Items.Add(city);
-            }
-            cmbxState.Items.Add("Punjab");
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)

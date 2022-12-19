@@ -15,7 +15,7 @@ namespace Merchant_Monetary_System
     public partial class frmUpdateStatus : Form
     {
         BL.Order previous=new Order();
-        public frmUpdateStatus(Order previous)
+        public frmUpdateStatus(Order previous,string role)
         {
             InitializeComponent();
             this.previous =previous;   
@@ -38,6 +38,8 @@ namespace Merchant_Monetary_System
             {
                 previous.UpdateOrderStatus(cmbxStatus.Text);
                 MessageBox.Show("Status Updated");
+                
+                Misc.sendEmail(UsersDL.GetEmail(previous.ShopKeeperName), "Order Status","Your Order is "+cmbxStatus.Text,role);
                 this.Hide();
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }

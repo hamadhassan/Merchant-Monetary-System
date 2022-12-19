@@ -127,7 +127,7 @@ namespace Merchant_Monetary_System
                     {
                         if (index == 5)
                         {
-                            Form updateform=new frmUpdateStatus(order);
+                            Form updateform=new frmUpdateStatus(order,role);
                             updateform.ShowDialog();
                             DataBind();
                         }

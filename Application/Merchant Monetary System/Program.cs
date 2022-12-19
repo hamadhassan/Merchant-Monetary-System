@@ -34,7 +34,7 @@ namespace Merchant_Monetary_System
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                // Application.Run(new frmAddProduct());
-                Application.Run(new frmAddProduct());
+                Application.Run(new frmRiderDashboard("Akbar"));
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
             

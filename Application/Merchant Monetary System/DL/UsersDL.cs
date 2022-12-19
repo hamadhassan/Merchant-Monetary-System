@@ -144,6 +144,19 @@ namespace Merchant_Monetary_System
             }
             return names;
         }
+        public static string GetEmail(string name)
+        {
+            string email="";
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while (Head != null)
+            {
+                if (!(Head.Data.Name == name))
+                {
+                    email= Head.Data.EmailAddress;
+                }
+            }
+            return email;
+        }
         public static List<string> GetEmployee_Names()
         {
             List<string> names = new List<string>();
