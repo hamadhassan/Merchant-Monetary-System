@@ -1,4 +1,5 @@
 ﻿using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.DL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -113,6 +114,72 @@ namespace Merchant_Monetary_System.Forms.Payment
             else
             {
                 MessageBox.Show("Fill All fields correctly", "Alert Message!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void comboBoxPaymentBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxPaymentBy.Text == "Vendor")
+            {
+                DoublyLinkedListNode<Vendor> Head = VendorDL.VendorLinkedList.Head;
+                while (Head != null)
+                {
+                    comboBoxPaymenyByName.Items.Add(Head.Data.VendorName);
+                    Head = Head.Next;
+                }
+
+
+            }
+            else {
+                //DoublyLinkedListNode<Shopkeeper> Head = ShopKeeperDL.ShopkeeperList.Head;
+                //while (Head != null)
+                //{
+                //    comboBoxPaymenyByName.Items.Add(Head.Data.ShopkeeperName);
+                //    Head = Head.Next;
+                //}
+
+                // COMMNENT THIS ONE WHEN LINKED liST applied on Shoppkeper Dl AND uNCOMMENT THE ABOVE ONE
+
+                List<string> names;
+                names = ShopKeeperDL.Shopkeepers_names();
+                for (int i = 0; i < names.Count; i++)
+                    comboBoxPaymenyByName.Items.Add(names[i]); 
+
+            }
+        }
+
+        private void comboBoxPaymentReceivedBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxPaymentReceivedBy.Text == "CEO")
+            {
+                List<string> names;
+                names = UsersDL.GetCEO_Names();
+                for (int i = 0; i < names.Count; i++)
+                    comboBoxPaymentReceivedByName.Items.Add(names[i]);
+
+            }
+            else if (comboBoxPaymentReceivedBy.Text == "Employee")
+            {
+
+                {
+                    List<string> names;
+                    names = UsersDL.GetEmployee_Names();
+                    for (int i = 0; i < names.Count; i++)
+                        comboBoxPaymentReceivedByName.Items.Add(names[i]);
+
+                }
+
+            }
+            else if (comboBoxPaymentReceivedBy.Text == "Vendor")
+            {
+
+                DoublyLinkedListNode<Vendor> Head = VendorDL.VendorLinkedList.Head;
+                while (Head != null)
+                {
+                    comboBoxPaymentReceivedByName.Items.Add(Head.Data.VendorName);
+                    Head = Head.Next;
+                }
+
             }
         }
     }

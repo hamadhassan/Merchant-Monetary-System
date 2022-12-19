@@ -79,7 +79,7 @@
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.lblupdate_);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(2, -1);
+            this.groupBox1.Location = new System.Drawing.Point(1, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(911, 498);
             this.groupBox1.TabIndex = 0;
@@ -113,10 +113,6 @@
             this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
             this.comboCategory.Location = new System.Drawing.Point(633, 237);
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(203, 28);
@@ -141,9 +137,8 @@
             this.cmbxSenstivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxSenstivity.FormattingEnabled = true;
             this.cmbxSenstivity.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
+            "Fragile Product",
+            "Non Fraglie Product"});
             this.cmbxSenstivity.Location = new System.Drawing.Point(636, 188);
             this.cmbxSenstivity.Name = "cmbxSenstivity";
             this.cmbxSenstivity.Size = new System.Drawing.Size(203, 28);
@@ -280,9 +275,7 @@
             this.cmbxManufacture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxManufacture.FormattingEnabled = true;
             this.cmbxManufacture.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
+            ""});
             this.cmbxManufacture.Location = new System.Drawing.Point(633, 136);
             this.cmbxManufacture.Name = "cmbxManufacture";
             this.cmbxManufacture.Size = new System.Drawing.Size(203, 28);

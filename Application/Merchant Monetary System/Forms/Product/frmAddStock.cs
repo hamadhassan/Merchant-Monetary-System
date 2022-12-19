@@ -35,7 +35,21 @@ namespace Merchant_Monetary_System
         private void frmAddStock_Load(object sender, EventArgs e)
         {
             comboBoxProduct.DataSource = ProductDL.ProductList1;
-            comboBoxVendor.DataSource = VendorDL.VendorList;
+           // comboBoxVendor.DataSource = VendorDL.VendorList;
+            DoublyLinkedListNode<Product> Head = ProductDL.ProductList1.Head;
+            //while (Head != null)
+            //{
+            //    comboBoxProduct.Items.Add(Head.Data.Name);
+            //    Head = Head.Next;
+            //}
+            DoublyLinkedListNode<Vendor> Header = VendorDL.VendorLinkedList.Head;
+            while (Header != null)
+            {
+                comboBoxVendor.Items.Add(Header.Data.VendorName);
+                Header = Header.Next;
+            }
+
+
             DGVStock.DataSource = newStock;
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";

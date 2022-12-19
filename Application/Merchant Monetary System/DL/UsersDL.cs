@@ -10,7 +10,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Merchant_Monetary_System
 {
-    internal class UsersDL
+    public class UsersDL
     {
         private static List<Users> usersList=new List<Users>();
         private static DoublyLinkedList<Users> usersLinkedList = new DoublyLinkedList<Users>();
@@ -131,6 +131,33 @@ namespace Merchant_Monetary_System
             file.Flush();
             file.Close();
         }
+        public static List<string> GetCEO_Names() 
+        {
+            List<string> names = new List<string>();    
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while (Head != null)
+            {
+                if (!(Head.Data.Designation == "CEO"))
+                {
+                   names.Add(Head.Data.Name);
+                }
+            }
+            return names;
+        }
+        public static List<string> GetEmployee_Names()
+        {
+            List<string> names = new List<string>();
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while (Head != null)
+            {
+                if (!(Head.Data.Designation == "Employee"))
+                {
+                    names.Add(Head.Data.Name);
+                }
+            }
+            return names;
+        }
+
         public static bool loadRecordFromFile(string path)
         {
             if (File.Exists(path))

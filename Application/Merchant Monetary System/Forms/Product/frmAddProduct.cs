@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System.DL;
+using static Microsoft.Scripting.PerfTrack;
+
 namespace Merchant_Monetary_System
 {
     public partial class frmAddProduct : Form
@@ -192,6 +194,23 @@ namespace Merchant_Monetary_System
                 MessageBox.Show(exp.Message);
             }
 
+
+        }
+
+        private void frmAddProduct_Load(object sender, EventArgs e)
+        {
+
+            DoublyLinkedListNode<Category> Head = categoryDL.Categories.Head;
+            while (Head != null) {
+                cmbxCategory.Items.Add(Head.Data.CategoryName);
+                Head = Head.Next;
+            }
+            DoublyLinkedListNode<Vendor> Header = VendorDL.VendorLinkedList.Head;
+            while (Header != null)
+            {
+                cmbxManufacture.Items.Add(Header.Data.VendorName);
+                Header = Header.Next;
+            }
 
         }
     }

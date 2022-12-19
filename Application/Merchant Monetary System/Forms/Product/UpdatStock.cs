@@ -29,6 +29,19 @@ namespace Merchant_Monetary_System.Forms.Product
         {
             comboBoxProduct.SelectedIndex = comboBoxProduct.Items.IndexOf(stock.Product);
             comboBoxVendor.SelectedIndex = comboBoxVendor.Items.IndexOf(stock.Vendor);
+            // comboBoxVendor.DataSource = VendorDL.VendorList;
+            //DoublyLinkedListNode<Product> Head = ProductDL.ProductList1.Head;
+            //while (Head != null)
+            //{
+            //    comboBoxProduct.Items.Add(Head.Data.Name);
+            //    Head = Head.Next;
+            //}
+            DoublyLinkedListNode<Vendor> Header = VendorDL.VendorLinkedList.Head;
+            while (Header != null)
+            {
+                comboBoxVendor.Items.Add(Header.Data.VendorName);
+                Header = Header.Next;
+            }
             txtbxQuantity.Text = stock.Quantity.ToString();
             txtbxRetailPrice.Text = stock.RetailPrice.ToString();
             txtbxCostPrice.Text = stock.CostPrice.ToString();

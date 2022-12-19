@@ -126,11 +126,6 @@
             this.comboBoxPaymenyByName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPaymenyByName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxPaymenyByName.FormattingEnabled = true;
-            this.comboBoxPaymenyByName.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
             this.comboBoxPaymenyByName.Location = new System.Drawing.Point(575, 333);
             this.comboBoxPaymenyByName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymenyByName.Name = "comboBoxPaymenyByName";
@@ -154,11 +149,6 @@
             this.comboBoxPaymentReceivedByName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPaymentReceivedByName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxPaymentReceivedByName.FormattingEnabled = true;
-            this.comboBoxPaymentReceivedByName.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
             this.comboBoxPaymentReceivedByName.Location = new System.Drawing.Point(648, 390);
             this.comboBoxPaymentReceivedByName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentReceivedByName.Name = "comboBoxPaymentReceivedByName";
@@ -186,14 +176,14 @@
             this.comboBoxPaymentBy.Items.AddRange(new object[] {
             "CEO",
             "Employee",
-            "Rider",
-            "Warehouse Manager"});
+            "Vendor"});
             this.comboBoxPaymentBy.Location = new System.Drawing.Point(190, 334);
             this.comboBoxPaymentBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentBy.Name = "comboBoxPaymentBy";
             this.comboBoxPaymentBy.Size = new System.Drawing.Size(240, 28);
             this.comboBoxPaymentBy.Sorted = true;
             this.comboBoxPaymentBy.TabIndex = 38;
+            this.comboBoxPaymentBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaymentBy_SelectedIndexChanged);
             // 
             // lblPaymentBY
             // 
@@ -222,15 +212,14 @@
             this.comboBoxPaymentReceivedBy.FormattingEnabled = true;
             this.comboBoxPaymentReceivedBy.Items.AddRange(new object[] {
             "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
+            "Employee"});
             this.comboBoxPaymentReceivedBy.Location = new System.Drawing.Point(264, 391);
             this.comboBoxPaymentReceivedBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentReceivedBy.Name = "comboBoxPaymentReceivedBy";
             this.comboBoxPaymentReceivedBy.Size = new System.Drawing.Size(167, 28);
             this.comboBoxPaymentReceivedBy.Sorted = true;
             this.comboBoxPaymentReceivedBy.TabIndex = 34;
+            this.comboBoxPaymentReceivedBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaymentReceivedBy_SelectedIndexChanged);
             // 
             // label5
             // 
