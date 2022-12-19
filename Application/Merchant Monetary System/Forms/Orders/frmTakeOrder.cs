@@ -17,12 +17,14 @@ namespace Merchant_Monetary_System
     public partial class frmTakeOrder : Form
     {
         public static string name;
+
         
         public static List<Product> cartlist=new List<Product>();
         public frmTakeOrder(string name)
         {
             InitializeComponent();
             this.Name = name;
+
         }
 
         private void lblSearch_Click(object sender, EventArgs e)
@@ -105,7 +107,12 @@ namespace Merchant_Monetary_System
 
         private void frmTakeOrder_Load(object sender, EventArgs e)
         {
-            txtbxName.DataSource = ShopKeeperDL.Shopkeepers_names();
+            ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
+            List<string> names;
+            names= ShopKeeperDL.Shopkeepers_names();
+            for (int i = 0; i < names.Count; i++)
+                txtbxName.Items.Add(names[i]);
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

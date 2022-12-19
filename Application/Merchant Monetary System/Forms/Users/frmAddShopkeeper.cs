@@ -38,7 +38,7 @@ namespace Merchant_Monetary_System
                 lblShopSignal.Text = "Enter the name";
                 isShop = true;
             }
-            else if (isValidString(txtbxShopkeeperName.Text)==false)
+            else if (isValidString(txtbxShopkeeperName.Text)==true)
             {//check isSpecialCharactor
                 lblShopSignal.Text = "Allowed characters: a-z, A-Z";
                 isShop = true;
@@ -119,7 +119,7 @@ namespace Merchant_Monetary_System
                 lblNameSignal.Text = "Enter the name";
                 isName = true;
             }
-            else if (isValidString(txtbxShopkeeperName.Text)==false)
+            else if (isValidString(txtbxShopkeeperName.Text)==true)
             {//check isSpecialCharactor
                 lblNameSignal.Text = "Allowed characters: a-z, A-Z";
                 isName = true;
@@ -265,6 +265,11 @@ namespace Merchant_Monetary_System
         private void btnFound_Click(object sender, EventArgs e)
         {
             isBtnFoundClicked?.Invoke(shopkeeperFound, EventArgs.Empty);
+        }
+
+        private void lblShopSignal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

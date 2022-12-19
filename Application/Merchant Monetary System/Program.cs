@@ -22,24 +22,20 @@ namespace Merchant_Monetary_System
         [STAThread]
         static void Main()
         {
-            ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
+            //ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
             Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
             VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
             UsersDL.loadRecordFromFile(FilePath.Users);
-            categoryDL.loadDataFromFiles(FilePath.Category);
-            VendorDL.loadRecordFromFile(FilePath.Vendors);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmVendorDetails());
+               // Application.Run(new frmAddProduct());
+                Application.Run(new frmRiderDashboard("Ali"));
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
-
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmAddShopkeeper());
+            
 
         }
     }

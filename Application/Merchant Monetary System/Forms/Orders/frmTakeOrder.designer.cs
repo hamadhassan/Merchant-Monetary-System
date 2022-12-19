@@ -91,11 +91,6 @@
             this.txtbxName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtbxName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtbxName.FormattingEnabled = true;
-            this.txtbxName.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
             this.txtbxName.Location = new System.Drawing.Point(475, 490);
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.Size = new System.Drawing.Size(107, 28);
