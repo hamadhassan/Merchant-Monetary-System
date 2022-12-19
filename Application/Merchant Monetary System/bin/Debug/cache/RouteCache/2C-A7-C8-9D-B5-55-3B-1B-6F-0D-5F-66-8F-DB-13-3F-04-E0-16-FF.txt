@@ -1,0 +1,229 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJFQgtBtcaGTkRaC7dCT45dNM",
+         "types" : [ "premise" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJQbESqRUbGTkROXv2fpX_PxU",
+         "types" : [ "establishment", "point_of_interest", "store" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5870506,
+               "lng" : 74.3687956
+            },
+            "southwest" : {
+               "lat" : 31.5724019,
+               "lng" : 74.3361769
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "5.5 km",
+                  "value" : 5466
+               },
+               "duration" : {
+                  "text" : "15 mins",
+                  "value" : 880
+               },
+               "end_address" : "H8PQ+Q9P, Chah Miran, Lahore, Punjab, Pakistan",
+               "end_location" : {
+                  "lat" : 31.58701099999999,
+                  "lng" : 74.33842419999999
+               },
+               "start_address" : "H9F6+MMW, Mughalpura, Lahore, Punjab 54840, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5736848,
+                  "lng" : 74.3636042
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 399
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 97
+                     },
+                     "end_location" : {
+                        "lat" : 31.5724019,
+                        "lng" : 74.36748249999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eWalkway to Tomb\u003c/b\u003e toward \u003cb\u003eWheatmen Rd\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "ovu_Eoc{dMPOHIFGDGDGBGDY^aCdB{I~@uE"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5736848,
+                        "lng" : 74.3636042
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.7 km",
+                        "value" : 715
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 152
+                     },
+                     "end_location" : {
+                        "lat" : 31.5785855,
+                        "lng" : 74.3681466
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eWheatmen Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Shalimar Plastics (on the right in 600m)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "onu_Ew{{dMwDmAmFaBq@Si@Ok@Oa@Ki@KWESAUC]?A?U@UBSDq@Lw@LqB\\qATUFuB\\"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5724019,
+                        "lng" : 74.36748249999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "3.2 km",
+                        "value" : 3213
+                     },
+                     "duration" : {
+                        "text" : "7 mins",
+                        "value" : 396
+                     },
+                     "end_location" : {
+                        "lat" : 31.5795421,
+                        "lng" : 74.3361769
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Savvy school onto \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Lajpaal Motors Repairing Workshop (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "euv_E}_|dMTfCJ`ATnCTpBx@~GRlAb@fEd@nE`@tDNvARvBt@rIBXBRdAjM`@zED`@Fl@PhBDpBdApLDn@JxAFfA?z@CrA?rACXOdA_AbCKTOVa@h@A@MDg@d@c@h@Y^KNw@jAsC~Du@bAaApAa@j@[`@KRGJMPEJOf@CHCJAJEVEb@C^A^ATCz@AdAI|NA|BCxBAt@Af@G`BAt@A\\@hAA~@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5785855,
+                        "lng" : 74.3681466
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 244
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 46
+                     },
+                     "end_location" : {
+                        "lat" : 31.5805965,
+                        "lng" : 74.33843209999999
+                     },
+                     "html_instructions" : "Sharp \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eSultan Pura Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Mitcon Grammar School (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-sharp-right",
+                     "polyline" : {
+                        "points" : "c{v_EcxudMQWUe@O_@O_@[{@Uo@Qi@s@aCSk@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5795421,
+                        "lng" : 74.3361769
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 215
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 38
+                     },
+                     "end_location" : {
+                        "lat" : 31.5823857,
+                        "lng" : 74.3379714
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at \u003cb\u003eChamra Mandi Chowk\u003c/b\u003e onto \u003cb\u003eChamra Mandi Road\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Boscage Shoes (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "waw_EefvdMoAn@y@d@_@Tk@JQBKAOAk@SECGAG?OAEAE?C@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5805965,
+                        "lng" : 74.33843209999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 535
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 120
+                     },
+                     "end_location" : {
+                        "lat" : 31.5870407,
+                        "lng" : 74.3369003
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at MZ Motors onto \u003cb\u003eAkbar Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Aqua Water Company (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "}lw_EicvdMKHCBIJk@PEBCBCBCDABCDCBC@CBKBSDi@Jo@Fq@Di@Dq@D}ALi@Dm@Fy@Fo@Fy@FUBy@Hm@HuAFA?"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5823857,
+                        "lng" : 74.3379714
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 145
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 31
+                     },
+                     "end_location" : {
+                        "lat" : 31.58701099999999,
+                        "lng" : 74.33842419999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at \u003cb\u003eChowk Nakhuda\u003c/b\u003e onto \u003cb\u003eChah Miran Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by WAPDA customer service center (on the right)\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "_jx_Es|udMAu@?cABcABq@?c@?["
+                     },
+                     "start_location" : {
+                        "lat" : 31.5870407,
+                        "lng" : 74.3369003
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "ovu_Eoc{dMh@i@HOd@{CdDqPeLoDiD_AaAQi@E_@?k@DoF~@gB\\uB\\TfC`@pEnApKRlAb@fEfAdK|A|PpB|UXvCDpBdApLPhCFfA?z@CfDS~AkAxCq@`AOFg@d@c@h@e@n@kEjGuDbFg@|@YhAQzBEpAKbQEvFC|AIvC?fBA~@QWe@eAsAuDgAmDiCtA_@Tk@J]@iA[c@COJMNq@TGFMRGD_@HyAR{AJgF`@yDZgBRwAFAyBFuB?_A"
+         },
+         "summary" : "G. T. Road/AH1",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

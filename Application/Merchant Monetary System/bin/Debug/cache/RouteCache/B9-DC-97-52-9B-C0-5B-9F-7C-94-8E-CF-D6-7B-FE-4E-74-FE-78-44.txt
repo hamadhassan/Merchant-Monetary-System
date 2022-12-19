@@ -1,0 +1,85 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJQbESqRUbGTkROXv2fpX_PxU",
+         "types" : [ "establishment", "point_of_interest", "store" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJQbESqRUbGTkROXv2fpX_PxU",
+         "types" : [ "establishment", "point_of_interest", "store" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.58701099999999,
+               "lng" : 74.33842419999999
+            },
+            "southwest" : {
+               "lat" : 31.58701099999999,
+               "lng" : 74.33842419999999
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "end_address" : "H8PQ+Q9P, Chah Miran, Lahore, Punjab, Pakistan",
+               "end_location" : {
+                  "lat" : 31.58701099999999,
+                  "lng" : 74.33842419999999
+               },
+               "start_address" : "H8PQ+Q9P, Chah Miran, Lahore, Punjab, Pakistan",
+               "start_location" : {
+                  "lat" : 31.58701099999999,
+                  "lng" : 74.33842419999999
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "1 m",
+                        "value" : 0
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 0
+                     },
+                     "end_location" : {
+                        "lat" : 31.58701099999999,
+                        "lng" : 74.33842419999999
+                     },
+                     "html_instructions" : "Head on \u003cb\u003eChah Miran Rd\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "yix_EcfvdM"
+                     },
+                     "start_location" : {
+                        "lat" : 31.58701099999999,
+                        "lng" : 74.33842419999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "yix_EcfvdM"
+         },
+         "summary" : "Chah Miran Rd",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

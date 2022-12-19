@@ -1,0 +1,181 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJS08BsLoaGTkRknUq-flQWZU",
+         "types" : [ "street_address" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJqRV00WgbGTkRdaEj64uGIMg",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5878899,
+               "lng" : 74.3929062
+            },
+            "southwest" : {
+               "lat" : 31.5755853,
+               "lng" : 74.3261552
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "7.6 km",
+                  "value" : 7579
+               },
+               "duration" : {
+                  "text" : "20 mins",
+                  "value" : 1173
+               },
+               "end_address" : "H8QG+79F, Farooq Gunj Bazar Rd, Farooq Gunj Mohalla Habib Gunj, Lahore, Punjab, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5878899,
+                  "lng" : 74.3261552
+               },
+               "start_address" : "3, Shahid Park Lahore, Punjab 54000, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5810223,
+                  "lng" : 74.3929062
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 122
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 37
+                     },
+                     "end_location" : {
+                        "lat" : 31.5821167,
+                        "lng" : 74.39276749999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003enorth\u003c/b\u003e toward \u003cb\u003eSue Wala Rd\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "kdw_Euz`eMG@Y@cAHY@o@Dk@D"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5810223,
+                        "lng" : 74.3929062
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 530
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 142
+                     },
+                     "end_location" : {
+                        "lat" : 31.5811216,
+                        "lng" : 74.3873018
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eSue Wala Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Graveyard (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "gkw_Eyy`eMJhALrARpBJnAD\\LfALz@Fb@@XHn@BPBTVrAFl@BXHhAFp@XtC"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5821167,
+                        "lng" : 74.39276749999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 479
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 92
+                     },
+                     "end_location" : {
+                        "lat" : 31.5848039,
+                        "lng" : 74.3863226
+                     },
+                     "html_instructions" : "At the roundabout, take the \u003cb\u003e3rd\u003c/b\u003e exit\u003cdiv style=\"font-size:0.9em\"\u003ePass by Ideal Chowk Market (on the right)\u003c/div\u003e",
+                     "maneuver" : "roundabout-left",
+                     "polyline" : {
+                        "points" : "_ew_Esw_eMH?DBBBBBBD@D@D?B@@?DA@?@A??@A?A@A?A@A?A@A?A?A?A?A?A?A?AAA?AAAAA?AAACACAGKPABCBEBIBE@I?wAPu@HeANqD`@iBTqANw@Fe@D"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5811216,
+                        "lng" : 74.3873018
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "5.8 km",
+                        "value" : 5833
+                     },
+                     "duration" : {
+                        "text" : "13 mins",
+                        "value" : 770
+                     },
+                     "end_location" : {
+                        "lat" : 31.58380409999999,
+                        "lng" : 74.3303935
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Friends Mobiles &amp; Repairing Centre onto \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Al-Maida Fast Food (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "_|w_Eoq_eMFl@Fp@NbAJh@FVDPFV@DhApDFTH^H^Pt@PhBDr@?LBl@?DCnAFvC@VRlAb@pBPp@H^R|@BLNx@Jb@VlAh@tBFP`@vA@DTp@FPTh@l@lAb@bALRLPf@nAv@hBBDRb@b@bAXh@f@tAf@jA@FN`@J^b@nAHRt@|BBJ^|AZhAZjAZnAZtAP~@@Bh@hDHr@TfCJ`ATnCTpBx@~GRlAb@fEd@nE`@tDNvARvBt@rIBXBRdAjM`@zED`@Fl@PhBDpBdApLDn@JxAFfA?z@CrA?rACXOdA_AbCKTOVa@h@A@MDg@d@c@h@Y^KNw@jAsC~Du@bAaApAa@j@[`@KRGJMPEJOf@CHCJAJEVEb@C^A^ATCz@AdAI|NA|BCxBAt@Af@G`BAt@A\\@hAA~@?f@?XANARALCLKZA@CFKL{AzA_@ZOJMLMLIJGJq@lAOVcApBYd@Wn@[t@u@p@g@j@]^YZED[\\m@h@g@d@o@p@_BrB"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5848039,
+                        "lng" : 74.3863226
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.6 km",
+                        "value" : 615
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 132
+                     },
+                     "end_location" : {
+                        "lat" : 31.5878899,
+                        "lng" : 74.3261552
+                     },
+                     "html_instructions" : "At the roundabout, continue straight onto \u003cb\u003ePolice Flats Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Bashir Autos &amp; Number Plate (on the left)\u003c/div\u003e",
+                     "maneuver" : "roundabout-left",
+                     "polyline" : {
+                        "points" : "wuw_E}stdM@@?B@D?DADSVEDC@C?C??DADCDyBxBSR{B|ByB~BOP}@z@EBqArAKJSLKHw@p@u@n@GFY\\a@d@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.58380409999999,
+                        "lng" : 74.3303935
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "kdw_Euz`eM_CN{AJX|Cr@fH`@hDFf@VrAFl@LbB`@fENBFFFT?HABODMAGECGAGKPEFOF}C\\sLvA}ALN~AZlBLh@zAdFR~@Pt@PhBD`ABr@CnAFvC@VRlAt@bD\\|Av@xDtAdF\\bAbAvBp@vAt@`BrBvEXh@f@tAh@rAZ`Al@bBx@hCz@fDv@zCl@tCj@lD^zD`@pEnApKRlAb@fEfAdK|A|PpB|UXvCDpBdApLPhCFfA?z@CfDS~AkAxCq@`AOFg@d@c@h@e@n@kEjGuDbFg@|@YhAQzBEpAKbQEvFC|AIvC?fBCpCC`@Oh@EHgBhBkAbAsA|B}AvCs@dB}A|Aw@z@wBrBo@p@_BrB@D@JU\\QFAJ}B~BoCpCiCpCaD~C_@VmB`BcAjA"
+         },
+         "summary" : "G. T. Road/AH1",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

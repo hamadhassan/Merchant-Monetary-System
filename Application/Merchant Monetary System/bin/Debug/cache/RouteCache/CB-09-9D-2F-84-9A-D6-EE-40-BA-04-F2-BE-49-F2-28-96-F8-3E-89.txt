@@ -1,0 +1,85 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJqRV00WgbGTkRdaEj64uGIMg",
+         "types" : [ "premise" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJqRV00WgbGTkRdaEj64uGIMg",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5878899,
+               "lng" : 74.3261552
+            },
+            "southwest" : {
+               "lat" : 31.5878899,
+               "lng" : 74.3261552
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "end_address" : "H8QG+79F, Farooq Gunj Bazar Rd, Farooq Gunj Mohalla Habib Gunj, Lahore, Punjab, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5878899,
+                  "lng" : 74.3261552
+               },
+               "start_address" : "H8QG+79F, Farooq Gunj Bazar Rd, Farooq Gunj Mohalla Habib Gunj, Lahore, Punjab, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5878899,
+                  "lng" : 74.3261552
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "1 m",
+                        "value" : 0
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 0
+                     },
+                     "end_location" : {
+                        "lat" : 31.5878899,
+                        "lng" : 74.3261552
+                     },
+                     "html_instructions" : "Head",
+                     "polyline" : {
+                        "points" : "iox_EoysdM"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5878899,
+                        "lng" : 74.3261552
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "iox_EoysdM"
+         },
+         "summary" : "",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
