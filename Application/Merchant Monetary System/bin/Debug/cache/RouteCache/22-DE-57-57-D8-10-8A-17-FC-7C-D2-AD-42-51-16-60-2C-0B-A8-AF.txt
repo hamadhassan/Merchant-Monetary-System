@@ -1,0 +1,85 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJFQgtBtcaGTkRaC7dCT45dNM",
+         "types" : [ "premise" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJFQgtBtcaGTkRaC7dCT45dNM",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5738845,
+               "lng" : 74.36295699999999
+            },
+            "southwest" : {
+               "lat" : 31.5738845,
+               "lng" : 74.36295699999999
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "end_address" : "H9F6+MMW, Mughalpura, Lahore, Punjab 54840, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5738845,
+                  "lng" : 74.36295699999999
+               },
+               "start_address" : "H9F6+MMW, Mughalpura, Lahore, Punjab 54840, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5738845,
+                  "lng" : 74.36295699999999
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "1 m",
+                        "value" : 0
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 0
+                     },
+                     "end_location" : {
+                        "lat" : 31.5738845,
+                        "lng" : 74.36295699999999
+                     },
+                     "html_instructions" : "Head",
+                     "polyline" : {
+                        "points" : "wwu_Eo_{dM"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5738845,
+                        "lng" : 74.36295699999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "wwu_Eo_{dM"
+         },
+         "summary" : "",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

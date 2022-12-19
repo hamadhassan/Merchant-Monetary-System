@@ -11,9 +11,9 @@ namespace Merchant_Monetary_System.DL
 {
     internal class OrderDL
     {
-        public static List<Order>ordersList= new List<Order>();
+        public static DoublyLinkedList<Order> ordersList= new DoublyLinkedList<Order>();
 
-        public static List<Order> OrdersList { get => ordersList; set => ordersList = value; }
+        public static DoublyLinkedList<Order> OrdersList { get => ordersList; set => ordersList = value; }
         public static bool InsertProduct(Order order)
         {
             OrdersList.Add(order);
@@ -22,28 +22,31 @@ namespace Merchant_Monetary_System.DL
 
         public static bool updateRecord(Order updatedorder)
         {
-            foreach (Order order in OrdersList)
+            DoublyLinkedListNode<Order> Head = OrdersList.Head;
+            while(Head != null)
             {
-                if (order.ShopKeeperName == order.ShopKeeperName)
+                if (Head.Data.ShopKeeperName == updatedorder.ShopKeeperName)
                 {
-                    order.ShopKeeperName = updatedorder.ShopKeeperName;
-                    order.RiderName = updatedorder.RiderName;
-                    order.Order_products = updatedorder.Order_products;
-                    order.OrderID = updatedorder.OrderID;
-                    
+                    Head.Data.ShopKeeperName = updatedorder.ShopKeeperName;
+                    Head.Data.RiderName = updatedorder.RiderName;
+                    Head.Data.Order_products = updatedorder.Order_products;
+                    Head.Data.OrderID = updatedorder.OrderID;
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }
         public static Order FoundOrder(string ID)
         {// the product  data matched with the database result
-            foreach (Order order  in OrdersList)
+            DoublyLinkedListNode<Order> Head = OrdersList.Head;
+            while (Head != null)
             {
-                if (ID == order.OrderID )
+                if (ID == Head.Data.OrderID)
                 {
-                    return order;
+                    return Head.Data;
                 }
+                Head = Head.Next;
             }
             return null;
         }
@@ -51,54 +54,61 @@ namespace Merchant_Monetary_System.DL
 
         public static bool deleteRecord(Order deleteOrder)
         {
-            foreach (Order order in OrdersList)
+            DoublyLinkedListNode<Order> Head = OrdersList.Head;
+            while (Head != null)
             {
-                if (deleteOrder.OrderID == order.OrderID)
+                if (deleteOrder.OrderID == Head.Data.OrderID)
                 {
-                    ordersList.Remove(order);
+                    OrdersList.RemoveNode(Head);
                     return true;
                 }
+                Head = Head.Next;
+
             }
             return false;
         }
-
-
-
         public static void storeAllRecordIntoFile(string path)
         {
-            StreamWriter file = new StreamWriter(path);
-            foreach (Order order in OrdersList)
+            if (File.Exists(path))
             {
-                file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," + order.Status + ",");
-                int i = 0;
-                foreach (Product product in order.Order_products)
+                StreamWriter file = new StreamWriter(path);
+                DoublyLinkedListNode<Order> OrderHead = OrdersList.Head;
+                while (OrderHead != null)
                 {
-                    if (i != 0) file.Write("|");
-                    file.Write(product.Name + ";" + product.Category + ";" + product.SKU_Number + ";" + product.Volume + ";" + product.Weight + ";" + product.Manufacturer + ";" + product.SensitivityType);
-                    i++;
+                    file.Write(OrderHead.Data.RiderName + "," + OrderHead.Data.ShopKeeperName + "," + OrderHead.Data.OrderID + "," + OrderHead.Data.Status + ",");
+                    int i = 0;
+                    DoublyLinkedListNode<Product> productHead = OrderHead.Data.Order_products.Head;
+                    while(productHead != null)
+                    {
+                        if (i != 0) file.Write("|");
+                        file.Write(productHead.Data.Name + ";" + productHead.Data.Category + ";" + productHead.Data.SKU_Number + ";" + productHead.Data.Volume + ";" + productHead.Data.Weight + ";" + productHead.Data.Manufacturer + ";" + productHead.Data.SensitivityType);
+                        i++;
+                        productHead = productHead.Next;
+                    }
+                    file.WriteLine();
+                    OrderHead = OrderHead.Next;
                 }
-                file.WriteLine();
+                file.Close();
             }
-            file.Close();
         }
         public static void storeRecordIntoFile(Order order, string path)
         {
             StreamWriter file = new StreamWriter(path, true);
             file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," + order.Status + ",");
             int i = 0;
-            foreach (Product product in order.Order_products)
+            DoublyLinkedListNode<Product> productHead = order.Order_products.Head;
+            while (productHead != null)
             {
                 if (i != 0) file.Write("|");
-                file.Write(product.Name + ";" + product.Category + ";" + product.SKU_Number + ";" + product.Volume + ";" + product.Weight + ";" + product.Manufacturer + ";" + product.SensitivityType);
+                file.Write(productHead.Data.Name + ";" + productHead.Data.Category + ";" + productHead.Data.SKU_Number + ";" + productHead.Data.Volume + ";" + productHead.Data.Weight + ";" + productHead.Data.Manufacturer + ";" + productHead.Data.SensitivityType);
+                i++;
+                productHead = productHead.Next;
             }
+            file.WriteLine();
             file.Flush();
             file.Close();
         }
 
-        public static void clearList()
-        {
-            ordersList.Clear();
-        }
         public static void loadRecordFromFile(string path)
         {
             StreamReader file = new StreamReader(path);

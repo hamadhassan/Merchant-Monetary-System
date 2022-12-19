@@ -6,72 +6,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static IronPython.Modules._ast;
+using static IronPython.Modules.PythonIterTools;
 
 namespace Merchant_Monetary_System.DL
 {
     internal class ProductDL
     {
-        private static List<Product> ProductList = new List<Product>();
+        private static DoublyLinkedList<Product> productList = new DoublyLinkedList<Product>();
 
-        public static List<Product> ProductList1 { get => ProductList; set => ProductList = value; }
+        public static DoublyLinkedList<Product> ProductList { get => productList; set => productList = value; }
 
-        public static bool InsertProduct(Product product)
+        public static void InsertProduct(Product product)
         {
             ProductList.Add(product);
-            return true;
         }
 
-        public static bool updateRecord(Product updatedProduct)
-        {
-            foreach (Product product in ProductList)
-            {
-                if (updatedProduct.Name == product.Name)
-                {
-                    product.Name = updatedProduct.Name;
-                    product.SKU_Number=updatedProduct.SKU_Number;
-                    product.Weight =updatedProduct.Weight;
-                    product.Volume = updatedProduct.Volume;
-                    product.Category = updatedProduct.Category;
-                    product.Manufacturer = updatedProduct.Manufacturer;
-                    product.SensitivityType = updatedProduct.SensitivityType;
-  
-                    return true;
-                }
-            }
-            return false;
-        }
         public static bool isProductMatch(string Name, int SKU_Number)
         {// the product  data matched with the database result
-            foreach (Product product in ProductList)
+            DoublyLinkedListNode<Product> Head = ProductList.Head;
+            while (Head != null)
             {
-                if (Name == product.Name && SKU_Number == product.SKU_Number)
+                if (Name == Head.Data.Name && SKU_Number == Head.Data.SKU_Number)
                 {
                     return true;
                 }
+                Head = Head.Next;
+
             }
             return false;
         }
-        public static Product FoundProduct(string Name)
+        public static Product FoundProduct(string Name, int SKU_number)
         {// the product  data matched with the database result
-            foreach (Product product in ProductList)
+            DoublyLinkedListNode<Product> Head = ProductList.Head;
+            while (Head != null)
             {
-                if (Name == product.Name )
+                if (Name == Head.Data.Name && Head.Data.SKU_Number == SKU_number)
                 {
-                    return product;
+                    return Head.Data;
                 }
+                Head = Head.Next;
             }
             return null;
         }
 
         public static bool deleteRecord(Product deleteProduct)
         {
-            foreach (Product product in ProductList)
+            DoublyLinkedListNode<Product> Head = ProductList.Head;
+            while (Head != null)
             {
-                if (deleteProduct.Name == product.Name)
+                if (deleteProduct.Name == Head.Data.Name && deleteProduct.SKU_Number == Head.Data.SKU_Number)
                 {
-                    ProductList.Remove(product);
+                    ProductList.RemoveNode(Head);
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }
@@ -79,25 +68,24 @@ namespace Merchant_Monetary_System.DL
 
         public static void storeAllRecordIntoFile(string path)
         {
-            StreamWriter file = new StreamWriter(path);
-            foreach (Product record in ProductList)
+            if (File.Exists(path))
             {
-                file.WriteLine(record.Name + "," + record.SKU_Number + "," + record.Weight + "," + record.Volume
-                 + "," + record.SensitivityType + "," + record.Category + "," + record.Manufacturer);
+                StreamWriter file = new StreamWriter(path);
+                DoublyLinkedListNode<Product> Head = ProductList.Head;
+                while (Head != null)
+                {
+                    file.WriteLine(Head.Data.Name + "," + Head.Data.SKU_Number + "," + Head.Data.Weight + "," + Head.Data.Volume
+                     + "," + Head.Data.SensitivityType + "," + Head.Data.Category + "," + Head.Data.Manufacturer);
+                    Head = Head.Next;
+                }
+                file.Flush();
+                file.Close();
             }
-            file.Flush();
-            file.Close();
-        }
-
-        public static void clearList()
-        {
-           ProductList.Clear();
         }
         public static bool loadRecordFromFile(string path)
         {
             try
             {
-                clearList();
                 StreamReader fileVariable = new StreamReader(path);
                 string record;
                 if (File.Exists(path))
@@ -136,18 +124,15 @@ namespace Merchant_Monetary_System.DL
 
         public static Product returnProduct(string productName)
         {
-            foreach(Product P in ProductList1)
+            DoublyLinkedListNode<Product> Head = ProductList.Head;
+            while(Head != null)
             {
-                if(P.Name == productName)
+                if (Head.Data.Name == productName)
                 {
-                    return P;
+                    return Head.Data;
                 }
             }
             return null;
         }
-
-
-
-
     }
 }

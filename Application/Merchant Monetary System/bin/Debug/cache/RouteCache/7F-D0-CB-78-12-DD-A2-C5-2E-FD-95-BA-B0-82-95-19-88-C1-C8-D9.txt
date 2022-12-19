@@ -1,0 +1,300 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJNXqR30gFGTkRhduSUtiJZX0",
+         "types" : [ "establishment", "point_of_interest" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJIWlkUr4aGTkRvKQ3niaMf4g",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5887131,
+               "lng" : 74.38576549999999
+            },
+            "southwest" : {
+               "lat" : 31.5538517,
+               "lng" : 74.3507103
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "7.1 km",
+                  "value" : 7096
+               },
+               "duration" : {
+                  "text" : "16 mins",
+                  "value" : 960
+               },
+               "end_address" : "H9QP+858, Wapda Rd, Shalamar Town, Lahore, Punjab 54000, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5887131,
+                  "lng" : 74.38507749999999
+               },
+               "start_address" : "H962+79R, Garhi Shahu, Lahore, Punjab 54000, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5601897,
+                  "lng" : 74.35105299999999
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "79 m",
+                        "value" : 79
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 22
+                     },
+                     "end_location" : {
+                        "lat" : 31.5595425,
+                        "lng" : 74.3507103
+                     },
+                     "html_instructions" : "Head \u003cb\u003esouthwest\u003c/b\u003e on \u003cb\u003eBadar St\u003c/b\u003e toward \u003cb\u003eAllama Iqbal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Mr Bilal (on the left)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "ebs_EauxdMPLx@b@t@P"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5601897,
+                        "lng" : 74.35105299999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.0 km",
+                        "value" : 960
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 129
+                     },
+                     "end_location" : {
+                        "lat" : 31.5538531,
+                        "lng" : 74.35828699999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at MEDSHOP PHARMACY onto \u003cb\u003eAllama Iqbal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Imperial College Of Technology (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "c~r_E}rxdMlAaBrAeBhAyA@AXYp@y@fCgDFGfAyA`AqADGX[V]Zg@|@qA^m@Xk@JWLWnAiCDKbBqDx@eAx@{@HG"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5595425,
+                        "lng" : 74.3507103
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.7 km",
+                        "value" : 693
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 62
+                     },
+                     "end_location" : {
+                        "lat" : 31.5574899,
+                        "lng" : 74.3641392
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eCanal Rd\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePeer Muhammad Sadiq Rd\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "qzq_EibzdM?M?QCMAUOSACoA_Bk@_Ai@}@c@s@KSISIYoBgDa@s@W_@Q[kBoDu@uA]s@Wc@aAkB"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5538531,
+                        "lng" : 74.35828699999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.2 km",
+                        "value" : 1217
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 82
+                     },
+                     "end_location" : {
+                        "lat" : 31.5615633,
+                        "lng" : 74.375956
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003e\u003cspan dir=\"rtl\"\u003eBeijing Underpass\u003c/span\u003e‎\u003c/b\u003e",
+                     "maneuver" : "turn-slight-right",
+                     "polyline" : {
+                        "points" : "iqr_E{f{dM@I?ECGAIcBmDIMM[m@{Ai@{A}@aCGUa@oAIWUs@IUOe@Me@m@sBMc@i@wBg@uBWmAw@yDCMIg@QeAQeASqAmA{IOkASqBCOKg@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5574899,
+                        "lng" : 74.3641392
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 446
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 51
+                     },
+                     "end_location" : {
+                        "lat" : 31.5626133,
+                        "lng" : 74.3804947
+                     },
+                     "html_instructions" : "Continue straight onto \u003cb\u003eCanal Rd\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePeer Muhammad Sadiq Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by the gas station (on the left in 400m)\u003c/div\u003e",
+                     "maneuver" : "straight",
+                     "polyline" : {
+                        "points" : "wjs_Ewp}dMAUE_@K_Ae@_EM_@GYE[]yBa@aCSsAMs@QmAGk@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5615633,
+                        "lng" : 74.375956
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "2.4 km",
+                        "value" : 2362
+                     },
+                     "duration" : {
+                        "text" : "6 mins",
+                        "value" : 350
+                     },
+                     "end_location" : {
+                        "lat" : 31.5837023,
+                        "lng" : 74.38106119999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Nafees Chanay onto \u003cb\u003eShalimar Link Road\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by NLT Mobiles &amp; Accessories Store (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "iqs_Eam~dMMA[Bg@@S@sAKe@AgAAYE[EQAGA_@AG?U@_@?[@c@@i@?e@@UAQ?KAGEEG_ACy@EaAGwCGmAAiBCwBEu@AcACSAw@AyBCcA?]?oA?}AGkA?_BAcBEc@?sBEWA_DCyEEM?O?u@?{ACy@@oACaAAsBEgA?yAEqEKcC@E?iAA]AaBEiDG_@@WBIBGFILMX"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5626133,
+                        "lng" : 74.3804947
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 188
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 33
+                     },
+                     "end_location" : {
+                        "lat" : 31.5831503,
+                        "lng" : 74.3791896
+                     },
+                     "html_instructions" : "At Photo Chief Digital Color Lab, \u003cb\u003eShalimar Link Road\u003c/b\u003e turns \u003cb\u003eleft\u003c/b\u003e and becomes \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Mehr Store (on the left)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "cuw_Esp~dM@VRlAb@pBPp@H^R|@BL"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5837023,
+                        "lng" : 74.38106119999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "82 m",
+                        "value" : 82
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 16
+                     },
+                     "end_location" : {
+                        "lat" : 31.58341609999999,
+                        "lng" : 74.37921919999999
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eright\u003c/b\u003e at Soneri Bank toward \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Bank AL-Habib (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-slight-right",
+                     "polyline" : {
+                        "points" : "uqw_E}d~dMADA@?@?B?@@FBF@D?@?B?@?B?@?DA@?@A@C@A@C?A?A?AACC?CEYAEACAAEGOQ"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5831503,
+                        "lng" : 74.3791896
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.6 km",
+                        "value" : 614
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 98
+                     },
+                     "end_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eright\u003c/b\u003e at Tailor's Point &amp; Fabrics onto \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by the pharmacy (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-slight-right",
+                     "polyline" : {
+                        "points" : "ksw_Ece~dMIq@UqAk@cCO{@I_@Ge@Ee@KgCACC]CWKaAE]O{AWkBI_@CSKs@Mw@My@WmB"
+                     },
+                     "start_location" : {
+                        "lat" : 31.58341609999999,
+                        "lng" : 74.37921919999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 455
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 117
+                     },
+                     "end_location" : {
+                        "lat" : 31.5887131,
+                        "lng" : 74.38507749999999
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Deewan Pan Shop (on the left)\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "maneuver" : "turn-slight-left",
+                     "polyline" : {
+                        "points" : "}{w_Eel_eMe@w@?AAAC?A?[@aBP}ALm@Hc@Dg@Fi@FwATsANy@HmALm@H"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "ebs_EauxdMjAp@t@PlAaB|C_EZ[hGcIxBsCxAyBx@yAnBeEbBqDx@eAbAcA?_@Ec@aBwBeCeESm@qC{Ei@{@aDeGu@wAaAkB@ICMeBwDoBaFqB_G}@uCeBoG_AcE{@gEaAeG}AgLWaCKg@AUQ_Be@_EM_@Mu@aBcKYyBi@@{@ByBMaBGm@GeAAiCB{@?]AMMyBIyEOwDEeGMsGEmDGkDAsGMwKIqCCy@@oACuDGgA?kHQiC@sJQw@DQJWf@@VRlAt@bD\\|A@RABDT@LALGFIAKg@Y_@_@cC{@_EQeAQmDU{BUyBa@kCk@yDWmBe@w@ACcCRwEd@aC\\mCX{BV"
+         },
+         "summary" : "Shalimar Link Road",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

@@ -19,14 +19,13 @@ namespace Merchant_Monetary_System
         public static string name;
 
         
-        public static List<Product> cartlist=new List<Product>();
+        public static DoublyLinkedList<Product> cartlist=new DoublyLinkedList<Product>();
         public frmTakeOrder(string name)
         {
             InitializeComponent();
             this.Name = name;
 
         }
-
         private void lblSearch_Click(object sender, EventArgs e)
         {
 
@@ -45,7 +44,6 @@ namespace Merchant_Monetary_System
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
-
         }
 
         private void datagvProductDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -53,14 +51,18 @@ namespace Merchant_Monetary_System
             if (datagvProductDetails.SelectedRows.Count == 1)
             {
                 int index = datagvProductDetails.CurrentCell.ColumnIndex;
-                Product S = (Product)datagvProductDetails.CurrentRow.DataBoundItem;
+                Product product;
+                int rowInd = datagvProductDetails.CurrentCell.RowIndex;
+                string Name = datagvProductDetails.Rows[rowInd].Cells[0].Value.ToString();
+                int SKU_Number = int.Parse(datagvProductDetails.Rows[rowInd].Cells[2].Value.ToString());
+                product = ProductDL.FoundProduct(Name, SKU_Number);
 
                 try
                 {
                     if (index == 7 && txtbxName.Text!=String.Empty)
                     {
                         //if (cartlist.Contains(S)){ S.Quantity++; } 
-                        cartlist.Add(S);
+                        cartlist.Add(product);
                         MessageBox.Show("Product Added To Cart");
 
                     }
@@ -70,33 +72,46 @@ namespace Merchant_Monetary_System
             }
             else
             {
-                if (ProductDL.ProductList1.Count != 0)
+                if (ProductDL.ProductList.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
         private void DataBind()
         {
-            try
-            {
-                datagvProductDetails.Columns.Clear();
+            datagvProductDetails.Columns.Clear();
+            datagvProductDetails.DataSource = null;
+            datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            addIntoGrid(ProductDL.ProductList);
 
-                datagvProductDetails.DataSource = null;
-                datagvProductDetails.DataSource = ProductDL.ProductList1;
-                DataGridViewButtonColumn Add = new DataGridViewButtonColumn();
-                Add.HeaderText = "Add To Cart";
-                Add.Text = "Add To Cart";
-                Add.UseColumnTextForButtonValue = true;
-                datagvProductDetails.Columns.Add(Add);
-            
+            DataGridViewButtonColumn Add = new DataGridViewButtonColumn();
+            Add.HeaderText = "Add To Cart";
+            Add.Text = "Add To Cart";
+            Add.UseColumnTextForButtonValue = true;
+            datagvProductDetails.Columns.Add(Add);
+            datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void addIntoGrid(DoublyLinkedList<Product> productLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Category");
+            dt.Columns.Add("SKU Number");
+
+            DoublyLinkedListNode<Product> Head = productLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Name, Head.Data.Category, Head.Data.SKU_Number);
+                Head = Head.Next;
             }
-            catch (Exception exp) { MessageBox.Show(exp.Message); }
+            datagvProductDetails.DataSource = dt;
         }
 
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
             btnLoadRecords.Visible = false;
             datagvProductDetails.Visible = true;
-            ProductDL.loadRecordFromFile(FilePath.Products);
             DataBind();
         }
 

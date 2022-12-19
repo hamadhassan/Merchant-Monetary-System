@@ -37,9 +37,9 @@ namespace Merchant_Monetary_System
             try
             {
                 datagvProductDetails.Columns.Clear();
-
                 datagvProductDetails.DataSource = null;
-                datagvProductDetails.DataSource = OrderDL.OrdersList;
+                datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                addIntoGrid(OrderDL.OrdersList);
                 DataGridViewButtonColumn VeiwProductList = new DataGridViewButtonColumn();
                 VeiwProductList.HeaderText = "Veiw Product List";
                 VeiwProductList.Text = "Veiw Product List";
@@ -61,17 +61,54 @@ namespace Merchant_Monetary_System
             catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
 
+
+
+        private void addIntoGrid(DoublyLinkedList<Order> orderLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("OrderID");
+            dt.Columns.Add("Shopkeeper");
+            dt.Columns.Add("Rider");
+            dt.Columns.Add("Status");
+
+            DoublyLinkedListNode<Order> Head = orderLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.OrderID, Head.Data.ShopKeeperName, Head.Data.RiderName, Head.Data.Status);
+                Head = Head.Next;
+            }
+            datagvProductDetails.DataSource = dt;
+        }
+
         private void DataBind2(Order order)
         {
             try
             {
-                dataGridView1.Columns.Clear();
-
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = order.Order_products;
+                datagvProductDetails.Columns.Clear();
+                datagvProductDetails.DataSource = null;
+                datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                addProductsIntoGrid(order.Order_products);
 
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
+        }
+
+        private void addProductsIntoGrid(DoublyLinkedList<Product> productLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Category");
+            dt.Columns.Add("SKU Number");
+
+            DoublyLinkedListNode<Product> Head = productLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Name, Head.Data.Category, Head.Data.SKU_Number);
+                Head = Head.Next;
+            }
+            dataGridView1.DataSource = dt;
         }
 
         private void datagvProductDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -79,7 +116,10 @@ namespace Merchant_Monetary_System
             if (datagvProductDetails.SelectedRows.Count == 1)
             {
                 int index = datagvProductDetails.CurrentCell.ColumnIndex;
-                Order S = (Order)datagvProductDetails.CurrentRow.DataBoundItem;
+                Order order;
+                int rowInd = datagvProductDetails.CurrentCell.RowIndex;
+                string ID = datagvProductDetails.Rows[rowInd].Cells[0].Value.ToString();
+                order = OrderDL.FoundOrder(ID);
 
                 try
                 {
@@ -87,14 +127,14 @@ namespace Merchant_Monetary_System
                     {
                         if (index == 5)
                         {
-                            Form updateform=new frmUpdateStatus(S);
+                            Form updateform=new frmUpdateStatus(order);
                             updateform.ShowDialog();
                             DataBind();
                         }
                     }
                     if (index == 4)
                     {
-                        DataBind2(S);
+                        DataBind2(order);
                         dataGridView1.Visible = true;
 
 
@@ -106,7 +146,7 @@ namespace Merchant_Monetary_System
             }
             else
             {
-                if (ProductDL.ProductList1.Count != 0)
+                if (OrderDL.OrdersList.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
 

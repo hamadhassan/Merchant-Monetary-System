@@ -11,7 +11,7 @@ namespace Merchant_Monetary_System.DL
     public sealed class StockDL
     {
         private static readonly StockDL instance = new StockDL();
-        private static List<Stock> stockList = new List<Stock>();
+        private static DoublyLinkedList<Stock> stockList = new DoublyLinkedList<Stock>();
 
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
@@ -30,110 +30,140 @@ namespace Merchant_Monetary_System.DL
                 return instance;
             }
         }
+        public static DoublyLinkedList<Stock> StockList { get => stockList; set => stockList = value; }
 
-        public static List<Stock> StockList { get => stockList; set => stockList = value; }
-
-        public static void addStockIntoList(List<Stock> stockList, Stock stock)
+        public static void addStockIntoList(DoublyLinkedList<Stock> stockList, Stock stock)
         {
             stockList.Add(stock);
         }
 
         public static void StoreDataIntoFile(string path)
         {
-            int i = 0;
-            StreamWriter file = new StreamWriter(path);
-            foreach (Stock record in StockList)
+            if (File.Exists(path))
             {
-                file.Write(record.Product + "," + record.Quantity + "," + record.RetailPrice + "," + record.CostPrice
-                    + "," + record.ManufacturingDate + "," + record.ExpiryDate + "," + record.RecievedDate + "," + record.Vendor);
-                if (i != stockList.Count) file.WriteLine();
-                i++;
-                file.Flush();
+                int i = 0;
+                StreamWriter file = new StreamWriter(path);
+                DoublyLinkedListNode<Stock> Head = StockList.Head;
+                while (Head != null)
+                {
+                    file.Write(Head.Data.Product + "," + Head.Data.Quantity + "," + Head.Data.RetailPrice + "," + Head.Data.CostPrice
+                        + "," + Head.Data.ManufacturingDate + "," + Head.Data.ExpiryDate + "," + Head.Data.RecievedDate + "," + Head.Data.Vendor);
+                    if (i != stockList.Count) file.WriteLine();
+                    i++;
+                    file.Flush();
+                }
+                file.Close();
             }
-            file.Close();
         }
 
         public static void LoadDataFromFile(string path)
         {
-            StreamReader file = new StreamReader(path);
-            string record;
-            while ((record = file.ReadLine()) != null)
+            if (File.Exists(path))
             {
-                string[] SplittedRecord = record.Split(',');
-                string productName = SplittedRecord[0];
-                int quantity = int.Parse(SplittedRecord[1]);
-                double retailPrice = double.Parse(SplittedRecord[2]);
-                double costPrice = double.Parse(SplittedRecord[3]);
-                DateTime manufacturingDate = DateTime.Parse(SplittedRecord[4]);
-                DateTime expiryDate = DateTime.Parse(SplittedRecord[5]);
-                DateTime recievedDate = DateTime.Parse(SplittedRecord[6]);
-                string vendorName = SplittedRecord[7];
-                string product = productName;
-                string vendor = vendorName;
-                Stock stock = new Stock(product, quantity, retailPrice, costPrice, manufacturingDate, expiryDate, recievedDate, vendor);
-                StockDL.addStockIntoList(StockDL.StockList,stock);
+                StreamReader file = new StreamReader(path);
+                string record;
+                while ((record = file.ReadLine()) != null)
+                {
+                    string[] SplittedRecord = record.Split(',');
+                    string productName = SplittedRecord[0];
+                    int quantity = int.Parse(SplittedRecord[1]);
+                    double retailPrice = double.Parse(SplittedRecord[2]);
+                    double costPrice = double.Parse(SplittedRecord[3]);
+                    DateTime manufacturingDate = DateTime.Parse(SplittedRecord[4]);
+                    DateTime expiryDate = DateTime.Parse(SplittedRecord[5]);
+                    DateTime recievedDate = DateTime.Parse(SplittedRecord[6]);
+                    string vendorName = SplittedRecord[7];
+                    string product = productName;
+                    string vendor = vendorName;
+                    Stock stock = new Stock(product, quantity, retailPrice, costPrice, manufacturingDate, expiryDate, recievedDate, vendor);
+                    StockDL.addStockIntoList(StockDL.StockList, stock);
+                }
+                file.Close();
             }
-            file.Close();
         }
 
-        public static Stock AlreadyStockAdded(List<Stock> stock, Stock S)
+        public static Stock AlreadyStockAdded(DoublyLinkedList<Stock> stock, Stock S)
         {
-            foreach(Stock s in stock)
+            DoublyLinkedListNode<Stock> Head = stock.Head;
+            while(Head != null)
             {
-                if(s.Product == S.Product && s.ManufacturingDate == S.ManufacturingDate && s.ExpiryDate == S.ExpiryDate
-                    && s.RecievedDate == S.RecievedDate && s.Vendor == S.Vendor)
+                if (Head.Data.Product == S.Product && Head.Data.ManufacturingDate == S.ManufacturingDate && Head.Data.ExpiryDate == S.ExpiryDate
+                    && Head.Data.RecievedDate == S.RecievedDate && Head.Data.Vendor == S.Vendor)
                 {
-                    return s;
+                    return Head.Data;
                 }
             }
             return null;
         }
 
-        public static void MergeStock(List<Stock> TempStock, List<Stock> Stock)
+        public static void MergeStock(DoublyLinkedList<Stock> TempStock, DoublyLinkedList<Stock> Stock)
         {
-            foreach( Stock s in TempStock)
+            DoublyLinkedListNode<Stock> outerHead = TempStock.Head;
+            while(outerHead != null)
             {
                 bool found = false;
-                foreach(Stock S in Stock)
+                DoublyLinkedListNode<Stock> innerHead = Stock.Head;
+                while(innerHead != null)
                 {
-                    if (s.Product == S.Product && s.ManufacturingDate == S.ManufacturingDate && s.ExpiryDate == S.ExpiryDate
-                    && s.RecievedDate == S.RecievedDate && s.Vendor == S.Vendor)
+                    if (outerHead.Data.Product == innerHead.Data.Product && outerHead.Data.ManufacturingDate == innerHead.Data.ManufacturingDate && outerHead.Data.ExpiryDate == innerHead.Data.ExpiryDate
+                    && outerHead.Data.RecievedDate == innerHead.Data.RecievedDate && outerHead.Data.Vendor == innerHead.Data.Vendor)
                     {
-                        S.addQuantity(s.Quantity);
+                        innerHead.Data.addQuantity(outerHead.Data.Quantity);
                         found = true;
                     }
+                    innerHead = innerHead.Next;
                 }
-                if(!found)
+                if (!found)
                 {
-                    Stock.Add(s);
+                    Stock.Add(outerHead.Data);
                 }
+                outerHead = outerHead.Next;
             }
         }
 
 
-        public static bool deleteStock(List<Stock> stock, Stock S)
+
+
+        public static bool deleteStock(DoublyLinkedList<Stock> stock, Stock S)
         {
-            foreach(Stock s in stock)
+            DoublyLinkedListNode<Stock> Head = StockList.Head;
+            while(Head != null)
             {
-                if(s == S)
+                if(Head.Data == S)
                 {
-                    stock.Remove(s);
+                    DoublyLinkedListNode<Stock> stockNode = stock.Find(S);
+                    stock.RemoveNode(stockNode);
                     return true;
                 }
             }
             return false;
         }
 
-        public static double calculateAmount(List<Stock> Stock)
+        public static double calculateAmount(DoublyLinkedList<Stock> Stock)
         {
             double amount = 0;
-            foreach(Stock S in Stock)
+            DoublyLinkedListNode<Stock> Head = Stock.Head;
+            while(Head != null)
             {
-                amount += S.RetailPrice * S.Quantity;
+                amount += Head.Data.RetailPrice * Head.Data.Quantity;
+                Head = Head.Next;
             }
             return amount;
         }
 
-
+        public static Stock returnStock(Stock S)
+        {
+            DoublyLinkedListNode<Stock> Head = StockList.Head;
+            while (Head != null)
+            {
+                if(S.Product == Head.Data.Product && S.Quantity == Head.Data.Quantity && S.RetailPrice == Head.Data.RetailPrice && S.CostPrice == Head.Data.CostPrice
+                    && S.ManufacturingDate == Head.Data.ManufacturingDate && S.ExpiryDate == Head.Data.ExpiryDate && S.RecievedDate == Head.Data.RecievedDate && S.Vendor == Head.Data.Vendor)
+                {
+                    return Head.Data;
+                }
+                Head = Head.Next;
+            }
+            return null;
+        }
     }
 }

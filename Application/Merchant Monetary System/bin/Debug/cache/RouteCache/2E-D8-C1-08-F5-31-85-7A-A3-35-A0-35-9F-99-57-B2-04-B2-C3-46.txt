@@ -1,0 +1,181 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJFQgtBtcaGTkRaC7dCT45dNM",
+         "types" : [ "premise" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJIWlkUr4aGTkRvKQ3niaMf4g",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5887131,
+               "lng" : 74.3857708
+            },
+            "southwest" : {
+               "lat" : 31.5724019,
+               "lng" : 74.3636042
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "4.1 km",
+                  "value" : 4107
+               },
+               "duration" : {
+                  "text" : "12 mins",
+                  "value" : 738
+               },
+               "end_address" : "H9QP+858, Wapda Rd, Shalamar Town, Lahore, Punjab 54000, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5887131,
+                  "lng" : 74.38507749999999
+               },
+               "start_address" : "H9F6+MMW, Mughalpura, Lahore, Punjab 54840, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5736848,
+                  "lng" : 74.3636042
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 399
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 97
+                     },
+                     "end_location" : {
+                        "lat" : 31.5724019,
+                        "lng" : 74.36748249999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e on \u003cb\u003eWalkway to Tomb\u003c/b\u003e toward \u003cb\u003eWheatmen Rd\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "ovu_Eoc{dMPOHIFGDGDGBGDY^aCdB{I~@uE"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5736848,
+                        "lng" : 74.3636042
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.7 km",
+                        "value" : 715
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 152
+                     },
+                     "end_location" : {
+                        "lat" : 31.5785855,
+                        "lng" : 74.3681466
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eWheatmen Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Shalimar Plastics (on the right in 600m)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "onu_Ew{{dMwDmAmFaBq@Si@Ok@Oa@Ki@KWESAUC]?A?U@UBSDq@Lw@LqB\\qATUFuB\\"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5724019,
+                        "lng" : 74.36748249999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 362
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 53
+                     },
+                     "end_location" : {
+                        "lat" : 31.577906,
+                        "lng" : 74.364408
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Savvy school onto \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Lajpaal Motors Repairing Workshop (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "euv_E}_|dMTfCJ`ATnCTpBx@~G"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5785855,
+                        "lng" : 74.3681466
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "2.2 km",
+                        "value" : 2176
+                     },
+                     "duration" : {
+                        "text" : "5 mins",
+                        "value" : 319
+                     },
+                     "end_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "html_instructions" : "Make a \u003cb\u003eU-turn\u003c/b\u003e at Laiba Look International\u003cdiv style=\"font-size:0.9em\"\u003ePass by Rescue 1122 (on the left in 300m)\u003c/div\u003e",
+                     "maneuver" : "uturn-right",
+                     "polyline" : {
+                        "points" : "}pv_Eqh{dM_@Jo@{GQaBE[e@mFI}@OiAGi@Mo@[}AUcAsAiFI]Qq@c@eBYcAM]Sk@Qi@IUKWACc@eAAGy@qBgAmCe@iAWg@Wi@c@cAu@}AMWYw@Sk@_@cAIYg@}AaA{COc@K[IYKg@Ie@Iq@UqAk@cCO{@I_@Ge@Ee@KgCACC]CWKaAE]O{AWkBI_@CSKs@Mw@My@WmB"
+                     },
+                     "start_location" : {
+                        "lat" : 31.577906,
+                        "lng" : 74.364408
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 455
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 117
+                     },
+                     "end_location" : {
+                        "lat" : 31.5887131,
+                        "lng" : 74.38507749999999
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Deewan Pan Shop (on the left)\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "maneuver" : "turn-slight-left",
+                     "polyline" : {
+                        "points" : "}{w_Eel_eMe@w@?AAAC?A?[@aBP}ALm@Hc@Dg@Fi@FwATsANy@HmALm@H"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "ovu_Eoc{dMh@i@HOd@{CdDqPeLoDiD_AaAQi@E_@?k@DoF~@gB\\uB\\TfC`@pEnApK_@Jo@{GW}Bo@kHWsBi@mCiBmHyAyF}@iCs@iBaC_G}@qB_CcFwAaEeCyHUaASwAUqAk@cCY{AMkAMkCYuCg@gEMs@_AsGk@{@}E`@cD^kDd@gCVm@H"
+         },
+         "summary" : "G. T. Road/AH1",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

@@ -141,6 +141,7 @@
             this.DGVStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVStock.Size = new System.Drawing.Size(668, 138);
             this.DGVStock.TabIndex = 83;
+            this.DGVStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVStock_CellContentClick_1);
             // 
             // lblRowSignal
             // 
