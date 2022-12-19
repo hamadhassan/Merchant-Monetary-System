@@ -1,4 +1,5 @@
-﻿using Merchant_Monetary_System.DL;
+﻿using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.DL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +17,11 @@ namespace Merchant_Monetary_System.Forms.Product
     public partial class frmUpdateCategory : Form
     {
         bool isName = true;
-        public frmUpdateCategory()
+        Category category;
+        public frmUpdateCategory(Category category)
         {
             InitializeComponent();
+            this.category = category;
         }
         public bool isValidString(string input)
         {
@@ -60,8 +63,7 @@ namespace Merchant_Monetary_System.Forms.Product
         {
             if (txtCategory.Text != "" && !isName)
             {
-                string categoryName = txtCategory.Text;
-                categoryDL.addIntoCategoryList(categoryName);
+                category.CategoryName = txtCategory.Text;
                 categoryDL.StoreDataIntoFiles(FilePath.Category);
                 MessageBox.Show("Category Updated Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -83,7 +85,7 @@ namespace Merchant_Monetary_System.Forms.Product
 
         private void frmUpdateCategory_Load(object sender, EventArgs e)
         {
-
+            txtCategory.Text = category.CategoryName;
         }
     }
 }

@@ -27,7 +27,6 @@ namespace Merchant_Monetary_System
             VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
             UsersDL.loadRecordFromFile(FilePath.Users);
-
             try
             {
                 Application.EnableVisualStyles();

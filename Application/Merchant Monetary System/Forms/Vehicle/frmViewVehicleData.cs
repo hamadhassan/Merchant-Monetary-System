@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System.Forms.Product;
+using static Microsoft.Scripting.PerfTrack;
 
 namespace Merchant_Monetary_System.Forms.Vehicle
 {
@@ -25,7 +26,7 @@ namespace Merchant_Monetary_System.Forms.Vehicle
             datagvVehicleDetails.Columns.Clear();
             datagvVehicleDetails.DataSource = null;
             datagvVehicleDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            datagvVehicleDetails.DataSource = VehicleDL.VehicleList;
+            addIntoGrid(VehicleDL.VehicleLinkedList);
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
             Update.Text = "Update";
@@ -37,6 +38,24 @@ namespace Merchant_Monetary_System.Forms.Vehicle
             datagvVehicleDetails.Columns.Add(Update);
             datagvVehicleDetails.Columns.Add(Delete);
             datagvVehicleDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void addIntoGrid(DoublyLinkedList<BL.Vehicle> vehicleLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Type");
+            dt.Columns.Add("Volume");
+            dt.Columns.Add("Weight");
+            dt.Columns.Add("Registration No.");
+            dt.Columns.Add("Assigned");
+            DoublyLinkedListNode<BL.Vehicle> Head = vehicleLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.VehicleType,Head.Data.VehicleVolume,Head.Data.VehicleWeight,Head.Data.RegistrationNumber,Head.Data.Assigned);
+                Head = Head.Next;
+            }
+            datagvVehicleDetails.DataSource = dt;
         }
 
         private void btnLoadRecords_Click(object sender, EventArgs e)
@@ -51,17 +70,21 @@ namespace Merchant_Monetary_System.Forms.Vehicle
         {
             if (datagvVehicleDetails.SelectedRows.Count == 1)
             {
+                BL.Vehicle vehicle;
                 int index = datagvVehicleDetails.CurrentCell.ColumnIndex;
-                BL.Vehicle V = (BL.Vehicle)datagvVehicleDetails.CurrentRow.DataBoundItem;
+                int rowInd = datagvVehicleDetails.CurrentCell.RowIndex;
+                string registrationNo = datagvVehicleDetails.Rows[rowInd].Cells[3].Value.ToString();
+                vehicle = VehicleDL.returnVehicleData(registrationNo);
                 if (index == 5)
                 {
-                    Form form = new frmUpdateVehicle(V);
+                    Form form = new frmUpdateVehicle(vehicle);
                     form.ShowDialog();
+                    DataBind();
                     VehicleDL.StoreVehicleDataIntoFiles(FilePath.Vehcile);
                 }
                 else if (index == 6)
                 {
-                    bool done = VehicleDL.deleteVehicle(V);
+                    bool done = VehicleDL.deleteVehicle(vehicle);
                     if (done)
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);

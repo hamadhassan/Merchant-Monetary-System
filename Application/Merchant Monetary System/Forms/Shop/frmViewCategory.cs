@@ -16,5 +16,10 @@ namespace Merchant_Monetary_System
         {
             InitializeComponent();
         }
+
+        private void btnLoadRecords_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
