@@ -183,16 +183,15 @@
             this.comboBoxPaymentBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxPaymentBy.FormattingEnabled = true;
             this.comboBoxPaymentBy.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider",
-            "Warehouse Manager"});
+            "ShopKeeper",
+            "Vendor"});
             this.comboBoxPaymentBy.Location = new System.Drawing.Point(190, 334);
             this.comboBoxPaymentBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentBy.Name = "comboBoxPaymentBy";
             this.comboBoxPaymentBy.Size = new System.Drawing.Size(240, 28);
             this.comboBoxPaymentBy.Sorted = true;
             this.comboBoxPaymentBy.TabIndex = 38;
+            this.comboBoxPaymentBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaymentBy_SelectedIndexChanged);
             // 
             // lblPaymentBY
             // 
@@ -222,14 +221,14 @@
             this.comboBoxPaymentReceivedBy.Items.AddRange(new object[] {
             "CEO",
             "Employee",
-            "Rider",
-            "Warehouse Manager"});
+            "Vendor"});
             this.comboBoxPaymentReceivedBy.Location = new System.Drawing.Point(264, 391);
             this.comboBoxPaymentReceivedBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentReceivedBy.Name = "comboBoxPaymentReceivedBy";
             this.comboBoxPaymentReceivedBy.Size = new System.Drawing.Size(167, 28);
             this.comboBoxPaymentReceivedBy.Sorted = true;
             this.comboBoxPaymentReceivedBy.TabIndex = 34;
+            this.comboBoxPaymentReceivedBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaymentReceivedBy_SelectedIndexChanged);
             // 
             // label5
             // 

@@ -1,0 +1,85 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJxfIdwuAaGTkRAW8puuKhGfY",
+         "types" : [ "premise" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJxfIdwuAaGTkRAW8puuKhGfY",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5896643,
+               "lng" : 74.3629414
+            },
+            "southwest" : {
+               "lat" : 31.5896643,
+               "lng" : 74.3629414
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1 m",
+                  "value" : 0
+               },
+               "duration" : {
+                  "text" : "1 min",
+                  "value" : 0
+               },
+               "end_address" : "H9Q7+Q7Q, Kot Khawaja Saeed, Lahore, Punjab 54000, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5896643,
+                  "lng" : 74.3629414
+               },
+               "start_address" : "H9Q7+Q7Q, Kot Khawaja Saeed, Lahore, Punjab 54000, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5896643,
+                  "lng" : 74.3629414
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "1 m",
+                        "value" : 0
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 0
+                     },
+                     "end_location" : {
+                        "lat" : 31.5896643,
+                        "lng" : 74.3629414
+                     },
+                     "html_instructions" : "Head",
+                     "polyline" : {
+                        "points" : "kzx_Ek_{dM"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5896643,
+                        "lng" : 74.3629414
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "kzx_Ek_{dM"
+         },
+         "summary" : "",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

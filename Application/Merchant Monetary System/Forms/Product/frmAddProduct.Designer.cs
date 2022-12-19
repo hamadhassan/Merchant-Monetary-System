@@ -261,9 +261,6 @@
             this.cmbxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxCategory.FormattingEnabled = true;
-            this.cmbxCategory.Items.AddRange(new object[] {
-            "RAMI",
-            "SHareef"});
             this.cmbxCategory.Location = new System.Drawing.Point(631, 245);
             this.cmbxCategory.Name = "cmbxCategory";
             this.cmbxCategory.Size = new System.Drawing.Size(203, 28);
@@ -286,8 +283,8 @@
             this.cmbxSenstivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxSenstivity.FormattingEnabled = true;
             this.cmbxSenstivity.Items.AddRange(new object[] {
-            "Liquid",
-            "Solid"});
+            "Fragile Product",
+            "Non Fragile Product"});
             this.cmbxSenstivity.Location = new System.Drawing.Point(634, 196);
             this.cmbxSenstivity.Name = "cmbxSenstivity";
             this.cmbxSenstivity.Size = new System.Drawing.Size(203, 28);
@@ -336,6 +333,7 @@
             this.Name = "frmAddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTest";
+            this.Load += new System.EventHandler(this.frmAddProduct_Load);
             this.gbx.ResumeLayout(false);
             this.gbx.PerformLayout();
             this.ResumeLayout(false);

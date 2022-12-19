@@ -136,7 +136,6 @@
             this.lblViewRoute.Size = new System.Drawing.Size(202, 38);
             this.lblViewRoute.TabIndex = 3;
             this.lblViewRoute.Text = "View Route";
-            this.lblViewRoute.Click += new System.EventHandler(this.lblViewRoute_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -182,7 +181,6 @@
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            this.btnFind.MouseClick += new System.Windows.Forms.MouseEventHandler(this.map_MouseClick);
             // 
             // lblMessage
             // 

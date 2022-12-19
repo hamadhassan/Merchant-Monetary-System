@@ -1,0 +1,229 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJNXqR30gFGTkRhduSUtiJZX0",
+         "types" : [ "establishment", "point_of_interest" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJFQgtBtcaGTkRaC7dCT45dNM",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5736848,
+               "lng" : 74.37244699999999
+            },
+            "southwest" : {
+               "lat" : 31.5538517,
+               "lng" : 74.3507103
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "4.7 km",
+                  "value" : 4682
+               },
+               "duration" : {
+                  "text" : "11 mins",
+                  "value" : 678
+               },
+               "end_address" : "H9F6+MMW, Mughalpura, Lahore, Punjab 54840, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5736848,
+                  "lng" : 74.3636042
+               },
+               "start_address" : "H962+79R, Garhi Shahu, Lahore, Punjab 54000, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5601897,
+                  "lng" : 74.35105299999999
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "79 m",
+                        "value" : 79
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 22
+                     },
+                     "end_location" : {
+                        "lat" : 31.5595425,
+                        "lng" : 74.3507103
+                     },
+                     "html_instructions" : "Head \u003cb\u003esouthwest\u003c/b\u003e on \u003cb\u003eBadar St\u003c/b\u003e toward \u003cb\u003eAllama Iqbal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Mr Bilal (on the left)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "ebs_EauxdMPLx@b@t@P"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5601897,
+                        "lng" : 74.35105299999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.0 km",
+                        "value" : 960
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 129
+                     },
+                     "end_location" : {
+                        "lat" : 31.5538531,
+                        "lng" : 74.35828699999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at MEDSHOP PHARMACY onto \u003cb\u003eAllama Iqbal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Imperial College Of Technology (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "c~r_E}rxdMlAaBrAeBhAyA@AXYp@y@fCgDFGfAyA`AqADGX[V]Zg@|@qA^m@Xk@JWLWnAiCDKbBqDx@eAx@{@HG"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5595425,
+                        "lng" : 74.3507103
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.6 km",
+                        "value" : 1570
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 148
+                     },
+                     "end_location" : {
+                        "lat" : 31.5608787,
+                        "lng" : 74.37244699999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eCanal Rd\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePeer Muhammad Sadiq Rd\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "qzq_EibzdM?M?QCMAUOSACoA_Bk@_Ai@}@c@s@KSISIYoBgDa@s@W_@Q[kBoDu@uA]s@Wc@aAkBGKS]O[i@eAk@mA_@u@Qc@o@eBCGq@cB[aAYgA[}@u@{BQi@o@oCi@oBa@cBYsAKg@g@mCOg@Ko@EYEi@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5538531,
+                        "lng" : 74.35828699999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.6 km",
+                        "value" : 613
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 82
+                     },
+                     "end_location" : {
+                        "lat" : 31.5658702,
+                        "lng" : 74.369906
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Pak forces foundation School onto \u003cb\u003eGriffin Road\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Fri-Chicks Office (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "ofs_Eyz|dMmAvAIHWXYVKFMHMFQHIDKBMD_@JcD|@eBj@iBj@WNe@RUH_@PsCv@i@LQDIBM@M?"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5608787,
+                        "lng" : 74.37244699999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 450
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 72
+                     },
+                     "end_location" : {
+                        "lat" : 31.5671971,
+                        "lng" : 74.3654342
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Menu onto \u003cb\u003eWorkshop Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Dolphin Foods Frozen &amp; Fresh (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "uet_E}j|dMUb@MZMf@UnAaAhG[nBcBlI"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5658702,
+                        "lng" : 74.369906
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.6 km",
+                        "value" : 611
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 128
+                     },
+                     "end_location" : {
+                        "lat" : 31.5724019,
+                        "lng" : 74.36748249999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at Plant Nursey onto \u003cb\u003eWheatmen Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Mehboob Qadir BBQ (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "_nt_E}n{dMOEMGSIiBg@cA[i@[i@SQGSGa@KWGSEQE_@MYISIMEc@Km@Ou@QcHkBmA["
+                     },
+                     "start_location" : {
+                        "lat" : 31.5671971,
+                        "lng" : 74.3654342
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 399
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 97
+                     },
+                     "end_location" : {
+                        "lat" : 31.5736848,
+                        "lng" : 74.3636042
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eWalkway to Tomb\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "onu_Ew{{dM_AtEeBzI_@`CEXCFEFEFGFIHQN"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5724019,
+                        "lng" : 74.36748249999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "ebs_EauxdMjAp@t@PlAaB|C_EZ[hGcIxBsCxAyBx@yAnBeEbBqDx@eAbAcA?_@Ec@aBwBeCeESm@qC{Ei@{@aDeG_CoEyBmEq@yAs@mBmAeDu@eCgAeDyA_G{@wDs@uDOg@Ko@KcAwA`Bq@p@y@b@cAZiGhBiBj@WN{@\\sDhAsAXM?Ub@[bAwAxI[nBcBlI]M}Bq@cA[i@[{@[aBa@_Bg@uCs@qJgCeDpPe@zCINi@h@"
+         },
+         "summary" : "Canal Rd/Peer Muhammad Sadiq Rd",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

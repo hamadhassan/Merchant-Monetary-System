@@ -102,7 +102,8 @@
             this.cmbxFrom.Items.AddRange(new object[] {
             "CEO",
             "Employee",
-            "Rider"});
+            "Rider",
+            "WareHouse Manager"});
             this.cmbxFrom.Location = new System.Drawing.Point(520, 80);
             this.cmbxFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbxFrom.Name = "cmbxFrom";

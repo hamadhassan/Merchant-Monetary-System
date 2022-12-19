@@ -1,0 +1,132 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJQbESqRUbGTkROXv2fpX_PxU",
+         "types" : [ "establishment", "point_of_interest", "store" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJqRV00WgbGTkRdaEj64uGIMg",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5878899,
+               "lng" : 74.33842419999999
+            },
+            "southwest" : {
+               "lat" : 31.5837802,
+               "lng" : 74.3261552
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "1.6 km",
+                  "value" : 1636
+               },
+               "duration" : {
+                  "text" : "6 mins",
+                  "value" : 371
+               },
+               "end_address" : "H8QG+79F, Farooq Gunj Bazar Rd, Farooq Gunj Mohalla Habib Gunj, Lahore, Punjab, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5878899,
+                  "lng" : 74.3261552
+               },
+               "start_address" : "H8PQ+Q9P, Chah Miran, Lahore, Punjab, Pakistan",
+               "start_location" : {
+                  "lat" : 31.58701099999999,
+                  "lng" : 74.33842419999999
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 145
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 31
+                     },
+                     "end_location" : {
+                        "lat" : 31.5870407,
+                        "lng" : 74.3369003
+                     },
+                     "html_instructions" : "Head \u003cb\u003ewest\u003c/b\u003e on \u003cb\u003eChah Miran Rd\u003c/b\u003e toward \u003cb\u003eAkbar Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by WAPDA customer service center (on the left)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "yix_EcfvdM?Z?b@Cp@CbA?bA@t@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.58701099999999,
+                        "lng" : 74.33842419999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.8 km",
+                        "value" : 834
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 197
+                     },
+                     "end_location" : {
+                        "lat" : 31.5840595,
+                        "lng" : 74.33021889999999
+                     },
+                     "html_instructions" : "At \u003cb\u003eChowk Nakhuda\u003c/b\u003e, continue onto \u003cb\u003eAziz Road\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Money Gram/\u003cwbr/\u003eWestern Union (on the left)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "_jx_Es|udMDh@B^Jb@FRNn@TdAH`@Tr@D\\Jv@NdADb@BV@V@p@?@@`A?J@n@?T?`AAl@ARG~@ALAT@V@HDTDPBLL\\L\\Vl@FLJNJX@FDDHFLFRDZDF@D?n@JZH@?r@Rl@HV@N?\\ED?@ABCBE"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5870407,
+                        "lng" : 74.3369003
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.7 km",
+                        "value" : 657
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 143
+                     },
+                     "end_location" : {
+                        "lat" : 31.5878899,
+                        "lng" : 74.3261552
+                     },
+                     "html_instructions" : "At the roundabout, take the \u003cb\u003e4th\u003c/b\u003e exit onto \u003cb\u003ePolice Flats Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Butt Brothers Kursi House (on the left)\u003c/div\u003e",
+                     "maneuver" : "roundabout-left",
+                     "polyline" : {
+                        "points" : "kww_E{rtdM?C?A@A@EFIHO@ABABAF@@?BBDD@@?B@D?DADSVEDC@C?C??DADCDyBxBSR{B|ByB~BOP}@z@EBqArAKJSLKHw@p@u@n@GFY\\a@d@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5840595,
+                        "lng" : 74.33021889999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "yix_EcfvdM?~@GtB@xBDh@B^Jb@VbA^fBTr@D\\Z|BHz@DlC@rCMnC?l@F^H^Zz@v@dBFLVN|@LjATt@RdAJl@ENKBMV]J?DBHPAJY\\G@CDEJmClCuF|FmAlAwAvA_@XaCrB{@bA"
+         },
+         "summary" : "Aziz Road and Police Flats Rd",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

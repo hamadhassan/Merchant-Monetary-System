@@ -22,12 +22,14 @@ namespace Merchant_Monetary_System
         [STAThread]
         static void Main()
         {
-            //ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
+            categoryDL.loadDataFromFiles(FilePath.Category);
+            ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
             Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
             VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
             UsersDL.loadRecordFromFile(FilePath.Users);
             WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
+            VendorDL.loadRecordFromFile(FilePath.Vendors);
             try
             {
                 Application.EnableVisualStyles();

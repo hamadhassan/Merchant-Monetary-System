@@ -33,9 +33,18 @@ namespace Merchant_Monetary_System.Forms.Product
             txtbxSKU_ID.Text = product.SKU_Number.ToString();
             txtbxWeight.Text = product.Weight.ToString();
             txtbxVolume.Text = product.Volume.ToString();
-            comboCategory.Text=product.Category.ToString();
-            cmbxManufacture.Text = product.Manufacturer.ToString();
-            cmbxSenstivity.Text = product.SensitivityType.ToString();
+            DoublyLinkedListNode<Category> Head = categoryDL.Categories.Head;
+            while (Head != null)
+            {
+                comboCategory.Items.Add(Head.Data.CategoryName);
+                Head = Head.Next;
+            }
+            DoublyLinkedListNode<Vendor> Header = VendorDL.VendorLinkedList.Head;
+            while (Header != null)
+            {
+                cmbxManufacture.Items.Add(Header.Data.VendorName);
+                Header = Header.Next;
+            }
 
         }
 

@@ -1,0 +1,156 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJqRV00WgbGTkRdaEj64uGIMg",
+         "types" : [ "premise" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJIWlkUr4aGTkRvKQ3niaMf4g",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5887131,
+               "lng" : 74.3857708
+            },
+            "southwest" : {
+               "lat" : 31.5757345,
+               "lng" : 74.3261552
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "6.8 km",
+                  "value" : 6822
+               },
+               "duration" : {
+                  "text" : "18 mins",
+                  "value" : 1076
+               },
+               "end_address" : "H9QP+858, Wapda Rd, Shalamar Town, Lahore, Punjab 54000, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5887131,
+                  "lng" : 74.38507749999999
+               },
+               "start_address" : "H8QG+79F, Farooq Gunj Bazar Rd, Farooq Gunj Mohalla Habib Gunj, Lahore, Punjab, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5878899,
+                  "lng" : 74.3261552
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0.2 km",
+                        "value" : 158
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 31
+                     },
+                     "end_location" : {
+                        "lat" : 31.5867841,
+                        "lng" : 74.3272051
+                     },
+                     "html_instructions" : "Head \u003cb\u003esoutheast\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "iox_EoysdM`@e@X]FGt@o@v@q@JIRMJK"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5878899,
+                        "lng" : 74.3261552
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.4 km",
+                        "value" : 417
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 100
+                     },
+                     "end_location" : {
+                        "lat" : 31.58397579999999,
+                        "lng" : 74.33010659999999
+                     },
+                     "html_instructions" : "Continue onto \u003cb\u003ePolice Flats Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by The lucky Rana goods transport company.. (on the left)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "khx_Ea`tdMpAsADC|@{@NQxB_CzB}BRSxByBBE@E?E"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5867841,
+                        "lng" : 74.3272051
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "5.8 km",
+                        "value" : 5792
+                     },
+                     "duration" : {
+                        "text" : "14 mins",
+                        "value" : 828
+                     },
+                     "end_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "html_instructions" : "At the roundabout, continue straight onto \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow AH1\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Rescue 1122 (on the left in 3.9 km)\u003c/div\u003e",
+                     "maneuver" : "roundabout-left",
+                     "polyline" : {
+                        "points" : "{vw_EertdMA?CCCCAEACAC?C?A@A@EFIHO@ABABAF@@?BBDD~AsBn@q@f@e@l@i@Z]DEX[\\_@f@k@t@q@Zu@Vo@Xe@bAqBNWp@mAFKHKLMLMNK^[zA{AJMBG@AJ[BM@M@S@O?Y?g@@_AAiA@]@u@FaB@g@@u@ByB@}BH}N@eAB{@@U@_@B_@Dc@DW@KBKBINg@DKLQFKJSZa@`@k@`AqAt@cArC_Ev@kAJOX_@b@i@f@e@BM@ANWPYXe@Xy@h@kCBYEwD_@kEUsCcA_PGk@c@cFWqDGe@C[u@}HW_CQgBMcAEKAECIAGCIIsAy@}Ia@mEYeDC_@o@{GQaBE[e@mFI}@OiAGi@Mo@[}AUcAsAiFI]Qq@c@eBYcAM]Sk@Qi@IUKWACc@eAAGy@qBgAmCe@iAWg@Wi@c@cAu@}AMWYw@Sk@_@cAIYg@}AaA{COc@K[IYKg@Ie@Iq@UqAk@cCO{@I_@Ge@Ee@KgCACC]CWKaAE]O{AWkBI_@CSKs@Mw@My@WmB"
+                     },
+                     "start_location" : {
+                        "lat" : 31.58397579999999,
+                        "lng" : 74.33010659999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 455
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 117
+                     },
+                     "end_location" : {
+                        "lat" : 31.5887131,
+                        "lng" : 74.38507749999999
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Deewan Pan Shop (on the left)\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "maneuver" : "turn-slight-left",
+                     "polyline" : {
+                        "points" : "}{w_Eel_eMe@w@?AAAC?A?[@aBP}ALm@Hc@Dg@Fi@FwATsANy@HmALm@H"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "iox_EoysdMz@cA|@w@bBuAdDeDbKkKDKAEKQ?KTa@FCH@HH~AsBn@q@tAoA`@c@v@{@|A}Ar@eB|AwCrA}BjAcAfBiBDINi@Ba@BqC?gBHwCB}ADwFJcQDqAP{BXiAf@}@tDcFpF{Hb@i@f@e@DO`@q@Xe@Xy@h@kCBYEwD_@kEyAsTk@oG_@wEy@yIi@gFSoAKa@cAqL{@sJkAyLo@kHWsBi@mCiBmHyAyF}@iCs@iBaC_G}@qB_CcFwAaEeCyHUaASwAUqAk@cCY{AMkAMkCYuCg@gEMs@_AsGk@{@}E`@cD^kDd@gCVm@H"
+         },
+         "summary" : "AH1",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

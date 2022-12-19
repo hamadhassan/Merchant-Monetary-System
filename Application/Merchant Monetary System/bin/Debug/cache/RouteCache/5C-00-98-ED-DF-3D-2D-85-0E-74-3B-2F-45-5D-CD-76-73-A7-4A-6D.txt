@@ -1,0 +1,253 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJxfIdwuAaGTkRAW8puuKhGfY",
+         "types" : [ "premise" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJIWlkUr4aGTkRvKQ3niaMf4g",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5897873,
+               "lng" : 74.3857732
+            },
+            "southwest" : {
+               "lat" : 31.5789961,
+               "lng" : 74.3621076
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "3.9 km",
+                  "value" : 3897
+               },
+               "duration" : {
+                  "text" : "13 mins",
+                  "value" : 807
+               },
+               "end_address" : "H9QP+858, Wapda Rd, Shalamar Town, Lahore, Punjab 54000, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5887131,
+                  "lng" : 74.38507749999999
+               },
+               "start_address" : "H9Q7+Q7Q, Kot Khawaja Saeed, Lahore, Punjab 54000, Pakistan",
+               "start_location" : {
+                  "lat" : 31.5896643,
+                  "lng" : 74.3629414
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "32 m",
+                        "value" : 32
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 8
+                     },
+                     "end_location" : {
+                        "lat" : 31.5897873,
+                        "lng" : 74.3626345
+                     },
+                     "html_instructions" : "Head \u003cb\u003enorthwest\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "kzx_Ek_{dMY|@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5896643,
+                        "lng" : 74.3629414
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 110
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 31
+                     },
+                     "end_location" : {
+                        "lat" : 31.5889332,
+                        "lng" : 74.3621076
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e toward \u003cb\u003eSher Shah Rd\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "e{x_Em}zdMp@Rb@L^HBBB@BBh@p@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5897873,
+                        "lng" : 74.3626345
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.7 km",
+                        "value" : 733
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 181
+                     },
+                     "end_location" : {
+                        "lat" : 31.5862317,
+                        "lng" : 74.3689404
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Titoo's HotShot Recipe onto \u003cb\u003eSher Shah Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Al Rehmat Traders, Proprietor Asif Hussain (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "yux_EezzdMZQVQLKHGFGHKBCb@m@DGj@oAFQ^w@\\o@HOTy@@C^iAL[Je@N_AHm@@KDUBKHi@N{APuABUJaAPeAL_ANgARoAHi@PS"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5889332,
+                        "lng" : 74.3621076
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.7 km",
+                        "value" : 721
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 177
+                     },
+                     "end_location" : {
+                        "lat" : 31.57988629999999,
+                        "lng" : 74.36794519999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at داتا علی ہجویری اینڈ بابا نعیم ٹائل سٹور onto \u003cb\u003eBhogiwal Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Nobel Birds Shop (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "}dx_E{d|dMb@Az@CpA?dBCD@D?F@DBDDBDBBb@Hz@LzBn@D@tATn@J|ARF?l@Bf@BXAP?l@EJCJAJAP?V@RBlB`@dBV"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5862317,
+                        "lng" : 74.3689404
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "36 m",
+                        "value" : 36
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 10
+                     },
+                     "end_location" : {
+                        "lat" : 31.5798227,
+                        "lng" : 74.3683174
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Mubarak Property Advisor toward \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "i}v_Eu~{dMLiA"
+                     },
+                     "start_location" : {
+                        "lat" : 31.57988629999999,
+                        "lng" : 74.36794519999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 124
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 33
+                     },
+                     "end_location" : {
+                        "lat" : 31.5789961,
+                        "lng" : 74.3691884
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eright\u003c/b\u003e at Aasia’s beauty parlour toward \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Liaqat Saab Residency (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-slight-right",
+                     "polyline" : {
+                        "points" : "{|v_E_a|dMX[R_@^g@v@k@\\]"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5798227,
+                        "lng" : 74.3683174
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.7 km",
+                        "value" : 1686
+                     },
+                     "duration" : {
+                        "text" : "4 mins",
+                        "value" : 250
+                     },
+                     "end_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at KFC - Baghbanpura onto \u003cb\u003eG. T. Road\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAH1\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Haider Children Hospital (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "wwv_Emf|dMUcAsAiFI]Qq@c@eBYcAM]Sk@Qi@IUKWACc@eAAGy@qBgAmCe@iAWg@Wi@c@cAu@}AMWYw@Sk@_@cAIYg@}AaA{COc@K[IYKg@Ie@Iq@UqAk@cCO{@I_@Ge@Ee@KgCACC]CWKaAE]O{AWkBI_@CSKs@Mw@My@WmB"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5789961,
+                        "lng" : 74.3691884
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 455
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 117
+                     },
+                     "end_location" : {
+                        "lat" : 31.5887131,
+                        "lng" : 74.38507749999999
+                     },
+                     "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Deewan Pan Shop (on the left)\u003c/div\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "maneuver" : "turn-slight-left",
+                     "polyline" : {
+                        "points" : "}{w_Eel_eMe@w@?AAAC?A?[@aBP}ALm@Hc@Dg@Fi@FwATsANy@HmALm@H"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5847911,
+                        "lng" : 74.38547439999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "kzx_Ek_{dMY|@p@RbAVFDl@t@jAw@x@eAxAaDf@_AV}@l@eBZeBT{An@qFz@oG\\yBPSb@Az@CpA?jBAL@JHFH~AV`Cp@dC`@dBRtAFj@Ax@IVCh@@`Cd@dBVLiAX[R_@^g@v@k@\\]UcA}AgGu@wCg@aB{@cCaBcEmBwEo@qAyAaDg@oAs@oBq@wBgBuFUmA_@cC{@_EQeAQmDEa@e@sEq@sE[qBWmBe@w@ACE?iGj@mEj@iGp@"
+         },
+         "summary" : "G. T. Road/AH1",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

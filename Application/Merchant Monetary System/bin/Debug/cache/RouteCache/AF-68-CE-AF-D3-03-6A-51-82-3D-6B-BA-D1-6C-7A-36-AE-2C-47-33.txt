@@ -1,0 +1,204 @@
+﻿{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJQbESqRUbGTkROXv2fpX_PxU",
+         "types" : [ "establishment", "point_of_interest", "store" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJxfIdwuAaGTkRAW8puuKhGfY",
+         "types" : [ "premise" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 31.5926839,
+               "lng" : 74.3629414
+            },
+            "southwest" : {
+               "lat" : 31.58701099999999,
+               "lng" : 74.33842419999999
+            }
+         },
+         "copyrights" : "Map data ©2022",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "2.8 km",
+                  "value" : 2825
+               },
+               "duration" : {
+                  "text" : "14 mins",
+                  "value" : 820
+               },
+               "end_address" : "H9Q7+Q7Q, Kot Khawaja Saeed, Lahore, Punjab 54000, Pakistan",
+               "end_location" : {
+                  "lat" : 31.5896643,
+                  "lng" : 74.3629414
+               },
+               "start_address" : "H8PQ+Q9P, Chah Miran, Lahore, Punjab, Pakistan",
+               "start_location" : {
+                  "lat" : 31.58701099999999,
+                  "lng" : 74.33842419999999
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "1.3 km",
+                        "value" : 1289
+                     },
+                     "duration" : {
+                        "text" : "7 mins",
+                        "value" : 390
+                     },
+                     "end_location" : {
+                        "lat" : 31.5886519,
+                        "lng" : 74.35166819999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003eeast\u003c/b\u003e on \u003cb\u003eChah Miran Rd\u003c/b\u003e toward \u003cb\u003eSt 19\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Dar-e-Arqam School (on the right)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "yix_EcfvdMA{@CkBCWCICYM_AE[CWG_@C[CQAGCa@AOCeACqAA]?uC?c@?Eq@uAWWU]AAOo@EQAGAI?QAiA@m@AU@UCoA@y@?G?CEo@CYCGCK?AACE_B?EEiA?AOmBIm@E_@?CGy@Ck@Co@?EMcB?EQqBEi@EgB?S?Q@QFeA@e@AQASAEGe@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.58701099999999,
+                        "lng" : 74.33842419999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.6 km",
+                        "value" : 579
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 167
+                     },
+                     "end_location" : {
+                        "lat" : 31.5906462,
+                        "lng" : 74.3572039
+                     },
+                     "html_instructions" : "At Bashir Hardware store, continue onto \u003cb\u003eKot Khawaja Saeed\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Hafiz sanitary and Bldg material store (on the right)\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "atx_E}xxdMC]k@kB?CMc@AMAO?K?MCk@Ae@AOCWCMEOI[Mc@Me@EMSo@ACOo@YgAc@kBCEMc@EKMSu@_AQSOa@EKEOCIEYKo@CICI"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5886519,
+                        "lng" : 74.35166819999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.3 km",
+                        "value" : 291
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 93
+                     },
+                     "end_location" : {
+                        "lat" : 31.5926839,
+                        "lng" : 74.3588285
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Muneer Mahmood Yousufi Stamp Vendor &amp; Deed Writer onto \u003cb\u003eKot Khawaja Saeed Rd\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eKot Khwaja Saeed Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Quaid-e-Azam Memorial School (on the right)\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "q`y_Eo{ydMUEq@CI?AAI?I?G@I@G@G@q@aAEE[_@u@y@i@q@]c@CE_@g@U["
+                     },
+                     "start_location" : {
+                        "lat" : 31.5906462,
+                        "lng" : 74.3572039
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.5 km",
+                        "value" : 524
+                     },
+                     "duration" : {
+                        "text" : "2 mins",
+                        "value" : 131
+                     },
+                     "end_location" : {
+                        "lat" : 31.5889332,
+                        "lng" : 74.3621076
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e at CFC Classic Fried Chicken onto \u003cb\u003eSher Shah Rd\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003ePass by Big food point (on the left)\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "gmy_EuezdMJMjA{Ah@s@z@gATYh@a@h@[^U`@Wd@[v@c@l@]h@_@VSZYPMh@c@DEj@_@j@_@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5926839,
+                        "lng" : 74.3588285
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0.1 km",
+                        "value" : 110
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 27
+                     },
+                     "end_location" : {
+                        "lat" : 31.5897873,
+                        "lng" : 74.3626345
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at Titoo's HotShot Recipe",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "yux_EezzdMi@q@CCCACC_@Ic@Mq@S"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5889332,
+                        "lng" : 74.3621076
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "32 m",
+                        "value" : 32
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 12
+                     },
+                     "end_location" : {
+                        "lat" : 31.5896643,
+                        "lng" : 74.3629414
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "e{x_Em}zdMX}@"
+                     },
+                     "start_location" : {
+                        "lat" : 31.5897873,
+                        "lng" : 74.3626345
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "yix_EcfvdMEgDGa@[mCQuAEq@GwCA}Eq@uAWWW_@UaACQA_DAeB@aAEs@Ga@CMGcBU_EOmAG}@UeEQwBKqC?e@HwA?w@CYKcAk@oBOq@A[GoBGe@Ok@u@gCoAgFQi@S_@gAsAUm@[cBGSgAI_@Aa@Fw@gAqAyAkBcCU[JMtBoCpAaBh@a@h@[`Am@|A_AvA}@r@m@lBwAj@_@i@q@GEyBo@X}@"
+         },
+         "summary" : "Chah Miran Rd and Kot Khawaja Saeed",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}

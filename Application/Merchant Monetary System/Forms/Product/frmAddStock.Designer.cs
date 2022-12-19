@@ -207,10 +207,6 @@
             this.comboBoxVendor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxVendor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxVendor.FormattingEnabled = true;
-            this.comboBoxVendor.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
             this.comboBoxVendor.Location = new System.Drawing.Point(630, 232);
             this.comboBoxVendor.Name = "comboBoxVendor";
             this.comboBoxVendor.Size = new System.Drawing.Size(198, 28);

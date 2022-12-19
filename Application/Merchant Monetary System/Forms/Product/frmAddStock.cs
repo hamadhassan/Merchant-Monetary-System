@@ -34,6 +34,23 @@ namespace Merchant_Monetary_System
 
         private void DataBind()
         {
+            comboBoxProduct.DataSource = ProductDL.ProductList;
+           // comboBoxVendor.DataSource = VendorDL.VendorList;
+            DoublyLinkedListNode<Product> Head = ProductDL.ProductList.Head;
+            //while (Head != null)
+            //{
+            //    comboBoxProduct.Items.Add(Head.Data.Name);
+            //    Head = Head.Next;
+            //}
+            DoublyLinkedListNode<Vendor> Header = VendorDL.VendorLinkedList.Head;
+            while (Header != null)
+            {
+                comboBoxVendor.Items.Add(Header.Data.VendorName);
+                Header = Header.Next;
+            }
+
+
+            DGVStock.DataSource = newStock;
             DGVStock.Columns.Clear();
             DGVStock.DataSource = null;
             DGVStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
