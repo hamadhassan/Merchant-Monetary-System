@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Merchant_Monetary_System;
 using System.IO;
 using System.Diagnostics.Contracts;
+using Merchant_Monetary_System.BL;
 
 namespace Merchant_Monetary_System.DL
 {
@@ -14,7 +15,7 @@ namespace Merchant_Monetary_System.DL
     {
         private static readonly categoryDL instance = new categoryDL();
         private static List<string> categoryList = new List<string>();
-        private static DoublyLinkedList<string> categories = new DoublyLinkedList<string>();
+        private static DoublyLinkedList<Category> categories = new DoublyLinkedList<Category>();
         static categoryDL()
         {
         }
@@ -30,18 +31,17 @@ namespace Merchant_Monetary_System.DL
         }
 
         public static List<string> CategoryList { get => categoryList; set => categoryList = value; }
-        public static DoublyLinkedList<string> Categories { get => categories; set => categories = value; }
+        public static DoublyLinkedList<Category> Categories { get => categories; set => categories = value; }
 
-        public static void addIntoCategoryList(string categoryName)
+        public static void addIntoCategoryList(Category category)
         {
-            categoryList.Add(categoryName);
-            categories.Add(categoryName);
+            categories.Add(category);
         }
 
         public static void StoreDataIntoFiles(string path)
         {
             StreamWriter file = new StreamWriter(path);
-            DoublyLinkedListNode<string> Head = categories.Head;
+            DoublyLinkedListNode<Category> Head = categories.Head;
             while(Head != null)
             {
                 file.WriteLine(Head.Data);
@@ -64,17 +64,18 @@ namespace Merchant_Monetary_System.DL
             string record;
             while((record = file.ReadLine()) != null)
             {
-                Categories.Add(record);
+                Category category = new Category(record);
+                Categories.Add(category);
             }
             file.Close();
         }
 
         public static bool deleteCategory(string category)
         {
-            DoublyLinkedListNode<string> Head = categories.Head;
+            DoublyLinkedListNode<Category> Head = categories.Head;
             while(Head!=null)
             {
-                if(Head.Data == category)
+                if(Head.Data.CategoryName == category)
                 {
                     categories.RemoveNode(Head);
                     return true;
@@ -82,6 +83,19 @@ namespace Merchant_Monetary_System.DL
                 Head = Head.Next;
             }
             return false;
+        }
+        public static Category returnCategory(string categoryName)
+        {
+            DoublyLinkedListNode<Category> Head = categories.Head;
+            while (Head != null)
+            {
+                if (Head.Data.CategoryName == categoryName)
+                {
+                    return Head.Data;
+                }
+                Head = Head.Next;
+            }
+            return null;
         }
     }
 }

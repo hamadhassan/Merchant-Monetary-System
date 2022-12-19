@@ -112,9 +112,9 @@
             this.cmbxManufacture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxManufacture.FormattingEnabled = true;
             this.cmbxManufacture.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
+            "Honda",
+            "Nike",
+            "YAMAHA"});
             this.cmbxManufacture.Location = new System.Drawing.Point(631, 144);
             this.cmbxManufacture.Name = "cmbxManufacture";
             this.cmbxManufacture.Size = new System.Drawing.Size(203, 28);
@@ -262,9 +262,8 @@
             this.cmbxCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxCategory.FormattingEnabled = true;
             this.cmbxCategory.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
+            "RAMI",
+            "SHareef"});
             this.cmbxCategory.Location = new System.Drawing.Point(631, 245);
             this.cmbxCategory.Name = "cmbxCategory";
             this.cmbxCategory.Size = new System.Drawing.Size(203, 28);
@@ -287,9 +286,8 @@
             this.cmbxSenstivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxSenstivity.FormattingEnabled = true;
             this.cmbxSenstivity.Items.AddRange(new object[] {
-            "CEO",
-            "Employee",
-            "Rider"});
+            "Liquid",
+            "Solid"});
             this.cmbxSenstivity.Location = new System.Drawing.Point(634, 196);
             this.cmbxSenstivity.Name = "cmbxSenstivity";
             this.cmbxSenstivity.Size = new System.Drawing.Size(203, 28);

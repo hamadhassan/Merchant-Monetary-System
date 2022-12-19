@@ -40,7 +40,8 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnViewOrders_Click(object sender, EventArgs e)
         {
-            loadform(new frmCartOrders(name));
+            loadform(new OrDerDetailsForm("CEO"));
+
         }
 
         private void btnAddShopkeeper_Click(object sender, EventArgs e)
@@ -55,7 +56,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnTakeOrder_Click(object sender, EventArgs e)
         {
-            loadform(new frmTakeOrder(name));
+            loadform(new frmTakeOrder("kabir"));
 
         }
 

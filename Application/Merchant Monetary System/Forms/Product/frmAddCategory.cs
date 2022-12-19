@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Merchant_Monetary_System;
 using System.Text.RegularExpressions;
+using Merchant_Monetary_System.BL;
 
 namespace Merchant_Monetary_System.Forms.Product
 {
@@ -36,8 +37,8 @@ namespace Merchant_Monetary_System.Forms.Product
         {
             if (txtCategory.Text != "" && !isName)
             {
-                string categoryName = txtCategory.Text;
-                categoryDL.addIntoCategoryList(categoryName);
+                Category category = new Category(txtCategory.Text);
+                categoryDL.addIntoCategoryList(category);
                 categoryDL.StoreDataIntoFiles(FilePath.Category);
                 MessageBox.Show("Category Added Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace Merchant_Monetary_System.DL
     {
         private static readonly VendorDL instance = new VendorDL();
         private static List<Vendor> vendorList = new List<Vendor>();
+        private static DoublyLinkedList<Vendor> vendorLinkedList = new DoublyLinkedList<Vendor>();
 
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
@@ -32,55 +34,60 @@ namespace Merchant_Monetary_System.DL
         }
 
         public static List<Vendor> VendorList { get => vendorList; set => vendorList = value; }
+        public static DoublyLinkedList<Vendor> VendorLinkedList { get => vendorLinkedList; set => vendorLinkedList = value; }
 
         public static void addVendorIntoList(Vendor vendor)
         {
-            vendorList.Add(vendor);
+            VendorLinkedList.Add(vendor);
         }
         public static Vendor FoundVendor(string vendorName)
         {
-            foreach (Vendor vendor in VendorList)
+            DoublyLinkedListNode<Vendor> Head = VendorLinkedList.Head;
+            while(Head!=null)
             {
-                if (vendor.VendorName == vendorName)
+                if (Head.Data.VendorName == vendorName)
                 {
-                    return vendor;
+                    return Head.Data;
                 }
             }
             return null;
         }
-        public static bool updateVendorMatch(Vendor updatedvendor)
+        //public static bool updateVendorMatch(Vendor updatedvendor)
+        //{// the product  data matched with the database result
+        //    foreach (Vendor vendor in VendorList)
+        //    {
+        //        if (vendor==updatedvendor )
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false; 
+        //}
+        public static Vendor returnVendor(string vendor, double landline, string person, double contact, double amount)
         {// the product  data matched with the database result
-            foreach (Vendor vendor in VendorList)
+            DoublyLinkedListNode<Vendor> Head = VendorLinkedList.Head;
+            while(Head!=null)
             {
-                if (vendor==updatedvendor )
+                if (Head.Data.VendorName == vendor && Head.Data.LandlineNumber == landline && Head.Data.ConcernedPerson == person && Head.Data.ContactNumber == contact
+                    && Head.Data.Amount == amount)
                 {
-                    return true;
-                }
-            }
-            return false; 
-        }
-        public static Vendor returnVendor(string updatedvendor)
-        {// the product  data matched with the database result
-            foreach (Vendor vendor in VendorList)
-            {
-                if (vendor.VendorName == updatedvendor)
-                {
-                    return vendor;
+                    return Head.Data;
                 }
             }
             return null;
         }
-
-
         public static bool deleteVendor(Vendor deletevendor)
         {
-            foreach (Vendor vendor in VendorList)
+            DoublyLinkedListNode<Vendor> Head = VendorLinkedList.Head;
+            while (Head != null)
             {
-                if (deletevendor.VendorName == vendor.VendorName)
+                if (Head.Data.VendorName == deletevendor.VendorName && Head.Data.LandlineNumber == deletevendor.LandlineNumber && Head.Data.ContactNumber == deletevendor.ContactNumber
+                    && Head.Data.Amount == deletevendor.Amount)
                 {
-                    VendorList.Remove(vendor);
+                    VendorLinkedList.RemoveNode(Head);
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }
@@ -88,28 +95,22 @@ namespace Merchant_Monetary_System.DL
 
         public static void storeAllRecordIntoFile(string path)
         {
+            DoublyLinkedListNode<Vendor> Head = VendorLinkedList.Head;
             StreamWriter file = new StreamWriter(path);
-
-            foreach (Vendor vendor in VendorList)
+            while (Head != null)
             {
-                file.WriteLine(vendor.VendorName + "," + vendor.ConcernedPerson + "," + vendor.LandlineNumber + "," + vendor.ContactNumber+","+vendor.Amount);
-
+                file.WriteLine(Head.Data.VendorName + "," + Head.Data.ConcernedPerson + "," + Head.Data.LandlineNumber + "," + Head.Data.ContactNumber+","+ Head.Data.Amount);
+                Head = Head.Next;
+                file.Flush();
             }
-            file.Flush();
             file.Close();
-        }
-
-        public static void clearList()
-        {
-            VendorList.Clear();
         }
         public static bool loadRecordFromFile(string path)
         {
-            clearList();
-            StreamReader fileVariable = new StreamReader(path);
-            string record;
             if (File.Exists(path))
             {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
                 while ((record = fileVariable.ReadLine()) != null)
                 {
                     string[] spilitedRecord = record.Split(',');

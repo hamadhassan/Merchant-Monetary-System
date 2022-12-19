@@ -9,6 +9,10 @@ namespace Merchant_Monetary_System.BL
     public class Category
     {
         private string categoryName;
+        public Category(string categoryName)
+        {
+            CategoryName = categoryName;
+        }
 
         public string CategoryName { get => categoryName; set => categoryName = value; }
     }

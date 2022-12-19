@@ -131,7 +131,6 @@ E:\Final Term Project\FinalTermProject\cs261f22finalpid11\Application\Merchant M
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Dashboards.frmWarehouseManagerDashboard.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Emails.frmEmail.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddShopkeeper.resources
-C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewOrders.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.Forms.Orders.frmTakeOrder.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddShopkeeper.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\Final term Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddStock.resources
@@ -324,7 +323,6 @@ D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\o
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmProductDetails_.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddShopkeeper.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmAddStock.resources
-D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewOrders.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmADDvendor.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmViewStockDetails.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmRoutes.resources
@@ -392,3 +390,28 @@ C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetar
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmOrderDetails.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.Modules.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.SQLite.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.Wpf.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\Microsoft.Dynamic.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\Microsoft.Scripting.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Buffers.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Memory.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Numerics.Vectors.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.Modules.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.SQLite.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.Wpf.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\Microsoft.Dynamic.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\Microsoft.Scripting.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Buffers.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Memory.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Numerics.Vectors.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmReports.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.OrDerDetailsForm.resources
+C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmUpdateStatus.resources

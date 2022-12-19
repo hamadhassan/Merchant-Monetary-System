@@ -63,21 +63,35 @@ namespace Merchant_Monetary_System.DL
         }
 
 
+
         public static void storeAllRecordIntoFile(string path)
         {
             StreamWriter file = new StreamWriter(path);
             foreach (Order order in OrdersList)
             {
-                file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," );
+                file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," + order.Status + ",");
                 int i = 0;
-                foreach (Product product in ProductDL.ProductList1)
+                foreach (Product product in order.Order_products)
                 {
                     if (i != 0) file.Write("|");
-                    file.Write(product.Name + ";" + product.Category + ";" + product.SKU_Number + ";" + product.Volume + ";" + product.Weight + ";" + product.Manufacturer+";"+product.SensitivityType);
+                    file.Write(product.Name + ";" + product.Category + ";" + product.SKU_Number + ";" + product.Volume + ";" + product.Weight + ";" + product.Manufacturer + ";" + product.SensitivityType);
                     i++;
                 }
                 file.WriteLine();
             }
+            file.Close();
+        }
+        public static void storeRecordIntoFile(Order order, string path)
+        {
+            StreamWriter file = new StreamWriter(path, true);
+            file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," + order.Status + ",");
+            int i = 0;
+            foreach (Product product in order.Order_products)
+            {
+                if (i != 0) file.Write("|");
+                file.Write(product.Name + ";" + product.Category + ";" + product.SKU_Number + ";" + product.Volume + ";" + product.Weight + ";" + product.Manufacturer + ";" + product.SensitivityType);
+            }
+            file.Flush();
             file.Close();
         }
 
@@ -89,13 +103,15 @@ namespace Merchant_Monetary_System.DL
         {
             StreamReader file = new StreamReader(path);
             string record;
-            while ((record = file.ReadLine()) != null && (record = file.ReadLine()) != null)
+            while ((record = file.ReadLine()) != null)
             {
                 string[] SplittedRecord = record.Split(',');
-                string  RiderName = SplittedRecord[0];
+                string RiderName = SplittedRecord[0];
                 string shopkeeperName = (SplittedRecord[1]);
                 string OrderID = (SplittedRecord[2]);
-                Order order = new Order(RiderName, shopkeeperName, OrderID);
+                string Orderstatus = (SplittedRecord[3]);
+                Order order = new Order(shopkeeperName, RiderName, OrderID, Orderstatus);
+
                 string[] products = SplittedRecord[4].Split('|');
                 foreach (string S in products)
                 {
@@ -108,10 +124,10 @@ namespace Merchant_Monetary_System.DL
                     string Manufacturer = eachProduct[5];
                     string SensitivityType = eachProduct[6];
                     Product product = new Product(Name,SKU_Number,Weight, Volume, Manufacturer,Category,SensitivityType);
-                    ProductDL.InsertProduct(product);
                     order.Order_products.Add(product);
-                    OrderDL.InsertProduct(order);
+                    InsertProduct(order);
                 }
+                
             }
             file.Close();
         }

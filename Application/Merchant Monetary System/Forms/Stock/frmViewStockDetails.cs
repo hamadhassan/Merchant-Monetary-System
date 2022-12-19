@@ -30,9 +30,9 @@ namespace Merchant_Monetary_System
         private void DataBind()
         {
             datagvStockDetails.Columns.Clear();
-
             datagvStockDetails.DataSource = null;
-            datagvStockDetails.DataSource = StockDL.StockList;
+            datagvStockDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            addIntoGrid(StockDL.StockList);
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
             Update.Text = "Update";
@@ -43,6 +43,29 @@ namespace Merchant_Monetary_System
             Delete.UseColumnTextForButtonValue = true;
             datagvStockDetails.Columns.Add(Update);
             datagvStockDetails.Columns.Add(Delete);
+            datagvStockDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void addIntoGrid(DoublyLinkedList<Stock> stockLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Product");
+            dt.Columns.Add("Quantity");
+            dt.Columns.Add("Retail Price");
+            dt.Columns.Add("Cost Price");
+            dt.Columns.Add("MFG date");
+            dt.Columns.Add("Expiry date");
+            dt.Columns.Add("Received date");
+            dt.Columns.Add("Vendor");
+
+            DoublyLinkedListNode<Stock> Head = stockLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Product, Head.Data.Quantity, Head.Data.RetailPrice, Head.Data.CostPrice, Head.Data.ManufacturingDate, Head.Data.ExpiryDate, Head.Data.RecievedDate);
+                Head = Head.Next;
+            }
+            datagvStockDetails.DataSource = dt;
         }
 
         private void datagvStockDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -50,24 +73,39 @@ namespace Merchant_Monetary_System
             if (datagvStockDetails.SelectedRows.Count == 1)
             {
                 int index = datagvStockDetails.CurrentCell.ColumnIndex;
-                Stock S = (Stock)datagvStockDetails.CurrentRow.DataBoundItem;
-                if (index == 8)
+                if (index == 8 || index == 9)
                 {
-                    Form form = new UpdatStock(S);
-                    form.ShowDialog();
+                    Stock stock;
+                    int rowInd = datagvStockDetails.CurrentCell.RowIndex;
+                    string product = datagvStockDetails.Rows[rowInd].Cells[0].Value.ToString();
+                    int quantity = int.Parse(datagvStockDetails.Rows[rowInd].Cells[1].Value.ToString());
+                    double retailPrice = Double.Parse(datagvStockDetails.Rows[rowInd].Cells[2].Value.ToString());
+                    double costPrice = Double.Parse(datagvStockDetails.Rows[rowInd].Cells[3].Value.ToString());
+                    DateTime MFGDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[4].Value.ToString());
+                    DateTime ExpiryDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[5].Value.ToString());
+                    DateTime recievedDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[6].Value.ToString());
+                    string vendor = datagvStockDetails.Rows[rowInd].Cells[7].Value.ToString();
+                    Stock S = new Stock(product, quantity, retailPrice, costPrice, MFGDate, ExpiryDate, recievedDate, vendor);
+                    stock = StockDL.returnStock(S);
+                    if (index == 8)
+                    {
+                        Form form = new UpdatStock(S);
+                        form.ShowDialog();
+                    }
+                    else if (index == 9)
+                    {
+                        bool done = StockDL.deleteStock(StockDL.StockList, S);
+                        if (done)
+                        {
+                            MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    DataBind();
                     StockDL.StoreDataIntoFile(FilePath.Stock);
-                }
-                else if (index == 9)
-                {
-                    bool done = StockDL.deleteStock(StockDL.StockList, S);
-                    if (done)
-                    {
-                        MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
                 }
             }
             else
@@ -86,8 +124,19 @@ namespace Merchant_Monetary_System
         {
             if (datagvStockDetails.SelectedRows.Count == 1)
             {
-                Stock S = (Stock)datagvStockDetails.CurrentRow.DataBoundItem;
-                if (S != null)
+                Stock stock;
+                int rowInd = datagvStockDetails.CurrentCell.RowIndex;
+                string product = datagvStockDetails.Rows[rowInd].Cells[0].Value.ToString();
+                int quantity = int.Parse(datagvStockDetails.Rows[rowInd].Cells[1].Value.ToString());
+                double retailPrice = Double.Parse(datagvStockDetails.Rows[rowInd].Cells[2].Value.ToString());
+                double costPrice = Double.Parse(datagvStockDetails.Rows[rowInd].Cells[3].Value.ToString());
+                DateTime MFGDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[4].Value.ToString());
+                DateTime ExpiryDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[5].Value.ToString());
+                DateTime recievedDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[6].Value.ToString());
+                string vendor = datagvStockDetails.Rows[rowInd].Cells[7].Value.ToString();
+                Stock S = new Stock(product, quantity, retailPrice, costPrice, MFGDate, ExpiryDate, recievedDate, vendor);
+                stock = StockDL.returnStock(S);
+                if (stock != null)
                 {
                     StockDL.deleteStock(StockDL.StockList, S);
                     MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -107,8 +156,19 @@ namespace Merchant_Monetary_System
         {
             if (datagvStockDetails.SelectedRows.Count == 1)
             {
-                Stock S = (Stock)datagvStockDetails.CurrentRow.DataBoundItem;
-                if (S != null)
+                Stock stock;
+                int rowInd = datagvStockDetails.CurrentCell.RowIndex;
+                string product = datagvStockDetails.Rows[rowInd].Cells[0].Value.ToString();
+                int quantity = int.Parse(datagvStockDetails.Rows[rowInd].Cells[1].Value.ToString());
+                double retailPrice = Double.Parse(datagvStockDetails.Rows[rowInd].Cells[2].Value.ToString());
+                double costPrice = Double.Parse(datagvStockDetails.Rows[rowInd].Cells[3].Value.ToString());
+                DateTime MFGDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[4].Value.ToString());
+                DateTime ExpiryDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[5].Value.ToString());
+                DateTime recievedDate = DateTime.Parse(datagvStockDetails.Rows[rowInd].Cells[6].Value.ToString());
+                string vendor = datagvStockDetails.Rows[rowInd].Cells[7].Value.ToString();
+                Stock S = new Stock(product, quantity, retailPrice, costPrice, MFGDate, ExpiryDate, recievedDate, vendor);
+                stock = StockDL.returnStock(S);
+                if (stock != null)
                 {
                     Form f = new UpdatStock(S);
                     f.ShowDialog();

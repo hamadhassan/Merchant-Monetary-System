@@ -28,25 +28,42 @@ namespace Merchant_Monetary_System
 
         private void DataBind()
         {
-            try
-            {
-                datagvProductDetails.Columns.Clear();
+            datagvProductDetails.Columns.Clear();
+            datagvProductDetails.DataSource = null;
+            datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            addIntoGrid(ProductDL.ProductList);
+            DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
+            Update.HeaderText = "Update";
+            Update.Text = "Update";
+            Update.UseColumnTextForButtonValue = true;
+            DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
+            Delete.HeaderText = "Delete";
+            Delete.Text = "Delete";
+            Delete.UseColumnTextForButtonValue = true;
+            datagvProductDetails.Columns.Add(Update);
+            datagvProductDetails.Columns.Add(Delete);
+            datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
 
-                datagvProductDetails.DataSource = null;
-                ProductDL.loadRecordFromFile(FilePath.Products);
-                datagvProductDetails.DataSource = ProductDL.ProductList1;
-                DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
-                Update.HeaderText = "Update";
-                Update.Text = "Update";
-                Update.UseColumnTextForButtonValue = true;
-                DataGridViewButtonColumn Delete = new DataGridViewButtonColumn();
-                Delete.HeaderText = "Delete";
-                Delete.Text = "Delete";
-                Delete.UseColumnTextForButtonValue = true;
-                datagvProductDetails.Columns.Add(Update);
-                datagvProductDetails.Columns.Add(Delete);
+        private void addIntoGrid(DoublyLinkedList<Product> productLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Category");
+            dt.Columns.Add("SKU Number");
+            dt.Columns.Add("Weight");
+            dt.Columns.Add("Volume");
+            dt.Columns.Add("Manufacturer");
+            dt.Columns.Add("Sensitivity");
+
+            DoublyLinkedListNode<Product> Head = productLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Name, Head.Data.Category, Head.Data.SKU_Number, Head.Data.Weight, Head.Data.Volume, Head.Data.Manufacturer, Head.Data.SensitivityType);
+                Head = Head.Next;
             }
-            catch(Exception exp) { MessageBox.Show(exp.Message); }
+            datagvProductDetails.DataSource = dt;
         }
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
@@ -60,47 +77,53 @@ namespace Merchant_Monetary_System
             if (datagvProductDetails.SelectedRows.Count == 1)
             {
                 int index = datagvProductDetails.CurrentCell.ColumnIndex;
-                Product  S = (Product)datagvProductDetails.CurrentRow.DataBoundItem;
-                if (index == 7)
+                if (index == 7 || index == 8)
                 {
-                    Form form = new frmUpdateProduct(S);
-                    form.ShowDialog();
-                    ProductDL.storeAllRecordIntoFile(FilePath.Products);
+                    Product product;
+                    int rowInd = datagvProductDetails.CurrentCell.RowIndex;
+                    string Name = datagvProductDetails.Rows[rowInd].Cells[0].Value.ToString();
+                    int SKU_Number = int.Parse(datagvProductDetails.Rows[rowInd].Cells[2].Value.ToString());
+                    product = ProductDL.FoundProduct(Name, SKU_Number);
+                    if (index == 7)
+                    {
+                        Form form = new frmUpdateProduct(product);
+                        form.ShowDialog();
 
-                }
-                else if (index == 8)
-                {
-                    bool done = ProductDL.deleteRecord(S);
-                    if (done)
-                    {
-                        MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ProductDL.storeAllRecordIntoFile(FilePath.Products);
                     }
-                    else
+                    else if (index == 8)
                     {
-                        MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        bool done = ProductDL.deleteRecord(product);
+                        if (done)
+                        {
+                            MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
+                    ProductDL.storeAllRecordIntoFile(FilePath.Products);
+                    DataBind();
                 }
-                DataBind();
             }
             else
             {
-                if (ProductDL.ProductList1.Count != 0)
+                if (ProductDL.ProductList.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
-
-
-
-
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
             if (datagvProductDetails.SelectedRows.Count == 1)
             {
-                Product S = (Product)datagvProductDetails.CurrentRow.DataBoundItem;
-                if (S != null)
+                Product product;
+                int rowInd = datagvProductDetails.CurrentCell.RowIndex;
+                string Name = datagvProductDetails.Rows[rowInd].Cells[0].Value.ToString();
+                int SKU_Number = int.Parse(datagvProductDetails.Rows[rowInd].Cells[2].Value.ToString());
+                product = ProductDL.FoundProduct(Name, SKU_Number);
+                if (product != null)
                 {
-                    ProductDL.deleteRecord(S);
+                    ProductDL.deleteRecord(product);
                     MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataBind();
                     ProductDL.storeAllRecordIntoFile(FilePath.Products);
@@ -109,7 +132,7 @@ namespace Merchant_Monetary_System
             }
             else
             {
-                if (ProductDL.ProductList1.Count != 0)
+                if (ProductDL.ProductList.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
@@ -118,17 +141,21 @@ namespace Merchant_Monetary_System
         {
             if (datagvProductDetails.SelectedRows.Count == 1)
             {
-                Product S = (Product)datagvProductDetails.CurrentRow.DataBoundItem;
-                if (S != null)
+                Product product;
+                int rowInd = datagvProductDetails.CurrentCell.RowIndex;
+                string Name = datagvProductDetails.Rows[rowInd].Cells[0].Value.ToString();
+                int SKU_Number = int.Parse(datagvProductDetails.Rows[rowInd].Cells[2].Value.ToString());
+                product = ProductDL.FoundProduct(Name, SKU_Number);
+                if (product != null)
                 {
-                    Form f = new frmUpdateProduct(S);
+                    Form f = new frmUpdateProduct(product);
                     f.ShowDialog();
                     DataBind();
                     ProductDL.storeAllRecordIntoFile(FilePath.Products);
                 }
                 else
                 {
-                    if (ProductDL.ProductList1.Count != 0)
+                    if (ProductDL.ProductList.Count != 0)
                         lblDatagvSignal.Text = "Select a row from the list";
                 }
             }

@@ -193,14 +193,12 @@ namespace Merchant_Monetary_System.Forms.Users
         {
             if (!isName && !isPerson && !isLandLineNumber && !isContactNumber)
             {
-               string name= txtbxName.Text;
-               double contact= Convert.ToInt64(txtbxContactNumber.Text) ;
-               double landline= Convert.ToInt64(txtbxLandLineNumber.Text) ;
-               string person= txtbxPerson.Text;
-                Vendor updated_vendor = new Vendor(name, landline, person, contact);
-                VendorDL.updateVendorMatch(updated_vendor);
+                vendor.VendorName = txtbxName.Text;
+                vendor.ContactNumber = Convert.ToInt64(txtbxContactNumber.Text) ;
+                vendor.LandlineNumber= Convert.ToInt64(txtbxLandLineNumber.Text) ;
+                vendor.ConcernedPerson = txtbxPerson.Text;
                 VendorDL.storeAllRecordIntoFile(FilePath.Vendors);
-                MessageBox.Show("Stock Updated Successfully", "Information Message", MessageBoxButtons.OK);
+                MessageBox.Show("Vendor Updated Successfully", "Information Message", MessageBoxButtons.OK);
                 this.Hide();
             }
             else
@@ -208,6 +206,11 @@ namespace Merchant_Monetary_System.Forms.Users
                 MessageBox.Show("Fill all fields correctly", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
