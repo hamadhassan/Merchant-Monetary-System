@@ -156,6 +156,12 @@
     <Compile Include="Forms\Shop\frmUpdateShop.Designer.cs">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Users\frmVendorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\frmVendorDetails.designer.cs">
+      <DependentUpon>frmVendorDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Vehicle\frmAddVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,12 +196,6 @@
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Reportes.cs" />
-    <Compile Include="frmOrderDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmOrderDetails.Designer.cs">
-      <DependentUpon>frmOrderDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Route\frmRoutes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -462,6 +462,9 @@
     <EmbeddedResource Include="Forms\Users\frmUpdateVendor.resx">
       <DependentUpon>frmUpdateVendor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\frmVendorDetails.resx">
+      <DependentUpon>frmVendorDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Vehicle\frmAddVehicle.resx">
       <DependentUpon>frmAddVehicle.cs</DependentUpon>
     </EmbeddedResource>
@@ -503,12 +506,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>
-      </EmbeddedResource>
-    <EmbeddedResource Include="frmOrderDetails.resx">
-      <DependentUpon>frmOrderDetails.cs</DependentUpon>
-      </EmbeddedResource>
-    <EmbeddedResource Include="frmOrderDetails.resx">
-      <DependentUpon>frmOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route\frmRoutes.resx">
       <DependentUpon>frmRoutes.cs</DependentUpon>

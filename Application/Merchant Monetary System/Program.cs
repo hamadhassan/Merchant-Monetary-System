@@ -28,11 +28,12 @@ namespace Merchant_Monetary_System
             LedgerDL.LoadDataFromFiles(FilePath.Ledger);
             UsersDL.loadRecordFromFile(FilePath.Users);
             categoryDL.loadDataFromFiles(FilePath.Category);
+            VendorDL.loadRecordFromFile(FilePath.Vendors);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmCEODashboard());
+                Application.Run(new frmVendorDetails());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 

@@ -19,15 +19,15 @@ namespace Merchant_Monetary_System.Forms.Product
             InitializeComponent();
         }
         
-        private void addIntoGrid(DoublyLinkedList<string> categories)
+        private void addIntoGrid(DoublyLinkedList<Category> categories)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Category");
-            DoublyLinkedListNode<string> Head = categories.Head;
+            DoublyLinkedListNode<Category> Head = categories.Head;
             while(Head != null)
             {
                 DataRow dr = dt.NewRow();
-                dr["Category"] = Head.Data;
+                dr["Category"] = Head.Data.CategoryName;
                 dt.Rows.Add(dr);
                 Head = Head.Next;
             }
@@ -53,6 +53,11 @@ namespace Merchant_Monetary_System.Forms.Product
 
         private void frmViewCategory_Load(object sender, EventArgs e)
         {
+            DataBind();
+        }
+
+        private void DataBind()
+        {
             datagvCategory.Columns.Clear();
             datagvCategory.DataSource = null;
             datagvCategory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -67,7 +72,6 @@ namespace Merchant_Monetary_System.Forms.Product
             Delete.UseColumnTextForButtonValue = true;
             datagvCategory.Columns.Add(Update);
             datagvCategory.Columns.Add(Delete);
-
         }
 
         private void datagvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,19 +82,80 @@ namespace Merchant_Monetary_System.Forms.Product
                 if (index == 1)
                 {
                     int rowInd = datagvCategory.CurrentCell.RowIndex;
-                    DataGridViewRow category = datagvCategory.Rows[rowInd];
-                    string categoryT = category.Cells[0].Value.ToString();
-                    //string category = datagvCategory.SelectedCells[datagvCategory.CurrentCell.ColumnIndex].ColumnIndex.Da;
-                    MessageBox.Show(categoryT);
-                    //Form f = new frmUpdateCategory(category);
-                    //f.ShowDialog();
+                    DataGridViewRow categoryRow = datagvCategory.Rows[rowInd];
+                    string categoryT = categoryRow.Cells[0].Value.ToString();
+                    Category category = categoryDL.returnCategory(categoryT);
+                    Form f = new frmUpdateCategory(category);
+                    f.ShowDialog();
+                }
+                else if(index == 2)
+                {
+                    int rowInd = datagvCategory.CurrentCell.RowIndex;
+                    DataGridViewRow categoryRow = datagvCategory.Rows[rowInd];
+                    string categoryT = categoryRow.Cells[0].Value.ToString();
+                    bool done = categoryDL.deleteCategory(categoryT);
+                    if(done)
+                    {
+                        MessageBox.Show("Deleted Successfully", "Deleteing...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not Found", "Deleteing...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+                }
+                DataBind();
+                categoryDL.StoreDataIntoFiles(FilePath.Category);
+            }
+            else
+            {
+                lblDatagvSignal.Text = "Select a row from the grid first";
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (datagvCategory.SelectedRows.Count == 1)
+            {
+                int rowInd = datagvCategory.CurrentCell.RowIndex;
+                DataGridViewRow categoryRow = datagvCategory.Rows[rowInd];
+                string categoryT = categoryRow.Cells[0].Value.ToString();
+                Category category = categoryDL.returnCategory(categoryT);
+                Form f = new frmUpdateCategory(category);
+                f.ShowDialog();
+                DataBind();
+                categoryDL.StoreDataIntoFiles(FilePath.Category);
+            }
+            else
+            {
+                lblDatagvSignal.Text = "Select a row from the grid first";
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (datagvCategory.SelectedRows.Count == 1)
+            {
+                int rowInd = datagvCategory.CurrentCell.RowIndex;
+                DataGridViewRow categoryRow = datagvCategory.Rows[rowInd];
+                string categoryT = categoryRow.Cells[0].Value.ToString();
+                bool done = categoryDL.deleteCategory(categoryT);
+                if (done)
+                {
+                    MessageBox.Show("Deleted Successfully", "Deleteing...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataBind();
+                    categoryDL.StoreDataIntoFiles(FilePath.Category);
+                }
+                else
+                {
+                    MessageBox.Show("Not Found", "Deleteing...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
             }
             else
             {
                 lblDatagvSignal.Text = "Select a row from the grid first";
             }
-
         }
     }
 }

@@ -13,21 +13,24 @@ namespace Merchant_Monetary_System
     internal class UsersDL
     {
         private static List<Users> usersList=new List<Users>();
+        private static DoublyLinkedList<Users> usersLinkedList = new DoublyLinkedList<Users>();
 
         public static List<Users> UsersList { get => usersList; set => usersList = value; }
+        public static DoublyLinkedList<Users> UsersLinkedList { get => usersLinkedList; set => usersLinkedList = value; }
 
-        public static List<Users> getUsersListExceptCEO()
+        public static DoublyLinkedList<Users> getUsersListExceptCEO()
         {
-            List<Users> usersListExceptCEO = new List<Users>();
-            foreach (Users user in usersList)
+            DoublyLinkedList<Users> usersLinkedListExceptCEO = new DoublyLinkedList<Users>();
+            //List<Users> usersListExceptCEO = new List<Users>();
+            DoublyLinkedListNode<Users> Head = usersLinkedList.Head;
+            while (Head != null)
             {
-                if (!(user.Designation== "CEO"))
+                if (!(Head.Data.Designation == "CEO"))
                 {
-                    usersListExceptCEO.Add(user);
+                    usersLinkedListExceptCEO.Add(Head.Data);
                 }
             }
-            clearList();
-            return usersListExceptCEO;
+            return usersLinkedListExceptCEO;
         }
         public static void clearList()
         {
@@ -35,9 +38,10 @@ namespace Merchant_Monetary_System
         }
         public static bool isUserCrediationalMatch(string designation, string username, string password)
         {// the user enter data matched with the database result
-            foreach (Users user in usersList)
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while (Head != null)
             {
-                if (designation == user.Designation && username == user.Username && password == user.Password)
+                if (designation == Head.Data.Designation && username == Head.Data.Username && password == Head.Data.Password)
                 {
                     return true;
                 }
@@ -47,9 +51,10 @@ namespace Merchant_Monetary_System
         public static bool isUsernameExit(string designation,string username)
         {
 
-            foreach (Users user in usersList)
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while (Head != null)
             {
-                if (username == user.Username || designation==user.Designation)
+                if (designation == Head.Data.Designation && username == Head.Data.Username)
                 {
                     return true;
                 }
@@ -58,11 +63,12 @@ namespace Merchant_Monetary_System
         }
         public static bool setPassword(string designation, string username,string newPassword)
         {
-            foreach (Users user in usersList)
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while (Head != null)
             {
-                if (designation == user.Designation && username == user.Username)
+                if (designation == Head.Data.Designation && username == Head.Data.Username)
                 {
-                    user.Password=newPassword;
+                    Head.Data.Password = newPassword;
                     return true;
                 }
             }
@@ -70,18 +76,19 @@ namespace Merchant_Monetary_System
         }
         public static bool updateRecord(Users updatedUser)
         {
-            foreach (Users user in usersList)
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while(Head != null)
             {
-                if (updatedUser.Username == user.Username)
+                if(Head.Data.Username == updatedUser.Username)
                 {
-                    user.Designation = updatedUser.Designation;
-                    user.Name=updatedUser.Name;
-                    user.Password =updatedUser.Password;
-                    user.Cnic = updatedUser.Cnic;
-                    user.Gender = updatedUser.Gender;
-                    user.ContactNumber = updatedUser.ContactNumber;
-                    user.EmailAddress = updatedUser.EmailAddress;
-                    user.HomeAddress = updatedUser.HomeAddress;
+                    Head.Data.Designation = updatedUser.Designation;
+                    Head.Data.Name = updatedUser.Name;
+                    Head.Data.Password = updatedUser.Password;
+                    Head.Data.Cnic = updatedUser.Cnic;
+                    Head.Data.Gender = updatedUser.Gender;
+                    Head.Data.ContactNumber = updatedUser.ContactNumber;
+                    Head.Data.EmailAddress = updatedUser.EmailAddress;
+                    Head.Data.HomeAddress = updatedUser.HomeAddress;
                     return true;
                 }
             }
@@ -89,13 +96,15 @@ namespace Merchant_Monetary_System
         }
         public static bool deleteRecord(Users deleteUser)
         {
-            foreach (Users user in usersList)
+            DoublyLinkedListNode<Users> Head = usersLinkedList.Head;
+            while(Head != null)
             {
-                if (deleteUser.Username == user.Username)
+                if(Head.Data.Username == deleteUser.Username && Head.Data.Password == deleteUser.Password && Head.Data.EmailAddress == deleteUser.EmailAddress)
                 {
-                    usersList.Remove(user);
+                    usersLinkedList.RemoveNode(Head);
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }
@@ -111,19 +120,19 @@ namespace Merchant_Monetary_System
         public static void storeAllRecordIntoFile(string path)
         {
             StreamWriter file = new StreamWriter(path);
-            foreach (Users record in usersList)
+            DoublyLinkedListNode<Users> Head = usersLinkedList.Head;
+            while (Head != null)
             {
-                file.WriteLine(record.Designation + "," + record.Name + "," + record.Gender + "," + record.Cnic
-                  + "," + record.EmailAddress + "," + record.ContactNumber + "," + record.HomeAddress + "," +
-                  record.Username + "," + record.Password + "," + record.Assigned);
+                file.WriteLine(Head.Data.Designation + "," + Head.Data.Name + "," + Head.Data.Gender + "," + Head.Data.Cnic
+                 + "," + Head.Data.EmailAddress + "," + Head.Data.ContactNumber + "," + Head.Data.HomeAddress + "," +
+                 Head.Data.Username + "," + Head.Data.Password + "," + Head.Data.Assigned);
+                Head = Head.Next;
             }
             file.Flush();
             file.Close();
         }
         public static bool loadRecordFromFile(string path)
         {
-            clearList();
-           
             if (File.Exists(path))
             {
                 StreamReader fileVariable = new StreamReader(path);
@@ -142,7 +151,7 @@ namespace Merchant_Monetary_System
                     string password= spilitedRecord[8];
                     string assigned = spilitedRecord[9];
                     Users users = new Users(designation, name, gender, cnic, emailAddress, contactNumber, homeAddress,username,password, assigned);
-                    usersList.Add(users);
+                    usersLinkedList.Add(users);
                 }
                 fileVariable.Close();
                 return true;
