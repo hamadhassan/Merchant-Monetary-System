@@ -1185,7 +1185,7 @@ Post-Condition &    The Category will be added to the system. \\ \hline
 \end{longtable}
 
 %------------------------------------------
-\section{Use Case 12:Update Category}
+\section*{Use Case 12:Update Category}
 
 \addcontentsline{toc}{section}{Use Case 12}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -1244,7 +1244,7 @@ Post-Condition &    The Category will be updated and added to the system. \\ \hl
 \end{longtable}
 %------------------------------------------
 
-\section{Use Case 13:Add Vendor}
+\section*{Use Case 13:Add Vendor}
 
 \addcontentsline{toc}{section}{Use Case 13}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -1331,7 +1331,7 @@ Post-Condition &  Vendor details will be added to the system. \\ \hline
 \end{longtable}
 
 %------------------------------------------
-\section{Use Case 14:Update Vendor}
+\section*{Use Case 14:Update Vendor}
 
 \addcontentsline{toc}{section}{Use Case 14}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -1413,7 +1413,7 @@ Post-Condition &  Vendor details will be updated and added to the system. \\ \hl
 \end{longtable}
 
 %------------------------------------------
-\section{Use Case 15:Add Stock}
+\section*{Use Case 15:Add Stock}
 
 \addcontentsline{toc}{section}{Use Case 15}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -1508,7 +1508,7 @@ Extensions (or Alternative Flows):\\
 Post-Condition &  Stock of the product will be added. \\ \hline
 \end{longtable}
 %------------------------------------------
-\section{Use Case 16:Add WareHouse}
+\section*{Use Case 16:Add WareHouse}
 
 \addcontentsline{toc}{section}{Use Case 16}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -1611,9 +1611,7 @@ Post-Condition &  after clicked next button new form of Add WareHouse Manager wi
 \end{longtable}
 
 %------------------------------------------
-
-
-\section{Use Case 17:Update WareHouse}
+\section*{Use Case 17:Update WareHouse}
 
 \addcontentsline{toc}{section}{Use Case 17}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -1651,8 +1649,6 @@ Flow       & Main Scenario:
 \item Actor clicks on Next Button.
 
 \end{enumerate}\\
-
-
 &Extensions (or Alternative Flows):\\
 & 2a. If Actor did not enter the wareHouse name. \\
 & \begin{enumerate}
@@ -1709,15 +1705,14 @@ Flow       & Main Scenario:
 \\ \hline 
 Post-Condition &  Dashboard will be presented.  \\ \hline
 
-\\end{longtable}
+\end{longtable}
 
 
 
 %------------------------------------------
 
 
-
-\section{Use Case 18:View WareHouse  }
+\section*{Use Case 18:View WareHouse  }
 
 \addcontentsline{toc}{section}{Use Case 18}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -1775,10 +1770,7 @@ Flow       & Main Scenario:
 & \begin{enumerate}
 		\item The searched data will show from the first attribute.
 	\end{enumerate}
-\\ \hline
-\end{tabular}
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
-
+	\\
 & 3a. If Actor did not select any Filter from the given list \\
 & \begin{enumerate}
 		\item No operation of the filter is applied to the data.
@@ -1819,16 +1811,25 @@ Post-Condition &  Data from selected row will be deleted and a dashboard will be
 \end{longtable}
 
 %------------------------------------------
-\section{Use Case 19:Take Order}
-
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+\section*{Use Case 19:Take Order}
+\addcontentsline{toc}{section}{Use Case 19}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
 Use Case ID &  U19 \\\hline
 
 Name  	    &  Take Order \\ \hline
 
 Actor     	& Rider \\ \hline
-\end{tabular}
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
 Description &  Rider is now at the shop. The shopkeeper tells the rider about the products which he wants to order. The rider adds the product from the list with the specified quantity to the cart. The process continues until the shopkeeper orders all required products. Then the rider moves toward the Order Summary screen. Selects the shopkeeper from the list. The rider can change the order details. And in the end, click on the Buy button to place the order. \\ \hline
 
 Pre-Condition &  Rider has arrived at the shop, and the shopkeeper is giving him the order. Take Order screen is presented.  \\ \hline
@@ -1874,9 +1875,7 @@ Extensions (or Alternative Flows):\\
 		\item Ordered items list will get cleared.
 
 	\end{enumerate}
-	\\ \hline
-\end{tabular}
-\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+\\
 & *c. If the back button is clicked in the Order Summary screen\\
 
 & \begin{enumerate}
@@ -1920,7 +1919,7 @@ Post-Condition &  Order has been placed and is waiting for employee approval. Or
 \end{longtable}
 
 %------------------------------------------
-\section{Use Case 20:Confirm the Incoming Order}
+\section*{Use Case 20:Confirm the Incoming Order}
 \addcontentsline{toc}{section}{Use Case 20}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
@@ -2020,7 +2019,2337 @@ Post-Condition &  Order is confirmed now and the warehouse manager is notified a
 
 \end{longtable}
 %------------------------------------------
+%------------------------------------------
+\section*{Use Case 21:Add Vehicle}
+\addcontentsline{toc}{section}{Use Case 21}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U21   \\\hline
+Name   &   Add Vehicle\\ \hline
+Actor &  CEO, Employee  \\ \hline
+Description & Actor select the type of vehicle from the given list, enter the capacity in volume, capacity in weight, and registration number, and click on add button to save data in the database .\\ \hline
+Pre-Condition & Add vehicle screen is presented. \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers
+, \item Actor, select the vehicle type from the given list.   
+\item Actor enters the capacity of the vehicle in volume.
+\item Actor enters the capacity of the vehicle in weight.
+\item Actor enters the registration number. 
+\item Actor clicks on the add button.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+3a. If the actor doesn't enter the capacity in capacity in volume\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid capacity in volume \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the capacity in capacity in weight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4b. If the actor enters an invalid capacity in wight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a.If the entered data is not stored in the database  
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Data stored in the database and screen closed. \\\hline
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 22:Update Vehicle Information}
+\addcontentsline{toc}{section}{Use Case 22}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U22   \\\hline
+Name   &   Update Vehicle Information \\ \hline
+Actor &  CEO, Employee  \\ \hline
+Description & Actor select the type of vehicle from the given list, enter the capacity in volume, capacity in weight, and registration number, and click on add button to save data in the database .\\ \hline
+Pre-Condition & Update Vehicle Information is presented, and registered information is displayed in the identifiers  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to update the identifiers.
+\item Actor changes the vehicle type from the given list.   
+\item Actor updates the capacity of the vehicle in volume.
+\item Actor updates the capacity of the vehicle in weight.
+\item Actor updates the registration number. 
+\item Actor clicks on the update button.
+\end{enumerate}\\
+Flow & 
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+
+3a. If the actor doesn't enter the capacity in capacity in volume\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid capacity in volume \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the capacity in capacity in weight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4b. If the actor enters an invalid capacity in wight\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid capacity in registration number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a.If the entered data is not stored in the database  
+\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Data is updated in the database, and the screen is closed. \\\hline
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 23:Add Shop and Shopkeeper}
+\addcontentsline{toc}{section}{Use Case 23}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U23   \\\hline
+Name  &  Add Shop and Shopkeeper \\ \hline
+Actor &   Rider,Employee,CEO\\ \hline
+Description &. The actor enters the shop name, phone number, and shop number, select the area from the given list, selects the city from the given list, selects the state from the given list, and the country is only Pakistan. \\ \hline
+Pre-Condition & Shopkeeper screen is presented.  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor enters shopkeeper name.   
+\item Actor enters shop name.   
+\item Actor enters landline number.
+\item Actor enters an email address.
+\item Actor selects the area from the given list.
+\item Actor selects the city from the given list.
+\item Actor select state from the given list.
+\item  Actor click on the next button
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+2a. If the actor doesn't enter the shopkeeper name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+2b. If the actor enters an invalid shopkeeper name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3a. If the actor doesn't enter the shop name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid shop name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the landline number \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4b. If the actor enters an invalid landline number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the email address \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & Actor click on the next button to add warehouse manager.  \\\hline
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 24:Update Shop and Shopkeeper}
+\addcontentsline{toc}{section}{Use Case 24}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U23   \\\hline
+Name  &  Add Shop and Shopkeeper \\ \hline
+Actor &   Rider,Employee,CEO\\ \hline
+Description &. The actor updates the shop name, phone number, and shop number, email address, selects the area from the given list, selects the city from the given list, selects the state from the given list, and the country is only Pakistan. \\ \hline
+The pre-Condition &  Shopkeeper Update screen is presented, and the registered information of the shopkeeper in the system will be presented in the identifiers.   \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor update shopkeeper name.   
+\item Actor update shop name.   
+\item Actor update landline number.
+\item Actor updates an email address.
+\item Actor selects the area from the given list.
+\item Actor selects the city from the given list.
+\item Actor select state from the given list.
+\item  Actor click on the next button
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+2a. If the actor doesn't enter the shopkeeper name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+2b. If the actor enters an invalid shopkeeper name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3a. If the actor doesn't enter the shop name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid shop name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the landline number \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4b. If the actor enters an invalid landline number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the email address \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & The warehouse information is updated in the system, and the screen is closed.  \\\hline
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 25:Add Payment}
+\addcontentsline{toc}{section}{Use Case 25}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U25   \\\hline
+Name  &  Add Payment \\ \hline
+Actor &   CEO, Employee, Warehouse Manager, Rider \\ \hline
+Description & Actor select the payment type from the list, select the payment mode from the options, enter the descriptions, select the date, update the amount, and select the sender designation, name and reiver designation name, and receiver. \\ \hline
+The pre-Condition & Add payment screen is presented.  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor selects the payment type from the given list.   
+\item Actor selects the payment mode from the given options.
+\item Actor enters the description.
+\item Actor selects the date. 
+\item Actor enters the amount.
+\item Actor confirms the amount.
+\item Actor selects their role from the given list.
+\item Actor selects their name from the given list.
+\item Actor selects the sender role from the given list.
+\item Actor selects the sender name from the given list.
+\item Actor clicks on the add button.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+4a. If the actor doesn't enter description \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a. If the actor doesn't enter the amount\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the actor enters an invalid amount\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & Data are stored in the database, and the screen is closed.  \\\hline
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 26:Edit Payment}
+\addcontentsline{toc}{section}{Use Case 26}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U26   \\\hline
+Name  &  Edit Payment \\ \hline
+Actor &   CEO, Employee, Warehouse Manager, Rider \\ \hline
+Description & Actor select the payment type from the list, select the payment mode from the options, update the descriptions, select the date, update the amount, and select the sender designation, name and reiver designation name, and receiver. \\ \hline
+The pre-Condition & Add payment screen is presented, and stored information is displayed in the attributes. \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor selects the payment type from the given list.   
+\item Actor selects the payment mode from the given options.
+\item Actor updates the description.
+\item Actor selects the date. 
+\item Actor updates the amount.
+\item Actor confirms the amount.
+\item Actor clicks on the update button.
+\item Actor selects their role from the given list.
+\item Actor selects their name from the given list.
+\item Actor selects the sender role from the given list.
+\item Actor selects the sender name from the given list.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+4a. If the actor doesn't enter description \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a. If the actor doesn't enter the amount\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the actor enters an invalid amount\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & Data are updated in the database, and the screen is closed.  \\\hline
+\end{longtable}
+
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 27:Ready the Incoming Order}
+
+\addcontentsline{toc}{section}{Use Case 27}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+
+Use Case ID &  U27 \\\hline
+Name  	    &  Ready the Incoming Order \\ \hline
+Actor     	& Warehouse Manager \\ \hline
+Description  & Order after confirmation from the employee, now move toward the warehouse manager for the ordered items to be ready for delivery. After confirmation by the warehouse manager that order is ready, the rider will be notified. Now the rider can pick it up.\\ \hline
+Pre-Condition & Order has been confirmed by the employee. And the warehouse manager gets notified. \\ \hline
+Flow & Main Scenario:
+\begin{enumerate}
+\item View Orders Details screen will be presented with the order status of products confirmed.
+
+\item Actor clicks on the Ready Button.
+
+\item Actor confirms the order status has been set ready.
+
+\item Email now will send email to the assigned rider and employee.
+
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
+
+\\ \hline
+
+Post-Condition &  Order is ready now, and the rider can pick it up.\\ \hline
+
+\end{longtable}
+
+
+%------------------------------------------
+\section*{Use Case 28:Accomplish the Order}
+
+\addcontentsline{toc}{section}{Use Case 28}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID &  U28 \\\hline
+
+Name  	    &  Accomplish the Order \\ \hline
+
+Actor     	& Rider \\ \hline
+
+Description  & Rider has reached the respective shop and delivered the order. Now he will set the order status completed. Click on the View Orders button, and a View Order Details screen will be presented. Click on the complete order button. The corresponding order will be set as completed. \\ \hline
+
+Pre-Condition & Rider has delivered the order successfully. The rider clicks on the view order option.  \\ 
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item View Order Details screen will be presented.
+\item Actor will set the order status as "Completed."
+\item Actor confirms the order status has been set to complete.
+\item Email now will send email to the assigned employee and CEO.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Order is deleivered sucessfully.\\ \hline
+\end{longtable}
+
+%------------------------------------------
+\section*{Use Case 29: Plot the Minimum Spanning Tree for Multiple Shops}
+
+\addcontentsline{toc}{section}{Use Case 29}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID &  U29 \\\hline
+
+Name  	    &  Plot the Minimum Spanning Tree for Multiple Shops \\ \hline
+
+Actor     	& Rider \\ \hline
+
+Description &     Whenever rider status changes(to "On the way"), a spanning tree will be  generated between warehouse and shopkeeper's Locations. Rider can veiw the route between two locations by clicking on the new route button.
+ Data structures used in it are:\\
+&\begin{enumerate}
+   \item Graph
+   \item BST 
+\end{enumerate}
+Algorithems used for making Minimum spanning tree is: \\
+&\begin{enumerate}
+   \item Greedy Algorithems
+\end{enumerate}\\ 
+
+Description & Rider can view the shortest route of his destination one by one. As one order is accomplished the rider's location will be updated. Now he can view the shortest path towards his second destination.
+\\
+\hline
+
+Pre-Condition &  Rider is ready to deliver the order.  \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item View Route Screen is presented.
+\item Now he can view the shortest path towards his destination.
+\end{enumerate}
+
+\\ \hline
+
+Post-Condition &  Rider reached his destination. \\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Use Case 30:Update Stock}
+
+\addcontentsline{toc}{section}{Use Case 30}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID &  U15 \\\hline
+
+Name  	    &  Update Stock \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Stock of added products will now add. Initiate update Stock screen and update identifiers. Select product, update quantity retail price and cost price, and select expiry manufacturing and date of stock add. then click on Add button. Stock will be added.\\ \hline
+
+Pre-Condition &  Add Stock screen will be presented to the respective actor. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to update the stock.
+\item Actor selects the product from the given list.
+\item Actor update the product quantity.
+\item Actor update the Retail Price.
+\item Actor update the Cost Price.
+\item Actor selects the date of the stock added.
+\item Actor selects the manufacturing date of the stock.
+\item Actor selects the expiry date of the stock.
+\item Actor clicks on Add button.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+2a. actor doesn't update the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. if the actor update string instead of integers.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3b. if the actor enters a negative quantity.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+
+4a. if the actor update a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4b. if the actor update a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5a. if the actor enters a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5b. if the actor enters a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9a. If the manufacturing date is greater than the expiry date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9b. If the manufacturing date is greater than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9c. If the expiry date is less than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Stock of the product will be added. \\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Use Case 31: Add Company }
+\addcontentsline{toc}{section}{Use Case 31}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U31   \\\hline
+Name   &   Update Vehicle Information \\ \hline
+Actor &  CEO  \\ \hline
+Description & CEO  enter the name, contact number, and address of the company .\\ \hline
+Pre-Condition & Add company screen is presented. \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item CEO  is ready to enter the identifiers.
+\item CEO enter the company name.   
+\item CEO enters the company phone number.   
+\item CEO enters the company address.   
+\item Actor clicks on the click button.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+
+2a.  If the CEO doesn't enter the name\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+2b. If the CEO enters an invalid name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3a.  If the CEO doesn't enter the contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the CEO enters an invalid contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a.  If the CEO doesn't enter the address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Data is stored in the database. \\\hline
+\end{longtable}
+
+%------------------------------------------
+%--------------User Interface ----------------------------
+\section {User Interfaces}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I01  \\\hline
+
+Name  	      & Introduction  \\ \hline
+
+Linked Use Case & NULL \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-001 Intro@1x.png}\end{center}  \\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Login}
+
+\addcontentsline{toc}{section}{Login}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I02  \\\hline
+
+Name  	      & Login  \\ \hline
+
+Linked Use Case & U01 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-002 Login@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Password Validations (Must be of 8 characters)
+\item   User Validation(Check if user exist or not)
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Forgot Password }
+
+\addcontentsline{toc}{section}{Forgot Password}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  103 \\\hline
+
+Name  	      & Forgot Password  \\ \hline
+
+Linked Use Case & U02 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-003 Forgot password@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item  New Password must be different from previous password
+\item  Username Validation
+\item  Password and Confirm Password Textbox are Same or not
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{SignUp}
+
+\addcontentsline{toc}{section}{SignUp}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &   104 \\\hline
+
+Name  	      &   SignUp\\ \hline
+
+Linked Use Case &  U05\\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-004a Create Account Except Rider@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   New Password and Confirmation password must be the same
+\item  CNIC must be of 13 digits
+\item  Contact Number must be of 11 digits
+\item  All Information must be provided before account creation
+\item  Email Validations
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable} 
+%------------------------------------------
+
+\section*{Update Account Information (CEO)}
+
+\addcontentsline{toc}{section}{Update Account Information (CEO)}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I05 \\\hline
+
+Name  	      &  Update Account Information (CEO) \\ \hline
+
+Linked Use Case & U03 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   New Password and Confirmation password must be the same
+\item CNIC must be of 13 digits
+\item Contact Number must be of 11 digits
+\item All Information must be provided before account creation
+\item Email Validations
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable} 
+%------------------------------------------
+%------------------------------------------
+
+\section*{Update Account Information (Employee)}
+
+\addcontentsline{toc}{section}{Update Account Information (Employee)}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I06 \\\hline
+
+Name  	      &  Update Account Information (Employee) \\ \hline
+
+Linked Use Case & U06 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   New Password and Confirmation password must be the same
+\item CNIC must be of 13 digits
+\item Contact Number must be of 11 digits
+\item All Information must be provided before account creation
+\item Email Validations
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable} 
+%------------------------------------------
+\section*{Account Detail (CEO) }
+
+\addcontentsline{toc}{section}{Account Detail (CEO)}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I07 \\\hline
+
+Name  	      &  Account Detail (CEO) \\ \hline
+
+Linked Use Case & U06 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-006 ViewAndDelete Account@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   On clicked delete and edit button there is must to select any column first from grid list. 
+\item  Filters must be applied before clicking Go
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Account Detail (Employee) }
+
+\addcontentsline{toc}{section}{Account Detail (Employee)}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I08 \\\hline
+
+Name  	      &  Account Detail (Employee) \\ \hline
+
+Linked Use Case & U07 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-006 ViewAndDelete Account@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   On clicked delete and edit button there is must to select any column first from grid list. 
+\item  Filters must be applied before clicking Go
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{CEO Dashboard }
+
+\addcontentsline{toc}{section}{CEO Dashboard}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I09 \\\hline
+
+Name  	      & CEO Dashboard  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-007 CEO Dashboard@1x.png}\end{center}  \\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Add Product }
+
+\addcontentsline{toc}{section}{Add Product}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I10  \\\hline
+
+Name & Add Product  \\ \hline
+
+Linked Use Case & U08	 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-008 Add Product@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Product Name must contain only Digits and alphabets.
+\item Cost Price must not be negative.
+\item The date must be positive. And not previous than current.
+\item Quantity must be positive. And not in decimals.
+\item Rating must be positive and integer.
+\item SKU-ID must be positive.
+\item Weight and Volume must be in integers and decimals and positive.
+\item IN Stock check box must be filled.
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Update Product Record}
+
+\addcontentsline{toc}{section}{Update Product Record}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I11  \\\hline
+
+Name  &  Update Product Record \\ \hline
+
+Linked Use Case & U09	  \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-009 Update Product Record@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Product Name must contain only Digits and alphabets.
+\item Cost Price must not be negative.
+\item The date must be positive. And not previous than current.
+\item Quantity must be positive. And not in decimals.
+\item Rating must be positive and integer.
+\item SKU-ID must be positive.
+\item Weight and Volume must be in integers and decimals and positive.
+\item IN Stock check box must be filled.
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable} 
+%------------------------------------------
+%------------------------------------------
+\section*{Take Order}
+
+\addcontentsline{toc}{section}{Take Order}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I12 \\\hline
+
+Name  &  Take Order \\ \hline
+
+Linked Use Case & U19	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-011 Order Product@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   
+Price must be positive.
+\item 
+Search text only contains alphabets and integers only.
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Email }
+
+\addcontentsline{toc}{section}{Email}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I13  \\\hline
+
+Name  & Email \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-012 SendEmail@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item  To section must be filled to send the mail.
+
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable} 
+%------------------------------------------
+\section*{Add Warehouse}
+\addcontentsline{toc}{section}{Add Warehouse}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I14 \\\hline
+
+Name  & Add Warehouse  \\ \hline
+
+Linked Use Case & U16	 \\ \hline
+
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-013 AddWarehouse@1x.png}\end{center}  \\ \hline
+
+
+Validators & 
+\begin{itemize}
+\item   Space fields and Street No. input must be a number
+\item  Necessary fields must be filled before updating
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Update Warehouse Record}
+
+\addcontentsline{toc}{section}{Update Warehouse Record}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I15  \\\hline
+
+Name  &  Update Warehouse Record \\ \hline
+
+Linked Use Case & U17 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-014 EditWarehouse@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Space fields and Street No. input must be a number
+\item  Necessary fields must be filled before updating
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Warehouse Detail }
+
+\addcontentsline{toc}{section}{Warehouse Detail}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I16  \\\hline
+
+Name  &  Warehouse Detail \\ \hline
+
+Linked Use Case & U18 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-015 ViewAndDelete Warehouse@.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   On clicked delete and edit button there is must to select any row first from grid list. 
+\item  Filters must be applied before clicking Go
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable} 
+%------------------------------------------
+\section*{Warehouse Manager Dashboard }
+
+\addcontentsline{toc}{section}{Warehouse Manager Dashboard}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I17 \\\hline
+
+Name  &  Warehouse Manager Dashboard \\ \hline
+
+Linked Use Case & NILL \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-016 Warehouse Manager Dashboard@1x.png}\end{center}  \\ \hline
+
+
+\end{longtable}
+%------------------------------------------
+\section*{Employee Dashboard }
+
+\addcontentsline{toc}{section}{Employee Dashboard }
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I18  \\\hline
+
+Name  &  Employee Dashboard \\ \hline
+
+Linked Use Case &  NILL \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-017 Employee Dashboard@1x.png}\end{center}  \\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Rider Dashboard }
+
+\addcontentsline{toc}{section}{Rider Dashboard }
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I19  \\\hline
+
+Name  & Rider Dashboard  \\ \hline
+
+Linked Use Case & NILL  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-018 Rider Dashboard@1x.png}\end{center}  \\ \hline
+
+\end{longtable}
+%------------------------------------------
+
+%------------------------------------------
+\section*{View Route }
+
+\addcontentsline{toc}{section}{View Route}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I20  \\\hline
+
+Name  & View Route  \\ \hline
+
+Linked Use Case & U128 and UI29  \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-034 Route Finder@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item  Street No. Must not be negative
+\item All fields must be appropriately filled to find the routes
+ \end{itemize}
+ \\ \hline
+\end{longtable}
+%------------------------------------------
+
+%------------------------------------------
+\section*{Add Shop/Shopkeeper}
+
+\addcontentsline{toc}{section}{Add Shop/Shopkeeper}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID &  I21 \\\hline
+
+Name  & Add Shop/Shopkeeper \\ \hline
+
+Linked Use Case & U23 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-019 Add ShopAndShopKeeper@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item  Email Validation
+\item Contact Number Validation
+\item Street No. must be a non-negative number
+\item All necessary fields must be filled before clicking Add
+ 
+
+\end{itemize}
+\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Add Payment }
+
+\addcontentsline{toc}{section}{Add Payment}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I22  \\\hline
+
+Name  &  Add Payment \\ \hline
+
+Linked Use Case & U26	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-021 Add Payment@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Deposit and Retype Deposit Amount must be a number not string
+\item  Before Clicking Add, Both fields must be filled
+\item  Both fields must be same
+
+
+\end{itemize}
+\\ \hline
+
+\end{longtable} 
+%----------------------------------------
+\section*{Update Payment Information}
+
+\addcontentsline{toc}{section}{Update Payment Information}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I23  \\\hline
+
+Name  &  Update Payment Information \\ \hline
+
+Linked Use Case & U25	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-022Update Payment Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Deposit and Retype Deposit Amount must be a number not string
+\item  Before Clicking Add, Both fields must be filled
+\item  Both fields must be same
+
+
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Add Vehicle}
+\addcontentsline{toc}{section}{Add Vehicle}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I24  \\\hline
+
+Name  &  Add Vehicle \\ \hline
+
+Linked Use Case & U21	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-023 AddVehicle@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   
+\item  
+\item 
+
+
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Update Vehicle Information}
+
+\addcontentsline{toc}{section}{Update Vehicle Information}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I25  \\\hline
+
+Name  &  Update Vehicle Information \\ \hline
+
+Linked Use Case & U22	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-024 Update Vehicle Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Registration number,Capacity in volume and weight must be number
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Add Category}
+
+\addcontentsline{toc}{section}{Add Category}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I26  \\\hline
+
+Name  &  Add Category \\ \hline
+
+Linked Use Case & U11	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-025 Add Category@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Category must be a word.
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Update Category Information}
+
+\addcontentsline{toc}{section}{Update Category Information}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I27  \\\hline
+
+Name  &  Update Category Information \\ \hline
+
+Linked Use Case & U12	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-026Update Category Inofrmation@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Category must be a word.
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Add Vendor}
+
+\addcontentsline{toc}{section}{Add Vendor}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I28  \\\hline
+
+Name  &  Add Vendor \\ \hline
+
+Linked Use Case & U13	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-027Add Vendor@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Vendor name and company name must be a alphabetic and word.
+\item   Phone number and land line number must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Update Vendor Information}
+
+\addcontentsline{toc}{section}{Update Vendor Information}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I29  \\\hline
+
+Name  &  Update Vendor Information \\ \hline
+
+Linked Use Case & U14	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-028 Update Vendor Information@1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Vendor name and company name must be a alphabetic and word.
+\item   Phone number and land line number must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Add Stock}
+
+\addcontentsline{toc}{section}{Add Stock}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I30  \\\hline
+
+Name  & Add Stock\\ \hline
+
+Linked Use Case & U15	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-029Add Stock.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Quantity,retail price and cost price must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Update Stock Information}
+
+\addcontentsline{toc}{section}{Update Stock Information}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I31  \\\hline
+
+Name  &Update Stock Information\\ \hline
+
+Linked Use Case & U30	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-030Update Stock Information.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Quantity,retail price and cost price must be number and no use of special character used. 
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Order Summary}
+
+\addcontentsline{toc}{section}{Order Summary}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I32  \\\hline
+
+Name  &Order Summary\\ \hline
+
+Linked Use Case & U19	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-031 Order Summary@1x.png}\end{center}  \\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Order Detail}
+
+\addcontentsline{toc}{section}{Order Detail}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I33  \\\hline
+
+Name  &Order Summary\\ \hline
+
+Linked Use Case & U19	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-032 Order Details@1x.png}\end{center}  \\ \hline
+\end{longtable}
+%------------------------------------------
+\section*{Add Company}
+
+\addcontentsline{toc}{section}{Add Company}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Interface ID & I31  \\\hline
+
+Name  &Add Company\\ \hline
+
+Linked Use Case & U31	 \\ \hline
+
+UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-033 Add Company @1x.png}\end{center}  \\ \hline
+
+Validators & 
+\begin{itemize}
+\item   Contact number must be number and no use of special character used. 
+\item   Name must be alphabetic. 
+\end{itemize}
+\\ \hline
+\end{longtable}
+%------------------Classes----------------------
+%------------------------------------------
+\section{Classes}
+The classes which are used in the project are as under with there specific properties. 
+\begin{center}
+\addcontentsline{toc}{section}{}
+\begin{longtable}{| p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|}
+\multicolumn{5}{c}{}
+\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{5}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{5}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf {Class Name} & \textbf{ Software/ Domain }&\textbf {Is Abstract (Yes/No)}&\textbf{ Is Singleton (Yes/No)} &\textbf {Is the class will has parametrized constructor(Yes/No)}\\ \hline
+ CEO 		&Domain			&No			&Yes	&Yes\\ \hline
+ Company		&Domain			&No		&Yes	&Yes\\ \hline
+ Office		&Domain			&No			&Yes	&Yes\\ \hline
+ WareHouse	&Domain			&No			&Yes	&Yes\\ \hline
+ User		&Domain			&No			&No		&Yes\\ \hline
+ Rider		&Domain			&No			&No		&Yes\\ \hline
+ Employee  	&Domain			&No			&No		&Yes\\ \hline
+ WareHouseManager&Domain		&No		&Yes 	&Yes\\ \hline
+ ShopOwner 	&Domain			&No			&No		&Yes\\ \hline
+ Shop	  	&Domain			&No			&No		&Yes\\ \hline
+ Ledger	  	&Domain			&No			&Yes	&Yes\\ \hline
+ Order		&Domain			&No			&No		&Yes\\ \hline
+ Product		&Domain			&No		&No		&Yes\\ \hline
+ Vehicle		&Domain			&No		&No		&Yes\\ \hline
+ Stack		&Software		&No			&No		&Yes\\ \hline
+ Queue		&Software		&No			&No		&Yes\\ \hline
+ Linked List	&Software		&No		&No		&Yes\\ \hline
+ Binary Search Tree&Software	&No		&No		&Yes\\ \hline
+ Spanning Tree  &Software		&No		&No		&Yes\\  \hline
+\end{longtable}
+\end{center}
+%------------------------------------------------------------
+%---------------Object Oriented Features---------------------
+\section{Object Oriented Features}
+\section*{Composition}
+\addcontentsline{toc}{section}{Composition}
+In our Project there are 8 places where we use Composition
+\begin{itemize}
+\item   Company Class has composition of Ledger Class
+\item  Company Class has composition of Office Class
+\item  Company Class has composition of Warehouse Class
+\item  Company Class has composition of CEO Class
+\item  Warehouse Class has composition of  Warehouse Manager Class
+\item  Rider Class has composition of Vehicle Class
+\item  Office Class has composition of User Class ( Employee, Rider)
+\item  Shop Owner Class has composition of Shop Class
+\end{itemize}
+\section*{Inheritance}
+\addcontentsline{toc}{section}{Inheritance}
+In our project inheritance is used in following places
+\begin{itemize}
+\item   User inherits the class of CEO
+\item User inherits the class of Rider 
+\item User inherits the class of Shopkeeper
+\item User inherits the class of Warehouse Manager  
+\end{itemize}
+\section*{Multi-Level Inheritance}
+\addcontentsline{toc}{section}{Multi-Level Inheritance}
+In our project Multilevel inheritance is used as
+\begin{itemize}
+\item User class inherits the CEO class and CEO class inherits the Employee Class
+\end{itemize}
+\section*{Aggregation}
+\addcontentsline{toc}{section}{Aggregation}
+In our project Multilevel inheritance is used as
+\begin{itemize}
+\item Rider Aggregate the Rating Class in our project
+\end{itemize}
+\section*{Association}
+\addcontentsline{toc}{section}{Association}
+In our project Multilevel inheritance is used as
+\begin{itemize}
+\item Warehouse Manager manages the order.
+\item CEO manages the products
+\item Rider take the order 
+\item Rider adds the order
+\item Employee adds the products
+\item Employee manages the order 
+\end{itemize}
+\section{Detailed Object Oriented Design}
+\begin{figure}
+  \centering
+    \includegraphics[scale=0.8]{Image.jpg}
+  \caption{The detailed Object Oriented Design of the project that will be implemented according to mentioned logic}
+\end{figure}
+%------------------------------------
+%------------------Data Structure--------------------
+\section{Data Strucuture}
+The following section shows the reason for choosing the data structure in the particular use case with a brief explanation.
 %-------------------------------------------------------
+\section*{Linked List}
+\addcontentsline{toc}{section}{Linked List}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf{Use Case IDs}& U01,U02,U03,U04,U05,U06,U07,U08,U09,U010,U11,U12,U13,U14,
+U15,U16,U17,U18,U21,U22,U25,U26,U30,U31 \\ \hline
+\textbf{Data Structure Used}& Linked List \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a linear-dynamic data structure. 
+Doubly LinkedList provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result. It helps to store and delete the data fastly. It allows you to move back and forth in the list to get the required result.\\ \hline
+\textbf{Available choices}& Array List,Hash Table \\ \hline
+\textbf{Comparison}&
+The array list worst and average case time complexity is O(n). It takes contiguous memory. The hash table is best in the average case, but in the worst case time, complexity rise to O(n). It takes contiguous memory for storing the hash function value. In the average and worst case, the linked list insertion and deletion take O(1) time. In the average and worst case, it takes O(n) time for deletion. It did not require contiguous memory allocation.Array list, hash table, and linked list space complexity O(n) are the same.
+\\ \hline
+\end{longtable}
+
 %-------------------------------------------------------
+\section*{Queue}
+\addcontentsline{toc}{section}{Queue}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf{Use Case IDs}& U19 \\ \hline
+\textbf{Data Structure Used}& Queue \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a linear-dynamic data structure. 
+Queue provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result. It helps to store the data of orders in specific pattern . It allows  to get the ordered pattern of incoming and outgoing orders data and shows the required result.
+ 
+ \\ \hline
+\textbf{Available choices}& Array List,Hash Table, Linked List \\ \hline
+\textbf{Comparison}&
+The array list worst and average case time complexity is O(n). It takes contiguous memory. The hash table is best in the average case, but in the worst case time, complexity rise to O(n). It takes contiguous memory for storing the hash function value. In the average and worst case, the linked list insertion and deletion take O(1) time. In the average and worst case, Queue takes O(n) time for deletion. It gives the specific ordered pattern to store and Dequeue reguired data.Array list, hash table, and linked list space complexity O(n) are the same.\\ \hline
+
+\end{longtable}
 %-------------------------------------------------------
+\section*{Array List}
+\addcontentsline{toc}{section}{Array List}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf{Use Case IDs}& U11,U12 \\ \hline
+\textbf{Data Structure Used}& Array List \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a linear-dynamic data structure. 
+Queue provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result.IT allows to get specific data and shows  the required result.Only a specific detail of the data is required to store the specific information in this use case. 
+\\ \hline
+\textbf{Available choices}& Linked List \\ \hline
+\textbf{Comparison}&
+The array list worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Array list and linked list space complexity O(n) are the same therefore for the small data Array list used.\\ \hline
+\end{longtable}
+%-------------------------------------------------------
+\section*{Heap}
+\addcontentsline{toc}{section}{Heap}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf{Use Case IDs}& U23,U24 \\ \hline
+\textbf{Data Structure Used}& Heap \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(n), Insertion: O(n), Deletion: O(n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a Heap data structure. 
+Heap provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to get specific data of some specific data, it allows to apply specific operation on that and shows the required result.\\ \hline
+ 
+\textbf{Available choices}& Linked List \\ \hline
+\textbf{Comparison}&
+The Heap worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Heap and linked list space complexity O(n) are the same therefore for the Detailed  data Heap used.
+\\ \hline
+\end{longtable}
+%-------------------------------------------------------
+\section*{Tree}
+\addcontentsline{toc}{section}{}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf{Use Case IDs}& U20 \\ \hline
+\textbf{Data Structure Used}& Tree \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(lg n), Insertion: O( lg n), Deletion: O(lg n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a Tree data structure. 
+Tree provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to get specific detailed ordered data in a specfic manner and point out the points to some reference .\\ \hline
+
+\textbf{Available choices}& Linked List \\ \hline
+\textbf{Comparison}&
+The Tree worst and average case time complexity is O(lg n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Tree and linked list space complexity O(n) are not same therefore, for the Detailed  data Tree is prefered to be used.\\ \hline
+\end{longtable}
+%-------------------------------------------------------
+\section*{Graph}
+\addcontentsline{toc}{section}{}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+\textbf{Use Case IDs}& U29 \\ \hline
+\textbf{Data Structure Used}& Graph \\ \hline
+
+\textbf{Time Complexity}& 
+In Worst Case: Search: O(lg n), Insertion: O( lg n), Deletion: O(lg n)\\\hline
+\textbf{Space Complexity}& O(n)\\\hline
+\textbf{Justification for the use of data structure}&
+In mentioned use case required a Tree data structure. 
+Tree provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to plot the data and apply operation on the data to show the required result.\\ \hline
+ 
+\textbf{Available choices}& Tree \\ \hline
+\textbf{Comparison}&
+The Graph worst and average case time complexity is O(lg n). In the average and worst case, the Tree insertion and deletion take O(lg n) time. IN the average and worst case, Tree takes O(n) time for deletion. It did not require contiguous memory allocation.Tree and Graph space complexity O(n) are  same therefore, for the Plotting  data graph is prefered to be used.
+ \\ \hline
+ \end{longtable}
+ %---------------------------------------------------------
+%-----------------------Exceptions-----------------------------
+
+
+\section{Exceptions}
+\begin{longtable}{| p{2cm}|p{5cm}|p{3cm}|p{4cm}|}
+\multicolumn{4}{c}{}
+\endfirsthead
+\multicolumn{4}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{4}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{4}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf{Type of Exception} & \textbf{Why this exception will occur} &\textbf{ Use Case Id in which exception could be occurred} & \textbf{How you will handle the} exception \\  \hline
+Incorrect Format & By default system, take all input in string and the deploy system need to convert into desire format. If the input data is not converted into other datatype like int and float the future task not performed e.g. string 2 and int 2 behave different in CPU.
+
+& U2 U3 U4a U4b U5a U5b U6 U7 U8 U9 U11 U13 U14 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U33a
+&Restrict the user to enter the required data in correct format.                      \\  \hline
+File not Loaded & File not found or b. & U6 U10 U11 U15 U32 &Error msg will be shown and give option to user to enter correct path of the file.   \\  \hline
+Stack OverFlow & When the data is more used than the assigned memory or b. & Almost All UIs except Dashboards &Error msg will be shown and give option to user to enter correct operation.   \\  \hline
+Index Out Of Range Exception & when an invalid index is used to access a member of an array or a collection & All add ,update and view UIs.& Error msg will be shown. \\  \hline
+\end{longtable}
+
+%---------------------------------------------------------
+%--------------------Data Storage----------------------------------
+\section{Data Storage}
+\section*{Mails (CSV)}
+\addcontentsline{toc}{section}{Mails (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Columns data names are
+\item Employee and Rider
+\item Rider and Shopkeeper
+\item Warehouse Manager and Employee
+\item CEO and Employee
+\end{enumerate}
+
+\section*{Products (CSV)}
+\addcontentsline{toc}{section}{Products (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Name
+\item Cost
+\item Retail price
+\item Expiry Date
+\item Quantity
+\item In date 
+\item Out date
+\item Manufacturer 
+\item ID
+\item Weight
+\item Volume
+\item Category
+\item Sensitivity
+\item In stock
+\item Rating
+\item Warehouse Hold ID
+\end{enumerate}
+
+\section*{Users (CSV)}
+\addcontentsline{toc}{section}{Users (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Name 
+\item Gender
+\item Email address
+\item Contact Number
+\item CNIC number
+\item Address
+\item Desigination 
+\end{enumerate}
+
+\section*{Orders (CSV)}
+\addcontentsline{toc}{section}{Orders (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Product Title
+\item Quantity
+\item Shopkeeper Name
+\item Shopkeeper Contact 
+\item Rider Name 
+\item Location 
+\item Order Status
+\item Order 
+\end{enumerate}
+
+\section*{Sale Products (CSV)}
+\addcontentsline{toc}{section}{Sale Products (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Sale-Date    
+\item Name
+\item Cost
+\item Retail price
+\item Expiry Date
+\item Quantity
+\item In date 
+\item Out date
+\item Manufacturer 
+\item ID
+\item Weight
+\item Volume
+\item Category
+\item Sensitivity
+\item In stock
+\item Rating
+\item Warehouse Hold ID
+\end{enumerate}
+
+\section*{Category (CSV)}
+\addcontentsline{toc}{section}{Category (CSV)}
+Columns data names are
+\begin{enumerate} 
+\item Name
+\end{enumerate}
+
+\section*{Vendors (CSV)}
+\addcontentsline{toc}{section}{Vendors (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Name
+\item LandLine
+\item Concered Person 
+\item Contact Number
+\end{enumerate}
+
+\section*{Vehicles (CSV)}
+\addcontentsline{toc}{section}{Vehicles (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Type
+\item Volume Capcity
+\item Weight Capcity 
+\item Registeration Number
+\end{enumerate}
+
+
+\section*{Payment Records (CSV)}
+\addcontentsline{toc}{section}{Payment Records (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Type 
+\item Date
+\item Amount 
+\item Reciever  
+\item Payment By  
+\item Mode 
+\item Description 
+\end{enumerate}
+
+%-------------------------------------------------------------
+%--------------------------Email-----------------------
+\section{Email Sending}
+\begin{enumerate}
+\item When Rider registers the Shopkeeper.
+ \begin{enumerate}
+    \item An Email is send to the Employee.
+    \item An Email is send to the Shopkeeper.
+ \end{enumerate}
+
+\item When Rider takes and add the order from the Shopkeeper.
+ \begin{enumerate}
+    \item An Email is send to the Employee.
+    \item An Email is send to the Shopkeeper.
+ \end{enumerate}
+
+\item When Employee assigns order to the Rider.
+ \begin{enumerate}
+    \item An Email is send to the Rider
+    \item An Email is send to the WareHouse Manager.
+ \end{enumerate}
+
+ \item When Rider adds payment from the Shopkeeper.
+ \begin{enumerate}
+    \item An Email is send to the Employee.
+    \item An Email is send to the Rider.
+ \end{enumerate}
+ 
+ \item When Stock from the Vendor added.
+ \begin{enumerate}
+    \item An Email is send to the Vendor
+    \item An Email is send to the Employee.
+ \end{enumerate}
+
+ \item When WareHouseManager ready the order.
+ \begin{enumerate}
+    \item An Email is send to the Rider
+    \item An Email is send to the Employee.
+ \end{enumerate}
+ \end{enumerate}
+%---------------------------------------------------------
+%---------------------------------------------------------
+%---------------------------------------------------------
+%---------------------------------------------------------
+%---------------------------------------------------------
+%---------------------------------------------------------
+%---------------------------------------------------------
 \end{document}
