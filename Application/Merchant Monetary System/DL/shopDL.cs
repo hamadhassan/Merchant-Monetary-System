@@ -8,7 +8,7 @@ using Merchant_Monetary_System.BL;
 
 namespace Merchant_Monetary_System.DL
 {
-    public class shopDL
+    public class shopDLs
     {
         private static DoublyLinkedList<Shop> shopList = new DoublyLinkedList<Shop>();
         public static DoublyLinkedList<Shop> ShopList { get => shopList; set => shopList = value; }

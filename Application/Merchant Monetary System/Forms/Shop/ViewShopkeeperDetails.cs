@@ -137,7 +137,7 @@ namespace Merchant_Monetary_System
                     Form f = new UpdateShopKeeper(S);
                     f.ShowDialog();
                     DataBind();
-                    StockDL.StoreDataIntoFile(FilePath.Stock);
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                 }
                 else
                 {
@@ -166,7 +166,7 @@ namespace Merchant_Monetary_System
                     ShopKeeperDL.deleteShopkeeper(S);
                     MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataBind();
-                    StockDL.StoreDataIntoFile(FilePath.Shopkeeper);
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                 }
             }
             else

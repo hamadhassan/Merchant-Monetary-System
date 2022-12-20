@@ -14,6 +14,7 @@ namespace Merchant_Monetary_System.DL
     {
         public static List<string> names = new List<string>();
         private static BST shopkeeperList = new BST();
+        Queue<Shopkeeper> Q = new Queue<Shopkeeper>();
 
         public static BST ShopkeeperList { get => shopkeeperList; set => shopkeeperList = value; }
 
@@ -21,38 +22,43 @@ namespace Merchant_Monetary_System.DL
         {
             shopkeeperList.Add(shopkeeper);
         }
-        public static void StoreDataIntoFiles(string path,BST Shopkeeper)
-        {
-
-            if(Shopkeeper.Head!=null)
-            {
-                StoreSingleDataIntoFiles(path, Shopkeeper.Head);
-            }
+        //public static void StoreDataIntoFiles(string path,BST Shopkeeper)
+        //{
+        //    if(Shopkeeper.Head!=null)
+        //    {
+        //        StoreSingleDataIntoFiles(path, Shopkeeper.Head);
+        //    }
+        //    else
+        //    {
+        //        StreamWriter file = new StreamWriter(path);
+        //        file.Write("");
+        //        file.Close();
+        //    }
             
-        }
-        public static void StoreSingleDataIntoFiles(string path, BSTNode shopkeeper)
-        {
-            if (shopkeeper != null)
-            {
-                StreamWriter file = new StreamWriter(path,true);
-                DoublyLinkedListNode<Shop> Head = shopkeeper.Data.ShopList.Head;
-                file.Write(shopkeeper.Data.ShopkeeperName + "," + shopkeeper.Data.Cnic + "," + shopkeeper.Data.Email + "," + shopkeeper.Data.ContactNumber + ",");
-                int i = 0;
-                while (Head != null)
-                {
-                    if (i != 0) file.Write("|");
-                    file.Write(Head.Data.Id + ";" + Head.Data.ShopName + ";" + Head.Data.City + ";" + Head.Data.Area + ";" + Head.Data.State);
-                    i++;
-                    Head = Head.Next;
-                }
-                file.WriteLine();
-                file.Flush();
-                file.Close();
+        //}
+        //public static void StoreSingleDataIntoFiles(string path, BSTNode shopkeeper)
+        //{
+        //    if (shopkeeper != null)
+        //    {
+        //        StreamWriter file = new StreamWriter(path);
+        //        DoublyLinkedListNode<Shop> Head = shopkeeper.Data.ShopList.Head;
+        //        file.Write(shopkeeper.Data.ShopkeeperName + "," + shopkeeper.Data.Cnic + "," + shopkeeper.Data.Email + "," + shopkeeper.Data.ContactNumber + ",");
+        //        int i = 0;
+        //        while (Head != null)
+        //        {
+        //            if (i != 0) file.Write("|");
+        //            file.Write(Head.Data.Id + ";" + Head.Data.ShopName + ";" + Head.Data.City + ";" + Head.Data.Area + ";" + Head.Data.State);
+        //            i++;
+        //            Head = Head.Next;
+        //        }
+        //        file.WriteLine();
+        //        file.Flush();
                 
-                StoreSingleDataIntoFiles(path, shopkeeper.Left);
-                StoreSingleDataIntoFiles(path, shopkeeper.Right);
-            }
-        }
+        //        StoreSingleDataIntoFiles(path, shopkeeper.Left);
+        //        StoreSingleDataIntoFiles(path, shopkeeper.Right);
+        //        file.Close();
+        //    }
+        //}
 
         public static void LoadDataFromFiles(string path)
         {
@@ -157,5 +163,53 @@ namespace Merchant_Monetary_System.DL
     //        }
     //        return Shopnames;
     //    }
+        public static void AddIntoqueue(Queue<Shopkeeper> Q, BSTNode Shopkeeper)
+        {
+            if(Shopkeeper!=null)
+            {
+                Q.Enqueue(Shopkeeper.Data);
+                AddIntoqueue(Q, Shopkeeper.Left);
+                AddIntoqueue(Q, Shopkeeper.Right);
+            }
+        }
+
+        public static void StoreDataIntoFiles(string path, BST Shopkeeper)
+        {
+            Queue<Shopkeeper> Q = new Queue<Shopkeeper>();
+            AddIntoqueue(Q, Shopkeeper.Head);
+            StreamWriter file = new StreamWriter(path);
+            while (Q.Count != 0)
+            {
+                Shopkeeper shopkeeper = Q.Dequeue();
+                DoublyLinkedListNode<Shop> Head = shopkeeper.ShopList.Head;
+                file.Write(shopkeeper.ShopkeeperName + "," + shopkeeper.Cnic + "," + shopkeeper.Email + "," + shopkeeper.ContactNumber + ",");
+                int i = 0;
+                while (Head != null)
+                {
+                    if (i != 0) file.Write("|");
+                    file.Write(Head.Data.Id + ";" + Head.Data.ShopName + ";" + Head.Data.City + ";" + Head.Data.Area + ";" + Head.Data.State);
+                    i++;
+                    Head = Head.Next;
+                }
+                file.WriteLine();
+                file.Flush();
+            }
+            file.Close();
+        }
+        public static List<string> Shop_names(string shopkeeper)
+        {
+            List<string> Shopnames = new List<string>();
+            foreach (Shopkeeper name in shopkeeperList)
+            {
+                if (name.ShopkeeperName == shopkeeper) 
+                {
+                    foreach (Shop names in name.ShopList) 
+                    {
+                        Shopnames.Add(names.ShopName);
+                    }
+                }
+            }
+            return Shopnames;
+        }
     }
 }
