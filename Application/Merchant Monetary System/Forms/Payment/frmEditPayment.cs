@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.Forms;
 
 namespace Merchant_Monetary_System.Forms.Payment
 {

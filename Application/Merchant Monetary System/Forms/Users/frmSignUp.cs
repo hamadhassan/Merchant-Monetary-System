@@ -458,11 +458,13 @@ namespace Merchant_Monetary_System
                 lbAssigned.Visible = true;
                 cmbxAssigned.Visible = true;
                 createAccountFor = 3;
-                WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
                 //add all warehouse 
-                foreach (Warehouse w in WarehouseDL.WarehousesList)
+
+                DoublyLinkedListNode<Warehouse> Head = WarehouseDL.WarehousesList.Head;
+                while(Head!=null)
                 {
-                    cmbxAssigned.Items.Add(w.Name);
+                    cmbxAssigned.Items.Add(Head.Data.Name);
+                    Head = Head.Next;
                 }
                 cmbxAssigned.SelectedIndex = 0;
             }
