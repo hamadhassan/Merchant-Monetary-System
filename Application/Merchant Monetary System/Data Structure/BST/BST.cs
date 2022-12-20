@@ -108,17 +108,80 @@ namespace Merchant_Monetary_System.Data_Structure.BST
             }
             return null;
         }
+        public void removeHead()
+        {
+            if (Head == null)
+            {
+                return;
+            }
+            else
+            {
+                if (Head.Left == null && Head.Right == null)
+                {
+                    Head = null;
+                }
+                else if (Head.Left == null || Head.Right == null)
+                {
+                    if (Head.Left == null)
+                    {
+                        Head = Head.Right;
+                        Head.Parent.Parent = null;
+                        Head.Parent.Left = null;
+                        Head.Parent.Right = null;
+                        Head.Parent.Data = null;
+                        Head.Parent = null;
+                    }
+                    else
+                    {
+                        Head = Head.Left;
+                        Head.Parent.Parent = null;
+                        Head.Parent.Left = null;
+                        Head.Parent.Right = null;
+                        Head.Parent.Data = null;
+                        Head.Parent = null;
+                    }
+                }
+                else
+                {
+                    BSTNode temp = Head.Right;
+                    while (temp.Left != null)
+                    {
+                        temp = temp.Left;
+                    }
+                    Head.Data = temp.Data;
+                    if (temp.Parent.Left == temp)
+                    {
+                        temp.Parent.Left = temp.Right;
+                    }
+                    else
+                    {
+                        temp.Parent.Right = temp.Right;
+                    }
+                    if (temp.Right != null)
+                    {
+                        temp.Right.Parent = temp.Parent;
+                    }
+                    temp.Parent = null;
+                    temp.Left = null;
+                    temp.Right = null;
+                }
+            }
+        }
 
         public bool remove(Shopkeeper x)
         {
-            BSTNode temp = findNode(x);
+            BSTNode temp = findNode(x.Cnic);
             if (temp == null)
             {
                 return false;
             }
             else
             {
-                if (temp.Left == null && temp.Right == null)
+                if(temp.Parent == null)
+                {
+                    removeHead();
+                }
+                else if (temp.Left == null && temp.Right == null)
                 {
                     if (temp.Parent.Left == temp)
                     {

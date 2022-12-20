@@ -167,6 +167,7 @@ namespace Merchant_Monetary_System
                 {
                     names.Add(Head.Data.Name);
                 }
+                Head = Head.Next;
             }
             return names;
         }

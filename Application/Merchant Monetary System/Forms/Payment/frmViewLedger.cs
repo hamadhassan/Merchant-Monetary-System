@@ -1,4 +1,5 @@
 ﻿using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.Data_Structure.HashTable;
 using Merchant_Monetary_System.DL;
 using Merchant_Monetary_System.Forms.Product;
 using System;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Merchant_Monetary_System.Forms.Payment
 {
@@ -28,7 +30,7 @@ namespace Merchant_Monetary_System.Forms.Payment
         {
             datagvLedgerDetails.Columns.Clear();
             datagvLedgerDetails.DataSource = null;
-            datagvLedgerDetails.DataSource = LedgerDL.Ledgers;
+            addIntoGrid(LedgerDL.Ledgers);
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
             Update.Text = "Update";
@@ -39,12 +41,41 @@ namespace Merchant_Monetary_System.Forms.Payment
             Delete.UseColumnTextForButtonValue = true;
             datagvLedgerDetails.Columns.Add(Update);
             datagvLedgerDetails.Columns.Add(Delete);
+            datagvLedgerDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void addIntoGrid(HashTable ledgerTable)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Mode");
+            dt.Columns.Add("Amount");
+            dt.Columns.Add("Date");
+            dt.Columns.Add("Payment By");
+            dt.Columns.Add("Payment Received");
+
+            for (int i = 0; i < ledgerTable.Size; i++)
+            {
+                if (ledgerTable.HashTableData[i] != null)
+                {
+                    DoublyLinkedListNode<Ledger> Head = ledgerTable.HashTableData[i].Head;
+                    while (Head != null)
+                    {
+                        DataRow dr = dt.NewRow();
+                        dt.Rows.Add(Head.Data.Id, Head.Data.PaymentMode, Head.Data.Amount,Head.Data.CurrentDate, Head.Data.PaymentByName, Head.Data.PaymentRecievedByName);
+                        Head = Head.Next;
+                    }
+                }
+            }
+            datagvLedgerDetails.DataSource = dt;
         }
 
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
             btnLoadRecords.Visible = false;
             datagvLedgerDetails.Visible = true;
+            Ledger L = new Ledger("cash", "Card", DateTime.Parse("12/12/2022"), 10000, "CEO", "Kabir", "Employee", "Hashir", "Desc");
+            LedgerDL.Ledgers.Add(L);
             DataBind();
         }
 
@@ -53,14 +84,17 @@ namespace Merchant_Monetary_System.Forms.Payment
             if (datagvLedgerDetails.SelectedRows.Count == 1)
             {
                 int index = datagvLedgerDetails.CurrentCell.ColumnIndex;
-                Ledger L = (Ledger)datagvLedgerDetails.CurrentRow.DataBoundItem;
-                if (index == 9)
+                int rowInd = datagvLedgerDetails.CurrentCell.RowIndex;
+                string ID = datagvLedgerDetails.Rows[rowInd].Cells[0].Value.ToString();
+                Ledger L = LedgerDL.Ledgers.SearchKey(ID);
+                if (index == 6)
                 {
                     Form form = new frmEditPayment(L);
+                    MessageBox.Show("Clicked");
                     form.ShowDialog();
                     
                 }
-                else if (index == 10)
+                else if (index == 7)
                 {
                     bool done = LedgerDL.deleteOnlyLedgerDetails(L);
                     if (done)
@@ -82,6 +116,8 @@ namespace Merchant_Monetary_System.Forms.Payment
                     lblRowSignal.Text = "Select a row from the list";
             }
         }
+
+
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
