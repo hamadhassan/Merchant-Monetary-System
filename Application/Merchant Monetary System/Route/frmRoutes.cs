@@ -85,12 +85,16 @@ namespace Merchant_Monetary_System
             }
             RoutesDL.storeAllRecordIntoFile(FilePath.Routes, distancesAll);
             Int64[] dis=Bellman_Ford(graph, 0);
-            List<int> indexList=getSortedArrayIndex(dis);
-            displayRoutes(warehousePoint, shopePoints[indexList[0]],1);
-            for (int i = 1; i < indexList.Count-2; i++)
+            for(int i=0; i < dis.Length; i++)
             {
-                displayRoutes(shopePoints[indexList[i]], shopePoints[indexList[i+1]],i+1);
+                MessageBox.Show(dis[i].ToString());
             }
+            //List<int> indexList=getSortedArrayIndex(dis);
+            //displayRoutes(warehousePoint, shopePoints[indexList[0]],1);
+            //for (int i = 1; i < indexList.Count-2; i++)
+            //{
+            //    displayRoutes(shopePoints[indexList[i]], shopePoints[indexList[i+1]],i+1);
+            //}
         }
         public List<PointLatLng> listofPoints()
         {//These point are list of shopes
@@ -155,7 +159,7 @@ namespace Merchant_Monetary_System
         }
         public void displayRoutes(PointLatLng start, PointLatLng end,int priorityNo)
         {
-            addMarker(start, priorityNo, GMarkerGoogleType.green);
+            addMarker(start, priorityNo, GMarkerGoogleType.blue);
             addMarker(end, priorityNo, GMarkerGoogleType.blue);
             var route = GoogleMapProvider.Instance.GetRoute(start, end, false, false, 15);
             //Add GMap Reference

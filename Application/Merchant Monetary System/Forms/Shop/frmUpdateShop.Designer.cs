@@ -133,6 +133,7 @@
             this.cmbxCity.Size = new System.Drawing.Size(203, 28);
             this.cmbxCity.Sorted = true;
             this.cmbxCity.TabIndex = 37;
+            this.cmbxCity.SelectedIndexChanged += new System.EventHandler(this.cmbxCity_SelectedIndexChanged);
             // 
             // cmbxState
             // 

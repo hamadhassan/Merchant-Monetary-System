@@ -30,6 +30,8 @@ namespace Merchant_Monetary_System
             UsersDL.loadRecordFromFile(FilePath.Users);
             WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
             VendorDL.loadRecordFromFile(FilePath.Vendors);
+            ProductDL.loadRecordFromFile(FilePath.Products);
+            OrderDL.loadRecordFromFile(FilePath.Orders);
             try
             {
                 Application.EnableVisualStyles();
@@ -38,7 +40,10 @@ namespace Merchant_Monetary_System
                 Application.Run(new frmViewLedger());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
-            
+
+
+
+
 
         }
     }

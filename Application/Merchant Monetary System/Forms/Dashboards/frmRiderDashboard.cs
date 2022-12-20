@@ -58,7 +58,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnTakeOrder_Click(object sender, EventArgs e)
         {
-            loadform(new frmTakeOrder("name"));
+            loadform(new frmTakeOrder(name));
 
         }
 
