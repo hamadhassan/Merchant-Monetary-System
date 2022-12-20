@@ -15,9 +15,11 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 {
     public partial class frmWarehouseManagerDashboard : Form
     {
-        public frmWarehouseManagerDashboard()
+        string role;
+        public frmWarehouseManagerDashboard(string role)
         {
             InitializeComponent();
+            this.role=role;
         }
         private void load_form(object Form)
         {
@@ -34,7 +36,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            load_form(new frmCartOrders());
+            load_form(new OrDerDetailsForm(role));
         }
 
         private void btnViewProducts_Click(object sender, EventArgs e)

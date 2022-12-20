@@ -15,9 +15,11 @@ namespace Merchant_Monetary_System
 {
     public partial class frmCEODashboard : Form
     {
-        public frmCEODashboard()
+        string role;
+        public frmCEODashboard(string role)
         {
             InitializeComponent();
+            this.role = role;   
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -122,7 +124,7 @@ namespace Merchant_Monetary_System
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-            loadform(new frmCartOrders());
+            loadform(new OrDerDetailsForm(role));
         }
 
         private void btnAddShopkeeper_Click(object sender, EventArgs e)
