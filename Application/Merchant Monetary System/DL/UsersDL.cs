@@ -170,7 +170,19 @@ namespace Merchant_Monetary_System
             }
             return names;
         }
-
+        public static List<string> GetRider_Names()
+        {
+            List<string> names = new List<string>();
+            DoublyLinkedListNode<Users> Head = UsersLinkedList.Head;
+            while (Head != null)
+            {
+                if (!(Head.Data.Designation == "Rider"))
+                {
+                    names.Add(Head.Data.Name);
+                }
+            }
+            return names;
+        }
         public static bool loadRecordFromFile(string path)
         {
             if (File.Exists(path))

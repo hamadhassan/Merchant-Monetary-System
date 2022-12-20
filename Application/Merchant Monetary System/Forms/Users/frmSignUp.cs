@@ -231,107 +231,114 @@ namespace Merchant_Monetary_System
 
         private void txtbxUsername_TextChanged(object sender, EventArgs e)
         {
-            int i;
-            if (txtbxUsername.Text == string.Empty)
-            {// check is empty
-                lblUsernameSignal.Text = "Enter the username";
-                isUsername = true;
+            try
+            {
+                int i;
+                if (txtbxUsername.Text == string.Empty)
+                {// check is empty
+                    lblUsernameSignal.Text = "Enter the username";
+                    isUsername = true;
+                }
+                else if (txtbxUsername.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+                {//check isSpecialCharactor
+                    lblUsernameSignal.Text = "Allowed characters: a-z, A-Z, 0-9";
+                    isUsername = true;
+                }
+                else if (txtbxUsername.Text.Length <= 2)
+                {//length greater than 3
+                    lblUsernameSignal.Text = "Username must 3 characters long";
+                    isUsername = true;
+                }
+                else
+                {//ready for storage or action
+                    lblUsernameSignal.Text = " ";
+                    isUsername = false;
+                }
             }
-            else if (txtbxUsername.Text.Any(ch => !char.IsLetterOrDigit(ch)))
-            {//check isSpecialCharactor
-                lblUsernameSignal.Text = "Allowed characters: a-z, A-Z, 0-9";
-                isUsername = true;
-            }
-            else if(txtbxUsername.Text.Length <= 2)
-            {//length greater than 3
-                lblUsernameSignal.Text = "Username must 3 characters long";
-                isUsername = true;
-            }
-            else
-            {//ready for storage or action
-                lblUsernameSignal.Text = " ";
-                isUsername = false;
-            }
+            catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
 
         private void txtbxNewPassowrd_TextChanged(object sender, EventArgs e)
         {
-            string newPassword=txtbxNewPassowrd.Text;
-            bool isLowercase = false;
-            bool isUppercase = false;
-            bool isNumber = false;
-            bool isSpecialChar = false;
-            int i;
-            char[] specialCharactor = { '@', '#', '$', '%', '^', '&', '+', '=','_','!'};
-            
-            
-            foreach (char c in newPassword)
-            {//islowercase
-                if (c >= 'a' && c <= 'z')
-                {
-                    isLowercase= true;
-                    lblNewPasswordSignal.Text = " ";
-                    break;
-                }
-            }
-            foreach (char c in newPassword)
-            {//isuppercase
-                if (c >= 'A' && c <= 'Z')
-                {
-                    isUppercase = true;
-                    lblNewPasswordSignal.Text = " ";
-                    break;
-                }
-            }
-            foreach (char c in newPassword)
-            {//isnumber
-                if (c >= '0' && c <= '9')
-                {
-                    isNumber=true;
-                    lblNewPasswordSignal.Text = " ";
-                    break;
-                }
-            }
-            foreach (char c in newPassword)
-            {//is special charactor
-                foreach (char s in specialCharactor)
-                {
-                    if (c == s)
+            try
+            {
+                string newPassword = txtbxNewPassowrd.Text;
+                bool isLowercase = false;
+                bool isUppercase = false;
+                bool isNumber = false;
+                bool isSpecialChar = false;
+                int i;
+                char[] specialCharactor = { '@', '#', '$', '%', '^', '&', '+', '=', '_', '!' };
+
+
+                foreach (char c in newPassword)
+                {//islowercase
+                    if (c >= 'a' && c <= 'z')
                     {
-                        isSpecialChar = true;
+                        isLowercase = true;
                         lblNewPasswordSignal.Text = " ";
+                        break;
                     }
                 }
+                foreach (char c in newPassword)
+                {//isuppercase
+                    if (c >= 'A' && c <= 'Z')
+                    {
+                        isUppercase = true;
+                        lblNewPasswordSignal.Text = " ";
+                        break;
+                    }
+                }
+                foreach (char c in newPassword)
+                {//isnumber
+                    if (c >= '0' && c <= '9')
+                    {
+                        isNumber = true;
+                        lblNewPasswordSignal.Text = " ";
+                        break;
+                    }
+                }
+                foreach (char c in newPassword)
+                {//is special charactor
+                    foreach (char s in specialCharactor)
+                    {
+                        if (c == s)
+                        {
+                            isSpecialChar = true;
+                            lblNewPasswordSignal.Text = " ";
+                        }
+                    }
+                }
+                if (txtbxNewPassowrd.Text == string.Empty)
+                {// check is empty
+                    lblNewPasswordSignal.Text = "Enter the password";
+                }
+                else if (!isLowercase == true)
+                {//check isLowercase
+                    lblNewPasswordSignal.Text = "Include least one lowercase charactor";
+                }
+                else if (!isUppercase == true)
+                {//check isUppercase
+                    lblNewPasswordSignal.Text = "Include least one uppercase charactor";
+                }
+                else if (!isNumber == true)
+                {//check isNumber
+                    lblNewPasswordSignal.Text = "Include least one number";
+                }
+                else if (!isSpecialChar == true)
+                {//check isSpecial charactor
+                    lblNewPasswordSignal.Text = "Include least one special charactor";
+                }
+                else if (txtbxNewPassowrd.Text.Length < 8)
+                {//check is lenght >8
+                    lblNewPasswordSignal.Text = "Password must 8 characters long";
+                }
+                else
+                {
+                    isPassword = false;
+                }
             }
-            if (txtbxNewPassowrd.Text == string.Empty)
-            {// check is empty
-                lblNewPasswordSignal.Text = "Enter the password";
-            }
-            else if (!isLowercase == true)
-            {//check isLowercase
-                lblNewPasswordSignal.Text = "Include least one lowercase charactor";
-            }
-            else if (!isUppercase == true)
-            {//check isUppercase
-                lblNewPasswordSignal.Text = "Include least one uppercase charactor";
-            }
-            else if(!isNumber==true)
-            {//check isNumber
-                lblNewPasswordSignal.Text = "Include least one number";
-            }
-            else if(!isSpecialChar==true)
-            {//check isSpecial charactor
-                lblNewPasswordSignal.Text = "Include least one special charactor";
-            }
-            else if (txtbxNewPassowrd.Text.Length< 8)
-            {//check is lenght >8
-                lblNewPasswordSignal.Text = "Password must 8 characters long";
-            }
-            else
-            {
-                isPassword = false;
-            }
-
+            catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
 
         private void txtbxConfirmPassword_TextChanged(object sender, EventArgs e)

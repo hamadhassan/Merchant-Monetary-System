@@ -51,12 +51,16 @@
             this.lblProductDetails = new System.Windows.Forms.Label();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.cmbxShopNames = new System.Windows.Forms.ComboBox();
+            this.lblshop = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbxShopNames);
+            this.groupBox1.Controls.Add(this.lblshop);
             this.groupBox1.Controls.Add(this.txtbxName);
             this.groupBox1.Controls.Add(this.lblShhopkeekper);
             this.groupBox1.Controls.Add(this.lblDatagvSignal);
@@ -91,7 +95,7 @@
             this.txtbxName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtbxName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtbxName.FormattingEnabled = true;
-            this.txtbxName.Location = new System.Drawing.Point(475, 490);
+            this.txtbxName.Location = new System.Drawing.Point(493, 487);
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.Size = new System.Drawing.Size(107, 28);
             this.txtbxName.TabIndex = 85;
@@ -100,11 +104,12 @@
             // lblShhopkeekper
             // 
             this.lblShhopkeekper.AutoSize = true;
-            this.lblShhopkeekper.Location = new System.Drawing.Point(314, 495);
+            this.lblShhopkeekper.Location = new System.Drawing.Point(123, 493);
             this.lblShhopkeekper.Name = "lblShhopkeekper";
-            this.lblShhopkeekper.Size = new System.Drawing.Size(146, 20);
+            this.lblShhopkeekper.Size = new System.Drawing.Size(101, 20);
             this.lblShhopkeekper.TabIndex = 84;
-            this.lblShhopkeekper.Text = "Shopkeeper Name:";
+            this.lblShhopkeekper.Text = "Shop  Name:";
+            this.lblShhopkeekper.Click += new System.EventHandler(this.lblShhopkeekper_Click);
             // 
             // lblDatagvSignal
             // 
@@ -138,7 +143,7 @@
             this.datagvProductDetails.AllowUserToDeleteRows = false;
             this.datagvProductDetails.BackgroundColor = System.Drawing.SystemColors.Control;
             this.datagvProductDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagvProductDetails.Location = new System.Drawing.Point(25, 126);
+            this.datagvProductDetails.Location = new System.Drawing.Point(35, 126);
             this.datagvProductDetails.Name = "datagvProductDetails";
             this.datagvProductDetails.ReadOnly = true;
             this.datagvProductDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -333,6 +338,26 @@
             this.lblSearch.Text = "Search:";
             this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
             // 
+            // cmbxShopNames
+            // 
+            this.cmbxShopNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxShopNames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxShopNames.FormattingEnabled = true;
+            this.cmbxShopNames.Location = new System.Drawing.Point(230, 488);
+            this.cmbxShopNames.Name = "cmbxShopNames";
+            this.cmbxShopNames.Size = new System.Drawing.Size(107, 28);
+            this.cmbxShopNames.TabIndex = 87;
+            this.cmbxShopNames.SelectedIndexChanged += new System.EventHandler(this.cmbxShopNames_SelectedIndexChanged);
+            // 
+            // lblshop
+            // 
+            this.lblshop.AutoSize = true;
+            this.lblshop.Location = new System.Drawing.Point(343, 493);
+            this.lblshop.Name = "lblshop";
+            this.lblshop.Size = new System.Drawing.Size(146, 20);
+            this.lblshop.TabIndex = 86;
+            this.lblshop.Text = "Shopkeeper Name:";
+            // 
             // frmTakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -377,5 +402,7 @@
         private System.Windows.Forms.Label lblDatagvSignal;
         private System.Windows.Forms.Label lblShhopkeekper;
         private System.Windows.Forms.ComboBox txtbxName;
+        private System.Windows.Forms.ComboBox cmbxShopNames;
+        private System.Windows.Forms.Label lblshop;
     }
 }

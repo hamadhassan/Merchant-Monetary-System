@@ -42,5 +42,6 @@ namespace Merchant_Monetary_System.DL
             }
             return false;
         }
+        public static
     }
 }

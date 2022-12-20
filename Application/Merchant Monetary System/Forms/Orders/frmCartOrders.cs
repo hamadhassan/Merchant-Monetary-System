@@ -16,16 +16,17 @@ namespace Merchant_Monetary_System
     {
         private  string shopkeeper;
         private string rider;
+        private string shopname;
         private DoublyLinkedList<Product> cart;
 
 
-        public frmCartOrders(string shopkeeper, string rider,DoublyLinkedList<Product>cart)
+        public frmCartOrders(string shopkeeper, string rider,DoublyLinkedList<Product> cart, string shopname)
         {
             InitializeComponent();
-            this.shopkeeper=shopkeeper;
-            this.rider=rider;
+            this.shopkeeper = shopkeeper;
+            this.rider = rider;
             this.cart = cart;
-        
+            this.shopname = shopname; 
         }
         public frmCartOrders(string rider)
         {
@@ -141,7 +142,7 @@ namespace Merchant_Monetary_System
         {
             try
             {
-                Order order = new Order(shopkeeper, rider, cart);
+                Order order = new Order(shopkeeper, rider, shopname, cart);
                 OrderDL.ordersList.Add(order);
                 OrderDL.storeRecordIntoFile(order,FilePath.Orders);
                 MessageBox.Show("Order Added");

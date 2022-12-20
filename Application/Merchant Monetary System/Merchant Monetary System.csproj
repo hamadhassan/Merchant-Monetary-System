@@ -115,6 +115,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Orders\frmAssignRider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Orders\frmAssignRider.Designer.cs">
+      <DependentUpon>frmAssignRider.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Orders\OrDerDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Emails\frmEmail.resx">
       <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Orders\frmAssignRider.resx">
+      <DependentUpon>frmAssignRider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\frmTakeOrder.resx">
       <DependentUpon>frmTakeOrder.cs</DependentUpon>
