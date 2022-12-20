@@ -89,7 +89,7 @@ namespace Merchant_Monetary_System.Forms.Vehicle
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DataBind();
-                        ShopKeeperDL.StoreDataIntoFiles(FilePath.Vehcile);
+                        VehicleDL.StoreVehicleDataIntoFiles(FilePath.Vehcile);
                     }
                     else
                     {

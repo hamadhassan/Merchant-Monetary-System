@@ -387,7 +387,6 @@ D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22fina
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmReports.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
 D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
-D:\DSA\FinalProject\HH\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmOrderDetails.resources
 D:\COMPUTER SCIENCE\3rd Semester\Data Structures and Algorithms-DSA\cs261f22finalpid11\Application\Merchant Monetary System\obj\Debug\Merchant_Monetary_System.frmCartOrders.resources
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.dll
 C:\3rd Smester\DSA\Final Project\cs261f22finalpid11\Application\Merchant Monetary System\bin\Debug\IronPython.Modules.dll

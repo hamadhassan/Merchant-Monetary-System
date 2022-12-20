@@ -231,7 +231,7 @@ namespace Merchant_Monetary_System
                     shopDL.addDataIntoList(shop);
                     shopkeeper.ShopList.Add(shop);
                     ShopKeeperDL.addShopkeeperIntoList(shopkeeper);
-                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                     MessageBox.Show("Shopkeeper Along with the Shop Added", "Adding...");
                 }
             }

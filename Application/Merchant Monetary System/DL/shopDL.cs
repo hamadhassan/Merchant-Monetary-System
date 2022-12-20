@@ -10,8 +10,8 @@ namespace Merchant_Monetary_System.DL
 {
     public class shopDL
     {
-        private static List<Shop> shopList = new List<Shop>();
-        public static List<Shop> ShopList { get => shopList; set => shopList = value; }
+        private static DoublyLinkedList<Shop> shopList = new DoublyLinkedList<Shop>();
+        public static DoublyLinkedList<Shop> ShopList { get => shopList; set => shopList = value; }
 
         public static void addDataIntoList(Shop S)
         {
@@ -30,15 +30,17 @@ namespace Merchant_Monetary_System.DL
                 .ToList().ForEach(e => _builder.Append(e));
             return _builder.ToString();
         }
-        public static bool deleteShop(List<Shop> shopList,Shop deleteShop)
+        public static bool deleteShop(DoublyLinkedList<Shop> shopList,Shop deleteShop)
         {
-            foreach(Shop shop in shopList)
+            DoublyLinkedListNode<Shop> Head = shopList.Head;
+            while(Head!=null)
             {
-                if(deleteShop == shop)
+                if(Head.Data.Id == deleteShop.Id)
                 {
-                    shopList.Remove(shop);
+                    shopList.RemoveNode(Head);
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }

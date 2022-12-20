@@ -1,0 +1,2026 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{longtable}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\begin{document}
+%--------------Title Page ------------------
+\thispagestyle{empty}
+\begin{center}
+\textbf{\large{Merchant Monetary System}}\\
+\vspace{1cm}
+\textbf{ Final Report} \\
+\vspace{2cm}
+\includegraphics[scale=.08]{UETLogo}\\
+\vspace{2cm}
+\underline{ Project Supervisor}\\
+\vspace{1cm}
+Mr. Samyan Qayyum Wahla\\
+\vspace{1cm}
+\underline {Group ID $(G 11)$} \\
+\vspace{1cm}
+Project Member\\
+\vspace{0.5cm}
+\begin{tabular}{ m{5cm} m{4cm}}
+ Syed Hashir & 2021-CS-1 \\ 
+ Kabir Ahmed & 2021-CS-4  \\  
+ M. Hamad Hassan & 2021-CS-33
+\end{tabular}
+\vspace{5.5cm}
+\par\rule{\textwidth}{0.5pt} 
+Department of Computer Science\\
+University of Engineering and Technology, Lahore\\
+Pakistan
+\end{center}
+%-----------------Table of Content-----------------------
+\tableofcontents
+\thispagestyle{empty}
+\pagenumbering{arabic}
+
+\newpage
+\setcounter{page}{1}
+%-------------------------------------------------------
+%----------------ProjectDescription --------------------
+\justifying
+\section{Project Description}
+
+The system is designed for a company that provides
+logistics (delivery of products to its client), product management (crud operations), and effective communication with their worker, clients, and vendors.
+ 
+The company has its office, warehouse, and rider. 
+It has a different contract with multiple firms to take the shipment from the vendors and store it in dedicated warehouses. The rider will take orders from the shopkeeper. Their order is received at the office, and the office will create the feasibility report according to their shopkeepers' needs and instructions generated for their warehouse manager to fulfill their order. The area-specific rider will receive an email about their order. The office will send a confirmation email to their shopkeeper. 
+ 
+There are a total of four actors in the system and two stakeholders. Their titles and roles are:
+\begin{itemize}
+\item \textbf{ CEO:} The company's owner manages all the operations.
+\item \textbf{Employee:} They are assistants to CEO to help in company operations. 
+\item \textbf{Warehouse Manager:} Received the instructions from the employee and ready the shipment for the rider, and managed other expenses.
+\item \textbf{Rider:} They take orders from different shopkeepers and deliver the product according to pre-subscribed routes defined by the system.
+\end{itemize}
+The stakeholder is:
+\begin{itemize}
+\item \textbf{Shopkeepers:} Getting the goods and services from the company.
+\item \textbf{Vendor:} The vendor will provide the products to the company. 
+\end{itemize}
+This system is designed for one company and one CEO. CEO will be provided with already defined credentials. The CEO is responsible for creating accounts for all others actors. The CEO will provide a credential to the actors, and they will be able to update their credentials. 
+ 
+The first dedicated dashboard for the CEO, where they monitor all operations. The operations manage their workers, products, and expenses and send emails. The CEO is the only person in the system with access to all operations. CEO analyzes company operations, including the performance of their workers and inventory. The system will present the company expenditure report.
+ 
+The second dashboard is for office employees. They have access to manage emails, shopkeepers' orders, vendors' shipments, and company expenses. The company's expenses are the CEO, rider, and warehouse salaries. The system will present the report of payment to the vendor and shopkeeper. An employee will enter all the shipments that the company receives. They add product identifiers.
+ 
+The third dashboard is for the warehouse manager, who receives feasibility reports of office employees and prepares the order for the rider. The warehouse manager must record the labor used in preparing the order. It could provide the miscellaneous expenses of the warehouse, like electricity costs, etc. They can view the product and make suitable changes according to the requirements.
+ 
+The fourth dashboard is for a rider, which is basically the communicator between the company and the shopkeeper.
+The rider is responsible for taking orders from the shopkeeper. 
+Enter order details into the system. 
+The riders will check the current orders assigned to them by the company. They will pick up the shipment from the warehouse and delivery them to the shopkeeper. The system will present the routes to the destination with the order detail. The rider received a specific amount of fuel to perform the operations. The prescribed fuel is calculated according to the formula. They can see all the products. The product will be sorted in any order. Search for a specific product from a wide range of available products. The system will deploy different sharp algorithms to access the desired date orders quickly. Able to place the order and view the detail of the order as well. 
+ 
+The system will present the report to the CEO according to the performance of their workers, expenditures, sales and profit, salaries, inventory report, riders' performance, shopkeeper and vendor payment, workers' report, individual warehouse report, and miscellaneous expenses.
+Like how many products are received in the warehouse, how many products are left, how many products are delivered to company clients, how many riders have done shipments, which rider performs most shipments, and which rider needs to perform better. It also includes how many orders a shopkeeper placed and whether the company received the payment. 
+ 
+The email notification mechanism is embedded in the system, which helps the company communicate within and outside with other vendors and shopkeepers. After the rider has confirmed the order, the system will send an email to the company. The company will send the order details to the warehouse manager to prepare the shipment for the rider. The rider also received the email for the delivery of the order. The employee emails the CEO for any need of assistance with an issue. The warehouse manager and rider also mail to the company office for any assistance. In external communication, the client will receive a confirmation email from the system about their order. They also take assistance from the company with any issue. 
+ 
+All the data is stored in an effective data structure to extract the data according to the need of the system actor and stakeholder.
+%-------------------------------------------------------
+%-----------------------Project Fectures----------------
+\section{Project Features}
+
+\begin{enumerate}
+\item CEO is able to manage employees, warehouse manager, rider, and shopkeeper.  
+\item CEO and Employee manage product-related operations.
+\item CEO will be able to analyze company operations.  
+\item Warehouse manager readies the shipment for the rider. 
+\item Rider delivered the shipment to their shopkeeper. 
+\item Riders are able to select the shortest route to reach the destination.  
+\item One user is able to notify other users through email.
+\item Riders are able to view products and place an order. 
+\item System presents different reports that will be generated.
+
+\end{enumerate}
+
+
+%-------------------------------------------------------
+%-----------------------Technology Stack----------------
+\newpage
+\section{Technology Stack}
+The system is designed, developed, and tested in a desktop application. The system used the following language, packages, and an Integrated development environment.\\
+\begin{longtable}{lr} 
+ \caption{Details of technology used in the system. The version number is enclosed in brackets }\\
+\begin{tabular}{ | m{4cm} | m{12cm}| } 
+  \hline
+Language & C \#  (7.3)  \\
+ \hline
+ Framework & .Net framework (4.7.2) \\
+ \hline
+IDE  & Microsoft Visual Studio 2022
+ \\ \hline
+ Packages    & 
+Dynamic Language Runtime (1.3.3),
+Entity Framework (6.4.4),
+GMap.NET.Windows (2.1.7),
+Microsoft.CSharp (4.7.0),
+Newtonsoft.Json (13.0.1),
+Stub.System.Data.SQLite.Core.NetFramework (1.0.115.5),
+System.Buffers (4.5.1),
+System.Data.SqlClient (4.8.3)
+System.Data.SQLite (1.0.115.5)
+System.Memory (4.5.5)
+System.Numerics.Vectors (4.5.0)
+System.Reflection.Emit (4.3.0)
+System.Runtime.CompilerServices.Unsafe (4.5.3)
+System.Security.Principal.Windows (5.0.0)
+ 
+ \\ \hline
+\end{tabular}
+\end{longtable}
+\addcontentsline{toc}{section}{System Requirement }
+\section*{System Requirement}
+\begin{longtable}{lr} 
+ \caption{To run Merchant Monetary System, your computer must meet the minimum technical specifications outlined below. For optimum performance, use recommended system specifications.}\\
+\begin{tabular}{ | m{4cm} | m{12cm}| } \hline
+Processor & 
+Multicore Intel® or AMD processor (2 GHz or faster processor with SSE 4.2 or later) with 64-bit support
+ \\ \hline
+Operating system & Windows 8
+ \\ \hline
+RAM & 4 GB
+ \\ \hline
+Monitor resolution & 1280 x 800 display at 100%
+ \\ \hline
+Hard disk space & 1 GB of available hard-disk space
+ \\ \hline
+Internet & 
+An active Internet connection is required to find the routes on  map. 
+  \\ \hline
+\end{tabular}
+\end{longtable}
+%-------------------------------------------------------
+%-----------------------Project Actors----------------
+\section{Project Actors}
+There are a total of four actors in the system and two stakeholders. Their titles and roles are:
+\begin{itemize}
+\item \textbf{ CEO:} The company's owner manages all the operations.
+\item \textbf{Employee:} They are assistants to CEO to help in company operations. 
+\item \textbf{Warehouse Manager:} Received the instructions from the employee and ready the shipment for the rider, and managed other expenses.
+\item \textbf{Rider:} They take orders from different shopkeepers and deliver the product according to pre-subscribed routes defined by the system.
+\end{itemize}
+The stakeholders are:
+\begin{itemize}
+\item \textbf{Shopkeeper:} Getting the goods and services from the company.
+\item \textbf{Vendor:} The vendor will provide the products to the company. 
+\end{itemize}
+%-------------------------------------------------------
+%-----------------------Use Cases----------------
+\section{Use Cases}
+%------------------------------------------
+\addcontentsline{toc}{section}{Use Case 1}
+\section*{Use Case 1:Log In}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U01   \\\hline
+Name  &  Login \\ \hline
+Actor &   CEO, Employee, Rider, Warehouse Manager \\ \hline
+Description & The login screen will be presented. The actor will select theor role and enter their username and password. And click on the login button. The system will check for its validity. The system will present the respective dashboard.
+\\ \hline
+Pre-Condition & The respective actor will initiate the system, and the login in form is presented.  \\
+\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to take identifiers.
+\item Actor selects his/her role from the given list.   
+\item Actor enters his/her username.
+\item Actor enters his/her password.
+\item Actor clicks on the login button. 
+\end{enumerate}
+Extensions (or Alternative Flows):
+
+ *a. If forgot password button is clicked 
+ \begin{enumerate}
+		\item U02 will initiate
+	\end{enumerate}
+ *b. If the exit button is clicked
+	\begin{enumerate}
+		\item System will close
+	\end{enumerate}
+ 2a. If the actor doesn't select his/her role.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3a. If the actor doesn't enter his/her username.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter his/her password.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. if the selected role doesn't exist with existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. if the entered username doesn't exist with existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5c. if the entered password doesn't exist with existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+	%---------------------
+	
+\\ \hline
+Post-Condition & Respective Dashboard will be presented   \\\hline
+%\end{tabular}
+\end{longtable}
+%-------------------------------------------------------
+\section*{Use Case 2:Forgot Password}
+\addcontentsline{toc}{section}{Use Case 2}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U02  \\\hline
+
+Name  	    & Forgot Password  \\ \hline
+
+Actor     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
+
+Description & Already registered users can change their password. The actor selects their role and enters his username and password. Then the actor confirms their password and clicks on Update Button; their password will be changed. \\ \hline
+
+Pre-Condition & User must be registered in the system. Forgot Password screen is presented.  \\ \hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to enter the identifiers.
+\item Actor selects his/her role from the given list.   
+\item Actor enters his/her username.
+\item Actor enters his/her password.
+\item Actor confirms his/her password.
+\item Actor clicks on the Update button.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If forgot password button is clicked \\
+& \begin{enumerate}
+		\item U02 will initiate
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All fields will get cleared.
+	\end{enumerate}
+
+2a. If the actor doesn't select his/her role.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. If the actor doesn't enter his/her username.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter his/her password.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+5a. if the selected role doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. if the entered username doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Flow & 5c. if the entered password doesn't exist with in existing data
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+	
+5d. if the password doesn't match the password that the user confirmed
+	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+	
+\\ \hline
+Post-Condition & Actor's Password Updated   \\\hline
+\end{longtable}
+
+%------------------------------------------
+\section*{Use Case 3:Detail of Accounts for CEO }
+
+\addcontentsline{toc}{section}{Use Case 3}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U03  \\\hline
+
+Name  	    & Detail of Account for CEO  \\ \hline
+
+Actor     	& CEO\\ \hline
+
+Description &  CEO can view the details of each user who have registered themselves on this system. CEO can filter out users with certain designations and certain attributes and can apply multiple filters to search out specific users and  their data. CEO can delete as well as edit users.\\ \hline
+
+Pre-Condition &  Detail of Accounts Screen is presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item  CEO selects the designation from the given list.
+\item  CEO selects the attribute from the given list. 
+\item  CEO could search the data from the identifier.
+\item  CEO selects the filters from the given list.
+\item  CEO clicks on the Go button.
+\item  CEO selects the data(any row shown in the grid )from the grid. 
+\item  CEO clicks on the Edit button, and a new Edit user screen opens.
+\item  CEO clicks on the Delete button.
+\item  CEO clicks on the Close button.
+
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+
+& 1. If CEO did not select any designation from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+      & 2. If CEO did not select any attribute from the drop-down.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 3a. If CEO did not select any designation and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\
+& 3b. If CEO did not select any Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+& 3c. If CEO did not select any designation and  Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+
+& 4a. If CEO did not select any Filter from the given list \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+& 4b. If CEO did not select any Attribute from the given list and select any filter  \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+
+& 5a. If CEO did not select any Attribute, Designation, or filter from the given list and not enter the data to be searched in identifier \\
+& \begin{enumerate}
+		\item Error Message box will be shown.
+	\end{enumerate}
+\\  
+& 6. If CEO did not select any data from the grid list.  \\
+& \begin{enumerate}
+		\item No operation is performed.
+	\end{enumerate}
+\\ \hline  
+& 7. If CEO did not select any data from the grid list and clicked the edit button.\\
+& \begin{enumerate}
+		\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\
+Flow       & 8. If CEO did not select any data from the grid list and clicked the delete button.\\
+ 	&\begin{enumerate}
+			\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\ \hline 
+
+
+Post-Condition &  Data from selected row will be deleted or updated  \\ \hline
+
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 4:Detail of Accounts for Employee }
+\addcontentsline{toc}{section}{Use Case 4}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U04  \\\hline
+
+Name  	    & Detail of Account for Employee  \\ \hline
+
+Actor     	& Employee\\ \hline
+
+Description &  Employee can view the details of each user who have registered themselves on this system. Employee can filter out users with certain designations and certain attributes and can apply multiple filters to search out specific users and  their data. Employee can delete as well as edit users.\\ \hline
+
+Pre-Condition &  Detail of Accounts Screen is presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item  Employee selects the designation from the given list.
+\item  Employee selects the attribute from the given list. 
+\item  Employee could search the data from the identifier.
+\item  Employee selects the filters from the given list.
+\item  Employee clicks on the Go button.
+\item  Employee selects the data(any row shown in the grid )from the grid. 
+\item  Employee clicks on the Edit button, and a new Edit user screen opens.
+\item  Employee clicks on the Delete button.
+\item  Employee clicks on the Close button.
+
+
+\end{enumerate}\\ \hline
+
+&Extensions (or Alternative Flows):\\
+
+& 1. If Employee did not select any designation from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+      & 2. If Employee did not select any attribute from the drop-down.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 3a. If Employee did not select any designation and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\
+& 3b. If Employee did not select any Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+& 3c. If Employee did not select any designation and  Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+
+& 4a. If Employee did not select any Filter from the given list \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+& 4b. If Employee did not select any Attribute from the given list and select any filter  \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+
+& 5a. If Employee did not select any Attribute, Designation, or filter from the given list and not enter the data to be searched in identifier \\
+& \begin{enumerate}
+		\item Error Message box will be shown.
+	\end{enumerate}
+\\  
+& 6. If Employee did not select any data from the grid list.  \\
+& \begin{enumerate}
+		\item No operation is performed.
+	\end{enumerate}
+
+\\
+& 7. If Employee did not select any data from the grid list and clicked the edit button.\\
+& \begin{enumerate}
+		\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\
+      & 8. If Employee did not select any data from the grid list and clicked the delete button.\\
+ 	&\begin{enumerate}
+			\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\ \hline 
+
+
+Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
+
+\end{longtable}
+%-------------------------------------------------------
+\section*{Use Case 5:SignUp}
+\addcontentsline{toc}{section}{Use Case 5}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U05   \\\hline
+Name  &  SignUp \\ \hline
+Actor &    CEO, Employee \\ \hline
+Description & Actor select the designation of the worker from the given list, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
+Pre-Condition & The system presents the SignUp screen \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor is ready to create the identifiers.   
+\item Actor selects the designation of the worker from the given list. 
+\item Actor enters worker name.
+\item Actor enters worker's password.
+\item Actor confirms the entered password.
+\item Actor enters worker's CNIC number.
+\item Actor enters worker gender. 
+\item Actor enters worker contact number. 
+\item Actor enters worker's email address.
+\item Actor enters worker's home address. 
+\item If the designation is rider, then select the vehicle from the list.
+\item Actor clicks on the create account button, and the system sends an email.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+3a. If the actor doesn't enter the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the actor enters an invalid worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the actor doesn't enter the worker's username\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the actor doesn't enter the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the actor enters an invalid worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\
+
+& 6a. If the actor enters the worker's password does not match the previously entered password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+
+7a. If the actor doesn't enter the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the actor enters invalid the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9a. If the actor doesn't enter the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9b. If the actor enters invalid the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10a. If the actor doesn't enter the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10b. If the actor enters invalid the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+11a. If the actor doesn't enter the worker's home address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & The account information is stored in the database, and the screen will be closed. \\\hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Use Case 6:Update Account Information by CEO}
+\addcontentsline{toc}{section}{Use Case 6}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U06   \\\hline
+Name  &  Update Account Information by CEO \\ \hline
+Actor &   CEO\\ \hline
+Description & CEO could change the designation of their worker from the given list of designation, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
+Pre-Condition & The Updated Account Information screen is presented. The registered account information of the actors in the system will be presented in the identifiers.  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item CEO is ready to update the identifiers.   
+\item CEO selects the designation of the worker from the given list to change their role. 
+\item  CEO changes their or worker's name.
+\item  CEO changes their or worker's username.
+\item  CEO changes their or worker's password.
+\item  CEO confirms the entered password.
+\item  CEO changes their or worker's CNIC number.
+\item CEO changes their or worker's gender. 
+\item CEO changes their or worker's contact number. 
+\item CEO changes their or worker's email address.
+\item CEO changes their or worker's home address. 
+\item CEO changes the vehicle from the given list.
+\item CEO clicked on the update account button and the system sends an email.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+3a. If the CEO doesn't enter their or the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the CEO enters invalid their or the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a. If the CEO doesn't enter their or the worker's username\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the CEO doesn't enter their or the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the CEO enters invalid their or the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a. If the CEO enter their or the worker's password does not match the previously entered password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7a. If the CEO doesn't enter their or the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the CEO enters invalid their or the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9a. If the CEO doesn't enter their or the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9b. If the CEO enters invalid their or the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10a. If the CEO doesn't enter their or the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10b. If the CEO enters invalid their or the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+11a. If the CEO doesn't enter their or the worker's home address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  The account information is updated in the database, and the screen will be closed. \\\hline
+\end{longtable}
+%------------------------------------------
+%------------------------------------------
+\section*{Use Case 7:Update Account Information by Employee}
+\addcontentsline{toc}{section}{Use Case 7}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U07   \\\hline
+Name  &  Update Account Information by Employee \\ \hline
+Actor &    Employee \\ \hline
+Description & employee could change the designation of the company workers (except there and the CEO) from the given list of designation, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
+Pre-Condition & The Updated Account Information screen is presented. The registered account information of the actors in the system will be presented in the identifiers.  \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+
+\begin{enumerate}
+\item Employee is ready to update the identifiers.   
+\item Employee selects the designation of the worker from the given list to change their role. 
+\end{enumerate}
+
+\begin{enumerate}
+\item  Employee changes worker name.
+\item  Employee changes worker's password.
+\item  Employee confirms the entered password.
+\item  Employee changes worker's CNIC number.
+\item Employee changes worker gender. 
+\item Employee changes worker contact number. 
+\item Employee changes worker's email address.
+\item Employee changes worker's home address.
+\item Employee changes the vehicle from the given list. 
+ \item Employee clicked on the update account button and the system sends an email.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+3a. If the employee doesn't enter the worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the employee enters an invalid worker's name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5a. If the employee doesn't enter the worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+5b. If the employee enters an invalid worker's password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+6a. If the employee enters the worker's password does not match the previously entered password \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7a. If the employee doesn't enter the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+7b. If the employee enters invalid the worker's CNIC number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9a. If the employee doesn't enter the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+9b. If the employee enters invalid the worker's contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10a. If the employee doesn't enter the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+10b. If the employee enters invalid the worker's email address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+11a. If the employee doesn't enter the worker's home address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition & The account information is updated in the database, and the screen will be closed.\\\hline
+\end{longtable}
+%------------------------------------------
+\section*{Use Case 8:Add Products}
+
+\addcontentsline{toc}{section}{Use Case 8}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID &  U08 \\\hline
+
+Name  	    &  Add Products \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Vendor arrives at the company with a new product. The respective actor adds the product name, weight, and volume and selects a category, vendor, and sensitivity type from the list. Then the actor clicks on Add button. \\ \hline
+
+
+
+Pre-Condition &  New Product arrives, and the CEO or Employee wants to add them into the system. The Add Product Form will be presented. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to add product.
+\item Product ID will automatically be generated.
+\item Actor enters Product Name.
+\item Actor selects a category from the given list.
+\item Actor selects the vendor of the product from the given list.
+\item Actor enters the weight of each product.
+\item Actor enters the volume of each product.
+\item Actor selects product's sensitivity type.
+\item Actor clicks on Add Button.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Back button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All fields will get cleared.
+	\end{enumerate}
+3a. If the actor doesn't enter the product name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4a. If the actor doesn't select a category.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+5a. If the actor doesn't select a vendor.
+ 	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+6a. If the actor doesn't enter the weight of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6b. If the actor enters the invalid weight of the product, i.e., type string while entering weight.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7a. If the actor doesn't enter the volume of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7b. If the actor enters the invalid volume of the product, i.e., type string while entering volume.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &    A new product info will be added to system\\ \hline
+
+\end{longtable}
+%------------------------------------------
+\section*{Use Case 9:Update Products}
+\addcontentsline{toc}{section}{Use Case 9}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID &  U09 \\\hline
+
+Name  	    &  Update Products \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Updation Required for product details. The actor updates the identifiers where required and clicks on the Update Button. Details of the product will be updated in the system. \\ \hline
+
+Pre-Condition &  Updation Required for Product Details. An update product screen will be presented. All fields are filled according to the existing details. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to update product identifiers.
+\item Product ID is automatically disabled and non-editable.
+\item Actor updates Product Name.
+\item Actor updates a category.
+\item Actor updates the vendor of the product.
+\item Actor updates the weight of each product.
+\item Actor updates the volume of each product.
+\item Actor updates product's sensitivity type.
+\item Actor clicks on the Update Button.
+
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Back button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All fields will get cleared.
+	\end{enumerate}
+3a. If the actor doesn't enter the product name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6a. If the actor doesn't enter the weight of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6b. If the actor enters the invalid weight of the product, i.e., type string while entering weight.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7a. If the actor doesn't enter the volume of the product.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7b. If the actor enters the invalid volume of the product, i.e., type string while entering volume.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &    The product with updated details will be added to the system.\\ \hline
+
+\end{longtable}
+
+
+%------------------------------------------
+\section*{Use Case 10:Detail of Products  }
+\addcontentsline{toc}{section}{Use Case 10}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U10  \\\hline
+
+Name  	    & Detail of Products  \\ \hline
+
+Actor     	& CEO,Employee\\ \hline
+
+Description &  Actor can view the details of each product that registered on this system. Actor can filter out products with certain attributes and can apply multiple filters to search out specific users and  their data. Actor can delete as well as edit products.\\ \hline
+
+Pre-Condition &  Detail of Products Screen will be  presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item  Actor selects the attribute from the given list. 
+\item  Actor could search the data from the identifier.
+\item  Actor selects the filters from the given list.
+\item  Actor clicks on the Go button.
+\item  Actor selects the data(any row shown in the grid )from the grid. 
+\item  Actor clicks on the Edit button, and a new Edit user screen opens.
+\item  Actor clicks on the Delete button.
+\item  Actor clicks on the Close button.
+\end{enumerate}\\ \hline
+
+
+&Extensions (or Alternative Flows):\\
+
+& 1. If Actor did not select any attribute from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+& 2a. If Actor did not select any Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+& 2b. If Actor did not select any designation and  Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+
+& 3a. If Actor did not select any Filter from the given list \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+& 3b. If Actor did not select any Attribute from the given list and select any filter  \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+
+& 4a. If Actor did not select any Attribute, Designation, or filter from the given list and not enter the data to be searched in identifier \\
+& \begin{enumerate}
+		\item Error Message box will be shown.
+	\end{enumerate}
+\\  
+& 5. If Actor did not select any data from the grid list.  \\
+& \begin{enumerate}
+		\item No operation is performed.
+	\end{enumerate}
+	\\
+& 6. If Actor did not select any data from the grid list and clicked the edit button.\\
+& \begin{enumerate}
+		\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\
+&7. If Actor did not select any data from the grid list and clicked the delete button.\\
+ 	&\begin{enumerate}
+			\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\ \hline 
+
+
+Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
+
+
+\end{longtable}
+
+
+
+%------------------------------------------
+
+\section*{Use Case 11:Add Category}
+
+\addcontentsline{toc}{section}{Use Case 11}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID &  U11 \\\hline
+
+Name  	    &  Add Category \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Adding a category for a product will initiate with Add Category screen. The respective actor adds a category name and clicks on Add Button. The category is added to the system.  \\ \hline
+
+Pre-Condition &  Add Category screen will be presented. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to enter identifier.
+\item Actor enters the category name
+\item Actor clicks on the Add Button.
+
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item Category identifier will get cleared.
+	\end{enumerate}
+2a. Actor doesn't enter the category name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+2b. Actor enters the invalid category, i.e., integer instead of string
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &    The Category will be added to the system. \\ \hline
+
+\end{longtable}
+
+%------------------------------------------
+\section{Use Case 12:Update Category}
+
+\addcontentsline{toc}{section}{Use Case 12}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID &  U12 \\\hline
+
+Name  	    &  Update Category \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Updating a category will initiate with the Update Category screen. The respective Actor updates the category name and clicks on the Update Button. The category is updated.  \\ \hline
+
+Pre-Condition &  Update Category screen will be presented and the identifier is already filled with previously entered category \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to update identifier.
+\item Actor updates the category name
+\item Actor clicks on the Update Button.
+
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item Category identifier will get cleared.
+	\end{enumerate}
+2a. Actor doesn't enter the category name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+2b. Actor enters the invalid category, i.e., integer instead of string
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &    The Category will be updated and added to the system. \\ \hline
+
+\end{longtable}
+%------------------------------------------
+
+\section{Use Case 13:Add Vendor}
+
+\addcontentsline{toc}{section}{Use Case 13}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+
+Use Case ID &  U13 \\\hline
+
+Name  	    &  Add Vendor\\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  The respective actors will add the manufacturer or vendor details by entering the details, e.g.,  its name, address, landline number, concerned person, and contact. Then click on Add Button. Now you have a new vendor for your company \\ \hline
+
+Pre-Condition &  Add Vendor screen will be presented to the respective actors. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to enter the identifiers.
+\item Actor enters vendor name.
+\item Actor enters vendor's landline number.
+\item Actor enters vendor's address.
+\item Actor enters the concerned person's name.
+\item Actor enters the concerned person's contact number.
+\item Actor clicks on Add button.
+\end{enumerate}
+
+
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+2a. Actor doesn't enter the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+
+3a. Actor doesn't enter the vendor's landline number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4a. Actor doesn't enter the vendor's address.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+
+5a. Actor doesn't enter the concerned person's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6a. Actor doesn't enter the concerned person's contact number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7a. Actor enters the invalid landline number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7b. Actor enters the invalid concerned person's number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Vendor details will be added to the system. \\ \hline
+
+\end{longtable}
+
+%------------------------------------------
+\section{Use Case 14:Update Vendor}
+
+\addcontentsline{toc}{section}{Use Case 14}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+
+Use Case ID &  U14 \\\hline
+
+Name  	    &  Update Vendor\\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  The respective actors will update the manufacturer or vendor details by initiating the Update vendor screen. Update the details of your own choice and then click on Update Button. Vendor details have been updated. \\ \hline
+
+Pre-Condition &  Update Vendor screen will be presented to the respective actors, and existing details are already filled in the identifiers fields. \\ \hline
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to update the identifiers.
+\item Actor updates vendor name.
+\item Actor updates vendor's landline number.
+\item Actor updates the vendor's address.
+\item Actor updates the concerned person's name.
+\item Actor updates the concerned person's contact number.
+\item Actor clicks on Add button.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+2a. Actor doesn't enter the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. Actor doesn't enter the vendor's landline number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4a. Actor doesn't enter the vendor's address.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5a. Actor doesn't enter the concerned person's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+6a. Actor doesn't enter the concerned person's contact number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7a. Actor enters the invalid landline number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+7b. Actor enters the invalid concerned person's number, i.e., string instead of numbers
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Vendor details will be updated and added to the system. \\ \hline
+
+\end{longtable}
+
+%------------------------------------------
+\section{Use Case 15:Add Stock}
+
+\addcontentsline{toc}{section}{Use Case 15}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID &  U15 \\\hline
+
+Name  	    &  Add Stock \\ \hline
+
+Actor     	& CEO, Employee \\ \hline
+
+Description &  Stock of added products will now add. Initiate Add Stock screen and add identifiers. Select product; enters quantity retail price and cost price, and select expiry manufacturing and date of stock add. then click on Add button. Stock will be added.\\ \hline
+
+Pre-Condition &  Add Stock screen will be presented to the respective actor. \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+
+\item Actor is ready to enter the stock.
+\item Actor selects the product from the given list.
+\item Actor enters the product quantity.
+\item Actor enters the Retail Price.
+\item Actor enters the Cost Price.
+\item Actor selects the date of the stock added.
+\item Actor selects the manufacturing date of the stock.
+\item Actor selects the expiry date of the stock.
+\item Actor clicks on Add button.
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+& *a. If the Close button is clicked \\
+& \begin{enumerate}
+		\item Actor's respective dashboard will be presented.
+	\end{enumerate}
+*b. If the reset button is clicked \\
+&	\begin{enumerate}
+		\item All identifiers will get cleared.
+	\end{enumerate}
+2a. actor doesn't enter the vendor's name.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3a. if the actor enters string instead of integers.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+3b. if the actor enters a negative quantity.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+
+4a. if the actor enters a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+4b. if the actor enters a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5a. if the actor enters a string instead of a number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+5b. if the actor enters a negative number.
+ 	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9a. If the manufacturing date is greater than the expiry date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9b. If the manufacturing date is greater than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+9c. If the expiry date is less than the current date
+	\begin{enumerate}
+		\item Error Signal will be presented.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Stock of the product will be added. \\ \hline
+\end{longtable}
+%------------------------------------------
+\section{Use Case 16:Add WareHouse}
+
+\addcontentsline{toc}{section}{Use Case 16}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U16  \\\hline
+
+Name  	    & Add WareHouse  \\ \hline
+
+Actor     	& CEO,Employee\\ \hline
+
+Description &  . The respective actor adds the warehouse name, area, city, state, and capacity volume. Then the actor clicks on Next button. \\ \hline
+
+Pre-Condition &  Add WareHouse Screen will be presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item Actor is ready to add wareHouse.
+\item Actor enters WareHouse Name.
+\item Actor selects the area of wareHouse.
+\item Actor selects the city of wareHouse.
+\item Actor selects the state of wareHouse.
+\item Actor enters the capacity volume of wareHouse.
+\item Actor clicks on Next Button.
+
+\end{enumerate}\\
+
+
+&Extensions (or Alternative Flows):\\
+& 2a. If Actor did not enter the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 2b. If Actor enter invalid characters in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}\\
+& 2c. If Actor enter inproper data(single alphabet etc) in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 2d. If Actor enter digits in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+& 3. If Actor did not select any area from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+&  4. If Actor did not select any city from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+&  5. If Actor did not select any state from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\
+&  6a. If Actor did not enter capacity volume  from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\
+
+& 6b. If Actor enter invalid characters in the wareHouse capacity. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 6c. If Actor enter inproper data(alphabets, negative values etc) in the wareHouse capacity. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+
+
+\\ \hline 
+
+
+Post-Condition &  after clicked next button new form of Add WareHouse Manager will be presented.  \\ \hline
+
+
+\end{longtable}
+
+%------------------------------------------
+
+
+\section{Use Case 17:Update WareHouse}
+
+\addcontentsline{toc}{section}{Use Case 17}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U17  \\\hline
+
+Name  	    & Add WareHouse  \\ \hline
+
+Actor     	& CEO,Employee\\ \hline
+
+Description &  . The respective actor can edit the warehouse name, area, city, state, and capacity volume.  \\ \hline
+
+Pre-Condition &  Edit WareHouse Screen will be presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item Actor is ready to edit wareHouse.
+\item Actor edits WareHouse Name.
+\item Actor edits the area of wareHouse.
+\item Actor edits the city of wareHouse.
+\item Actor edits the state of wareHouse.
+\item Actor updates the capacity volume of wareHouse.
+\item Actor clicks on Next Button.
+
+\end{enumerate}\\
+
+
+&Extensions (or Alternative Flows):\\
+& 2a. If Actor did not enter the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\
+& 2b. If Actor enter invalid characters in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 2c. If Actor enter inproper data(single alphabet etc) in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 2d. If Actor enter digits in the wareHouse name. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+& 3. If Actor did not select any area from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+&  4. If Actor did not select any city from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+&  5. If Actor did not select any state from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\
+&  6a. If Actor did not enter capacity volume  from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\
+
+& 6b. If Actor enter invalid characters in the wareHouse capacity. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+& 6c. If Actor enter inproper data(alphabets, negative values etc) in the wareHouse capacity. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline 
+Post-Condition &  Dashboard will be presented.  \\ \hline
+
+\\end{longtable}
+
+
+
+%------------------------------------------
+
+
+
+\section{Use Case 18:View WareHouse  }
+
+\addcontentsline{toc}{section}{Use Case 18}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+
+Use Case ID & U18  \\\hline
+
+Name  	    & Detail of WareHouses  \\ \hline
+
+Actor     	& CEO,Employee\\ \hline
+
+Description &  Actor can view the details of each WareHouse that registered on this system. Actor can filter out WareHouses with certain attributes and can apply multiple filters to search out specific wareHouse and  their data. Actor can delete as well as edit wareHouses.\\ \hline
+
+Pre-Condition &  Detail of Accounts Screen is presented. \\ \hline
+
+Flow       & Main Scenario:
+
+\begin{enumerate}
+\item  Actor selects the attribute from the given list. 
+\item  Actor could search the data from the identifier.
+\item  Actor selects the filters from the given list.
+\item  Actor clicks on the Go button.
+\item  Actor selects the data(any row shown in the grid )from the grid. 
+\item  Actor clicks on the Edit button, and a new Edit user screen opens.
+\item  Actor clicks on the Delete button.
+\item  Actor clicks on the Close button.
+
+
+\end{enumerate}\\ 
+
+&Extensions (or Alternative Flows):\\
+
+& 1. If Actor did not select any attribute from the drop-down. \\
+& \begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ 
+
+& 2a. If Actor did not select any Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ 
+& 2b. If Actor did not select any designation and  Attribute and entered the data in the identifier to search. \\
+& \begin{enumerate}
+		\item The searched data will show from the first attribute.
+	\end{enumerate}
+\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+
+& 3a. If Actor did not select any Filter from the given list \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+& 3b. If Actor did not select any Attribute from the given list and select any filter  \\
+& \begin{enumerate}
+		\item No operation of the filter is applied to the data.
+	\end{enumerate}
+\\ 
+
+& 4a. If Actor did not select any Attribute, Designation, or filter from the given list and not enter the data to be searched in identifier \\
+& \begin{enumerate}
+		\item Error Message box will be shown.
+	\end{enumerate}
+\\  
+& 5. If Actor did not select any data from the grid list.  \\
+& \begin{enumerate}
+		\item No operation is performed.
+	\end{enumerate}
+\\ 
+& 6. If Actor did not select any data from the grid list and clicked the edit button.\\
+& \begin{enumerate}
+		\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\
+Flow       & 7. If Actor did not select any data from the grid list and clicked the delete button.\\
+ 	&\begin{enumerate}
+			\item No operation I performed on any data list in the grid.
+            \item Message Box will be shown.
+	\end{enumerate}
+\\ \hline 
+
+
+Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
+
+\end{longtable}
+
+%------------------------------------------
+\section{Use Case 19:Take Order}
+
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Use Case ID &  U19 \\\hline
+
+Name  	    &  Take Order \\ \hline
+
+Actor     	& Rider \\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+Description &  Rider is now at the shop. The shopkeeper tells the rider about the products which he wants to order. The rider adds the product from the list with the specified quantity to the cart. The process continues until the shopkeeper orders all required products. Then the rider moves toward the Order Summary screen. Selects the shopkeeper from the list. The rider can change the order details. And in the end, click on the Buy button to place the order. \\ \hline
+
+Pre-Condition &  Rider has arrived at the shop, and the shopkeeper is giving him the order. Take Order screen is presented.  \\ \hline
+
+Flow & Main Scenario:
+
+\begin{enumerate}
+\item Actor is ready to take the order.
+
+\item Actor recommends different products to the shopkeeper.
+
+\item Actor adds the product to the cart by clicking on Add to Cart button with the shopkeeper's consent and requirement, i.e., the quantity of the shopkeeper's need.
+
+\item The process continues until the shopkeeper orders all required products.
+
+
+\item Actor clicks on View Cart.
+
+\item Order Summary screen will be presented.
+\item Grand Total Amount is shown at the bottom left of the screen.
+\item Actor selects the shopkeeper's name from the given list.
+
+\item Actor can update and remove the product from the ordered items list of the shopkeeper.
+
+\item Click on the Buy button at the end of the screen to confirm the order.
+
+\end{enumerate}
+
+Extensions (or Alternative Flows):\\
+
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
+
+*b. If the reset button is clicked in the Order Summary screen\\
+
+& \begin{enumerate}
+
+		\item Ordered items list will get cleared.
+
+	\end{enumerate}
+	\\ \hline
+\end{tabular}
+\begin{tabular}{ | m{3cm} | m{12cm}| } \hline
+& *c. If the back button is clicked in the Order Summary screen\\
+
+& \begin{enumerate}
+
+		\item Take Order screen will be presented.
+
+	\end{enumerate}
+
+3a. if the specified quantity is greater than the available quantity
+
+ 	\begin{enumerate}
+
+		\item Product will not add
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+3b. if the actor enters a negative quantity.
+
+ 	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+9a. If the Buy button is clicked with zero items ordered.
+
+	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+
+
+\\ \hline
+
+Post-Condition &  Order has been placed and is waiting for employee approval. Order status has been set as "Not Confirmed" \\ \hline
+
+\end{longtable}
+
+%------------------------------------------
+\section{Use Case 20:Confirm the Incoming Order}
+\addcontentsline{toc}{section}{Use Case 20}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID &  U20 \\\hline
+
+Name  	    &  Confirm the Incoming Order \\ \hline
+
+Actor     	& Employee \\ \hline
+Description  &  Order has now been placed by the rider and delivered to the employee for confirmation. Actor clicks on Confirm Button. The confirmation includes two things. Again it will check the product's availability in the warehouse and the rider's vehicle capacity. After successful validation, the order status will be changed from "Not Confirmed" to "Confirmed" in the View Order Details screen. The employee will email the warehouse manager and the assigned rider. \\ \hline
+
+Pre-Condition & Order has been received by the employee.  \\ \hline
+
+
+Flow & Main Scenario:
+
+
+
+\begin{enumerate}
+
+
+
+\item View Orders Details screen will be presented.
+
+\item Actor will click on the Confirm button against the first order.
+
+\item The system will check the product's availability in the warehouse.
+
+\item After Successful availability, a small screen for assigning a rider is presented
+
+\item Select the rider from the list.
+
+\item Check rider's vehicle's capacity and assign.
+
+\item Click on Assign Button, and the control will again shift back to the View Order Details screen.
+
+\item system automatically sends emails to the assigned rider and the warehouse manager.
+
+\end{enumerate}
+
+
+
+Extensions (or Alternative Flows):\\
+
+& *a. If the Close button is clicked \\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
+
+*b. If the remove button is clicked against any item\\
+
+& \begin{enumerate}
+
+		\item Corresponding order will get removed.
+
+	\end{enumerate}
+
+*c. If the back button is clicked\\
+
+& \begin{enumerate}
+
+		\item Actor's respective dashboard will be presented.
+
+	\end{enumerate}
+
+4a. if the products ordered are not available in the warehouse
+
+ 	\begin{enumerate}
+
+		\item Error Signal will be presented.
+
+	\end{enumerate}
+
+8a. If the rider's vehicle's capacity is insufficient to carry the order.
+
+ 	\begin{enumerate}
+
+		\item Assign button is disabled.
+
+	\end{enumerate}
+
+\\ \hline
+
+Post-Condition &  Order is confirmed now and the warehouse manager is notified about the order.\\ \hline
+
+\end{longtable}
+%------------------------------------------
+%-------------------------------------------------------
+%-------------------------------------------------------
+%-------------------------------------------------------
+\end{document}

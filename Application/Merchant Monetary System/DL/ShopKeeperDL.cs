@@ -5,83 +5,116 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Merchant_Monetary_System.Data_Structure.BST;
+using System.Windows.Forms;
+
 namespace Merchant_Monetary_System.DL
 {
     public sealed class ShopKeeperDL
     {
-        public static List<Shopkeeper> shopkeeperList = new List<Shopkeeper>();
+        public static List<string> names = new List<string>();
+        private static BST shopkeeperList = new BST();
+
+        public static BST ShopkeeperList { get => shopkeeperList; set => shopkeeperList = value; }
 
         public static void addShopkeeperIntoList(Shopkeeper shopkeeper)
         {
             shopkeeperList.Add(shopkeeper);
         }
-        public static void StoreDataIntoFiles(string path)
+        public static void StoreDataIntoFiles(string path,BST Shopkeeper)
         {
-            StreamWriter file = new StreamWriter(path);
-            foreach(Shopkeeper shopkeeper in shopkeeperList)
+
+            if(Shopkeeper.Head!=null)
             {
-                file.Write(shopkeeper.ShopkeeperName + "," + shopkeeper.Cnic + "," + shopkeeper.Email + "," + shopkeeper.ContactNumber + ",");
+                StoreSingleDataIntoFiles(path, Shopkeeper.Head);
+            }
+            
+        }
+        public static void StoreSingleDataIntoFiles(string path, BSTNode shopkeeper)
+        {
+            if (shopkeeper != null)
+            {
+                StreamWriter file = new StreamWriter(path,true);
+                DoublyLinkedListNode<Shop> Head = shopkeeper.Data.ShopList.Head;
+                file.Write(shopkeeper.Data.ShopkeeperName + "," + shopkeeper.Data.Cnic + "," + shopkeeper.Data.Email + "," + shopkeeper.Data.ContactNumber + ",");
                 int i = 0;
-                foreach (Shop shop in shopkeeper.ShopList)
+                while (Head != null)
                 {
                     if (i != 0) file.Write("|");
-                    file.Write(shop.Id + ";" + shop.ShopName + ";" + shop.City + ";" + shop.Area + ";" + shop.State);
+                    file.Write(Head.Data.Id + ";" + Head.Data.ShopName + ";" + Head.Data.City + ";" + Head.Data.Area + ";" + Head.Data.State);
                     i++;
+                    Head = Head.Next;
                 }
                 file.WriteLine();
+                file.Flush();
+                file.Close();
+                
+                StoreSingleDataIntoFiles(path, shopkeeper.Left);
+                StoreSingleDataIntoFiles(path, shopkeeper.Right);
             }
-            file.Close();
         }
 
         public static void LoadDataFromFiles(string path)
         {
-            StreamReader file = new StreamReader(path);
-            string record;
-            while((record = file.ReadLine()) != null && (record = file.ReadLine()) != null)
+            if (File.Exists(path))
             {
-                string[] SplittedRecord = record.Split(',');
-                string shopkeeperName = SplittedRecord[0];
-                double cnic = double.Parse(SplittedRecord[1]);
-                string email = SplittedRecord[2];
-                double contactNumber = double.Parse(SplittedRecord[3]);
-                Shopkeeper shopkeeper = new Shopkeeper(shopkeeperName, cnic, email, contactNumber);
-                string[] shops = SplittedRecord[4].Split('|');
-                foreach(string S in shops)
+                StreamReader file = new StreamReader(path);
+                string record;
+                while ((record = file.ReadLine()) != null)
                 {
-                    string[] eachShop = S.Split(';');
-                    string id = eachShop[0];
-                    string shopName = eachShop[1];
-                    string shopCity = eachShop[2];
-                    string shopArea = eachShop[3];
-                    string shopState = eachShop[4];
-                    Shop shop = new Shop(id, shopName, shopCity, shopArea, shopState);
-                    shopDL.addDataIntoList(shop);
-                    shopkeeper.ShopList.Add(shop);
-                    ShopKeeperDL.addShopkeeperIntoList(shopkeeper);
+                    string[] SplittedRecord = record.Split(',');
+                    string shopkeeperName = SplittedRecord[0];
+                    double cnic = double.Parse(SplittedRecord[1]);
+                    string email = SplittedRecord[2];
+                    double contactNumber = double.Parse(SplittedRecord[3]);
+                    Shopkeeper shopkeeper = new Shopkeeper(shopkeeperName, cnic, email, contactNumber);
+                    string[] shops = SplittedRecord[4].Split('|');
+                    foreach (string S in shops)
+                    {
+                        string[] eachShop = S.Split(';');
+                        string id = eachShop[0];
+                        string shopName = eachShop[1];
+                        string shopCity = eachShop[2];
+                        string shopArea = eachShop[3];
+                        string shopState = eachShop[4];
+                        Shop shop = new Shop(id, shopName, shopCity, shopArea, shopState);
+                        shopDL.addDataIntoList(shop);
+                        shopkeeper.ShopList.Add(shop);
+                        ShopKeeperDL.addShopkeeperIntoList(shopkeeper);
+                    }
                 }
+                file.Close();
             }
-            file.Close();
         }
 
+        public static BSTNode returnShopkeeper(double cnic)
+        {
+            BSTNode shopkeeper = ShopkeeperList.findNode(cnic);
+            return shopkeeper;
+        }
         public static Shopkeeper returnShopkeeperDetails(double cnic)
         {
-            foreach(Shopkeeper shopK in shopkeeperList)
-            {
-                if(cnic == shopK.Cnic)
-                {
-                    return shopK;
-                }
-            }
-            return null;
+            BSTNode shopkeeper = ShopkeeperList.findNode(cnic);
+            if (shopkeeper != null) return shopkeeper.Data;
+            else return null;
         }
 
         public static bool MatchShopkeeper(double cnic, string name)
         {
-            foreach(Shopkeeper shopK in shopkeeperList)
+            BSTNode Head = ShopkeeperList.Head;
+            while(Head != null)
             {
-                if(shopK.Cnic == cnic && shopK.ShopkeeperName == name)
+                if(Head.Data.Cnic == cnic && Head.Data.ShopkeeperName == name)
                 {
                     return true;
+                }
+                if(Head.Data.Cnic < cnic)
+                {
+                    Head = Head.Left;
+                }
+                else
+                {
+                    Head = Head.Right;
                 }
             }
             return false;
@@ -89,24 +122,25 @@ namespace Merchant_Monetary_System.DL
 
         public static bool deleteShopkeeper(Shopkeeper shopkeeper)
         {
-            foreach(Shopkeeper shopk in shopkeeperList)
+            BSTNode Head = ShopkeeperList.Head;
+            while (Head != null)
             {
-                if(shopkeeper == shopk)
+                if(Head.Data.Cnic == shopkeeper.Cnic)
                 {
-                    shopkeeperList.Remove(shopk);
+                    ShopkeeperList.remove(Head.Data);
                     return true;
                 }
             }
             return false;
         }
-        public static List<string> Shopkeepers_names() 
+        public static void Shopkeepers_names(BSTNode Head) 
         {
-            List<string> names = new List<string>();
-            foreach (Shopkeeper name in shopkeeperList) 
+            while (Head != null)
             {
-                names.Add(name.ShopkeeperName);
+                Shopkeepers_names(Head.Left);
+                names.Add(Head.Data.ShopkeeperName);
+                Shopkeepers_names(Head.Right);
             }
-            return names;
         }
         public static List<string> Shop_names(string shopkeeper)
         {

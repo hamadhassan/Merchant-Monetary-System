@@ -131,8 +131,8 @@ namespace Merchant_Monetary_System
         private void frmTakeOrder_Load(object sender, EventArgs e)
         {
             ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
-            List<string> names;
-            names= ShopKeeperDL.Shopkeepers_names();
+            List<string> names = new List<string>();
+            ShopKeeperDL.Shopkeepers_names(ShopKeeperDL.ShopkeeperList.Head);
             for (int i = 0; i < names.Count; i++)
                 txtbxName.Items.Add(names[i]);
             
