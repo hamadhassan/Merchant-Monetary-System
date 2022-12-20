@@ -19,11 +19,11 @@ namespace Merchant_Monetary_System
         public int Phone { get => phone; set => phone = value; }
         public double Revenue { get => revenue; set => revenue = value; }
 
-        public static Compnay Instance(string name,string address,int phone)
+        public static Compnay Instance(string name,string address,int phone, double revenue)
         {
             if (instance == null)
             {
-                instance = new Compnay(name,address,phone);
+                instance = new Compnay(name,address,phone,revenue);
             }
             return instance;
             
@@ -32,17 +32,32 @@ namespace Merchant_Monetary_System
         {
             return instance;
         }
+        public Compnay(string name, string address, int phone,double revenue)
+        {
+            this.name = name;
+            this.address = address;
+            this.phone = phone;
+            this.revenue = revenue; 
+        }
         public Compnay(string name, string address, int phone)
         {
             this.name = name;
             this.address = address;
             this.phone = phone;
         }
+        public Compnay()
+        {
+
+        }
         public void updateRecord(Compnay compnay)
         {
             this.name= compnay.name;
             this.address= compnay.address;
             this.phone = compnay.phone;
+        }
+        public void updateAmount(double revenue)
+        {
+            this.revenue = revenue;
         }
         
     }

@@ -99,14 +99,23 @@ namespace Merchant_Monetary_System.Forms.Payment
                 ledger.PaymentByName = comboBoxPaymenyByName.Text;
                 ledger.PaymentRecievedByDesignation = comboBoxPaymentReceivedBy.Text;
                 ledger.PaymentRecievedByName = comboBoxPaymentReceivedByName.Text;
+                if(comboBoxPaymentBy.Text == "Vendor") {
+                  Compnay c= new Compnay();
+                  
+                    c=CompanyDL.loadRecordFromFile2(FilePath.Company);
+                    c.Revenue = c.Revenue - ledger.Amount;
+                }
                 LedgerDL.addintoList(ledger);
+                
                 LedgerDL.StoreDataIntoFiles(FilePath.Ledger);
+
                 MessageBox.Show("Payment Added Successfully", "Adding Payment...", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
             else
             {
                 MessageBox.Show("Fill All fields correctly", "Alert Message!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         private void comboBoxPaymentReceivedByName_SelectedIndexChanged(object sender, EventArgs e)

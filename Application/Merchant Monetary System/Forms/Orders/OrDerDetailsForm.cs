@@ -16,6 +16,15 @@ namespace Merchant_Monetary_System
     public partial class OrDerDetailsForm : Form
     {
         string role;
+        string name;
+        DoublyLinkedList<Order> specificRider_orders;
+
+        public OrDerDetailsForm(string role, string name)
+        {
+            InitializeComponent();
+            this.role = role;
+            this.name = name;
+        }
         public OrDerDetailsForm(string role)
         {
             InitializeComponent();
@@ -41,7 +50,9 @@ namespace Merchant_Monetary_System
                 datagvProductDetails.Columns.Clear();
                 datagvProductDetails.DataSource = null;
                 datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                addIntoGrid(OrderDL.OrdersList);
+                if(role=="Rider") { specificRider_orders = OrderDL.getOrders_withrespectiveRider(name);
+                    addIntoGrid(specificRider_orders); }
+                else { addIntoGrid(OrderDL.OrdersList); }
                 DataGridViewButtonColumn VeiwProductList = new DataGridViewButtonColumn();
                 VeiwProductList.HeaderText = "Veiw Product List";
                 VeiwProductList.Text = "Veiw Product List";
@@ -56,7 +67,8 @@ namespace Merchant_Monetary_System
                     Update.UseColumnTextForButtonValue = true;
                     datagvProductDetails.Columns.Add(Update);
 
-                }if (role == "CEO" || role == "Employee") 
+                }
+                if (role == "CEO" || role == "Employee") 
                 {
                     DataGridViewButtonColumn AssignRider = new DataGridViewButtonColumn();
                     AssignRider.HeaderText = "Assign Rider";
@@ -65,12 +77,11 @@ namespace Merchant_Monetary_System
                     datagvProductDetails.Columns.Add(AssignRider);
                 }
 
-
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
          private void addIntoGrid(DoublyLinkedList<Order> orderLinkedList)
-        {
+         {
             DataTable dt = new DataTable();
             dt.Columns.Add("OrderID");
             dt.Columns.Add("Shopkeeper");
@@ -87,7 +98,7 @@ namespace Merchant_Monetary_System
                 Head = Head.Next;
             }
             datagvProductDetails.DataSource = dt;
-        }
+         }
 
         private void DataBind2(Order order)
         {
@@ -96,7 +107,11 @@ namespace Merchant_Monetary_System
                 datagvProductDetails.Columns.Clear();
                 datagvProductDetails.DataSource = null;
                 datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                addProductsIntoGrid(order.Order_products);
+                if (role == "Rider") 
+                { addProductsIntoGrid(specificRider_orders.Head.Data.Order_products); } else 
+                {
+                    addProductsIntoGrid(order.Order_products);
+                }
 
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }

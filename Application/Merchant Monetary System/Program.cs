@@ -32,18 +32,15 @@ namespace Merchant_Monetary_System
             VendorDL.loadRecordFromFile(FilePath.Vendors);
             ProductDL.loadRecordFromFile(FilePath.Products);
             OrderDL.loadRecordFromFile(FilePath.Orders);
+
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-               // Application.Run(new frmSignUp());
+                //Application.Run(new frmRoutes());
                 Application.Run(new frmRiderDashboard("Kabir", "CEO"));
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
-
-
-
-
 
         }
     }
