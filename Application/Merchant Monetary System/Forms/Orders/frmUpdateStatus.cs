@@ -15,10 +15,12 @@ namespace Merchant_Monetary_System
     public partial class frmUpdateStatus : Form
     {
         BL.Order previous=new Order();
+        string role;
         public frmUpdateStatus(Order previous,string role)
         {
             InitializeComponent();
-            this.previous =previous;   
+            this.previous =previous;
+            this.role = role;
 
         }
 

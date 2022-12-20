@@ -1,4 +1,5 @@
 ﻿using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.Data_Structure.BST;
 using Merchant_Monetary_System.DL;
 using Merchant_Monetary_System.Forms.Product;
 using System;
@@ -33,7 +34,7 @@ namespace Merchant_Monetary_System
             datagvShopkeeperDetails.Columns.Clear();
             datagvShopkeeperDetails.DataSource = null;
             datagvShopkeeperDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            datagvShopkeeperDetails.DataSource = ShopKeeperDL.shopkeeperList;
+            addIntoGrid(ShopKeeperDL.ShopkeeperList);
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
             Update.Text = "Update";
@@ -42,13 +43,37 @@ namespace Merchant_Monetary_System
             Delete.HeaderText = "Delete";
             Delete.Text = "Delete";
             Delete.UseColumnTextForButtonValue = true;
+            datagvShopkeeperDetails.Columns.Add(Update);
+            datagvShopkeeperDetails.Columns.Add(Delete);
+            datagvShopkeeperDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataGridViewButtonColumn Shops = new DataGridViewButtonColumn();
             Shops.HeaderText = "Shops";
             Shops.Text = "Shops";
             Shops.UseColumnTextForButtonValue = true;
-            datagvShopkeeperDetails.Columns.Add(Update);
-            datagvShopkeeperDetails.Columns.Add(Delete);
             datagvShopkeeperDetails.Columns.Add(Shops);
+        }
+
+        private void addEachIntoGrid(DataTable dt, BSTNode shopkeeper)
+        {
+            if(shopkeeper!=null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(shopkeeper.Data.ShopkeeperName, shopkeeper.Data.Cnic, shopkeeper.Data.Email, shopkeeper.Data.ContactNumber);
+                addEachIntoGrid(dt, shopkeeper.Left);
+                addEachIntoGrid(dt, shopkeeper.Right);
+            }
+        }
+
+        private void addIntoGrid(BST shopkeeperLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("CNIC");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Contact No.");
+            BSTNode Head = shopkeeperLinkedList.Head;
+            addEachIntoGrid(dt, Head);
+            datagvShopkeeperDetails.DataSource = dt;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -60,13 +85,15 @@ namespace Merchant_Monetary_System
         {
             if (datagvShopkeeperDetails.SelectedRows.Count == 1)
             {
+                Shopkeeper S;
                 int index = datagvShopkeeperDetails.CurrentCell.ColumnIndex;
-                Shopkeeper S = (Shopkeeper)datagvShopkeeperDetails.CurrentRow.DataBoundItem;
+                int rowInd = datagvShopkeeperDetails.CurrentCell.RowIndex;
+                double cnic = Double.Parse(datagvShopkeeperDetails.Rows[rowInd].Cells[1].Value.ToString());
+                S = ShopKeeperDL.returnShopkeeperDetails(cnic);
                 if (index == 4)
                 {
                     Form form = new UpdateShopKeeper(S);
                     form.ShowDialog();
-                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
                 }
                 else if (index == 5)
                 {
@@ -74,7 +101,7 @@ namespace Merchant_Monetary_System
                     if (done)
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                        ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                     }
                     else
                     {
@@ -86,11 +113,12 @@ namespace Merchant_Monetary_System
                     Form f = new ViewShops(S.ShopList);
                     f.ShowDialog();
                 }
+                ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                 DataBind();
             }
             else
             {
-                if (ShopKeeperDL.shopkeeperList.Count != 0)
+                if (ShopKeeperDL.ShopkeeperList.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
@@ -99,7 +127,11 @@ namespace Merchant_Monetary_System
         {
             if (datagvShopkeeperDetails.SelectedRows.Count == 1)
             {
-                Shopkeeper S = (Shopkeeper)datagvShopkeeperDetails.CurrentRow.DataBoundItem;
+                Shopkeeper S;
+                int index = datagvShopkeeperDetails.CurrentCell.ColumnIndex;
+                int rowInd = datagvShopkeeperDetails.CurrentCell.RowIndex;
+                double cnic = Double.Parse(datagvShopkeeperDetails.Rows[rowInd].Cells[1].Value.ToString());
+                S = ShopKeeperDL.returnShopkeeperDetails(cnic);
                 if (S != null)
                 {
                     Form f = new UpdateShopKeeper(S);
@@ -109,13 +141,13 @@ namespace Merchant_Monetary_System
                 }
                 else
                 {
-                    if (ShopKeeperDL.shopkeeperList.Count != 0)
+                    if (ShopKeeperDL.ShopkeeperList.Count != 0)
                         lblDatagvSignal.Text = "Select a row from the list";
                 }
             }
             else
             {
-                if (ShopKeeperDL.shopkeeperList.Count != 0)
+                if (ShopKeeperDL.ShopkeeperList.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }
@@ -124,7 +156,11 @@ namespace Merchant_Monetary_System
         {
             if (datagvShopkeeperDetails.SelectedRows.Count == 1)
             {
-                Shopkeeper S = (Shopkeeper)datagvShopkeeperDetails.CurrentRow.DataBoundItem;
+                Shopkeeper S;
+                int index = datagvShopkeeperDetails.CurrentCell.ColumnIndex;
+                int rowInd = datagvShopkeeperDetails.CurrentCell.RowIndex;
+                double cnic = Double.Parse(datagvShopkeeperDetails.Rows[rowInd].Cells[1].Value.ToString());
+                S = ShopKeeperDL.returnShopkeeperDetails(cnic);
                 if (S != null)
                 {
                     ShopKeeperDL.deleteShopkeeper(S);
@@ -135,7 +171,7 @@ namespace Merchant_Monetary_System
             }
             else
             {
-                if (ShopKeeperDL.shopkeeperList.Count != 0)
+                if (ShopKeeperDL.ShopkeeperList.Count != 0)
                     lblDatagvSignal.Text = "Select a row from the list";
             }
         }

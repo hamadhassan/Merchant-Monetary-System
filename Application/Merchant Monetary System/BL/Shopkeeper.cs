@@ -12,7 +12,7 @@ namespace Merchant_Monetary_System.BL
         private double cnic;
         private string email;
         private double contactNumber;
-        private List<Shop> shopList;
+        private DoublyLinkedList<Shop> shopList;
 
         public Shopkeeper(string shopkeeperName, double cnic, string email, double contactNumber)
         {
@@ -20,7 +20,7 @@ namespace Merchant_Monetary_System.BL
             Cnic = cnic;
             Email = email;
             ContactNumber = contactNumber;
-            ShopList = new List<Shop>();
+            ShopList = new DoublyLinkedList<Shop>();
         }
         public Shopkeeper()
         {
@@ -31,6 +31,6 @@ namespace Merchant_Monetary_System.BL
         public double Cnic { get => cnic; set => cnic = value; }
         public string Email { get => email; set => email = value; }
         public double ContactNumber { get => contactNumber; set => contactNumber = value; }
-        public List<Shop> ShopList { get => shopList; set => shopList = value; }
+        public DoublyLinkedList<Shop> ShopList { get => shopList; set => shopList = value; }
     }
 }

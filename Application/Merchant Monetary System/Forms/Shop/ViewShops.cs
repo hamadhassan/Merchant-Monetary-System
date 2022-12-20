@@ -15,8 +15,8 @@ namespace Merchant_Monetary_System
 {
     public partial class ViewShops : Form
     {
-        List<Shop> Shops;
-        public ViewShops(List<Shop> Shops)
+        DoublyLinkedList<Shop> Shops;
+        public ViewShops(DoublyLinkedList<Shop> Shops)
         {
             InitializeComponent();
             this.Shops = Shops;
@@ -29,13 +29,12 @@ namespace Merchant_Monetary_System
             datagvShopDetails.Visible = true;
             DataBind();
         }
-        
         private void DataBind()
         {
             datagvShopDetails.Columns.Clear();
             datagvShopDetails.DataSource = null;
+            addIntoGrid(Shops);
             datagvShopDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            datagvShopDetails.DataSource = Shops;
             DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
             Update.HeaderText = "Update";
             Update.Text = "Update";
@@ -49,6 +48,24 @@ namespace Merchant_Monetary_System
             datagvShopDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        private void addIntoGrid(DoublyLinkedList<Shop> shopLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("City");
+            dt.Columns.Add("Area");
+            dt.Columns.Add("State");
+            DoublyLinkedListNode<Shop> Head = shopLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Id, Head.Data.ShopName, Head.Data.City, Head.Data.Area, Head.Data.Area);
+                Head = Head.Next;
+            }
+            datagvShopDetails.DataSource = dt;
+        }
+
         private void datagvShopDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (datagvShopDetails.SelectedRows.Count == 1)
@@ -59,7 +76,7 @@ namespace Merchant_Monetary_System
                 {
                     Form form = new frmUpdateShop(S);
                     form.ShowDialog();
-                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper,ShopKeeperDL.ShopkeeperList);
                 }
                 else if (index == 5)
                 {
@@ -68,7 +85,7 @@ namespace Merchant_Monetary_System
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DataBind();
-                        ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                        ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper,ShopKeeperDL.ShopkeeperList);
                     }
                     else
                     {
@@ -98,7 +115,7 @@ namespace Merchant_Monetary_System
                     shopDL.deleteShop(Shops, S);
                     MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataBind();
-                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                 }
             }
             else
@@ -118,7 +135,7 @@ namespace Merchant_Monetary_System
                     Form f = new frmUpdateShop(S);
                     f.ShowDialog();
                     DataBind();
-                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper);
+                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                 }
                 else
                 {

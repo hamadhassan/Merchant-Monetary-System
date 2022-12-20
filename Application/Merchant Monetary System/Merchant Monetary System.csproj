@@ -115,6 +115,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Structure\BST\BST.cs" />
+    <Compile Include="Data Structure\BST\BSTNode.cs" />
     <Compile Include="Forms\Orders\OrDerDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
