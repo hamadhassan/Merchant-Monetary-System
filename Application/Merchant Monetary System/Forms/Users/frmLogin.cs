@@ -35,20 +35,27 @@ namespace Merchant_Monetary_System
             {//authorize to enter into the system 
                 if (cmbxDesignation.SelectedIndex == 1)
                 {
-                    frmCEODashboard frmCEODashboard = new frmCEODashboard();
+                    frmCEODashboard frmCEODashboard = new frmCEODashboard(cmbxDesignation.Text);
                     frmCEODashboard.Show();
                     this.Hide();
                 }
                 else if (cmbxDesignation.SelectedIndex == 2)
                 {
-                    frmEmployeeDashboard frmEmployeeDashboard = new frmEmployeeDashboard();
+                    frmEmployeeDashboard frmEmployeeDashboard = new frmEmployeeDashboard(cmbxDesignation.Text);
                     frmEmployeeDashboard.Show();
                     this.Hide();
 
                 }
                 else if (cmbxDesignation.SelectedIndex == 3)
                 {
-                    frmRiderDashboard frmriderDashboard = new frmRiderDashboard(txtbxUsername.Text);
+                    frmWarehouseManagerDashboard frmManagerDashboard = new frmWarehouseManagerDashboard(cmbxDesignation.Text);
+                    frmManagerDashboard.Show();
+                    this.Hide();
+
+                }
+                else if (cmbxDesignation.SelectedIndex == 4)
+                {
+                    frmRiderDashboard frmriderDashboard = new frmRiderDashboard(txtbxUsername.Text, cmbxDesignation.Text);
                     frmriderDashboard.Show();
                     this.Hide();
 

@@ -15,10 +15,12 @@ namespace Merchant_Monetary_System.Forms.Dashboards
     public partial class frmRiderDashboard : Form
     {
         public string name;
-        public frmRiderDashboard(string name)
+        public string role;
+        public frmRiderDashboard(string name,string role)
         {
             InitializeComponent();
             this.name = name;
+            this.role = role;
         }
         public void loadform(object Form)
         {
@@ -40,7 +42,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnViewOrders_Click(object sender, EventArgs e)
         {
-            loadform(new OrDerDetailsForm("CEO"));
+            loadform(new OrDerDetailsForm(role));
 
         }
 
@@ -56,7 +58,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnTakeOrder_Click(object sender, EventArgs e)
         {
-            loadform(new frmTakeOrder("kabir"));
+            loadform(new frmTakeOrder("name"));
 
         }
 

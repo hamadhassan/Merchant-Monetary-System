@@ -319,8 +319,8 @@
             "Select a Role",
             "CEO",
             "Employee",
-            "Rider",
-            "Warehouse Manager"});
+            "Warehouse Manager",
+            "Rider"});
             this.cmbxDesignation.Location = new System.Drawing.Point(3, 3);
             this.cmbxDesignation.Name = "cmbxDesignation";
             this.cmbxDesignation.Size = new System.Drawing.Size(203, 28);

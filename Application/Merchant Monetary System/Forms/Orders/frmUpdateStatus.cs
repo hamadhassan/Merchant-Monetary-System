@@ -19,8 +19,8 @@ namespace Merchant_Monetary_System
         public frmUpdateStatus(Order previous,string role)
         {
             InitializeComponent();
-            this.previous =previous;
-            this.role = role;
+            this.previous =previous;   
+            this.role =role;
 
         }
 
