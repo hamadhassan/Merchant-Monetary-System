@@ -30,15 +30,20 @@ namespace Merchant_Monetary_System
             UsersDL.loadRecordFromFile(FilePath.Users);
             WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
             VendorDL.loadRecordFromFile(FilePath.Vendors);
+            ProductDL.loadRecordFromFile(FilePath.Products);
+            OrderDL.loadRecordFromFile(FilePath.Orders);
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-               // Application.Run(new frmAddProduct());
-                Application.Run(new ViewShopkeeperDetails());
+               // Application.Run(new frmSignUp());
+                Application.Run(new frmRiderDashboard("Kabir", "CEO"));
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
-            
+
+
+
+
 
         }
     }

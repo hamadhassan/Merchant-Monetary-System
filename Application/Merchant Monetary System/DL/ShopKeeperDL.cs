@@ -142,5 +142,20 @@ namespace Merchant_Monetary_System.DL
                 Shopkeepers_names(Head.Right);
             }
         }
+        public static List<string> Shop_names(string shopkeeper)
+        {
+            List<string> Shopnames = new List<string>();
+            foreach (Shopkeeper name in shopkeeperList)
+            {
+                if (name.ShopkeeperName == shopkeeper) 
+                {
+                    foreach (Shop names in name.ShopList) 
+                    {
+                        Shopnames.Add(names.ShopName);
+                    }
+                }
+            }
+            return Shopnames;
+        }
     }
 }

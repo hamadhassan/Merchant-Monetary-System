@@ -16,7 +16,8 @@ namespace Merchant_Monetary_System
 {
     public partial class frmTakeOrder : Form
     {
-        public static string name;
+        public string name;
+
 
         
         public static DoublyLinkedList<Product> cartlist=new DoublyLinkedList<Product>();
@@ -59,7 +60,7 @@ namespace Merchant_Monetary_System
 
                 try
                 {
-                    if (index == 7 && txtbxName.Text!=String.Empty)
+                    if (index == 3 && txtbxName.Text!=String.Empty)
                     {
                         //if (cartlist.Contains(S)){ S.Quantity++; } 
                         cartlist.Add(product);
@@ -112,12 +113,19 @@ namespace Merchant_Monetary_System
         {
             btnLoadRecords.Visible = false;
             datagvProductDetails.Visible = true;
+            
             DataBind();
         }
 
         private void txtbxName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            List<string> names;
 
+            names=ShopKeeperDL.Shop_names(txtbxName.Text);
+            for (int i = 0; i < names.Count; i++) 
+            {
+                cmbxShopNames.Items.Add(names[i]);
+            }
         }
 
         private void frmTakeOrder_Load(object sender, EventArgs e)
@@ -130,11 +138,21 @@ namespace Merchant_Monetary_System
             
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e) 
         {
-            Form form = new frmCartOrders(txtbxName.Text,name,cartlist);
+            Form form = new frmCartOrders(txtbxName.Text,this.  Name,cartlist,cmbxShopNames.Text);
             form.Show();
             this.Hide();
+        }
+
+        private void lblShhopkeekper_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxShopNames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

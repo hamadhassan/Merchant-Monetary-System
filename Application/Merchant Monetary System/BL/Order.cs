@@ -17,12 +17,16 @@ namespace Merchant_Monetary_System.BL
         private string riderName;
         private string orderID;
         private string status;
+        private string shopName;
+        private string asssignedRiderName;
 
         public string RiderName { get => riderName; set => riderName = value; }
         public string ShopKeeperName { get => shopKeeperName; set => shopKeeperName = value; }
         public DoublyLinkedList<Product> Order_products { get => order_products; set => order_products = value; }
         public string OrderID { get => orderID; set => orderID = value; }
         public string Status { get => status; set => status = value; }
+        public string ShopName { get => shopName; set => shopName = value; }
+        public string AsssignedRiderName { get => asssignedRiderName; set => asssignedRiderName = value; }
 
         public Order() { }
         public static string generateOrderID(int _characterLength = 5)
@@ -39,52 +43,45 @@ namespace Merchant_Monetary_System.BL
             return _builder.ToString();
         }
 
-        public Order(string ShopKeeperName,string RiderName) 
-        {
-            this.ShopKeeperName = ShopKeeperName;
-            this.RiderName = RiderName;
-            this.OrderID = (generateOrderID());
-            this.Status = "In Progress";
-            this.Order_products = new DoublyLinkedList<Product>();
 
-        }
-
-        public Order(string ShopKeeperName, string RiderName, DoublyLinkedList<Product>product)
-        {
-            this.ShopKeeperName = ShopKeeperName;
-            this.RiderName = RiderName;
-            this.OrderID = (generateOrderID()); ;
-            this.Order_products = product;
-            this.Status = "In Progress";
-        }
-        public Order(string ShopKeeperName, string RiderName, string OrderID)
-        {
-            this.ShopKeeperName = ShopKeeperName;
-            this.RiderName = RiderName;
-            this.OrderID = OrderID;
-            this.Order_products = new DoublyLinkedList<Product>();
-            this.Status = "In Progress";
-        }
         public void  UpdateOrderStatus(string status) 
         {
             this.Status = status;
             OrderDL.storeAllRecordIntoFile(FilePath.Orders);
         }
-        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus, DoublyLinkedList<Product> product)
+        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus, string ShopName, string AssignedRider,DoublyLinkedList<Product> product)
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
             this.OrderID = OrderID ;
             this.Order_products = product;
             this.Status = OrderStatus;
+            this.ShopName = ShopName;
+            this.AsssignedRiderName = AssignedRider;
+
+
         }
-        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus)
+        public Order(string ShopKeeperName, string RiderName,   string ShopName, DoublyLinkedList<Product> product) { 
+ 
+            this.ShopKeeperName = ShopKeeperName;
+            this.RiderName = RiderName;
+            this.OrderID = generateOrderID();
+            this.Order_products = product;
+            this.Status = "In Progress";
+            this.ShopName = ShopName;
+            this.AsssignedRiderName = "No One";
+
+
+        }
+        public Order(string ShopKeeperName, string RiderName, string OrderID, string OrderStatus, string ShopName, string AssignedRider)
         {
             this.ShopKeeperName = ShopKeeperName;
             this.RiderName = RiderName;
             this.OrderID = OrderID;
             this.Order_products = new DoublyLinkedList<Product>();
             this.Status = OrderStatus;
+            this.ShopName = ShopName;
+            this.AsssignedRiderName = AssignedRider;
         }
     }
 }

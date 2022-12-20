@@ -71,11 +71,11 @@ namespace Merchant_Monetary_System.DL
         {
             if (File.Exists(path))
             {
-                StreamWriter file = new StreamWriter(path);
+                StreamWriter file = new StreamWriter(path,false);
                 DoublyLinkedListNode<Order> OrderHead = OrdersList.Head;
                 while (OrderHead != null)
                 {
-                    file.Write(OrderHead.Data.RiderName + "," + OrderHead.Data.ShopKeeperName + "," + OrderHead.Data.OrderID + "," + OrderHead.Data.Status + ",");
+                    file.Write(OrderHead.Data.RiderName + "," + OrderHead.Data.ShopKeeperName + "," + OrderHead.Data.OrderID + "," + OrderHead.Data.Status + ","+ OrderHead.Data.ShopName + "," + OrderHead.Data.AsssignedRiderName + "," );
                     int i = 0;
                     DoublyLinkedListNode<Product> productHead = OrderHead.Data.Order_products.Head;
                     while(productHead != null)
@@ -94,7 +94,7 @@ namespace Merchant_Monetary_System.DL
         public static void storeRecordIntoFile(Order order, string path)
         {
             StreamWriter file = new StreamWriter(path, true);
-            file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," + order.Status + ",");
+            file.Write(order.RiderName + "," + order.ShopKeeperName + "," + order.OrderID + "," + order.Status + "," + order.ShopName + ","+ order.AsssignedRiderName + ",");
             int i = 0;
             DoublyLinkedListNode<Product> productHead = order.Order_products.Head;
             while (productHead != null)
@@ -120,9 +120,11 @@ namespace Merchant_Monetary_System.DL
                 string shopkeeperName = (SplittedRecord[1]);
                 string OrderID = (SplittedRecord[2]);
                 string Orderstatus = (SplittedRecord[3]);
-                Order order = new Order(shopkeeperName, RiderName, OrderID, Orderstatus);
+                string ShopName = (SplittedRecord[4]);
+                string AssignedRider = (SplittedRecord[5]);
+                Order order = new Order(shopkeeperName, RiderName, OrderID, Orderstatus,ShopName,AssignedRider);
 
-                string[] products = SplittedRecord[4].Split('|');
+                string[] products = SplittedRecord[6].Split('|');
                 foreach (string S in products)
                 {
                     string[] eachProduct = S.Split(';');

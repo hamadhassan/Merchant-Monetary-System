@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Merchant_Monetary_System.DL;
 using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.Forms.Orders;
+
 namespace Merchant_Monetary_System
 {
     public partial class OrDerDetailsForm : Form
@@ -29,8 +31,8 @@ namespace Merchant_Monetary_System
         {
             btnLoadRecords.Visible = false;
             datagvProductDetails.Visible = true;
-            OrderDL.loadRecordFromFile(FilePath.Orders);
-            DataBind();
+            DataBind(); 
+
         }
         private void DataBind()
         {
@@ -48,34 +50,40 @@ namespace Merchant_Monetary_System
                 if (role == "CEO" || role == "Employee" || role == "WareHouse Manager")
                 {
 
-                    DataGridViewButtonColumn Add = new DataGridViewButtonColumn();
-                    Add.HeaderText = "Update Status";
-                    Add.Text = "Update Status";
-                    Add.UseColumnTextForButtonValue = true;
-                    datagvProductDetails.Columns.Add(Add);
+                    DataGridViewButtonColumn Update = new DataGridViewButtonColumn();
+                    Update.HeaderText = "Update Status";
+                    Update.Text = "Update Status";
+                    Update.UseColumnTextForButtonValue = true;
+                    datagvProductDetails.Columns.Add(Update);
 
+                }if (role == "CEO" || role == "Employee") 
+                {
+                    DataGridViewButtonColumn AssignRider = new DataGridViewButtonColumn();
+                    AssignRider.HeaderText = "Assign Rider";
+                    AssignRider.Text = "Assign Rider";
+                    AssignRider.UseColumnTextForButtonValue = true;
+                    datagvProductDetails.Columns.Add(AssignRider);
                 }
 
 
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
-
-
-
-        private void addIntoGrid(DoublyLinkedList<Order> orderLinkedList)
+         private void addIntoGrid(DoublyLinkedList<Order> orderLinkedList)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("OrderID");
             dt.Columns.Add("Shopkeeper");
             dt.Columns.Add("Rider");
             dt.Columns.Add("Status");
+            dt.Columns.Add("Shop Name");
+            dt.Columns.Add("Assigned Rider");
 
             DoublyLinkedListNode<Order> Head = orderLinkedList.Head;
             while (Head != null)
             {
                 DataRow dr = dt.NewRow();
-                dt.Rows.Add(Head.Data.OrderID, Head.Data.ShopKeeperName, Head.Data.RiderName, Head.Data.Status);
+                dt.Rows.Add(Head.Data.OrderID, Head.Data.ShopKeeperName, Head.Data.RiderName, Head.Data.Status,Head.Data.ShopName, Head.Data.AsssignedRiderName);
                 Head = Head.Next;
             }
             datagvProductDetails.DataSource = dt;
@@ -123,18 +131,37 @@ namespace Merchant_Monetary_System
 
                 try
                 {
-                    if (role == "CEO" || role == "Employee" || role == "WareHouse Manager")
+                    if (role == "CEO" || role == "Employee" )
                     {
-                        if (index == 5)
+                        if (index == 7)
                         {
                             Form updateform=new frmUpdateStatus(order,role);
                             updateform.ShowDialog();
                             DataBind();
+                          
+                        }
+                        if (index == 8) 
+                        {
+                            Form frmAssginRider = new frmAssignRider(order);
+                            frmAssginRider.ShowDialog();
+
+                            DataBind();
+                        }
+
+                    }
+                    if (role == "WareHouse Manager")
+                    {
+                        if (index == 7)
+                        {
+                            Form updateform = new frmUpdateStatus(order, role);
+                            updateform.ShowDialog();
+                            DataBind();
                         }
                     }
-                    if (index == 4)
+                    if (index == 6)
                     {
                         DataBind2(order);
+                        DataBind();
                         dataGridView1.Visible = true;
 
 

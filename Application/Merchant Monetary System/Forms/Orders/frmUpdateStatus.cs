@@ -41,10 +41,15 @@ namespace Merchant_Monetary_System
                 previous.UpdateOrderStatus(cmbxStatus.Text);
                 MessageBox.Show("Status Updated");
                 
-                Misc.sendEmail(UsersDL.GetEmail(previous.ShopKeeperName), "Order Status","Your Order is "+cmbxStatus.Text,role);
+                //Misc.sendEmail(UsersDL.GetEmail(previous.ShopKeeperName), "Order Status","Your Order is "+cmbxStatus.Text,role);
                 this.Hide();
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
+        }
+
+        private void cmbxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
