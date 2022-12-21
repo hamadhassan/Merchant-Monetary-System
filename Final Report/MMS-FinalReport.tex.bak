@@ -144,8 +144,7 @@ System.Security.Principal.Windows (5.0.0)
  \\ \hline
 \end{tabular}
 \end{longtable}
-\addcontentsline{toc}{section}{System Requirement }
-\section*{System Requirement}
+\subsection{System Requirement}
 \begin{longtable}{lr} 
  \caption{To run Merchant Monetary System, your computer must meet the minimum technical specifications outlined below. For optimum performance, use recommended system specifications.}\\
 \begin{tabular}{ | m{4cm} | m{12cm}| } \hline
@@ -184,8 +183,7 @@ The stakeholders are:
 %-----------------------Use Cases----------------
 \section{Use Cases}
 %------------------------------------------
-\addcontentsline{toc}{section}{Use Case 1}
-\section*{Use Case 1:Log In}
+\subsection{Use Case 1:Log In}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -200,7 +198,7 @@ The stakeholders are:
 \hline
 Use Case ID & U01   \\\hline
 Name  &  Login \\ \hline
-Actor &   CEO, Employee, Rider, Warehouse Manager \\ \hline
+Actors &   CEO, Employee, Rider, Warehouse Manager \\ \hline
 Description & The login screen will be presented. The actor will select theor role and enter their username and password. And click on the login button. The system will check for its validity. The system will present the respective dashboard.
 \\ \hline
 Pre-Condition & The respective actor will initiate the system, and the login in form is presented.  \\
@@ -250,12 +248,20 @@ Extensions (or Alternative Flows):
 	%---------------------
 	
 \\ \hline
-Post-Condition & Respective Dashboard will be presented   \\\hline
-%\end{tabular}
+Post-Condition & Respective Dashboard will be presented   
+\\ \hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %-------------------------------------------------------
-\section*{Use Case 2:Forgot Password}
-\addcontentsline{toc}{section}{Use Case 2}
+\subsection{Use Case 2:Forgot Password}
+
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -273,7 +279,7 @@ Use Case ID & U02  \\\hline
 
 Name  	    & Forgot Password  \\ \hline
 
-Actor     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
+Actors     	& CEO, Employee, Rider, Warehouse Manager \\ \hline
 
 Description & Already registered users can change their password. The actor selects their role and enters his username and password. Then the actor confirms their password and clicks on Update Button; their password will be changed. \\ \hline
 
@@ -330,13 +336,21 @@ Flow & 5c. if the entered password doesn't exist with in existing data
 	\end{enumerate}
 	
 \\ \hline
-Post-Condition & Actor's Password Updated   \\\hline
+Post-Condition & Actor's Password Updated  
+\\ \hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
+
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 3:Detail of Accounts for CEO }
-
-\addcontentsline{toc}{section}{Use Case 3}
+\subsection{Use Case 3:Detail of Accounts for CEO }
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -354,7 +368,7 @@ Use Case ID & U03  \\\hline
 
 Name  	    & Detail of Account for CEO  \\ \hline
 
-Actor     	& CEO\\ \hline
+Actors     	& CEO\\ \hline
 
 Description &  CEO can view the details of each user who have registered themselves on this system. CEO can filter out users with certain designations and certain attributes and can apply multiple filters to search out specific users and  their data. CEO can delete as well as edit users.\\ \hline
 
@@ -439,13 +453,22 @@ Flow       & 8. If CEO did not select any data from the grid list and clicked th
 \\ \hline 
 
 
-Post-Condition &  Data from selected row will be deleted or updated  \\ \hline
+Post-Condition &  Data from selected row will be deleted or updated 
+\\ \hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 4:Detail of Accounts for Employee }
-\addcontentsline{toc}{section}{Use Case 4}
+\subsection{Use Case 4:Detail of Accounts for Employee }
+
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -550,12 +573,18 @@ Flow       & Main Scenario:
 \\ \hline 
 
 
-Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
-
+Post-Condition &  Data from selected row will be deleted and a dashboard will be presented \\ \hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %-------------------------------------------------------
-\section*{Use Case 5:SignUp}
-\addcontentsline{toc}{section}{Use Case 5}
+\subsection{Use Case 5:SignUp}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -656,11 +685,17 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition & The account information is stored in the database, and the screen will be closed. \\\hline
-
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
-\section*{Use Case 6:Update Account Information by CEO}
-\addcontentsline{toc}{section}{Use Case 6}
+\subsection{Use Case 6:Update Account Information by CEO}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -757,11 +792,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  The account information is updated in the database, and the screen will be closed. \\\hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 7:Update Account Information by Employee}
-\addcontentsline{toc}{section}{Use Case 7}
+\subsection{Use Case 7:Update Account Information by Employee}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -858,11 +900,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition & The account information is updated in the database, and the screen will be closed.\\\hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
-\section*{Use Case 8:Add Products}
+\subsection{Use Case 8:Add Products}
 
-\addcontentsline{toc}{section}{Use Case 8}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -944,11 +993,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &    A new product info will be added to system\\ \hline
-
+Assigned To &  Kabir Ahmed
+\\ \hline
+Working By &   Kabir Ahmed
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
-\section*{Use Case 9:Update Products}
-\addcontentsline{toc}{section}{Use Case 9}
+\subsection{Use Case 9:Update Products}
+
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1019,13 +1075,20 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &    The product with updated details will be added to the system.\\ \hline
-
+Assigned To &  Kabir Ahmed
+\\ \hline
+Working By &   Kabir Ahmed
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 
 %------------------------------------------
-\section*{Use Case 10:Detail of Products  }
-\addcontentsline{toc}{section}{Use Case 10}
+\subsection{Use Case 10:Detail of Products  }
+
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1119,16 +1182,22 @@ Flow       & Main Scenario:
 
 Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
 
-
+Assigned To &  Kabir Ahmed
+\\ \hline
+Working By &   Kabir Ahmed
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 
 
 %------------------------------------------
 
-\section*{Use Case 11:Add Category}
+\subsection{Use Case 11:Add Category}
 
-\addcontentsline{toc}{section}{Use Case 11}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1181,13 +1250,19 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &    The Category will be added to the system. \\ \hline
-
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 12:Update Category}
+\subsection{Use Case 12:Update Category}
 
-\addcontentsline{toc}{section}{Use Case 12}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1240,13 +1315,19 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &    The Category will be updated and added to the system. \\ \hline
-
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 
-\section*{Use Case 13:Add Vendor}
+\subsection{Use Case 13:Add Vendor}
 
-\addcontentsline{toc}{section}{Use Case 13}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1327,13 +1408,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Vendor details will be added to the system. \\ \hline
-
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 14:Update Vendor}
-
-\addcontentsline{toc}{section}{Use Case 14}
+\subsection{Use Case 14:Update Vendor}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1409,13 +1495,19 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Vendor details will be updated and added to the system. \\ \hline
-
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 15:Add Stock}
+\subsection{Use Case 15:Add Stock}
 
-\addcontentsline{toc}{section}{Use Case 15}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1506,11 +1598,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Stock of the product will be added. \\ \hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
-\section*{Use Case 16:Add WareHouse}
+\subsection{Use Case 16:Add WareHouse}
 
-\addcontentsline{toc}{section}{Use Case 16}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1606,14 +1705,21 @@ Flow       & Main Scenario:
 
 
 Post-Condition &  after clicked next button new form of Add WareHouse Manager will be presented.  \\ \hline
-
+\\ \hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 17:Update WareHouse}
+\subsection{Use Case 17:Update WareHouse}
 
-\addcontentsline{toc}{section}{Use Case 17}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1704,17 +1810,21 @@ Flow       & Main Scenario:
 	\end{enumerate}
 \\ \hline 
 Post-Condition &  Dashboard will be presented.  \\ \hline
-
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
-
 
 
 %------------------------------------------
 
 
-\section*{Use Case 18:View WareHouse  }
-
-\addcontentsline{toc}{section}{Use Case 18}
+\subsection{Use Case 18:View WareHouse  }
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1807,12 +1917,18 @@ Flow       & 7. If Actor did not select any data from the grid list and clicked 
 
 
 Post-Condition &  Data from selected row will be deleted and a dashboard will be presented  \\ \hline
-
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 19:Take Order}
-\addcontentsline{toc}{section}{Use Case 19}
+\subsection{Use Case 19:Take Order}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -1915,12 +2031,18 @@ Extensions (or Alternative Flows):\\
 \\ \hline
 
 Post-Condition &  Order has been placed and is waiting for employee approval. Order status has been set as "Not Confirmed" \\ \hline
-
+Assigned To &  Kabir Ahmed
+\\ \hline
+Working By &   Kabir Ahmed
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 20:Confirm the Incoming Order}
-\addcontentsline{toc}{section}{Use Case 20}
+\subsection{Use Case 20:Confirm the Incoming Order}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2016,12 +2138,18 @@ Extensions (or Alternative Flows):\\
 \\ \hline
 
 Post-Condition &  Order is confirmed now and the warehouse manager is notified about the order.\\ \hline
-
+Assigned To &  Kabir Ahmed
+\\ \hline
+Working By &   Kabir Ahmed
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 21:Add Vehicle}
-\addcontentsline{toc}{section}{Use Case 21}
+\subsection{Use Case 21:Add Vehicle}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2087,11 +2215,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Data stored in the database and screen closed. \\\hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 22:Update Vehicle Information}
-\addcontentsline{toc}{section}{Use Case 22}
+\subsection{Use Case 22:Update Vehicle Information}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2160,11 +2295,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Data is updated in the database, and the screen is closed. \\\hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 23:Add Shop and Shopkeeper}
-\addcontentsline{toc}{section}{Use Case 23}
+\subsection{Use Case 23:Add Shop and Shopkeeper}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2237,11 +2379,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition & Actor click on the next button to add warehouse manager.  \\\hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 24:Update Shop and Shopkeeper}
-\addcontentsline{toc}{section}{Use Case 24}
+\subsection{Use Case 24:Update Shop and Shopkeeper}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2314,11 +2463,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition & The warehouse information is updated in the system, and the screen is closed.  \\\hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 25:Add Payment}
-\addcontentsline{toc}{section}{Use Case 25}
+\subsection{Use Case 25:Add Payment}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2374,11 +2530,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition & Data are stored in the database, and the screen is closed.  \\\hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 26:Edit Payment}
-\addcontentsline{toc}{section}{Use Case 26}
+\subsection{Use Case 26:Edit Payment}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2434,13 +2597,19 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition & Data are updated in the database, and the screen is closed.  \\\hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
 %------------------------------------------
-\section*{Use Case 27:Ready the Incoming Order}
-
-\addcontentsline{toc}{section}{Use Case 27}
+\subsection{Use Case 27:Ready the Incoming Order}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2484,14 +2653,20 @@ Extensions (or Alternative Flows):\\
 \\ \hline
 
 Post-Condition &  Order is ready now, and the rider can pick it up.\\ \hline
-
+Assigned To &  Kabir Ahmed
+\\ \hline
+Working By &   Kabir Ahmed
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 
 %------------------------------------------
-\section*{Use Case 28:Accomplish the Order}
+\subsection{Use Case 28:Accomplish the Order}
 
-\addcontentsline{toc}{section}{Use Case 28}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2532,12 +2707,18 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Order is deleivered sucessfully.\\ \hline
+Assigned To &  Kabir Ahmed
+\\ \hline
+Working By &   Kabir Ahmed
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
-\section*{Use Case 29: Plot the Minimum Spanning Tree for Multiple Shops}
-
-\addcontentsline{toc}{section}{Use Case 29}
+\subsection{Use Case 29: Plot the Minimum Spanning Tree for Multiple Shops}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2583,12 +2764,18 @@ Flow & Main Scenario:
 \\ \hline
 
 Post-Condition &  Rider reached his destination. \\ \hline
-
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
-\section*{Use Case 30:Update Stock}
+\subsection{Use Case 30:Update Stock}
 
-\addcontentsline{toc}{section}{Use Case 30}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2679,10 +2866,17 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Stock of the product will be added. \\ \hline
+Assigned To &  Syed Hashir
+\\ \hline
+Working By &   Syed Hashir
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 %------------------------------------------
-\section*{Use Case 31: Add Company }
-\addcontentsline{toc}{section}{Use Case 31}
+\subsection{Use Case 31: Add Company }
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2696,7 +2890,7 @@ Post-Condition &  Stock of the product will be added. \\ \hline
 \endlastfoot
 \hline
 Use Case ID & U31   \\\hline
-Name   &   Update Vehicle Information \\ \hline
+Name   &   Add Company \\ \hline
 Actor &  CEO  \\ \hline
 Description & CEO  enter the name, contact number, and address of the company .\\ \hline
 Pre-Condition & Add company screen is presented. \\\hline
@@ -2740,13 +2934,89 @@ Extensions (or Alternative Flows):\\
 	\end{enumerate}
 \\ \hline
 Post-Condition &  Data is stored in the database. \\\hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
 \end{longtable}
 
 %------------------------------------------
+%------------------------------------------
+\subsection{Use Case 32: Update Company }
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U31   \\\hline
+Name   &   Update Company \\ \hline
+Actor &  CEO  \\ \hline
+Description & CEO  update the name, contact number, and address of the company .\\ \hline
+Pre-Condition & Update company screen is presented and  and existing details are already filled in the identifiers fields. \\\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item CEO  is ready to enter the identifiers.
+\item CEO enter the company name.   
+\item CEO enters the company phone number.   
+\item CEO enters the company address.   
+\item Actor clicks on the click button.
+\end{enumerate}
+Extensions (or Alternative Flows):\\
+& *a. If the clear button is clicked \\
+& \begin{enumerate}
+		\item All the identifiers data remove from the screen.
+	\end{enumerate}
+*b. If the close button is clicked\\
+&	\begin{enumerate}
+		\item The presented screen will be closed
+	\end{enumerate}
+
+2a.  If the CEO doesn't enter the name\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+2b. If the CEO enters an invalid name \\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3a.  If the CEO doesn't enter the contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+3b. If the CEO enters an invalid contact number\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+4a.  If the CEO doesn't enter the address\\ 	
+&	\begin{enumerate}
+		\item Error Signal will be present.
+	\end{enumerate}
+\\ \hline
+Post-Condition &  Data is updated in the database. \\\hline
+Assigned To &  M. Hamad Hassan
+\\ \hline
+Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
+\end{longtable}
+%--------------------------------------------------------------
 %--------------User Interface ----------------------------
-\section {User Interfaces}
-\section*{Introduction}
-\addcontentsline{toc}{section}{Introduction}
+\section{User Interfaces}
+\subsection{Introduction}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2769,9 +3039,7 @@ Linked Use Case & NULL \\ \hline
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-001 Intro@1x.png}\end{center}  \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Login}
-
-\addcontentsline{toc}{section}{Login}
+\subsection{Login}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2803,9 +3071,8 @@ Validators &
 
 \end{longtable}
 %------------------------------------------
-\section*{Forgot Password }
+\subsection{Forgot Password }
 
-\addcontentsline{toc}{section}{Forgot Password}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2837,9 +3104,8 @@ Validators &
 
 \end{longtable}
 %------------------------------------------
-\section*{SignUp}
+\subsection{SignUp}
 
-\addcontentsline{toc}{section}{SignUp}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2876,9 +3142,8 @@ Validators &
 \end{longtable} 
 %------------------------------------------
 
-\section*{Update Account Information (CEO)}
+\subsection{Update Account Information (CEO)}
 
-\addcontentsline{toc}{section}{Update Account Information (CEO)}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2916,9 +3181,7 @@ Validators &
 %------------------------------------------
 %------------------------------------------
 
-\section*{Update Account Information (Employee)}
-
-\addcontentsline{toc}{section}{Update Account Information (Employee)}
+\subsection{Update Account Information (Employee)}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2954,9 +3217,8 @@ Validators &
 
 \end{longtable} 
 %------------------------------------------
-\section*{Account Detail (CEO) }
+\subsection{Account Detail (CEO) }
 
-\addcontentsline{toc}{section}{Account Detail (CEO)}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2991,9 +3253,8 @@ Validators &
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Account Detail (Employee) }
+\subsection{Account Detail (Employee) }
 
-\addcontentsline{toc}{section}{Account Detail (Employee)}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3027,9 +3288,7 @@ Validators &
 
 \end{longtable}
 %------------------------------------------
-\section*{CEO Dashboard }
-
-\addcontentsline{toc}{section}{CEO Dashboard}
+\subsection{CEO Dashboard }
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3051,9 +3310,8 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 \end{longtable}
 %------------------------------------------
-\section*{Add Product }
+\subsection{Add Product }
 
-\addcontentsline{toc}{section}{Add Product}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3093,9 +3351,8 @@ Validators &
 
 \end{longtable}
 %------------------------------------------
-\section*{Update Product Record}
+\subsection{Update Product Record}
 
-\addcontentsline{toc}{section}{Update Product Record}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3136,9 +3393,8 @@ Validators &
 \end{longtable} 
 %------------------------------------------
 %------------------------------------------
-\section*{Take Order}
+\subsection{Take Order}
 
-\addcontentsline{toc}{section}{Take Order}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3173,9 +3429,8 @@ Search text only contains alphabets and integers only.
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\section*{Email }
+\subsection{Email }
 
-\addcontentsline{toc}{section}{Email}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3206,8 +3461,7 @@ Validators &
 
 \end{longtable} 
 %------------------------------------------
-\section*{Add Warehouse}
-\addcontentsline{toc}{section}{Add Warehouse}
+\subsection{Add Warehouse}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3242,9 +3496,8 @@ Validators &
 
 \end{longtable}
 %------------------------------------------
-\section*{Update Warehouse Record}
+\subsection{Update Warehouse Record}
 
-\addcontentsline{toc}{section}{Update Warehouse Record}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3277,9 +3530,8 @@ Validators &
 
 \end{longtable}
 %------------------------------------------
-\section*{Warehouse Detail }
+\subsection{Warehouse Detail }
 
-\addcontentsline{toc}{section}{Warehouse Detail}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3312,9 +3564,7 @@ Validators &
 
 \end{longtable} 
 %------------------------------------------
-\section*{Warehouse Manager Dashboard }
-
-\addcontentsline{toc}{section}{Warehouse Manager Dashboard}
+\subsection{Warehouse Manager Dashboard }
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3339,9 +3589,7 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 \end{longtable}
 %------------------------------------------
-\section*{Employee Dashboard }
-
-\addcontentsline{toc}{section}{Employee Dashboard }
+\subsection{Employee Dashboard }
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3365,9 +3613,8 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 \end{longtable}
 %------------------------------------------
-\section*{Rider Dashboard }
+\subsection{Rider Dashboard }
 
-\addcontentsline{toc}{section}{Rider Dashboard }
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3393,9 +3640,8 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 %------------------------------------------
 
 %------------------------------------------
-\section*{View Route }
+\subsection{View Route }
 
-\addcontentsline{toc}{section}{View Route}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3427,9 +3673,8 @@ Validators &
 %------------------------------------------
 
 %------------------------------------------
-\section*{Add Shop/Shopkeeper}
+\subsection{Add Shop/Shopkeeper}
 
-\addcontentsline{toc}{section}{Add Shop/Shopkeeper}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3464,9 +3709,8 @@ Validators &
 
 \end{longtable}
 %------------------------------------------
-\section*{Add Payment }
+\subsection{Add Payment }
 
-\addcontentsline{toc}{section}{Add Payment}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3500,9 +3744,7 @@ Validators &
 
 \end{longtable} 
 %----------------------------------------
-\section*{Update Payment Information}
-
-\addcontentsline{toc}{section}{Update Payment Information}
+\subsection{Update Payment Information}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3535,8 +3777,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Add Vehicle}
-\addcontentsline{toc}{section}{Add Vehicle}
+\subsection{Add Vehicle}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3569,9 +3810,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Update Vehicle Information}
-
-\addcontentsline{toc}{section}{Update Vehicle Information}
+\subsection{Update Vehicle Information}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3600,9 +3839,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Add Category}
-
-\addcontentsline{toc}{section}{Add Category}
+\subsection{Add Category}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3631,9 +3868,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Update Category Information}
-
-\addcontentsline{toc}{section}{Update Category Information}
+\subsection{Update Category Information}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3662,9 +3897,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Add Vendor}
-
-\addcontentsline{toc}{section}{Add Vendor}
+\subsection{Add Vendor}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3694,9 +3927,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Update Vendor Information}
-
-\addcontentsline{toc}{section}{Update Vendor Information}
+\subsection{Update Vendor Information}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3726,9 +3957,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Add Stock}
-
-\addcontentsline{toc}{section}{Add Stock}
+\subsection{Add Stock}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3757,9 +3986,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Update Stock Information}
-
-\addcontentsline{toc}{section}{Update Stock Information}
+\subsection{Update Stock Information}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3788,9 +4015,7 @@ Validators &
 \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Order Summary}
-
-\addcontentsline{toc}{section}{Order Summary}
+\subsection{Order Summary}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3813,9 +4038,8 @@ Linked Use Case & U19	 \\ \hline
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-031 Order Summary@1x.png}\end{center}  \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Order Detail}
+\subsection{Order Detail}
 
-\addcontentsline{toc}{section}{Order Detail}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3838,9 +4062,7 @@ Linked Use Case & U19	 \\ \hline
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-032 Order Details@1x.png}\end{center}  \\ \hline
 \end{longtable}
 %------------------------------------------
-\section*{Add Company}
-
-\addcontentsline{toc}{section}{Add Company}
+\subsection{Add Company}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3888,17 +4110,17 @@ The classes which are used in the project are as under with there specific prope
 \endlastfoot
 \hline
 \textbf {Class Name} & \textbf{ Software/ Domain }&\textbf {Is Abstract (Yes/No)}&\textbf{ Is Singleton (Yes/No)} &\textbf {Is the class will has parametrized constructor(Yes/No)}\\ \hline
- CEO 		&Domain			&No			&Yes	&Yes\\ \hline
- Company		&Domain			&No		&Yes	&Yes\\ \hline
- Office		&Domain			&No			&Yes	&Yes\\ \hline
- WareHouse	&Domain			&No			&Yes	&Yes\\ \hline
+ CEO 		&Domain			&No			&No	&Yes\\ \hline
+ Company		&Domain			&No		&No	&Yes\\ \hline
+ Office		&Domain			&No			&No	&Yes\\ \hline
+ WareHouse	&Domain			&No			&No	&Yes\\ \hline
  User		&Domain			&No			&No		&Yes\\ \hline
  Rider		&Domain			&No			&No		&Yes\\ \hline
  Employee  	&Domain			&No			&No		&Yes\\ \hline
- WareHouseManager&Domain		&No		&Yes 	&Yes\\ \hline
+ WareHouseManager&Domain		&No		&No 	&Yes\\ \hline
  ShopOwner 	&Domain			&No			&No		&Yes\\ \hline
  Shop	  	&Domain			&No			&No		&Yes\\ \hline
- Ledger	  	&Domain			&No			&Yes	&Yes\\ \hline
+ Ledger	  	&Domain			&No			&No	&Yes\\ \hline
  Order		&Domain			&No			&No		&Yes\\ \hline
  Product		&Domain			&No		&No		&Yes\\ \hline
  Vehicle		&Domain			&No		&No		&Yes\\ \hline
@@ -3912,8 +4134,7 @@ The classes which are used in the project are as under with there specific prope
 %------------------------------------------------------------
 %---------------Object Oriented Features---------------------
 \section{Object Oriented Features}
-\section*{Composition}
-\addcontentsline{toc}{section}{Composition}
+\subsection{Composition}
 In our Project there are 8 places where we use Composition
 \begin{itemize}
 \item   Company Class has composition of Ledger Class
@@ -3925,8 +4146,7 @@ In our Project there are 8 places where we use Composition
 \item  Office Class has composition of User Class ( Employee, Rider)
 \item  Shop Owner Class has composition of Shop Class
 \end{itemize}
-\section*{Inheritance}
-\addcontentsline{toc}{section}{Inheritance}
+\subsection{Inheritance}
 In our project inheritance is used in following places
 \begin{itemize}
 \item   User inherits the class of CEO
@@ -3934,20 +4154,17 @@ In our project inheritance is used in following places
 \item User inherits the class of Shopkeeper
 \item User inherits the class of Warehouse Manager  
 \end{itemize}
-\section*{Multi-Level Inheritance}
-\addcontentsline{toc}{section}{Multi-Level Inheritance}
+\subsection{Multi-Level Inheritance}
 In our project Multilevel inheritance is used as
 \begin{itemize}
 \item User class inherits the CEO class and CEO class inherits the Employee Class
 \end{itemize}
-\section*{Aggregation}
-\addcontentsline{toc}{section}{Aggregation}
+\subsection{Aggregation}
 In our project Multilevel inheritance is used as
 \begin{itemize}
 \item Rider Aggregate the Rating Class in our project
 \end{itemize}
-\section*{Association}
-\addcontentsline{toc}{section}{Association}
+\subsection{Association}
 In our project Multilevel inheritance is used as
 \begin{itemize}
 \item Warehouse Manager manages the order.
@@ -3968,8 +4185,7 @@ In our project Multilevel inheritance is used as
 \section{Data Strucuture}
 The following section shows the reason for choosing the data structure in the particular use case with a brief explanation.
 %-------------------------------------------------------
-\section*{Linked List}
-\addcontentsline{toc}{section}{Linked List}
+\subsection{Linked List}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -3999,8 +4215,7 @@ The array list worst and average case time complexity is O(n). It takes contiguo
 \end{longtable}
 
 %-------------------------------------------------------
-\section*{Queue}
-\addcontentsline{toc}{section}{Queue}
+\subsection{Queue}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -4031,8 +4246,7 @@ The array list worst and average case time complexity is O(n). It takes contiguo
 
 \end{longtable}
 %-------------------------------------------------------
-\section*{Array List}
-\addcontentsline{toc}{section}{Array List}
+\subsection{Array List}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -4060,8 +4274,7 @@ Queue provides an efficient way to search the specific information from a large 
 The array list worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Array list and linked list space complexity O(n) are the same therefore for the small data Array list used.\\ \hline
 \end{longtable}
 %-------------------------------------------------------
-\section*{Heap}
-\addcontentsline{toc}{section}{Heap}
+\subsection{Heap}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -4091,8 +4304,7 @@ The Heap worst and average case time complexity is O(n). In the average and wors
 \\ \hline
 \end{longtable}
 %-------------------------------------------------------
-\section*{Tree}
-\addcontentsline{toc}{section}{}
+\subsection{Tree}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -4121,8 +4333,7 @@ Tree provides an efficient way to search the specific information from a moderat
 The Tree worst and average case time complexity is O(lg n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Tree and linked list space complexity O(n) are not same therefore, for the Detailed  data Tree is prefered to be used.\\ \hline
 \end{longtable}
 %-------------------------------------------------------
-\section*{Graph}
-\addcontentsline{toc}{section}{}
+\subsection{Graph}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -4179,10 +4390,10 @@ Index Out Of Range Exception & when an invalid index is used to access a member 
 \end{longtable}
 
 %---------------------------------------------------------
-%--------------------Data Storage----------------------------------
+%--------------------Data Storage-------------------------
 \section{Data Storage}
-\section*{Mails (CSV)}
-\addcontentsline{toc}{section}{Mails (CSV)}
+\subsection{Mails (CSV)}
+
 Columns data names are
 \begin{enumerate}
 \item Columns data names are
@@ -4192,8 +4403,8 @@ Columns data names are
 \item CEO and Employee
 \end{enumerate}
 
-\section*{Products (CSV)}
-\addcontentsline{toc}{section}{Products (CSV)}
+\subsection{Products (CSV)}
+
 Columns data names are
 \begin{enumerate}
 \item Name
@@ -4214,8 +4425,8 @@ Columns data names are
 \item Warehouse Hold ID
 \end{enumerate}
 
-\section*{Users (CSV)}
-\addcontentsline{toc}{section}{Users (CSV)}
+\subsection{Users (CSV)}
+
 Columns data names are
 \begin{enumerate}
 \item Name 
@@ -4227,8 +4438,8 @@ Columns data names are
 \item Desigination 
 \end{enumerate}
 
-\section*{Orders (CSV)}
-\addcontentsline{toc}{section}{Orders (CSV)}
+\subsection{Orders (CSV)}
+
 Columns data names are
 \begin{enumerate}
 \item Product Title
@@ -4241,8 +4452,8 @@ Columns data names are
 \item Order 
 \end{enumerate}
 
-\section*{Sale Products (CSV)}
-\addcontentsline{toc}{section}{Sale Products (CSV)}
+\subsection{Sale Products (CSV)}
+
 Columns data names are
 \begin{enumerate}
 \item Sale-Date    
@@ -4264,15 +4475,14 @@ Columns data names are
 \item Warehouse Hold ID
 \end{enumerate}
 
-\section*{Category (CSV)}
-\addcontentsline{toc}{section}{Category (CSV)}
+\subsection{Category (CSV)}
 Columns data names are
 \begin{enumerate} 
 \item Name
 \end{enumerate}
 
-\section*{Vendors (CSV)}
-\addcontentsline{toc}{section}{Vendors (CSV)}
+\subsection{Vendors (CSV)}
+
 Columns data names are
 \begin{enumerate}
 \item Name
@@ -4281,8 +4491,7 @@ Columns data names are
 \item Contact Number
 \end{enumerate}
 
-\section*{Vehicles (CSV)}
-\addcontentsline{toc}{section}{Vehicles (CSV)}
+\subsection{Vehicles (CSV)}
 Columns data names are
 \begin{enumerate}
 \item Type
@@ -4292,8 +4501,8 @@ Columns data names are
 \end{enumerate}
 
 
-\section*{Payment Records (CSV)}
-\addcontentsline{toc}{section}{Payment Records (CSV)}
+\subsection{Payment Records (CSV)}
+
 Columns data names are
 \begin{enumerate}
 \item Type 
@@ -4346,8 +4555,11 @@ Columns data names are
  \end{enumerate}
  \end{enumerate}
 %---------------------------------------------------------
+%--------------------------Project Plan-----------------------
+\section{Project Plan}
 %---------------------------------------------------------
-%---------------------------------------------------------
+%-------------------------Analytical Report----------------------
+\section{Analytical Report}
 %---------------------------------------------------------
 %---------------------------------------------------------
 %---------------------------------------------------------
