@@ -46,5 +46,10 @@ namespace Merchant_Monetary_System.BL
         {
             this.quantity -= quantity;
         }
+
+        public double totalAmount()
+        {
+            return quantity * retailPrice;
+        }
     }
 }

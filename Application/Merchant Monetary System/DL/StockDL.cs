@@ -102,6 +102,8 @@ namespace Merchant_Monetary_System.DL
             while(outerHead != null)
             {
                 bool found = false;
+                Vendor vendor = VendorDL.FoundVendor(outerHead.Data.Vendor);
+                vendor.Amount += outerHead.Data.totalAmount();
                 DoublyLinkedListNode<Stock> innerHead = Stock.Head;
                 while(innerHead != null)
                 {
@@ -120,9 +122,6 @@ namespace Merchant_Monetary_System.DL
                 outerHead = outerHead.Next;
             }
         }
-
-
-
 
         public static bool deleteStock(DoublyLinkedList<Stock> stock, Stock S)
         {
