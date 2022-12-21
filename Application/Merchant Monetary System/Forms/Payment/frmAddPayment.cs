@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Merchant_Monetary_System;
 
 namespace Merchant_Monetary_System.Forms.Payment
 {
@@ -125,70 +126,67 @@ namespace Merchant_Monetary_System.Forms.Payment
 
         private void comboBoxPaymentBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxPaymentBy.Text == "Vendor")
+            if (comboBoxPaymentBy.SelectedIndex == 0 || comboBoxPaymentBy.SelectedIndex == 1 || comboBoxPaymentBy.SelectedIndex == 2)
             {
-                DoublyLinkedListNode<Vendor> Head = VendorDL.VendorLinkedList.Head;
+                comboBoxPaymenyByName.Items.Clear();
+                DoublyLinkedListNode<Merchant_Monetary_System.Users> Head = UsersDL.UsersLinkedList.Head;
                 while (Head != null)
                 {
-                    comboBoxPaymenyByName.Items.Add(Head.Data.VendorName);
+                    if (Head.Data.Designation == comboBoxPaymentBy.Text)
+                    {
+                        comboBoxPaymenyByName.Items.Add(Head.Data.Name);
+                    }
                     Head = Head.Next;
                 }
-
-
+                comboBoxPaymenyByName.SelectedIndex = 0;
             }
-            else
+            else if(comboBoxPaymentBy.SelectedIndex == 3)
             {
-                //DoublyLinkedListNode<Shopkeeper> Head = ShopKeeperDL.ShopkeeperList.Head;
-                //while (Head != null)
-                //{
-                //    comboBoxPaymenyByName.Items.Add(Head.Data.ShopkeeperName);
-                //    Head = Head.Next;
-                //}
-
-                // COMMNENT THIS ONE WHEN LINKED liST applied on Shoppkeper Dl AND uNCOMMENT THE ABOVE ONE
-
+                comboBoxPaymenyByName.Items.Clear();
                 ShopKeeperDL.Shopkeepers_names(ShopKeeperDL.ShopkeeperList.Head);
                 List<string> names = ShopKeeperDL.names;
                 for (int i = 0; i < names.Count; i++)
                     comboBoxPaymenyByName.Items.Add(names[i]);
-
+                comboBoxPaymenyByName.SelectedIndex = 0;
             }
         }
 
         private void comboBoxPaymentReceivedBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (comboBoxPaymentReceivedBy.Text == "CEO")
+            if (comboBoxPaymentReceivedBy.SelectedIndex == 0 || comboBoxPaymentReceivedBy.SelectedIndex == 1)
             {
-                List<string> names;
-                names = UsersDL.GetCEO_Names();
-                for (int i = 0; i < names.Count; i++)
-                    comboBoxPaymentReceivedByName.Items.Add(names[i]);
-
-            }
-            else if (comboBoxPaymentReceivedBy.Text == "Employee")
-            {
-
+                comboBoxPaymentReceivedByName.Items.Clear();
+                DoublyLinkedListNode<Merchant_Monetary_System.Users> Head = UsersDL.UsersLinkedList.Head;
+                while (Head != null)
                 {
-                    List<string> names;
-                    names = UsersDL.GetEmployee_Names();
-                    for (int i = 0; i < names.Count; i++)
-                        comboBoxPaymentReceivedByName.Items.Add(names[i]);
-
+                    if (Head.Data.Designation == comboBoxPaymentBy.Text)
+                    {
+                        comboBoxPaymentReceivedByName.Items.Add(Head.Data.Name);
+                    }
+                    Head = Head.Next;
                 }
-
+                comboBoxPaymentReceivedByName.SelectedIndex = 0;
             }
-            else if (comboBoxPaymentReceivedBy.Text == "Vendor")
+            else if (comboBoxPaymentReceivedBy.SelectedIndex == 2)
             {
-
+                comboBoxPaymentReceivedByName.Items.Clear();
                 DoublyLinkedListNode<Vendor> Head = VendorDL.VendorLinkedList.Head;
                 while (Head != null)
                 {
                     comboBoxPaymentReceivedByName.Items.Add(Head.Data.VendorName);
                     Head = Head.Next;
                 }
-
+                comboBoxPaymentReceivedByName.SelectedIndex = 0;
             }
+        }
+
+        private void frmAddPayment_Load(object sender, EventArgs e)
+        {
+            comboBoxPaymentBy.SelectedIndex = 0;
+            comboBoxPaymentReceivedBy.SelectedIndex = 0;
+            comboBoxPaymentReceivedByName.SelectedIndex = 0;
+            comboBoxPaymenyByName.SelectedIndex = 0;
+            comboBoxpaymentType.SelectedIndex = 0;
         }
     }
 }
