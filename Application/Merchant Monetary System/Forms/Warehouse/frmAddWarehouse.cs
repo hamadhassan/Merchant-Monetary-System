@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Merchant_Monetary_System.DL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,7 @@ namespace Merchant_Monetary_System
         }
         bool isName=true;
         bool isCapacity=true;
+        bool isArea = true;
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -37,11 +39,11 @@ namespace Merchant_Monetary_System
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (isName == false && isCapacity == false)
+            if (isName == false && isCapacity == false && isArea==false)
             {
                 string name=txtbxName.Text;
                 float totalSpace=float.Parse(txtbxCapacityInVolume.Text);
-                string area=cmbxArea.Text;
+                string area=txtbxArea.Text;
                 string city=cmbxCity.Text;
                 string state=cmbxState.Text;
                 Location location=new Location(area, city, state);
@@ -80,7 +82,7 @@ namespace Merchant_Monetary_System
         {
             txtbxCapacityInVolume.Clear();
             txtbxName.Clear();
-            cmbxArea.SelectedIndex = 0;
+            txtbxArea.Clear();
             cmbxCity.SelectedItem = 0;
             cmbxState.SelectedIndex = 0;
         }
@@ -151,7 +153,7 @@ namespace Merchant_Monetary_System
             {
                 txtbxName.Text = previouObj.Name;
                 txtbxCapacityInVolume.Text =previouObj.TotalSpace.ToString();
-                cmbxArea.Text = previouObj.Location.Area;
+                txtbxArea.Text = previouObj.Location.Area;
                 cmbxCity.Text = previouObj.Location.City;
                 cmbxState.Text = previouObj.Location.State;
 
@@ -160,7 +162,11 @@ namespace Merchant_Monetary_System
                 lblAddWarehouse.Left -= 130;
                 btnNext.Text = "Update";
             }
-            cmbxArea.SelectedIndex = 0;
+            Misc.LoadCitiesOfPunjabFromFile(FilePath.City);
+            foreach(string c in Misc.Cities)
+            {
+                cmbxCity.Items.Add(c);
+            }
             cmbxCity.SelectedIndex = 0;
             cmbxState.SelectedIndex = 0;
 
@@ -178,6 +184,31 @@ namespace Merchant_Monetary_System
 
         private void lblAddWarehouse_Click(object sender, EventArgs e)
         {
+        }
+
+        private void txtbxArea_TextChanged(object sender, EventArgs e)
+        {
+            int i;
+            if (txtbxArea.Text == string.Empty)
+            {// check is empty
+                lblAreaSignal.Text = "Enter the name";
+                isArea = true;
+            }
+            else if (isValidString(txtbxArea.Text) == false)
+            {//Check isnumberic
+                lblAreaSignal.Text = "Allowed characters: a-z, A-Z";
+                isArea = true;
+            }
+            else if (txtbxArea.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+            {//check isSpecialCharactor
+                lblAreaSignal.Text = "Allowed characters: a-z, A-Z";
+                isArea = true;
+            }
+            else
+            {//ready for storage or action
+                lblAreaSignal.Text = " ";
+                isArea = false;
+            }
         }
     }
 }

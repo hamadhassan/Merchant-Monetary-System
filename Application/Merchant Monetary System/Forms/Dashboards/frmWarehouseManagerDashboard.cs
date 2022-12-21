@@ -84,5 +84,50 @@ namespace Merchant_Monetary_System.Forms.Dashboards
         {
             load_form(new frmViewStockDetails());
         }
+
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            load_form(new frmEmail());
+        }
+
+        private void forgotPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            load_form(new frmForgetPassword(true));
+        }
+
+        private void orderDeatislToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            load_form(new frmOrderDetail(role));
+        }
+
+        private void viewProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            load_form(new frmProductDetails_());
+        }
+
+        private void viewWarehousesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            load_form(new frmAbout());  
+        }
+
+        private void frmWarehouseManagerDashboard_Load(object sender, EventArgs e)
+        {
+            load_form(new frmAbout());
+        }
+
+        private void viewStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            load_form(new frmViewStockDetails());
+        }
     }
 }
