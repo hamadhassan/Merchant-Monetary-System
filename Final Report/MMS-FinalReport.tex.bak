@@ -11,8 +11,10 @@
  \geometry{
  a4paper,
  total={170mm,257mm},
- left=20mm,
- top=20mm,
+ left=19mm,
+ top=19mm,
+ bottom=19mm,
+ right=19mm
  }
 \begin{document}
 %--------------Title Page ------------------
@@ -486,7 +488,7 @@ Use Case ID & U04  \\\hline
 
 Name  	    & Detail of Account for Employee  \\ \hline
 
-Actor     	& Employee\\ \hline
+Actors     	& Employee\\ \hline
 
 Description &  Employee can view the details of each user who have registered themselves on this system. Employee can filter out users with certain designations and certain attributes and can apply multiple filters to search out specific users and  their data. Employee can delete as well as edit users.\\ \hline
 
@@ -599,7 +601,7 @@ Known Issues & Nil
 \hline
 Use Case ID & U05   \\\hline
 Name  &  SignUp \\ \hline
-Actor &    CEO, Employee \\ \hline
+Actors &    CEO, Employee \\ \hline
 Description & Actor select the designation of the worker from the given list, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
 Pre-Condition & The system presents the SignUp screen \\\hline
 Flow & Main Success Scenario (or Basic Flow):
@@ -710,7 +712,7 @@ Known Issues & Nil
 \hline
 Use Case ID & U06   \\\hline
 Name  &  Update Account Information by CEO \\ \hline
-Actor &   CEO\\ \hline
+Actors &   CEO\\ \hline
 Description & CEO could change the designation of their worker from the given list of designation, name, username, password, CNIC number, gender, contact number, email address, and home address.\\ \hline
 Pre-Condition & The Updated Account Information screen is presented. The registered account information of the actors in the system will be presented in the identifiers.  \\\hline
 Flow & Main Success Scenario (or Basic Flow):
@@ -3063,9 +3065,9 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Password Validations (Must be of 8 characters)
-\item   User Validation(Check if user exist or not)
-
+\item  Username must be three character long. 
+\item  Password must be eight character long.
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3096,9 +3098,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item  New Password must be different from previous password
-\item  Username Validation
-\item  Password and Confirm Password Textbox are Same or not
+\item  Password should be eight character long including upper case, lower case, number and special character.
+\item  Username must be exist in the system.
+\item  Password and Confirm Password should be same.
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3129,13 +3132,16 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   New Password and Confirmation password must be the same
-\item  CNIC must be of 13 digits
-\item  Contact Number must be of 11 digits
-\item  All Information must be provided before account creation
-\item  Email Validations
+\item  The name should be the alphabet.
+\item  Username must be three character long and enter username not matched with existing data.
+\item Password should be eight character long including upper case, lower case, number and special character.
 
-
+\item  Password and Confirm Password should be same.
+\item  Contact number must be numeric. 
+\item  CNIC must be of 13 digits.
+\item  Email should include dot, at the rate symbol and correct service provider.
+\item Home Address should not be empty. 
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3167,13 +3173,16 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   New Password and Confirmation password must be the same
-\item CNIC must be of 13 digits
-\item Contact Number must be of 11 digits
-\item All Information must be provided before account creation
-\item Email Validations
+\item  The name should be the alphabet.
+\item  Username must be three character long and enter username not matched with existing data.
+\item Password should be eight character long including upper case, lower case, number and special character.
 
-
+\item  Password and Confirm Password should be same.
+\item  Contact number must be numeric. 
+\item  CNIC must be of 13 digits.
+\item  Email should include dot, at the rate symbol and correct service provider.
+\item Home Address should not be empty. 
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3205,13 +3214,16 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   New Password and Confirmation password must be the same
-\item CNIC must be of 13 digits
-\item Contact Number must be of 11 digits
-\item All Information must be provided before account creation
-\item Email Validations
+\item  The name should be the alphabet.
+\item  Username must be three character long and enter username not matched with existing data.
+\item Password should be eight character long including upper case, lower case, number and special character.
 
-
+\item  Password and Confirm Password should be same.
+\item  Contact number must be numeric. 
+\item  CNIC must be of 13 digits.
+\item  Email should include dot, at the rate symbol and correct service provider.
+\item Home Address should not be empty. 
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3243,9 +3255,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
+\item Load button should be clicked to view data.
 \item   On clicked delete and edit button there is must to select any column first from grid list. 
 \item  Filters must be applied before clicking Go
-
+\item All required fields must be filled correctly. 
 
 \end{itemize}
 \\ \hline
@@ -3279,9 +3292,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   On clicked delete and edit button there is must to select any column first from grid list. 
-\item  Filters must be applied before clicking Go
-
+\item Load button should be clicked to view data.
+\item   On clicked delete and edit button there is must to select any row first from the data grid view. 
+\item  Filters must be applied before clicking Go button.
+\item All required fields must be filled correctly. 
 
 \end{itemize}
 \\ \hline
@@ -3336,15 +3350,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Product Name must contain only Digits and alphabets.
-\item Cost Price must not be negative.
-\item The date must be positive. And not previous than current.
-\item Quantity must be positive. And not in decimals.
-\item Rating must be positive and integer.
-\item SKU-ID must be positive.
-\item Weight and Volume must be in integers and decimals and positive.
-\item IN Stock check box must be filled.
-
+\item Name must contain only digits and alphabets.
+\item SKU-ID must be number.
+\item Weight and Volume must be in integers or float and positive.
+\item All required fields must be filled correctly. 
 
 \end{itemize}
 \\ \hline
@@ -3377,16 +3386,9 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Product Name must contain only Digits and alphabets.
-\item Cost Price must not be negative.
-\item The date must be positive. And not previous than current.
-\item Quantity must be positive. And not in decimals.
-\item Rating must be positive and integer.
-\item SKU-ID must be positive.
-\item Weight and Volume must be in integers and decimals and positive.
-\item IN Stock check box must be filled.
-
-
+\item Name must contain only digits and alphabets.
+\item SKU-ID must be number.
+\item Weight and Volume must be in integers or float and positive.\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3419,10 +3421,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 Validators & 
 \begin{itemize}
 \item   
-Price must be positive.
+Price must be positive integer or float.
 \item 
 Search text only contains alphabets and integers only.
-
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3453,7 +3455,7 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 Validators & 
 \begin{itemize}
 \item  To section must be filled to send the mail.
-
+\item All required fields must be filled correctly. 
 
 
 \end{itemize}
@@ -3487,10 +3489,9 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Space fields and Street No. input must be a number
-\item  Necessary fields must be filled before updating
-
-
+\item Name must contain only digits and alphabets.
+\item Capacity in volume must be in integers or float and positive.
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3555,10 +3556,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   On clicked delete and edit button there is must to select any row first from grid list. 
-\item  Filters must be applied before clicking Go
-
-
+\item Load button should be clicked to view data.
+\item Name must contain only digits and alphabets.
+\item Capacity in volume must be in integers or float and positive.
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3698,12 +3699,12 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item  Email Validation
-\item Contact Number Validation
-\item Street No. must be a non-negative number
-\item All necessary fields must be filled before clicking Add
+\item  The name should be the alphabet.
+\item  Contact number must be numeric. 
+\item  Email should include dot, at the rate symbol and correct service provider.
+\item Home Address should not be empty. 
  
-
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 
@@ -3734,10 +3735,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Deposit and Retype Deposit Amount must be a number not string
-\item  Before Clicking Add, Both fields must be filled
-\item  Both fields must be same
-
+\item  Amount must be numeric or float.
+\item Confirm amount must be matched with first typed amount.
+\item Description should be entered.
+\item All required fields must be filled correctly. 
 
 \end{itemize}
 \\ \hline
@@ -3768,11 +3769,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Deposit and Retype Deposit Amount must be a number not string
-\item  Before Clicking Add, Both fields must be filled
-\item  Both fields must be same
-
-
+\item  Amount must be numeric or float.
+\item Confirm amount must be matched with first typed amount.
+\item Description should be entered.
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -3801,10 +3801,10 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   
-\item  
-\item 
-
+\item   Registration number should contain alphabets and digits.
+\item  Capacity in volume should be be numeric and positive. 
+\item Capacity in weight should be be numeric and positive. 
+\item All required fields must be filled correctly. 
 
 \end{itemize}
 \\ \hline
@@ -3834,7 +3834,11 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Registration number,Capacity in volume and weight must be number
+\item   Registration number should contain alphabets and digits.
+\item  Capacity in volume should be be numeric and positive. 
+\item Capacity in weight should be be numeric and positive. 
+\item All required fields must be filled correctly. 
+
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -3862,8 +3866,9 @@ Linked Use Case & U11	 \\ \hline
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-025 Add Category@1x.png}\end{center}  \\ \hline
 
 Validators & 
-\begin{itemize}
-\item   Category must be a word.
+\begin{itemize} 
+\item Category should contain alphabets.
+\item Field must be filled correctly. 
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -3892,7 +3897,8 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Category must be a word.
+\item Category should contain alphabets.
+\item Field must be filled correctly. 
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -3923,6 +3929,7 @@ Validators &
 \begin{itemize}
 \item   Vendor name and company name must be a alphabetic and word.
 \item   Phone number and land line number must be number and no use of special character used. 
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -3953,6 +3960,7 @@ Validators &
 \begin{itemize}
 \item   Vendor name and company name must be a alphabetic and word.
 \item   Phone number and land line number must be number and no use of special character used. 
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -3981,7 +3989,8 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Quantity,retail price and cost price must be number and no use of special character used. 
+\item   Quantity,retail price and cost price must be number and no use of special character. 
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -4010,7 +4019,8 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 
 Validators & 
 \begin{itemize}
-\item   Quantity,retail price and cost price must be number and no use of special character used. 
+\item   Quantity,retail price and cost price must be number and no use of special character. 
+\item All required fields must be filled correctly. 
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -4087,7 +4097,8 @@ UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User I
 Validators & 
 \begin{itemize}
 \item   Contact number must be number and no use of special character used. 
-\item   Name must be alphabetic. 
+\item   Name must be alphabetic.
+\item All required fields must be filled correctly.
 \end{itemize}
 \\ \hline
 \end{longtable}
@@ -4124,11 +4135,10 @@ The classes which are used in the project are as under with there specific prope
  Order		&Domain			&No			&No		&Yes\\ \hline
  Product		&Domain			&No		&No		&Yes\\ \hline
  Vehicle		&Domain			&No		&No		&Yes\\ \hline
- Stack		&Software		&No			&No		&Yes\\ \hline
- Queue		&Software		&No			&No		&Yes\\ \hline
  Linked List	&Software		&No		&No		&Yes\\ \hline
- Binary Search Tree&Software	&No		&No		&Yes\\ \hline
- Spanning Tree  &Software		&No		&No		&Yes\\  \hline
+ Array List &Software	&No		&No		&Yes\\ \hline
+ Hash Table &Software	&No		&No		&Yes\\ \hline
+ Graph  &Software		&No		&No		&Yes\\  \hline
 \end{longtable}
 \end{center}
 %------------------------------------------------------------
@@ -4174,12 +4184,15 @@ In our project Multilevel inheritance is used as
 \item Employee adds the products
 \item Employee manages the order 
 \end{itemize}
+
+%------------------Class Diagram--------------------
 \section{Detailed Object Oriented Design}
 \begin{figure}
   \centering
     \includegraphics[scale=0.8]{Image.jpg}
   \caption{The detailed Object Oriented Design of the project that will be implemented according to mentioned logic}
 \end{figure}
+\newpage
 %------------------------------------
 %------------------Data Structure--------------------
 \section{Data Strucuture}
@@ -4198,8 +4211,11 @@ The following section shows the reason for choosing the data structure in the pa
 \hline
 \endlastfoot
 \hline
-\textbf{Use Case IDs}& U01,U02,U03,U04,U05,U06,U07,U08,U09,U010,U11,U12,U13,U14,
-U15,U16,U17,U18,U21,U22,U25,U26,U30,U31 \\ \hline
+\textbf{Use Case IDs}& U01,U02,U03,U04,U05,U06,U07,U08,U09,U010,U13,U14,
+U15,U16,U17,U18,U19,U20,U21,U22,U25,U26,U27,U28,
+U30,U31,U32,U33,U34,U35,
+U36,U37,U38,U39,U40,U41,U42
+ \\ \hline
 \textbf{Data Structure Used}& Linked List \\ \hline
 
 \textbf{Time Complexity}& 
@@ -4207,7 +4223,30 @@ In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
 \textbf{Space Complexity}& O(n)\\\hline
 \textbf{Justification for the use of data structure}&
 In mentioned use case required a linear-dynamic data structure. 
-Doubly LinkedList provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result. It helps to store and delete the data fastly. It allows you to move back and forth in the list to get the required result.\\ \hline
+Doubly Linked List provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result. It helps to store and delete the data fastly. It allows you to move back and forth in the list to get the required result.\\ \hline
+\textbf{Pseudocode}& 
+\textbf{Search:} \\&
+LIST-SEARCH(L,k)\\&
+1 x=L.head\\&
+2 while x $\neq$ NIL and x:key $\neq$ k \\&
+3\hspace{6 mm} x = x.next\\&
+4 return x\\&
+\textbf{Insert:} \\&
+LIST-INSERT(L, x) \\&
+1 x.next=L.head \\&
+2 if L.head $\neq$ NIL \\&
+3\hspace{6 mm} L.head.pre = x \\&
+4 L.head = x \\&
+5 x.pre = NIL \\&
+\textbf{Delete:} \\&
+LIST-DELETE(L,x)\\&
+1 if x.pre $\neq$ NIL\\&
+2\hspace{6 mm} x.pre.next=x.next\\&
+3 else L.head D x.next\\&
+4 if x.next $\neq$ NIL\\&
+5\hspace{6 mm} x.next.pre =x.pre
+ \\ \hline
+
 \textbf{Available choices}& Array List,Hash Table \\ \hline
 \textbf{Comparison}&
 The array list worst and average case time complexity is O(n). It takes contiguous memory. The hash table is best in the average case, but in the worst case time, complexity rise to O(n). It takes contiguous memory for storing the hash function value. In the average and worst case, the linked list insertion and deletion take O(1) time. In the average and worst case, it takes O(n) time for deletion. It did not require contiguous memory allocation.Array list, hash table, and linked list space complexity O(n) are the same.
@@ -4215,36 +4254,7 @@ The array list worst and average case time complexity is O(n). It takes contiguo
 \end{longtable}
 
 %-------------------------------------------------------
-\subsection{Queue}
-\begin{longtable}{| p{3cm}|p{12cm}|}
-\multicolumn{2}{c}{}
-\endfirsthead
-\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
-\multicolumn{2}{c}{}\\
-\hline
-\endhead
-\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
-\endfoot
-\hline
-\endlastfoot
-\hline
-\textbf{Use Case IDs}& U19 \\ \hline
-\textbf{Data Structure Used}& Queue \\ \hline
 
-\textbf{Time Complexity}& 
-In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
-\textbf{Space Complexity}& O(n)\\\hline
-
-\textbf{Justification for the use of data structure}&
-In mentioned use case required a linear-dynamic data structure. 
-Queue provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result. It helps to store the data of orders in specific pattern . It allows  to get the ordered pattern of incoming and outgoing orders data and shows the required result.
- 
- \\ \hline
-\textbf{Available choices}& Array List,Hash Table, Linked List \\ \hline
-\textbf{Comparison}&
-The array list worst and average case time complexity is O(n). It takes contiguous memory. The hash table is best in the average case, but in the worst case time, complexity rise to O(n). It takes contiguous memory for storing the hash function value. In the average and worst case, the linked list insertion and deletion take O(1) time. In the average and worst case, Queue takes O(n) time for deletion. It gives the specific ordered pattern to store and Dequeue reguired data.Array list, hash table, and linked list space complexity O(n) are the same.\\ \hline
-
-\end{longtable}
 %-------------------------------------------------------
 \subsection{Array List}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -4259,7 +4269,7 @@ The array list worst and average case time complexity is O(n). It takes contiguo
 \hline
 \endlastfoot
 \hline
-\textbf{Use Case IDs}& U11,U12 \\ \hline
+\textbf{Use Case IDs}& U11,U12,U29 \\ \hline
 \textbf{Data Structure Used}& Array List \\ \hline
 
 \textbf{Time Complexity}& 
@@ -4267,14 +4277,14 @@ In Worst Case: Search: O(n), Insertion: O(1), Deletion: O(n)\\\hline
 \textbf{Space Complexity}& O(n)\\\hline
 \textbf{Justification for the use of data structure}&
 In mentioned use case required a linear-dynamic data structure. 
-Queue provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result.IT allows to get specific data and shows  the required result.Only a specific detail of the data is required to store the specific information in this use case. 
+Array List provides an efficient way to search the specific information from a large amount of data and then compare it with input information to produce the required result.IT allows to get specific data and shows  the required result.Only a specific detail of the data is required to store the specific information in this use case. 
 \\ \hline
 \textbf{Available choices}& Linked List \\ \hline
 \textbf{Comparison}&
 The array list worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Array list and linked list space complexity O(n) are the same therefore for the small data Array list used.\\ \hline
 \end{longtable}
 %-------------------------------------------------------
-\subsection{Heap}
+\subsection{Hash Table}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -4288,50 +4298,88 @@ The array list worst and average case time complexity is O(n). In the average an
 \endlastfoot
 \hline
 \textbf{Use Case IDs}& U23,U24 \\ \hline
-\textbf{Data Structure Used}& Heap \\ \hline
+\textbf{Data Structure Used}& Hash Table \\ \hline
 
 \textbf{Time Complexity}& 
 In Worst Case: Search: O(n), Insertion: O(n), Deletion: O(n)\\\hline
 \textbf{Space Complexity}& O(n)\\\hline
 
 \textbf{Justification for the use of data structure}&
-In mentioned use case required a Heap data structure. 
-Heap provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to get specific data of some specific data, it allows to apply specific operation on that and shows the required result.\\ \hline
- 
+In mentioned use case required a Hash Table data structure. 
+Hash Table provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to get specific data of some specific data, it allows to apply specific operation on that and shows the required result.\\ \hline
+\textbf{Pseudocode}& 
+\textbf{Insert:} 
+
+HASH-INSERT(T,k)
+
+1 i = 0
+
+2 repeat
+
+3\hspace{6 mm} j = h(k,i)
+
+4\hspace{6 mm} if T[j]== NIL
+
+5\hspace{12 mm} T[j]= k
+
+6\hspace{12 mm} return j
+
+7\hspace{6 mm} else i = i +1 
+
+8 until i == m
+
+9 error “hash table overflow”
+
+\textbf{Search:} 
+
+HASH-SEARCH(T,k)
+
+1 i = 0
+
+2 repeat
+
+3\hspace{6 mm} j = h(k,i)
+
+4\hspace{6 mm} if T[j]== NIL
+
+5\hspace{12 mm} return j
+
+6\hspace{6 mm} i=i+1
+
+7 until T[j] == NIL or i==m
+
+9 return NIL
+
+\textbf{Search:} 
+
+Remove(T,k)
+
+1 i = h(k)
+
+2 while A[j] $\neq$ NULL do 
+
+3\hspace{6 mm} if A[j].key =k then
+
+4\hspace{12 mm} temp=A[i]
+
+5\hspace{12 mm} A[i]=NULL
+
+6\hspace{12 mm} Call Shift(i) to restore A to a stable state without k
+
+7\hspace{6 mm} return temp
+
+9 i=(i+1) mode N
+
+10 return null
+
+\\\hline
 \textbf{Available choices}& Linked List \\ \hline
 \textbf{Comparison}&
-The Heap worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Heap and linked list space complexity O(n) are the same therefore for the Detailed  data Heap used.
+The Hash Table worst and average case time complexity is O(n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Heap and linked list space complexity O(n) are the same therefore for the Detailed  data Heap used.
 \\ \hline
 \end{longtable}
 %-------------------------------------------------------
-\subsection{Tree}
-\begin{longtable}{| p{3cm}|p{12cm}|}
-\multicolumn{2}{c}{}
-\endfirsthead
-\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
-\multicolumn{2}{c}{}\\
-\hline
-\endhead
-\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
-\endfoot
-\hline
-\endlastfoot
-\hline
-\textbf{Use Case IDs}& U20 \\ \hline
-\textbf{Data Structure Used}& Tree \\ \hline
 
-\textbf{Time Complexity}& 
-In Worst Case: Search: O(lg n), Insertion: O( lg n), Deletion: O(lg n)\\\hline
-\textbf{Space Complexity}& O(n)\\\hline
-
-\textbf{Justification for the use of data structure}&
-In mentioned use case required a Tree data structure. 
-Tree provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to get specific detailed ordered data in a specfic manner and point out the points to some reference .\\ \hline
-
-\textbf{Available choices}& Linked List \\ \hline
-\textbf{Comparison}&
-The Tree worst and average case time complexity is O(lg n). In the average and worst case, the linked list insertion and deletion take O(1) time. IN the average and worst case, List takes O(n) time for deletion. It did not require contiguous memory allocation.Tree and linked list space complexity O(n) are not same therefore, for the Detailed  data Tree is prefered to be used.\\ \hline
-\end{longtable}
 %-------------------------------------------------------
 \subsection{Graph}
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -4356,7 +4404,53 @@ In Worst Case: Search: O(lg n), Insertion: O( lg n), Deletion: O(lg n)\\\hline
 \textbf{Justification for the use of data structure}&
 In mentioned use case required a Tree data structure. 
 Tree provides an efficient way to search the specific information from a moderate and huge amount of data and then compare it with input information to produce the required result. It allows to plot the data and apply operation on the data to show the required result.\\ \hline
+ \textbf{Pseudocode}& 
  
+\textbf{Intitialize-Single-Source:} 
+
+INITIALIZE-SINGLE-SOURCE(G,s)
+
+1 for each vertex $v \in G.V$
+
+2\hspace{6 mm} v.d = $\infty$
+
+3\hspace{6 mm} v.$\pi$= Nil
+
+4 s.d =0
+ 
+ 
+ 
+\textbf{Relax:} 
+
+RELAX(u,v,w)
+
+1 if v.d $>$ w(u,v)
+
+2\hspace{6 mm} v.d=u.d+w(u,v)
+
+3\hspace{6 mm} v.$\pi$=u
+ 
+\textbf{Bellman Ford:} 
+
+BELLMAN-FORD(G,w,s )
+
+1 INITIALIZE-SINGLE-SOURCE(G,S)
+
+2 for i = 1 to $|G.V|$-1
+
+3\hspace{6 mm} for each edge (u,v) $\in G.V$
+
+4\hspace{12 mm} RELAX(u,v,w)
+
+5 for each edge (u,v) $\in G.V$
+
+6\hspace{6 mm} if v.d $>$ u.d+w(u,v)
+
+7\hspace{12 mm} return FALSE
+
+8 return TRUE
+
+ \\ \hline
 \textbf{Available choices}& Tree \\ \hline
 \textbf{Comparison}&
 The Graph worst and average case time complexity is O(lg n). In the average and worst case, the Tree insertion and deletion take O(lg n) time. IN the average and worst case, Tree takes O(n) time for deletion. It did not require contiguous memory allocation.Tree and Graph space complexity O(n) are  same therefore, for the Plotting  data graph is prefered to be used.
@@ -4382,7 +4476,7 @@ The Graph worst and average case time complexity is O(lg n). In the average and 
 \textbf{Type of Exception} & \textbf{Why this exception will occur} &\textbf{ Use Case Id in which exception could be occurred} & \textbf{How you will handle the} exception \\  \hline
 Incorrect Format & By default system, take all input in string and the deploy system need to convert into desire format. If the input data is not converted into other datatype like int and float the future task not performed e.g. string 2 and int 2 behave different in CPU.
 
-& U2 U3 U4a U4b U5a U5b U6 U7 U8 U9 U11 U13 U14 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U33a
+& U02 U03 U04 U04 U05 U05 U06 U7 U08 U09 U11 U13 U14 U19 U20 U21 U22 U23 U24 U25 U26 U27 U28 U29 U30 U33 U34 U35 U36 U37 U38 U39 U40 U40 U41
 &Restrict the user to enter the required data in correct format.                      \\  \hline
 File not Loaded & File not found or b. & U6 U10 U11 U15 U32 &Error msg will be shown and give option to user to enter correct path of the file.   \\  \hline
 Stack OverFlow & When the data is more used than the assigned memory or b. & Almost All UIs except Dashboards &Error msg will be shown and give option to user to enter correct operation.   \\  \hline
@@ -4392,127 +4486,175 @@ Index Out Of Range Exception & when an invalid index is used to access a member 
 %---------------------------------------------------------
 %--------------------Data Storage-------------------------
 \section{Data Storage}
-\subsection{Mails (CSV)}
+
+\subsection{Users (CSV)}
 
 Columns data names are
 \begin{enumerate}
-\item Columns data names are
-\item Employee and Rider
-\item Rider and Shopkeeper
-\item Warehouse Manager and Employee
-\item CEO and Employee
+\item Designation 
+\item Name 
+\item Gender
+\item CNIC number
+\item Email address
+\item Contact Number
+\item Home Address
+\item Username 
+\item Password 
+\item Assigned 
+\end{enumerate}
+
+\subsection{Warehouse (CSV)}
+
+Columns data names are
+\begin{enumerate}
+\item Name			
+\item TotalSpace		
+\item CurrentSpace 	
+\item OccupiedSpace 	
+\item Latitude 		
+\item Longitude 		
+\item Area			
+\item City			
+\item State			
+
+\end{enumerate}
+
+\subsection{Company (TXT)}
+
+Columns data names are
+\begin{enumerate}
+\item Name 	
+\item Address
+\item Phone 	
+\item Revenue
+
+\end{enumerate}
+
+
+\subsection{Category (CSV)}
+Columns data names are
+\begin{enumerate} 
+\item Category
 \end{enumerate}
 
 \subsection{Products (CSV)}
 
 Columns data names are
 \begin{enumerate}
-\item Name
-\item Cost
-\item Retail price
-\item Expiry Date
-\item Quantity
-\item In date 
-\item Out date
-\item Manufacturer 
-\item ID
-\item Weight
-\item Volume
-\item Category
-\item Sensitivity
-\item In stock
-\item Rating
-\item Warehouse Hold ID
-\end{enumerate}
+\item Name 			
+\item SKUNumber 		
+\item Weight 			
+\item Volume 			
+\item SensitivityType 
+\item Category 		
+\item Manufacturer	
 
-\subsection{Users (CSV)}
-
-Columns data names are
-\begin{enumerate}
-\item Name 
-\item Gender
-\item Email address
-\item Contact Number
-\item CNIC number
-\item Address
-\item Desigination 
-\end{enumerate}
-
-\subsection{Orders (CSV)}
-
-Columns data names are
-\begin{enumerate}
-\item Product Title
-\item Quantity
-\item Shopkeeper Name
-\item Shopkeeper Contact 
-\item Rider Name 
-\item Location 
-\item Order Status
-\item Order 
-\end{enumerate}
-
-\subsection{Sale Products (CSV)}
-
-Columns data names are
-\begin{enumerate}
-\item Sale-Date    
-\item Name
-\item Cost
-\item Retail price
-\item Expiry Date
-\item Quantity
-\item In date 
-\item Out date
-\item Manufacturer 
-\item ID
-\item Weight
-\item Volume
-\item Category
-\item Sensitivity
-\item In stock
-\item Rating
-\item Warehouse Hold ID
-\end{enumerate}
-
-\subsection{Category (CSV)}
-Columns data names are
-\begin{enumerate} 
-\item Name
 \end{enumerate}
 
 \subsection{Vendors (CSV)}
 
 Columns data names are
 \begin{enumerate}
+\item Name  			
+\item ConcernedPerson 	
+\item LandLine			
+\item Contact 			
+\item Amount 
+
+\end{enumerate}
+
+
+\subsection{Stocks (CSV)}
+Columns data names are
+\begin{enumerate} 
+\item Productname 		
+\item 	Quantity 			
+\item 	Retailprice 		
+\item 	Costprice 			
+\item  	Manufacturingdate 	
+\item  	Expirydate 			
+\item 	 Recieveddate 		
+\item 	Vendorname 			
+\item Product 				
+\item Vendor 			
+
+\end{enumerate}
+
+
+\subsection{ShopKeepers (CSV)}
+Columns data names are
+\begin{enumerate} 
+\item 	ShopName 
+\item ShopCity 
+\item ShopArea 
+\item ShopState
+
+\end{enumerate}
+
+\subsection{City (CSV)}
+Columns data names are
+\begin{enumerate} 
 \item Name
-\item LandLine
-\item Concered Person 
-\item Contact Number
+\end{enumerate}
+
+
+\subsection{Orders (CSV)}
+
+Columns data names are
+\begin{enumerate}
+\item ShopkeeperName
+\item OrderID 		
+\item Orderstatus 	
+\item ShopName 	
+\item AssignedRider 
+
+\item Name		 
+\item Category 		
+\item SKUNumber 		
+\item Volume 		 
+\item Weight 			
+\item Manufacturer 
+\item SensitivityType	
+
+
 \end{enumerate}
 
 \subsection{Vehicles (CSV)}
 Columns data names are
 \begin{enumerate}
-\item Type
-\item Volume Capcity
-\item Weight Capcity 
-\item Registeration Number
+\item vehicleType			
+\item vehicleWeight		
+\item vehicleVolume 		
+\item registrationNumber	
+\item assigned 			
+
 \end{enumerate}
 
 
-\subsection{Payment Records (CSV)}
 
+\subsection{Ledgers (CSV)}
 Columns data names are
 \begin{enumerate}
-\item Type 
-\item Date
-\item Amount 
-\item Reciever  
-\item Payment By  
-\item Mode 
-\item Description 
+\item Paymenttype 			
+\item Paymentmode 			
+\item Currentdate 			
+\item Amount 				
+\item Bydesignation 		
+\item Byname 				
+\item Receivedbydesignation
+\item Receivedbyname 		
+\item Description 	
+
 \end{enumerate}
+
+
+\subsection{Routes (CSV)}
+Columns data names are
+\begin{enumerate}
+\item Distance 
+\end{enumerate}
+
+
 
 %-------------------------------------------------------------
 %--------------------------Email-----------------------
@@ -4558,9 +4700,18 @@ Columns data names are
 %--------------------------Project Plan-----------------------
 \section{Project Plan}
 %---------------------------------------------------------
-%-------------------------Analytical Report----------------------
+%-------------------------Analytical Report-----------------
 \section{Analytical Report}
-%---------------------------------------------------------
+%--------------------------------------------------------
+In the system the created reports are:
+\begin{enumerate}
+\item Salary Report  
+\item Rider Capture Order Report 
+\item Profit Report 
+\item Sold Products Report
+\item Daily Stock Report 
+\item Expenditure Report
+\end{enumerate}
 %---------------------------------------------------------
 %---------------------------------------------------------
 %---------------------------------------------------------
