@@ -268,6 +268,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCartOrders";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmViewOrders";
             ((System.ComponentModel.ISupportInitialize)(this.datagvProductDetails)).EndInit();
             this.groupBox1.ResumeLayout(false);

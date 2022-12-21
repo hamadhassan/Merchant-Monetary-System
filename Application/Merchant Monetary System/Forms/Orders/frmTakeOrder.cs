@@ -60,13 +60,14 @@ namespace Merchant_Monetary_System
 
                 try
                 {
-                    if (index == 3 && txtbxName.Text!=String.Empty)
+                    if (index == 3 && txtbxName.Text != String.Empty && cmbxShopNames.Text != String.Empty)
                     {
                         //if (cartlist.Contains(S)){ S.Quantity++; } 
                         cartlist.Add(product);
                         MessageBox.Show("Product Added To Cart");
 
                     }
+                    else { MessageBox.Show("Select Shop and Select Shopkeeper First"); }
                 }
                 catch (Exception exp) { MessageBox.Show(exp.Message); }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System.DL;
 
@@ -32,6 +33,7 @@ namespace Merchant_Monetary_System
         private void frmUpdateStatus_Load(object sender, EventArgs e)
         {
             cmbxStatus.Text = previous.Status;
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -40,13 +42,13 @@ namespace Merchant_Monetary_System
             {
                 previous.UpdateOrderStatus(cmbxStatus.Text);
                 MessageBox.Show("Status Updated");
-                
-                //Misc.sendEmail(UsersDL.GetEmail(previous.ShopKeeperName), "Order Status","Your Order is "+cmbxStatus.Text,role);
                 this.Hide();
+                //Misc.sendEmail(UsersDL.GetEmail(previous.ShopKeeperName), "Order Status","Your Order is "+cmbxStatus.Text,role);
+
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
         }
-
+        //
         private void cmbxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
