@@ -38,68 +38,68 @@
 \contentsline {subsection}{\numberline {5.32}Use Case 32: Update Company }{58}{}%
 \contentsline {section}{\numberline {6}User Interfaces}{59}{}%
 \contentsline {subsection}{\numberline {6.1}Introduction}{59}{}%
-\contentsline {subsection}{\numberline {6.2}Login}{59}{}%
-\contentsline {subsection}{\numberline {6.3}Forgot Password }{60}{}%
-\contentsline {subsection}{\numberline {6.4}SignUp}{61}{}%
-\contentsline {subsection}{\numberline {6.5}Update Account Information (CEO)}{62}{}%
-\contentsline {subsection}{\numberline {6.6}Update Account Information (Employee)}{63}{}%
-\contentsline {subsection}{\numberline {6.7}Account Detail (CEO) }{64}{}%
-\contentsline {subsection}{\numberline {6.8}Account Detail (Employee) }{65}{}%
-\contentsline {subsection}{\numberline {6.9}CEO Dashboard }{65}{}%
-\contentsline {subsection}{\numberline {6.10}Add Product }{66}{}%
-\contentsline {subsection}{\numberline {6.11}Update Product Record}{66}{}%
-\contentsline {subsection}{\numberline {6.12}Take Order}{67}{}%
-\contentsline {subsection}{\numberline {6.13}Email }{68}{}%
-\contentsline {subsection}{\numberline {6.14}Add Warehouse}{68}{}%
-\contentsline {subsection}{\numberline {6.15}Update Warehouse Record}{69}{}%
-\contentsline {subsection}{\numberline {6.16}Warehouse Detail }{70}{}%
-\contentsline {subsection}{\numberline {6.17}Warehouse Manager Dashboard }{70}{}%
-\contentsline {subsection}{\numberline {6.18}Employee Dashboard }{71}{}%
-\contentsline {subsection}{\numberline {6.19}Rider Dashboard }{71}{}%
-\contentsline {subsection}{\numberline {6.20}View Route }{72}{}%
-\contentsline {subsection}{\numberline {6.21}Add Shop/Shopkeeper}{72}{}%
-\contentsline {subsection}{\numberline {6.22}Add Payment }{73}{}%
-\contentsline {subsection}{\numberline {6.23}Update Payment Information}{74}{}%
-\contentsline {subsection}{\numberline {6.24}Add Vehicle}{75}{}%
-\contentsline {subsection}{\numberline {6.25}Update Vehicle Information}{75}{}%
-\contentsline {subsection}{\numberline {6.26}Add Category}{76}{}%
-\contentsline {subsection}{\numberline {6.27}Update Category Information}{77}{}%
-\contentsline {subsection}{\numberline {6.28}Add Vendor}{77}{}%
-\contentsline {subsection}{\numberline {6.29}Update Vendor Information}{78}{}%
-\contentsline {subsection}{\numberline {6.30}Add Stock}{79}{}%
-\contentsline {subsection}{\numberline {6.31}Update Stock Information}{79}{}%
-\contentsline {subsection}{\numberline {6.32}Order Summary}{80}{}%
-\contentsline {subsection}{\numberline {6.33}Order Detail}{80}{}%
-\contentsline {subsection}{\numberline {6.34}Add Company}{81}{}%
-\contentsline {section}{\numberline {7}Classes}{82}{}%
-\contentsline {section}{}{82}{}%
-\contentsline {section}{\numberline {8}Object Oriented Features}{82}{}%
-\contentsline {subsection}{\numberline {8.1}Composition}{82}{}%
-\contentsline {subsection}{\numberline {8.2}Inheritance}{83}{}%
-\contentsline {subsection}{\numberline {8.3}Multi-Level Inheritance}{83}{}%
-\contentsline {subsection}{\numberline {8.4}Aggregation}{83}{}%
-\contentsline {subsection}{\numberline {8.5}Association}{83}{}%
-\contentsline {section}{\numberline {9}Detailed Object Oriented Design}{83}{}%
-\contentsline {section}{\numberline {10}Data Strucuture}{85}{}%
-\contentsline {subsection}{\numberline {10.1}Linked List}{85}{}%
-\contentsline {subsection}{\numberline {10.2}Array List}{86}{}%
-\contentsline {subsection}{\numberline {10.3}Hash Table}{86}{}%
-\contentsline {subsection}{\numberline {10.4}Graph}{88}{}%
-\contentsline {section}{\numberline {11}Exceptions}{88}{}%
-\contentsline {section}{\numberline {12}Data Storage}{89}{}%
-\contentsline {subsection}{\numberline {12.1}Users (CSV)}{89}{}%
-\contentsline {subsection}{\numberline {12.2}Warehouse (CSV)}{90}{}%
-\contentsline {subsection}{\numberline {12.3}Company (TXT)}{90}{}%
-\contentsline {subsection}{\numberline {12.4}Category (CSV)}{90}{}%
-\contentsline {subsection}{\numberline {12.5}Products (CSV)}{90}{}%
-\contentsline {subsection}{\numberline {12.6}Vendors (CSV)}{91}{}%
-\contentsline {subsection}{\numberline {12.7}Stocks (CSV)}{91}{}%
-\contentsline {subsection}{\numberline {12.8}ShopKeepers (CSV)}{91}{}%
-\contentsline {subsection}{\numberline {12.9}City (CSV)}{91}{}%
-\contentsline {subsection}{\numberline {12.10}Orders (CSV)}{92}{}%
-\contentsline {subsection}{\numberline {12.11}Vehicles (CSV)}{92}{}%
-\contentsline {subsection}{\numberline {12.12}Ledgers (CSV)}{92}{}%
-\contentsline {subsection}{\numberline {12.13}Routes (CSV)}{93}{}%
-\contentsline {section}{\numberline {13}Email Sending}{93}{}%
-\contentsline {section}{\numberline {14}Project Plan}{93}{}%
-\contentsline {section}{\numberline {15}Analytical Report}{94}{}%
+\contentsline {subsection}{\numberline {6.2}Login}{60}{}%
+\contentsline {subsection}{\numberline {6.3}Forgot Password }{61}{}%
+\contentsline {subsection}{\numberline {6.4}SignUp}{62}{}%
+\contentsline {subsection}{\numberline {6.5}Update Account Information (CEO)}{63}{}%
+\contentsline {subsection}{\numberline {6.6}Update Account Information (Employee)}{64}{}%
+\contentsline {subsection}{\numberline {6.7}Account Detail (CEO) }{65}{}%
+\contentsline {subsection}{\numberline {6.8}Account Detail (Employee) }{66}{}%
+\contentsline {subsection}{\numberline {6.9}CEO Dashboard }{67}{}%
+\contentsline {subsection}{\numberline {6.10}Add Product }{68}{}%
+\contentsline {subsection}{\numberline {6.11}Update Product Record}{69}{}%
+\contentsline {subsection}{\numberline {6.12}Take Order}{70}{}%
+\contentsline {subsection}{\numberline {6.13}Email }{71}{}%
+\contentsline {subsection}{\numberline {6.14}Add Warehouse}{72}{}%
+\contentsline {subsection}{\numberline {6.15}Update Warehouse Record}{73}{}%
+\contentsline {subsection}{\numberline {6.16}Warehouse Detail }{74}{}%
+\contentsline {subsection}{\numberline {6.17}Warehouse Manager Dashboard }{75}{}%
+\contentsline {subsection}{\numberline {6.18}Employee Dashboard }{76}{}%
+\contentsline {subsection}{\numberline {6.19}Rider Dashboard }{77}{}%
+\contentsline {subsection}{\numberline {6.20}View Route }{78}{}%
+\contentsline {subsection}{\numberline {6.21}Add Shop/Shopkeeper}{79}{}%
+\contentsline {subsection}{\numberline {6.22}Add Payment }{80}{}%
+\contentsline {subsection}{\numberline {6.23}Update Payment Information}{81}{}%
+\contentsline {subsection}{\numberline {6.24}Add Vehicle}{82}{}%
+\contentsline {subsection}{\numberline {6.25}Update Vehicle Information}{83}{}%
+\contentsline {subsection}{\numberline {6.26}Add Category}{84}{}%
+\contentsline {subsection}{\numberline {6.27}Update Category Information}{85}{}%
+\contentsline {subsection}{\numberline {6.28}Add Vendor}{86}{}%
+\contentsline {subsection}{\numberline {6.29}Update Vendor Information}{87}{}%
+\contentsline {subsection}{\numberline {6.30}Add Stock}{88}{}%
+\contentsline {subsection}{\numberline {6.31}Update Stock Information}{89}{}%
+\contentsline {subsection}{\numberline {6.32}Order Summary}{90}{}%
+\contentsline {subsection}{\numberline {6.33}Order Detail}{91}{}%
+\contentsline {subsection}{\numberline {6.34}Add Company}{92}{}%
+\contentsline {section}{\numberline {7}Classes}{93}{}%
+\contentsline {section}{}{93}{}%
+\contentsline {section}{\numberline {8}Object Oriented Features}{94}{}%
+\contentsline {subsection}{\numberline {8.1}Composition}{94}{}%
+\contentsline {subsection}{\numberline {8.2}Inheritance}{95}{}%
+\contentsline {subsection}{\numberline {8.3}Multi-Level Inheritance}{95}{}%
+\contentsline {subsection}{\numberline {8.4}Aggregation}{95}{}%
+\contentsline {subsection}{\numberline {8.5}Association}{95}{}%
+\contentsline {section}{\numberline {9}Detailed Object Oriented Design}{95}{}%
+\contentsline {section}{\numberline {10}Data Strucuture}{97}{}%
+\contentsline {subsection}{\numberline {10.1}Linked List}{97}{}%
+\contentsline {subsection}{\numberline {10.2}Array List}{98}{}%
+\contentsline {subsection}{\numberline {10.3}Hash Table}{98}{}%
+\contentsline {subsection}{\numberline {10.4}Graph}{100}{}%
+\contentsline {section}{\numberline {11}Exceptions}{100}{}%
+\contentsline {section}{\numberline {12}Data Storage}{101}{}%
+\contentsline {subsection}{\numberline {12.1}Users (CSV)}{101}{}%
+\contentsline {subsection}{\numberline {12.2}Warehouse (CSV)}{102}{}%
+\contentsline {subsection}{\numberline {12.3}Company (TXT)}{102}{}%
+\contentsline {subsection}{\numberline {12.4}Category (CSV)}{102}{}%
+\contentsline {subsection}{\numberline {12.5}Products (CSV)}{102}{}%
+\contentsline {subsection}{\numberline {12.6}Vendors (CSV)}{103}{}%
+\contentsline {subsection}{\numberline {12.7}Stocks (CSV)}{103}{}%
+\contentsline {subsection}{\numberline {12.8}ShopKeepers (CSV)}{103}{}%
+\contentsline {subsection}{\numberline {12.9}City (CSV)}{103}{}%
+\contentsline {subsection}{\numberline {12.10}Orders (CSV)}{104}{}%
+\contentsline {subsection}{\numberline {12.11}Vehicles (CSV)}{104}{}%
+\contentsline {subsection}{\numberline {12.12}Ledgers (CSV)}{104}{}%
+\contentsline {subsection}{\numberline {12.13}Routes (CSV)}{105}{}%
+\contentsline {section}{\numberline {13}Email Sending}{105}{}%
+\contentsline {section}{\numberline {14}Project Plan}{105}{}%
+\contentsline {section}{\numberline {15}Analytical Report}{106}{}%
