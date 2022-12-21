@@ -178,7 +178,7 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(425, 0);
+            this.lblSearch.Location = new System.Drawing.Point(208, 0);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(64, 20);
             this.lblSearch.TabIndex = 46;
@@ -187,7 +187,7 @@
             // lblFiliter
             // 
             this.lblFiliter.AutoSize = true;
-            this.lblFiliter.Location = new System.Drawing.Point(666, 0);
+            this.lblFiliter.Location = new System.Drawing.Point(472, 0);
             this.lblFiliter.Name = "lblFiliter";
             this.lblFiliter.Size = new System.Drawing.Size(51, 20);
             this.lblFiliter.TabIndex = 48;
@@ -220,7 +220,7 @@
             // 
             // txtbxSearch
             // 
-            this.txtbxSearch.Location = new System.Drawing.Point(499, 3);
+            this.txtbxSearch.Location = new System.Drawing.Point(296, 3);
             this.txtbxSearch.Name = "txtbxSearch";
             this.txtbxSearch.Size = new System.Drawing.Size(161, 26);
             this.txtbxSearch.TabIndex = 0;
@@ -237,7 +237,7 @@
             "Decending Order",
             "Start With",
             "Contain"});
-            this.cmbxFiliter.Location = new System.Drawing.Point(759, 3);
+            this.cmbxFiliter.Location = new System.Drawing.Point(548, 3);
             this.cmbxFiliter.Name = "cmbxFiliter";
             this.cmbxFiliter.Size = new System.Drawing.Size(142, 28);
             this.cmbxFiliter.TabIndex = 1;
@@ -312,18 +312,18 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 9;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.5844455F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.18421F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.22807F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.100877F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.560439F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.131868F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.35165F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.21978F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.97802F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.67033F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.34066F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.263736F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.087912F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.08791F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.208791F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.48352F));
-            this.tableLayoutPanel4.Controls.Add(this.lblSearch, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblFiliter, 7, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtbxSearch, 6, 0);
-            this.tableLayoutPanel4.Controls.Add(this.cmbxFiliter, 8, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblFiliter, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtbxSearch, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblSearch, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cmbxFiliter, 6, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 46);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";

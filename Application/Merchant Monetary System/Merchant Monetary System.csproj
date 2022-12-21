@@ -178,11 +178,11 @@
     <Compile Include="Forms\Product\UpdatStock.Designer.cs">
       <DependentUpon>UpdatStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Stock\frmViewStockDetails.cs">
+    <Compile Include="Forms\Stock\frmViewStocks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Stock\frmViewStockDetails.designer.cs">
-      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
+    <Compile Include="Forms\Stock\frmViewStocks.designer.cs">
+      <DependentUpon>frmViewStocks.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Users\frmVendorDetails.cs">
       <SubType>Form</SubType>
@@ -465,8 +465,8 @@
     <EmbeddedResource Include="Forms\Shop\frmUpdateShop.resx">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Stock\frmViewStockDetails.resx">
-      <DependentUpon>frmViewStockDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Stock\frmViewStocks.resx">
+      <DependentUpon>frmViewStocks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users\frmAccountDetails.resx">
       <DependentUpon>frmAccountDetails.cs</DependentUpon>

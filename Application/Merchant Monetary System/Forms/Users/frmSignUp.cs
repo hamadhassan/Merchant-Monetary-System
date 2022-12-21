@@ -161,14 +161,12 @@ namespace Merchant_Monetary_System
                 txtbxUsername.Enabled = false;
                 cmbxDesignation.SelectedIndex = 0;
                 cmbxAssigned.Text = previousObj.Assigned;
-                if (isCEO == true)
+                if (isCEO == false)
                 {//Employee is enter into the sytem then it not able to change the the assign role of worker
-                    cmbxDesignation.Enabled = false;
                     cmbxDesignation.SelectedIndex = 0;
                 }
                 if (roleId == 2)
                 {
-                    cmbxDesignation.Items.RemoveAt(0);
                     cmbxDesignation.SelectedIndex = 0;
                 }
             }
@@ -179,7 +177,6 @@ namespace Merchant_Monetary_System
             if (isForWarehouseManager)
             {
                 cmbxDesignation.SelectedIndex = 3;
-                cmbxDesignation.Enabled = false;
                 cmbxAssigned.SelectedIndex = 0;
             }
             

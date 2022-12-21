@@ -53,24 +53,30 @@ namespace Merchant_Monetary_System.DL
 
         public static void LoadDataFromFiles(string path)
         {
-            if (File.Exists(path))
+            try
             {
-                StreamReader file = new StreamReader(path);
-                string record;
-                while ((record = file.ReadLine()) != null && (record = file.ReadLine()) != "")
+                if (File.Exists(path))
                 {
-                    string[] SplittedRecord = record.Split(',');
-                    string vehicleType = SplittedRecord[0];
-                    double vehicleWeight = Double.Parse(SplittedRecord[1]);
-                    double vehicleVolume = Double.Parse(SplittedRecord[2]);
-                    string registrationNumber = SplittedRecord[3];
-                    bool assigned = bool.Parse(SplittedRecord[4]);
-                    Vehicle vehicle = new Vehicle(vehicleType, vehicleVolume, vehicleWeight, registrationNumber);
-                    vehicle.Assigned = assigned;
-                    VehicleDL.addIntoList(vehicle);
+                    StreamReader file = new StreamReader(path);
+                    string record;
+                    while ((record = file.ReadLine()) != null && (record = file.ReadLine()) != "")
+                    {
+
+                        string[] SplittedRecord = record.Split(',');
+                        string vehicleType = SplittedRecord[0];
+                        double vehicleWeight = Double.Parse(SplittedRecord[1]);
+                        double vehicleVolume = Double.Parse(SplittedRecord[2]);
+                        string registrationNumber = SplittedRecord[3];
+                        bool assigned = bool.Parse(SplittedRecord[4]);
+                        Vehicle vehicle = new Vehicle(vehicleType, vehicleVolume, vehicleWeight, registrationNumber);
+                        vehicle.Assigned = assigned;
+                        VehicleDL.addIntoList(vehicle);
+                    }
+                    file.Close();
                 }
-                file.Close();
             }
+            catch(Exception ex) { }
+           
         }
 
         public static bool AlreadyExist(string registrationNo)

@@ -693,7 +693,7 @@ Working By &    M. Hamad Hassan
 \\ \hline
 Status & 	Completed	
 \\ \hline
-Known Issues & Nil
+Known Issues & The username validation does not work properly. 
 \\\hline
 \end{longtable}
 %------------------------------------------
@@ -2947,6 +2947,7 @@ Known Issues & Nil
 \end{longtable}
 
 %------------------------------------------
+
 %------------------------------------------
 \subsection{Use Case 32: Update Company }
 \begin{longtable}{| p{3cm}|p{12cm}|}
@@ -2961,7 +2962,7 @@ Known Issues & Nil
 \hline
 \endlastfoot
 \hline
-Use Case ID & U31   \\\hline
+Use Case ID & U32   \\\hline
 Name   &   Update Company \\ \hline
 Actor &  CEO  \\ \hline
 Description & CEO  update the name, contact number, and address of the company .\\ \hline
@@ -3009,6 +3010,182 @@ Post-Condition &  Data is updated in the database. \\\hline
 Assigned To &  M. Hamad Hassan
 \\ \hline
 Working By &    M. Hamad Hassan
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues &Immediate update not perform with instance of class but data stored in file instantly. 
+\\\hline
+\end{longtable}
+
+%-----------------------------------
+\subsection{Use Case 33:Log In}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U33   \\\hline
+Name  &  View Cart \\ \hline
+Actors &   Rider \\ \hline
+Description & The View Cart Screen would be presented and a Delete button , Confirm and clear All button is installed.
+By clicking on delete button the respective item is deleted form the cart list and on clear-All all cart products would be removed while the products are added into order if confirm button added.
+\\ \hline
+Pre-Condition & The respective actor will initiate the Take Order screen , and the View Cart form is presented.  \\
+\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor selects any order from the given list(row wise).   
+\item Actor clicks the view cart button. 
+\end{enumerate}	
+Extensions (or Alternative Flows):
+
+ *a. If not any order is selected:
+ \begin{enumerate}
+\item Message Box is shown to select any row
+\end{enumerate}		
+
+	
+\\ \hline
+
+Post-Condition & Take order form  will be presented   
+\\ \hline
+Assigned To &  M. Kabir Ahmad
+\\ \hline
+Working By &    M. Kabir Ahmad
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
+\end{longtable}
+%------------------------------------------
+\subsection{Use Case 34:Order Details}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U34   \\\hline
+Name  &  	Order Details \\ \hline
+Actors &   CEO, Employee, Rider, Warehouse Manager \\ \hline
+Description & The Order Detail screen will be presented. The actor will able to operate operation like view products of order specific order.Rider can only view assigned orders while other respective actors can operate operation on respective order.
+\\ \hline
+Pre-Condition & The respective actor will initiate the system, and the Order Detail in form is presented.  \\
+\hline
+Flow & Main Success Scenario (or Basic Flow):
+\begin{enumerate}
+\item Actor clicks the Update status  button to operate.
+\item Actor clicks the Assign Rider button to operate. 
+
+
+Extensions (or Alternative Flows):
+a* if no order is in the list at that time 
+
+\item Message box is shown .
+b* if no order is in the list at that time 
+\item Message box is shown .
+	%---------------------
+	\end{enumerate}
+\\ \hline
+Post-Condition & Respective Dashboard will be presented   
+\\ \hline
+Assigned To &  M. Kabir Ahmad
+\\ \hline
+Working By &    M. Kabir Ahmad
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
+\end{longtable}
+%------------------------------------------
+\subsection{Use Case 35:Update Order Status}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U35   \\\hline
+Name  &  	Update Status \\ \hline
+Actors &   CEO, Employee,Warehouse Manager \\ \hline
+Description & The Order Detail screen will be presented. Actors can click on Update Status.
+\\ \hline
+Pre-Condition & The respective actor will initiate the Order Details , and the Update Order status Detail in form is presented.  \\
+\hline
+Flow & Main Success Scenario (or Basic Flow): 
+\begin{enumerate}
+\item Actor selects the status from the drop down.
+\end{enumerate}
+\\ \hline
+Post-Condition & Order Details will be presented   
+\\ \hline
+Assigned To &  M. Kabir Ahmad
+\\ \hline
+Working By &    M. Kabir Ahmad
+\\ \hline
+Status & 	Completed	
+\\ \hline
+Known Issues & Nil
+\\\hline
+\end{longtable}
+
+%------------------------------------------
+\subsection{Use Case 36:Assign Rider}
+\begin{longtable}{| p{3cm}|p{12cm}|}
+\multicolumn{2}{c}{}
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{2}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+Use Case ID & U36   \\\hline
+Name  &  	Assign Rider \\ \hline
+Actors &   CEO, Employee\\ \hline
+Description & The Order Detail screen will be presented. Actors can click on Assign Rider.
+\\ \hline
+Pre-Condition & The respective actor will initiate the Order Details , and the Assign Rider Detail in form is presented.  \\
+\hline
+Flow & Main Success Scenario (or Basic Flow): 
+\begin{enumerate}
+\item Actor selects the rider from the drop down.
+\item Actor click on the update button.
+Alternative Flows: 
+if not any rider is choose from the drop down and update button is clicked then :
+\item Message Box Alert is shown.
+\end{enumerate}
+	
+\\ \hline
+Post-Condition & Order Details will be presented   
+\\ \hline
+Assigned To &  M. Kabir Ahmad
+\\ \hline
+Working By &    M. Kabir Ahmad
 \\ \hline
 Status & 	Completed	
 \\ \hline

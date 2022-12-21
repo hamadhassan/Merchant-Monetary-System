@@ -1,6 +1,6 @@
 ﻿namespace Merchant_Monetary_System
 {
-    partial class frmViewStockDetails
+    partial class frmViewStocks
     {
         /// <summary>
         /// Required designer variable.
@@ -128,10 +128,10 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.59375F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.847083F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.651912F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.39839F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.651912F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.255533F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.255533F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.9839F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.054326F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(918, 509);
             this.tableLayoutPanel2.TabIndex = 58;
@@ -143,13 +143,12 @@
             this.datagvStockDetails.BackgroundColor = System.Drawing.SystemColors.Control;
             this.datagvStockDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagvStockDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datagvStockDetails.Location = new System.Drawing.Point(3, 127);
+            this.datagvStockDetails.Location = new System.Drawing.Point(3, 137);
             this.datagvStockDetails.Name = "datagvStockDetails";
             this.datagvStockDetails.ReadOnly = true;
             this.datagvStockDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagvStockDetails.Size = new System.Drawing.Size(912, 324);
+            this.datagvStockDetails.Size = new System.Drawing.Size(912, 312);
             this.datagvStockDetails.TabIndex = 52;
-            this.datagvStockDetails.Visible = false;
             this.datagvStockDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvStockDetails_CellContentClick);
             // 
             // tableLayoutPanel3
@@ -200,7 +199,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(912, 33);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(912, 40);
             this.tableLayoutPanel4.TabIndex = 54;
             // 
             // lblAttributes
@@ -243,7 +242,7 @@
             this.lblFiliter.AutoSize = true;
             this.lblFiliter.Location = new System.Drawing.Point(695, 0);
             this.lblFiliter.Name = "lblFiliter";
-            this.lblFiliter.Size = new System.Drawing.Size(44, 33);
+            this.lblFiliter.Size = new System.Drawing.Size(44, 40);
             this.lblFiliter.TabIndex = 48;
             this.lblFiliter.Text = "Filter:";
             // 
@@ -280,11 +279,11 @@
             this.tableLayoutPanel5.Controls.Add(this.btnClearAll, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnGo, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 84);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 91);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(912, 37);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(912, 40);
             this.tableLayoutPanel5.TabIndex = 55;
             // 
             // btnClearAll
@@ -324,11 +323,11 @@
             this.tableLayoutPanel6.Controls.Add(this.btnDelete, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.btnClose, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 457);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 455);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(912, 37);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(912, 39);
             this.tableLayoutPanel6.TabIndex = 56;
             // 
             // btnEdit

@@ -14,9 +14,9 @@ using Merchant_Monetary_System.Forms.Product;
 
 namespace Merchant_Monetary_System
 {
-    public partial class frmViewStockDetails : Form
+    public partial class frmViewStocks : Form
     {
-        public frmViewStockDetails()
+        public frmViewStocks()
         {
             InitializeComponent();
         }
@@ -24,7 +24,6 @@ namespace Merchant_Monetary_System
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
             btnLoadRecords.Visible = false;
-            datagvStockDetails.Visible = true;
             DataBind();
         }
         private void DataBind()

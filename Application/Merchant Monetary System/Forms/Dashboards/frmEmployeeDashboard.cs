@@ -22,6 +22,10 @@ namespace Merchant_Monetary_System
             InitializeComponent();
             this.role = role;   
         }
+        public frmEmployeeDashboard()
+        {
+            InitializeComponent();
+        }
         public void loadform(object Form)
         {
             if (this.tParent.Controls.Count > 0)
@@ -166,7 +170,7 @@ namespace Merchant_Monetary_System
 
         private void viewStockToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            loadform(new frmViewStockDetails());
+            loadform(new frmViewStocks());
         }
 
         private void viewOrderToolStripMenuItem1_Click(object sender, EventArgs e)

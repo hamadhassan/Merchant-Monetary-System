@@ -383,7 +383,7 @@ namespace Merchant_Monetary_System
 
         private void viewStockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmViewStockDetails());
+            loadform(new frmViewStocks());
         }
 
         private void viewOrderToolStripMenuItem_Click(object sender, EventArgs e)

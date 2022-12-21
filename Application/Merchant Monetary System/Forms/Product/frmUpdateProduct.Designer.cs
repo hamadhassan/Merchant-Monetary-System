@@ -185,7 +185,6 @@
             this.txtbxVolume.Name = "txtbxVolume";
             this.txtbxVolume.Size = new System.Drawing.Size(203, 26);
             this.txtbxVolume.TabIndex = 55;
-            this.txtbxVolume.UseSystemPasswordChar = true;
             this.txtbxVolume.TextChanged += new System.EventHandler(this.txtbxVolume_TextChanged);
             // 
             // txtbxWeight
@@ -194,7 +193,6 @@
             this.txtbxWeight.Name = "txtbxWeight";
             this.txtbxWeight.Size = new System.Drawing.Size(203, 26);
             this.txtbxWeight.TabIndex = 53;
-            this.txtbxWeight.UseSystemPasswordChar = true;
             this.txtbxWeight.TextChanged += new System.EventHandler(this.txtbxWeight_TextChanged);
             // 
             // txtbxSKU_ID
@@ -342,7 +340,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 501);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateProduct";

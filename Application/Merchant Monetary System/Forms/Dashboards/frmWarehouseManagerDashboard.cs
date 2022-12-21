@@ -21,6 +21,10 @@ namespace Merchant_Monetary_System.Forms.Dashboards
             InitializeComponent();
             this.role=role;
         }
+        public frmWarehouseManagerDashboard()
+        {
+            InitializeComponent();
+        }
         private void load_form(object Form)
         {
             if (this.tblForm.Controls.Count > 0)
@@ -82,7 +86,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnViewStock_Click(object sender, EventArgs e)
         {
-            load_form(new frmViewStockDetails());
+            load_form(new frmViewStocks());
         }
 
         private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,7 +131,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void viewStockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            load_form(new frmViewStockDetails());
+            load_form(new frmViewStocks());
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)

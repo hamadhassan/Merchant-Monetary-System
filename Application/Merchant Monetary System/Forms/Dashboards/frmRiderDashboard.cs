@@ -92,7 +92,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void frmRiderDashboard_Load(object sender, EventArgs e)
         {
-            loadform(new frmViewStockDetails());
+            loadform(new frmAbout());
         }
 
         private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)

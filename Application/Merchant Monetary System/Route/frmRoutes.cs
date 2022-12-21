@@ -71,66 +71,79 @@ namespace Merchant_Monetary_System
        
         private void btnFind_Click(object sender, EventArgs e)
         {
-            ////Offline Map
-            GMaps.Instance.Mode = AccessMode.ServerAndCache;
-            map.CacheLocation = @"cache";
+            try
+            {
+                ////Offline Map
+                GMaps.Instance.Mode = AccessMode.ServerAndCache;
+                map.CacheLocation = @"cache";
 
-            PointLatLng warehousePoint = new PointLatLng(31.480829085972807, 74.48008507482837);//it is warehouse
-            GMapProviders.GoogleMap.ApiKey = ConfigAPI.ApiKey;
-            map.MapProvider = GMapProviders.GoogleMap;
-            map.DragButton = MouseButtons.Left;
-            map.Position = warehousePoint;//starting point of the map
-            map.MinZoom = 5;
-            map.MaxZoom = 100;
-            map.Zoom = 10;//current zoom level
-            map.AutoScroll = true;
-            run(warehousePoint, lsitOfShopPoints());
-            map.Refresh();
-            addPolygon(lsitOfShopPoints());
+                PointLatLng warehousePoint = new PointLatLng(31.480829085972807, 74.48008507482837);//it is warehouse
+                GMapProviders.GoogleMap.ApiKey = ConfigAPI.ApiKey;
+                map.MapProvider = GMapProviders.GoogleMap;
+                map.DragButton = MouseButtons.Left;
+                map.Position = warehousePoint;//starting point of the map
+                map.MinZoom = 5;
+                map.MaxZoom = 100;
+                map.Zoom = 10;//current zoom level
+                map.AutoScroll = true;
+                run(warehousePoint, lsitOfShopPoints());
+                map.Refresh();
+                addPolygon(lsitOfShopPoints());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         public void run(PointLatLng warehousePoint, List<PointLatLng> shopePoints)
         {
-            
-            Int64 verticesCount = shopePoints.Count+1;
-            Int64 edgesCount =Convert.ToInt64(Math.Round(Math.Pow(shopePoints.Count, 2)))+shopePoints.Count;
-            Graph graph = CreateGraph(verticesCount, edgesCount);
-            // Weighted Graph from warehouse
-            List<double> distancesAll = new List<double>();
-            for (int i = 0; i < shopePoints.Count; i++)
+            try
             {
-                graph.edge[i].Source = 0;
-                graph.edge[i].Destination = i + 1;
-                double distance = getRoutesDistance(warehousePoint, shopePoints[i]);
-                graph.edge[i].Weight = Convert.ToInt64(distance);
-                distancesAll.Add(distance);
-            }
-            // Weighted graph from each vertice 
-            int count=shopePoints.Count-1;
-            for (int i = 0; i < shopePoints.Count; i++)
-            {
-                for (int j = 0; j < shopePoints.Count; j++)
+                Int64 verticesCount = shopePoints.Count + 1;
+                Int64 edgesCount = Convert.ToInt64(Math.Round(Math.Pow(shopePoints.Count, 2))) + shopePoints.Count;
+                Graph graph = CreateGraph(verticesCount, edgesCount);
+                // Weighted Graph from warehouse
+                List<double> distancesAll = new List<double>();
+                for (int i = 0; i < shopePoints.Count; i++)
                 {
-                    graph.edge[count].Source = i + 1;
-                    graph.edge[count].Destination = j+1;
-                    double distance = getRoutesDistance(shopePoints[i], shopePoints[j]);
-                    graph.edge[count].Weight = Convert.ToInt64(distance);
+                    graph.edge[i].Source = 0;
+                    graph.edge[i].Destination = i + 1;
+                    double distance = getRoutesDistance(warehousePoint, shopePoints[i]);
+                    graph.edge[i].Weight = Convert.ToInt64(distance);
                     distancesAll.Add(distance);
-                    count++;
+                }
+                // Weighted graph from each vertice 
+                int count = shopePoints.Count - 1;
+                for (int i = 0; i < shopePoints.Count; i++)
+                {
+                    for (int j = 0; j < shopePoints.Count; j++)
+                    {
+                        graph.edge[count].Source = i + 1;
+                        graph.edge[count].Destination = j + 1;
+                        double distance = getRoutesDistance(shopePoints[i], shopePoints[j]);
+                        graph.edge[count].Weight = Convert.ToInt64(distance);
+                        distancesAll.Add(distance);
+                        count++;
 
+                    }
+                }
+                RoutesDL.storeAllRecordIntoFile(FilePath.Routes, distancesAll);
+                Int64[] dis = Bellman_Ford(graph, 0);
+                List<int> indexList = getSortedArrayIndex(dis);
+                displayRoutes(warehousePoint, shopePoints[indexList[0]], 1);
+                for (int i = 1; i < indexList.Count - 2; i++)
+                {
+                    displayRoutes(shopePoints[indexList[i]], shopePoints[indexList[i + 1]], i + 1);
                 }
             }
-            RoutesDL.storeAllRecordIntoFile(FilePath.Routes, distancesAll);
-            Int64[] dis=Bellman_Ford(graph, 0);
-            for(int i=0; i < dis.Length; i++)
+            catch (Exception ex)
             {
-                MessageBox.Show(dis[i].ToString());
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //List<int> indexList=getSortedArrayIndex(dis);
-            //displayRoutes(warehousePoint, shopePoints[indexList[0]],1);
-            //for (int i = 1; i < indexList.Count-2; i++)
-            //{
-            //    displayRoutes(shopePoints[indexList[i]], shopePoints[indexList[i+1]],i+1);
-            //}
+
+
+
         }
         public List<PointLatLng> listofPoints()
         {//These point are list of shopes
