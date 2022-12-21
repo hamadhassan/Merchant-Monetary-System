@@ -100,12 +100,17 @@ namespace Merchant_Monetary_System.Forms.Payment
                 ledger.PaymentByName = comboBoxPaymenyByName.Text;
                 ledger.PaymentRecievedByDesignation = comboBoxPaymentReceivedBy.Text;
                 ledger.PaymentRecievedByName = comboBoxPaymentReceivedByName.Text;
-                if(comboBoxPaymentBy.Text == "Vendor") {
-                  Compnay c= new Compnay();
-                  
-                    c=CompanyDL.loadRecordFromFile2(FilePath.Company);
-                    c.Revenue = c.Revenue - ledger.Amount;
+
+                Compnay c = Compnay.GetInstance();
+                if((comboBoxPaymentBy.Text == "Employee" || comboBoxPaymentBy.Text == "CEO" ) && rdbtnWithdraw.Checked)
+                {
+                    c.decreaseAssets(ledger.Amount);
                 }
+                else if((comboBoxPaymentReceivedBy.Text == "Employee" || comboBoxPaymentReceivedBy.Text =="CEO") && rdbtnDeposit.Checked)
+                {
+                    c.increaseAssets(ledger.Amount);
+                }
+                CompanyDL.storeRecordIntoFile(c, FilePath.Company);
                 LedgerDL.addintoList(ledger);
                 
                 LedgerDL.StoreDataIntoFiles(FilePath.Ledger);

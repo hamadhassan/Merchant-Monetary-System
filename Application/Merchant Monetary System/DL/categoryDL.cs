@@ -44,18 +44,10 @@ namespace Merchant_Monetary_System.DL
             DoublyLinkedListNode<Category> Head = categories.Head;
             while(Head != null)
             {
-                file.WriteLine(Head.Data);
+                file.WriteLine(Head.Data.CategoryName);
                 Head = Head.Next;
             }
             file.Close();
-            //StreamWriter file = new StreamWriter(path);
-            //int i = 0;
-            //foreach(string category in categoryList)
-            //{
-            //    file.Write(category);
-            //    if(i != categoryList.Count - 1) file.WriteLine();
-            //}
-            //file.Close();
         }
 
         public static void loadDataFromFiles(string path)

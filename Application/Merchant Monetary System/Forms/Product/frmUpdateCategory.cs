@@ -87,5 +87,10 @@ namespace Merchant_Monetary_System.Forms.Product
         {
             txtCategory.Text = category.CategoryName;
         }
+
+        private void lblCategory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

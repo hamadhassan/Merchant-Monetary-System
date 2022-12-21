@@ -92,5 +92,10 @@ namespace Merchant_Monetary_System.Forms.Product
         {
             this.Hide();
         }
+
+        private void lblCategoryTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
