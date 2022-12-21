@@ -138,8 +138,8 @@ namespace Merchant_Monetary_System.Forms.Payment
 
                 // COMMNENT THIS ONE WHEN LINKED liST applied on Shoppkeper Dl AND uNCOMMENT THE ABOVE ONE
 
-                List<string> names = new List<string>();
                 ShopKeeperDL.Shopkeepers_names(ShopKeeperDL.ShopkeeperList.Head);
+                List<string> names = ShopKeeperDL.names;
                 for (int i = 0; i < names.Count; i++)
                     comboBoxPaymenyByName.Items.Add(names[i]);
 

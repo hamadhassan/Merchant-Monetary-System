@@ -13,10 +13,11 @@ namespace Merchant_Monetary_System.DL
     public sealed class ShopKeeperDL
     {
         public static List<string> names = new List<string>();
+        private static List<string> shopNames = new List<string>();
         private static BST shopkeeperList = new BST();
-        Queue<Shopkeeper> Q = new Queue<Shopkeeper>();
 
         public static BST ShopkeeperList { get => shopkeeperList; set => shopkeeperList = value; }
+        public static List<string> ShopNames { get => shopNames; set => shopNames = value; }
 
         public static void addShopkeeperIntoList(Shopkeeper shopkeeper)
         {
@@ -141,7 +142,7 @@ namespace Merchant_Monetary_System.DL
         }
         public static void Shopkeepers_names(BSTNode Head) 
         {
-            while (Head != null)
+            if (Head != null)
             {
                 Shopkeepers_names(Head.Left);
                 names.Add(Head.Data.ShopkeeperName);
@@ -184,17 +185,31 @@ namespace Merchant_Monetary_System.DL
         public static List<string> Shop_names(string shopkeeper)
         {
             List<string> Shopnames = new List<string>();
-            foreach (Shopkeeper name in shopkeeperList)
+            Shopkeeper shp = returnShopkeeper(shopkeeper);
+            DoublyLinkedListNode<Shop> Head = shp.ShopList.Head;
+            while(Head != null)
             {
-                if (name.ShopkeeperName == shopkeeper) 
-                {
-                    foreach (Shop names in name.ShopList) 
-                    {
-                        Shopnames.Add(names.ShopName);
-                    }
-                }
+                Shopnames.Add(Head.Data.ShopName);
+                Head = Head.Next;
             }
             return Shopnames;
         }
+
+        public static Shopkeeper returnShopkeeper(string shopkeeper)
+        {
+            Queue<Shopkeeper> R = new Queue<Shopkeeper>();
+            AddIntoqueue(R, ShopkeeperList.Head);
+            while(R.Count != 0)
+            {
+                Shopkeeper shp = R.Dequeue();
+                if(shp.ShopkeeperName == shopkeeper)
+                {
+                    return shp;
+                }
+            }
+            return null;
+        }
+
+
     }
 }
