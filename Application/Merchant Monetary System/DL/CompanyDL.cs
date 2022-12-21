@@ -22,7 +22,7 @@ namespace Merchant_Monetary_System
         public static void storeRecordIntoFile(Compnay record, string path)
         {
             StreamWriter file = new StreamWriter(path,false);
-            file.WriteLine(record.Name + "," + record.Address + "," + record.Phone);
+            file.WriteLine(record.Name + "," + record.Address + "," + record.Phone + "," + record.Revenue);
             file.Flush();
             file.Close();
         }
@@ -38,7 +38,8 @@ namespace Merchant_Monetary_System
                     string name = spilitedRecord[0];
                     string address = spilitedRecord[1];
                     int phone = Convert.ToInt32(spilitedRecord[2]);
-                    Compnay compnay = Compnay.Instance(name, address, phone);
+                    double revenue = Convert.ToInt64(spilitedRecord[3]);
+                    Compnay compnay = Compnay.Instance(name, address, phone,revenue);
                 }
                 fileVariable.Close();
                 return true;
@@ -46,6 +47,31 @@ namespace Merchant_Monetary_System
             else
             {
                 return false;
+            }
+        }
+        public static Compnay loadRecordFromFile2(string path)
+        {
+            Compnay c=new Compnay();
+            if (File.Exists(path))
+            {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                while ((record = fileVariable.ReadLine()) != null)
+                {
+                    string[] spilitedRecord = record.Split(',');
+                    string name = spilitedRecord[0];
+                    string address = spilitedRecord[1];
+                    int phone = Convert.ToInt32(spilitedRecord[2]);
+                    double revenue = Convert.ToInt64(spilitedRecord[3]);
+                    Compnay compnay = Compnay.Instance(name, address, phone, revenue);
+                }
+                fileVariable.Close();
+                c=new Compnay();
+                return c;
+            }
+            else
+            {
+                return null;
             }
         }
     }

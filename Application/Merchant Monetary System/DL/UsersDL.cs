@@ -45,6 +45,7 @@ namespace Merchant_Monetary_System
                 {
                     return true;
                 }
+                Head = Head.Next;
             }
             return false;
         }
@@ -58,6 +59,7 @@ namespace Merchant_Monetary_System
                 {
                     return true;
                 }
+                Head=Head.Next;
             }
             return false;
         }
@@ -71,6 +73,8 @@ namespace Merchant_Monetary_System
                     Head.Data.Password = newPassword;
                     return true;
                 }
+
+                Head = Head.Next;
             }
             return false;
         }

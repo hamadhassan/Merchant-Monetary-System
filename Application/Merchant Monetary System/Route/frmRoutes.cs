@@ -280,6 +280,11 @@ namespace Merchant_Monetary_System
 
            return distance;
         }
+
+        private void map_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

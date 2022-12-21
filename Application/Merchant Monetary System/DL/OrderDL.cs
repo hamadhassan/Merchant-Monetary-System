@@ -143,6 +143,27 @@ namespace Merchant_Monetary_System.DL
             }
             file.Close();
         }
+        public static DoublyLinkedList<Order> getOrders_withrespectiveRider(string RiderName)
+        {
+
+            DoublyLinkedListNode<Order> Head = OrdersList.Head;
+            DoublyLinkedList<Order> RiderOrder = new DoublyLinkedList<Order>();
+
+            while (Head != null)
+            {
+                    if (Head.Data.RiderName == RiderName)
+                    {
+                          RiderOrder.Add(Head.Data) ;
+                            if (RiderOrder.Head.Next!=null) 
+                            { 
+                                RiderOrder.Head = Head.Next;
+                            }
+                    }
+                    Head = Head.Next;   
+            }
+            return RiderOrder;
+            
+        }
 
     }
 
