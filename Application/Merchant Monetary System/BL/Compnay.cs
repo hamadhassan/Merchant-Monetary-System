@@ -11,13 +11,13 @@ namespace Merchant_Monetary_System
         private string name;
         private string address;
         private int phone;
-        private double revenue;
+        private double assets;
         private static Compnay instance = null;
 
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }
         public int Phone { get => phone; set => phone = value; }
-        public double Revenue { get => revenue; set => revenue = value; }
+        public double Assets { get => assets; set => assets = value; }
 
         public static Compnay Instance(string name,string address,int phone, double revenue)
         {
@@ -37,13 +37,14 @@ namespace Merchant_Monetary_System
             this.name = name;
             this.address = address;
             this.phone = phone;
-            this.revenue = revenue; 
+            this.assets = revenue; 
         }
         public Compnay(string name, string address, int phone)
         {
             this.name = name;
             this.address = address;
             this.phone = phone;
+            this.assets = 100000000000;
         }
         public Compnay()
         {
@@ -57,8 +58,15 @@ namespace Merchant_Monetary_System
         }
         public void updateAmount(double revenue)
         {
-            this.revenue = revenue;
+            this.assets = revenue;
         }
-        
+        public void decreaseAssets(double amount)
+        {
+            this.assets -= amount;
+        }
+        public void increaseAssets(double amount)
+        {
+            this.assets += amount;
+        }
     }
 }

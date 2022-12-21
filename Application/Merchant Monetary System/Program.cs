@@ -40,7 +40,7 @@ namespace Merchant_Monetary_System
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                // Application.Run(new frmAddProduct());
-                Application.Run(new frmAddPayment());
+                Application.Run(new frmViewCategory());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 
