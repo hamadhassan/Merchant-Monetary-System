@@ -208,12 +208,12 @@ namespace Merchant_Monetary_System
                 string email = txtbxEmail.Text;
                 double contact = double.Parse(txtbxShopkeeperNumber.Text);
                 Shopkeeper shopkeeper = new Shopkeeper();
-                if (ShopKeeperDL.MatchShopkeeper(cnic, shopkeeperName))
-                {
-                    MessageBox.Show("Already Registered with given CNIC", "Alert Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
-                }
-                else
-                {
+                //if (ShopKeeperDL.MatchShopkeeper(cnic, shopkeeperName))
+                //{
+                //    MessageBox.Show("Already Registered with given CNIC", "Alert Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
+                //}
+                //else
+                //{
                     if (ShopKeeperDL.returnShopkeeperDetails(cnic) != null)
                     {
                         shopkeeper = ShopKeeperDL.returnShopkeeperDetails(cnic);
@@ -233,7 +233,6 @@ namespace Merchant_Monetary_System
                     ShopKeeperDL.addShopkeeperIntoList(shopkeeper);
                     ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                     MessageBox.Show("Shopkeeper Along with the Shop Added", "Adding...");
-                }
             }
         }
 

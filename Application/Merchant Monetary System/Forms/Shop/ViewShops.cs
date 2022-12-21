@@ -71,12 +71,13 @@ namespace Merchant_Monetary_System
             if (datagvShopDetails.SelectedRows.Count == 1)
             {
                 int index = datagvShopDetails.CurrentCell.ColumnIndex;
-                Shop S = (Shop)datagvShopDetails.CurrentRow.DataBoundItem;
+                int rowInd = datagvShopDetails.CurrentCell.RowIndex;
+                string ID = datagvShopDetails.Rows[rowInd].Cells[0].Value.ToString();
+                Shop S = shopDL.returnShop(ID);
                 if (index == 4)
                 {
                     Form form = new frmUpdateShop(S);
                     form.ShowDialog();
-                    ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper,ShopKeeperDL.ShopkeeperList);
                 }
                 else if (index == 5)
                 {
@@ -84,7 +85,6 @@ namespace Merchant_Monetary_System
                     if (done)
                     {
                         MessageBox.Show("Deleted Successfully", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DataBind();
                         ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper,ShopKeeperDL.ShopkeeperList);
                     }
                     else
@@ -92,6 +92,8 @@ namespace Merchant_Monetary_System
                         MessageBox.Show("Not Found", "Info Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                DataBind();
+                ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper,ShopKeeperDL.ShopkeeperList);
             }
             else
             {
@@ -109,7 +111,9 @@ namespace Merchant_Monetary_System
         {
             if (datagvShopDetails.SelectedRows.Count == 1)
             {
-                Shop S = (Shop)datagvShopDetails.CurrentRow.DataBoundItem;
+                int rowInd = datagvShopDetails.CurrentCell.RowIndex;
+                string ID = datagvShopDetails.Rows[rowInd].Cells[0].Value.ToString();
+                Shop S = shopDL.returnShop(ID);
                 if (S != null)
                 {
                     shopDL.deleteShop(Shops, S);
@@ -129,7 +133,9 @@ namespace Merchant_Monetary_System
         {
             if (datagvShopDetails.SelectedRows.Count == 1)
             {
-                Shop S = (Shop)datagvShopDetails.CurrentRow.DataBoundItem;
+                int rowInd = datagvShopDetails.CurrentCell.RowIndex;
+                string ID = datagvShopDetails.Rows[rowInd].Cells[0].Value.ToString();
+                Shop S = shopDL.returnShop(ID);
                 if (S != null)
                 {
                     Form f = new frmUpdateShop(S);

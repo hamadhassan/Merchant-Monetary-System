@@ -42,7 +42,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnViewOrders_Click(object sender, EventArgs e)
         {
-            loadform(new OrDerDetailsForm(role));
+            loadform(new OrDerDetailsForm(role,name));
 
         }
 

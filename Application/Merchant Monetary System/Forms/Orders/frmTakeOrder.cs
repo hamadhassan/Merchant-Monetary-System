@@ -118,10 +118,8 @@ namespace Merchant_Monetary_System
         }
 
         private void txtbxName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<string> names;
-
-            names=ShopKeeperDL.Shop_names(txtbxName.Text);
+        { 
+            List<string> names =ShopKeeperDL.Shop_names(txtbxName.Text);
             for (int i = 0; i < names.Count; i++) 
             {
                 cmbxShopNames.Items.Add(names[i]);
@@ -130,12 +128,10 @@ namespace Merchant_Monetary_System
 
         private void frmTakeOrder_Load(object sender, EventArgs e)
         {
-            ShopKeeperDL.LoadDataFromFiles(FilePath.Shopkeeper);
-            List<string> names = new List<string>();
             ShopKeeperDL.Shopkeepers_names(ShopKeeperDL.ShopkeeperList.Head);
+            List<string> names = ShopKeeperDL.names;
             for (int i = 0; i < names.Count; i++)
                 txtbxName.Items.Add(names[i]);
-            
         }
 
         private void btnEdit_Click(object sender, EventArgs e) 
