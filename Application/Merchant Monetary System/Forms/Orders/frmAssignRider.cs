@@ -21,11 +21,11 @@ namespace Merchant_Monetary_System.Forms.Orders
 
         private void frmAssignRider_Load(object sender, EventArgs e)
         {
-           //List<string> names=UsersDL.GetRider_Names();
-           // for (int i = 0; i < names.Count; i++) 
-           // {
-           //     cmbxRiders.Items.Add(names[i]);
-           // }
+            List<string> names = UsersDL.GetRider_Names();
+            for (int i = 0; i < names.Count; i++)
+            {
+                cmbxRiders.Items.Add(names[i]);
+            }
         }
 
         private void cmbxRiders_SelectedIndexChanged(object sender, EventArgs e)

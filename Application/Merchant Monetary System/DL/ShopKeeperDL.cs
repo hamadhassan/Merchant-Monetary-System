@@ -224,7 +224,23 @@ namespace Merchant_Monetary_System.DL
             }
             return null;
         }
+        public static DoublyLinkedList<Shop> returnShops(string shopkeeper)
+        {
+            Queue<Shopkeeper> R = new Queue<Shopkeeper>();
+            DoublyLinkedList<Shop>s=new DoublyLinkedList<Shop>();
+            AddIntoqueue(R, ShopkeeperList.Head);
+            while (R.Count != 0)
+            {
+                Shopkeeper shp = R.Dequeue();
+                if (shp.ShopkeeperName == shopkeeper)
+                {
+                   s= shp.ShopList;
+                    return s;
 
+                }
+            }
+            return s;
+        }
 
     }
 }

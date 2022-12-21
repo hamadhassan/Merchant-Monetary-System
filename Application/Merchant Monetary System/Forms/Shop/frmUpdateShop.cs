@@ -25,16 +25,16 @@ namespace Merchant_Monetary_System
 
         private void frmUpdateShop_Load(object sender, EventArgs e)
         {
-            txtbxShopName.Text = shop.ShopName;
-            cmbxCity.SelectedItem = cmbxCity.Items.IndexOf(shop.City);
-            cmbxState.SelectedItem = cmbxState.Items.IndexOf(shop.State);
-            comboboxArea.SelectedItem = comboboxArea.Items.IndexOf(shop.Area);
             foreach (string city in Misc.Cities)
             {
                 cmbxCity.Items.Add(city);
             }
             cmbxState.Items.Add("Punjab");
             cmbxState.SelectedIndex = cmbxState.Items.IndexOf("Punjab");
+            txtbxShopName.Text = shop.ShopName;
+            cmbxCity.SelectedItem = cmbxCity.Items.IndexOf(shop.City);
+            cmbxState.SelectedItem = cmbxState.Items.IndexOf(shop.State);
+            comboboxArea.SelectedItem = comboboxArea.Items.IndexOf(shop.Area);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -22,7 +22,7 @@ namespace Merchant_Monetary_System
         public static void storeRecordIntoFile(Compnay record, string path)
         {
             StreamWriter file = new StreamWriter(path,false);
-            file.WriteLine(record.Name + "," + record.Address + "," + record.Phone + "," + record.Revenue);
+            file.WriteLine(record.Name + "," + record.Address + "," + record.Phone + "," + record.Assets);
             file.Flush();
             file.Close();
         }

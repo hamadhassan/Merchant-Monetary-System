@@ -234,6 +234,10 @@ namespace Merchant_Monetary_System
                     ShopKeeperDL.StoreDataIntoFiles(FilePath.Shopkeeper, ShopKeeperDL.ShopkeeperList);
                     MessageBox.Show("Shopkeeper Along with the Shop Added", "Adding...");
             }
+            else
+            {
+                MessageBox.Show("Fill All the fields correctly", "Adding...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -248,8 +252,12 @@ namespace Merchant_Monetary_System
             {
                 cmbxCity.Items.Add(city);
             }
+            cmbxCity.SelectedIndex = 0;
+            comboboxArea.SelectedIndex = 0;
+
             cmbxState.Items.Add("Punjab");
             cmbxState.SelectedIndex = cmbxState.Items.IndexOf("Punjab");
+            cmbxState.SelectedIndex = 0;
             cmbxState.Enabled = false ;
         }
 

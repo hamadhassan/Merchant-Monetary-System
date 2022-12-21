@@ -137,9 +137,10 @@ namespace Merchant_Monetary_System.DL
                     string SensitivityType = eachProduct[6];
                     Product product = new Product(Name,SKU_Number,Weight, Volume, Manufacturer,Category,SensitivityType);
                     order.Order_products.Add(product);
-                    InsertProduct(order);
+                    
                 }
-                
+                InsertProduct(order);
+
             }
             file.Close();
         }

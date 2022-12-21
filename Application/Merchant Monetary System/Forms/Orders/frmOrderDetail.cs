@@ -54,9 +54,14 @@ namespace Merchant_Monetary_System
                 datagvProductDetails.Columns.Clear();
                 datagvProductDetails.DataSource = null;
                 datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                if(role=="Rider") { specificRider_orders = OrderDL.getOrders_withrespectiveRider(name);
-                    addIntoGrid(specificRider_orders); }
-                else { addIntoGrid(OrderDL.OrdersList); }
+                if(role=="Rider") 
+                {
+                    specificRider_orders = OrderDL.getOrders_withrespectiveRider(name);
+                    addIntoGrid(specificRider_orders); 
+                }
+                else { 
+                    addIntoGrid(OrderDL.OrdersList);
+                }
                 DataGridViewButtonColumn VeiwProductList = new DataGridViewButtonColumn();
                 VeiwProductList.HeaderText = "Veiw Product List";
                 VeiwProductList.Text = "Veiw Product List";
@@ -168,7 +173,7 @@ namespace Merchant_Monetary_System
                         }
 
                     }
-                    if (role == "WareHouse Manager")
+                    else if (role == "WareHouse Manager")
                     {
                         if (index == 7)
                         {

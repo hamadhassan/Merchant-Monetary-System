@@ -95,11 +95,6 @@
             this.cmbxRiders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxRiders.ForeColor = System.Drawing.Color.Black;
             this.cmbxRiders.FormattingEnabled = true;
-            this.cmbxRiders.Items.AddRange(new object[] {
-            "Confirmed",
-            "In Progress",
-            "Cancel",
-            "Ready"});
             this.cmbxRiders.Location = new System.Drawing.Point(173, 69);
             this.cmbxRiders.Name = "cmbxRiders";
             this.cmbxRiders.Size = new System.Drawing.Size(159, 28);
@@ -125,9 +120,9 @@
             this.ClientSize = new System.Drawing.Size(404, 171);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAssignRider";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAssignRider";
             this.Load += new System.EventHandler(this.frmAssignRider_Load);
             this.groupBox1.ResumeLayout(false);

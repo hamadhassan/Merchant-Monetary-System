@@ -183,8 +183,10 @@
             this.comboBoxPaymentBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxPaymentBy.FormattingEnabled = true;
             this.comboBoxPaymentBy.Items.AddRange(new object[] {
-            "ShopKeeper",
-            "Vendor"});
+            "CEO",
+            "Employee",
+            "Rider",
+            "Shopkeeper"});
             this.comboBoxPaymentBy.Location = new System.Drawing.Point(190, 334);
             this.comboBoxPaymentBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentBy.Name = "comboBoxPaymentBy";

@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
-using System.Net.Mail;
 using Merchant_Monetary_System.DL;
 using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System;
@@ -58,6 +57,8 @@ namespace Merchant_Monetary_System.Forms.Emails
             { 
                 cmbxTo.Items.Add(Head.Data.EmailAddress);
             }
+            cmbxTo.SelectedIndex = 0;
+            cmbxFrom.SelectedIndex = 0;
         }
 
         private void gbx_Enter(object sender, EventArgs e)
