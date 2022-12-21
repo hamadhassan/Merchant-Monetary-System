@@ -42,8 +42,10 @@
             this.cmbxState = new System.Windows.Forms.ComboBox();
             this.txtbxCapacityInVolume = new System.Windows.Forms.TextBox();
             this.lblCapacityInVolume = new System.Windows.Forms.Label();
-            this.lblCapacityInVolumeSignal = new System.Windows.Forms.Label();
             this.lblNameSignal = new System.Windows.Forms.Label();
+            this.txtbxArea = new System.Windows.Forms.TextBox();
+            this.lblCapacityInVolumeSignal = new System.Windows.Forms.Label();
+            this.lblAreaSignal = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.lblRecordSignal = new System.Windows.Forms.Label();
@@ -52,8 +54,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtbxArea = new System.Windows.Forms.TextBox();
-            this.lblAreaSignal = new System.Windows.Forms.Label();
             this.gbx.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -238,6 +238,24 @@
             this.lblCapacityInVolume.TabIndex = 20;
             this.lblCapacityInVolume.Text = "Capacity in Volume :";
             // 
+            // lblNameSignal
+            // 
+            this.lblNameSignal.AutoSize = true;
+            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblNameSignal.Location = new System.Drawing.Point(246, 53);
+            this.lblNameSignal.Name = "lblNameSignal";
+            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblNameSignal.TabIndex = 18;
+            this.lblNameSignal.Text = " ";
+            // 
+            // txtbxArea
+            // 
+            this.txtbxArea.Location = new System.Drawing.Point(246, 140);
+            this.txtbxArea.Name = "txtbxArea";
+            this.txtbxArea.Size = new System.Drawing.Size(203, 26);
+            this.txtbxArea.TabIndex = 30;
+            this.txtbxArea.TextChanged += new System.EventHandler(this.txtbxArea_TextChanged);
+            // 
             // lblCapacityInVolumeSignal
             // 
             this.lblCapacityInVolumeSignal.AutoSize = true;
@@ -248,15 +266,15 @@
             this.lblCapacityInVolumeSignal.TabIndex = 21;
             this.lblCapacityInVolumeSignal.Text = " ";
             // 
-            // lblNameSignal
+            // lblAreaSignal
             // 
-            this.lblNameSignal.AutoSize = true;
-            this.lblNameSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblNameSignal.Location = new System.Drawing.Point(246, 53);
-            this.lblNameSignal.Name = "lblNameSignal";
-            this.lblNameSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblNameSignal.TabIndex = 18;
-            this.lblNameSignal.Text = " ";
+            this.lblAreaSignal.AutoSize = true;
+            this.lblAreaSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
+            this.lblAreaSignal.Location = new System.Drawing.Point(246, 168);
+            this.lblAreaSignal.Name = "lblAreaSignal";
+            this.lblAreaSignal.Size = new System.Drawing.Size(13, 20);
+            this.lblAreaSignal.TabIndex = 31;
+            this.lblAreaSignal.Text = " ";
             // 
             // tableLayoutPanel5
             // 
@@ -369,24 +387,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(914, 501);
             this.tableLayoutPanel1.TabIndex = 35;
-            // 
-            // txtbxArea
-            // 
-            this.txtbxArea.Location = new System.Drawing.Point(246, 140);
-            this.txtbxArea.Name = "txtbxArea";
-            this.txtbxArea.Size = new System.Drawing.Size(203, 26);
-            this.txtbxArea.TabIndex = 30;
-            this.txtbxArea.TextChanged += new System.EventHandler(this.txtbxArea_TextChanged);
-            // 
-            // lblAreaSignal
-            // 
-            this.lblAreaSignal.AutoSize = true;
-            this.lblAreaSignal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(37)))), ((int)(((byte)(48)))));
-            this.lblAreaSignal.Location = new System.Drawing.Point(246, 168);
-            this.lblAreaSignal.Name = "lblAreaSignal";
-            this.lblAreaSignal.Size = new System.Drawing.Size(13, 20);
-            this.lblAreaSignal.TabIndex = 31;
-            this.lblAreaSignal.Text = " ";
             // 
             // frmAddWarehouse
             // 

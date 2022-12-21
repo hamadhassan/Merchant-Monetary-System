@@ -30,9 +30,18 @@
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forgotPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopAndShopkKeeperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addShopAndShopKeeperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnViewRoutes = new System.Windows.Forms.Button();
             this.btnTakeOrder = new System.Windows.Forms.Button();
@@ -42,15 +51,6 @@
             this.btnSendEmail = new System.Windows.Forms.Button();
             this.btnForgetPassword = new System.Windows.Forms.Button();
             this.tblForm = new System.Windows.Forms.TableLayoutPanel();
-            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.forgotPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.takeOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shopAndShopkKeeperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addShopAndShopKeeperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,11 +81,25 @@
             this.optionToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.optionToolStripMenuItem.Text = "Option";
             // 
+            // sendEmailToolStripMenuItem
+            // 
+            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
+            // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
+            // 
+            // forgotPasswordToolStripMenuItem
+            // 
+            this.forgotPasswordToolStripMenuItem.Name = "forgotPasswordToolStripMenuItem";
+            this.forgotPasswordToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.forgotPasswordToolStripMenuItem.Text = "Forgot Password";
+            this.forgotPasswordToolStripMenuItem.Click += new System.EventHandler(this.forgotPasswordToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
@@ -96,6 +110,50 @@
             this.productToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.productToolStripMenuItem.Text = "Product";
             // 
+            // takeOrderToolStripMenuItem
+            // 
+            this.takeOrderToolStripMenuItem.Name = "takeOrderToolStripMenuItem";
+            this.takeOrderToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.takeOrderToolStripMenuItem.Text = "Take Order";
+            this.takeOrderToolStripMenuItem.Click += new System.EventHandler(this.takeOrderToolStripMenuItem_Click);
+            // 
+            // orderDetailsToolStripMenuItem
+            // 
+            this.orderDetailsToolStripMenuItem.Name = "orderDetailsToolStripMenuItem";
+            this.orderDetailsToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.orderDetailsToolStripMenuItem.Text = "Order Details";
+            this.orderDetailsToolStripMenuItem.Click += new System.EventHandler(this.orderDetailsToolStripMenuItem_Click);
+            // 
+            // shopAndShopkKeeperToolStripMenuItem
+            // 
+            this.shopAndShopkKeeperToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addShopAndShopKeeperToolStripMenuItem});
+            this.shopAndShopkKeeperToolStripMenuItem.Name = "shopAndShopkKeeperToolStripMenuItem";
+            this.shopAndShopkKeeperToolStripMenuItem.Size = new System.Drawing.Size(163, 23);
+            this.shopAndShopkKeeperToolStripMenuItem.Text = "Shop and ShopkKeeper";
+            // 
+            // addShopAndShopKeeperToolStripMenuItem
+            // 
+            this.addShopAndShopKeeperToolStripMenuItem.Name = "addShopAndShopKeeperToolStripMenuItem";
+            this.addShopAndShopKeeperToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.addShopAndShopKeeperToolStripMenuItem.Text = "Add Shop and ShopKeeper";
+            this.addShopAndShopKeeperToolStripMenuItem.Click += new System.EventHandler(this.addShopAndShopKeeperToolStripMenuItem_Click);
+            // 
+            // paymentToolStripMenuItem
+            // 
+            this.paymentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addPaymentToolStripMenuItem});
+            this.paymentToolStripMenuItem.Name = "paymentToolStripMenuItem";
+            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
+            this.paymentToolStripMenuItem.Text = "Payment ";
+            // 
+            // addPaymentToolStripMenuItem
+            // 
+            this.addPaymentToolStripMenuItem.Name = "addPaymentToolStripMenuItem";
+            this.addPaymentToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.addPaymentToolStripMenuItem.Text = "Add Payment";
+            this.addPaymentToolStripMenuItem.Click += new System.EventHandler(this.addPaymentToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,6 +161,12 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
             this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // tableLayoutPanel1
             // 
@@ -260,70 +324,6 @@
             this.tblForm.TabIndex = 9;
             this.tblForm.Paint += new System.Windows.Forms.PaintEventHandler(this.tblForm_Paint);
             // 
-            // sendEmailToolStripMenuItem
-            // 
-            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.sendEmailToolStripMenuItem.Text = "Send Email";
-            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
-            // 
-            // forgotPasswordToolStripMenuItem
-            // 
-            this.forgotPasswordToolStripMenuItem.Name = "forgotPasswordToolStripMenuItem";
-            this.forgotPasswordToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
-            this.forgotPasswordToolStripMenuItem.Text = "Forgot Password";
-            this.forgotPasswordToolStripMenuItem.Click += new System.EventHandler(this.forgotPasswordToolStripMenuItem_Click);
-            // 
-            // takeOrderToolStripMenuItem
-            // 
-            this.takeOrderToolStripMenuItem.Name = "takeOrderToolStripMenuItem";
-            this.takeOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.takeOrderToolStripMenuItem.Text = "Take Order";
-            this.takeOrderToolStripMenuItem.Click += new System.EventHandler(this.takeOrderToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // shopAndShopkKeeperToolStripMenuItem
-            // 
-            this.shopAndShopkKeeperToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addShopAndShopKeeperToolStripMenuItem});
-            this.shopAndShopkKeeperToolStripMenuItem.Name = "shopAndShopkKeeperToolStripMenuItem";
-            this.shopAndShopkKeeperToolStripMenuItem.Size = new System.Drawing.Size(163, 23);
-            this.shopAndShopkKeeperToolStripMenuItem.Text = "Shop and ShopkKeeper";
-            // 
-            // addShopAndShopKeeperToolStripMenuItem
-            // 
-            this.addShopAndShopKeeperToolStripMenuItem.Name = "addShopAndShopKeeperToolStripMenuItem";
-            this.addShopAndShopKeeperToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
-            this.addShopAndShopKeeperToolStripMenuItem.Text = "Add Shop and ShopKeeper";
-            this.addShopAndShopKeeperToolStripMenuItem.Click += new System.EventHandler(this.addShopAndShopKeeperToolStripMenuItem_Click);
-            // 
-            // orderDetailsToolStripMenuItem
-            // 
-            this.orderDetailsToolStripMenuItem.Name = "orderDetailsToolStripMenuItem";
-            this.orderDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.orderDetailsToolStripMenuItem.Text = "Order Details";
-            this.orderDetailsToolStripMenuItem.Click += new System.EventHandler(this.orderDetailsToolStripMenuItem_Click);
-            // 
-            // paymentToolStripMenuItem
-            // 
-            this.paymentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addPaymentToolStripMenuItem});
-            this.paymentToolStripMenuItem.Name = "paymentToolStripMenuItem";
-            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
-            this.paymentToolStripMenuItem.Text = "Payment ";
-            // 
-            // addPaymentToolStripMenuItem
-            // 
-            this.addPaymentToolStripMenuItem.Name = "addPaymentToolStripMenuItem";
-            this.addPaymentToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.addPaymentToolStripMenuItem.Text = "Add Payment";
-            this.addPaymentToolStripMenuItem.Click += new System.EventHandler(this.addPaymentToolStripMenuItem_Click);
-            // 
             // frmRiderDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +333,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip);
             this.Name = "frmRiderDashboard";
-            this.Text = "frmRiderDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Rider Dashboard";
             this.Load += new System.EventHandler(this.frmRiderDashboard_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

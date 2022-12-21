@@ -13,15 +13,21 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using static GMap.NET.Entity.OpenStreetMapRouteEntity;
 using System.IO;
+using Merchant_Monetary_System.BL;
 
 namespace Merchant_Monetary_System
 {
     public partial class frmRoutes : Form
     {
-        
+        List<Shop> listshopes = new List<Shop>();
         public frmRoutes()
         {
             InitializeComponent();
+        }
+        public frmRoutes(List<Shop> listshopes)
+        {
+            InitializeComponent();
+            this.listshopes = listshopes;
         }
         private void frmRoutes_Load(object sender, EventArgs e)
         {
@@ -32,7 +38,36 @@ namespace Merchant_Monetary_System
         {
             this.Hide();    
         }
-        
+        private PointLatLng geoCoding(string address)
+        {
+            GMapProviders.GoogleMap.ApiKey = ConfigAPI.ApiKey;
+            GeoCoderStatusCode statusCode;
+            var pointLanLong = GoogleMapProvider.Instance.GetPoint(address.Trim(), out statusCode);
+            if (statusCode == GeoCoderStatusCode.OK)
+            {
+                double lat = pointLanLong.Value.Lat;
+                double lng = pointLanLong.Value.Lng;
+                PointLatLng latLng = new PointLatLng(lat, lng);
+                return latLng;
+            }
+            return PointLatLng.Empty;
+
+        }
+        private List<PointLatLng> lsitOfShopPoints()
+        {
+            List<PointLatLng> shopPoints = new List<PointLatLng>();
+            foreach(Shop s in listshopes)
+            {
+
+                string area = s.Area;
+                string city = s.City;
+                string state = s.State;
+                PointLatLng point = geoCoding(area + " " + city + " " + state);
+                shopPoints.Add(point);
+
+            }
+            return shopPoints;
+        }
        
         private void btnFind_Click(object sender, EventArgs e)
         {
@@ -49,12 +84,13 @@ namespace Merchant_Monetary_System
             map.MaxZoom = 100;
             map.Zoom = 10;//current zoom level
             map.AutoScroll = true;
-            run(warehousePoint, listofPoints());
+            run(warehousePoint, lsitOfShopPoints());
             map.Refresh();
-            addPolygon(listofPoints());
+            addPolygon(lsitOfShopPoints());
         }
         public void run(PointLatLng warehousePoint, List<PointLatLng> shopePoints)
         {
+            
             Int64 verticesCount = shopePoints.Count+1;
             Int64 edgesCount =Convert.ToInt64(Math.Round(Math.Pow(shopePoints.Count, 2)))+shopePoints.Count;
             Graph graph = CreateGraph(verticesCount, edgesCount);

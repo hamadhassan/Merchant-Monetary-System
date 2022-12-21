@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.DL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -450,12 +452,18 @@ namespace Merchant_Monetary_System
             if (cmbxDesignation.SelectedIndex == 2)
             {//rider is selected
                 lbAssigned.Text = "Vehicle";
-                lbAssigned.Visible = false;
-                cmbxAssigned.Visible = false;
+                lbAssigned.Visible = true;
+                cmbxAssigned.Visible = true;
                 createAccountFor = 4;
                 //add all vehichle for rider
-
-                //cmbxAssigned.SelectedIndex = 0;
+                //VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
+                DoublyLinkedListNode<Vehicle> Head = VehicleDL.VehicleLinkedList.Head;
+                while (Head != null)
+                {
+                    cmbxAssigned.Items.Add(Head.Data.RegistrationNumber);
+                    Head = Head.Next;
+                }
+                cmbxAssigned.SelectedIndex = 0;
             }
             else if(cmbxDesignation.SelectedIndex==3)
             {//warehouse is selected
@@ -464,6 +472,7 @@ namespace Merchant_Monetary_System
                 cmbxAssigned.Visible = true;
                 createAccountFor = 3;
                 //add all warehouse 
+                //WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
 
                 DoublyLinkedListNode<Warehouse> Head = WarehouseDL.WarehousesList.Head;
                 while(Head!=null)

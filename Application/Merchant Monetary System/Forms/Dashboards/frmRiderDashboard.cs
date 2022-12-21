@@ -18,7 +18,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
     {
         public string name;
         public string role;
-        public static List<Shop> ShopList = new List<Shop>();
+        private  List<Shop> ShopList = new List<Shop>();
         public frmRiderDashboard(string name,string role)
         {
             InitializeComponent();
@@ -35,6 +35,10 @@ namespace Merchant_Monetary_System.Forms.Dashboards
                 }
                 Head = Head.Next;
             }
+        }
+        public frmRiderDashboard()
+        {
+            InitializeComponent();
         }
         public void loadform(object Form)
         {
@@ -81,11 +85,6 @@ namespace Merchant_Monetary_System.Forms.Dashboards
             loadform(new frmForgetPassword());
         }
 
-        private void btnViewRoutes_Click(object sender, EventArgs e)
-        {
-            loadform(new frmRoutes());
-        }
-
         private void tblForm_Paint(object sender, PaintEventArgs e)
         {
 
@@ -100,12 +99,6 @@ namespace Merchant_Monetary_System.Forms.Dashboards
         {
             loadform(new frmEmail());
         }
-
-        private void viewAccountsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void forgotPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmForgetPassword(true));
