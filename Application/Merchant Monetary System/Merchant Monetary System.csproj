@@ -136,6 +136,12 @@
     <Compile Include="Forms\Shop\frmUpdateShop.designer.cs">
       <DependentUpon>frmUpdateShop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ViewReport.Designer.cs">
+      <DependentUpon>ViewReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Route\RoutesDL.cs" />
     <Compile Include="Route\BellmanFord.cs" />
     <Compile Include="BL\Category.cs" />
@@ -537,6 +543,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\frmUpdateStatus.resx">
       <DependentUpon>frmUpdateStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViewReport.resx">
+      <DependentUpon>ViewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Route\frmRoutes.resx">
       <DependentUpon>frmRoutes.cs</DependentUpon>

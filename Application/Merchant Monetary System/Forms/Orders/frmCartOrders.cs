@@ -73,6 +73,8 @@ namespace Merchant_Monetary_System
                 datagvProductDetails.DataSource = null;
                 datagvProductDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 addIntoGrid(cart);
+                NumericUpDown quantity = new NumericUpDown();
+                quantity.Minimum = 0;
                 DataGridViewButtonColumn Add = new DataGridViewButtonColumn();
                 Add.HeaderText = "Delete";
                 Add.Text = "Delete";

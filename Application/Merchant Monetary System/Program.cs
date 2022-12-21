@@ -11,6 +11,7 @@ using Merchant_Monetary_System.BL;
 using Merchant_Monetary_System.Forms.Emails;
 using Merchant_Monetary_System.DL;
 using Merchant_Monetary_System.Forms.Vehicle;
+using Merchant_Monetary_System.Reports;
 
 namespace Merchant_Monetary_System
 {
@@ -32,13 +33,14 @@ namespace Merchant_Monetary_System
             VendorDL.loadRecordFromFile(FilePath.Vendors);
             ProductDL.loadRecordFromFile(FilePath.Products);
             OrderDL.loadRecordFromFile(FilePath.Orders);
+            StockDL.LoadDataFromFile(FilePath.Stock);
 
             try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                // Application.Run(new frmAddProduct());
-                Application.Run(new frmRiderDashboard("Kabir","CEO"));
+                Application.Run(new ViewReport());
             }
             catch (Exception exp) { MessageBox.Show(exp.Message); }
 
