@@ -83,9 +83,9 @@ namespace Merchant_Monetary_System
             //The following block will be deleted after testing
             //--------------------------------
             Users user = new Users("CEO", "abc", "male", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", "abc","1");
-            UsersDL.UsersList.Add(user);
+            UsersDL.UsersLinkedList.Add(user);
             Users user2 = new Users("Employee", "abc", "Female", 1234567891111, "mhhjutt@gmail.com", 123456789, "23232323", "abc","1");
-            UsersDL.UsersList.Add(user2);
+            UsersDL.UsersLinkedList.Add(user2);
             //--------------------------------
 
         }

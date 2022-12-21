@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using Merchant_Monetary_System.DL;
+using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System;
 
 
 namespace Merchant_Monetary_System.Forms.Emails
@@ -51,9 +53,10 @@ namespace Merchant_Monetary_System.Forms.Emails
 
         private void frmEmail_Load(object sender, EventArgs e)
         {
-            foreach(var u in UsersDL.UsersList)
-            {
-                cmbxTo.Items.Add(u.EmailAddress);
+            DoublyLinkedListNode<Merchant_Monetary_System.Users> Head = UsersDL.UsersLinkedList.Head;
+            while(Head!=null)
+            { 
+                cmbxTo.Items.Add(Head.Data.EmailAddress);
             }
         }
 

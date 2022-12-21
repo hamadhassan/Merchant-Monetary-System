@@ -79,10 +79,8 @@ namespace Merchant_Monetary_System
                     if (UsersDL.updateRecord(user))
                     {
                         UsersDL.storeAllRecordIntoFile(FilePath.Users);
-                        UsersDL.loadRecordFromFile(FilePath.Users);
                         lblRecordSignal.Text = "Account successfully updated";
                         this.Hide();
-
                     }
                     else
                     {
@@ -91,8 +89,8 @@ namespace Merchant_Monetary_System
                 }
                 else
                 {//for new creation of account
-                    UsersDL.UsersList.Add(user);
-                    UsersDL.storeRecordIntoFile(user, FilePath.Users);
+                    UsersDL.UsersLinkedList.Add(user);
+                    UsersDL.storeAllRecordIntoFile(FilePath.Users);
                     if (roleId == 0)
                     {//open form login form as it it is first time login
                         frmLogin frmLogin = new frmLogin();
