@@ -2543,7 +2543,7 @@ Known Issues & Nil
 \end{longtable}
 %------------------------------------------
 %------------------------------------------
-\subsection{Use Case 26:Edit Payment}
+\subsection{Use Case 26:Update Payment}
 \begin{longtable}{| p{3cm}|p{12cm}|}
 \multicolumn{2}{c}{}
 \endfirsthead
@@ -2557,7 +2557,7 @@ Known Issues & Nil
 \endlastfoot
 \hline
 Use Case ID & U26   \\\hline
-Name  &  Edit Payment \\ \hline
+Name  &  Update Payment \\ \hline
 Actor &   CEO, Employee, Warehouse Manager, Rider \\ \hline
 Description & Actor select the payment type from the list, select the payment mode from the options, update the descriptions, select the date, update the amount, and select the sender designation, name and reiver designation name, and receiver. \\ \hline
 The pre-Condition & Add payment screen is presented, and stored information is displayed in the attributes. \\\hline
@@ -3167,7 +3167,7 @@ Interface ID &  I05 \\\hline
 
 Name  	      &  Update Account Information (CEO) \\ \hline
 
-Linked Use Case & U03 \\ \hline
+Linked Use Case & U06 \\ \hline
 
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
 
@@ -3204,11 +3204,11 @@ Validators &
 \endlastfoot
 \hline
 
-Interface ID &  I06 \\\hline
+Interface ID &  I07 \\\hline
 
 Name  	      &  Update Account Information (Employee) \\ \hline
 
-Linked Use Case & U06 \\ \hline
+Linked Use Case & U04 \\ \hline
 
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-005a Update Account Information.png}\end{center}  \\ \hline
 
@@ -3450,6 +3450,8 @@ Interface ID & I13  \\\hline
 
 Name  & Email \\ \hline
 
+Linked Use Case & U37	 \\ \hline
+
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-012 SendEmail@1x.png}\end{center}  \\ \hline
 
 Validators & 
@@ -3660,7 +3662,7 @@ Interface ID & I20  \\\hline
 
 Name  & View Route  \\ \hline
 
-Linked Use Case & U128 and UI29  \\ \hline
+Linked Use Case & U29  \\ \hline
 
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-034 Route Finder@1x.png}\end{center}  \\ \hline
 
@@ -3729,7 +3731,7 @@ Interface ID & I22  \\\hline
 
 Name  &  Add Payment \\ \hline
 
-Linked Use Case & U26	 \\ \hline
+Linked Use Case & U25	 \\ \hline
 
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-021 Add Payment@1x.png}\end{center}  \\ \hline
 
@@ -3763,7 +3765,7 @@ Interface ID & I23  \\\hline
 
 Name  &  Update Payment Information \\ \hline
 
-Linked Use Case & U25	 \\ \hline
+Linked Use Case & U26	 \\ \hline
 
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-022Update Payment Information.png}\end{center}  \\ \hline
 
@@ -4043,7 +4045,7 @@ Interface ID & I32  \\\hline
 
 Name  &Order Summary\\ \hline
 
-Linked Use Case & U19	 \\ \hline
+Linked Use Case & U34	 \\ \hline
 
 UI Interface in JUSTINMIND & \begin{center} \includegraphics[scale=0.3]{./User Interface/UI-031 Order Summary@1x.png}\end{center}  \\ \hline
 \end{longtable}
@@ -4700,6 +4702,81 @@ Columns data names are
 %--------------------------Project Plan-----------------------
 \section{Project Plan}
 %---------------------------------------------------------
+\begin{longtable}{| p{1cm}|p{4cm}|p{2cm}|p{3cm}|}
+\multicolumn{4}{c}{}
+\endfirsthead
+\multicolumn{4}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}}\\
+\multicolumn{4}{c}{}\\
+\hline
+\endhead
+\hline \multicolumn{4}{r}{\tablename\ \thetable\ -- \textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline
+\textbf{ Use Case Id }&\textbf{ Member Name}&\textbf{Due Date}&\textbf{Completion Date} \\ \hline
+01& Syed Hashir 	&06/12/2022 &06/12/2022  \\ \hline
+02& Kabir Ahmed	&06/12/2022 &06/12/2022  \\ \hline
+03& M. Hamad Hassan&06/12/2022  &04/12/2022\\ \hline
+
+04& Syed Hashir 	&07/12/2022  &07/12/2022  \\ \hline
+05& Kabir Ahmed	&07/12/2022  &07/12/2022 \\ \hline
+06& M. Hamad Hassan&07/12/2022 &05/12/2022 \\ \hline
+
+07& Syed Hashir 	&08/12/2022 &08/12/2022  \\ \hline
+08& Kabir Ahmed	&08/12/2022 &08/12/2022  \\ \hline
+09& M. Hamad Hassan&08/12/2022  &06/12/2022\\ \hline
+
+10& Syed Hashir 	&09/12/2022  &09/12/2022 \\ \hline
+11& Kabir Ahmed	&09/12/2022  &09/12/2022 \\ \hline
+12& M. Hamad Hassan&09/12/2022  &09/12/2022\\ \hline
+
+13& Syed Hashir 	&10/12/2022  &10/12/2022 \\ \hline
+14& Kabir Ahmed	&10/12/2022  &10/12/2022 \\ \hline
+15& M. Hamad Hassan&10/12/2022 &10/12/2022 \\ \hline
+
+16& Syed Hashir 	&10/12/2022   &10/12/2022\\ \hline
+17& Kabir Ahmed		&11/12/2022  &11/12/2022 \\ \hline
+18& M. Hamad Hassan&11/12/2022 &11/12/2022 \\ \hline
+
+19& Syed Hashir 	&12/12/2022 &12/12/2022  \\ \hline
+20& Kabir Ahmed		&12/12/2022 &12/12/2022  \\ \hline
+21& M. Hamad Hassan&12/12/2022 &12/12/2022 \\ \hline
+
+22& Syed Hashir 	&13/12/2022 &13/12/2022   \\ \hline
+23& Kabir Ahmed		&13/12/2022   &13/12/2022\\ \hline
+24& M. Hamad Hassan&13/12/2022 &13/12/2022 \\ \hline
+
+25& Syed Hashir 	&14/12/2022  &15/12/2022 \\ \hline
+26& Kabir Ahmed		&14/12/2022  &15/12/2022 \\ \hline
+27& M. Hamad Hassan&14/12/2022  &15/12/2022\\ \hline
+
+
+28& Syed Hashir 	&15/12/2022  &15/12/2022 \\ \hline
+29& Kabir Ahmed		&15/12/2022  &15/12/2022 \\ \hline
+30,31 & M. Hamad Hassan&15/12/2022  &15/12/2022\\ \hline
+
+32& Syed Hashir		&16/12/2022  &16/12/2022 \\ \hline
+33& Kabir Ahmed		&16/12/2022  &16/12/2022 \\ \hline
+34& M. Hamad Hassan		&16/12/2022  &16/12/2022 \\ \hline
+
+35& Syed Hashir		&17/12/2022  &19/12/2022 \\ \hline
+36& Kabir Ahmed		&17/12/2022  &18/12/2022 \\ \hline
+37& M. Hamad Hassan		&17/12/2022  &20/12/2022 \\ \hline
+
+38& Syed Hashir		&18/12/2022  &21/12/2022 \\ \hline
+39& Kabir Ahmed		&18/12/2022  &21/12/2022 \\ \hline
+40& M. Hamad Hassan		&18/12/2022  &21/12/2022 \\ \hline
+
+41& Syed Hashir		&19/12/2022  &20/12/2022 \\ \hline
+41& Kabir Ahmed		&19/12/2022  &21/12/2022 \\ \hline
+\end{longtable}
+
+
+
+
+
+%--------------------------------------
 %-------------------------Analytical Report-----------------
 \section{Analytical Report}
 %--------------------------------------------------------
