@@ -45,18 +45,18 @@
             this.btnForgotPassword = new System.Windows.Forms.Button();
             this.btnViewStock = new System.Windows.Forms.Button();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pParent = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tblForm = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forgotPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderDeatislToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip.SuspendLayout();
             this.ptoolStrip.SuspendLayout();
@@ -256,6 +256,13 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // pParent
             // 
             this.pParent.ColumnCount = 1;
@@ -319,11 +326,26 @@
             this.optionToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.optionToolStripMenuItem.Text = "Option";
             // 
+            // sendEmailToolStripMenuItem
+            // 
+            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
+            // 
+            // forgotPasswordToolStripMenuItem
+            // 
+            this.forgotPasswordToolStripMenuItem.Name = "forgotPasswordToolStripMenuItem";
+            this.forgotPasswordToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.forgotPasswordToolStripMenuItem.Text = "Forgot Password ";
+            this.forgotPasswordToolStripMenuItem.Click += new System.EventHandler(this.forgotPasswordToolStripMenuItem_Click);
+            // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
@@ -335,45 +357,24 @@
             this.productToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.productToolStripMenuItem.Text = "Product";
             // 
-            // sendEmailToolStripMenuItem
-            // 
-            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.sendEmailToolStripMenuItem.Text = "Send Email";
-            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
-            // 
-            // forgotPasswordToolStripMenuItem
-            // 
-            this.forgotPasswordToolStripMenuItem.Name = "forgotPasswordToolStripMenuItem";
-            this.forgotPasswordToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
-            this.forgotPasswordToolStripMenuItem.Text = "Forgot Password ";
-            this.forgotPasswordToolStripMenuItem.Click += new System.EventHandler(this.forgotPasswordToolStripMenuItem_Click);
-            // 
             // orderDeatislToolStripMenuItem
             // 
             this.orderDeatislToolStripMenuItem.Name = "orderDeatislToolStripMenuItem";
-            this.orderDeatislToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.orderDeatislToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.orderDeatislToolStripMenuItem.Text = "Order Deatails";
             this.orderDeatislToolStripMenuItem.Click += new System.EventHandler(this.orderDeatislToolStripMenuItem_Click);
             // 
             // viewProductsToolStripMenuItem
             // 
             this.viewProductsToolStripMenuItem.Name = "viewProductsToolStripMenuItem";
-            this.viewProductsToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewProductsToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.viewProductsToolStripMenuItem.Text = "View Products ";
             this.viewProductsToolStripMenuItem.Click += new System.EventHandler(this.viewProductsToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // viewStockToolStripMenuItem
             // 
             this.viewStockToolStripMenuItem.Name = "viewStockToolStripMenuItem";
-            this.viewStockToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.viewStockToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.viewStockToolStripMenuItem.Text = "View Stock";
             this.viewStockToolStripMenuItem.Click += new System.EventHandler(this.viewStockToolStripMenuItem_Click);
             // 

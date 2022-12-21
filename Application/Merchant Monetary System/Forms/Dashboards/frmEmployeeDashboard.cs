@@ -67,7 +67,16 @@ namespace Merchant_Monetary_System
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmLogin());
+            try
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnOrderDetail_Click(object sender, EventArgs e)

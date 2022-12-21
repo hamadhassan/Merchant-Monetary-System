@@ -129,5 +129,20 @@ namespace Merchant_Monetary_System.Forms.Dashboards
         {
             load_form(new frmViewStockDetails());
         }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

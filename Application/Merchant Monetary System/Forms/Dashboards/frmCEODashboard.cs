@@ -40,125 +40,277 @@ namespace Merchant_Monetary_System
         }
         public void loadform(object Form)
         {
-            if (this.pParent.Controls.Count > 0)
-                this.pParent.Controls.RemoveAt(0);
-            Form f = Form as Form;
-            f.FormBorderStyle= FormBorderStyle.None;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.pParent.Controls.Add(f);
-            this.pParent.Tag = f;
-            f.Show();
-        }
-
-        private void btnForgotPassword_Click(object sender, EventArgs e)
-        {
-            loadform(new frmForgetPassword());
-
+            try
+            {
+                if (this.pParent.Controls.Count > 0)
+                    this.pParent.Controls.RemoveAt(0);
+                Form f = Form as Form;
+                f.FormBorderStyle = FormBorderStyle.None;
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                this.pParent.Controls.Add(f);
+                this.pParent.Tag = f;
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+ 
+           
         }
 
         private void frmCEODashboard_Load(object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             loadform(new frmAbout());
         }
 
         private void viewAccountsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             loadform(new frmAccountDetails(true));
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            toolStriplblDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
-            toolStriplblTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
+            try
+            {
+                toolStriplblDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
+                toolStriplblTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.Show();
-            this.Hide();
+            try
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void signUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmSignUp(3));
+            try
+            {
+                loadform(new frmSignUp(3));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnAddWarehouseManger_Click(object sender, EventArgs e)
         {
-            loadform(new frmAddWarehouse());
+            try
+            {
+                loadform(new frmAddWarehouse());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void viewWarehousesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmWarehouseDetails());
+            try
+            {
+                loadform(new frmWarehouseDetails());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            loadform(new frmAddProduct());
+            try
+            {
+                loadform(new frmAddProduct());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnAddRider_Click(object sender, EventArgs e)
         {
-            loadform(new frmSignUp());
+            try
+            {
+                loadform(new frmSignUp());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnViewProduct_Click(object sender, EventArgs e)
         {
-            loadform(new frmProductDetails_());
+            try
+            {
+                loadform(new frmProductDetails_());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void pParent_Paint(object sender, PaintEventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
         private void btnAddStock_Click(object sender, EventArgs e)
         {
-            loadform(new frmAddStock());
+            try
+            {
+                loadform(new frmAddStock());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-            loadform(new frmOrderDetail(role));
+            try
+            {
+                loadform(new frmOrderDetail(role));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
         }
 
         private void btnAddShopkeeper_Click(object sender, EventArgs e)
         {
-            loadform(new frmAddShopkeeper());
+            try
+            {
+                loadform(new frmAddShopkeeper());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
         }
 
         private void btnForgotPassword_Click_1(object sender, EventArgs e)
         {
-            loadform(new frmForgetPassword(true));
+            try
+            {
+                loadform(new frmForgetPassword(true));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void btnSendEmail_Click(object sender, EventArgs e)
         {
-            loadform(new frmEmail());
+            try
+            {
+                loadform(new frmEmail());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form f = new frmLogin();
-            f.Show();
+            try
+            {
+                this.Hide();
+                Form f = new frmLogin();
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void addVendorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmADDvendor());
-        }
+            try
+            {
+                loadform(new frmADDvendor());
 
-        private void updateVendorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnViewReport_Click(object sender, EventArgs e)
         {
-            loadform(new frmViewReports());
+            try
+            {
+                loadform(new frmViewReports());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
 
@@ -167,18 +319,16 @@ namespace Merchant_Monetary_System
             loadform(new frmAddCompnay(true));
         }
 
-        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            loadform(new frmViewCategory());
-        }
-
         private void addWarehouseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new frmAddWarehouse());
-        }
-
-        private void updateCompanyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            try
+            {
+                loadform(new frmAddWarehouse());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void forgotPasswordToolStripMenuItem_Click(object sender, EventArgs e)

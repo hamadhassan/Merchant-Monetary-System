@@ -75,8 +75,8 @@
             // 
             this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sendEmailToolStripMenuItem,
-            this.signOutToolStripMenuItem,
-            this.forgotPasswordToolStripMenuItem});
+            this.forgotPasswordToolStripMenuItem,
+            this.signOutToolStripMenuItem});
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
             this.optionToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.optionToolStripMenuItem.Text = "Option";
@@ -93,6 +93,7 @@
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.signOutToolStripMenuItem.Text = "SignOut";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // forgotPasswordToolStripMenuItem
             // 

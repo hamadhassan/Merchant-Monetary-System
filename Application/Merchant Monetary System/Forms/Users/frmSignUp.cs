@@ -457,6 +457,7 @@ namespace Merchant_Monetary_System
                 createAccountFor = 4;
                 //add all vehichle for rider
                 //VehicleDL.LoadDataFromFiles(FilePath.Vehcile);
+                cmbxAssigned.Items.Clear();
                 DoublyLinkedListNode<Vehicle> Head = VehicleDL.VehicleLinkedList.Head;
                 while (Head != null)
                 {
@@ -473,7 +474,7 @@ namespace Merchant_Monetary_System
                 createAccountFor = 3;
                 //add all warehouse 
                 //WarehouseDL.loadRecordFromFile(FilePath.Warehouse);
-
+                cmbxAssigned.Items.Clear();
                 DoublyLinkedListNode<Warehouse> Head = WarehouseDL.WarehousesList.Head;
                 while(Head!=null)
                 {
