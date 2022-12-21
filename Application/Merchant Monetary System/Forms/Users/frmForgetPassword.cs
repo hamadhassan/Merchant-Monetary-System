@@ -12,9 +12,15 @@ namespace Merchant_Monetary_System
 {
     public partial class frmForgetPassword : Form
     {
+        bool isInternal=false;
         public frmForgetPassword()
         {
             InitializeComponent();
+        }
+        public frmForgetPassword(bool isInternal)
+        {
+            InitializeComponent();
+            this.isInternal = isInternal;
         }
         bool isDesignation=true;
         bool isUsername=true;
@@ -31,6 +37,16 @@ namespace Merchant_Monetary_System
                     lblDataStoredSignal.Text = "Passeword successfully updated";
                     clearField();
                     cmbxDesignation.Focus();
+                    if (isInternal)
+                    {
+                        this.Hide();
+                    }
+                    else
+                    {
+                        frmLogin frmLogin = new frmLogin();
+                        frmLogin.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
@@ -51,9 +67,17 @@ namespace Merchant_Monetary_System
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.Show();
-            this.Hide();
+            if (isInternal)
+            {
+                this.Hide();
+            }
+            else
+            {
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+                this.Hide();
+            }
+            
 
         }
 
@@ -190,7 +214,7 @@ namespace Merchant_Monetary_System
 
         private void txtbxUsername_Leave(object sender, EventArgs e)
         {
-            if ((UsersDL.isUsernameExit(cmbxDesignation.Text,txtbxUsername.Text)))
+            if (!(UsersDL.isUsernameExit(cmbxDesignation.Text,txtbxUsername.Text)))
             {
                 lblUsernameSignal.Text = "Enter correct username";
             }
@@ -212,6 +236,11 @@ namespace Merchant_Monetary_System
         }
 
         private void lblConfirmPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbxUsername_TextChanged(object sender, EventArgs e)
         {
 
         }

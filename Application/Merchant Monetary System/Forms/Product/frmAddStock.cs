@@ -34,7 +34,7 @@ namespace Merchant_Monetary_System
 
         private void DataBind()
         {
-            comboBoxProduct.DataSource = ProductDL.ProductList;
+            //comboBoxProduct.DataSource = ProductDL.ProductList;
            // comboBoxVendor.DataSource = VendorDL.VendorList;
             DoublyLinkedListNode<Product> Head = ProductDL.ProductList.Head;
             //while (Head != null)

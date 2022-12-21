@@ -36,7 +36,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            load_form(new OrDerDetailsForm(role));
+            load_form(new frmOrderDetail(role));
         }
 
         private void btnViewProducts_Click(object sender, EventArgs e)

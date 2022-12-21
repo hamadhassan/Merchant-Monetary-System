@@ -6,8 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static IronPython.Modules._ast;
-using static IronPython.Modules.PythonIterTools;
 
 namespace Merchant_Monetary_System.DL
 {

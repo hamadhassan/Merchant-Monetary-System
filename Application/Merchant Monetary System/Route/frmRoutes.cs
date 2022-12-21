@@ -12,7 +12,6 @@ using System.Windows.Forms;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using static GMap.NET.Entity.OpenStreetMapRouteEntity;
-using static IronPython.Modules._ast;
 using System.IO;
 
 namespace Merchant_Monetary_System

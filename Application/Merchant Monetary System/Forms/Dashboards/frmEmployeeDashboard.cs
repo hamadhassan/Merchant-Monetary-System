@@ -1,5 +1,7 @@
 ﻿using Merchant_Monetary_System.Forms.Emails;
 using Merchant_Monetary_System.Forms.Payment;
+using Merchant_Monetary_System.Forms.Product;
+using Merchant_Monetary_System.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,7 +72,7 @@ namespace Merchant_Monetary_System
 
         private void btnOrderDetail_Click(object sender, EventArgs e)
         {
-            loadform(new OrDerDetailsForm(role));
+            loadform(new frmOrderDetail(role));
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -101,6 +103,127 @@ namespace Merchant_Monetary_System
         private void riderToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmEmployeeDashboard_Load(object sender, EventArgs e)
+        {
+            loadform(new frmAbout());
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void forgotDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmForgetPassword(true));
+        }
+
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmEmail());
+        }
+
+        private void addRiderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmSignUp(2));
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            loadform(new frmSignUp(2));
+        }
+
+        private void viewRidersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAccountDetails(false));
+        }
+
+        private void addProductToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddProduct());
+        }
+
+        private void viewProductToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmProductDetails_());
+        }
+
+        private void addStockToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddStock());
+        }
+
+        private void viewStockToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmViewStockDetails());
+        }
+
+        private void viewOrderToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmOrderDetail());
+        }
+
+        private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddCategory());
+        }
+
+        private void viewCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmViewCategory());
+        }
+
+        private void viewReportsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmViewReports());
+        }
+
+        private void addVendorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmADDvendor());
+        }
+
+        private void viewVendorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmVendorDetails());
+        }
+
+        private void addPaymentToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+             loadform(new frmAddPayment());
+        }
+
+        private void viewPaymentToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            loadform(new frmViewLedger());
+        }
+
+        private void addShopAndShopKeeperToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddShopkeeper());
+        }
+
+        private void viewShopAndShopKeeperToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new ViewShopkeeperDetails());
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAbout());
+        }
+
+        private void btnViewReport_Click(object sender, EventArgs e)
+        {
+            loadform(new frmRoutes());
+        }
+
+        private void btnViewOrder_Click(object sender, EventArgs e)
+        {
+            loadform(new frmOrderDetail());
         }
     }
 }

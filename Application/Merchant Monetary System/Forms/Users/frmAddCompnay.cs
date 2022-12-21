@@ -48,7 +48,7 @@ namespace Merchant_Monetary_System
                 
                 string name = txtbxName.Text;
                 string address = rtxtbxAddress.Text;
-                int phone = int.Parse(txtbxContactNumber.Text);
+                double phone = double.Parse(txtbxContactNumber.Text);
                 Compnay compnay =new Compnay(name, address, phone);
                 if (isForUpdate == false)
                 {
@@ -111,13 +111,13 @@ namespace Merchant_Monetary_System
 
         private void txtbxContactNumber_TextChanged(object sender, EventArgs e)
         {
-            int i;
+            double i;
             if (txtbxContactNumber.Text == string.Empty)
             {// check is empty
                 lblContactNumberSignal.Text = "Enter the contact number";
                 isContactNumberCorrect = true;
             }
-            else if (!int.TryParse(txtbxContactNumber.Text, out i))
+            else if (!double.TryParse(txtbxContactNumber.Text, out i))
             {//Check isalphabetic
                 lblContactNumberSignal.Text = "Allowed characters: 0-9";
                 isContactNumberCorrect = true;

@@ -42,7 +42,7 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void btnViewOrders_Click(object sender, EventArgs e)
         {
-            loadform(new OrDerDetailsForm(role,name));
+            loadform(new frmOrderDetail(role,name));
 
         }
 
@@ -79,7 +79,42 @@ namespace Merchant_Monetary_System.Forms.Dashboards
 
         private void frmRiderDashboard_Load(object sender, EventArgs e)
         {
+            loadform(new frmViewStockDetails());
+        }
 
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmEmail());
+        }
+
+        private void viewAccountsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forgotPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmForgetPassword(true));
+        }
+
+        private void takeOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmTakeOrder(name));
+        }
+
+        private void addShopAndShopKeeperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddShopkeeper());
+        }
+
+        private void orderDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmOrderDetail(role, name));
+        }
+
+        private void addPaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new frmAddPayment());
         }
     }
 }

@@ -10,16 +10,16 @@ namespace Merchant_Monetary_System
     {
         private string name;
         private string address;
-        private int phone;
+        private double phone;
         private double revenue;
         private static Compnay instance = null;
 
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }
-        public int Phone { get => phone; set => phone = value; }
+        public double Phone { get => phone; set => phone = value; }
         public double Revenue { get => revenue; set => revenue = value; }
 
-        public static Compnay Instance(string name,string address,int phone, double revenue)
+        public static Compnay Instance(string name,string address, double phone, double revenue)
         {
             if (instance == null)
             {
@@ -32,14 +32,14 @@ namespace Merchant_Monetary_System
         {
             return instance;
         }
-        public Compnay(string name, string address, int phone,double revenue)
+        public Compnay(string name, string address, double phone,double revenue)
         {
             this.name = name;
             this.address = address;
             this.phone = phone;
             this.revenue = revenue; 
         }
-        public Compnay(string name, string address, int phone)
+        public Compnay(string name, string address, double phone)
         {
             this.name = name;
             this.address = address;

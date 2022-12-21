@@ -37,7 +37,7 @@ namespace Merchant_Monetary_System
                     string[] spilitedRecord = record.Split(',');
                     string name = spilitedRecord[0];
                     string address = spilitedRecord[1];
-                    int phone = Convert.ToInt32(spilitedRecord[2]);
+                    double phone = Convert.ToDouble(spilitedRecord[2]);
                     double revenue = Convert.ToInt64(spilitedRecord[3]);
                     Compnay compnay = Compnay.Instance(name, address, phone,revenue);
                 }
@@ -61,7 +61,7 @@ namespace Merchant_Monetary_System
                     string[] spilitedRecord = record.Split(',');
                     string name = spilitedRecord[0];
                     string address = spilitedRecord[1];
-                    int phone = Convert.ToInt32(spilitedRecord[2]);
+                    double phone = Convert.ToDouble(spilitedRecord[2]);
                     double revenue = Convert.ToInt64(spilitedRecord[3]);
                     Compnay compnay = Compnay.Instance(name, address, phone, revenue);
                 }

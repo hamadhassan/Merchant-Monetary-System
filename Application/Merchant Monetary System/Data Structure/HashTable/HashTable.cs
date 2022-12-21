@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static IronPython.Runtime.Profiler;
 
 namespace Merchant_Monetary_System.Data_Structure.HashTable
 {
