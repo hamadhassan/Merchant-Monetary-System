@@ -27,15 +27,12 @@ namespace Merchant_Monetary_System.Forms.Product
 
         private void UpdatStock_Load(object sender, EventArgs e)
         {
-            comboBoxProduct.SelectedIndex = comboBoxProduct.Items.IndexOf(stock.Product);
-            comboBoxVendor.SelectedIndex = comboBoxVendor.Items.IndexOf(stock.Vendor);
-            // comboBoxVendor.DataSource = VendorDL.VendorList;
-            //DoublyLinkedListNode<Product> Head = ProductDL.ProductList1.Head;
-            //while (Head != null)
-            //{
-            //    comboBoxProduct.Items.Add(Head.Data.Name);
-            //    Head = Head.Next;
-            //}
+            DoublyLinkedListNode<BL.Product> Head = ProductDL.ProductList.Head;
+            while (Head != null)
+            {
+                comboBoxProduct.Items.Add(Head.Data.Name);
+                Head = Head.Next;
+            }
             DoublyLinkedListNode<Vendor> Header = VendorDL.VendorLinkedList.Head;
             while (Header != null)
             {
@@ -48,6 +45,8 @@ namespace Merchant_Monetary_System.Forms.Product
             DateMFG.Text = stock.ManufacturingDate.ToString();
             DateExpiry.Text = stock.ExpiryDate.ToString();
             DateReceived.Text = stock.RecievedDate.ToString();
+            comboBoxProduct.SelectedIndex = comboBoxProduct.Items.IndexOf(stock.Product);
+            comboBoxVendor.SelectedIndex = comboBoxVendor.Items.IndexOf(stock.Vendor);
         }
 
         private void txtbxCostPrice_TextChanged(object sender, EventArgs e)

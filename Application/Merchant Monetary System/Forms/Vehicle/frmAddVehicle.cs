@@ -125,8 +125,7 @@ namespace Merchant_Monetary_System.Forms.Vehicle
 
         private void frmAddVehicle_Load(object sender, EventArgs e)
         {
-            BL.Vehicle V = new BL.Vehicle("Bike", 100, 100, "LEE312");
-            VehicleDL.addIntoList(V);
+            cmbxType.SelectedIndex = 0;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

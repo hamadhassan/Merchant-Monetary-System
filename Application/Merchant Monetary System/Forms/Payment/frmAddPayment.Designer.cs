@@ -93,7 +93,7 @@
             this.groupBox1.Controls.Add(this.comboBoxpaymentType);
             this.groupBox1.Controls.Add(this.lblAddPayment);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(2, 1);
+            this.groupBox1.Location = new System.Drawing.Point(1, -1);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -174,7 +174,10 @@
             this.comboBoxPaymentBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxPaymentBy.FormattingEnabled = true;
             this.comboBoxPaymentBy.Items.AddRange(new object[] {
-            "Vendor"});
+            "CEO",
+            "Employee",
+            "Rider",
+            "Shopkeeper"});
             this.comboBoxPaymentBy.Location = new System.Drawing.Point(190, 334);
             this.comboBoxPaymentBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentBy.Name = "comboBoxPaymentBy";
@@ -210,7 +213,8 @@
             this.comboBoxPaymentReceivedBy.FormattingEnabled = true;
             this.comboBoxPaymentReceivedBy.Items.AddRange(new object[] {
             "CEO",
-            "Employee"});
+            "Employee",
+            "Vendor"});
             this.comboBoxPaymentReceivedBy.Location = new System.Drawing.Point(264, 391);
             this.comboBoxPaymentReceivedBy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaymentReceivedBy.Name = "comboBoxPaymentReceivedBy";
@@ -455,6 +459,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAddPayment";
             this.Text = "frmAddPayment";
+            this.Load += new System.EventHandler(this.frmAddPayment_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

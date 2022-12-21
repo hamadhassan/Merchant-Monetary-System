@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Merchant_Monetary_System.DL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,31 +39,52 @@ namespace Merchant_Monetary_System
         {
             this.Close();
         }
-        public void DataBind()
-        {//it will display the data into the data gride view
 
+
+        private void DataBind()
+        {
+            datagvAccountDetails.Columns.Clear();
             datagvAccountDetails.DataSource = null;
-            if (isCEO==true)
+
+            if (isCEO == true)
             {//CEO is login into the system
-                datagvAccountDetails.DataSource = UsersDL.UsersList;
+                addIntoGrid(UsersDL.UsersLinkedList);
             }
-            else if(isCEO==false)
+            else if (isCEO == false)
             {//employee is login into the system
-                datagvAccountDetails.DataSource = UsersDL.getUsersListExceptCEO();
+                addIntoGrid(UsersDL.getUsersListExceptCEO());
             }
-            datagvAccountDetails.Columns["username"].Visible = false;
-            datagvAccountDetails.Columns["password"].Visible = false;
-            datagvAccountDetails.Columns["homeAddress"].Visible = false;
-            datagvAccountDetails.Columns["gender"].Visible = false;
-            datagvAccountDetails.Refresh();
+
+            datagvAccountDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            addIntoGrid(UsersDL.UsersLinkedList);
+            datagvAccountDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        private void addIntoGrid(DoublyLinkedList<Users> userLinkedList)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Designation");
+            dt.Columns.Add("Username");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("CNIC");
+            dt.Columns.Add("Email Address");
+            dt.Columns.Add("Contact No.");
+
+            DoublyLinkedListNode<Users> Head = userLinkedList.Head;
+            while (Head != null)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(Head.Data.Designation,Head.Data.Username, Head.Data.Name, Head.Data.Cnic, Head.Data.EmailAddress, Head.Data.ContactNumber);
+                Head = Head.Next;
+            }
+            datagvAccountDetails.DataSource = dt;
+        }
+
 
         private void btnLoadRecords_Click(object sender, EventArgs e)
         {
-            UsersDL.loadRecordFromFile(FilePath.Users);
             DataBind();
             btnLoadRecords.Visible = false;
-            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -70,7 +92,11 @@ namespace Merchant_Monetary_System
            
             if (datagvAccountDetails.SelectedRows.Count == 1)
             {
-                Users currentObj = (Users)datagvAccountDetails.CurrentRow.DataBoundItem;
+                int index = datagvAccountDetails.CurrentCell.ColumnIndex;
+                Users currentObj;
+                int rowInd = datagvAccountDetails.CurrentCell.RowIndex;
+                string userName = datagvAccountDetails.Rows[rowInd].Cells[1].Value.ToString();
+                currentObj = UsersDL.returnUser(userName);
                 frmSignUp frmSignUp;
                 if (isCEO)
                     frmSignUp = new frmSignUp(currentObj, true);  
@@ -78,6 +104,7 @@ namespace Merchant_Monetary_System
                    frmSignUp = new frmSignUp(currentObj, false);
                 frmSignUp.ShowDialog();
                 DataBind();
+                UsersDL.storeAllRecordIntoFile(FilePath.Users);
             }
             else
             {
@@ -94,9 +121,13 @@ namespace Merchant_Monetary_System
         {//delete the record
             if (datagvAccountDetails.SelectedRows.Count == 1)
             {
-                Users currentObj = (Users)datagvAccountDetails.CurrentRow.DataBoundItem;
+                Users currentObj;
+                int rowInd = datagvAccountDetails.CurrentCell.RowIndex;
+                string userName = datagvAccountDetails.Rows[rowInd].Cells[1].Value.ToString();
+                currentObj = UsersDL.returnUser(userName);
                 UsersDL.deleteRecord(currentObj);
                 DataBind();
+                UsersDL.storeAllRecordIntoFile(FilePath.Users);
             }
             else
             {

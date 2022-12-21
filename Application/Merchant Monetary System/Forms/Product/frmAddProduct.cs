@@ -186,7 +186,7 @@ namespace Merchant_Monetary_System
                 }
                 else
                 {
-                    MessageBox.Show("Product not added");
+                    MessageBox.Show("Fill All fields correctly");
                 }
             }
             catch (Exception exp)

@@ -12,10 +12,7 @@ namespace Merchant_Monetary_System
 {
     public class UsersDL
     {
-        private static List<Users> usersList=new List<Users>();
         private static DoublyLinkedList<Users> usersLinkedList = new DoublyLinkedList<Users>();
-
-        public static List<Users> UsersList { get => usersList; set => usersList = value; }
         public static DoublyLinkedList<Users> UsersLinkedList { get => usersLinkedList; set => usersLinkedList = value; }
 
         public static DoublyLinkedList<Users> getUsersListExceptCEO()
@@ -29,12 +26,9 @@ namespace Merchant_Monetary_System
                 {
                     usersLinkedListExceptCEO.Add(Head.Data);
                 }
+                Head = Head.Next;
             }
             return usersLinkedListExceptCEO;
-        }
-        public static void clearList()
-        {
-            usersList.Clear();
         }
         public static bool isUserCrediationalMatch(string designation, string username, string password)
         {// the user enter data matched with the database result
@@ -218,6 +212,20 @@ namespace Merchant_Monetary_System
             {
                 return false;
             }
+        }
+
+        public static Users returnUser(string username)
+        {
+            DoublyLinkedListNode<Users> Head = usersLinkedList.Head;
+            while(Head!=null)
+            {
+                if(Head.Data.Username == username)
+                {
+                    return Head.Data;
+                }
+                Head = Head.Next;
+            }
+            return null;
         }
     }
 }
