@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Merchant_Monetary_System.Forms.Payment;
 using Merchant_Monetary_System.Forms.Emails;
+using Merchant_Monetary_System.BL;
+using Merchant_Monetary_System.DL;
 
 namespace Merchant_Monetary_System.Forms.Dashboards
 {
@@ -16,11 +18,23 @@ namespace Merchant_Monetary_System.Forms.Dashboards
     {
         public string name;
         public string role;
+        public static List<Shop> ShopList = new List<Shop>();
         public frmRiderDashboard(string name,string role)
         {
             InitializeComponent();
             this.name = name;
             this.role = role;
+            DoublyLinkedList<Order> orders = OrderDL.getOrders_withrespectiveRider(name);
+            DoublyLinkedListNode<Order> Head = orders.Head;
+            while(Head!= null)
+            {
+                Shop s = shopDL.returnShopByName(Head.Data.ShopName);
+                if (!isAlreadyAdded(s))
+                {
+                    ShopList.Add(s);
+                }
+                Head = Head.Next;
+            }
         }
         public void loadform(object Form)
         {
@@ -115,6 +129,18 @@ namespace Merchant_Monetary_System.Forms.Dashboards
         private void addPaymentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new frmAddPayment());
+        }
+
+        private bool isAlreadyAdded(Shop s)
+        {
+            foreach(Shop S in ShopList)
+            {
+                if(S.Id == s.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

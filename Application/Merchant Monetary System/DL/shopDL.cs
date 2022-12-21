@@ -59,5 +59,19 @@ namespace Merchant_Monetary_System.DL
             return null;
         }
 
+        public static Shop returnShopByName(string name)
+        {
+            DoublyLinkedListNode<Shop> Head = shopList.Head;
+            while (Head != null)
+            {
+                if (Head.Data.ShopName == name)
+                {
+                    return Head.Data;
+                }
+                Head = Head.Next;
+            }
+            return null;
+        }
+
     }
 }
